@@ -7,7 +7,7 @@ nav: false
 navigation_weight: 60
 ---
 
-**I am happy to serve for the CV & Robotics & AI & Sensing community when I am available. Feel free to send me an invitation to be an editor, chair or reviewer if you find me a good fit.**
+<!-- **I am happy to serve for the CV & Robotics & AI & Sensing community when I am available. Feel free to send me an invitation to be an editor, chair or reviewer if you find me a good fit.**
 
 - Editorial and Program Committee
     - Technical Program Committee (TPC), IEEE International Conference on Sensing, Communication, and Networking (SECON) 2026
@@ -32,7 +32,7 @@ navigation_weight: 60
     - IEEE Transactions on Industrial Informatics (T-II)
     - ACM Transactions on Sensor Networks (TOSN)
     - IEEE Transactions on Intelligent Vehicles (T-IV)
-    - IEEE Transactions on Circuits and Systems for Video Technology (T-CSVT)
+    - IEEE Transactions on Circuits and Systems for Video Technology (T-CSVT) -->
 
 <!-- - Invited Talk/Interview
     - [2025-04] Research Talk @ <a href="http://english.ia.cas.cn/">Institute of Automation, CAS.

@@ -7,7 +7,7 @@ nav: false
 navigation_weight: 50
 ---
 
-**I am looking for self-motivated students to work with on cutting-edge research projects. Support in the form of computation, data, platform, practical supervision and direction, is available.**
+<!-- **I am looking for self-motivated students to work with on cutting-edge research projects. Support in the form of computation, data, platform, practical supervision and direction, is available.**
 
 <section>
   <h4>Teaching Support at U of Edinburgh</h4>
@@ -46,5 +46,5 @@ navigation_weight: 50
 - **Nout Cleef**: graduated as MS student from University of Oxford
 - **Guangze Zheng**: now PhD student, University of Hong Kong (HKU)
 - **Teng Li**: now PhD student, Hong Kong Polytechnic University (PolyU)
-- **Bowen Li**: now PhD student, Carnegie Mellon University (CMU)
+- **Bowen Li**: now PhD student, Carnegie Mellon University (CMU) -->
 

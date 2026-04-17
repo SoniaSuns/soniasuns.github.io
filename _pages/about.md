@@ -2,43 +2,31 @@
 layout: about
 title: about
 permalink: /
-subtitle: Postdoctoral Associate @ <a href="https://www.mit.edu/" target="_blank">Massachusetts Institute of Technology</a> 
+subtitle: PhD student in the University of Hong Kong 
 
 profile:
   align: right
-  image: prof_pic2.png
+  image: uclaphoto.png
   image_circular: false # crops the image to make it circular
   more_info: >
     
 
-news: true  # includes a list of news items
+news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 nav_order: 0
 ---
 <h2>about me</h2>
 
-I am a Postdoctoral Associate at MIT, working with [Dr. Hermano Igo Krebs](https://meche.mit.edu/people/faculty/hikrebs@mit.edu), director of [The 77 Lab](https://the77lab.mit.edu/). Before MIT, I worked with [Dr. Or Litany](https://orlitany.github.io/) at Technion as a Postdoctoral Fellow. I was honored to be awarded a [2025 RSS Pioneer](https://sites.google.com/view/rsspioneers2025/participants?authuser=0) for my work on robust spatial perception for mobile robotics. I received my Ph.D. in Robotics and Autonomous Systems from School of Informatics, The University of Edinburgh, supervised by [Dr. Chris Xiaoxuan Lu](https://christopherlu.github.io/), and my B.Eng. in Mechanical Engineering from Tongji University. 
+I am a PhD student at the Data and System Engineering Department in the University of Hong Kong, under the supervision of [Prof. Yong-Hong Kuo](https://www.dase.hku.hk/people/y-h-kuo), [HIS Lab](https://www.dase.hku.hk/facilities/human-system-interaction-and-simulation-laboratory-his). I'm also a visiting student under the supervision of [Dr. Ying Jiang](https://yingjiang96.github.io) and [Prof. Chenfanfu Jiang](https://www.math.ucla.edu/~cffjiang/) in [AIVC Lab](https://www.math.ucla.edu/aivc/), UCLA. I received my Msc in Data and Systems Engineering, the University of Hong Kong, supervised by Dr. L.K.Y. Chan, and my B.Eng. in Engineering Management from Tianjin University. 
 
-My research agenda centers on **Physical AI**, which integrates advanced artifcial intelligence with *physical* systems (e.g., autonomous vehicles, robots, xR, industrial and IoT devices) to enable them to perceive, understand, and interact in the *physical* world. My long-term vision is a *human–machine symbiotic ecosystem* where human and embodied intelligence coexist, collaborate and co-evolve. Achieving this vision requires systems that are *robust* under changing conditions, *responsible* around humans, and *affordable* to deploy at scale. My current work advances this goal along three key axes: (i) **condition-adaptive:** maintaining robustness across illumination, weather, and environmental changes; (ii) **privacy-aware:** protecting user identity and sensitive content in privacy-critical applications; (iii) **cost-effective:** reducing reliance on expensive sensors and compute devices and costly real-world data collection and manual labeling.
-<!-- 
-My research focuses on advancing the robustness, efficiency, and privacy-awarness of spatial perception for **Physical AI** systems. These efforts making AI to better support physical systems such as autonomous vehicles and robots, IoT and xR, aiming to facilitate their **widespread, long-horizon and non-intrusive** deployment in the wild.  -->
+My primary research interests focus on **Human-AI interaction** and **content creation for augmented reality**, spanning human-computer interaction, embodied AI, computer vision, and interactive intelligent systems. My work centers on how AI can collaborate with humans in real time to perceive, interpret, and generate context-aware content in physical and mixed-reality environments. I am particularly interested in building human-in-the-loop AR systems that tightly couple human feedback, environmental understanding, and generative intelligence to support interactive storytelling, situated assistance, and embodied experience design. A few questions that drive my recent research are:
 
-<!-- <img src="../assets/img/research_interest.png" alt="Sample Figure" width="600"> -->
+**Human-in-the-Loop AI for AR**: How can we design AI systems that continuously incorporate human feedback, preferences, and intervention to enable more adaptive, controllable, and collaborative AR experiences?
 
-<!-- I am also keen to incorporate full-spectral multi-modal fusion into my research field. -->
+**Context-Aware and Embodied Intelligence**: How can AI agents perceive objects, space, and user context in physical environments to generate meaningful, situated, and interactive content for AR and immersive applications?
 
-<!-- Before coming to Edinburgh, I received my B.Eng degree with the highest honour - <a href="https://news.tongji.edu.cn/info/1003/76035.htm?ivk_sa=1023197a" target="_blank" rel="noopener">Academic Star</a> and was awarded double National Scholarships from <a href="https://en.tongji.edu.cn" target="_blank" rel="noopener">Tongji University</a> (2017-2021). -->
+**Human-AI Creation and Collaboration**: How can we enable AI to assist humans in better understanding, learning, creating, and interacting through mixed-reality systems that are both perceptually grounded and user-centered?
 
-<!-- where I worked in the <a href="https://vision4robotics.github.io/" target="_blank">V4R lab</a> under the supervision of <a href="https://www.researchgate.net/profile/Changhong-Fu" target="_blank">Dr. Changhong Fu</a>. In August 2020, I visited Tsinghua University and conducted on-site research under the supervison of <a href="https://ieeexplore.ieee.org/author/38237039900" target="_blank">Dr. Geng Lu</a>.  -->
-<!-- 👉 I am looking for self-motivated UG/Ms students to work with me and my collaborators at UoE/UCL/ETH/MIT/Oxford/Cambridge/NTU on **cutting-edge** research projects. -->
 
-<!-- , including but not limited to: 
--  **Mapping**: All-day scene completion with thermal imaging for mobile autonomy  
--  **Scene Understanding**: Robust and low-cost perception enabled by surrounding 4D radars
--  **Human Motion**: Human motion reconstruction from mmWave raw data via Diffusion
--  **Representation Learning**: Pre-trained transformer for heterogeneous radar sensors -->
-
-<!-- Support in the form of **sufficient** computational and sensory tools, robot platform, alongside **practical** supervision and direction, is available. Please contact directly via email if you are interested. -->
-
-<!-- 👉 I am actively looking for a research intern position this year. Shoot me an email if you think I am a good fit!  -->
+<!-- If any of these topics excite you and you'd love to collaborate, I'd be happy to get in touch! Feel free to drop me an email.  -->
