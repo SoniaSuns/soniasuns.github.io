@@ -6,7 +6,7 @@ subtitle: PhD student in the University of Hong Kong
 
 profile:
   align: right
-  image: uclaphoto.png
+  image: uclaphoto.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     
