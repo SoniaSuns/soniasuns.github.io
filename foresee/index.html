@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Foresee makes procedural futures tangible through generative previews of actions, outcomes, alternatives, and consequences.">
+  <meta property="og:title" content="Foresee: Making Procedural Futures Tangible through Generative Previews">
+  <meta property="og:description" content="A future-oriented procedural guidance interface combining structured rendering, image editing, and video generation.">
+  <meta property="og:image" content="https://soniasuns.github.io/assets/img/publication_preview/foresee.png">
+  <title>Foresee: Making Procedural Futures Tangible through Generative Previews</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <p class="eyebrow">Generative Interfaces · Augmented Reality</p>
+      <h1 class="title">Foresee: Making Procedural Futures Tangible through Generative Previews</h1>
+      <p class="authors">Yusi Sun</p>
+      <p class="affiliations">The University of Hong Kong · University of California, Los Angeles</p>
+      <p class="year">2026</p>
+      <nav class="links" aria-label="Paper links">
+        <a class="btn btn-primary" href="/assets/pdf/foresee.pdf">Paper</a>
+        <a class="btn" href="#video">Video</a>
+        <a class="btn" href="https://soniasuns.github.io/">Homepage</a>
+      </nav>
+    </header>
+
+    <section class="block teaser-block" aria-labelledby="overview-title">
+      <img src="/assets/img/publication_preview/foresee.png" alt="Foresee system overview showing hybrid future generation, three procedural preview types, and key findings" class="figure teaser">
+      <h2 id="overview-title" class="visually-hidden">Overview</h2>
+      <p class="lead"><strong>Foresee goes beyond showing the next action: it helps people inspect what an action enables, compare alternative methods, and anticipate the consequences of mistakes before they happen.</strong></p>
+    </section>
+
+    <hr class="rule">
+
+    <section class="block" aria-labelledby="abstract-title">
+      <h2 id="abstract-title">Abstract</h2>
+      <p>Procedural guidance can show users how to act without explaining what an action enables later. We present Foresee, an interface combining next-step guidance with consequence previews, method comparisons, and cross-step access. A hybrid pipeline combines structured rendering, image editing, and video generation. A literature-informed framework and six-participant formative study shaped its design. A 24-participant study compared AR guidance, AR with generated video, and Foresee across digital painting, gameplay, and cocktail making. Exploratory painting comparisons showed higher correct completion without a recorded error than AR and higher post-task quiz accuracy than generated-video guidance under task-wise correction. Interviews revealed that users could overlook valued explanations, match visible outcomes without understanding later possibilities, or wait for concrete demonstrations when symbolic cues were unclear. These findings inform generative previews that explain what actions enable or constrain while supporting ongoing execution.</p>
+    </section>
+
+    <hr class="rule">
+
+    <section class="block" aria-labelledby="interface-title">
+      <h2 id="interface-title">Future-Oriented Guidance</h2>
+      <img src="assets/interface.png" alt="Foresee interface components: Multi-Step Preview, Deviation-Consequence Preview, and Alternative-Method Preview" class="figure">
+      <p class="caption">Foresee integrates three complementary views of the future into ordinary next-step guidance.</p>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-number">01</span>
+          <h3>Deviation–Consequence Preview</h3>
+          <p>Pairs a concise “What if…?” cue with a predicted adverse outcome so users can understand a mistake before making it.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">02</span>
+          <h3>Alternative-Method Preview</h3>
+          <p>Compares feasible methods through their outcomes, costs, affected steps, and action demonstrations.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">03</span>
+          <h3>Multi-Step Preview</h3>
+          <p>Provides a compact map of task progress with access to generated and upcoming previews without changing the active step.</p>
+        </article>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section class="block" aria-labelledby="system-title">
+      <h2 id="system-title">System</h2>
+      <img src="assets/system.png" alt="Foresee system architecture and hybrid generation workflow" class="figure">
+      <p class="caption">The AR client supplies the task request and current scene. Foresee grounds the task, generates structured UI and scene-conditioned media, and returns spatial cues, action videos, and outcome images.</p>
+      <p>The hybrid pipeline uses structured rendering for rule-defined content and diffusion models for complex appearance and motion. Reviewed procedural plans separate each action from its resulting state, enabling the system to generate both instructions for how to act and previews of what the action may cause.</p>
+    </section>
+
+    <hr class="rule">
+
+    <section class="block" aria-labelledby="study-title">
+      <h2 id="study-title">Evaluation</h2>
+      <p>A 24-participant study compared Foresee with AR guidance and AR with generated video across digital painting, gameplay, and cocktail making. The evaluation examined task execution, post-task procedural understanding, usability, workload, and how participants chose to inspect future previews.</p>
+      <img src="assets/results.png" alt="Digital painting quiz accuracy and correct execution results for Foresee, generated video, and AR" class="figure figure-spaced">
+      <p class="caption">In exploratory digital-painting comparisons, Foresee produced higher post-task quiz accuracy than generated-video guidance and more correct steps without a recorded error than AR.</p>
+      <ul class="takeaways">
+        <li><strong>Visibility matters.</strong> Preview information can be valued yet remain unopened when it sits behind extra interaction.</li>
+        <li><strong>Outcomes need context.</strong> Matching a visible result does not always reveal what the action enables later.</li>
+        <li><strong>Concrete demonstrations can justify waiting.</strong> Video is most useful when symbolic or spatial cues leave an action unclear.</li>
+      </ul>
+    </section>
+
+    <hr class="rule">
+
+    <section class="block" id="video" aria-labelledby="video-title">
+      <h2 id="video-title">Video</h2>
+      <!-- Replace this placeholder with an iframe or video element when the demo is ready. -->
+      <div class="video-placeholder" role="img" aria-label="Demo video coming soon">
+        <span class="play-icon" aria-hidden="true"></span>
+        <p>Demo video coming soon</p>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section class="block" aria-labelledby="bibtex-title">
+      <h2 id="bibtex-title">BibTeX</h2>
+      <pre class="bibtex"><code>@article{sun2026foresee,
+  title  = {Foresee: Making Procedural Futures Tangible through Generative Previews},
+  author = {Sun, Yusi},
+  year   = {2026}
+}</code></pre>
+    </section>
+
+    <footer class="footer">
+      <p><a href="https://soniasuns.github.io/">Back to Yusi Sun’s homepage</a></p>
+    </footer>
+  </main>
+</body>
+</html>
