@@ -6,7 +6,8 @@ description: XR · Worldbuilding · AI reasoning
 nav: true
 nav_order: 2.5
 ---
-<link rel="stylesheet" href="{{ "/assets/css/literature-review.css" | relative_url }}">
+
+<link rel="stylesheet" href="{{ '/assets/css/literature-review.css' | relative_url }}" />
 <div id="literature-review" lang="zh-CN">
   <div class="lr-intro">
     <p class="lr-kicker">READING NOTES <span>持续更新的研究资料库</span></p>
@@ -70,22 +71,13 @@ nav_order: 2.5
     <div class="lr-list-actions"><span>点击标题展开完整笔记</span><button id="lr-collapse" type="button">收起全部</button></div>
     <p id="lr-empty" hidden>没有找到匹配的笔记。试试缩短关键词，或清除筛选条件。</p>
     <div id="lr-papers">
-      {% include literature-review/papers-151-160.html -%}
-      {%- include literature-review/papers-141-150.html -%}
-      {%- include literature-review/papers-131-140.html -%}
-      {%- include literature-review/papers-121-130.html -%}
-      {%- include literature-review/papers-111-120.html -%}
-      {%- include literature-review/papers-101-110.html -%}
-      {%- include literature-review/papers-091-100.html -%}
-      {%- include literature-review/papers-081-090.html -%}
-      {%- include literature-review/papers-071-080.html -%}
-      {%- include literature-review/papers-061-070.html -%}
-      {%- include literature-review/papers-051-060.html -%}
-      {%- include literature-review/papers-041-050.html -%}
-      {%- include literature-review/papers-031-040.html -%}
-      {%- include literature-review/papers-021-030.html -%}
-      {%- include literature-review/papers-011-020.html -%}
-      {%- include literature-review/papers-001-010.html %}
+      {% include literature-review/papers-151-160.html %}{% include literature-review/papers-141-150.html %}{% include
+      literature-review/papers-131-140.html %}{% include literature-review/papers-121-130.html %}{% include literature-review/papers-111-120.html %}{%
+      include literature-review/papers-101-110.html %}{% include literature-review/papers-091-100.html %}{% include
+      literature-review/papers-081-090.html %}{% include literature-review/papers-071-080.html %}{% include literature-review/papers-061-070.html %}{%
+      include literature-review/papers-051-060.html %}{% include literature-review/papers-041-050.html %}{% include
+      literature-review/papers-031-040.html %}{% include literature-review/papers-021-030.html %}{% include literature-review/papers-011-020.html %}{%
+      include literature-review/papers-001-010.html %}
     </div>
   </section>
   <section id="lr-about" class="lr-about">
@@ -97,10 +89,10 @@ nav_order: 2.5
       本库有157份不同文件内容的笔记，同一论文不同版本可以分别保留。P003、P082、P109保留为历史别名。方向和年份支持交叉筛选；年份可能包含正式发表年和本地修订年。
     </p>
     <p class="lr-downloads">
-      <a href="{{ "/assets/data" | relative_url }}/literature-review.md" download>下载Markdown笔记</a
-      ><a href="{{ "/assets/data" | relative_url }}/literature-review.json" download>下载结构化JSON</a
+      <a href="{{ '/assets/data' | relative_url }}/literature-review.md" download>下载Markdown笔记</a
+      ><a href="{{ '/assets/data' | relative_url }}/literature-review.json" download>下载结构化JSON</a
       ><a href="https://github.com/SoniaSuns/soniasuns.github.io">网站仓库</a>
     </p>
   </section>
 </div>
-<script defer src="{{ "/assets/js/literature-review.js" | relative_url }}"></script>
+<script defer src="{{ '/assets/js/literature-review.js' | relative_url }}"></script>
