@@ -1,0 +1,1257 @@
+### 中文摘要
+
+不训练模型或使用验证器，而通过基础模型自身似然驱动的采样提升推理表现。
+
+### 核心贡献
+
+用自回归 MCMC 近似从幂分布采样，研究 RL 后训练之外的能力激发方式。
+
+### 实现边界
+
+需要访问模型似然和反复生成/打分；single-shot 指最终提交一条答案，不代表只进行一次采样计算。
+
+### Method／方法
+
+按块扩展序列，随机位置重采样后缀，用 Metropolis–Hastings 接受率逼近 p(x)^α；测试数学、代码、科学及一般帮助性。
+
+### Results／主要结果
+
+MATH500/GPQA 上部分设置接近 GRPO，HumanEval 和 AlpacaEval 部分设置更高；保持较好的多样性。收益需结合模型与采样预算看表1，不能统一为所有模型提升同一百分比。
+
+### Shortcomings／局限与可能不足
+
+【作者/设定】精确幂分布采样不可行，采用近似且计算昂贵；【解读】高似然并非正确性保证，省训练不等于省总算力。
+
+### 证据定位
+
+§4 算法1；§5.2 表1；计算分析及 §6。
+
+### Abstract
+
+Frontier reasoning models have exhibited incredible capabilities across a wide array of disciplines, driven by posttraining large language models (LLMs) with reinforcement learning (RL). However, despite the widespread success of this paradigm, much of the literature has been devoted to disentangling truly novel behaviors that emerge during RL but are not present in the base models. In our work, we approach this question from a different angle, instead asking whether comparable reasoning capabilites can be elicited from base models at inference time by pure sampling,without any additional training. Inspired by Markov chain Monte Carlo (MCMC) techniques for sampling from sharpened distributions, we propose a simple iterative sampling algorithm leveraging the base models’ own likelihoods. Over different base models, we show that our algorithm offers substantial boosts in reasoning that nearly match and even outperform those from RL on a wide variety of single-shot tasks, including MATH500, HumanEval, and GPQA. Moreover, our sampler avoids the collapse in diversity over multiple samples that is characteristic of RL-posttraining. Crucially, our method does not require training, curated datasets, or a verifier, suggesting broad applicability beyond easily verifiable domains.
+
+<a id="p026"></a>
+## P026 · Training Large Language Models to Reason in a Continuous Latent Space
+
+- **作者**：本地稿匿名（Anonymous authors）；实名版本见 P103/P109
+- **时间**：本地匿名稿未注明日期；ICLR 2025是投稿轮次，不作为正式发表时间
+- **发表平台／版本状态**：Under review as a conference paper at ICLR 2025（匿名投稿版本，不能据此视作接收）
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+- **版本关系**：与[P103](#p103)/[P109](#p109)为同一COCONUT工作；本地15页匿名版与18页署名版分别记录，不能作为两项独立证据。
+
+- **主题**：世界机制与演化、AI方法与评测
+- **PDF版本**：15页；SHA-256：`4d75acf8306a57d2554cae06f6842f73ecde9b3c4176684508ed6be077b0958d`
+
+### 中文摘要
+
+COCONUT 把隐藏状态直接反馈为下一输入，实现不经文字解码的连续潜在推理。
+
+### 核心贡献
+
+连续 thought 的循环计算与逐阶段替换文本 CoT 的训练方案。
+
+### 实现边界
+
+基于 GPT-2，在 GSM8K、ProntoQA、ProsQA 验证；正文明确把每个连续 thought 计为一个计算 token。
+
+### Method／方法
+
+从语言 CoT 监督开始，逐步以隐藏向量取代早期推理步骤，保留可输出答案的语言阶段；用 ProsQA 分析潜在搜索分支。
+
+### Results／主要结果
+
+各任务优于 no-CoT，ProsQA 上超过文本 CoT，生成步数较少；不能据此称所有任务优于 CoT。具体实名版本数值见 P103，避免混用版本表格。
+
+### Shortcomings／局限与可能不足
+
+【解读】潜在状态不易审计，训练需推理轨迹与阶段设置；类似 BFS 的证据来自受控逻辑任务，不是任意问题的搜索保证。
+
+### 证据定位
+
+§3；§4/表1；§5 潜在搜索树；本地匿名封面。
+
+### Abstract
+
+Large language models are restricted to reason in the “language space”, where they typically express the reasoning process with a chain-of-thoughts (CoT) to solve a complex reasoning problem. However, we argue that language space may not be the optimal reasoning space. For example, most word tokens are primarily for textual coherence and not essential for reasoning, while some critical tokens require complex planning and pose huge challenges to LLMs. To explore the potential of LLM reasoning in an unrestricted latent space instead of using human language, we introduce a new paradigm C OCONUT (Chain of Continuous Thought). We utilize the last hidden state of the LLM as a representation of the reasoning state (termed “continuous thought”). Rather than decoding this into a word token, we feed it back to the LLM as the subsequent input embedding directly in the continuous space. Experiments show that C OCONUT can effectively augment the LLM on several reasoning tasks. It even outperforms CoT in certain logical reasoning tasks that require substantial planning, despite generating fewer tokens during inference. More interestingly, we observe an advanced reasoning patterns emerging from latent reasoning: the continuous thought can encode multiple potential next reasoning steps, allowing the model to perform a breadth-first search (BFS) to solve the problem, rather than prematurely committing to a single deterministic path like CoT. These findings demonstrate the promise of latent reasoning and offer valuable insights for future research on latent reasoning methods.
+
+<a id="p027"></a>
+## P027 · VCD: A Dataset for Visual Commonsense Discovery in Images
+
+- **作者**：Xiangqing Shen; Fanfan Wang; Siwei Wu; Rui Xia
+- **时间**：本地版本：2025-06-05（arXiv:2402.17213v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：Findings of ACL 2025（官方记录核验）；本地arXiv:2402.17213v2。 [ACL Anthology记录](https://aclanthology.org/2025.findings-acl.290/)
+- **论文链接**：[arXiv本地版本 2402.17213v2](https://arxiv.org/abs/2402.17213v2)
+- **项目／代码／数据**：[代码：NUSTM/VCD](https://github.com/NUSTM/VCD)
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：16页；SHA-256：`8fde486cc3f7096a777b415c3b45f71bd4d074255948644b0f7daf9eeea921da`
+
+### 中文摘要
+
+VCD 将物体框与可见、不可见常识三元组连接，支持图像中的常识发现。
+
+### 核心贡献
+
+超过 100K 图片、14M 物体—常识对，以及 Seen/Unseen、Property/Action/Space 层级分类；训练 VCM 基线。
+
+### 实现边界
+
+静态图片、区域级常识生成；尚未覆盖视频时序和动态因果。
+
+### Method／方法
+
+结合 Visual Genome 与 ConceptNet，映射/扩展三元组并进行质量控制，再用指令微调视觉语言模型生成常识。
+
+### Results／主要结果
+
+ImageNetVC 平均分由 OFA 80.7 到 VCM 83.5；Qwen-VL-7B 加常识后 OK-VQA 从 58.6 到 60.0。人评对 GPT-4o 的 Unseen 胜/平/负为 41%/29%/30%。
+
+### Shortcomings／局限与可能不足
+
+【作者】下游验证较简单、仅静态图像；【解读】大量自动构造常识可能保留知识库偏差，规模不代表每条均正确。
+
+### 证据定位
+
+§3；表3–5；Limitations。
+
+### Abstract
+
+Visual commonsense plays a vital role in understanding and reasoning about the visual world. While commonsense knowledge bases like ConceptNet provide structured collections of general facts, they lack visually grounded representations. Scene graph datasets like Visual Genome, though rich in object-level descriptions, primarily focus on directly observable information and lack systematic categorization of commonsense knowledge. We present Visual Commonsense Dataset ( VCD), a large-scale dataset containing over 100,000 images and 14 million object-commonsense pairs that bridges this gap. VCD introduces a novel three-level taxonomy for visual commonsense, integrating both Seen (directly observable) and Unseen (inferrable) commonsense across Property, Action, and Space aspects. Each commonsense is represented as a triple where the head entity is grounded to object bounding boxes in images, enabling scenedependent and object-specific visual commonsense representation. To demonstrate VCD’s utility, we develop VCM, a generative model that combines a vision-language model with instruction tuning to discover diverse visual commonsense from images. Extensive evaluations demonstrate both the high quality of VCD and its value as a resource for advancing visually grounded commonsense understanding and reasoning. Our dataset and code will be released on https://github.com/NUSTM/VCD.
+
+<a id="p028"></a>
+## P028 · Video models are zero-shot learners and reasoners
+
+- **作者**：Thaddäus Wiedemer; Yuxuan Li; Paul Vicol; Shixiang Shane Gu; Nick Matarese; Kevin Swersky; Been Kim; Priyank Jaini; Robert Geirhos
+- **时间**：本地版本：2025-09-29（arXiv:2509.20328v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：Google DeepMind研究预印稿；首页2025-10-01；arXiv:2509.20328v2时间2025-09-29
+- **论文链接**：[arXiv本地版本 2509.20328v2](https://arxiv.org/abs/2509.20328v2)
+- **项目／代码／数据**：[项目/演示页面](https://video-zero-shot.github.io/)
+
+- **主题**：世界机制与演化
+- **PDF版本**：46页；SHA-256：`e4bb6ec0a03c7a08e7fedf5beb10e54fbdbb54f6de4569fbb87883ad8b498219`
+
+### 中文摘要
+
+探索 Veo 3 能否仅通过提示执行感知、操作和视觉推理任务，提出视频模型具备通用视觉能力的早期证据。
+
+### 核心贡献
+
+跨任务定性探索及 7 类任务定量评估，涵盖分割、边缘检测、编辑、迷宫、对称和类比。
+
+### 实现边界
+
+Veo API 连同 LLM prompt rewriter 作为黑盒；作者承认部分答案可能来自重写器。best-frame 和 pass@10 不是单次最终输出表现。
+
+### Method／方法
+
+输入图像及任务提示生成 8 秒视频，再按任务读取最好/最后一帧；比较 Veo 2、Veo 3 和图像/语言基线。
+
+### Results／主要结果
+
+Veo 3 在多任务中明显优于 Veo 2，增加尝试次数提升成功率；边缘检测在 BIPEDv2 的 50 张测试图评测，分割只测 50 张较容易的 LVIS 图。
+
+### Shortcomings／局限与可能不足
+
+【作者/设定】专用模型仍更强、成功不稳定，训练数据不可见；【解读】挑最好帧/多次尝试会高估实际可直接使用的可靠性。
+
+### 证据定位
+
+§2；§4 及图3–9；§5。
+
+### Abstract
+
+The remarkable zero-shot capabilities of Large Language Models (LLMs) have propelled natural language processing from task-specific models to unified, generalist foundation models. This transformation emerged from simple primitives: large, generative models trained on web-scale data. Curiously, the same primitives apply to today’s generative video models. Could video models be on a trajectory towards general-purposevisionunderstanding, much like LLMs developed general-purposelanguage understanding? We demonstrate that Veo 3 can solve a broad variety of tasks it wasn’t explicitly trained for: segmenting objects, detecting edges, editing images, understanding physical properties, recognizing object affordances, simulating tool use, and more. These abilities to perceive, model, and manipulate the visual world enable early forms of visual reasoning like maze and symmetry solving. Veo’s emergent zero-shot capabilities indicate that video models are on a path to becoming unified, generalist vision foundation models.
+
+<a id="p029"></a>
+## P029 · VideoDiff: Human-AI Video Co-Creation with Alternatives
+
+- **作者**：Mina Huh; Ding Li; Kim Pimmel; Hijung Valentina Shin; Amy Pavel; Mira Dontcheva
+- **时间**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：CHI 2025，2025-04-26 至 05-01；DOI 10.1145/3706598.3713417
+- **论文链接**：[DOI正式记录](https://doi.org/10.1145/3706598.3713417)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：创作与规则补全
+- **PDF版本**：19页；SHA-256：`4387e6879b388b1371bad2857839323e56437fdc255065cc2245000586305adc`
+
+### 中文摘要
+
+用对齐时间轴、转录文本和差异高亮，帮助视频创作者比较、筛选和修改多种 AI 剪辑方案。
+
+### 核心贡献
+
+围绕 rough cut、B-roll 和文字效果的多方案共创交互。
+
+### 实现边界
+
+对用户已有素材提供编辑建议/组合，未训练新的通用视频生成模型。
+
+### Method／方法
+
+8 名专业创作者形成性研究；实现 React/D3/Remotion 界面，Whisper 转录与 GPT-4o 编辑建议；12 人被试内对照和 3 个真实素材案例。
+
+### Results／主要结果
+
+对“理解差异的有用性”评价均值为 4.92 vs 基线 2.25（p&lt;0.05）；参与者更易比较和定制，并报告更满意的创作结果。
+
+### Shortcomings／局限与可能不足
+
+【解读】小样本短期研究，比较的是特定基线；转录/语言主导流程可能遗漏视觉细节，偏好与专业成片质量不同。
+
+### 证据定位
+
+§3；§4.3；§5.1–5.3；§6–7。
+
+### Abstract
+
+To make an engaging video, people sequence interesting moments and add visuals such as B-rolls or text. While video editing requires time and effort, AI has recently shown strong potential to make editing easier through suggestions and automation. A key strength of generative models is their ability to quickly generate multiple variations, but when provided with many alternatives, creators struggle to compare them to find the best fit. We propose VideoDiff, an AI video editing tool designed for editing with alternatives. With VideoDiff, creators can generate and review multiple AI recommendations for each editing process: creating a rough cut, inserting B-rolls, and adding text effects. VideoDiff simplifies comparisons by aligning videos and highlighting differences through timelines, transcripts, and video previews. Creators have the flexibility to regenerate and refine AI suggestions as they compare alternatives. Our study participants (N=12) could easily compare and customize alternatives, creating more satisfying results.
+
+<a id="p030"></a>
+## P030 · AbductiveMLLM: Boosting Visual Abductive Reasoning Within MLLMs
+
+- **作者**：Boyu Chang; Qi Wang; Xi Guo; Zhixiong Nan; Yazhou Yao; Tianfei Zhou
+- **时间**：本地版本：2026-01-06（arXiv:2601.02771v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：AAAI 2026，40(4):2698–2706；正式上线2026-03-14，DOI 10.1609/aaai.v40i4.37258（AAAI官方核验）；本地为arXiv v1。 [AAAI官方论文页](https://ojs.aaai.org/index.php/AAAI/article/view/37258)
+- **论文链接**：[arXiv本地版本 2601.02771v1](https://arxiv.org/abs/2601.02771v1)；[DOI正式记录](https://doi.org/10.1609/aaai.v40i4.37258)
+- **项目／代码／数据**：[代码：ChangPtR/AbdMLLM](https://github.com/ChangPtR/AbdMLLM)
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：9页；SHA-256：`2e9d58f9985c584aa48d97dbf51d1f7b98f81da5cc7bacd01997e66b8e388ea0`
+
+### 中文摘要
+
+结合语言假设筛选与图像想象，增强多模态模型对缺失视觉事件的溯因推理。
+
+### 核心贡献
+
+REASONER 与 IMAGINER 双模块联合学习：前者筛选假设，后者用扩散视觉表示辅助解释。
+
+### 实现边界
+
+标准 VAR 任务中的解释生成；想象画面属于条件生成，不能作为对真实隐藏事件的新观测证据。
+
+### Method／方法
+
+LLM 根据视频描述提出候选，经因果相关对比学习筛选；条件扩散模块通过适配器融合视频和推理表示，联合优化语言与图像分支。
+
+### Results／主要结果
+
+作者在标准 VAR 基准报告优于所列传统模型和 MLLM；消融显示去掉 IMAGINER 或其适配器会降低 CIDEr 等生成指标。
+
+### Shortcomings／局限与可能不足
+
+【解读】生成图像可能强化错误假设；依赖视频描述、候选覆盖和训练数据，自动文本指标不直接证明因果解释正确。
+
+### 证据定位
+
+摘要；REASONER/IMAGINER 方法；实验表格；表6及结论。
+
+### Abstract
+
+Visual abductive reasoning (V AR) is a challenging task that requires AI systems to infer the most likely explanation for incomplete visual observations. While recent MLLMs develop strong general-purpose multimodal reasoning capabilities, they fall short in abductive inference, as compared to human beings. To bridge this gap, we draw inspiration from the interplay between verbal and pictorial abduction in human cognition, and propose to strengthen abduction of MLLMs by mimicking such dual-mode behavior. Concretely, we introduceAbductiveMLLMcomprising of two synergistic components: REASONERand IMAGINER. The REASONERoperates in the verbal domain. It first explores a broad space of possible explanations using a blind LLM and then prunes visually incongruent hypotheses based on cross-modal causal alignment. The remaining hypotheses are introduced into the MLLM as targeted priors, steering its reasoning toward causally coherent explanations. The IMAGINER, on the other hand, further guides MLLMs by emulating human-like pictorial thinking. It conditions a text-to-image diffusion model on both the input video and the REASONER’s output embeddings to “imagine” plausible visual scenes that correspond to verbal explanation, thereby enriching MLLMs’ contextual grounding. The two components are trained jointly in an end-to-end manner. Experiments on standard V AR benchmarks show thatAbductiveMLLMachieves state-of-the-art performance, consistently outperforming traditional solutions and advanced MLLMs. Code— https://github.com/ChangPtR/AbdMLLM
+
+<a id="p031"></a>
+## P031 · Agentic Reasoning for Large Language Models
+
+- **作者**：Tianxin Wei; Ting-Wei Li; Zhining Liu; Xuying Ning; Ze Yang; Jiaru Zou; Zhichen Zeng; Ruizhong Qiu; Xiao Lin; Dongqi Fu; Zihao Li; Mengting Ai; Duo Zhou; Wenxuan Bao; Yunzhe Li; Gaotang Li; Cheng Qian; Yu Wang; Xiangru Tang; Yin Xiao; Liri Fang; Hui Liu; Xianfeng Tang; Yuji Zhang; Chi Wang; Jiaxuan You; Heng Ji; Hanghang Tong; Jingrui He
+- **时间**：本地版本：2026-01-18（arXiv:2601.12538v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：arXiv:2601.12538v1，2026-01-18（本地综述稿）
+- **论文链接**：[arXiv本地版本 2601.12538v1](https://arxiv.org/abs/2601.12538v1)
+- **项目／代码／数据**：[代码：weitianxin/Awesome-Agentic-Reasoning](https://github.com/weitianxin/Awesome-Agentic-Reasoning)
+
+- **主题**：世界机制与演化、XR与人机协作、AI方法与评测
+- **PDF版本**：135页；SHA-256：`edc82b75fe0496cb13bf8288aac941e4437dc136a82b2dce4a7ab55d130db916`
+
+### 中文摘要
+
+系统梳理将推理与行动连接的语言智能体研究，覆盖基础能力、自我演化和多智能体协作。
+
+### 核心贡献
+
+按环境动态、优化方式与协作范围组织统一分类及应用/基准地图。
+
+### 实现边界
+
+135 页综述，正文说明汇总截至 2025 年的进展；没有训练或统一重测一个新模型。
+
+### Method／方法
+
+分别梳理规划/工具/搜索、反馈/记忆/适应、角色/分工/协作演化，区分上下文编排与 SFT/RL 后训练，并整理跨领域基准。
+
+### Results／主要结果
+
+产出研究分类、方法对照表和开放问题：个性化、长时交互、世界模型、潜在推理与协作治理；没有可归于本文新算法的单一准确率。
+
+### Shortcomings／局限与可能不足
+
+【解读】文献选择和分类含作者判断，跨论文成绩并非同条件比较，快速发展的领域需要持续更新。
+
+### 证据定位
+
+摘要；§2–5；应用 §6；基准 §7；开放问题 §8。
+
+### Abstract
+
+Reasoning is a fundamental cognitive process underlying inference, problem-solving, and decisionmaking. While large language models (LLMs) demonstrate strong reasoning capabilities in closed-world settings, exemplified by standard benchmarks in mathematics and code, they struggle in open-ended and dynamic environments. The emergence ofagentic reasoningmarks a paradigm shift, bridging thought and action by reframing LLMs as autonomous agents that plan, act, and learn through continual interaction. In this survey, we provide a systematic roadmap by organizing agentic reasoning along three complementary dimensions. First, we characterize environmental dynamics through three layers:foundational agentic reasoning establishes core single-agent capabilities, including planning, tool use, and search, that operate in stable environments;self-evolving agentic reasoningexamines how agents refine these capabilities through feedback, memory, and adaptation in evolving settings; andcollective multi-agent reasoningextends intelligence to collaborative scenarios where multiple agents coordinate roles, share knowledge, and pursue shared goals. Across all layers, we analyze system constraints and optimization settings by distinguishingin-context reasoning, which scales test-time interaction through structured orchestration and adaptive workflow design, fromposttraining reasoning, which optimizes behaviors through reinforcement learning and supervised fine-tuning. We further review and contextualize agentic reasoning frameworks in real-world applications and benchmarks spanning science, robotics, healthcare, autonomous research, and math, illustrating how different reasoning mechanisms are instantiated and evaluated across domains. This survey synthesizes agentic reasoning methods into a unified roadmap that bridges thoughts and actions, offering actionable guidance for agentic systems across environmental dynamics, optimization settings, and agent interaction settings. Finally, we outline open challenges and future directions, situating how agentic reasoning has developed while identifying what remains ahead: personalization, long-horizon interaction, world modeling, scalable multi-agent training, and governance frameworks for real-world deployment.
+
+<a id="p032"></a>
+## P032 · Autoregressive, Yet Revisable: In Decoding Revision for Secure Code Generation
+
+- **作者**：Chengran Yang; Zichao Wei; Heminghao Deng; Jinfeng Jiang; Zhensu Sun; Ting Zhang; Tianyi Wu; Ming Wen; David Lo
+- **时间**：本地版本：2026-05-06（arXiv:2602.01187v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：Preprint；稿面2026-05-07；arXiv:2602.01187v2时间2026-05-06
+- **论文链接**：[arXiv本地版本 2602.01187v2](https://arxiv.org/abs/2602.01187v2)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：创作与规则补全
+- **PDF版本**：21页；SHA-256：`c9b7c702d280df7d23ac4f1133a46a1725bb3ccf82b0b77b70db469d9b05c775`
+
+### 中文摘要
+
+让自回归模型在生成过程中输出编辑指令，从而及时修改已经构造的代码。
+
+### 核心贡献
+
+Stream of Revision 以虚拟光标、编辑 token 和确定性渲染器把生成流转换为可修订程序。
+
+### 实现边界
+
+token 流仍单调自回归，改变的是渲染后的代码；主要在 C/C++ 安全对齐和 CSE2 检测器上评价。
+
+### Method／方法
+
+从真实 CVE 修复对构造训练数据，学习编辑动作及普通代码；用安全检查通过率、HumanEval 功能测试和 AST 解析率分别验证。
+
+### Results／主要结果
+
+相较多种修复/对齐基线改善 CSE2 安全通过率；叠加 ProSec 后文中报告 C +1.16、C++ +4.15 个百分点。
+
+### Shortcomings／局限与可能不足
+
+【解读】静态检查通过不等于无漏洞；需修改训练与渲染执行协议，仍可能生成语法/语义错误，跨语言效果有条件。
+
+### 证据定位
+
+§3；§4–6、表2；§7.3、表5；§9。
+
+### Abstract
+
+Large Language Model (LLM) based code generation is predominantly formulated as a strictly monotonic process, appending tokens linearly to an immutable prefix. This formulation contrasts to the cognitive process of programming, which is inherently interleaved with forward generation and on-the-fly revision. While prior works attempt to introduce revision via post-hoc agents or external static tools, they either suffer from high latency or fail to leverage the model’s intrinsic semantic reasoning. In this paper, we propose Stream of Revision, a paradigm shift that elevates code generation from a monotonic stream to a dynamic, self-correcting trajectory by leveraging model’s intrinsic capabilities. We introduce specific action tokens that enable the model to seamlessly backtrack and edit its own history within a single forward pass. By internalizing the revision loop, our framework Stream of Revision allows the model to activate its latent capabilities just-intime without external dependencies. Empirical results on secure code generation show that Stream of Revision significantly reduces vulnerabilities with minimal inference overhead.
+
+<a id="p033"></a>
+## P033 · Gen-Searcher: Reinforcing Agentic Search for Image Generation
+
+- **作者**：Kaituo Feng; Manyuan Zhang; Shawn Chen; Yunlong Lin; Kaixuan Fan; Yilei Jiang; Hongyu Li; Dian Zheng; Chenyang Wang; Xiangyu Yue（首页为 Shawn Chen，PDF 元数据为 Shuang Chen）
+- **时间**：本地版本：2026-05-02（arXiv:2603.28767v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：arXiv:2603.28767v2，2026-05-02（本地技术报告）
+- **论文链接**：[arXiv本地版本 2603.28767v2](https://arxiv.org/abs/2603.28767v2)
+- **项目／代码／数据**：[项目/演示页面](https://gen-searcher.vercel.app/)
+
+- **主题**：创作与规则补全
+- **PDF版本**：20页；SHA-256：`26f20d758c0536cd6839012347e0f7bccc94a0add0d978870236cd6d5ad3343a`
+
+### 中文摘要
+
+为知识密集的图像生成训练多步搜索智能体，先找文字知识与参考图，再调用生成器。
+
+### 核心贡献
+
+Gen-Searcher-SFT-10k/RL-6k 数据、KnowGen 基准和结合文字/图像反馈的 RL。
+
+### 实现边界
+
+搜索代理增强已有图像生成器；输出仍受搜索质量、网页时效和生成器能力限制。
+
+### Method／方法
+
+Qwen3-VL-8B 先 SFT 再 agentic RL；工具执行搜索/浏览，双奖励评价知识正确性与生成图的实际符合度。
+
+### Results／主要结果
+
+KnowGen、WISE 上相对所列生成器和代理基线获得提升，并展示跨生成器迁移；训练设置还需图像生成和网页摘要辅助模型，不能把代理 8B 视为全部计算规模。
+
+### Shortcomings／局限与可能不足
+
+【解读】外部来源可能错误，评价器及合成训练图可能带偏；多跳搜索和图像 rollout 的计算/服务成本高。
+
+### 证据定位
+
+§3 数据与训练；§4.1–4.4、表1–3；§5。
+
+### Abstract
+
+Recent image generation models have shown strong capabilities in generating high-fidelity and photorealistic images. However, they are fundamentally constrained by frozen internal knowledge, thus often failing on real-world scenarios that are knowledge-intensive or require up-to-date information. In this paper, we present Gen-Searcher, as the first attempt to train a search-augmented image generation agent, which performs multi-hop reasoning and search to collect the textual knowledge and reference images needed for grounded generation. To achieve this, we construct a tailored data pipeline and curate two high-quality datasets, Gen-Searcher-SFT-10k and Gen-Searcher-RL-6k, containing diverse search-intensive prompts and corresponding ground-truth synthesis images. We further introduce KnowGen, a comprehensive benchmark that explicitly requires search-grounded external knowledge for image generation and evaluates models from multiple dimensions. Based on these resources, we train Gen-Searcher with SFT followed by agentic reinforcement learning with dual reward feedback, which combines text-based and image-based rewards to provide more stable and informative learning signals for GRPO training. Experiments show that Gen-Searcher brings substantial gains, improving Qwen-Image by around 16 points on KnowGen and 15 points on WISE. We hope this work can serve as an open foundation for search agents in image generation, and we fully open-source our data, models, and code.
+
+<a id="p034"></a>
+## P034 · Lost in Transmission: When and Why LLMs Fail to Reason Globally
+
+- **作者**：Tobias Schnabel; Kiran Tomlinson; Adith Swaminathan; Jennifer Neville
+- **时间**：本地版本：2026-01-30（arXiv:2505.08140v5）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：NeurIPS 2025（PDF首页会议页脚）；本地arXiv:2505.08140v5更新2026-01-30
+- **论文链接**：[arXiv本地版本 2505.08140v5](https://arxiv.org/abs/2505.08140v5)
+- **项目／代码／数据**：[代码：microsoft/bapo](https://github.com/microsoft/bapo)
+
+- **主题**：世界机制与演化、AI方法与评测
+- **PDF版本**：39页；SHA-256：`9967dd46b0d1933065336b5d9d1ae994f04713da134b0099999ee7978a12e2d9`
+
+### 中文摘要
+
+用注意力通信带宽受限模型解释 LLM 在跨输入全局推理上的失败。
+
+### 核心贡献
+
+提出 Bounded Attention Prefix Oracle（BAPO），证明可达性等问题的带宽下界，并分析 CoT 如何缓解限制。
+
+### 实现边界
+
+理论结论对所定义 BAPO 模型成立；经验结果支持带宽假说，未证明真实 Transformer 只有同样的严格上限。
+
+### Method／方法
+
+用 prefix/attention oracle 抽象信息流，区分 BAPO-easy/hard；在受控和现实任务上比较模型与 CoT 条件。
+
+### Results／主要结果
+
+GPT-4o、Claude、Gemini 对 easy 任务较强、对小规模 hard 任务也会失败；适当分解的 CoT 在理论模型中可把 hard 计算转化为逐步 easy 计算。
+
+### Shortcomings／局限与可能不足
+
+【作者】真实有效带宽成因尚不清楚，部分下界较松；【解读】存在可用分解不保证模型会自动找到并可靠执行它。
+
+### 证据定位
+
+§2–3；§4；§6–7。
+
+### Abstract
+
+Despite their many successes, transformer-based large language models (LLMs) continue to struggle with tasks that require complex reasoning over large parts of their input. We argue that these failures arise due to capacity limits on the accurate flow of information within LLMs. To formalize this issue, we introduce the bounded attention prefix oracle (BAPO) model, a new computational framework that models bandwidth constraints on attention heads, the mechanism for internal communication in LLMs. We show that several important reasoning problems like graph reachability require high communication bandwidth for BAPOs to solve; we call these problems BAPO-hard. Our experiments corroborate our theoretical predictions: GPT-4o, Claude, and Gemini succeed on BAPO-easy tasks and fail even on relatively small BAPO-hard tasks. BAPOs also reveal another benefit of chain of thought (CoT): we prove that breaking down a task using CoT can turn any BAPO-hard problem into a BAPO-easy one. Our results offer principled explanations for key LLM failures and suggest directions for architectures and inference methods that mitigate bandwidth limits.
+
+<a id="p035"></a>
+## P035 · Mind-Brush: Integrating Agentic Cognitive Search and Reasoning into Image Generation
+
+- **作者**：Jun He; Junyan Ye; Zilong Huang; Dongzhi Jiang; Chenjue Zhang; Leqi Zhu; Renrui Zhang; Xiang Zhang; Weijia Li
+- **时间**：本地版本：2026-02-02（arXiv:2602.01756v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：Preprint；稿面2026-02-03；arXiv:2602.01756v1时间2026-02-02
+- **论文链接**：[arXiv本地版本 2602.01756v1](https://arxiv.org/abs/2602.01756v1)
+- **项目／代码／数据**：[代码：PicoTrex/Mind-Brush](https://github.com/PicoTrex/Mind-Brush)；[数据/模型：datasets/PicoTrex/Mind-Brush](https://huggingface.co/datasets/PicoTrex/Mind-Brush)
+
+- **主题**：创作与规则补全
+- **PDF版本**：36页；SHA-256：`7b438d417f55156c2f8657fb74afedd81786a23c05c2bdb5b5a99b9385794488`
+
+### 中文摘要
+
+以意图分析、主动搜索和显式推理补全图像生成所需的知识与隐含约束。
+
+### 核心贡献
+
+训练无需新增的 Mind-Brush 编排框架，以及含 500 个动态知识/推理样本的 Mind-Bench。
+
+### 实现边界
+
+调用既有搜索、推理与生成模型；输出符合事实的程度受检索资料和生成器制约。
+
+### Method／方法
+
+检测认知缺口，搜索多模态证据、补充约束后生成；用 checklist-based strict accuracy（全部清单项通过）和 WISE/RISEBench 评价。
+
+### Results／主要结果
+
+完整框架在 Mind-Bench 的消融中比仅 reasoning agent 高 0.17、比仅 search agent 高 0.06 的准确率；另在 WISE/RISE 上取得所报改进。
+
+### Shortcomings／局限与可能不足
+
+【解读】多模型调用成本高，清单覆盖和 MLLM 评价器可能漏检；“无需训练”只针对框架新增训练。
+
+### 证据定位
+
+§3；§4；§5.3–5.4；§6。
+
+### Abstract
+
+While text-to-image generation has achieved unprecedented fidelity, the vast majority of existing models function fundamentally as static text-topixel decoders. Consequently, they often fail to grasp implicit user intentions. Although emerging unified understanding-generation models have improved intent comprehension, they still struggle to accomplish tasks involving complex knowledge reasoning within a single model. Moreover, constrained by static internal priors, these models remain unable to adapt to the evolving dynamics of the real world. To bridge these gaps, we introduce Mind-Brush, a unified agentic framework that transforms generation into a dynamic, knowledgedriven workflow. Simulating a human-like ’thinkresearch-create’ paradigm, Mind-Brush actively retrieves multimodal evidence to ground out-ofdistribution concepts and employs reasoning tools to resolve implicit visual constraints. To rigorously evaluate these capabilities, we propose Mind-Bench, a comprehensive benchmark comprising 500 distinct samples spanning real-time news, emerging concepts, and domains such as mathematical and Geo-Reasoning. Extensive experiments demonstrate that Mind-Brush significantly enhances the capabilities of unified models, realizing a zero-to-one capability leap for the Qwen-Image baseline on Mind-Bench, while achieving superior results on established benchmarks like WISE and RISE.
+
+<a id="p036"></a>
+## P036 · SimStep: Human-in-the-Loop Authoring of Interactive Educational Simulations Through Task-Level Abstractions
+
+- **作者**：Zoe Kaputa; Anika Rajaram; Vryan Feliciano; Zhuoyue Lyu; Maneesh Agrawala; Hariharan Subramonyam
+- **时间**：2026年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：CHI 2026，2026-04-13 至 04-17；DOI 10.1145/3772318.3791514
+- **论文链接**：[DOI正式记录](https://doi.org/10.1145/3772318.3791514)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：34页；SHA-256：`3eca89598fa6497b0ecd0c6fd84398cfbacc158792df23ae34e5e85bdc3ed648`
+
+### 中文摘要
+
+通过可检查、可修改的任务级图表示，让教师逐步创作并调试互动教学模拟。
+
+### 核心贡献
+
+Chain-of-Abstractions 及 inverse correction，将概念、场景、学习目标、UI 与代码衔接。
+
+### 实现边界
+
+实现的是模拟创作与纠错工具；没有证明学生学习成绩改善或仿真物理绝对正确。
+
+### Method／方法
+
+教师在抽象图上验证和编辑，Claude 生成/修改代码；自动测试和图形回溯定位隐含假设；进行教师使用与抽象保真度研究。
+
+### Results／主要结果
+
+11 名教师体验研究的 1–6 分可用性均值 4.66（SD 0.36）；66 个模拟由 162 名 Prolific 参与者评价抽象保真度，概念图完整/连贯性 2.61/3。
+
+### Shortcomings／局限与可能不足
+
+【作者】Prolific 评价者学科/教龄等信息未收集；【解读】短期创作体验不等于课堂效果，自动修复仍需人工核查。
+
+### 证据定位
+
+§3–5；§6.2；§7/表5；§8.3。
+
+### Abstract
+
+Generative AI enables educators to create interactive learning content by describing goals in natural language. However, without programming affordances such as traceability, refinement, and debugging, teachers struggle to align simulations with learners’ needs, refine them step by step, or verify that they reflect intended learning concepts. We propose a task-level abstraction approach that structures authoring as a sequence of representations, mirroring how teachers plan lessons and providing checkpoints for specification, inspection, and refinement. We instantiate this approach in SimStep, an authoring environment that scaffolds simulation design with four abstractions, including Concept Graph, Scenario Graph, Learning Goal Graph, and UI Graph, and introduces an inverse correction process to revise hidden model assumptions without requiring code manipulation. A technical evaluation shows that these abstractions preserve fidelity across transformations, while a user study with educators demonstrates their effectiveness in authoring simulations. Our work reframes AI-assisted programming as human–AI co-authoring through structured, domain-aligned abstractions.
+
+<a id="p037"></a>
+## P037 · SLM-MUX: Orchestrating Small Language Models for Reasoning
+
+- **作者**：Chenyu Wang; Zishen Wan; Hao Kang; Emma Chen; Zhiqiang Xie; Tushar Krishna; Vijay Janapa Reddi; Yilun Du
+- **时间**：2026年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：ICLR 2026（PDF 明示 Published as a conference paper）
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化、AI方法与评测
+- **PDF版本**：27页；SHA-256：`a554693e80b40655b26e8479b00deb394efbb520aa37baba4cb6fac58fd96ad1`
+
+### 中文摘要
+
+让多个小模型独立作答，用一致性选择结果，并搜索互补模型组合。
+
+### 核心贡献
+
+SLM-MUX、模型子集搜索与配套测试时计算分配方案。
+
+### 实现边界
+
+使用固定模型组合及验证集；非模型间讨论，置信度主要以重复答案频次近似。
+
+### Method／方法
+
+每个模型多次采样，取自身众数并比较一致性；按 union accuracy 与冲突惩罚搜索组合，平局用验证准确率处理。
+
+### Results／主要结果
+
+论文报告相对既有编排方法最高提升 MATH 13.4、GPQA 8.8、GSM8K 7.0 个百分点；选定两个小模型的组合可在部分任务超过 Qwen2.5-72B。
+
+### Shortcomings／局限与可能不足
+
+【作者】穷举组合开销高且静态，一致性高也可能一致地错；【解读】需将多模型多次采样成本纳入比较。
+
+### 证据定位
+
+§3；§4；§5 Limitation and Future Work。
+
+### Abstract
+
+With the rapid development of language models, the number of small language models (SLMs) has grown significantly. Although they do not achieve state-of-theart accuracy, they are more efficient and often excel at specific tasks. This raises a natural question: can multiple SLMs be orchestrated into a system where each contributes effectively, achieving higher accuracy than any individual model? Existing orchestration methods have primarily targeted frontier models (e.g., GPT-4) and perform suboptimally when applied to SLMs. To address this gap, we propose a three-stage approach for orchestrating SLMs. First, we introduce SLM-MUX, a multi-model architecture that effectively coordinates multiple SLMs. Building on this, we develop two optimization strategies: (i) a model selection search that identifies the most complementary SLMs from a given pool, and (ii) test-time scaling tailored to SLM-MUX. Our approach delivers strong results: Compared to existing orchestration methods, our approach achieves up to 13.4% improvement on MATH, 8.8% on GPQA, and 7.0% on GSM8K. With just two SLMs, SLM-MUX outperforms Qwen 2.5 72B on GPQA and GSM8K, and matches its performance on MATH. We further provide theoretical analyses to substantiate the advantages of our method. Additional experiments show that the core principle of SLM-MUX extends to open-ended generation tasks (e.g., HumanEval) and benefits other model classes, including frontier LLMs and domain-specific fine-tuned SLMs. In summary, we demonstrate that SLMs can be effectively orchestrated into more accurate and efficient systems through the proposed approach.
+
+<a id="p038"></a>
+## P038 · “I’m Not Sure, But...”: Examining the Impact of Large Language Models’ Uncertainty Expression on User Reliance and Trust
+
+- **作者**：Sunnie S. Y. Kim; Q. Vera Liao; Mihaela Vorvoreanu; Stephanie Ballard; Jennifer Wortman Vaughan
+- **时间**：2024年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：FAccT 2024，2024-06-03 至 06-06；DOI 10.1145/3630106.3658941
+- **论文链接**：[DOI正式记录](https://doi.org/10.1145/3630106.3658941)
+- **项目／代码／数据**：[OSF研究材料](https://osf.io/mnrp9)
+
+- **主题**：XR与人机协作、AI方法与评测
+- **PDF版本**：14页；SHA-256：`2fe292249e998fb7c0158f8f63a30b65b9d4f560407b0625bf728ff2f7dc5f30`
+
+### 中文摘要
+
+研究 LLM 用不同自然语言方式表达不确定性时，用户依赖、信任和任务表现如何变化。
+
+### 核心贡献
+
+预注册、N=404 的受控人类实验，区分第一人称、一般视角及无不确定性表达。
+
+### 实现边界
+
+虚构 AI 搜索系统中的医学事实是非题；操控表达，不训练或校准模型的真实不确定性。
+
+### Method／方法
+
+随机分组，对照有/无 AI 与不同措辞；用行为、答案正确性、信心和自报信任评价，并区分确认性/探索性分析。
+
+### Results／主要结果
+
+第一人称表达降低对系统信心与跟随率、提高用户准确率；一般视角效应较弱且未达显著。过度依赖仍存在，无 AI 组总体任务表现最好。
+
+### Shortcomings／局限与可能不足
+
+【解读】单一任务和短期实验限制外推；谨慎措辞不是校准概率，也可能降低对正确答案的依赖。
+
+### 证据定位
+
+§3 预注册设计；§4；§5.1；§6。
+
+### Abstract
+
+Widely deployed large language models (LLMs) can produce convincing yet incorrect outputs, potentially misleading users who may rely on them as if they were correct. To reduce such overreliance, there have been calls for LLMs to communicate their uncertainty to end users. However, there has been little empirical work examining how users perceive and act upon LLMs’ expressions of uncertainty. We explore this question through a large-scale, pre-registered, human-subject experiment (N=404) in which participants answer medical questions with or without access to responses from a fictional LLM-infused search engine. Using both behavioral and self-reported measures, we examine how different natural language expressions of uncertainty impact participants’ reliance, trust, and overall task performance. We find that firstperson expressions (e.g., “I’m not sure, but...”) decrease participants’ confidence in the system and tendency to agree with the system’s answers, while increasing participants’ accuracy. An exploratory analysis suggests that this increase can be attributed to reduced (but not fully eliminated) overreliance on incorrect answers. While we observe similar effects for uncertainty expressed from a general perspective (e.g., “It’s not clear, but...”), these effects are weaker and not statistically significant. Our findings suggest that using natural language expressions of uncertainty may be an effective approach for reducing overreliance on LLMs, but that the precise language used matters. This highlights the importance of user testing before deploying LLMs at scale.
+
+<a id="p039"></a>
+## P039 · Make-a-Story: Visual Memory Conditioned Consistent Story Generation
+
+- **作者**：Tanzila Rahman; Hsin-Ying Lee; Jian Ren; Sergey Tulyakov; Shweta Mahajan; Leonid Sigal
+- **时间**：2023年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：CVPR 2023（正式会议 PDF）
+- **项目／代码／数据**：[代码：ubc-vision/Make-A-Story](https://github.com/ubc-vision/Make-A-Story)
+
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：10页；SHA-256：`f15cd145c1869ec4b7661371bea534f5649cc8fa07eb39f3613b91c555c971da`
+
+### 中文摘要
+
+以视觉记忆支持带指代的故事可视化，保持角色与背景跨图一致。
+
+### 核心贡献
+
+自回归 Story-LDM 及句子条件记忆注意力，并扩展 MUGEN/Flintstones 的指代设置。
+
+### 实现边界
+
+根据句子序列生成故事帧，主要是动画/游戏域；不是连续动作的长视频生成。
+
+### Method／方法
+
+潜在扩散逐帧生成，当前句子对过去图像和文本记忆做软注意力，以解析 he/she/they 等角色或背景指代。
+
+### Results／主要结果
+
+MUGEN、PororoSV、FlintstonesSV 上的图像质量、故事一致性和人评优于所列前作；同时演示保持一致与按情节改变背景。
+
+### Shortcomings／局限与可能不足
+
+【解读】角色集合和视觉域较有限，自回归错误可能累积；一致性指标不能完整衡量故事叙事质量。
+
+### 证据定位
+
+§3；§4–5；§6。
+
+### Abstract
+
+There has been a recent explosion of impressive generative models that can produce high quality images (or videos) conditioned on text descriptions. However, all such approaches rely on conditional sentences that contain unambiguous descriptions of scenes and main actors in them. Therefore employing such models for more complex task of story visualization, where naturally references and coreferences exist, and one requires to reason about when to maintain consistency of actors and backgrounds across frames/scenes, and when not to, based on story progression, remains a challenge. In this work, we address the aforementioned challenges and propose a novel autoregressive diffusion-based framework with a visual memory module that implicitly captures the actor and background context across the generated frames. Sentence-conditioned soft attention over the memories enables effective reference resolution and learns to maintain scene and actor consistency when needed. To validate the effectiveness of our approach, we extend the MUGEN dataset [19] and introduce additional characters, backgrounds and referencing in multisentence storylines. Our experiments for story generation on the MUGEN, the PororoSV [30] and the FlintstonesSV [16] dataset show that our method not only outperforms prior state-of-the-art in generating frames with high visual quality, which are consistent with the story, but also models appropriate correspondences between the characters and the background.
+
+<a id="p040"></a>
+## P040 · Collaposer: Transforming Photo Collections into Visual Assets for Storytelling with Collages
+
+- **作者**：Jiayi Zhou; Liwenhan Xie; Jiaju Ma; Zheng Wei; Huamin Qu; Anyi Rao
+- **时间**：本地版本：2026-01-26（arXiv:2601.18428v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：CHI 2026，2026-04-13 至 04-17（作者版明示正式记录）；DOI 10.1145/3772318.3791160
+- **论文链接**：[arXiv本地版本 2601.18428v1](https://arxiv.org/abs/2601.18428v1)；[DOI正式记录](https://doi.org/10.1145/3772318.3791160)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：创作与规则补全
+- **PDF版本**：19页；SHA-256：`e579dd9e6132c26dbbbce515aba82204f8f109cd0a5f5c543472a6e717ae5c82`
+
+### 中文摘要
+
+Collaposer 根据故事描述从照片集合中提取和组织可用于拼贴的视觉素材。
+
+### 核心贡献
+
+把自动标注/检测/分割与故事驱动的语义选择、分层聚类展示结合。
+
+### 实现边界
+
+从输入照片提取切图并由用户构图；动画属于演示延伸，不是自主生成完整视频故事。
+
+### Method／方法
+
+6 名专家形成性访谈；流水线预处理照片，LLM 选择中心及相关标签，再按语义层次布局；12 人与两种消融基线被试内比较。
+
+### Results／主要结果
+
+12 人共创作 36 个静态拼贴故事、尝试 45 个提示；使用完整系统均一次获得可用素材集，故事匹配、多样性和可用性评价优于消融。
+
+### Shortcomings／局限与可能不足
+
+【作者】文字意图可能错配，选择依据透明性不足；【解读】小样本且基线为消融，不能推断相对全部专业工具的效率优势。
+
+### 证据定位
+
+§3；§4；§6–7；§9。
+
+### Abstract
+
+Digital collage is an artistic practice that combines image cutouts to tell stories. However, preparing cutouts from a set of photos remains a tedious and time-consuming task. A formative study identified three main challenges: 1) inefficient search for relevant photos, 2) manual image cutout, and 3) difficulty in organizing large sets of cutouts. To meet these challenges and facilitate asset preparation for collage, we propose Collaposer, a tool that transforms a collection of photos into organized, ready-to-use visual cutouts based on user-provided story descriptions. Collaposer tags, detects, and segments photos, and then uses an LLM to select central and related labels based on the user-provided story description. Collaposer presents the resulting visuals in varying sizes, clustered according to semantic hierarchy. Our evaluation shows that Collaposer effectively automates the preparation process to produce diverse sets of visual cutouts adhering to the storyline, allowing users to focus on collaging these assets for storytelling.
+
+<a id="p041"></a>
+## P041 · Learning to Complement Humans
+
+- **作者**：Bryan Wilder; Eric Horvitz; Ece Kamar
+- **时间**：本地版本：2020-05-01（arXiv:2005.00582v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：IJCAI 2020，pp.1526–1533（官方论文集核验）。 [IJCAI官方论文页](https://www.ijcai.org/proceedings/2020/212)
+- **论文链接**：[arXiv本地版本 2005.00582v1](https://arxiv.org/abs/2005.00582v1)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：XR与人机协作
+- **PDF版本**：8页；SHA-256：`f2db8ece3b71eb3c52f40b5398ed32992f5d032a2a1a5bcf4ab054ff4cf68f9d`
+
+### 中文摘要
+
+联合训练预测模型和求助策略，以人机团队的整体效用而非机器独立准确率为目标。
+
+### 核心贡献
+
+提出判别式及决策论式的联合优化，显式利用人类与机器错误模式的互补。
+
+### 实现边界
+
+Galaxy Zoo 和 CAMELYON 的离线人类标注数据；交互主要为是否查询一个人类答案。
+
+### Method／方法
+
+建模标签、人类响应及条件预测；同时优化分类和查询决策，将求助成本/非对称错误代价纳入期望损失。
+
+### Results／主要结果
+
+表1中 Galaxy Zoo 一层 VOI 的平均损失改善 38.9%（跨查询成本），不同容量/任务收益差异很大，部分设置存在负改善。
+
+### Shortcomings／局限与可能不足
+
+【解读】需可靠的人类响应模型和代表性数据；未覆盖人类因 AI 建议而改变行为的长期双向协作。
+
+### 证据定位
+
+§2–3；§4/表1；§5。
+
+### Abstract
+
+A rising vision for AI in the open world centers on the development of systems that can complement humans for perceptual, diagnostic, and reasoning tasks. To date, systems aimed at complementing the skills of people have employed models trained to be as accurate as possible in isolation. We demonstrate how an end-to-end learning strategy can be harnessed to optimize the combined performance of human-machine teams by considering the distinct abilities of people and machines. The goal is to focus machine learning on problem instances that are difficult for humans, while recognizing instances that are difficult for the machine and seeking human input on them. We demonstrate in two real-world domains (scientific discovery and medical diagnosis) that human-machine teams built via these methods outperform the individual performance of machines and people. We then analyze conditions under which this complementarity is strongest, and which training methods amplify it. Taken together, our work provides the first systematic investigation of how machine learning systems can be trained to complement human reasoning.
+
+<a id="p042"></a>
+## P042 · LLMs Struggle to Balance Reasoning and World Knowledge in Causal Narrative Understanding
+
+- **作者**：Khurram Yamin; Shantanu Gupta; Gaurav Ghosal; Zachary Lipton; Bryan Wilder
+- **时间**：2026年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：ICLR 2026（PDF 明示）
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+- **版本关系**：与[P045](#p045)为同一工作不同题名/版本；本地[P042](#p042)明示ICLR 2026，[P045](#p045)为2025-06的较早预印稿。
+
+- **主题**：世界机制与演化
+- **PDF版本**：28页；SHA-256：`0264b3dec2f81a06f3272ce9328b2324bea065f9d9a77f4733091cb48ca9595d`
+
+### 中文摘要
+
+分析 LLM 在叙事因果理解中如何受事件顺序、已有知识和图结构复杂度影响。
+
+### 核心贡献
+
+受控的合成、半合成和真实叙事评测，定位常识捷径与顺序偏差。
+
+### 实现边界
+
+主要判断事件间因果关系和抽取图；未涵盖完整反事实或干预推理。
+
+### Method／方法
+
+从链、fork、collider 和 CauseNet 构造叙事，操控叙述顺序/知识一致性/长度；比较直接回答与先抽因果图。
+
+### Results／主要结果
+
+模型倾向按叙事顺序推断因果、以参数知识覆盖上下文；图更长/复杂时下降。先显式识别因果图可改善稳定性。
+
+### Shortcomings／局限与可能不足
+
+【作者】未覆盖其他因果任务；【解读】CauseNet 是文本声称的因果关系，受控叙事不等于真实科学因果发现。
+
+### 证据定位
+
+§3–4；§5；与 P045 封面、摘要比对。
+
+### Abstract
+
+The ability to robustly identify causal relationships is essential for autonomous decision-making and adaptation to novel scenarios. However, accurately inferring causal structure requires integrating both world knowledge and abstract logical reasoning. In this work, we investigate the interaction between these two capabilities through the representative task of causal reasoning over narratives. Through controlled synthetic, semi-synthetic and real-world experiments, we find that stateof-the-art large language models (LLMs) often rely on superficial heuristics—for example, inferring causality from event order or recalling memorized world knowledge without attending to context. Furthermore, we show that simple reformulations of the task can elicit more robust reasoning behavior. Our evaluation spans a range of causal structures, from linear chains to complex graphs involving colliders and forks. These findings uncover systematic patterns in how LLMs perform causal reasoning and lay the groundwork for developing methods that better align LLM behavior with principled causal inference.
+
+<a id="p043"></a>
+## P043 · LLMs Struggle to Perform Counterfactual Reasoning with Parametric Knowledge
+
+- **作者**：Khurram Yamin, Gaurav Ghosal, Bryan Wilder
+- **时间**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：2025 年研究稿；ICML 2025 模板元数据；arXiv:2506.15732，主会/Workshop 身份不能只由模板判断。 [arXiv记录](https://arxiv.org/abs/2506.15732)
+- **论文链接**：[arXiv论文记录](https://arxiv.org/abs/2506.15732)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化
+- **PDF版本**：10页；SHA-256：`ba93aa93e6f55f736903bae8c7fb437ddf9783864e2d8fa6c9ecf4aa06c7d579`
+
+### 中文摘要
+
+测试模型能否将新反事实前提与已存知识结合，而不是继续沿用默认知识。
+
+### 核心贡献
+
+区分强化、添加、冲突与无关上下文的知识整合任务，并研究微调的副作用。
+
+### 实现边界
+
+受控知识图和短链因果查询；不是现实因果效应估计。
+
+### Method／方法
+
+在 GPT-4o/Llama3.1 与玩具模型上比较直接提示、CoT、160 条反事实示例微调及预训练干预。
+
+### Results／主要结果
+
+强化既有知识时 GPT-4o 直接提示约 85%、CoT 超过 95%；添加/冲突条件困难，简单微调可能仍依赖捷径或损害原有知识。
+
+### Shortcomings／局限与可能不足
+
+【作者】玩具前提多为单边编辑、两跳查询；【解读】少量训练与模型范围限制结论，不可说微调普遍无效。
+
+### 证据定位
+
+§3；§4；§5–6；附录训练细节。
+
+### Abstract
+
+Large Language Models have been shown to contain extensive world knowledge in their parameters, enabling impressive performance on many knowledge intensive tasks. However, when deployed in novel settings, LLMs often encounter situations where they must integrate parametric knowledge with new or unfamiliar information. In this work, we explore whether LLMs can combine knowledge in-context with their parametric knowledge through the lens of counterfactual reasoning. Through synthetic and real experiments in multi-hop reasoning problems, we show that LLMs generally struggle with counterfactual reasoning, often resorting to exclusively using their parametric knowledge. Moreover, we show that simple post-hoc finetuning can struggle to instill counterfactual reasoning ability – often leading to degradation in stored parametric knowledge. Ultimately, our work reveals important limitations of current LLM’s abilities to re-purpose parametric knowledge in novel settings.
+
+<a id="p044"></a>
+## P044 · Orthogonal Causal Calibration
+
+- **作者**：Justin Whitehouse; Christopher Jung; Vasilis Syrgkanis; Bryan Wilder; Zhiwei Steven Wu
+- **时间**：本地版本：2025-04-30（arXiv:2406.01933v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：COLT 2025 Extended Abstract，PMLR291:5712–5713（官方记录核验）；本地为完整研究稿，首页2025-05-02、arXiv v2为2025-04-30，两者篇幅不可混淆。 [PMLR官方记录](https://proceedings.mlr.press/v291/whitehouse25a.html)
+- **论文链接**：[arXiv本地版本 2406.01933v2](https://arxiv.org/abs/2406.01933v2)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化
+- **PDF版本**：49页；SHA-256：`b80516dff71d6e559774e8c2192764cc4d0f0108448bff43f2114cbf85526080`
+
+### 中文摘要
+
+用正交损失把异质性因果效应估计的校准转化为较标准的预测校准。
+
+### 核心贡献
+
+对 universal/conditional orthogonality 给出误差分解、样本切分和交叉校准算法及收敛保证。
+
+### 实现边界
+
+结论依赖识别条件、正交性、损失正则性和 nuisance 估计；重点是 L2 校准，不保证个体反事实准确或决策最优。
+
+### Method／方法
+
+构造广义伪结果或条件损失，在独立样本上校准；把误差分为 nuisance 估计误差与假想已知 nuisance 下的校准误差。
+
+### Results／主要结果
+
+401(k) 观察数据和合成条件分位数实验中降低校准误差，部分同时降低平均损失；理论提供高概率收敛及条件性的 do-no-harm 结果。
+
+### Shortcomings／局限与可能不足
+
+【作者】其他 Lp 校准及最终决策效用仍待研究；【解读】真实观察数据无法直接观测全部个体处理效应。
+
+### 证据定位
+
+摘要；§3–4；§5 图1–2；§6。
+
+### Abstract
+
+Estimates of heterogeneous treatment effects such as conditional average treatment effects (CATEs) and conditional quantile treatment effects (CQTEs) play an important role in real-world decision making. Given this importance, one should ensure these estimates are calibrated. While there is a rich literature on calibrating estimators of non-causal parameters, very few methods have been derived for calibrating estimators of causal parameters, or more generally estimators of quantities involving nuisance parameters. In this work, we develop general algorithms for reducing the task of causal calibration to that of calibrating a standard (non-causal) predictive model. Throughout, we study a notion of calibration defined with respect to an arbitrary, nuisance-dependent loss l, under which we say an estimator θ is calibrated if its predictions cannot be changed on any level set to decrease loss. For losses l satisfying a condition called universal orthogonality, we present a simple algorithm that transforms partially-observed data into generalized pseudo-outcomes and applies any off-the-shelf calibration procedure. For losses l satisfying a weaker assumption called conditional orthogonality, we provide a similar sample splitting algorithm the performs empirical risk minimization over an appropriately defined class of functions. Convergence of both algorithms follows from a generic, two term upper bound of the calibration error of any model: one term that measures the error in estimating unknown nuisance parameters and another that measures calibration error in a hypothetical world where the learned nuisances are true. We demonstrate the practical applicability of our results in experiments on both observational and synthetic data. Our results are exceedingly general, showing that essentially any existing calibration algorithm can be used in causal settings, with additional loss only arising from errors in nuisance estimation.
+
+<a id="p045"></a>
+## P045 · Failure Modes of LLMs for Causal Reasoning on Narratives
+
+- **作者**：Khurram Yamin; Shantanu Gupta; Gaurav Ghosal; Zachary Lipton; Bryan Wilder
+- **时间**：本地版本：2025-06-15（arXiv:2410.23884v5）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：arXiv:2410.23884v5，2025-06-15；后续改题的ICLR 2026版本见P042
+- **论文链接**：[arXiv本地版本 2410.23884v5](https://arxiv.org/abs/2410.23884v5)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+- **版本关系**：与[P042](#p042)为同一工作不同题名/版本；本条按较早的本地稿总结。
+
+- **主题**：世界机制与演化
+- **PDF版本**：23页；SHA-256：`49a0e206675337354ceff5c93faef9493f58048c70a0088fde01fd9b9c3647b0`
+
+### 中文摘要
+
+研究语言模型在叙事因果理解中的失效模式，是 P042 的早期版本。
+
+### 核心贡献
+
+明确事件顺序、参数知识一致性和叙事结构复杂度三类影响。
+
+### 实现边界
+
+因果关系识别/图抽取；本文明确把反事实案例留作未来工作。
+
+### Method／方法
+
+构造可控合成叙事并使用 CauseNet 的半合成/真实语句，比较多种模型和先抽图提示。
+
+### Results／主要结果
+
+事件拓扑顺序一致时较好，知识冲突及长链时较差；显式抽取因果图改善推理。本条按 v5 总结，不把后续 ICLR 附录结果回填为早期结果。
+
+### Shortcomings／局限与可能不足
+
+【作者】其他类型因果推理未测；【解读】叙事中识别给定因果并不等同从混杂观测中识别因果。
+
+### 证据定位
+
+§3–4；§5.1；与 P042 对照。
+
+### Abstract
+
+The ability to robustly identify causal relationships is essential for autonomous decision-making and adaptation to novel scenarios. However, accurately inferring causal structure requires integrating both world knowledge and abstract logical reasoning. In this work, we investigate the interaction between these two capabilities through the representative task of causal reasoning over narratives. Through controlled synthetic, semi-synthetic and real-world experiments, we find that stateof-the-art large language models (LLMs) often rely on superficial heuristics—for example, inferring causality from event order or recalling memorized world knowledge without attending to context. Furthermore, we show that simple reformulations of the task can elicit more robust reasoning behavior. Our evaluation spans a range of causal structures, from linear chains to complex graphs involving colliders and forks. These findings uncover systematic patterns in how LLMs perform causal reasoning and lay the groundwork for developing methods that better align LLM behavior with principled causal inference.
+
+<a id="p046"></a>
+## P046 · Explaining Concept Shift with Interpretable Feature Attribution
+
+- **作者**：Ruiqi Lyu; Alistair Turcan; Bryan Wilder
+- **时间**：本地版本：2025-05-27（arXiv:2505.20634v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：Preprint, Under review；arXiv:2505.20634v1，2025-05-27（本地版本）
+- **论文链接**：[arXiv本地版本 2505.20634v1](https://arxiv.org/abs/2505.20634v1)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化
+- **PDF版本**：25页；SHA-256：`b06c08edda94ada5d2c1566b92694110d440fab9c921c2fad4806ad9c010bcbc`
+
+### 中文摘要
+
+SGShift 将预测失效归因到条件标签分布发生变化的少数特征。
+
+### 核心贡献
+
+稀疏 GAM 归因、吸收模型误设项和 knockoff 错误发现控制扩展。
+
+### 实现边界
+
+表格数据的概念漂移，需源/目标域信息和标注；被选特征不是必然的干预因果变量。
+
+### Method／方法
+
+在原模型输出上拟合带 L1 惩罚的加性修正，结合两域共享误设项；用 knockoffs 筛选发生变化的特征。
+
+### Results／主要结果
+
+在糖尿病再入院、COVID 和 SUPPORT2 的半合成实验中，knockoff 变体多次获得 AUC&gt;0.9；召回率按 FPR=10% 评价，不能与任意阈值召回混用。
+
+### Shortcomings／局限与可能不足
+
+【作者】假设变化稀疏，密集变化难解释；【解读】GAM 加性结构和有限目标域标签限制复杂交互漂移识别。
+
+### 证据定位
+
+§4；§5–6/表2；§7。
+
+### Abstract
+
+Regardless the amount of data a machine learning (ML) model is trained on, there will inevitably be data that differs from their training set, lowering model performance. Concept shift occurs when the distribution of labels conditioned on the features changes, making even a well-tuned ML model to have learned a fundamentally incorrect representation. Identifying these shifted features provides unique insight into how one dataset differs from another, considering the difference may be across a scientifically relevant dimension, such as time, disease status, population, etc. In this paper, we propose SGShift, a model for detecting concept shift in tabular data and attributing reduced model performance to a sparse set of shifted features. SGShift models concept shift with a Generalized Additive Model (GAM) and performs subsequent feature selection to identify shifted features. We propose further extensions of SGShift by incorporating knockoffs to control false discoveries and an absorption term to account for models with poor fit to the data. We conduct extensive experiments in synthetic and real data across various ML models and find SGShift can identify shifted features with AUC &gt; 0.9 and recall &gt; 90%, often 2 or 3 times as high as baseline methods.
+
+<a id="p047"></a>
+## P047 · Can LLMs Propose Instrumental Variables for Causal Reasoning?
+
+- **作者**：本地稿匿名；官方 CISPA 记录补充：Ivaxi Sheth; Zhijing Jin; Bryan Wilder; Dominik Janzing; Mario Fritz
+- **时间**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：NeurIPS 2025 Workshop（CISPA 记录日期 2025-12-06）；本地为匿名稿。 [CISPA机构记录](https://cispa.de/en/research/publications/104502-can-llms-propose-instrumental-variables-for-causal-reasoning-)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化
+- **PDF版本**：18页；SHA-256：`c93595a135d3c4e837633d1fd4b30fe3f47805aa52e29411a4ef9dcbc6fa53c5`
+
+### 中文摘要
+
+用 LLM 提议并批判工具变量，探索观察数据中候选工具的发现。
+
+### 核心贡献
+
+IV Co-Scientist 多角色流程，以及无真值时的内部一致性比较。
+
+### 实现边界
+
+只能辅助提出候选；高 F 统计量只支持相关性，不能验证排除限制/独立性，内部一致也不等于因果有效。
+
+### Method／方法
+
+先测试恢复文献工具和拒绝已被推翻的工具；代理提议处理—结果—工具组合并批判假设，再比较第一阶段强度与估计一致性。
+
+### Results／主要结果
+
+5 个自动发现案例中多种候选表现出较强相关及高于随机代理的内部一致性；论文未建立所有新工具的真实有效性。
+
+### Shortcomings／局限与可能不足
+
+【解读】语义批评共享模型偏差；缺乏真值时一致性不足以排除共同混杂，候选须领域知识进一步审核。
+
+### 证据定位
+
+摘要；§2.1–2.2/表1；附录 C、H；CISPA 作者记录。
+
+### Abstract
+
+In the presence of confounding between an endogenous variable and the outcome, instrumental variables (IVs) are used to isolate causal effects. Identifying valid instruments requires interdisciplinary knowledge and contextual understanding, making it a difficult task. In this paper, we examine whether large language models (LLMs) can assist. We adopt a two-stage evaluation: first, testing whether LLMs recover established instruments from the literature, and second, assessing whether they avoid empirically or theoretically discredited ones. Building on these results, we introduce IV Co-Scientist, a multi-agent system that proposes, critiques, and refines IVs, along with a statistical test to contextualize consistency without ground truth. Our results show the potential of LLMs to identify valid IVs from large observational data.
+
+<a id="p048"></a>
+## P048 · Utility-Directed Conformal Prediction: A Decision-Aware Framework for Actionable Uncertainty Quantification
+
+- **作者**：Santiago Cortes-Gomez; Carlos Patiño; Yewon Byun; Zhiwei Steven Wu; Eric Horvitz; Bryan Wilder
+- **时间**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：ICLR 2025（PDF 明示）
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：XR与人机协作、AI方法与评测
+- **PDF版本**：20页；SHA-256：`014cd623273d23418cf34a7100f3f8741e56e4c4ca3ad9442505448e46e2df75`
+
+### 中文摘要
+
+把下游成本纳入保形预测，使具有覆盖保证的预测集合更适合实际决策。
+
+### 核心贡献
+
+针对可分/不可分效用构造 nonconformity score 与集合选择方法，并证明保留标准覆盖。
+
+### 实现边界
+
+标准覆盖依赖校准/测试交换性等条件，通常是边际保证；皮肤诊断为数据集示例，未做临床试验。
+
+### Method／方法
+
+利用标签或集合成本构造惩罚比率/保形分数，再做校准；在分类层级中偏好临床或语义更一致的集合。
+
+### Results／主要结果
+
+CIFAR-100、iNaturalist、ImageNet、Fitzpatrick 的所测效用成本均低于标准保形基线，并经验保持覆盖率。
+
+### Shortcomings／局限与可能不足
+
+【解读】需预先定义有意义的效用，分布变化影响保证；成本低不必然代表所有用户或群体都受益。PDF 代码链接仍写 [hidden]。
+
+### 证据定位
+
+§3；§4/图3及附录表4–6；§5、Reproducibility Statement。
+
+### Abstract
+
+Interest has been growing in decision-focused machine learning methods which train models to account for how their predictions are used in downstream optimization problems. Doing so can often improve performance on subsequent decision problems. However, current methods for uncertainty quantification do not incorporate any information about downstream decisions. We develop a methodology based on conformal prediction to identify prediction sets that account for a downstream cost function, making them more appropriate to inform high-stakes decision-making. Our approach harnesses the strengths of conformal methods—modularity, model-agnosticism, and statistical coverage guarantees—while incorporating downstream decisions and user-specified utility functions. We prove that our methods retain standard coverage guarantees. Empirical evaluation across a range of datasets and utility metrics demonstrates that our methods achieve significantly lower costs than standard conformal methods. We present a real-world use case in healthcare diagnosis, where our method effectively incorporates the hierarchical structure of dermatological diseases. The method successfully generates sets with coherent diagnostic meaning, potentially aiding triage for dermatology diagnosis and illustrating how our method can ground high-stakes decision-making employing domain knowledge.
+
+<a id="p049"></a>
+## P049 · Decision-Focused Learning without Differentiable Optimization: Learning Locally Optimized Decision Losses
+
+- **作者**：Sanket Shah; Kai Wang; Bryan Wilder; Andrew Perrault; Milind Tambe
+- **时间**：2022年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：NeurIPS 2022（正式会议 PDF）
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+- **版本关系**：文件名写 without decision making，但首页实际标题是 without Differentiable Optimization。
+
+- **主题**：XR与人机协作
+- **PDF版本**：13页；SHA-256：`07b280867fab39304c2cddf0d2c056e09cce4810f27d2c1fa7395b6ecf454ccf`
+
+### 中文摘要
+
+通过学习局部决策损失，让预测训练适应下游优化而无需对求解器求导。
+
+### 核心贡献
+
+LODL 用黑盒优化器生成监督，学习可凸的任务相关损失。
+
+### 实现边界
+
+仍需大量调用黑盒求解器来拟合损失；“without differentiable optimization”并非完全不做优化。
+
+### Method／方法
+
+在真实标签附近扰动预测，用决策质量作为目标，拟合加权 MSE/方向二次型等局部损失，再用于训练预测网络。
+
+### Results／主要结果
+
+三个资源分配域均优于任务无关的两阶段训练，部分超过手工可微代理；样本增多通常提高表现，损失学习可并行/复用。
+
+### Shortcomings／局限与可能不足
+
+【作者】局部邻域/损失族选择影响泛化和成本；【解读】关于损失的凸性不使整个神经网络训练全局凸。
+
+### 证据定位
+
+§4；§5/表1–3；§6。
+
+### Abstract
+
+Decision-Focused Learning (DFL) is a paradigm for tailoring a predictive model to a downstream optimization task that uses its predictions in order to perform better on that specific task . The main technical challenge associated with DFL is that it requires being able to differentiate through the optimization problem, which is difficult due to discontinuous solutions and other challenges. Past work has largely gotten around this this issue by handcrafting task-specific surrogates to the original optimization problem that provide informative gradients when differentiated through. However, the need to handcraft surrogates for each new task limits the usability of DFL. In addition, there are often no guarantees about the convexity of the resulting surrogates and, as a result, training a predictive model using them can lead to inferior local optima. In this paper, we do away with surrogates altogether and instead learn loss functions that capture task-specific information. To the best of our knowledge, ours is the first approach that entirely replaces the optimization component of decision-focused learning with a loss that is automatically learned. Our approach (a) only requires access to a black-box oracle that can solve the optimization problem and is thus generalizable, and (b) can be convex by construction and so can be easily optimized over. We evaluate our approach on three resource allocation problems from the literature and find that our approach outperforms learning without taking into account task-structure in all three domains, and even hand-crafted surrogates from the literature.
+
+<a id="p050"></a>
+## P050 · Distributionally Robust Feature Selection
+
+- **作者**：Maitreyi Swaroop; Tamar Krishnamurti; Bryan Wilder
+- **时间**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：NeurIPS 2025（会议论文）
+- **项目／代码／数据**：[代码：maitreyiswaroop/dro-feature-selection](https://github.com/maitreyiswaroop/dro-feature-selection)
+
+- **主题**：XR与人机协作
+- **PDF版本**：30页；SHA-256：`cac9cafdc4deee05eb02c15751e5836ebb631d2b2dc2cfdc711c559e78b23cb1`
+
+### 中文摘要
+
+在观测特征预算下选择对多个子群体都有用的特征，以支持分别训练高质量模型。
+
+### 核心贡献
+
+噪声连续松弛和 Bayes 最优预测方差目标，避免反传穿过训练过程。
+
+### 实现边界
+
+选择共享特征，但下游允许各群体自己的模型；理论推导核心为 MSE，不能当作已证明所有损失适用。
+
+### Method／方法
+
+对特征加可控噪声，估计各组目标并最小化最差组损失，用重参数化和核估计做梯度优化。
+
+### Results／主要结果
+
+合成及 ACS/UCI 试验中优于所列 Lasso、XGBoost 和 DRO 改编基线；ACS 设置报告 MSE 数量级下降，UCI 分类也有经验收益。
+
+### Shortcomings／局限与可能不足
+
+【作者】插件估计在小群体可能偏，非 MSE 理论待扩展；【解读】依赖已知群体及代表性训练数据。
+
+### 证据定位
+
+§3；§4.3/图3；§5。
+
+### Abstract
+
+We study the problem of selecting limited features to observe such that models trained on them can perform well simultaneously across multiple subpopulations. This problem has applications in settings where collecting each feature is costly, e.g. requiring adding survey questions or physical sensors, and we must be able to use the selected features to create high-quality downstream models for different populations. Our method frames the problem as a continuous relaxation of traditional variable selection using a noising mechanism, without requiring backpropagation through model training processes. By optimizing over the variance of a Bayes-optimal predictor, we develop a model-agnostic framework that balances overall performance of downstream prediction across populations. We validate our approach through experiments on both synthetic datasets and real-world data.
+
+<a id="p051"></a>
+## P051 · Fostering the Ecosystem of AI for Social Impact Requires Expanding and Strengthening Evaluation Standards
+
+- **作者**：Bryan Wilder; Angela Zhou
+- **时间**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：NeurIPS 2025，Position Paper Track；本地文件制作时间 2026 不应改为发表年
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：12页；SHA-256：`6b56fdf0a819fde5506ab115474a0b52b77b5cb85fb93651b35c2f8a3e26a794`
+
+### 中文摘要
+
+主张扩大社会影响贡献的认可范围，同时提高真实部署影响评价的严谨性。
+
+### 核心贡献
+
+区分方法创新、伙伴能力建设及部署贡献，讨论评审激励如何影响研究生态。
+
+### 实现边界
+
+立场论文，提出评价建议；没有新预测模型、受控干预结果或统一算法排行榜。
+
+### Method／方法
+
+分析既有评审标准和应用研究案例，分别讨论试点、随机与非随机部署、反方意见。
+
+### Results／主要结果
+
+建议作者明确影响机制、评审按贡献类型要求证据，并对部署研究采用更清晰和严格的效果评价。
+
+### Shortcomings／局限与可能不足
+
+【解读】观点依赖案例和规范性判断，尚无证据量化采用这些评审规则后的长期生态效果。
+
+### 证据定位
+
+§2–5；§6 Alternative views；§7。
+
+### Abstract
+
+There has been increasing research interest in AI/ML for social impact, and correspondingly more publication venues have refined review criteria for practice-driven AI/ML research. However, these review guidelines tend to most concretely recognize projects that simultaneously achieve deployment and novel ML methodological innovation. We argue that this introduces incentives for researchers that undermine the sustainability of a broader research ecosystem of social impact, which benefits from projects that make contributions on single front (applied or methodological) that may better meet project partner needs. Our position is that researchers and reviewers in machine learning for social impact must simultaneously adopt: 1) a more expansive conception of social impacts beyond deployment and 2) more rigorous evaluations of the impact of deployed systems.
+
+<a id="p052"></a>
+## P052 · Valid Inference with Imperfect Synthetic Data
+
+- **作者**：Yewon Byun; Shantanu Gupta; Zachary C. Lipton; Rachel Leah Childers; Bryan Wilder
+- **时间**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：NeurIPS 2025（会议论文）
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化
+- **PDF版本**：40页；SHA-256：`f36995c8bce9d2c778ff92294498365045028b0df617164756664c6fa99ce9b8`
+
+### 中文摘要
+
+以广义矩估计整合真实、代理及完全合成数据，提高有限真实数据下的统计效率。
+
+### 核心贡献
+
+无需超参数的 GMM 估计器及一致性/渐近推断理论。
+
+### 实现边界
+
+仍需要真实数据与可识别的矩条件；理论有效性是渐近的，不能保证极少样本时精确覆盖。
+
+### Method／方法
+
+联合真实与合成矩残差，利用它们的预测相关性，估计权重和协方差构造参数与置信区间。
+
+### Results／主要结果
+
+8/8 个下游任务获得最低 MSE，7/8 的置信区间更窄；少标注设置多次 MSE 降幅超过 50%，并经验保持覆盖。
+
+### Shortcomings／局限与可能不足
+
+【作者】劣质合成数据可能无收益，极低数据量可欠覆盖；【解读】不能用模型模拟受试者完全替代真实样本。
+
+### 证据定位
+
+§4.5；§5.3/图1–2；§6 Limitations。
+
+### Abstract
+
+Predictions and generations from large language models are increasingly being explored as an aid in limited data regimes, such as in computational social science and human subjects research. While prior technical work has mainly explored the potential to use model-predicted labels for unlabeled data in a principled manner, there is increasing interest in using large language models to generate entirely new synthetic samples (e.g., synthetic simulations), such as in responses to surveys. However, it remains unclear by what means practitioners can combine such data with real data and yet produce statistically valid conclusions upon them. In this paper, we introduce a new estimator based on generalized method of moments, providing a hyperparameter-free solution with strong theoretical guarantees to address this challenge. Intriguingly, we find that interactions between the moment residuals of synthetic data and those of real data (i.e., when they are predictive of each other) can greatly improve estimates of the target parameter. We validate the finite-sample performance of our estimator across different tasks in computational social science applications, demonstrating large empirical gains.
+
+<a id="p053"></a>
+## P053 · Superhuman performance of a large language model on the reasoning tasks of a physician
+
+- **作者**：Peter G. Brodeur; Thomas A. Buckley; Zahir Kanjee; Ethan Goh; Evelyn Bin Ling; Priyank Jain; Stephanie Cabral; Raja-Elie Abdulnour; Adrian D. Haimovich; Jason A. Freed; Andrew Olson; Daniel J. Morgan; Jason Hom; Robert Gallo; Liam G. McCoy; Haadi Mombini; Christopher Lucas; Misha Fotoohi; Matthew Gwiazdon; Daniele Restifo; Daniel Restrepo; Eric Horvitz; Jonathan Chen; Arjun K. Manrai; Adam Rodman
+- **时间**：预印首发2024-12-14；本地摘要对应2025-06-02 arXiv v3；正式Science论文2026-04-30上线
+- **发表平台／版本状态**：Science 392(6797):524–527，2026-04-30，DOI 10.1126/science.adz4433；正式题名为Performance of a large language model on the reasoning tasks of a physician（删除Superhuman）。本条英文摘要与结果仍按本地预印稿。 [PubMed正式发表记录](https://pubmed.ncbi.nlm.nih.gov/42060751/)；[arXiv记录](https://arxiv.org/abs/2412.10849)
+- **论文链接**：[DOI正式记录](https://doi.org/10.1126/science.adz4433)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+- **版本关系**：Science正式版修改了题名与摘要措辞；本地PDF是较早的Superhuman题名版本，不将其摘要或具体数值直接标为正式版原文。
+
+- **主题**：XR与人机协作
+- **PDF版本**：25页；SHA-256：`4e1cb616b98899043525e3ff7dc712029af55202ad46371e676e7f2d52ac471f`
+
+### 中文摘要
+
+用医生评分的复杂病例、诊断/管理任务及急诊第二意见场景评价 OpenAI o1 系列。
+
+### 核心贡献
+
+把评价扩展到临床推理过程和真实病历，而不局限选择题考试。
+
+### 实现边界
+
+主要为离线病例及预定义时间点第二意见；未证明真实部署改善患者结局，也未实证人机团队优于医生。
+
+### Method／方法
+
+五类病例推理实验加急诊研究，专家使用 Bond/R-IDEA 等量表评分，与历史和医生基线比较；分别考察 o1-preview 与 o1。
+
+### Results／主要结果
+
+143 个 NEJM 病例中鉴别列表含正确诊断 78.3%（95%CI 70.7–84.8），首位诊断正确 52%；80 份 Healer 回答中 78 份 R-IDEA 满分；“不可漏诊”覆盖未显著优于对照。
+
+### Shortcomings／局限与可能不足
+
+【作者】领域/病例有限，需前瞻试验及协作研究；【解读】量表满分和候选列表命中不是独立临床胜任，历史对照与数据泄漏风险需保留。
+
+### 证据定位
+
+摘要 PDF p2；结果 p3–5；讨论 p5–6；方法 p6 起。
+
+### Abstract
+

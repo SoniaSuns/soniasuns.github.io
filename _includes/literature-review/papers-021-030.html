@@ -1,0 +1,948 @@
+<details
+  class="lr-paper"
+  id="p030"
+  data-id="P030"
+  data-years="2026"
+  data-year="2026"
+  data-topics="world xr"
+  data-new="false"
+  data-title="AbductiveMLLM: Boosting Visual Abductive Reasoning Within MLLMs"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P030 <span aria-hidden="true">/</span> 2026</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">AbductiveMLLM: Boosting Visual Abductive Reasoning Within MLLMs</span>
+    <span class="lr-authors">Boyu Chang; Qi Wang; Xi Guo et al.</span>
+    <span class="lr-snippet">结合语言假设筛选与图像想象，增强多模态模型对缺失视觉事件的溯因推理。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p030" aria-label="P030的固定链接">#P030</a><span>9页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Boyu Chang; Qi Wang; Xi Guo; Zhixiong Nan; Yazhou Yao; Tianfei Zhou</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2026-01-06（arXiv:2601.02771v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          AAAI 2026，40(4):2698–2706；正式上线2026-03-14，DOI 10.1609/aaai.v40i4.37258（AAAI官方核验）；本地为arXiv v1。
+          <a target="_blank" rel="noopener noreferrer" href="https://ojs.aaai.org/index.php/AAAI/article/view/37258">AAAI官方论文页</a>
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p>
+          <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2601.02771v1">arXiv本地版本 2601.02771v1</a>；<a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://doi.org/10.1609/aaai.v40i4.37258"
+            >DOI正式记录</a
+          >
+        </p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/ChangPtR/AbdMLLM">代码：ChangPtR/AbdMLLM</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>结合语言假设筛选与图像想象，增强多模态模型对缺失视觉事件的溯因推理。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>REASONER 与 IMAGINER 双模块联合学习：前者筛选假设，后者用扩散视觉表示辅助解释。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>标准 VAR 任务中的解释生成；想象画面属于条件生成，不能作为对真实隐藏事件的新观测证据。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>LLM 根据视频描述提出候选，经因果相关对比学习筛选；条件扩散模块通过适配器融合视频和推理表示，联合优化语言与图像分支。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>作者在标准 VAR 基准报告优于所列传统模型和 MLLM；消融显示去掉 IMAGINER 或其适配器会降低 CIDEr 等生成指标。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】生成图像可能强化错误假设；依赖视频描述、候选覆盖和训练数据，自动文本指标不直接证明因果解释正确。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>摘要；REASONER/IMAGINER 方法；实验表格；表6及结论。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Visual abductive reasoning (V AR) is a challenging task that requires AI systems to infer the most likely explanation for incomplete visual
+          observations. While recent MLLMs develop strong general-purpose multimodal reasoning capabilities, they fall short in abductive inference,
+          as compared to human beings. To bridge this gap, we draw inspiration from the interplay between verbal and pictorial abduction in human
+          cognition, and propose to strengthen abduction of MLLMs by mimicking such dual-mode behavior. Concretely, we
+          introduceAbductiveMLLMcomprising of two synergistic components: REASONERand IMAGINER. The REASONERoperates in the verbal domain. It first
+          explores a broad space of possible explanations using a blind LLM and then prunes visually incongruent hypotheses based on cross-modal
+          causal alignment. The remaining hypotheses are introduced into the MLLM as targeted priors, steering its reasoning toward causally coherent
+          explanations. The IMAGINER, on the other hand, further guides MLLMs by emulating human-like pictorial thinking. It conditions a
+          text-to-image diffusion model on both the input video and the REASONER’s output embeddings to “imagine” plausible visual scenes that
+          correspond to verbal explanation, thereby enriching MLLMs’ contextual grounding. The two components are trained jointly in an end-to-end
+          manner. Experiments on standard V AR benchmarks show thatAbductiveMLLMachieves state-of-the-art performance, consistently outperforming
+          traditional solutions and advanced MLLMs. Code— https://github.com/ChangPtR/AbdMLLM
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>2e9d58f9985c584aa48d97dbf51d1f7b98f81da5cc7bacd01997e66b8e388ea0</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p029"
+  data-id="P029"
+  data-years="2025"
+  data-year="2025"
+  data-topics="creation"
+  data-new="false"
+  data-title="VideoDiff: Human-AI Video Co-Creation with Alternatives"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P029 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">VideoDiff: Human-AI Video Co-Creation with Alternatives</span>
+    <span class="lr-authors">Mina Huh; Ding Li; Kim Pimmel et al.</span>
+    <span class="lr-snippet">用对齐时间轴、转录文本和差异高亮，帮助视频创作者比较、筛选和修改多种 AI 剪辑方案。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">创作与规则补全</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p029" aria-label="P029的固定链接">#P029</a><span>19页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Mina Huh; Ding Li; Kim Pimmel; Hijung Valentina Shin; Amy Pavel; Mira Dontcheva</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>CHI 2025，2025-04-26 至 05-01；DOI 10.1145/3706598.3713417</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3706598.3713417">DOI正式记录</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>用对齐时间轴、转录文本和差异高亮，帮助视频创作者比较、筛选和修改多种 AI 剪辑方案。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>围绕 rough cut、B-roll 和文字效果的多方案共创交互。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>对用户已有素材提供编辑建议/组合，未训练新的通用视频生成模型。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>8 名专业创作者形成性研究；实现 React/D3/Remotion 界面，Whisper 转录与 GPT-4o 编辑建议；12 人被试内对照和 3 个真实素材案例。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>对“理解差异的有用性”评价均值为 4.92 vs 基线 2.25（p&lt;0.05）；参与者更易比较和定制，并报告更满意的创作结果。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】小样本短期研究，比较的是特定基线；转录/语言主导流程可能遗漏视觉细节，偏好与专业成片质量不同。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§3；§4.3；§5.1–5.3；§6–7。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          To make an engaging video, people sequence interesting moments and add visuals such as B-rolls or text. While video editing requires time
+          and effort, AI has recently shown strong potential to make editing easier through suggestions and automation. A key strength of generative
+          models is their ability to quickly generate multiple variations, but when provided with many alternatives, creators struggle to compare them
+          to find the best fit. We propose VideoDiff, an AI video editing tool designed for editing with alternatives. With VideoDiff, creators can
+          generate and review multiple AI recommendations for each editing process: creating a rough cut, inserting B-rolls, and adding text effects.
+          VideoDiff simplifies comparisons by aligning videos and highlighting differences through timelines, transcripts, and video previews.
+          Creators have the flexibility to regenerate and refine AI suggestions as they compare alternatives. Our study participants (N=12) could
+          easily compare and customize alternatives, creating more satisfying results.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>4387e6879b388b1371bad2857839323e56437fdc255065cc2245000586305adc</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p028"
+  data-id="P028"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world"
+  data-new="false"
+  data-title="Video models are zero-shot learners and reasoners"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P028 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Video models are zero-shot learners and reasoners</span>
+    <span class="lr-authors">Thaddäus Wiedemer; Yuxuan Li; Paul Vicol et al.</span>
+    <span class="lr-snippet">探索 Veo 3 能否仅通过提示执行感知、操作和视觉推理任务，提出视频模型具备通用视觉能力的早期证据。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p028" aria-label="P028的固定链接">#P028</a><span>46页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd>
+        <p>Thaddäus Wiedemer; Yuxuan Li; Paul Vicol; Shixiang Shane Gu; Nick Matarese; Kevin Swersky; Been Kim; Priyank Jaini; Robert Geirhos</p>
+      </dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-09-29（arXiv:2509.20328v2）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>Google DeepMind研究预印稿；首页2025-10-01；arXiv:2509.20328v2时间2025-09-29</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2509.20328v2">arXiv本地版本 2509.20328v2</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://video-zero-shot.github.io/">项目/演示页面</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>探索 Veo 3 能否仅通过提示执行感知、操作和视觉推理任务，提出视频模型具备通用视觉能力的早期证据。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>跨任务定性探索及 7 类任务定量评估，涵盖分割、边缘检测、编辑、迷宫、对称和类比。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>Veo API 连同 LLM prompt rewriter 作为黑盒；作者承认部分答案可能来自重写器。best-frame 和 pass@10 不是单次最终输出表现。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>输入图像及任务提示生成 8 秒视频，再按任务读取最好/最后一帧；比较 Veo 2、Veo 3 和图像/语言基线。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>Veo 3 在多任务中明显优于 Veo 2，增加尝试次数提升成功率；边缘检测在 BIPEDv2 的 50 张测试图评测，分割只测 50 张较容易的 LVIS 图。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者/设定】专用模型仍更强、成功不稳定，训练数据不可见；【解读】挑最好帧/多次尝试会高估实际可直接使用的可靠性。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§2；§4 及图3–9；§5。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          The remarkable zero-shot capabilities of Large Language Models (LLMs) have propelled natural language processing from task-specific models
+          to unified, generalist foundation models. This transformation emerged from simple primitives: large, generative models trained on web-scale
+          data. Curiously, the same primitives apply to today’s generative video models. Could video models be on a trajectory towards
+          general-purposevisionunderstanding, much like LLMs developed general-purposelanguage understanding? We demonstrate that Veo 3 can solve a
+          broad variety of tasks it wasn’t explicitly trained for: segmenting objects, detecting edges, editing images, understanding physical
+          properties, recognizing object affordances, simulating tool use, and more. These abilities to perceive, model, and manipulate the visual
+          world enable early forms of visual reasoning like maze and symmetry solving. Veo’s emergent zero-shot capabilities indicate that video
+          models are on a path to becoming unified, generalist vision foundation models.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>e4bb6ec0a03c7a08e7fedf5beb10e54fbdbb54f6de4569fbb87883ad8b498219</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p027"
+  data-id="P027"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world xr"
+  data-new="false"
+  data-title="VCD: A Dataset for Visual Commonsense Discovery in Images"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P027 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">VCD: A Dataset for Visual Commonsense Discovery in Images</span>
+    <span class="lr-authors">Xiangqing Shen; Fanfan Wang; Siwei Wu et al.</span>
+    <span class="lr-snippet">VCD 将物体框与可见、不可见常识三元组连接，支持图像中的常识发现。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p027" aria-label="P027的固定链接">#P027</a><span>16页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Xiangqing Shen; Fanfan Wang; Siwei Wu; Rui Xia</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-06-05（arXiv:2402.17213v2）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          Findings of ACL 2025（官方记录核验）；本地arXiv:2402.17213v2。
+          <a target="_blank" rel="noopener noreferrer" href="https://aclanthology.org/2025.findings-acl.290/">ACL Anthology记录</a>
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2402.17213v2">arXiv本地版本 2402.17213v2</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/NUSTM/VCD">代码：NUSTM/VCD</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>VCD 将物体框与可见、不可见常识三元组连接，支持图像中的常识发现。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>超过 100K 图片、14M 物体—常识对，以及 Seen/Unseen、Property/Action/Space 层级分类；训练 VCM 基线。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>静态图片、区域级常识生成；尚未覆盖视频时序和动态因果。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>结合 Visual Genome 与 ConceptNet，映射/扩展三元组并进行质量控制，再用指令微调视觉语言模型生成常识。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>ImageNetVC 平均分由 OFA 80.7 到 VCM 83.5；Qwen-VL-7B 加常识后 OK-VQA 从 58.6 到 60.0。人评对 GPT-4o 的 Unseen 胜/平/负为 41%/29%/30%。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】下游验证较简单、仅静态图像；【解读】大量自动构造常识可能保留知识库偏差，规模不代表每条均正确。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§3；表3–5；Limitations。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Visual commonsense plays a vital role in understanding and reasoning about the visual world. While commonsense knowledge bases like
+          ConceptNet provide structured collections of general facts, they lack visually grounded representations. Scene graph datasets like Visual
+          Genome, though rich in object-level descriptions, primarily focus on directly observable information and lack systematic categorization of
+          commonsense knowledge. We present Visual Commonsense Dataset ( VCD), a large-scale dataset containing over 100,000 images and 14 million
+          object-commonsense pairs that bridges this gap. VCD introduces a novel three-level taxonomy for visual commonsense, integrating both Seen
+          (directly observable) and Unseen (inferrable) commonsense across Property, Action, and Space aspects. Each commonsense is represented as a
+          triple where the head entity is grounded to object bounding boxes in images, enabling scenedependent and object-specific visual commonsense
+          representation. To demonstrate VCD’s utility, we develop VCM, a generative model that combines a vision-language model with instruction
+          tuning to discover diverse visual commonsense from images. Extensive evaluations demonstrate both the high quality of VCD and its value as a
+          resource for advancing visually grounded commonsense understanding and reasoning. Our dataset and code will be released on
+          https://github.com/NUSTM/VCD.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>8fde486cc3f7096a777b415c3b45f71bd4d074255948644b0f7daf9eeea921da</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p026"
+  data-id="P026"
+  data-years=""
+  data-year="0"
+  data-topics="world ai"
+  data-new="false"
+  data-title="Training Large Language Models to Reason in a Continuous Latent Space"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P026 <span aria-hidden="true">/</span> 未注明（匿名稿）</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Training Large Language Models to Reason in a Continuous Latent Space</span>
+    <span class="lr-authors">本地稿匿名（Anonymous authors）；实名版本见 P103/P109</span>
+    <span class="lr-snippet">COCONUT 把隐藏状态直接反馈为下一输入，实现不经文字解码的连续潜在推理。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">AI方法与评测</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p026" aria-label="P026的固定链接">#P026</a><span>15页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>本地稿匿名（Anonymous authors）；实名版本见 P103/P109</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地匿名稿未注明日期；ICLR 2025是投稿轮次，不作为正式发表时间</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>Under review as a conference paper at ICLR 2025（匿名投稿版本，不能据此视作接收）</p></dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+      <dt>版本关系</dt>
+      <dd>
+        <p>与<a href="#p103">P103</a>/<a href="#p109">P109</a>为同一COCONUT工作；本地15页匿名版与18页署名版分别记录，不能作为两项独立证据。</p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>COCONUT 把隐藏状态直接反馈为下一输入，实现不经文字解码的连续潜在推理。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>连续 thought 的循环计算与逐阶段替换文本 CoT 的训练方案。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>基于 GPT-2，在 GSM8K、ProntoQA、ProsQA 验证；正文明确把每个连续 thought 计为一个计算 token。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>从语言 CoT 监督开始，逐步以隐藏向量取代早期推理步骤，保留可输出答案的语言阶段；用 ProsQA 分析潜在搜索分支。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>各任务优于 no-CoT，ProsQA 上超过文本 CoT，生成步数较少；不能据此称所有任务优于 CoT。具体实名版本数值见 P103，避免混用版本表格。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】潜在状态不易审计，训练需推理轨迹与阶段设置；类似 BFS 的证据来自受控逻辑任务，不是任意问题的搜索保证。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§3；§4/表1；§5 潜在搜索树；本地匿名封面。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Large language models are restricted to reason in the “language space”, where they typically express the reasoning process with a
+          chain-of-thoughts (CoT) to solve a complex reasoning problem. However, we argue that language space may not be the optimal reasoning space.
+          For example, most word tokens are primarily for textual coherence and not essential for reasoning, while some critical tokens require
+          complex planning and pose huge challenges to LLMs. To explore the potential of LLM reasoning in an unrestricted latent space instead of
+          using human language, we introduce a new paradigm C OCONUT (Chain of Continuous Thought). We utilize the last hidden state of the LLM as a
+          representation of the reasoning state (termed “continuous thought”). Rather than decoding this into a word token, we feed it back to the LLM
+          as the subsequent input embedding directly in the continuous space. Experiments show that C OCONUT can effectively augment the LLM on
+          several reasoning tasks. It even outperforms CoT in certain logical reasoning tasks that require substantial planning, despite generating
+          fewer tokens during inference. More interestingly, we observe an advanced reasoning patterns emerging from latent reasoning: the continuous
+          thought can encode multiple potential next reasoning steps, allowing the model to perform a breadth-first search (BFS) to solve the problem,
+          rather than prematurely committing to a single deterministic path like CoT. These findings demonstrate the promise of latent reasoning and
+          offer valuable insights for future research on latent reasoning methods.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>4d75acf8306a57d2554cae06f6842f73ecde9b3c4176684508ed6be077b0958d</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p025"
+  data-id="P025"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world ai"
+  data-new="false"
+  data-title="Reasoning with Sampling: Your Base Model is Smarter Than You Think"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P025 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Reasoning with Sampling: Your Base Model is Smarter Than You Think</span>
+    <span class="lr-authors">Aayush Karan; Yilun Du</span>
+    <span class="lr-snippet">不训练模型或使用验证器，而通过基础模型自身似然驱动的采样提升推理表现。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">AI方法与评测</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p025" aria-label="P025的固定链接">#P025</a><span>20页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Aayush Karan; Yilun Du</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-10-16（arXiv:2510.14901v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>arXiv:2510.14901v1（本地版本）；正式会议/期刊未核实</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2510.14901v1">arXiv本地版本 2510.14901v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p>
+          <a target="_blank" rel="noopener noreferrer" href="https://aakaran.github.io/reasoning_with_sampling/">项目/演示页面</a>；<a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/aakaran/reasoning-with-sampling"
+            >代码：aakaran/reasoning-with-sampling</a
+          >
+        </p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>不训练模型或使用验证器，而通过基础模型自身似然驱动的采样提升推理表现。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>用自回归 MCMC 近似从幂分布采样，研究 RL 后训练之外的能力激发方式。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>需要访问模型似然和反复生成/打分；single-shot 指最终提交一条答案，不代表只进行一次采样计算。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>按块扩展序列，随机位置重采样后缀，用 Metropolis–Hastings 接受率逼近 p(x)^α；测试数学、代码、科学及一般帮助性。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        MATH500/GPQA 上部分设置接近 GRPO，HumanEval 和 AlpacaEval
+        部分设置更高；保持较好的多样性。收益需结合模型与采样预算看表1，不能统一为所有模型提升同一百分比。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者/设定】精确幂分布采样不可行，采用近似且计算昂贵；【解读】高似然并非正确性保证，省训练不等于省总算力。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§4 算法1；§5.2 表1；计算分析及 §6。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Frontier reasoning models have exhibited incredible capabilities across a wide array of disciplines, driven by posttraining large language
+          models (LLMs) with reinforcement learning (RL). However, despite the widespread success of this paradigm, much of the literature has been
+          devoted to disentangling truly novel behaviors that emerge during RL but are not present in the base models. In our work, we approach this
+          question from a different angle, instead asking whether comparable reasoning capabilites can be elicited from base models at inference time
+          by pure sampling,without any additional training. Inspired by Markov chain Monte Carlo (MCMC) techniques for sampling from sharpened
+          distributions, we propose a simple iterative sampling algorithm leveraging the base models’ own likelihoods. Over different base models, we
+          show that our algorithm offers substantial boosts in reasoning that nearly match and even outperform those from RL on a wide variety of
+          single-shot tasks, including MATH500, HumanEval, and GPQA. Moreover, our sampler avoids the collapse in diversity over multiple samples that
+          is characteristic of RL-posttraining. Crucially, our method does not require training, curated datasets, or a verifier, suggesting broad
+          applicability beyond easily verifiable domains.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>8f029968f20292b320dda95d253911a187e34a18d33aa6cdc65883b9cc1a47d4</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p024"
+  data-id="P024"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world xr"
+  data-new="false"
+  data-title="Nested Learning: The Illusion of Deep Learning Architecture"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P024 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Nested Learning: The Illusion of Deep Learning Architecture</span>
+    <span class="lr-authors">Ali Behrouz; Meisam Razaviyayn; Peilin Zhong et al.</span>
+    <span class="lr-snippet">把网络、优化器和记忆统一为不同更新频率的嵌套优化过程，并据此设计连续记忆系统和 Hope。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p024" aria-label="P024的固定链接">#P024</a><span>52页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Ali Behrouz; Meisam Razaviyayn; Peilin Zhong; Vahab Mirrokni</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-12-31（arXiv:2512.24695v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          NeurIPS 2025 Main Conference Track（官方论文集核验）；正式题名末词Architectures为复数，本地首页Architecture为单数。
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/4309616aaed8e848009bc4a7ef73b493-Abstract-Conference.html"
+            >NeurIPS官方论文集</a
+          >
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2512.24695v1">arXiv本地版本 2512.24695v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>把网络、优化器和记忆统一为不同更新频率的嵌套优化过程，并据此设计连续记忆系统和 Hope。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>提出 NL 视角、表达力更强的优化器、自修改学习模块和 Continuum Memory System。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>提供理论重述与具体原型实验；作者明确表示未普遍解决灾难性遗忘。标题按首页单数 Architecture，元数据为 Architectures。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>将梯度/上下文压缩解释为关联记忆；设计多个时间尺度更新的 MLP 记忆、M3 优化器，以及结合自指 Titans 的 Hope。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        在语言建模、知识更新、形式语言和长上下文任务中展示收益；如表1 16K UUID 检索 Hope 24.8%、Titans 21.2%、Transformer
+        40.8%，说明优势取决于任务，非全面领先。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】有限容量的压缩仍带来遗忘；【解读】新概念的统一性不等于普适能力保证，需分别评价各组件、参数量和训练预算。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§3–8；§9、表1–5；§10 的 Is Catastrophic Forgetting Solved?。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Over the last decades, developing more powerful neural architectures and simultaneously designing optimization algorithms to effectively
+          train them have been the core of research efforts to enhance the capability of machine learning models. Despite the recent progresses,
+          particularly in developing Language Models (LMs), there are fundamental challenges and unanswered questions about how such models
+          cancontinually learn/memorize, self-improve, and find effective solutions. In this paper, we present a new learning paradigm, called Nested
+          Learning (NL), that coherently represents a machine learning model with a set of nested, multi-level, and/or parallel optimization problems,
+          each of which with its own “context flow”. Through the lenses of NL, existing deep learning methods learns from data throughcompressingtheir
+          own context flow, andin-context learningnaturally emerges in large models. NL suggests a philosophy to design more expressive learning
+          algorithms with more “levels”, resulting in higher-order in-context learning and potentially unlocking effective continual learning
+          capabilities. In addition to its neuro-scientific motivation, we advocate for NL by presenting three core contributions: (1) Expressive
+          Optimizers: We show that known gradient-based optimizers, such as Adam, SGD with Momentum, etc., are in fact associative memory modules that
+          aim to compress the gradients’ information (by gradient descent). Building on this insight, we present other “more expressive" optimizers
+          with deep memory and/or more powerful learning rules; (2) Self-Modifying Learning Module: Taking advantage of NL’s insights on learning
+          algorithms, we present a sequence model that learns how to modify itself by learning its own update algorithm; and (3) Continuum Memory
+          System: We present a new formulation for memory system that generalizes the traditional viewpoint of “long-term/short-term memory”.
+          Combining our self-modifying sequence model with the continuum memory system, we present a continual learning module, calledHope, showing
+          promising results in language modeling, knowledge incorporation, and few-shot generalization tasks, continual learning, and long-context
+          reasoning tasks.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>e87a9ce82ff24e96f55b83fb9713a5d6fc9e4a1a232c12d42da49c10022ed891</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p023"
+  data-id="P023"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world"
+  data-new="false"
+  data-title="Generalizable Reasoning through Compositional Energy Minimization"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P023 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Generalizable Reasoning through Compositional Energy Minimization</span>
+    <span class="lr-authors">Alexandru Oarga; Yilun Du</span>
+    <span class="lr-snippet">先学习小子问题的能量函数，再在测试时组合约束求解更大、更复杂的问题。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p023" aria-label="P023的固定链接">#P023</a><span>22页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Alexandru Oarga; Yilun Du</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-10-23（arXiv:2510.20607v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          NeurIPS 2025 Main Conference Track（官方论文集核验）。
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/7b22ed7325629fd4c041d47139410fd9-Abstract-Conference.html"
+            >NeurIPS官方论文集</a
+          >
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2510.20607v1">arXiv本地版本 2510.20607v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://alexoarga.github.io/compositional_reasoning/">项目/演示页面</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>先学习小子问题的能量函数，再在测试时组合约束求解更大、更复杂的问题。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>组合能量景观与 Parallel Energy Minimization（PEM），支持增加约束和计算预算。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>N-Queens、3-SAT、图着色和填字；子问题分解由任务结构提供，不是自动发现任意问题分解。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>扩散与对比损失训练局部能量函数；求和形成全局目标，用多个并行候选进行能量最小化和筛选。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>只用一个 8 皇后训练实例时，P=1024 的方法在 100 次生成中得到 97 个有效解，表1最强比较设置为 41 个。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】高斯初始化/增量限制，图着色仍未充分达到最优；【解读】并行采样成本显著，不能把 97% 视为单一低成本轨迹成功率。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§3；表1 p6；§4；§5。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Generalization is a key challenge in machine learning, specifically in reasoning tasks, where models are expected to solve problems more
+          complex than those encountered during training. Existing approaches typically train reasoning models in an end-to-end fashion, directly
+          mapping input instances to solutions. While this allows models to learn useful heuristics from data, it often results in limited
+          generalization beyond the training distribution. In this work, we propose a novel approach to reasoning generalization by learning energy
+          landscapes over the solution spaces of smaller, more tractable subproblems. At test time, we construct a global energy landscape for a given
+          problem by combining the energy functions of multiple subproblems. This compositional approach enables the incorporation of additional
+          constraints during inference, allowing the construction of energy landscapes for problems of increasing difficulty. To improve the sample
+          quality from this newly constructed energy landscape, we introduce Parallel Energy Minimization (PEM). We evaluate our approach on a wide
+          set of reasoning problems. Our method outperforms existing state-of-the-art methods, demonstrating its ability to generalize to larger and
+          more complex problems. Project website can be found at:https://alexoarga.github.io/compositional_reasoning/
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>26f0122c9977bee78286c8587ae868a3fe2db86dc60f7dabe4a4710c6ac3f5f9</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p022"
+  data-id="P022"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world xr"
+  data-new="false"
+  data-title="Enabling Self-Improving Agents to Learn at Test Time With Human-In-The-Loop Guidance"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P022 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Enabling Self-Improving Agents to Learn at Test Time With Human-In-The-Loop Guidance</span>
+    <span class="lr-authors">Yufei He; Ruoyu Li; Alex Chen et al.</span>
+    <span class="lr-snippet">ARIA 识别知识缺口、向专家求助并维护带时间戳的知识库，以适应运行中变化的规则。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p022" aria-label="P022的固定链接">#P022</a><span>30页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Yufei He; Ruoyu Li; Alex Chen; Yue Liu; Yulin Chen; Yuan Sui; Cheng Chen; Yi Zhu; Luca Luo; Frank Yang; Bryan Hooi</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-10-10（arXiv:2507.17131v2）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          EMNLP 2025 Industry Track，pp.1625–1653（官方记录核验）；正文结果按本地arXiv v2。
+          <a target="_blank" rel="noopener noreferrer" href="https://aclanthology.org/2025.emnlp-industry.115/">ACL Anthology记录</a>
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2507.17131v2">arXiv本地版本 2507.17131v2</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/yf-he/aria">代码：yf-he/aria</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>ARIA 识别知识缺口、向专家求助并维护带时间戳的知识库，以适应运行中变化的规则。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>将主动询问、冲突消解和时效性知识更新结合，用于动态名称筛查与合同理解。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>更新主要是外部知识库；TikTok Pay 部署和用户覆盖是论文自述，不能将平台月活当作实验人数；公开 CUAD 实验用 LLM 模拟专家。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>自对话评估不确定性，在查询预算内请求解释/纠错；抽取知识、加时间戳，检测冲突并澄清后检索用于后续决策。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>真实序列测试为 11,846 例（156 阳性）；CUAD 在 B=2000 时 GPT-4o+ARIA 准确率 0.6358，静态模型 0.4872，RAG 0.5735。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】依赖专家反馈质量和预算，运行开销未充分评测；【解读】模拟专家与人工长期使用存在差异。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§4；表1；§6.1–6.2/表4；Limitations。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Large language model (LLM) agents often struggle in environments where rules and required domain knowledge frequently change, such as
+          regulatory compliance and user risk screening. Current approaches—like offline fine-tuning and standard prompting—are insufficient because
+          they cannot effectively adapt to new knowledge during actual operation. To address this limitation, we propose theAdaptive
+          ReflectiveInteractiveAgent (ARIA) 1, an LLM agent framework designed specifically to continuously learn updated domain knowledge at test
+          time. ARIA assesses its own uncertainty through structured self-dialogue, proactively identifying knowledge gaps and requesting targeted
+          explanations or corrections from human experts. It then systematically updates an internal, timestamped knowledge repository with provided
+          human guidance, detecting and resolving conflicting or outdated knowledge through comparisons and clarification queries. We evaluate ARIA on
+          the realistic customer due diligence name screening task on TikTok Pay, alongside publicly available dynamic knowledge tasks. Results
+          demonstrate significant improvements in adaptability and accuracy compared to baselines using standard offline fine-tuning and existing
+          self-improving agents.ARIA is deployed within TikTok Pay serving over 150 million monthly active users, confirming its practicality and
+          effectiveness for operational use in rapidly evolving environments.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>9a42692cacd30f0379aaa6d69bbbc4370208f53e0c08516c6d8fe84cd268ce0b</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p021"
+  data-id="P021"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world xr"
+  data-new="false"
+  data-title="Black Swan: Abductive and Defeasible Video Reasoning in Unpredictable Events"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P021 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Black Swan: Abductive and Defeasible Video Reasoning in Unpredictable Events</span>
+    <span class="lr-authors">Aditya Chinchure; Sahithya Ravi; Raymond Ng et al.</span>
+    <span class="lr-snippet">以反常视频事件检验模型能否解释隐藏事件，以及获得新证据后修正原先假设。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p021" aria-label="P021的固定链接">#P021</a><span>10页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Aditya Chinchure; Sahithya Ravi; Raymond Ng; Vered Shwartz; Boyang Li; Leonid Sigal</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>CVPR 2025（PDF 元数据及官方记录）</p></dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://blackswan.cs.ubc.ca">项目/演示页面</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>以反常视频事件检验模型能否解释隐藏事件，以及获得新证据后修正原先假设。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>BlackSwanSuite 包含 1,655 个视频、超过 3,800 个选择题、4,900 个生成题和 6,700 个是非题。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>通过遮蔽或揭示视频片段构建 Forecaster/Detective/Reporter；是评测基准，未提出训练后消除缺陷的新模型。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>分阶段给出视觉证据，评估溯因和可撤销推理；使用选择题准确率、CLIP/LLM 生成指标及人类评价。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        表2 Detective MCQ：GPT-4o 65.1%、人类 90.0%，相差 24.9 个百分点；Reporter Y/N 为 60.1% vs
+        92.0%。注意本地表2图注与表头存在任务名称不一致，以上按表头及正文解释。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】反常事件样本有选择偏差，感知失败与推理失败相互影响；开放式解释评价依赖参考与评价器。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§3–5；表2和 §6.1；§7–8。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          The commonsense reasoning capabilities of visionlanguage models (VLMs), especially in abductive reasoning and defeasible reasoning, remain
+          poorly understood. Most benchmarks focus on typical visual scenarios [ 1, 23, 42], making it difficult to discern whether model performance
+          stems from keen perception and reasoning skills, or reliance on pure statistical recall. We argue that by focusing on atypical events in
+          videos, clearer insights can be gained on the core capabilities of VLMs. Explaining and understanding such out-of-distribution events
+          requires models to extend beyond basic pattern recognition and regurgitation of their prior knowledge. To this end, we introduce Black-
+          SwanSuite, a benchmark for evaluating VLMs’ ability to reason about unexpected events through abductive and defeasible tasks. Our tasks
+          artificially limit the amount of visual information provided to models while questioning them about hidden unexpected events, or provide new
+          visual information that could change an existing hypothesis about the event. We curate a comprehensive benchmark suite comprising over 3,800
+          MCQ, 4,900 generative and 6,700 yes/no questions, spanning 1,655 videos. After extensively evaluating various state-of-the-art VLMs,
+          including GPT-4o and Gemini 1.5 Pro, as well as open-source VLMs such as LLaVA-Video, we find significant performance gaps of up to 32% from
+          humans on these tasks. Our findings reveal key limitations in current VLMs, emphasizing the need for enhanced model architectures and
+          training strategies. Our data and leaderboard is available at https://blackswan.cs.ubc.ca.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>91efca47ea0eadf531cb7523e3cf6f4016d01a79de26626f2b5748c87ecfc46d</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>

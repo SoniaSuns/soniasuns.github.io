@@ -1,0 +1,920 @@
+<details
+  class="lr-paper"
+  id="p060"
+  data-id="P060"
+  data-years="2025"
+  data-year="2025"
+  data-topics="creation xr"
+  data-new="false"
+  data-title="XR Blocks: Accelerating Human-centered AI + XR Innovation"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P060 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">XR Blocks: Accelerating Human-centered AI + XR Innovation</span>
+    <span class="lr-authors">David Li; Nels Numan; Xun Qian et al.</span>
+    <span class="lr-snippet">提出跨桌面模拟器与XR设备的模块化Web框架，统一感知、渲染、交互和AI服务，以减少AI+XR原型开发的集成工作。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">创作与规则补全</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p060" aria-label="P060的固定链接">#P060</a><span>9页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd>
+        <p>
+          David Li; Nels Numan; Xun Qian; Yanhe Chen; Zhongyi Zhou; Evgenii Alekseev; Geonsun Lee; Alex Cooper; Min Xia; Scott Chung; Jeremy Nelson;
+          Xiuxiu Yuan; Jolica Dias; Tim Bettridge; Benjamin Hersh; Michelle Huynh; Konrad Piascik; Ricardo Cabello; David Kim; Ruofei Du
+        </p>
+      </dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-09-29（arXiv:2509.25504v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>Preliminary White Paper，2025-09；arXiv:2509.25504v1</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2509.25504v1">arXiv本地版本 2509.25504v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p>
+          <a target="_blank" rel="noopener noreferrer" href="https://xrblocks.github.io">项目/演示页面</a>；<a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/google/xrblocks"
+            >代码：google/xrblocks</a
+          >
+        </p>
+      </dd>
+      <dt>版本关系</dt>
+      <dd>
+        <p><a href="#p056">P056</a>在该框架上进一步加入Gemini工作流和初步技术评测；本稿是较早白皮书。</p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>提出跨桌面模拟器与XR设备的模块化Web框架，统一感知、渲染、交互和AI服务，以减少AI+XR原型开发的集成工作。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>Reality Model与可插拔Core引擎，提供用户、世界、交互及AI模板和演示。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>作者明确说agents、peers、context等概念原语仅初步实现；不是完整通用多代理/持久记忆/跨设备协作平台。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>WebXR、three.js、TensorFlow及Gemini之上封装相机/深度/音频、物理、手势与智能模块，同一高层脚本在模拟器和设备运行。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>展示遮挡/重照明、虚实物理交互、手势控制和情境助手等开源样例；本白皮书未报告受控开发效率实验或通用基准提升数值。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】设计愿景尚未全部实现，Web性能低于原生引擎、云延迟、复杂用户与情境模型待完善。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §4–6，尤其§6.2 pp.6–7。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          We are on the cusp where Artificial Intelligence (AI) and Extended Reality (XR) are converging to unlock new paradigms of interactive
+          computing. However, a significant gap exists between the ecosystems of these two fields: while AI research and development is accelerated by
+          mature frameworks like JAX and benchmarks like LMArena, prototyping novel AI-driven XR interactions remains a high-friction process, often
+          requiring practitioners to manually integrate disparate, low-level systems for perception, rendering, and interaction. To bridge this gap,
+          we present XR Blocks, a crossplatform framework designed to accelerate human-centered AI + XR innovation. XR Blocks strives to provide a
+          modular architecture with plug-and-play components for core abstraction in AI + XR: user, world, peers; interface, context, and agents.
+          Crucially, it is designed with the mission of “reducing frictions from idea to reality”, thus accelerating rapid prototyping of AI + XR
+          apps. Built upon accessible technologies (WebXR, three.js, TensorFlow, Gemini), our toolkit lowers the barrier to entry for XR creators. We
+          demonstrate its utility through a set of open-source templates, samples, and advanced demos, empowering the community to quickly move from
+          concept to interactive XR prototype.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>e55cf9cd2a2e2651019cb9926d88c8c242fdda9c1df4e3e29b8c1bf375ec6f08</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p059"
+  data-id="P059"
+  data-years="2025"
+  data-year="2025"
+  data-topics="xr"
+  data-new="false"
+  data-title="Sensible Agent: A Framework for Unobtrusive Interaction with Proactive AR Agents"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P059 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Sensible Agent: A Framework for Unobtrusive Interaction with Proactive AR Agents</span>
+    <span class="lr-authors">Geonsun Lee; Min Xia; Nels Numan et al.</span>
+    <span class="lr-snippet"
+      >结合多模态情境感知决定主动AR助手提供什么帮助，以及用语音、视觉、头/手/注视等何种方式交互，从而降低打扰和主观操作负担。</span
+    >
+    <span class="lr-tags"
+      ><span class="lr-tag">XR与人机协作</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p059" aria-label="P059的固定链接">#P059</a><span>22页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd>
+        <p>
+          Geonsun Lee; Min Xia; Nels Numan; Xun Qian; David Li; Yanhe Chen; Achin Kulshrestha; Ishan Chatterjee; Yinda Zhang; Dinesh Manocha; David
+          Kim; Ruofei Du
+        </p>
+      </dd>
+      <dt>时间与版本</dt>
+      <dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>UIST 2025；DOI 10.1145/3746059.3747748</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3746059.3747748">DOI正式记录</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>结合多模态情境感知决定主动AR助手提供什么帮助，以及用语音、视觉、头/手/注视等何种方式交互，从而降低打扰和主观操作负担。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>将建议内容和交互模态联合适配；专家工作坊N=12、标注研究N=40及XR原型研究N=10支撑设计。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>当前没有长期用户偏好建模，也未求解精确的介入时机；测试为有限AR和360°视频场景。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>第一视角相机/传感器与LMM推断活动和约束，选择图标、二选一或多选建议及可用输入模态；与语音提问基线做被试内比较。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        N=10：Raw-TLX均值20.55对43.27，主观负担降低；偏好6.00对3.80/7；但交互更慢，28.54秒对16.43秒（p&lt;.001）。SUS81.33对76.67，差异不显著（p=.11）。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】小样本、探索统计未校正多重比较，缺少常显多选界面对照；无长期个性化/时机模型。【解读】不能由较低主观负担推断客观效率提高。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF pp.14–16，§7.4、图8、§9。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Proactive AR agents promise context-aware assistance, but their interactions often rely on explicit voice prompts or responses, which can be
+          disruptive or socially awkward. We introduce Sensible Agent, a framework designed for unobtrusive interaction with these proactive agents.
+          Sensible Agent dynamically adapts both “what” assistance to offer and, crucially, “how” to deliver it, based on real-time multimodal context
+          sensing. Informed by an expert workshop (n=12) and a data annotation study (n=40), the framework leverages egocentric cameras, multimodal
+          sensing, and Large Multimodal Models (LMMs) to infer context and suggest appropriate actions delivered via minimally intrusive interaction
+          modes. We demonstrate our prototype on an XR headset through a user study (n=10) in both AR and VR scenarios. Results indicate that Sensible
+          Agent significantly reduces perceived interaction effort compared to voice-prompted baseline, while maintaining high usability and achieving
+          higher preference.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>f5caf04876cd2886402ba5aaff888b582997be5298e87724d8a715a334b73344</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p058"
+  data-id="P058"
+  data-years="2026"
+  data-year="2026"
+  data-topics="creation xr"
+  data-new="false"
+  data-title="How Well Can 3D Accessibility Guidelines Support XR Development? An Interview Study with XR Practitioners in Industry"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P058 <span aria-hidden="true">/</span> 2026</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title"
+      >How Well Can 3D Accessibility Guidelines Support XR Development? An Interview Study with XR Practitioners in Industry</span
+    >
+    <span class="lr-authors">Daniel Killough; Tiger F. Ji; Kexin Zhang et al.</span>
+    <span class="lr-snippet">访谈25位XR行业从业者，检查六套资源中的20项3D无障碍指南能否支持XR开发，分析指南含糊、场景不匹配和落实责任问题。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">创作与规则补全</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p058" aria-label="P058的固定链接">#P058</a><span>15页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Daniel Killough; Tiger F. Ji; Kexin Zhang; Yaxin Hu; Yu Huang; Ruofei Du; Yuhang Zhao</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2026年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>CHI 2026，2026-04-13—17；DOI 10.1145/3772318.3790520</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3772318.3790520">DOI正式记录</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>访谈25位XR行业从业者，检查六套资源中的20项3D无障碍指南能否支持XR开发，分析指南含糊、场景不匹配和落实责任问题。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>给出跨视觉、运动、认知、言语、听觉的指南适用性分析与开发责任/实施建议；强调指南应提供可操作示例。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>评估对象是从业者对指南的解释和可行性判断；没有实现并测量全套辅助功能，也没有证明残障用户效果改善。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>半结构访谈、指南排序/讨论、主题分析，将优先级、开发阶段和责任组织成矩阵。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>25人均提出可结合其项目的实现思路；12人报告沉浸与无障碍的张力，20人希望补充具体案例/实现；发现即时安全、平台依赖、需情境调整等不同优先级。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者/解读】样本规模和行业背景限制概括性，25人中23男2女；自述意愿不等于真实落地，残障最终用户的直接验证仍不足。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §3–4、表2–3、§5.3；pp.3–11。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          While accessibility (a11y) guidelines exist for 3D games and virtual worlds, their applicability to extended reality (XR)’s unique
+          interaction paradigms (e.g.,spatial tracking, kinesthetic interactions) remains unexplored. XR practitioners need practical guidance to
+          successfully implement a11y guidelines under real-world constraints. We present the first evaluation of existing 3D a11y guidelines applied
+          to XR development through semi-structured interviews with 25 XR practitioners across diverse organization contexts. We assessed 20
+          commonly-agreed a11y guidelines from six major resources across visual, motor, cognitive, speech, and hearing domains, comparing
+          practitioners’ development practices against guideline applicability to XR. Our investigation reveals that guidelines can be highly
+          effective when designed as transformation catalysts rather than compliance checklists, but fundamental mismatches exist between existing 3D
+          guidelines and XR requirements, creating both implementation barriers and design gaps. This work provides foundational insights towards
+          developing a11y guidelines and support tools that address XR’s distinct characteristics.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>f35c8a8c027b4841c09d5f2ae8da50f5844ff810285a9c4c4eef92710867daf9</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p057"
+  data-id="P057"
+  data-years="2025"
+  data-year="2025"
+  data-topics="xr"
+  data-new="false"
+  data-title="Thing2Reality: Enabling Spontaneous Creation of 3D Objects from 2D Content using Generative AI in XR Meetings"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P057 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Thing2Reality: Enabling Spontaneous Creation of 3D Objects from 2D Content using Generative AI in XR Meetings</span>
+    <span class="lr-authors">Erzhen Hu, Mingyi Li, Jungtaek Hong, Xun Qian, Alex Olwal, David Kim, Seongkook Heo, and Ruofei Du</span>
+    <span class="lr-snippet">在远程XR会议中把物理物体、网页图片转成可共同操作的3D表示，并在3D对象与2D白板快照间切换，支持即时讨论。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">XR与人机协作</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p057" aria-label="P057的固定链接">#P057</a><span>16页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Erzhen Hu, Mingyi Li, Jungtaek Hong, Xun Qian, Alex Olwal, David Kim, Seongkook Heo, and Ruofei Du</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>UIST 2025，2025-09-28—10-01；DOI 10.1145/3746059.3747621</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3746059.3747621">DOI正式记录</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>在远程XR会议中把物理物体、网页图片转成可共同操作的3D表示，并在3D对象与2D白板快照间切换，支持即时讨论。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>实现Thing2Reality的物体级2D→3D→2D交互链，研究多种表示在协作不同阶段的互补用途。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>生成的是条件多视图/3D Gaussian近似表示，不保证精确几何、尺寸或不可见表面；研究为探索性原型评估，未设置2D屏幕共享基线。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>用户圈选对象→MobileSAM分割→条件多视图扩散与LGM Gaussian重建→Unity多人XR；支持缩放、移动、正交视图和白板投影。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        单人研究N=12均完成任务，工作流评分4.9/5、参与感5/5；双人研究18人/9对观察到2D组织叙事、3D空间解释及混合/顺序使用策略；7/9对准备演示时主动生成多个2D快照。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】小样本、单次实验，缺少基线和长期使用；专业精度不足，抽象概念难以实体化；生成误差、尺寸理解与格式切换认知负担。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF pp.4–7：实现、研究1；pp.8–12：研究2；§8.3。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          During remote communication, participants often share both digital and physical content, such as product designs, digital assets, and
+          environments, to enhance mutual understanding. Recent advances in augmented communication have facilitated users to swiftly create and share
+          digital 2D copies of physical objects from video feeds into a shared space. However, conventional 2D representations of digital objects
+          limits spatial referencing in immersive environments. To address this, we propose Thing2Reality, an Extended Reality (XR) meeting platform
+          that facilitates spontaneous discussions of both digital and physical items during remote sessions. With Thing2Reality, users can quickly
+          materialize ideas or objects in immersive environments and share them as conditioned multiview renderings or 3D Gaussians. Thing2Reality
+          enables users to interact with remote objects or discuss concepts in a collaborative manner. Our user studies revealed that the ability to
+          interact with and manipulate 3D representations of objects significantly enhances the efficiency of discussions, with the potential to
+          augment discussion of 2D artifacts.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>76717358341146a96d67837248e800d3852cdff07b304ccea212e53a425ff561</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p056"
+  data-id="P056"
+  data-years=""
+  data-year="0"
+  data-topics="creation xr"
+  data-new="false"
+  data-title="Vibe Coding XR: Accelerating AI + XR Prototyping with XR Blocks and Gemini"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P056 <span aria-hidden="true">/</span> 待核实</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Vibe Coding XR: Accelerating AI + XR Prototyping with XR Blocks and Gemini</span>
+    <span class="lr-authors">Ruofei Du; Benjamin Hersh; David Li et al.</span>
+    <span class="lr-snippet">通过XR Blocks的高层空间交互API与Gemini，将自然语言需求生成可运行WebXR原型，并提供60条提示的初步技术评测。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">创作与规则补全</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p056" aria-label="P056的固定链接">#P056</a><span>10页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd>
+        <p>
+          Ruofei Du; Benjamin Hersh; David Li; Nels Numan; Xun Qian; Yanhe Chen; Zhongyi Zhou; Jiahao Ren; Xingyue Chen; Robert Timothy Bettridge;
+          Faraz Faruqi; Xiang ‘Anthony’ Chen; Steve Toh; David Kim
+        </p>
+      </dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地PDF未明确；未按文件名或PDF制作时间推断。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>2026年预印本；首页标注arXiv，ACM DOI/ISBN为占位符，不能据此认定正式ACM发表</p></dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p>
+          <a target="_blank" rel="noopener noreferrer" href="https://xrblocks.github.io/gem">项目/演示页面</a>；<a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/google/xrblocks"
+            >代码：google/xrblocks</a
+          >
+        </p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>通过XR Blocks的高层空间交互API与Gemini，将自然语言需求生成可运行WebXR原型，并提供60条提示的初步技术评测。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>整合提示、代码生成、人工检查与即时XR运行的工作流；发布XR Blocks及VCXR60试点任务。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>60提示来自20人四次工作坊；pass@1仅指桌面模拟器无运行错误，不衡量视觉质量、需求满足或真机交互正确性。“一分钟内”不是所有配置的结果。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>Reality Model封装用户、物理场景、感知/交互组件；Gemini生成脚本；XR Blocks v0.11.0通过Playwright无头Chromium监控错误，四种配置各运行5轮。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        表1：Gemini3.1Pro高思考pass@1=95.5%，时间中位86.02秒；低思考94.1%/33.39秒；3Flash高87.8%/22.26秒、低87.4%/17.30秒。每条提示5次中至少一次无错误。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】Web性能与云延迟、模型幻觉API及复杂空间逻辑错误；【解读】开发时基于该试点反复修复框架，独立留出集与任务语义/真机评测不足。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF pp.3–5：框架、表1及§4–5。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          While large language models have accelerated software development through “vibe coding”, prototyping intelligent Extended Reality (XR)
+          experiences remains inaccessible due to the friction of complex game engines and low-level sensor integration. To bridge this gap, we
+          contribute XR Blocks, an open-source, modular WebXR framework that abstracts spatial computing complexities into high-level, human-centered
+          primitives. Building upon this foundation, we present Vibe Coding XR, an end-to-end rapid prototyping workflow that leverages LLMs to
+          translate natural language intent directly into functional XR software. Using a web-based interface, creators can transform high-level
+          prompts (e.g., “create a dandelion that reacts to hand” ) into interactive WebXR applications in under a minute. We provide a preliminary
+          technical evaluation on a pilot dataset (VCXR60) alongside diverse application scenarios highlighting mixed-reality realism, multi-modal
+          interaction, and generative AI integrations. By democratizing spatial software creation, this work empowers practitioners to bypass lowlevel
+          hurdles and rapidly move from “idea to reality. ” Code and live demos are available at https://github.com/google/xrblocks and
+          http://xrblocks.github.io/gem.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>eeb4f0c125281216f66235077762dabb3a17831374fc227303153c7d33c50ed3</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p055"
+  data-id="P055"
+  data-years="1999"
+  data-year="1999"
+  data-topics="creation xr"
+  data-new="false"
+  data-title="Principles of Mixed-Initiative User Interfaces"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P055 <span aria-hidden="true">/</span> 1999</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Principles of Mixed-Initiative User Interfaces</span>
+    <span class="lr-authors">Eric Horvitz</span>
+    <span class="lr-snippet"
+      >讨论如何将直接操作与自动化代理结合，提出处理用户意图不确定性、打扰成本和人机共同修正结果的设计原则，以Lookout邮件日程助手说明。</span
+    >
+    <span class="lr-tags"
+      ><span class="lr-tag">创作与规则补全</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p055" aria-label="P055的固定链接">#P055</a><span>8页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Eric Horvitz</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>1999年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>CHI 1999，1999-05-15—20，pp.159–166（PDF首页）</p></dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>讨论如何将直接操作与自动化代理结合，提出处理用户意图不确定性、打扰成本和人机共同修正结果的设计原则，以Lookout邮件日程助手说明。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>归纳12条混合主动权界面原则，并将不确定性与动作效用引入“等待／询问／主动执行”的选择。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>实现是叠加在Outlook上的邮件时间解析和日程建议原型；不是通用任务代理，也不是对12条原则的全面因果验证。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>
+        SVM文本分类并校准意图概率；按收益、误操作及打扰成本设置决策阈值；结合阅读停留时间选择介入时机；允许手动调用、取消、降级到日历范围及编辑建议。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        展示Lookout自动提取会议日期、创建待确认预约、低置信度询问和时机建模；文中主要证据是系统与概率/效用曲线，未提供现代意义的大样本随机对照效率提升结果。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】依赖领域解析规则、意图概率与主观成本模型；意图识别错误和不适当打断仍可能发生，原则能否跨任务成立需另行评估。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF pp.1–2：12条原则；pp.2–7：Lookout实现、概率/效用及注意力模型；pp.7–8：总结。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Recent debate has centered on the relative promise of focusing user-interface research on developing new metaphors and tools that enhance
+          users’ abilities to directly manipulate objects versus directing effort toward developing interface agents that provide automation. In this
+          paper, we review principles that show promise for allowing engineers to enhance human-computer interaction through an elegant coupling of
+          automated services with direct manipulation. Key ideas will be highlighted in terms of the Lookout system for scheduling and meeting
+          management.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>d242048fb0ad4247cd2b0f4a1872c94f319ae8b311fa18df6195fb5361331348</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p054"
+  data-id="P054"
+  data-years="2019"
+  data-year="2019"
+  data-topics="xr"
+  data-new="false"
+  data-title="Melding the Data-Decisions Pipeline: Decision-Focused Learning for Combinatorial Optimization"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P054 <span aria-hidden="true">/</span> 2019</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Melding the Data-Decisions Pipeline: Decision-Focused Learning for Combinatorial Optimization</span>
+    <span class="lr-authors">Bryan Wilder, Bistra Dilkina, Milind Tambe</span>
+    <span class="lr-snippet">把预测与组合优化端到端连接，直接按最终决策质量训练预测器。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">XR与人机协作</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p054" aria-label="P054的固定链接">#P054</a><span>9页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Bryan Wilder, Bistra Dilkina, Milind Tambe</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2019年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>AAAI 2019（首页明示 AAAI-19），1658 起</p></dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+      <dt>版本关系</dt>
+      <dd>
+        <p>
+          严重错名：文件名为 25_Creating General User Models from Computer Use.pdf，实际内容为 2019 年 Melding the Data-Decisions
+          Pipeline；目录未据此包含那篇用户建模论文。
+        </p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>把预测与组合优化端到端连接，直接按最终决策质量训练预测器。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>为线性规划和子模最大化提供可反传的连续松弛框架。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>适用所分析的优化结构和松弛条件；不是用户建模或计算机使用日志研究。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>将离散优化连续化，计算决策目标对预测参数的梯度；以优化效用训练模型并与两阶段 MSE 训练比较。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>多种决策问题上提高最终效用，即使预测 MSE 更差；示例中决策训练模型的通道总权重与真值相关 r²=0.94，解释了正确排序的重要性。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】松弛与整数决策存在差距，依赖优化器和任务结构；牺牲预测校准后的输出不宜直接当真实量。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>首页/元数据；技术框架及实验；图2讨论，PDF p7–8。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Creating impact in real-world settings requires artificial intelligence techniques to span the full pipeline from data, to predictive
+          models, to decisions. These components are typically approached separately: a machine learning model is first trained via a measure of
+          predictive accuracy, and then its predictions are used as input into an optimization algorithm which produces a decision. However, the loss
+          function used to train the model may easily be misaligned with the end goal, which is to make the best decisions possible. Hand-tuning the
+          loss function to align with optimization is a difficult and error-prone process (which is often skipped entirely). We focus on combinatorial
+          optimization problems and introduce a general framework for decision-focused learning, where the machine learning model is directly trained
+          in conjunction with the optimization algorithm to produce highquality decisions. Technically, our contribution is a means of integrating
+          common classes of discrete optimization problems into deep learning or other predictive models, which are typically trained via gradient
+          descent. The main idea is to use a continuous relaxation of the discrete problem to propagate gradients through the optimization procedure.
+          We instantiate this framework for two broad classes of combinatorial problems: linear programs and submodular maximization. Experimental
+          results across a variety of domains show that decisionfocused learning often leads to improved optimization performance compared to
+          traditional methods. We find that standard measures of accuracy are not a reliable proxy for a predictive model’s utility in optimization,
+          and our method’s ability to specify the true goal as the model’s training objective yields substantial dividends across a range of decision
+          problems.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>a7997e4591c5b639447f6fed81bd226792d743fe767781af22f9ce39b112a3fc</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p053"
+  data-id="P053"
+  data-years="2026"
+  data-year="2026"
+  data-topics="xr"
+  data-new="false"
+  data-title="Superhuman performance of a large language model on the reasoning tasks of a physician"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P053 <span aria-hidden="true">/</span> 2026</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Superhuman performance of a large language model on the reasoning tasks of a physician</span>
+    <span class="lr-authors">Peter G. Brodeur; Thomas A. Buckley; Zahir Kanjee et al.</span>
+    <span class="lr-snippet">用医生评分的复杂病例、诊断/管理任务及急诊第二意见场景评价 OpenAI o1 系列。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">XR与人机协作</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p053" aria-label="P053的固定链接">#P053</a><span>25页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd>
+        <p>
+          Peter G. Brodeur; Thomas A. Buckley; Zahir Kanjee; Ethan Goh; Evelyn Bin Ling; Priyank Jain; Stephanie Cabral; Raja-Elie Abdulnour; Adrian
+          D. Haimovich; Jason A. Freed; Andrew Olson; Daniel J. Morgan; Jason Hom; Robert Gallo; Liam G. McCoy; Haadi Mombini; Christopher Lucas;
+          Misha Fotoohi; Matthew Gwiazdon; Daniele Restifo; Daniel Restrepo; Eric Horvitz; Jonathan Chen; Arjun K. Manrai; Adam Rodman
+        </p>
+      </dd>
+      <dt>时间与版本</dt>
+      <dd><p>预印首发2024-12-14；本地摘要对应2025-06-02 arXiv v3；正式Science论文2026-04-30上线</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          Science 392(6797):524–527，2026-04-30，DOI 10.1126/science.adz4433；正式题名为Performance of a large language model on the reasoning tasks
+          of a physician（删除Superhuman）。本条英文摘要与结果仍按本地预印稿。
+          <a target="_blank" rel="noopener noreferrer" href="https://pubmed.ncbi.nlm.nih.gov/42060751/">PubMed正式发表记录</a>；<a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://arxiv.org/abs/2412.10849"
+            >arXiv记录</a
+          >
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1126/science.adz4433">DOI正式记录</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+      <dt>版本关系</dt>
+      <dd><p>Science正式版修改了题名与摘要措辞；本地PDF是较早的Superhuman题名版本，不将其摘要或具体数值直接标为正式版原文。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>用医生评分的复杂病例、诊断/管理任务及急诊第二意见场景评价 OpenAI o1 系列。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>把评价扩展到临床推理过程和真实病历，而不局限选择题考试。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>主要为离线病例及预定义时间点第二意见；未证明真实部署改善患者结局，也未实证人机团队优于医生。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>五类病例推理实验加急诊研究，专家使用 Bond/R-IDEA 等量表评分，与历史和医生基线比较；分别考察 o1-preview 与 o1。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        143 个 NEJM 病例中鉴别列表含正确诊断 78.3%（95%CI 70.7–84.8），首位诊断正确 52%；80 份 Healer 回答中 78 份 R-IDEA
+        满分；“不可漏诊”覆盖未显著优于对照。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】领域/病例有限，需前瞻试验及协作研究；【解读】量表满分和候选列表命中不是独立临床胜任，历史对照与数据泄漏风险需保留。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>摘要 PDF p2；结果 p3–5；讨论 p5–6；方法 p6 起。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          A seminal paper published by Ledley and Lusted in 1959 introduced complex clinical diagnostic reasoning cases as the gold standard for the
+          evaluation of expert medical computing systems, a standard that has held ever since. Here, we report the results of a physician evaluation
+          of a large language model (LLM) on challenging clinical cases against a baseline of hundreds of physicians. We conduct five experiments to
+          measure clinical reasoning across differential diagnosis generation, display of diagnostic reasoning, triage differential diagnosis,
+          probabilistic reasoning, and management reasoning, all adjudicated by physician experts with validated psychometrics. We then report a
+          real-world study comparing human expert and AI second opinions in randomly-selected patients in the emergency room of a major tertiary
+          academic medical center in Boston, MA. We compared LLMs and board-certified physicians at three predefined diagnostic touchpoints: triage in
+          the emergency room, initial evaluation by a physician, and admission to the hospital or intensive care unit. In all experiments—both
+          vignettes and emergency room second opinions—the LLM displayed superhuman diagnostic and reasoning abilities, as well as continued
+          improvement from prior generations of AI clinical decision support. Our study suggests that LLMs have achieved superhuman performance on
+          general medical diagnostic and management reasoning, fulfilling the vision put forth by Ledley and Lusted, and motivating the urgent need
+          for prospective trials.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>4e1cb616b98899043525e3ff7dc712029af55202ad46371e676e7f2d52ac471f</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p052"
+  data-id="P052"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world"
+  data-new="false"
+  data-title="Valid Inference with Imperfect Synthetic Data"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P052 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Valid Inference with Imperfect Synthetic Data</span>
+    <span class="lr-authors">Yewon Byun; Shantanu Gupta; Zachary C. Lipton et al.</span>
+    <span class="lr-snippet">以广义矩估计整合真实、代理及完全合成数据，提高有限真实数据下的统计效率。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p052" aria-label="P052的固定链接">#P052</a><span>40页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Yewon Byun; Shantanu Gupta; Zachary C. Lipton; Rachel Leah Childers; Bryan Wilder</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>NeurIPS 2025（会议论文）</p></dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>以广义矩估计整合真实、代理及完全合成数据，提高有限真实数据下的统计效率。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>无需超参数的 GMM 估计器及一致性/渐近推断理论。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>仍需要真实数据与可识别的矩条件；理论有效性是渐近的，不能保证极少样本时精确覆盖。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>联合真实与合成矩残差，利用它们的预测相关性，估计权重和协方差构造参数与置信区间。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>8/8 个下游任务获得最低 MSE，7/8 的置信区间更窄；少标注设置多次 MSE 降幅超过 50%，并经验保持覆盖。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】劣质合成数据可能无收益，极低数据量可欠覆盖；【解读】不能用模型模拟受试者完全替代真实样本。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§4.5；§5.3/图1–2；§6 Limitations。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Predictions and generations from large language models are increasingly being explored as an aid in limited data regimes, such as in
+          computational social science and human subjects research. While prior technical work has mainly explored the potential to use
+          model-predicted labels for unlabeled data in a principled manner, there is increasing interest in using large language models to generate
+          entirely new synthetic samples (e.g., synthetic simulations), such as in responses to surveys. However, it remains unclear by what means
+          practitioners can combine such data with real data and yet produce statistically valid conclusions upon them. In this paper, we introduce a
+          new estimator based on generalized method of moments, providing a hyperparameter-free solution with strong theoretical guarantees to address
+          this challenge. Intriguingly, we find that interactions between the moment residuals of synthetic data and those of real data (i.e., when
+          they are predictive of each other) can greatly improve estimates of the target parameter. We validate the finite-sample performance of our
+          estimator across different tasks in computational social science applications, demonstrating large empirical gains.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>f36995c8bce9d2c778ff92294498365045028b0df617164756664c6fa99ce9b8</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p051"
+  data-id="P051"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world xr"
+  data-new="false"
+  data-title="Fostering the Ecosystem of AI for Social Impact Requires Expanding and Strengthening Evaluation Standards"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P051 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Fostering the Ecosystem of AI for Social Impact Requires Expanding and Strengthening Evaluation Standards</span>
+    <span class="lr-authors">Bryan Wilder; Angela Zhou</span>
+    <span class="lr-snippet">主张扩大社会影响贡献的认可范围，同时提高真实部署影响评价的严谨性。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p051" aria-label="P051的固定链接">#P051</a><span>12页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Bryan Wilder; Angela Zhou</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>NeurIPS 2025，Position Paper Track；本地文件制作时间 2026 不应改为发表年</p></dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>主张扩大社会影响贡献的认可范围，同时提高真实部署影响评价的严谨性。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>区分方法创新、伙伴能力建设及部署贡献，讨论评审激励如何影响研究生态。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>立场论文，提出评价建议；没有新预测模型、受控干预结果或统一算法排行榜。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>分析既有评审标准和应用研究案例，分别讨论试点、随机与非随机部署、反方意见。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>建议作者明确影响机制、评审按贡献类型要求证据，并对部署研究采用更清晰和严格的效果评价。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】观点依赖案例和规范性判断，尚无证据量化采用这些评审规则后的长期生态效果。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§2–5；§6 Alternative views；§7。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          There has been increasing research interest in AI/ML for social impact, and correspondingly more publication venues have refined review
+          criteria for practice-driven AI/ML research. However, these review guidelines tend to most concretely recognize projects that simultaneously
+          achieve deployment and novel ML methodological innovation. We argue that this introduces incentives for researchers that undermine the
+          sustainability of a broader research ecosystem of social impact, which benefits from projects that make contributions on single front
+          (applied or methodological) that may better meet project partner needs. Our position is that researchers and reviewers in machine learning
+          for social impact must simultaneously adopt: 1) a more expansive conception of social impacts beyond deployment and 2) more rigorous
+          evaluations of the impact of deployed systems.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>6b56fdf0a819fde5506ab115474a0b52b77b5cb85fb93651b35c2f8a3e26a794</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>

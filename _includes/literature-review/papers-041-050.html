@@ -1,0 +1,879 @@
+<details
+  class="lr-paper"
+  id="p050"
+  data-id="P050"
+  data-years="2025"
+  data-year="2025"
+  data-topics="xr"
+  data-new="false"
+  data-title="Distributionally Robust Feature Selection"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P050 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Distributionally Robust Feature Selection</span>
+    <span class="lr-authors">Maitreyi Swaroop; Tamar Krishnamurti; Bryan Wilder</span>
+    <span class="lr-snippet">在观测特征预算下选择对多个子群体都有用的特征，以支持分别训练高质量模型。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">XR与人机协作</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p050" aria-label="P050的固定链接">#P050</a><span>30页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Maitreyi Swaroop; Tamar Krishnamurti; Bryan Wilder</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>NeurIPS 2025（会议论文）</p></dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/maitreyiswaroop/dro-feature-selection"
+            >代码：maitreyiswaroop/dro-feature-selection</a
+          >
+        </p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>在观测特征预算下选择对多个子群体都有用的特征，以支持分别训练高质量模型。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>噪声连续松弛和 Bayes 最优预测方差目标，避免反传穿过训练过程。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>选择共享特征，但下游允许各群体自己的模型；理论推导核心为 MSE，不能当作已证明所有损失适用。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>对特征加可控噪声，估计各组目标并最小化最差组损失，用重参数化和核估计做梯度优化。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>合成及 ACS/UCI 试验中优于所列 Lasso、XGBoost 和 DRO 改编基线；ACS 设置报告 MSE 数量级下降，UCI 分类也有经验收益。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】插件估计在小群体可能偏，非 MSE 理论待扩展；【解读】依赖已知群体及代表性训练数据。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§3；§4.3/图3；§5。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          We study the problem of selecting limited features to observe such that models trained on them can perform well simultaneously across
+          multiple subpopulations. This problem has applications in settings where collecting each feature is costly, e.g. requiring adding survey
+          questions or physical sensors, and we must be able to use the selected features to create high-quality downstream models for different
+          populations. Our method frames the problem as a continuous relaxation of traditional variable selection using a noising mechanism, without
+          requiring backpropagation through model training processes. By optimizing over the variance of a Bayes-optimal predictor, we develop a
+          model-agnostic framework that balances overall performance of downstream prediction across populations. We validate our approach through
+          experiments on both synthetic datasets and real-world data.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>cac9cafdc4deee05eb02c15751e5836ebb631d2b2dc2cfdc711c559e78b23cb1</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p049"
+  data-id="P049"
+  data-years="2022"
+  data-year="2022"
+  data-topics="xr"
+  data-new="false"
+  data-title="Decision-Focused Learning without Differentiable Optimization: Learning Locally Optimized Decision Losses"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P049 <span aria-hidden="true">/</span> 2022</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Decision-Focused Learning without Differentiable Optimization: Learning Locally Optimized Decision Losses</span>
+    <span class="lr-authors">Sanket Shah; Kai Wang; Bryan Wilder et al.</span>
+    <span class="lr-snippet">通过学习局部决策损失，让预测训练适应下游优化而无需对求解器求导。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">XR与人机协作</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p049" aria-label="P049的固定链接">#P049</a><span>13页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Sanket Shah; Kai Wang; Bryan Wilder; Andrew Perrault; Milind Tambe</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2022年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>NeurIPS 2022（正式会议 PDF）</p></dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+      <dt>版本关系</dt>
+      <dd><p>文件名写 without decision making，但首页实际标题是 without Differentiable Optimization。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>通过学习局部决策损失，让预测训练适应下游优化而无需对求解器求导。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>LODL 用黑盒优化器生成监督，学习可凸的任务相关损失。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>仍需大量调用黑盒求解器来拟合损失；“without differentiable optimization”并非完全不做优化。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>在真实标签附近扰动预测，用决策质量作为目标，拟合加权 MSE/方向二次型等局部损失，再用于训练预测网络。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>三个资源分配域均优于任务无关的两阶段训练，部分超过手工可微代理；样本增多通常提高表现，损失学习可并行/复用。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】局部邻域/损失族选择影响泛化和成本；【解读】关于损失的凸性不使整个神经网络训练全局凸。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§4；§5/表1–3；§6。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Decision-Focused Learning (DFL) is a paradigm for tailoring a predictive model to a downstream optimization task that uses its predictions
+          in order to perform better on that specific task . The main technical challenge associated with DFL is that it requires being able to
+          differentiate through the optimization problem, which is difficult due to discontinuous solutions and other challenges. Past work has
+          largely gotten around this this issue by handcrafting task-specific surrogates to the original optimization problem that provide informative
+          gradients when differentiated through. However, the need to handcraft surrogates for each new task limits the usability of DFL. In addition,
+          there are often no guarantees about the convexity of the resulting surrogates and, as a result, training a predictive model using them can
+          lead to inferior local optima. In this paper, we do away with surrogates altogether and instead learn loss functions that capture
+          task-specific information. To the best of our knowledge, ours is the first approach that entirely replaces the optimization component of
+          decision-focused learning with a loss that is automatically learned. Our approach (a) only requires access to a black-box oracle that can
+          solve the optimization problem and is thus generalizable, and (b) can be convex by construction and so can be easily optimized over. We
+          evaluate our approach on three resource allocation problems from the literature and find that our approach outperforms learning without
+          taking into account task-structure in all three domains, and even hand-crafted surrogates from the literature.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>07b280867fab39304c2cddf0d2c056e09cce4810f27d2c1fa7395b6ecf454ccf</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p048"
+  data-id="P048"
+  data-years="2025"
+  data-year="2025"
+  data-topics="xr ai"
+  data-new="false"
+  data-title="Utility-Directed Conformal Prediction: A Decision-Aware Framework for Actionable Uncertainty Quantification"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P048 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Utility-Directed Conformal Prediction: A Decision-Aware Framework for Actionable Uncertainty Quantification</span>
+    <span class="lr-authors">Santiago Cortes-Gomez; Carlos Patiño; Yewon Byun et al.</span>
+    <span class="lr-snippet">把下游成本纳入保形预测，使具有覆盖保证的预测集合更适合实际决策。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">XR与人机协作</span><span class="lr-tag">AI方法与评测</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p048" aria-label="P048的固定链接">#P048</a><span>20页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Santiago Cortes-Gomez; Carlos Patiño; Yewon Byun; Zhiwei Steven Wu; Eric Horvitz; Bryan Wilder</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>ICLR 2025（PDF 明示）</p></dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>把下游成本纳入保形预测，使具有覆盖保证的预测集合更适合实际决策。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>针对可分/不可分效用构造 nonconformity score 与集合选择方法，并证明保留标准覆盖。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>标准覆盖依赖校准/测试交换性等条件，通常是边际保证；皮肤诊断为数据集示例，未做临床试验。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>利用标签或集合成本构造惩罚比率/保形分数，再做校准；在分类层级中偏好临床或语义更一致的集合。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>CIFAR-100、iNaturalist、ImageNet、Fitzpatrick 的所测效用成本均低于标准保形基线，并经验保持覆盖率。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】需预先定义有意义的效用，分布变化影响保证；成本低不必然代表所有用户或群体都受益。PDF 代码链接仍写 [hidden]。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§3；§4/图3及附录表4–6；§5、Reproducibility Statement。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Interest has been growing in decision-focused machine learning methods which train models to account for how their predictions are used in
+          downstream optimization problems. Doing so can often improve performance on subsequent decision problems. However, current methods for
+          uncertainty quantification do not incorporate any information about downstream decisions. We develop a methodology based on conformal
+          prediction to identify prediction sets that account for a downstream cost function, making them more appropriate to inform high-stakes
+          decision-making. Our approach harnesses the strengths of conformal methods—modularity, model-agnosticism, and statistical coverage
+          guarantees—while incorporating downstream decisions and user-specified utility functions. We prove that our methods retain standard coverage
+          guarantees. Empirical evaluation across a range of datasets and utility metrics demonstrates that our methods achieve significantly lower
+          costs than standard conformal methods. We present a real-world use case in healthcare diagnosis, where our method effectively incorporates
+          the hierarchical structure of dermatological diseases. The method successfully generates sets with coherent diagnostic meaning, potentially
+          aiding triage for dermatology diagnosis and illustrating how our method can ground high-stakes decision-making employing domain knowledge.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>014cd623273d23418cf34a7100f3f8741e56e4c4ca3ad9442505448e46e2df75</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p047"
+  data-id="P047"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world"
+  data-new="false"
+  data-title="Can LLMs Propose Instrumental Variables for Causal Reasoning?"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P047 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Can LLMs Propose Instrumental Variables for Causal Reasoning?</span>
+    <span class="lr-authors">本地稿匿名；官方 CISPA 记录补充：Ivaxi Sheth; Zhijing Jin; Bryan Wilder et al.</span>
+    <span class="lr-snippet">用 LLM 提议并批判工具变量，探索观察数据中候选工具的发现。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p047" aria-label="P047的固定链接">#P047</a><span>18页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>本地稿匿名；官方 CISPA 记录补充：Ivaxi Sheth; Zhijing Jin; Bryan Wilder; Dominik Janzing; Mario Fritz</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          NeurIPS 2025 Workshop（CISPA 记录日期 2025-12-06）；本地为匿名稿。
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://cispa.de/en/research/publications/104502-can-llms-propose-instrumental-variables-for-causal-reasoning-"
+            >CISPA机构记录</a
+          >
+        </p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>用 LLM 提议并批判工具变量，探索观察数据中候选工具的发现。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>IV Co-Scientist 多角色流程，以及无真值时的内部一致性比较。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>只能辅助提出候选；高 F 统计量只支持相关性，不能验证排除限制/独立性，内部一致也不等于因果有效。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>先测试恢复文献工具和拒绝已被推翻的工具；代理提议处理—结果—工具组合并批判假设，再比较第一阶段强度与估计一致性。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>5 个自动发现案例中多种候选表现出较强相关及高于随机代理的内部一致性；论文未建立所有新工具的真实有效性。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】语义批评共享模型偏差；缺乏真值时一致性不足以排除共同混杂，候选须领域知识进一步审核。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>摘要；§2.1–2.2/表1；附录 C、H；CISPA 作者记录。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          In the presence of confounding between an endogenous variable and the outcome, instrumental variables (IVs) are used to isolate causal
+          effects. Identifying valid instruments requires interdisciplinary knowledge and contextual understanding, making it a difficult task. In
+          this paper, we examine whether large language models (LLMs) can assist. We adopt a two-stage evaluation: first, testing whether LLMs recover
+          established instruments from the literature, and second, assessing whether they avoid empirically or theoretically discredited ones.
+          Building on these results, we introduce IV Co-Scientist, a multi-agent system that proposes, critiques, and refines IVs, along with a
+          statistical test to contextualize consistency without ground truth. Our results show the potential of LLMs to identify valid IVs from large
+          observational data.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>c93595a135d3c4e837633d1fd4b30fe3f47805aa52e29411a4ef9dcbc6fa53c5</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p046"
+  data-id="P046"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world"
+  data-new="false"
+  data-title="Explaining Concept Shift with Interpretable Feature Attribution"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P046 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Explaining Concept Shift with Interpretable Feature Attribution</span>
+    <span class="lr-authors">Ruiqi Lyu; Alistair Turcan; Bryan Wilder</span>
+    <span class="lr-snippet">SGShift 将预测失效归因到条件标签分布发生变化的少数特征。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p046" aria-label="P046的固定链接">#P046</a><span>25页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Ruiqi Lyu; Alistair Turcan; Bryan Wilder</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-05-27（arXiv:2505.20634v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>Preprint, Under review；arXiv:2505.20634v1，2025-05-27（本地版本）</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2505.20634v1">arXiv本地版本 2505.20634v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>SGShift 将预测失效归因到条件标签分布发生变化的少数特征。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>稀疏 GAM 归因、吸收模型误设项和 knockoff 错误发现控制扩展。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>表格数据的概念漂移，需源/目标域信息和标注；被选特征不是必然的干预因果变量。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>在原模型输出上拟合带 L1 惩罚的加性修正，结合两域共享误设项；用 knockoffs 筛选发生变化的特征。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>在糖尿病再入院、COVID 和 SUPPORT2 的半合成实验中，knockoff 变体多次获得 AUC&gt;0.9；召回率按 FPR=10% 评价，不能与任意阈值召回混用。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】假设变化稀疏，密集变化难解释；【解读】GAM 加性结构和有限目标域标签限制复杂交互漂移识别。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§4；§5–6/表2；§7。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Regardless the amount of data a machine learning (ML) model is trained on, there will inevitably be data that differs from their training
+          set, lowering model performance. Concept shift occurs when the distribution of labels conditioned on the features changes, making even a
+          well-tuned ML model to have learned a fundamentally incorrect representation. Identifying these shifted features provides unique insight
+          into how one dataset differs from another, considering the difference may be across a scientifically relevant dimension, such as time,
+          disease status, population, etc. In this paper, we propose SGShift, a model for detecting concept shift in tabular data and attributing
+          reduced model performance to a sparse set of shifted features. SGShift models concept shift with a Generalized Additive Model (GAM) and
+          performs subsequent feature selection to identify shifted features. We propose further extensions of SGShift by incorporating knockoffs to
+          control false discoveries and an absorption term to account for models with poor fit to the data. We conduct extensive experiments in
+          synthetic and real data across various ML models and find SGShift can identify shifted features with AUC &gt; 0.9 and recall &gt; 90%, often
+          2 or 3 times as high as baseline methods.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>b06c08edda94ada5d2c1566b92694110d440fab9c921c2fad4806ad9c010bcbc</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p045"
+  data-id="P045"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world"
+  data-new="false"
+  data-title="Failure Modes of LLMs for Causal Reasoning on Narratives"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P045 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Failure Modes of LLMs for Causal Reasoning on Narratives</span>
+    <span class="lr-authors">Khurram Yamin; Shantanu Gupta; Gaurav Ghosal et al.</span>
+    <span class="lr-snippet">研究语言模型在叙事因果理解中的失效模式，是 P042 的早期版本。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p045" aria-label="P045的固定链接">#P045</a><span>23页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Khurram Yamin; Shantanu Gupta; Gaurav Ghosal; Zachary Lipton; Bryan Wilder</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-06-15（arXiv:2410.23884v5）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>arXiv:2410.23884v5，2025-06-15；后续改题的ICLR 2026版本见P042</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2410.23884v5">arXiv本地版本 2410.23884v5</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+      <dt>版本关系</dt>
+      <dd>
+        <p>与<a href="#p042">P042</a>为同一工作不同题名/版本；本条按较早的本地稿总结。</p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>研究语言模型在叙事因果理解中的失效模式，是 P042 的早期版本。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>明确事件顺序、参数知识一致性和叙事结构复杂度三类影响。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>因果关系识别/图抽取；本文明确把反事实案例留作未来工作。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>构造可控合成叙事并使用 CauseNet 的半合成/真实语句，比较多种模型和先抽图提示。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>事件拓扑顺序一致时较好，知识冲突及长链时较差；显式抽取因果图改善推理。本条按 v5 总结，不把后续 ICLR 附录结果回填为早期结果。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】其他类型因果推理未测；【解读】叙事中识别给定因果并不等同从混杂观测中识别因果。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§3–4；§5.1；与 P042 对照。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          The ability to robustly identify causal relationships is essential for autonomous decision-making and adaptation to novel scenarios.
+          However, accurately inferring causal structure requires integrating both world knowledge and abstract logical reasoning. In this work, we
+          investigate the interaction between these two capabilities through the representative task of causal reasoning over narratives. Through
+          controlled synthetic, semi-synthetic and real-world experiments, we find that stateof-the-art large language models (LLMs) often rely on
+          superficial heuristics—for example, inferring causality from event order or recalling memorized world knowledge without attending to
+          context. Furthermore, we show that simple reformulations of the task can elicit more robust reasoning behavior. Our evaluation spans a range
+          of causal structures, from linear chains to complex graphs involving colliders and forks. These findings uncover systematic patterns in how
+          LLMs perform causal reasoning and lay the groundwork for developing methods that better align LLM behavior with principled causal inference.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>49a0e206675337354ceff5c93faef9493f58048c70a0088fde01fd9b9c3647b0</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p044"
+  data-id="P044"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world"
+  data-new="false"
+  data-title="Orthogonal Causal Calibration"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P044 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Orthogonal Causal Calibration</span>
+    <span class="lr-authors">Justin Whitehouse; Christopher Jung; Vasilis Syrgkanis et al.</span>
+    <span class="lr-snippet">用正交损失把异质性因果效应估计的校准转化为较标准的预测校准。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p044" aria-label="P044的固定链接">#P044</a><span>49页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Justin Whitehouse; Christopher Jung; Vasilis Syrgkanis; Bryan Wilder; Zhiwei Steven Wu</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-04-30（arXiv:2406.01933v2）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          COLT 2025 Extended Abstract，PMLR291:5712–5713（官方记录核验）；本地为完整研究稿，首页2025-05-02、arXiv v2为2025-04-30，两者篇幅不可混淆。
+          <a target="_blank" rel="noopener noreferrer" href="https://proceedings.mlr.press/v291/whitehouse25a.html">PMLR官方记录</a>
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2406.01933v2">arXiv本地版本 2406.01933v2</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>用正交损失把异质性因果效应估计的校准转化为较标准的预测校准。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>对 universal/conditional orthogonality 给出误差分解、样本切分和交叉校准算法及收敛保证。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>结论依赖识别条件、正交性、损失正则性和 nuisance 估计；重点是 L2 校准，不保证个体反事实准确或决策最优。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>构造广义伪结果或条件损失，在独立样本上校准；把误差分为 nuisance 估计误差与假想已知 nuisance 下的校准误差。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>401(k) 观察数据和合成条件分位数实验中降低校准误差，部分同时降低平均损失；理论提供高概率收敛及条件性的 do-no-harm 结果。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】其他 Lp 校准及最终决策效用仍待研究；【解读】真实观察数据无法直接观测全部个体处理效应。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>摘要；§3–4；§5 图1–2；§6。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Estimates of heterogeneous treatment effects such as conditional average treatment effects (CATEs) and conditional quantile treatment
+          effects (CQTEs) play an important role in real-world decision making. Given this importance, one should ensure these estimates are
+          calibrated. While there is a rich literature on calibrating estimators of non-causal parameters, very few methods have been derived for
+          calibrating estimators of causal parameters, or more generally estimators of quantities involving nuisance parameters. In this work, we
+          develop general algorithms for reducing the task of causal calibration to that of calibrating a standard (non-causal) predictive model.
+          Throughout, we study a notion of calibration defined with respect to an arbitrary, nuisance-dependent loss l, under which we say an
+          estimator θ is calibrated if its predictions cannot be changed on any level set to decrease loss. For losses l satisfying a condition called
+          universal orthogonality, we present a simple algorithm that transforms partially-observed data into generalized pseudo-outcomes and applies
+          any off-the-shelf calibration procedure. For losses l satisfying a weaker assumption called conditional orthogonality, we provide a similar
+          sample splitting algorithm the performs empirical risk minimization over an appropriately defined class of functions. Convergence of both
+          algorithms follows from a generic, two term upper bound of the calibration error of any model: one term that measures the error in
+          estimating unknown nuisance parameters and another that measures calibration error in a hypothetical world where the learned nuisances are
+          true. We demonstrate the practical applicability of our results in experiments on both observational and synthetic data. Our results are
+          exceedingly general, showing that essentially any existing calibration algorithm can be used in causal settings, with additional loss only
+          arising from errors in nuisance estimation.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>b80516dff71d6e559774e8c2192764cc4d0f0108448bff43f2114cbf85526080</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p043"
+  data-id="P043"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world"
+  data-new="false"
+  data-title="LLMs Struggle to Perform Counterfactual Reasoning with Parametric Knowledge"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P043 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">LLMs Struggle to Perform Counterfactual Reasoning with Parametric Knowledge</span>
+    <span class="lr-authors">Khurram Yamin, Gaurav Ghosal, Bryan Wilder</span>
+    <span class="lr-snippet">测试模型能否将新反事实前提与已存知识结合，而不是继续沿用默认知识。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p043" aria-label="P043的固定链接">#P043</a><span>10页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Khurram Yamin, Gaurav Ghosal, Bryan Wilder</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          2025 年研究稿；ICML 2025 模板元数据；arXiv:2506.15732，主会/Workshop 身份不能只由模板判断。
+          <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2506.15732">arXiv记录</a>
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2506.15732">arXiv论文记录</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>测试模型能否将新反事实前提与已存知识结合，而不是继续沿用默认知识。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>区分强化、添加、冲突与无关上下文的知识整合任务，并研究微调的副作用。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>受控知识图和短链因果查询；不是现实因果效应估计。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>在 GPT-4o/Llama3.1 与玩具模型上比较直接提示、CoT、160 条反事实示例微调及预训练干预。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>强化既有知识时 GPT-4o 直接提示约 85%、CoT 超过 95%；添加/冲突条件困难，简单微调可能仍依赖捷径或损害原有知识。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】玩具前提多为单边编辑、两跳查询；【解读】少量训练与模型范围限制结论，不可说微调普遍无效。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§3；§4；§5–6；附录训练细节。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Large Language Models have been shown to contain extensive world knowledge in their parameters, enabling impressive performance on many
+          knowledge intensive tasks. However, when deployed in novel settings, LLMs often encounter situations where they must integrate parametric
+          knowledge with new or unfamiliar information. In this work, we explore whether LLMs can combine knowledge in-context with their parametric
+          knowledge through the lens of counterfactual reasoning. Through synthetic and real experiments in multi-hop reasoning problems, we show that
+          LLMs generally struggle with counterfactual reasoning, often resorting to exclusively using their parametric knowledge. Moreover, we show
+          that simple post-hoc finetuning can struggle to instill counterfactual reasoning ability – often leading to degradation in stored parametric
+          knowledge. Ultimately, our work reveals important limitations of current LLM’s abilities to re-purpose parametric knowledge in novel
+          settings.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>ba93aa93e6f55f736903bae8c7fb437ddf9783864e2d8fa6c9ecf4aa06c7d579</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p042"
+  data-id="P042"
+  data-years="2026"
+  data-year="2026"
+  data-topics="world"
+  data-new="false"
+  data-title="LLMs Struggle to Balance Reasoning and World Knowledge in Causal Narrative Understanding"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P042 <span aria-hidden="true">/</span> 2026</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">LLMs Struggle to Balance Reasoning and World Knowledge in Causal Narrative Understanding</span>
+    <span class="lr-authors">Khurram Yamin; Shantanu Gupta; Gaurav Ghosal et al.</span>
+    <span class="lr-snippet">分析 LLM 在叙事因果理解中如何受事件顺序、已有知识和图结构复杂度影响。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p042" aria-label="P042的固定链接">#P042</a><span>28页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Khurram Yamin; Shantanu Gupta; Gaurav Ghosal; Zachary Lipton; Bryan Wilder</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2026年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>ICLR 2026（PDF 明示）</p></dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+      <dt>版本关系</dt>
+      <dd>
+        <p>
+          与<a href="#p045">P045</a>为同一工作不同题名/版本；本地<a href="#p042">P042</a>明示ICLR 2026，<a href="#p045">P045</a
+          >为2025-06的较早预印稿。
+        </p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>分析 LLM 在叙事因果理解中如何受事件顺序、已有知识和图结构复杂度影响。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>受控的合成、半合成和真实叙事评测，定位常识捷径与顺序偏差。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>主要判断事件间因果关系和抽取图；未涵盖完整反事实或干预推理。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>从链、fork、collider 和 CauseNet 构造叙事，操控叙述顺序/知识一致性/长度；比较直接回答与先抽因果图。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>模型倾向按叙事顺序推断因果、以参数知识覆盖上下文；图更长/复杂时下降。先显式识别因果图可改善稳定性。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】未覆盖其他因果任务；【解读】CauseNet 是文本声称的因果关系，受控叙事不等于真实科学因果发现。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§3–4；§5；与 P045 封面、摘要比对。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          The ability to robustly identify causal relationships is essential for autonomous decision-making and adaptation to novel scenarios.
+          However, accurately inferring causal structure requires integrating both world knowledge and abstract logical reasoning. In this work, we
+          investigate the interaction between these two capabilities through the representative task of causal reasoning over narratives. Through
+          controlled synthetic, semi-synthetic and real-world experiments, we find that stateof-the-art large language models (LLMs) often rely on
+          superficial heuristics—for example, inferring causality from event order or recalling memorized world knowledge without attending to
+          context. Furthermore, we show that simple reformulations of the task can elicit more robust reasoning behavior. Our evaluation spans a range
+          of causal structures, from linear chains to complex graphs involving colliders and forks. These findings uncover systematic patterns in how
+          LLMs perform causal reasoning and lay the groundwork for developing methods that better align LLM behavior with principled causal inference.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>0264b3dec2f81a06f3272ce9328b2324bea065f9d9a77f4733091cb48ca9595d</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p041"
+  data-id="P041"
+  data-years="2020"
+  data-year="2020"
+  data-topics="xr"
+  data-new="false"
+  data-title="Learning to Complement Humans"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P041 <span aria-hidden="true">/</span> 2020</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Learning to Complement Humans</span>
+    <span class="lr-authors">Bryan Wilder; Eric Horvitz; Ece Kamar</span>
+    <span class="lr-snippet">联合训练预测模型和求助策略，以人机团队的整体效用而非机器独立准确率为目标。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">XR与人机协作</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p041" aria-label="P041的固定链接">#P041</a><span>8页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Bryan Wilder; Eric Horvitz; Ece Kamar</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2020-05-01（arXiv:2005.00582v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          IJCAI 2020，pp.1526–1533（官方论文集核验）。
+          <a target="_blank" rel="noopener noreferrer" href="https://www.ijcai.org/proceedings/2020/212">IJCAI官方论文页</a>
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2005.00582v1">arXiv本地版本 2005.00582v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>联合训练预测模型和求助策略，以人机团队的整体效用而非机器独立准确率为目标。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>提出判别式及决策论式的联合优化，显式利用人类与机器错误模式的互补。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>Galaxy Zoo 和 CAMELYON 的离线人类标注数据；交互主要为是否查询一个人类答案。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>建模标签、人类响应及条件预测；同时优化分类和查询决策，将求助成本/非对称错误代价纳入期望损失。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>表1中 Galaxy Zoo 一层 VOI 的平均损失改善 38.9%（跨查询成本），不同容量/任务收益差异很大，部分设置存在负改善。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】需可靠的人类响应模型和代表性数据；未覆盖人类因 AI 建议而改变行为的长期双向协作。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>§2–3；§4/表1；§5。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          A rising vision for AI in the open world centers on the development of systems that can complement humans for perceptual, diagnostic, and
+          reasoning tasks. To date, systems aimed at complementing the skills of people have employed models trained to be as accurate as possible in
+          isolation. We demonstrate how an end-to-end learning strategy can be harnessed to optimize the combined performance of human-machine teams
+          by considering the distinct abilities of people and machines. The goal is to focus machine learning on problem instances that are difficult
+          for humans, while recognizing instances that are difficult for the machine and seeking human input on them. We demonstrate in two real-world
+          domains (scientific discovery and medical diagnosis) that human-machine teams built via these methods outperform the individual performance
+          of machines and people. We then analyze conditions under which this complementarity is strongest, and which training methods amplify it.
+          Taken together, our work provides the first systematic investigation of how machine learning systems can be trained to complement human
+          reasoning.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>f2db8ece3b71eb3c52f40b5398ed32992f5d032a2a1a5bcf4ab054ff4cf68f9d</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>

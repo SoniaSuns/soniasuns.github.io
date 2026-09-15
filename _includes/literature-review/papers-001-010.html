@@ -1,0 +1,857 @@
+<details
+  class="lr-paper"
+  id="p010"
+  data-id="P010"
+  data-years="2023"
+  data-year="2023"
+  data-topics="creation world"
+  data-new="false"
+  data-title="Visual Writing Prompts: Character-Grounded Story Generation with Curated Image Sequences"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P010 <span aria-hidden="true">/</span> 2023</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Visual Writing Prompts: Character-Grounded Story Generation with Curated Image Sequences</span>
+    <span class="lr-authors">Xudong Hong; Asad Sayeed; Khushboo Mehra et al.</span>
+    <span class="lr-snippet">用经过筛选的电影镜头序列和明确角色构建 VWP，以更好的输入与角色表示提升视觉故事的连贯性。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">创作与规则补全</span><span class="lr-tag">世界机制与演化</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p010" aria-label="P010的固定链接">#P010</a><span>15页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Xudong Hong; Asad Sayeed; Khushboo Mehra; Vera Demberg; Bernt Schiele</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2023-01-20（arXiv:2301.08571v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          TACL 2023，11:565–581；本地为 2023-01-20 预出版稿。
+          <a target="_blank" rel="noopener noreferrer" href="https://aclanthology.org/2023.tacl-1.33/">ACL Anthology记录</a>
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2301.08571v1">arXiv本地版本 2301.08571v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://vwprompt.github.io/">项目/演示页面</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>用经过筛选的电影镜头序列和明确角色构建 VWP，以更好的输入与角色表示提升视觉故事的连贯性。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>约 2K 个、每个 5–10 图的序列及约 12K 众包故事；提出角色感知的 CharGrid 基线。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>生成图像序列对应的文本故事；依赖电影镜头、角色框和筛选流程，不生成视频或验证事件真实发生。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>过滤低信息和重复镜头，提供角色名称/裁剪图引导写作；冻结 Swin 特征提取，结合角色特征与角色网格建模跨句连贯性。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>28 名众包者比较 50 对故事；本地稿表7中 CharGrid 相较 TAPM+char 的人类判断差值：连贯性 +8.41、视觉依据 +6.25、多样性 +11.06 个百分点。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】叙事结构/narrativity 和写作者能力差异未充分建模；【解读】人工评价样本小，电影域与现实相册存在分布差异。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>摘要；构建 §3–5；模型 §6.1；人评 §6.3/表7；§7。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Current work on image-based story generation suffers from the fact that the existing image sequences collections do not have coherent plots
+          behind them. We improve visual story generation by producing a new image-grounded dataset, Visual Writing Prompts (VWP). VWP contains almost
+          2K selected sequences of movie shots, each including 5-10 images. The image sequences are aligned with a total of 12K stories which were
+          collected via crowdsourcing given the image sequences and a set of grounded characters from the corresponding image sequence. Our new image
+          sequence collection and filtering process has allowed us to obtain stories that are more coherent and more diverse compared to previous
+          work. We also propose a characterbased story generation model driven by coherence as a strong baseline. Evaluations show that our generated
+          stories are more coherent, visually grounded, and more diverse than stories generated with the current stateof-the-art model.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>33a8162c030e1f548ed7f94972bf7154d3efeb6b1ac91db896cf0d37217b1870</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p009"
+  data-id="P009"
+  data-years="2023"
+  data-year="2023"
+  data-topics="world xr"
+  data-new="false"
+  data-title="Breaking Common Sense: WHOOPS! A Vision-and-Language Benchmark of Synthetic and Compositional Images"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P009 <span aria-hidden="true">/</span> 2023</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Breaking Common Sense: WHOOPS! A Vision-and-Language Benchmark of Synthetic and Compositional Images</span>
+    <span class="lr-authors">Nitzan Bitton-Guetta; Yonatan Bitton; Jack Hessel et al.</span>
+    <span class="lr-snippet">通过人为设计的反常识合成图像，评价模型是否能识别和解释图像中的异常，而不只描述物体。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p009" aria-label="P009的固定链接">#P009</a><span>15页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Nitzan Bitton-Guetta; Yonatan Bitton; Jack Hessel; Ludwig Schmidt; Yuval Elovici; Gabriel Stanovsky; Roy Schwartz</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2023-08-12（arXiv:2303.07274v4）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          ICCV 2023，2616–2627；本地 arXiv v4：2023-08-12。
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://openaccess.thecvf.com/content/ICCV2023/html/Bitton-Guetta_Breaking_Common_Sense_WHOOPS_A_Vision-and-Language_Benchmark_of_Synthetic_and_ICCV_2023_paper.html"
+            >CVF官方论文页</a
+          >
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2303.07274v4">arXiv本地版本 2303.07274v4</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://whoops-benchmark.github.io/">项目/演示页面</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>通过人为设计的反常识合成图像，评价模型是否能识别和解释图像中的异常，而不只描述物体。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>提供视觉常识基准及解释异常任务，结合 captioning、匹配和 VQA；分析感知与推理各自的瓶颈。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>小规模、人工筛选的合成图像及四类任务；不能直接代表真实图像中的所有常识错误。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>设计师用文生图工具制作异常组合，众包标注解释；比较端到端 BLIP2 和图像描述→LLM 管线，并用人类及 GPT-4 评价解释。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>表1中，微调 BLIP2-XXL 异常识别 73%，人类 92%；解释的人类评分为 27%，oracle caption→GPT-3 为 68%，人类 95%。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】数据规模小，仍可能含令人不适内容；【解读】生成工具、文化常识及 GPT 评价器带来偏差，oracle 描述结果不是实际端到端水平。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>摘要；数据 §2；表1；结果 §5.2；局限 §8。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Weird, unusual, and uncanny images pique the curiosity of observers because they challenge commonsense. For example, an image released
+          during the 2022 world cup depicts the famous soccer stars Lionel Messi and Cristiano Ronaldo playing chess, which playfully violates our
+          expectation that their competition should occur on the football field.1 Humans can easily recognize and interpret these unconventional
+          images, but can AI models do the same? We introduce WHOOPS !, a new dataset and benchmark for visual commonsense. The dataset is comprised
+          of purposefully commonsense-defying images created by designers using publicly-available image generation tools like Midjourney. We consider
+          several tasks posed over the dataset. In addition to image captioning, cross-modal matching, and visual question answering, we introduce a
+          difficult explanation generation task, where models must identify and explain why a given image is unusual. Our results show that
+          state-of-the-art models such as GPT3 and BLIP2 still lag behind human performance on WHOOPS !. We hope our dataset will inspire the
+          development of AI models with stronger visual commonsense reasoning abilities.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>342485fdb71a2e2931d66cfd760bc87c9f78d58bd7edaf325cf0e921621629ab</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p008"
+  data-id="P008"
+  data-years="2022"
+  data-year="2022"
+  data-topics="world xr"
+  data-new="false"
+  data-title="Visual Abductive Reasoning"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P008 <span aria-hidden="true">/</span> 2022</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Visual Abductive Reasoning</span>
+    <span class="lr-authors">Chen Liang; Wenguan Wang; Tianfei Zhou et al.</span>
+    <span class="lr-snippet">在事件片段被遮蔽的视频中描述已知事件并生成最可能的缺失事件解释，提出 VAR 数据集和 REASONER。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p008" aria-label="P008的固定链接">#P008</a><span>16页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Chen Liang; Wenguan Wang; Tianfei Zhou; Yi Yang</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2022-03-26（arXiv:2203.14040v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          CVPR 2022，pp.15565–15575（官方CVF记录核验）。
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://openaccess.thecvf.com/content/CVPR2022/html/Liang_Visual_Abductive_Reasoning_CVPR_2022_paper.html"
+            >CVF官方论文页</a
+          >
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2203.14040v1">arXiv本地版本 2203.14040v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/leonnnop/VAR">代码：leonnnop/VAR</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>在事件片段被遮蔽的视频中描述已知事件并生成最可能的缺失事件解释，提出 VAR 数据集和 REASONER。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>设计因果方向感知编码及置信度引导的级联解码，逐轮改进前提描述与假设。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>输入已有事件分段，缺失事件以黑帧遮蔽；实现的是语言解释生成，未识别或验证真实因果结构。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>使用预提取动作/外观特征，contextualized directional position embedding 区分关系；三个级联 Transformer 解码器通过句子置信度交换信息。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        消融中，普通 Transformer 的平均事件 CIDEr 30.04、BLEU-4 3.39；同时加入两个组件后为 36.13、4.66。完整模型领先比较的视频语言基线，但仍落后人类。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】依赖事件分割和视觉特征；多种合理解释会使参考文本指标失真，因果位置编码并非干预意义上的因果保证。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>任务 §3；实现 §4.4；实验 §5、表8；附录失败案例。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Abductive reasoning seeks the likeliest possible explanation for partial observations. Although abduction is frequently employed in human
+          daily reasoning, it is rarely explored in computer vision literature. In this paper, we propose a new task and dataset, Visual Abductive
+          Reasoning (VAR), for examining abductive reasoning ability of machine intelligence in everyday visual situations. Given an incomplete set of
+          visual events, AI systems are required to not only describe what is observed, but also infer the hypothesis that can best explain the visual
+          premise. Based on our large-scale VAR dataset, we devise a strong baseline model, REASONER (causal-and-cascaded reasoning Transformer).
+          First, to capture the causal structure of the observations, a contextualized directional position embedding strategy is adopted in the
+          encoder, that yields discriminative representations for the premise and hypothesis. Then, multiple decoders are cascaded to generate and
+          progressively refine the premise and hypothesis sentences. The prediction scores of the sentences are used to guide cross-sentence
+          information flow in the cascaded reasoning procedure. Our VAR benchmarking results show that REASONER surpasses many famous video-language
+          models, while still being far behind human performance. This work is expected to foster future efforts in the reasoning-beyond-observation
+          paradigm.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>90f39a03b4c4a282706963260126887bfd7658133b53f6b586bfe9e39cc5febe</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p007"
+  data-id="P007"
+  data-years="2022"
+  data-year="2022"
+  data-topics="world xr"
+  data-new="false"
+  data-title="The Abduction of Sherlock Holmes: A Dataset for Visual Abductive Reasoning"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P007 <span aria-hidden="true">/</span> 2022</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">The Abduction of Sherlock Holmes: A Dataset for Visual Abductive Reasoning</span>
+    <span class="lr-authors">Jack Hessel; Jena D. Hwang; Jae Sung Park et al.</span>
+    <span class="lr-snippet">构建 Sherlock，收集视觉线索和超出字面画面的合理推断，评估机器的视觉溯因能力。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p007" aria-label="P007的固定链接">#P007</a><span>18页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Jack Hessel; Jena D. Hwang; Jae Sung Park; Rowan Zellers; Chandra Bhagavatula; Anna Rohrbach; Kate Saenko; Yejin Choi</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2022年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          ECCV 2022（官方记录核验）。
+          <a target="_blank" rel="noopener noreferrer" href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/5263_ECCV_2022_paper.php"
+            >ECVA官方论文页</a
+          >
+        </p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="http://visualabduction.com/">项目/演示页面</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>构建 Sherlock，收集视觉线索和超出字面画面的合理推断，评估机器的视觉溯因能力。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>103K 图片、363K 线索—推断对及约 19K 合理性判断，覆盖推断检索、证据定位和合理性比较。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>推断是人类认为合理的假设；主要评价检索/定位/比较，开放式生成评价仍待解决。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>自由观察式众包标注线索框和推断；训练图像、区域、文本兼容性评分器，比较 LXMERT、UNITER 和 CLIP，并加入多任务训练。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>CLIP-RN50x64 加多任务目标在三类评测中优于所列强基线，但与人类判断一致性仍有明显差距；文中同时报告定位及排序指标，不能统一当作准确率。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】显著线索选择、合理推断的歧义及生成评价未解决；文字识别、动作识别等基础视觉错误也会传递到推断。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>摘要 p1；任务 §4；方法/结果 §5、表2；结论 §6。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Humans have remarkable capacity to reason abductively and hypothesize about what lies beyond the literal content of an image. By identifying
+          concrete visual clues scattered throughout a scene, we almost can’t help but draw probable inferences beyond the literal scene based on our
+          everyday experience and knowledge about the world. For example, if we see a “20 mph” sign alongside a road, we might assume the street sits
+          in a residential area (rather than on a highway), even if no houses are pictured. Can machines perform similar visual reasoning? We present
+          Sherlock, an annotated corpus of 103K images for testing machine capacity for abductive reasoning beyond literal image contents. We adopt a
+          free-viewing paradigm: participants first observe and identify salient clues within images (e.g., objects, actions ) and then provide a
+          plausible inference about the scene, given the clue. In total, we collect 363K (clue, inference) pairs, which form a first-of-its-kind
+          abductive visual reasoning dataset. Using our corpus, we test three complementary axes of abductive reasoning. We evaluate the capacity of
+          models to: i) retrieve relevant inferences from a large candidate corpus; ii) localize evidence for inferences via bounding boxes, and iii)
+          compare plausible inferences to match human judgments on a newlycollected diagnostic corpus of 19K Likert-scale judgments. While we find
+          that fine-tuning CLIP-RN50x64 with a multitask objective outperforms strong baselines, significant headroom exists between model performance
+          and human agreement. Data, models, and leaderboard available at http://visualabduction.com/.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>6d3154700273e8716a1894925a16c6890426adc4cd9bb9d54a4fe1bde03c78ac</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p006"
+  data-id="P006"
+  data-years="2022"
+  data-year="2022"
+  data-topics="world"
+  data-new="false"
+  data-title="Learning Iterative Reasoning through Energy Minimization"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P006 <span aria-hidden="true">/</span> 2022</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Learning Iterative Reasoning through Energy Minimization</span>
+    <span class="lr-authors">Yilun Du; Shuang Li; Joshua Tenenbaum et al.</span>
+    <span class="lr-snippet">把推理写成学习能量函数后的迭代优化，使测试时可以增加计算以处理更大或更难的问题。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p006" aria-label="P006的固定链接">#P006</a><span>14页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Yilun Du; Shuang Li; Joshua Tenenbaum; Igor Mordatch</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2022-06-30（arXiv:2206.15448v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>ICML 2022（PDF 元数据与正文）；本地 arXiv v1：2022-06-30</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2206.15448v1">arXiv本地版本 2206.15448v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p>
+          <a target="_blank" rel="noopener noreferrer" href="https://energy-based-model.github.io/iterative-reasoning-as-energy-minimization/"
+            >项目/演示页面</a
+          >
+        </p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>把推理写成学习能量函数后的迭代优化，使测试时可以增加计算以处理更大或更难的问题。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>IREM 用统一能量最小化处理图与连续算法任务，并演示嵌套组合求解。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>验证于合成图运算、加法、矩阵补全/求逆等；优化过程不保证任意实例达到全局最优。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>学习输入与候选输出之间的能量景观；通过迭代梯度更新寻找低能量解，以回放缓冲和末步截断反传控制训练开销。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>10 节点训练、15 节点测试的最短路元素 MSE 为 0.0464，循环网络 0.1083、前馈模型 1.4089；更难加法 MSE 为 0.0021，对比最佳列示基线 0.1577。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】收益依赖能量函数及优化质量；增加推理时间有成本，合成任务的规模泛化不等于自然语言或开放世界推理。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>方法 §3；表1 p5；消融表2；§5 Conclusion and Limitations。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Deep learning has excelled on complex pattern recognition tasks such as image classification and object recognition. However, it struggles
+          with tasks requiring nontrivial reasoning, such as algorithmic computation. Humans are able to solve such tasks through iterative reasoning
+          – spending more time thinking about harder tasks. Most existing neural networks, however, exhibit a fixed computational budget controlled by
+          the neural network architecture, preventing additional computational processing on harder tasks. In this work, we present a new framework
+          for iterative reasoning with neural networks. We train a neural network to parameterize an energy landscape over all outputs, and implement
+          each step of the iterative reasoning as an energy minimization step to find a minimal energy solution. By formulating reasoning as an energy
+          minimization problem, for harder problems that lead to more complex energy landscapes, we may then adjust our underlying computational
+          budget by running a more complex optimization procedure. We empirically illustrate that our iterative reasoning approach can solve more
+          accurate and generalizable algorithmic reasoning tasks in both graph and continuous domains. Finally, we illustrate that our approach can
+          recursively solve algorithmic problems requiring nested reasoning. Code and additional information is available at
+          https://energy-based-model.github.io/iterativereasoning-as-energy-minimization/.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>2c44b73b49bf1fad468a2f7a4e03c2ddfd5eaef4447890c7a5d980bc1c8ceead</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p005"
+  data-id="P005"
+  data-years="2022"
+  data-year="2022"
+  data-topics="world xr"
+  data-new="false"
+  data-title="There’s a Time and Place for Reasoning Beyond the Image"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P005 <span aria-hidden="true">/</span> 2022</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">There’s a Time and Place for Reasoning Beyond the Image</span>
+    <span class="lr-authors">Xingyu Fu; Ben Zhou; Ishaan Preetam Chandratreya et al.</span>
+    <span class="lr-snippet">提出图像时空定位任务 TARA，要求综合画面线索与背景知识判断拍摄时间和地点。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p005" aria-label="P005的固定链接">#P005</a><span>12页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Xingyu Fu; Ben Zhou; Ishaan Preetam Chandratreya; Carl Vondrick; Dan Roth</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2022年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>ACL 2022，Long Papers，1138–1149；会议 2022-05-22 至 05-27</p></dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/zeyofu/TARA">代码：zeyofu/TARA</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>提出图像时空定位任务 TARA，要求综合画面线索与背景知识判断拍摄时间和地点。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>构建约 16K 新闻图片和额外 61K WIT 弱监督样本，并提供基于局部图像线索的 CLIP 变体。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>主要为 NYT/Wikipedia 图片和给定标签集合的分类，不是无需候选的任意地点、精确日期识别。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>自动抽取新闻时空标签，众包验证可推理子集；比较 CLIP、微调、WIT 监督及 segment-wise 表征，使用 Accuracy 和层级 Example-F1。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        全测试集地点准确率 CLIP 11.11%、CLIP+Seg 16.46%。在人类对照子集，地点 23.33% vs 人类 86.21%，时间 3.33% vs 75.86%；不能把两个测试集合并比较。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者/设定】人类只测 test set of interest；【解读】新闻来源和标签分布有偏，图片可能不足以确定唯一时间，WIT 的分布差异限制收益。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>摘要 p1；数据 §3–4；方法 §5；表2、表3及 §6.3。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Images are often more significant than only the pixels to human eyes, as we can infer, associate, and reason with contextual information
+          from other sources to establish a more complete picture. For example, in Figure 1, we can find a way to identify the news articles related
+          to the picture through segment-wise understandings of the signs, the buildings, the crowds, and more. This reasoning could provide the time
+          and place the image was taken, which will help us in subsequent tasks, such as automatic storyline construction, correction of image source
+          in intended effect photographs, and upper-stream processing such as image clustering for certain location or time. In this work, we
+          formulate this problem and introduce TARA: a dataset with 16k images with their associated news, time, and location, automatically extracted
+          from New York Times1 (NYT), and an additional 61k examples as distant supervision from WIT (Srinivasan et al., 2021). On top of the
+          extractions, we present a crowdsourced subset in which we believe it is possible to find the images’ spatiotemporal information for
+          evaluation purpose. We show that there exists a 70% gap between a state-of-the-art joint model and human performance, which is slightly
+          filled by our proposed model that uses segment-wise reasoning, motivating higher-level vision-language joint models that can conduct
+          open-ended reasoning with world knowledge. The data and code are publicly available at https://github. com/zeyofu/TARA.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>aaf98fccea956b5824724ffc590c892f805b3814ef30ed5f8e096a11dd9987f1</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p004"
+  data-id="P004"
+  data-years="2021 2022"
+  data-year="2022"
+  data-topics="xr"
+  data-new="false"
+  data-title="WebGPT: Browser-assisted question-answering with human feedback"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P004 <span aria-hidden="true">/</span> 2021 / 2022</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">WebGPT: Browser-assisted question-answering with human feedback</span>
+    <span class="lr-authors">Reiichiro Nakano; Jacob Hilton; Suchir Balaji et al.</span>
+    <span class="lr-snippet">训练 GPT-3 操作文本浏览器、收集引用并回答长问题，以示范学习和人类偏好反馈提升答案质量。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">XR与人机协作</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p004" aria-label="P004的固定链接">#P004</a><span>32页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd>
+        <p>
+          Reiichiro Nakano; Jacob Hilton; Suchir Balaji; Jeff Wu; Long Ouyang; Christina Kim; Christopher Hesse; Shantanu Jain; Vineet Kosaraju;
+          William Saunders; Xu Jiang; Karl Cobbe; Tyna Eloundou; Gretchen Krueger; Kevin Button; Matthew Knight; Benjamin Chess; John Schulman
+        </p>
+      </dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2022-06-01（arXiv:2112.09332v3）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>arXiv 技术报告；初稿 2021；本地 v3：2022-06-01；PDF 未标正式会议/期刊</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2112.09332v3">arXiv本地版本 2112.09332v3</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p>
+          <a target="_blank" rel="noopener noreferrer" href="https://openaipublic.blob.core.windows.net/webgpt-answer-viewer/index.html"
+            >项目/演示页面</a
+          >
+        </p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>训练 GPT-3 操作文本浏览器、收集引用并回答长问题，以示范学习和人类偏好反馈提升答案质量。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>把检索、浏览、引用和回答统一为可训练的交互轨迹，并利用带引用答案支持人类评价。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>文本浏览器和 ELI5 长问答；最强模型使用 175B、best-of-64，有引用不代表引用真实或推断正确。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>约 6,000 条人类示范做行为克隆，约 21,500 组偏好比较训练奖励模型；比较 PPO 与拒绝采样，主要最优配置采用行为克隆加奖励筛选。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>在 ELI5 上，最强模型相对人类示范答案的偏好率为 56%，相对 Reddit 高赞答案为 69%（平局计半）；这是偏好评价，不是事实准确率。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】分布外问题仍困难，引用支持性不能替代真实性，存在偏见和奖励优化问题；【解读】多次浏览与采样成本高。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>摘要 p1；训练 §3；评价 §4–5；真实性和引用局限 §6。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          We fine-tune GPT-3 to answer long-form questions using a text-based webbrowsing environment, which allows the model to search and navigate
+          the web. By setting up the task so that it can be performed by humans, we are able to train models on the task using imitation learning, and
+          then optimize answer quality with human feedback. To make human evaluation of factual accuracy easier, models must collect references while
+          browsing in support of their answers. We train and evaluate our models on ELI5, a dataset of questions asked by Reddit users. Our best model
+          is obtained by fine-tuning GPT-3 using behavior cloning, and then performing rejection sampling against a reward model trained to predict
+          human preferences. This model’s answers are preferred by humans 56% of the time to those of our human demonstrators, and 69% of the time to
+          the highest-voted answer from Reddit.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>acad8d9fd55a30b94de9dfdae413e10b21e07bde54d767b2405b31341739cedb</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<span id="p003" data-alias="p002"></span>
+<details
+  class="lr-paper"
+  id="p002"
+  data-id="P002"
+  data-years="2020"
+  data-year="2020"
+  data-topics="world xr"
+  data-new="false"
+  data-title="Abductive Commonsense Reasoning"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P002 <span aria-hidden="true">/</span> 2020</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Abductive Commonsense Reasoning</span>
+    <span class="lr-authors">Chandra Bhagavatula; Ronan Le Bras; Chaitanya Malaviya et al.</span>
+    <span class="lr-snippet">把溯因推理定义为根据前后观察寻找最合理解释，构建 ART 数据及解释选择、解释生成两类任务。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p002" aria-label="P002的固定链接">#P002</a><span>18页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd>
+        <p>
+          Chandra Bhagavatula; Ronan Le Bras; Chaitanya Malaviya; Keisuke Sakaguchi; Ari Holtzman; Hannah Rashkin; Doug Downey; Scott Wen-tau Yih;
+          Yejin Choi
+        </p>
+      </dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2020-02-14（arXiv:1908.05739v2）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>ICLR 2020（PDF 明示）；本地 arXiv v2：2020-02-14</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/1908.05739v2">arXiv本地版本 1908.05739v2</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+      <dt>版本关系</dt>
+      <dd>
+        <p><a href="#p003">P003</a>与本文件SHA-256完全一致，共用此总结。</p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>把溯因推理定义为根据前后观察寻找最合理解释，构建 ART 数据及解释选择、解释生成两类任务。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>提供超过 2 万叙事情境和 20 万解释；提出 Abductive NLI/NLG，并分析预训练语言模型的推理缺口。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>英语短篇常识叙事中的候选解释选择/文本生成；合理解释不等于唯一、可验证的真实原因。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>众包构造观察及正负解释，使用对抗筛选降低捷径；比较 GPT/BERT 微调和不同观察依赖结构，进行人工与自动评价。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>ART 测试集最佳 BERT 68.9%±0.5%，人类多数投票 91.4%；5 个训练随机种子；生成任务仍有明显常识与因果连贯性问题。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】故事和众包解释限定了常识分布；二选一准确率不能代表开放世界因果发现，生成评价受多解性影响。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>摘要 p1；任务/数据 §2–4；结果 §5，表1；分析 §6。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from
+          work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most
+          plausible explanation. While abduction has long been considered to be at the core of how people interpret and read between the lines in
+          natural language (Hobbs et al., 1988), there has been relatively little research in support of abductive natural language inference and
+          generation. We present the first study that investigates the viability of language-based abductive reasoning. We introduce a challenge
+          dataset, ART, that consists of over 20k commonsense narrative contexts and 200k explanations. Based on this dataset, we conceptualize two
+          new tasks – (i) Abductive NLI: a multiple-choice question answering task for choosing the more likely explanation, and (ii) Abductive NLG: a
+          conditional generation task for explaining given observations in natural language. On Abductive NLI, the best model achieves 68.9% accuracy,
+          well below human performance of 91.4%. On Abductive NLG, the current best language generators struggle even more, as they lack reasoning
+          capabilities that are trivial for humans. Our analysis leads to new insights into the types of reasoning that deep pre-trained language
+          models fail to perform—despite their strong performance on the related but more narrowly defined task of entailment NLI—pointing to
+          interesting avenues for future research.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>c6d69ad1817d26ff208441dae37d9b638e82e6a0e85ce4eea2063adffbd1cdf7</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p001"
+  data-id="P001"
+  data-years="2019"
+  data-year="2019"
+  data-topics="xr"
+  data-new="false"
+  data-title="HG-DAgger: Interactive Imitation Learning with Human Experts"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P001 <span aria-hidden="true">/</span> 2019</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">HG-DAgger: Interactive Imitation Learning with Human Experts</span>
+    <span class="lr-authors">Michael Kelly; Chelsea Sidrane; Katherine Driggs-Campbell et al.</span>
+    <span class="lr-snippet">让人类自主接管和交还控制权，改进真实系统中的交互式模仿学习，并从接管行为学习基于模型不确定性的风险阈值。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">XR与人机协作</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p001" aria-label="P001的固定链接">#P001</a><span>7页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Michael Kelly; Chelsea Sidrane; Katherine Driggs-Campbell; Mykel J. Kochenderfer</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2019-03-11（arXiv:1810.02890v2）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          ICRA 2019（正式发表）；初稿 2018；本地 arXiv v2：2019-03-11。
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://experts.illinois.edu/en/publications/hg-dagger-interactive-imitation-learning-with-human-experts/"
+            >作者机构记录</a
+          >
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/1810.02890v2">arXiv本地版本 1810.02890v2</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>让人类自主接管和交还控制权，改进真实系统中的交互式模仿学习，并从接管行为学习基于模型不确定性的风险阈值。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>提出 Human-Gated DAgger，减少随机切换控制导致的人类标注失真；同时估计策略的可接受状态区域。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>实现于仿真与实车驾驶任务；人类负责判断何时接管，风险阈值是经验估计，未给出无碰撞保证。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>迭代执行新手策略；专家接管时独占控制并收集示范，数据聚合后重训网络集成；用集成输出分歧及接管前的不确定性学习阈值。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        实车在 5 组障碍配置上优于 DAgger/行为克隆；与人类转向分布的 Bhattacharyya 距离相较 DAgger 改善 21.1%。仿真中阈值内初始化的碰撞率约为阈值外的
+        1/12。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】实车测试数据少，统计显著性有限；【解读】效果依赖专家及时接管，不确定性与真实危险之间并非严格等价。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>摘要 p1；方法 p2–3；实验 p4–6，表 I–II。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Imitation learning has proven to be useful for many real-world problems, but approaches such as behavioral cloning suffer from data mismatch
+          and compounding error issues. One attempt to address these limitations is the DA GGER algorithm, which uses the state distribution induced
+          by the novice to sample corrective actions from the expert. Such sampling schemes, however, require the expert to provide action labels
+          without being fully in control of the system. This can decrease safety and, when using humans as experts, is likely to degrade the quality
+          of the collected labels due to perceived actuator lag. In this work, we propose HG-DA GGER , a variant of DA GGER that is more suitable for
+          interactive imitation learning from human experts in real-world systems. In addition to training a novice policy, HG-DA GGER also learns a
+          safety threshold for a model-uncertainty-based risk metric that can be used to predict the performance of the fully trained novice in
+          different regions of the state space. We evaluate our method on both a simulated and real-world autonomous driving task, and demonstrate
+          improved performance over both DA GGER and behavioral cloning.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>5e3aefda8fa803c4bbd5c6760cc468a9ce926f0d2b38da24834069c3fdadbbd0</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>

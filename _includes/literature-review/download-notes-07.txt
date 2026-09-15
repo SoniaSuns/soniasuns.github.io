@@ -1,0 +1,175 @@
+- **主题**：XR与人机协作、世界机制与演化、AI方法与评测
+- **PDF版本**：30页；SHA-256：`18991b9ca070b5bc1ca4355db21012d97ce34c4715cf6d16d738eab85b96125c`
+
+### 中文摘要
+
+考查基础模型能否在交互环境中主动收集信息、检验假设并适应隐藏机制。以文本/三维Feature World和更复杂的Alchemy实验，分析模型、先验说明及周期总结对探索质量、跨试次学习和机制突变后适应的作用。
+
+### 核心贡献
+
+区分探索动作是否提供足够信息与模型是否正确利用信息；从简单特征发现扩展到跨试次隐藏动力学学习，并测试不预告的规则改变。包含模型从视频读取状态、提出行动指令、由人类执行的三维概念验证。
+
+### 实现边界
+
+无需微调的模型能力研究，非新训练算法。三维试验用Gemini 1.5 Pro，由人类执行移动/放置指令；这一设置已经覆盖‘新证据需要请求人类行动’的基本形态。每个三维条件15个episode，任务结构简单，未优化人类注意力、行动可接受性或XR空间提示。
+
+### Method／方法
+
+Feature World中寻找产生奖励的颜色/形状属性或属性组合，比较模型探索与随机及理想策略；将Gemini扩展到三维视频输入和人类执行。TextAlchemy比较GPT-4o、o4-mini、Claude 3.7与Gemini 2.5 Pro，控制是否给结构先验、是否每轮自总结，并在后续试次静默更换环境机制。
+
+### Results／主要结果
+
+三维Gemini行动条件的15个episode有8个出现视觉错误；保留这些错误时，奖励属性识别相对随机行动者的提升不显著（p=0.13），去除视觉错误后才显示优势。Alchemy在无先验且不总结时，没有模型显示显著的跨试次提升；增加总结后，除o4-mini外模型在无先验设置也能改善。机制改变后，Gemini 2.5 Pro和Claude 3.7在相应增强条件下能恢复表现，GPT-4o/o4-mini适应较弱。
+
+### Shortcomings／局限与可能不足
+
+【解读】固定合成环境族及Alchemy每条件10次随机重复限制统计与开放世界结论；人类承担底层动作控制，掩盖真实部署的行动落地问题。论文没有处理取证与用户当前任务的注意力冲突、请求被拒绝、提示污染观察及人机私有信息差异。作者关于能力上限的推测不应当作无内在障碍的证明。
+
+### 证据定位
+
+PDF pp.5–7：Feature World与三维人类执行，p.7 Figure 3及视觉错误；pp.8–11：Alchemy、总结/先验和机制突变；p.12：局限。
+
+### Abstract
+
+Foundation models excel at single-turn reasoning, but many real-world challenges, from scientific research to technology development, require multi-turn exploration in dynamic interactive environments. Crucial components of learning from experience in these settings, such as efficiently gathering information to test hypotheses, meta-learning a model of the world’s dynamics, and adapting to unexpected changes, remain largely unexplored for these models. We first evaluate foundation models in Feature World, a setting that primarily tests information gathering about a static hidden reward function. In this initial setting, we show that state-of-the-art foundation models come close to optimal efficiency in selecting maximally informative actions in tasks with simple reward functions. As a proof of concept, we also show a model can gather information efficiently in a 3D embodied version of this task, though errors in vision limit some aspects of performance. In order to test exploration across multiple dependent turns and trials, we implement a custom, text-based version of the Alchemy environment, a benchmark designed for meta-learning. Here, agents must deduce a latent causal structure by integrating information across multiple state-dependent trials. In this more complex setting, we find that recent foundation models struggle to meta-learn strategies that enable improved performance over time. However, prompting the models to summarize their observations at regular intervals enables an emergent meta-learning process, allowing them to improve across trials. Notably, in some models, summarization also enabled adaptive re-learning of this information when the environment’s rules change unexpectedly. While most models performed reasonably well on simple Feature World tasks, evaluations in Alchemy reveal stark differences in robustness among the models, with Gemini 2.5 performing best, followed by Claude 3.7, and ChatGPT-4o and o4-mini struggling the most. These results underscore Alchemy’s value as a benchmark for meta-learning and strategy adaptation in foundation models. By moving beyond simple discovery to complex, stateful environments, we demonstrate that the most significant challenge for foundation agents is not selecting informative actions in the moment, but rather seeking and integrating knowledge through adaptive strategies over time. Intriguingly, we find there is likely no intrinsic barrier to future generations of foundation agents more fully mastering these abilities.
+
+<a id="p158"></a>
+## P158 · RULER-Bench: Probing Rule-based Reasoning Abilities of Next-level Video Generation Models for Vision Foundation Intelligence
+
+- **作者**：Xuming He; Zehao Fan; Hengjia Li; Fan Zhuo; Hankun Xu; Senlin Cheng; Di Weng; Haifeng Liu; Can Ye; Boxi Wu（前三位共同贡献）
+- **时间**：本地arXiv:2512.02622v1，2025-12-02。
+- **发表平台／版本状态**：arXiv预印本；项目页亦采用预印本引用，尚未核实正式会议录用。
+- **论文链接**：[论文/发表记录 1](https://arxiv.org/abs/2512.02622v1)
+- **项目／代码／数据**：[资源 1](https://hexmseeu.github.io/RULER-Bench-proj/)
+
+- **主题**：世界机制与演化
+- **PDF版本**：30页；SHA-256：`fab16d768eec43e7f891e6e6993e0bd77ca4f4fdffd675d5e978c408dcd9e90b`
+
+### 中文摘要
+
+为视频生成模型建立规则推理基准，要求生成的过程在科学、视觉、假设、游戏、语义与人文任务中体现隐含规则。通过人工核验的规则解释和逐项问题，将指令遵循、视觉一致性、视觉保真度与规则连贯性分开评价。
+
+### 核心贡献
+
+提供622个样本、40种任务、6个大类和约6,500条核查问题，分别测试文本到视频及图像到视频模型；揭示视觉质量较高仍可能缺少正确规则后果的现象。
+
+### 实现边界
+
+评价短视频生成是否符合给定场景/隐含规则，包含假设性世界条件，但没有交互式创作者规则编辑或同一规则下多条演化的覆盖实验。o3按good/medium/bad映射100/50/0做问题级评分，RC是归一化评分，不是整段视频严格满足规则的比例。
+
+### Method／方法
+
+人工与GPT-5构造任务、隐含解释和核查表并复核；评测10个视频模型（6闭源、4开源），由o3逐项评分。另比较加入规则/预期结果解释的增强提示，并以80个视频、813个问题的人类标注核对自动评审。
+
+### Results／主要结果
+
+Table 2中Veo 3.1的RC为48.87、IF 68.70、VC 76.68、VF 86.72；Sora 2的RC为41.23，体现画面质量与规则得分的差距。游戏类Sora 2为19.97、Veo 3.1为17.70；正文‘全部低于15’与表格不一致，本条依表格记录。o3与人工判断一致率85.12%，Spearman 0.8011。增强提示下Veo假设类RC由46.79到58.12；该提示包含额外规则/结果信息。
+
+### Shortcomings／局限与可能不足
+
+【解读】自动评审仍会误判，逐条平均分不能证明长时间轨迹的逻辑有效性；感知与渲染质量可能混入推理指标。提供预期后果的提示不能单独证明模型本身学会了推导。另Table 4科学类50.97→62.62的实际增量为11.65，表内印成+9.65；记录数据时需复算。
+
+### 证据定位
+
+PDF p.3：分类；p.5：指标与问题构建；p.6 Tables 2–3：主结果；p.7 Table 4：提示实验；p.8：人工一致性研究。
+
+### Abstract
+
+Recent advances in video generation have enabled the synthesis of videos with strong temporal consistency and impressive visual quality, marking a crucial step toward vision foundation models. To evaluate these video generation models, existing benchmarks primarily focus on factors related to visual perception and understanding, like visual aesthetics, instruction adherence, and temporal coherence. However, the rule-based reasoning capabilities of video generation models remain largely unexplored. Although recent studies have carried out preliminary explorations into whether video models can serve as zero-shot learners, they still lack a fine-grained decomposition of reasoning capabilities and a comprehensive evaluation protocol. To address this gap, we introduce RULER-Bench, a benchmark designed to evaluate the reasoning ability of video generation models from the perspective of cognitive rules. Built upon two fundamental paradigms: text-to-video and image-to-video, RULER-Bench covers 40 representative tasks spanning six rule categories with 622 high-quality annotated instances. For the evaluation of each generated video, we construct a checklist covering four metrics and leverage GPT-o3 to assign scores to each question, achieving 85% alignment with human judgements. Extensive experiments show that the state-of-the-art model achieves only 48.87% on the rule coherence metric, highlighting significant room for improvement in the reasoning capability of next-level video models. We expect that the insight obtained from RULER-Bench will facilitate further development of reasoning-aware video generation, advancing video generation models toward vision foundation intelligence.
+
+<a id="p159"></a>
+## P159 · GPS: Graph-guided Proactive Information Seeking in Large Language Models
+
+- **作者**：Ruiqing Li; Yifeng Xu; Xinke Jiang; Zhibang Yang; Xinyu Ma; Yue Fang; Junfeng Zhao; Yasha Wang; Xu Chu
+- **时间**：2026；本地标注Published as a conference paper at ICLR 2026，未检出独立的精确版本日期。
+- **发表平台／版本状态**：International Conference on Learning Representations（ICLR 2026），正式论文集已核实。
+- **论文链接**：[论文/发表记录 1](https://proceedings.iclr.cc/paper_files/paper/2026/hash/1f49b7fbd7c7afc52c1db0d4ed1a338d-Abstract-Conference.html)
+- **项目／代码／数据**：[资源 1](https://github.com/lrq111/GPS)
+
+- **主题**：XR与人机协作、创作与规则补全、AI方法与评测
+- **PDF版本**：25页；SHA-256：`59c114d720cc8d31d8c53fede1b4298921279d14a9bc5a59d93dfdd3b0f4c314`
+
+### 中文摘要
+
+面向检索增强问答中缺少用户条件的问题，将文档中的条件规则组织为有向无环图，沿图主动澄清缺失变量，并根据回答裁剪无关分支。通过条件路径合成训练数据和面向澄清结果的强化学习，同时改善回答正确性和提问效率。
+
+### 核心贡献
+
+把条件逻辑表示、主动澄清与训练目标结合：DAG为提问提供结构，动态遍历降低冗余，混合奖励共同考虑最终正确性、交互轮数和图质量。
+
+### 实现边界
+
+理论的逻辑完备性针对有限取值函数可被DAG表示，不保证LLM会从真实文档正确抽取全部规则。实验的用户模拟器回答已有条件事实；没有通过物理行动创造新证据。世界规则已给定，未知的是用户条件，并非从观察发现未知环境机制。
+
+### Method／方法
+
+Reasoner输出条件变量、值分支与答案叶节点；Clarifier按可达路径代价选择问题，收到回答后剪枝。用ConditionalQA中的欠明确样本及DeepSeek-R1合成条件路径，筛选完整输入可答而缺失输入不可答的数据。GRPO训练Reasoner，结合正确性、轮数惩罚与结构质量奖励；在Qwen2.5-7B和Llama3-8B骨干上验证。
+
+### Results／主要结果
+
+Table 1中Qwen-GPS在Synthetic/ConditionalQA/ShARC的成功率为60.2/73.4/79.3%，WCT为4.59/2.91/2.41；对应Clarify-DPO成功率59.2/72.0/78.5%，WCT 4.67/3.52/2.93。WCT把失败样本按最大10轮计罚，不等于原始平均提问次数；另列F1衡量是否需要澄清，不是答案F1。Llama-GPS在ShARC为75.8%，低于Clarify-DPO的82.7%，并非所有设置均最佳。Qwen在ConditionalQA移除RL后成功率73.4→67.7%。
+
+### Shortcomings／局限与可能不足
+
+【解读】有限离散条件、相对固定规则库及模拟用户限制复杂开放场景；图抽取错误可系统性排除正确路径。LLM判分和模拟用户偏差仍在；轮数成本没有表达用户动作风险、注意力中断及不同取证行动对后续观察的影响。
+
+### 证据定位
+
+PDF pp.3–7：DAG、算法、数据合成与奖励；p.8：SR/WCT/澄清需要F1定义；pp.9–10 Tables 1–2：主结果和消融；附录A/B：理论。
+
+### Abstract
+
+Equipping Large Language Models (LLMs) with the ability to proactively ask clarifying questions is essential to mitigate ambiguity when faced with underspecified user queries in retrieval-augmented generation (RAG) systems. However, existing methods often neglect the rule-based reasoning structures embedded in the retrieved knowledge that are central to ambiguity, making it challenging to learn an effective and efficient question-asking strategy. To address these issues, we introduce GPS, a two-stage framework for enhancing proactive information seeking abilities of LLMs in RAG systems. In the reasoning stage, we propose a Directed Acyclic Graph (DAG) reasoning structure with theoretical guarantees of logical completeness, which facilitates capturing all conditional logic in the retrieved knowledge and supports effective clarification. In the clarification stage, we design a traversal-based algorithm that dynamically prunes the DAG based on user responses, enabling efficient clarification. To further enhance DAG construction, we first propose a conditional paths guided data synthesis method to address data scarcity challenge, then we apply a clarification-oriented reinforcement learning method with a hybrid reward that jointly considers effectiveness and efficiency to optimize the LLM. Experiments on three benchmarks demonstrate that GPS outperforms baseline methods in both success rate and clarification efficiency.
+
+<a id="p160"></a>
+## P160 · Fictional Worldbuilding: Multi-Agent LLM Collaboration with Hierarchical Context Compression and Iterative Review
+
+- **作者**：Jingbo Chen; He Wang; Wei Yuan; Yuqiao Lai; Zhenyan Lu
+- **时间**：本地arXiv:2607.09403v1，2026-07-10。首页所写August 2026为未核实模板信息，不采用为正式发表日期。
+- **发表平台／版本状态**：arXiv预印本。PDF含JAIR期刊模板及占位DOI 10.1613/jair.1.xxxxx；未查到足以确认JAIR正式发表的记录，不能按已发表JAIR论文引用。
+- **论文链接**：[论文/发表记录 1](https://arxiv.org/abs/2607.09403v1)
+- **项目／代码／数据**：本地PDF及本次核查未检出明确属于本文的项目/代码入口；不代表作者没有发布资源。
+
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：36页；SHA-256：`e116379992778595245b5564198d216a171c7b88850d71d691789788ed2f450b`
+
+### 中文摘要
+
+AutoWorldBuilder从一两句世界设定生成地理、社会、资源与文化等概念。系统以多智能体分工、任务依赖调度、分层上下文预算和迭代审核控制规模与内部一致性；在20个设定任务、两种LLM后端上报告运行及内部评审结果。
+
+### 核心贡献
+
+整合概念存储、DAG与语义分组调度、FAISS检索和四层上下文、专门Auditor与可配置角色。是架空世界概念扩展系统的直接前作，但其提出的数据结构与实际启用功能必须区分。
+
+### 实现边界
+
+作者在§6.4明确：16种概念关系只完成定义，关系解析模块未实现，实验关系类型覆盖率为0%；不能称已验证完整知识图谱推理。输出是概念设定集合，未实现可执行世界演化、因果干预或规则修改后的依赖更新；接受/拒绝设定等实时人机协作列为未来工作。质量来自系统内部LLM评审，无独立外部正确性基准。
+
+### Method／方法
+
+将输入拆成有依赖的任务，拓扑排序后按语义与批大小分组；从已完成批次检索相关概念，按Essential/Relevant/Summary/Collaboration四层分配上下文。21种专门角色按技能配置加载，8种Auditor参与评分、修订和筛选；主要测试中文输入。20个案例覆盖5类世界，每种后端各运行20次，共40次。
+
+### Results／主要结果
+
+Table 8中GPT-OSS 120B和DeepSeek v3.2均19/20次完成（95%）；成功世界平均56.2/103.4个概念，平均18/31分钟，内部最终通过率85.5/99.2%。作者称初轮42%经审核到85%以上，但Table 14中DeepSeek平均评分从8.40降至8.21。所谓89.9/90.7%压缩对应平均304.3/278.4 token相对3,000-token预算的未用比例，不能当作相对未压缩完整上下文的受控节省率。Auditor全部通过只说明未检出问题，不代表零冲突。
+
+### Shortcomings／局限与可能不足
+
+【作者】关系解析未启用、Auditor零检出值得怀疑、缺外部标准化评估、任务分解会产生环或解析错误、主要支持中文。§5.4明确模块分析是理论预期而非受控消融，因此+10–15百分点审核收益及50–70%时间缩减等预测不能记为实验测得。表2预算比例与各层token数亦不一致。【解读】两后端批大小下限略有不同，且内部判分、少量任务、无创作者研究限制关于一致性和效率的强结论。
+
+### 证据定位
+
+PDF pp.12–20：概念/调度/压缩/审核；pp.21–25 Tables 6–14：20×2实验及压缩分母；pp.27–28 §5.4：非受控消融声明；p.30 §6.4：关系模块未实现及质量评估局限；p.31：人机协作列为未来工作。
+
+### Abstract
+
+Worldbuilding, the construction of coherent fictional worlds, is a foundational task in game design and literary creation. Large Language Models (LLMs) offer new possibilities for automated content generation, but their application to worldbuilding faces three challenges: context explosion that grows linearly with the building process, the tension between creative diversity and content consistency, and the absence of automated quality assurance. This paper presents AutoWorldBuilder, a multi-agent collaborative system that addresses these challenges through five integrated components: a structured concept network with conflict detection; a DAG-based hybrid batch scheduler that groups tasks by semantic locality; a four-layer context compression mechanism achieving approximately 90% token reduction; an iterative review system with specialized Auditor agents that improves proposal pass rates from 42% to over 85%; and a skill-driven agent architecture supporting zero-code extension with differentiated temperature configuration. Two experiments across 20 diverse worldbuilding tasks, using GPT-OSS 120B and DeepSeek v3.2 as LLM backends, demonstrate a 95.0% success rate. The system generated 56–103 self-consistent concepts per world in 18–31 minutes, with no conflicts detected by the review pipeline. The architectural patterns validated here, including layer-as-budget compression, semantic-locality scheduling, and separation of generation and review, may transfer to the broader class of knowledge-intensive, multi-agent LLM applications.
+
+<a id="p003"></a>
+历史别名：[P002](#p002)
+
+<a id="p082"></a>
+历史别名：[P081](#p081)
+
+<a id="p109"></a>
+历史别名：[P103](#p103)

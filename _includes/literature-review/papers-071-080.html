@@ -1,0 +1,935 @@
+<details
+  class="lr-paper"
+  id="p080"
+  data-id="P080"
+  data-years="2025"
+  data-year="2025"
+  data-topics="creation world xr"
+  data-new="false"
+  data-title="Vis-CoT: A Human-in-the-Loop Framework for Interactive Visualization and Intervention in LLM Chain-of-Thought Reasoning"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P080 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title"
+      >Vis-CoT: A Human-in-the-Loop Framework for Interactive Visualization and Intervention in LLM Chain-of-Thought Reasoning</span
+    >
+    <span class="lr-authors">Kaviraj Pather; Elena Hadjigeorgiou; Arben Krasniqi et al.</span>
+    <span class="lr-snippet">将线性CoT转换成交互图，由用户标记、剪除错误分支并补充前提，再继续生成，报告人机协作正确率和体验提升。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">创作与规则补全</span><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p080" aria-label="P080的固定链接">#P080</a><span>10页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Kaviraj Pather; Elena Hadjigeorgiou; Arben Krasniqi; Claire Schmit; Irina Rusu; Marc Pons; Kabir Khan</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-12-29（arXiv:2509.01412v2）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>arXiv:2509.01412v2（本地预印本）</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2509.01412v2">arXiv本地版本 2509.01412v2</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>将线性CoT转换成交互图，由用户标记、剪除错误分支并补充前提，再继续生成，报告人机协作正确率和体验提升。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>Vis-CoT图结构、pruning/grafting干预流程与用户研究。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>结果包含用户新增知识和纠错，不是Llama2-70B独立解题能力；图是CoT的结构化展示，不保证忠实反映内部推理。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>Llama2-70B-Chat、React/D3界面与FastAPI，24名相关专业参与者；GSM8K/StrategyQA及100项自建规划任务，人工评价部分任务的答案与有效推理链。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>作者报告CoT→Vis-CoT：GSM8K74.8→91.7%，StrategyQA79.5→94.1%，规划68→92%；平均时间410.5→285.2秒，2.1次干预/题；SUS65.5→88.2。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>
+        【解读】正文对全测试集评测与24人用户实验的样本分配、统计不确定性及复现材料交代有限，数值应作作者报告；参与者有专业背景，需独立复现及更广泛人群验证。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF pp.6–8，算法1、实验设置、表I–III。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Large Language Models (LLMs) have demonstrated remarkable reasoning capabilities through Chain-of-Thought (CoT) prompting. However, the
+          underlying reasoning process remains an opaque ”black box,” making it difficult to verify, debug, or control, which limits trust and
+          reliability in highstakes applications. To address this critical gap, we introduce Vis-CoT, a novel human-in-the-loop framework that
+          transforms the linear CoT text into a structured, interactive reasoning graph. Our system allows users to visualize the logical flow of the
+          model’s reasoning, identify flawed steps, and directly intervene by pruning incorrect paths and grafting new, user-defined premises. This
+          transforms the interaction from a passive observation to an active collaboration, enabling users to steer the model toward more accurate and
+          trustworthy conclusions. Through comprehensive experiments on diverse reasoning benchmarks, including GSM8K and StrategyQA, we demonstrate
+          that Vis- CoT significantly improves final answer accuracy by up to 24 percentage points over non-interactive baselines. Furthermore, our
+          user study reveals a substantial increase in perceived usability and user trust, underscoring the value of transparency and control. Our
+          work presents a promising paradigm for creating more reliable, understandable, and collaborative reasoning systems by synergizing the
+          computational power of LLMs with human critical oversight.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>7ac33fd5fafb7173409dd79467e23080aeebc87bb5f9a9874e66c02df4d9ec78</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p079"
+  data-id="P079"
+  data-years="2025"
+  data-year="2025"
+  data-topics="xr"
+  data-new="false"
+  data-title="Thinking in 360°: Humanoid Visual Search in the Wild"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P079 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Thinking in 360°: Humanoid Visual Search in the Wild</span>
+    <span class="lr-authors">Heyang Yu; Yinan Han; Xiangyu Zhang et al.</span>
+    <span class="lr-snippet">在360°全景中通过头部转动主动寻找目标物体或路径，构建公共复杂环境H*Bench并训练视觉搜索代理。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">XR与人机协作</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p079" aria-label="P079的固定链接">#P079</a><span>23页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd>
+        <p>
+          Heyang Yu; Yinan Han; Xiangyu Zhang; Baiqiao Yin; Bowen Chang; Xiangyu Han; Xinhao Liu; Jing Zhang; Marco Pavone; Chen Feng; Saining Xie;
+          Yiming Li
+        </p>
+      </dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-11-26（arXiv:2511.20351v2）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>arXiv:2511.20351v2（本地版本）</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2511.20351v2">arXiv本地版本 2511.20351v2</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://humanoid-vstar.github.io">项目/演示页面</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>在360°全景中通过头部转动主动寻找目标物体或路径，构建公共复杂环境H*Bench并训练视觉搜索代理。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>对象搜索HOS/路径搜索HPS任务、全景感知—动作闭环与SFT+RL训练。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>环境由单张全景表示，主要动作是头部视角旋转/对准；没有真实行走、避障、动态环境或完整机器人部署验证。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>从全景渲染当前视角，根据图像/历史选择头部动作；Qwen2.5-VL-3B全参数SFT后RL优化搜索成功。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>对象搜索14.83%→47.38%，路径6.44%→24.94%；Gemini2.5Pro基线HOS31.96%、HPS33.00%，故训练模型并非在路径上超过最佳闭源模型。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者/解读】物理/社会空间常识和视觉—动作转化困难；静态全景不含真实移动、视差和传感误差，路径任务仍远未解决。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §3–4、表1与训练结果、图5。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Humans rely on the synergistic control of head (cephalomotor) and eye (oculomotor) to efficiently search for visual information in 360°.
+          However, prior approaches to visual search are limited to a static image, neglecting the physical embodiment and its interaction with the 3D
+          world. How can we develop embodied visual search agents as efficient as humans while bypassing the constraints imposed by realworld
+          hardware? To this end, we proposehumanoid visual searchwhere a humanoid agent actively rotates its head to search forobjectsorpathsin an
+          immersive world represented by a 360° panoramic image. To study visual search in visually-crowded real-world scenarios, we build H∗Bench, a
+          new benchmark that moves beyond household scenes to challenging in-the-wild scenes that necessitate advanced visual-spatial reasoning
+          capabilities, such as transportation hubs, large-scale retail spaces, urban streets, and public institutions. Our experiments first reveal
+          that even top-tier proprietary models falter, achieving only∼30% success in object and path search. We then use post-training techniques to
+          enhance the open-source Qwen2.5-VL, increasing its success rate by overthreefoldfor both object search (14.83%→47.38%) and path search
+          (6.44%→ 24.94%). Notably, the lower ceiling of path search reveals its inherent difficulty, which we attribute to the demand for
+          sophisticated spatial commonsense. Our results not only show a promising path forward but also quantify the immense challenge that remains
+          in building MLLM agents that can be seamlessly integrated into everyday human life.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>864de2cd0e517e00859e476929d6b7381cda259798222181b6e00f4b44c92e02</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p078"
+  data-id="P078"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world xr"
+  data-new="false"
+  data-title="Seeing but Not Believing: Probing the Disconnect Between Visual Attention and Answer Correctness in VLMs"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P078 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Seeing but Not Believing: Probing the Disconnect Between Visual Attention and Answer Correctness in VLMs</span>
+    <span class="lr-authors">Zhining Liu; Ziyi Chen; Hui Liu et al.</span>
+    <span class="lr-snippet">分析视觉注意力与答对之间的分离，发现模型错误回答时也可能关注正确证据，提出测试时视觉证据增强VEA。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p078" aria-label="P078的固定链接">#P078</a><span>21页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd>
+        <p>
+          Zhining Liu; Ziyi Chen; Hui Liu; Chen Luo; Xianfeng Tang; Suhang Wang; Joy Zeng; Zhenwei Dai; Zhan Shi; Tianxin Wei; Benoit Dumoulin;
+          Hanghang Tong
+        </p>
+      </dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-10-20（arXiv:2510.17771v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>Preprint, Under Review；arXiv:2510.17771v1</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2510.17771v1">arXiv本地版本 2510.17771v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>分析视觉注意力与答对之间的分离，发现模型错误回答时也可能关注正确证据，提出测试时视觉证据增强VEA。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>层间注意力诊断与按深层注意力选择/突出证据区域的无需训练干预。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>“看到”用注意力定位代理衡量，不等于模型完整理解或证据对答案有因果作用；需要开放权重/注意力访问。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>定位视觉grounding层，提取证据分数，选择性遮罩/突出图像区域后重推理；跨4个系列8个VLM比较。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>表1平均Exact Match+5.67个百分点（最高11.1），Token F1+6.83（最高17.3）；跨LLaVA、Qwen、Gemma、InternVL收益较一致，小模型收益更大。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】关注区域也可能错误，遮罩会丢失上下文；额外推理成本及架构依赖，本文定位为诊断与干预研究而非部署完备系统。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §3–4、表1–2、§6。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Vision-Language Models (VLMs) achieve strong results on multimodal tasks such as visual question answering, yet they can still fail even
+          when the correct visual evidence is present. In this work, we systematically investigate whether these failures arise from notperceivingthe
+          evidence or from notleveragingit effectively. By examining layer-wise attention dynamics, we find that shallow layers focus primarily on
+          text, while deeper layers sparsely but reliably attend to localized evidence regions. Surprisingly, VLMs often perceive the visual evidence
+          when outputting incorrect answers, a phenomenon we term“seeing but not believing” that widely exists in major VLM families. Building on
+          this, we introduce an inference-time intervention that highlights deep-layer evidence regions through selective attention-based masking. It
+          requires no training and consistently improves accuracy across multiple families, including LLaV A, Qwen, Gemma, and InternVL. These results
+          show that VLMs encode reliable evidence internally but underutilize it, making such signals explicit can bridge the gap between perception
+          and reasoning, advancing the diagnostic understanding and reliability of VLMs.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>b8bec5569aa162e20a84ec3ff8ad4d9f9b33d37157fed6b7feadd35bd121ea22</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p077"
+  data-id="P077"
+  data-years="2026"
+  data-year="2026"
+  data-topics="world ai"
+  data-new="false"
+  data-title="Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P077 <span aria-hidden="true">/</span> 2026</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens</span>
+    <span class="lr-authors">Chengshuai Zhao; Zhen Tan; Pingchuan Ma et al.</span>
+    <span class="lr-snippet">以可控合成环境研究CoT在训练与测试分布的任务、长度和格式差异下何时失败，解释推理链与最终答案可能不一致。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">AI方法与评测</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p077" aria-label="P077的固定链接">#P077</a><span>38页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Chengshuai Zhao; Zhen Tan; Pingchuan Ma; Dawei Li; Bohan Jiang; Yancheng Wang; Yingzhen Yang; Huan Liu</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2026-05-08（arXiv:2508.01191v6）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>arXiv:2508.01191v6（本地版本）</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2508.01191v6">arXiv本地版本 2508.01191v6</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/ChengshuaiZhao0/DataAlchemy">代码：ChengshuaiZhao0/DataAlchemy</a>
+        </p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>以可控合成环境研究CoT在训练与测试分布的任务、长度和格式差异下何时失败，解释推理链与最终答案可能不一致。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>DataAlchemy精确控制分布偏移，分离推理过程、答案与完整链正确性，检验由训练分布形成的归纳偏置。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>合成符号转化任务中的受控证据，不是证明所有自然语言推理仅为记忆；大模型训练语料不透明。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>控制训练变换组合、链长度和表达格式，训练/微调多架构规模模型并对比ID、组合迁移和OOD；分别评估链与答案exact match。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>指定变换实验中完整链ID100%，CMP0.01%、POOD/OOD0%；可出现推理100%但答案0.01%，或推理0%但答案100%的分离。数值只适用于该受控任务。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】合成环境无法覆盖自然语言丰富性，真实预训练分布难度量；【解读】特定分布外失败支持脆弱性，不能直接推出不存在任何系统泛化能力。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §3–8、表1–2 p.7、Limitations p.11。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Chain-of-Thought (CoT) prompting has been shown to be effective in eliciting structured reasoning (i.e., CoT reasoning) from large language
+          models (LLMs). Regardless of its popularity, recent studies expose its failures in some reasoning tasks, raising fundamental questions about
+          the nature of CoT reasoning. In this work, we propose a data distribution lens to understand when and why CoT reasoning succeeds or fails.
+          We hypothesize that CoT reasoning reflects a structured inductive bias learned from in-distribution data, enabling models to conditionally
+          generate reasoning trajectories that approximate those observed during training. As such, the effectiveness of CoT reasoning is
+          fundamentally governed by the nature and degree of distribution discrepancy between training data and test queries. Guided by this lens, we
+          dissect CoT reasoning via three dimensions:task,length, andformat. To test the hypothesis, we introduceDataAlchemy, an abstract and fully
+          controllable environment that trains LLMs from scratch and systematically probes them under various distribution conditions. Through
+          rigorous controlled experiments, we reveal that CoT reasoning is a brittle mirage when it is pushed beyond training distributions,
+          emphasizing the ongoing challenge of achieving genuine and generalizable reasoning. Our code is available at GitHub:
+          https://github.com/ChengshuaiZhao0/DataAlchemy.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>a039bae82027a21ab7d38f00228c4d1e549f5b543ad1ad172b9b6c656cf05c6f</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p076"
+  data-id="P076"
+  data-years="2025"
+  data-year="2025"
+  data-topics="creation xr"
+  data-new="false"
+  data-title="Interactive Reasoning: Visualizing and Controlling Chain-of-Thought Reasoning in Large Language Models"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P076 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Interactive Reasoning: Visualizing and Controlling Chain-of-Thought Reasoning in Large Language Models</span>
+    <span class="lr-authors">Rock Yuren Pang; K. J. Kevin Feng; Shangbin Feng et al.</span>
+    <span class="lr-snippet">Hippo将长推理文本组织成可交互的主题树，允许用户删除、添加、修改假设并重新生成，支持有权衡的日常决策。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">创作与规则补全</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p076" aria-label="P076的固定链接">#P076</a><span>15页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Rock Yuren Pang; K. J. Kevin Feng; Shangbin Feng; Chu Li; Weijia Shi; Yulia Tsvetkov; Jeffrey Heer; Katharina Reinecke</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-06-30（arXiv:2506.23678v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>arXiv:2506.23678v1，2025-06-30（本地版本）</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2506.23678v1">arXiv本地版本 2506.23678v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>Hippo将长推理文本组织成可交互的主题树，允许用户删除、添加、修改假设并重新生成，支持有权衡的日常决策。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>提出Interactive Reasoning界面与原型，展示在输出最终答案前介入推理内容的人机协作。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>可视化的是生成的CoT及其整理结果，不是模型真实内部计算图；作者明确没有声称反馈使推理或答案更准确/更个性化。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>DeepSeek-R1生成推理，GPT-4o负责整理树、澄清和连接节点；反馈节点/直接编辑后续写；16人被试内比较。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>感知控制评分Hippo5.75对基线4.19，p=.003；用户报告更易理解结构和察觉假设，观察到更有针对性的反馈；没有客观准确率提升结论。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】N=16且较熟悉LLM，两项日常两难任务；没有系统验证反馈后的模型行为或CoT忠实性，知识密集任务需外部证据。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §4.3、§5.3、§8 p.11。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          The output quality of large language models (LLMs) can be improved via “reasoning”: generating segments of chain-of-thought (CoT) content to
+          further condition the model prior to producing user-facing output. While these chains contain valuable information, they are verbose and
+          lack explicit organization, making them tedious to review. Moreover, they lack opportunities for user feedback, such as to remove unwanted
+          considerations, add desired ones, or clarify unclear assumptions. We introduce Interactive Reasoning, an interaction design that visualizes
+          chain-of-thought outputs as a hierarchy of topics and enables user review and modification. We implement interactive reasoning in Hippo, a
+          prototype for AIassisted decision making in the face of uncertain trade-offs. In a user study with 16 participants, we find that interactive
+          reasoning in Hippo allows users to quickly identify and interrupt erroneous generations, efficiently steer the model towards customized
+          responses, and better understand both model reasoning and model outputs. Our work contributes to a new paradigm that incorporates user
+          oversight into LLM reasoning processes.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>f659a7c8bfc4836d0491888233347daea905380b2a73283dc5f7305cfd0ce316</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p075"
+  data-id="P075"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world xr"
+  data-new="false"
+  data-title="Chain-of-Evidence Multimodal Reasoning for Few-shot Temporal Action Localization"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P075 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Chain-of-Evidence Multimodal Reasoning for Few-shot Temporal Action Localization</span>
+    <span class="lr-authors">Mengshi Qi; Hongwei Ji; Wulian Yun et al.</span>
+    <span class="lr-snippet">将视频与由VLM/LLM生成的Chain-of-Evidence文本结合，在少样本条件下定位未见动作类别的时间范围。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p075" aria-label="P075的固定链接">#P075</a><span>22页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Mengshi Qi; Hongwei Ji; Wulian Yun; Xianlin Zhang; Huadong Ma</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-12-25（arXiv:2504.13460v5）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>IEEE Transactions on Image Processing（PDF页眉）；arXiv:2504.13460v5，具体卷期/正式出版日未在本地明确</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2504.13460v5">arXiv本地版本 2504.13460v5</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/MICLAB-BUPT/VAL-VLM">代码：MICLAB-BUPT/VAL-VLM</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>将视频与由VLM/LLM生成的Chain-of-Evidence文本结合，在少样本条件下定位未见动作类别的时间范围。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>层次文本—视觉对齐、逐阶段证据链生成和Human-related Anomaly Localization（HAL）数据集。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>few-shot针对新动作类别，基础VLM/LLM和特征器已有预训练；文本生成后有自动过滤、一致性校验、迭代及人工审核，不是无需人工的通用因果定位。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>从视频产生事件证据描述，逐层精化时间/动作关系；对齐query/support视觉及语义特征，联合建模动作共同性与差异。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        ActivityNet1.3单实例1-shot
+        mAP@0.5=71.5，多实例5-shot=58.7；在THUMOS14多实例设置改善，但单实例1-shot下降，作者归因于短且不完整动作片段妨碍完整CoE生成。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>
+        【作者/解读】依赖生成文本质量、验证成本和完整动作语境；HAL及少样本划分的提升不能直接外推到开放世界长视频；证据链提及因果关系并不构成因果识别。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §III–IV、表I/III、图6 pp.6–8。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Traditional temporal action localization (TAL) methods rely on large amounts of detailed annotated data, whereas few-shot TAL reduces this
+          dependence by using only a few training samples to identify unseen action categories. However, existing few-shot TAL methods typically focus
+          solely on video-level information, neglecting textual information, which can provide valuable semantic support for the action localization
+          task. To address these issues, in this work, we propose a new few-shot temporal action localization method by Chain-of-Evidence multimodal
+          reasoning to improve localization performance. Specifically, we design a novel few-shot learning framework to capture action commonalities
+          and variations, which includes a semantic-aware text-visual alignment module designed to align the query and support videos at different
+          levels. Meanwhile, to better express the temporal dependencies and causal relationships between actions at the textual level, we design a
+          Chain-of-Evidence (CoE) reasoning method that progressively guides the Vision Language Model (VLM) and Large Language Model (LLM) to
+          generate CoE text descriptions for videos. The generated texts can capture more variance of action than visual features. We conduct
+          extensive experiments on the publicly available ActivityNet1.3, THUMOS14 and our newly collected Human-related Anomaly Localization Dataset
+          . The experimental results demonstrate that our proposed method significantly outperforms existing methods in single-instance and
+          multi-instance scenarios. Our source code and data are available at https://github.com/MICLAB-BUPT/V AL-VLM.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>b7cc35891863b534350013194741c2b2bdb2484992030b98ef52a200fee69b5c</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p074"
+  data-id="P074"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world"
+  data-new="false"
+  data-title="Beyond Single-Sentence Prompts: Upgrading Value Alignment Benchmarks with Dialogues and Stories"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P074 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Beyond Single-Sentence Prompts: Upgrading Value Alignment Benchmarks with Dialogues and Stories</span>
+    <span class="lr-authors">Yazhou Zhang; Qimeng Liu; Qiuchi Li et al.</span>
+    <span class="lr-snippet">把单句中文价值观评测改写成多轮对话与伦理故事，检验更复杂上下文中的价值对齐与责任判断。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p074" aria-label="P074的固定链接">#P074</a><span>24页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Yazhou Zhang; Qimeng Liu; Qiuchi Li; Peng Zhang; Jing Qin</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-03-28（arXiv:2503.22115v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          Preprint, Under review；arXiv:2503.22115，2025-03-28。
+          <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2503.22115">arXiv记录</a>
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2503.22115v1">arXiv本地版本 2503.22115v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>把单句中文价值观评测改写成多轮对话与伦理故事，检验更复杂上下文中的价值对齐与责任判断。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>基于CVALUES构建C-Plus Values/CVALUES PLUS数据及分层评估框架，暴露单轮直接问题不易发现的失误。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>中文语境和定义的伦理评分；分数并非客观普世道德质量，也不等于已改善模型安全性。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>自动/人工清洗原始问题，生成对话陷阱与故事，组合人工和自动评分，比较不同模型在对话/叙事场景的表现。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>本地报告Claude3.5对话得分83.7、故事65.3；许多模型在故事任务下降，但各模型并非一致，Llama3.1-405B对话49.4、故事55.2。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】文化和场景覆盖有限，评分主观，复杂伦理标准难统一；【解读】合成改写及自动评判可能引入系统偏差。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §2–5，§5.2–3 p.13、Limitations p.15。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Evaluating the value alignment of large language models (LLMs) has traditionally relied on single-sentence adversarial prompts, which
+          directly probe models with ethically sensitive or controversial questions. However, with the rapid advancements in AI safety techniques,
+          models have become increasingly adept at circumventing these straightforward tests, limiting their effectiveness in revealing underlying
+          biases and ethical stances. To address this limitation, we propose an upgraded value alignment benchmark that moves beyond single-sentence
+          prompts by incorporating multi-turn dialogues and narrative-based scenarios. This approach enhances the stealth and adversarial nature of
+          the evaluation, making it more robust against superficial safeguards implemented in modern LLMs. We design and implement a dataset that
+          includes conversational traps and ethically ambiguous storytelling, systematically assessing LLMs’ responses in more nuanced and
+          context-rich settings. Experimental results demonstrate that this enhanced methodology can effectively expose latent biases that remain
+          undetected in traditional single-shot evaluations. Our findings highlight the necessity of contextual and dynamic testing for value
+          alignment in LLMs, paving the way for more sophisticated and realistic assessments of AI ethics and safety.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>f87a1db46bf43589966d1bf5fd3334cc597bee27afaab611b70859c0073e3b08</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p073"
+  data-id="P073"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world ai"
+  data-new="false"
+  data-title="The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P073 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title"
+      >The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity</span
+    >
+    <span class="lr-authors">Parshin Shojaee; Iman Mirzadeh; Keivan Alizadeh et al.</span>
+    <span class="lr-snippet">在可调复杂度的谜题中比较推理模型与普通LLM，分析准确率与思考token随复杂度变化的规律。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">AI方法与评测</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p073" aria-label="P073的固定链接">#P073</a><span>30页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Parshin Shojaee; Iman Mirzadeh; Keivan Alizadeh; Maxwell Horton; Samy Bengio; Mehrdad Farajtabar</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          本地30页早期稿；2025-06发布，Apple官方项目页另标NeurIPS；后续版本不与本地结果混合。
+          <a target="_blank" rel="noopener noreferrer" href="https://machinelearning.apple.com/research/illusion-of-thinking">Apple研究页面</a>
+        </p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>在可调复杂度的谜题中比较推理模型与普通LLM，分析准确率与思考token随复杂度变化的规律。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>使用汉诺塔、棋子交换、过河及积木等可模拟验证任务，识别低、中、高复杂度的不同表现区间并检查推理轨迹。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>测量有限模型在给定提示、完整动作序列输出和预算下的谜题表现；不能据此证明模型完全没有推理能力，或所有未来架构存在同一不可逾越上限。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>调节任务规模、以模拟器验证逐步动作，每实例25次采样；匹配推理预算比较pass@k，分析解答出现位置及token使用。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        低复杂度普通模型常较有效，中复杂度推理模型占优，高复杂度二者可降至0；临界复杂度附近思考token反而下降，即使仍有预算；给出算法也未稳定解决精确执行。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>
+        【作者】谜题领域窄、主要黑箱API、确定性逐步验证难推广；【解读】输出长度、任务可解性/表示和执行协议均影响阈值，不能把经验失败解释为普遍理论结论。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §4、图4–8、§5及Limitations p.11。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Recent generations of frontier language models have introduced Large Reasoning Models (LRMs) that generate detailed thinking processes
+          before providing answers. While these models demonstrate improved performance on reasoning benchmarks, their fundamental capabilities,
+          scaling properties, and limitations remain insufficiently understood. Current evaluations primarily focus on established mathematical and
+          coding benchmarks, emphasizing final answer accuracy. However, this evaluation paradigm often suffers from data contamination and does not
+          provide insights into the reasoning traces’ structure and quality. In this work, we systematically investigate these gaps with the help of
+          controllable puzzle environments that allow precise manipulation of compositional complexity while maintaining consistent logical
+          structures. This setup enables the analysis of not only final answers but also the internal reasoning traces, offering insights into how
+          LRMs “think”. Through extensive experimentation across diverse puzzles, we show that frontier LRMs face a complete accuracy collapse beyond
+          certain complexities. Moreover, they exhibit a counterintuitive scaling limit: their reasoning effort increases with problem complexity up
+          to a point, then declines despite having an adequate token budget. By comparing LRMs with their standard LLM counterparts under equivalent
+          inference compute, we identify three performance regimes: (1) lowcomplexity tasks where standard models surprisingly outperform LRMs, (2)
+          medium-complexity tasks where additional thinking in LRMs demonstrates advantage, and (3) high-complexity tasks where both models experience
+          complete collapse. We found that LRMs have limitations in exact computation: they fail to use explicit algorithms and reason inconsistently
+          across puzzles. We also investigate the reasoning traces in more depth, studying the patterns of explored solutions and analyzing the
+          models’ computational behavior, shedding light on their strengths, limitations, and ultimately raising crucial questions about their true
+          reasoning capabilities.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>cb4c72f922d3eb75d5fa10c371818027374bf8b592453fc569003a0dfff12a0d</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p072"
+  data-id="P072"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world"
+  data-new="false"
+  data-title="Wan-Move: Motion-controllable Video Generation via Latent Trajectory Guidance"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P072 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Wan-Move: Motion-controllable Video Generation via Latent Trajectory Guidance</span>
+    <span class="lr-authors">Ruihang Chu; Yefei He; Zhekai Chen et al.</span>
+    <span class="lr-snippet">用密集点轨迹移动首帧潜特征，直接作为图生视频条件，实现无需额外运动编码器的精细运动控制，并提出MoveBench。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p072" aria-label="P072的固定链接">#P072</a><span>22页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd>
+        <p>
+          Ruihang Chu; Yefei He; Zhekai Chen; Shiwei Zhang; Xiaogang Xu; Bin Xia; Dingdong Wang; Hongwei Yi; Xihui Liu; Hengshuang Zhao; Yu Liu;
+          Yingya Zhang; Yujiu Yang
+        </p>
+      </dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-12-09（arXiv:2512.08765v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>arXiv:2512.08765v1，2025-12（本地版本）</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2512.08765v1">arXiv本地版本 2512.08765v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/ali-vilab/Wan-Move">代码：ali-vilab/Wan-Move</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>用密集点轨迹移动首帧潜特征，直接作为图生视频条件，实现无需额外运动编码器的精细运动控制，并提出MoveBench。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>latent trajectory guidance与运动控制评测集，保持Wan-I2V架构并进行规模化训练。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>无架构变化不等于无需训练；需要首帧及运动轨迹，主要展示5秒480p生成，不保证长期遮挡下的可控性。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>将点轨迹投影到VAE潜空间，沿轨迹复制首帧特征，形成时空条件图，对基础I2V模型微调。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        MoveBench/DAVIS上取得较低轨迹EPE和较高PSNR/SSIM；192个多物体样例继续评估；用户研究认为运动控制可与Kling1.5Pro Motion
+        Brush相比，比较限定于所评设置。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】长时间遮挡、轨迹缺失可使控制丢失；【解读】质量和控制受基础模型、轨迹准确性及训练分布限制，用户偏好不等同所有指标领先。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §3、§5表1–2、§6 p.10。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          We present Wan-Move, a simple and scalable framework that brings motion control to video generative models. Existing motion-controllable
+          methods typically suffer from coarse control granularity and limited scalability, leaving their outputs insufficient for practical use. We
+          narrow this gap by achieving precise and high-quality motion control. Our core idea is to directly make the original condition features
+          motion-aware for guiding video synthesis. To this end, we first represent object motions with dense point trajectories, allowing
+          fine-grained control over the scene. We then project these trajectories into latent space and propagate the first frame’s features along
+          each trajectory, producing an aligned spatiotemporal feature map that tells how each scene element should move. This feature map serves as
+          the updated latent condition, which is naturally integrated into the off-the-shelf image-to-video model,e.g., Wan-I2V-14B, as motion
+          guidance without any architecture change. It removes the need for auxiliary motion encoders and makes fine-tuning base models easily
+          scalable. Through scaled training, Wan-Move generates 5-second, 480p videos whose motion controllability rivals Kling 1.5 Pro’s commercial
+          Motion Brush, as indicated by user studies. To support comprehensive evaluation, we further design MoveBench, a rigorously curated benchmark
+          featuring diverse content categories and hybrid-verified annotations. It is distinguished by larger data volume, longer video durations, and
+          high-quality motion annotations. Extensive experiments on MoveBench and the public dataset consistently show Wan-Move’s superior motion
+          quality. Code, models, and benchmark data are made available.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>d9a58b9d2755593daeac68fd1ff16c24e6acf21b605077b53c9a007c14d384d3</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p071"
+  data-id="P071"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world"
+  data-new="false"
+  data-title="Counterfactual World Models via Digital Twin-conditioned Video Diffusion"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P071 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Counterfactual World Models via Digital Twin-conditioned Video Diffusion</span>
+    <span class="lr-authors">Yiqing Shen; Aiza Maksutova; Chenjia Li et al.</span>
+    <span class="lr-snippet">把视频转为显式对象与关系的数字孪生描述，LLM修改干预后的时间演化，再条件生成反事实视频。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p071" aria-label="P071的固定链接">#P071</a><span>14页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Yiqing Shen; Aiza Maksutova; Chenjia Li; Mathias Unberath</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-11-21（arXiv:2511.17481v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>arXiv:2511.17481v1，2025-11（本地版本）；保留文件名中的CVPR未获本次充分核验，不作为正式发表记录。</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2511.17481v1">arXiv本地版本 2511.17481v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>把视频转为显式对象与关系的数字孪生描述，LLM修改干预后的时间演化，再条件生成反事实视频。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>CWMDT将感知、干预传播和视频合成分开，提供可编辑结构条件。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>数字孪生为结构化文本/轨迹描述，不是经过物理验证的仿真器；LLM预测的反事实合理性不等于识别真实因果效应。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>提取场景摘要、对象帧描述、深度/面积/质心轨迹→LLM生成干预后的表示→视频扩散条件合成；每个干预采样3条孪生轨迹。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        在RVEBench及另一反事实视频基准报告优于比较方法；补充CausalVQA
+        debug评估中Qwen2.5VL+CWMDT反事实准确率70.0%，比基础模型+17.5个百分点，anticipation62.5%、hypothetical72.5%。这些是小型debug集结果。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】感知、结构化与LLM推断错误可逐级传播；小规模反事实QA不能证明真实部署或物理约束严格满足；生成成本和多候选选择影响效果。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §3–4 pp.3–8；附录A表4 p.10。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          World models learn to predict the temporal evolution of visual observations given a control signal, potentially enabling agents to reason
+          about environments through forward simulation. Because of the focus on forward simulation, current world models generate predictions based
+          on factual observations. For many emerging applications, such as comprehensive evaluations of physical AI behavior under varying conditions,
+          the ability of world models to answer counterfactual queries – such as “what would happen if this object was removed?” – is of increasing
+          importance. We formalize counterfactual world models that additionally take interventions as explicit inputs, predicting temporal sequences
+          under hypothetical modifications to observed scene properties. Traditional world models operate directly on entangled pixel-space
+          representations where object properties and relationships cannot be selectively modified. This modeling choice prevents targeted
+          interventions on specific scene properties. We introduce CWMDT, a framework to overcome those limitations, turning standard video diffusion
+          models into effective counterfactual world models. First, CWMDT constructs digital twins of observed scenes to explicitly encode objects and
+          their relationships, represented as structured text. Second, CWMDT applies large language models to reason over these representations and
+          predict how a counterfactual intervention propagates through time to alter the observed scene. Third, CWMDT conditions a video diffusion
+          model with the modified representation to generate counterfactual visual sequences. Evaluations on two benchmarks show that the CWMDT
+          approach achieves state-of-the-art performance, suggesting that alternative representations of videos, such as the digital twins considered
+          here, offer powerful control signals for video forward simulation-based world models.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>7f7d56e5b755149cc609ad0acdf0b5e58ccdf160a388465ebd8c1f1b9d83044e</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>

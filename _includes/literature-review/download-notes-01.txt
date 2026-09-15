@@ -1,0 +1,1186 @@
+# Literature Review
+
+更新：2026-09-15。157份按PDF内容去重的笔记；结果依据本地版本，未重跑实验。
+
+<a id="index"></a>
+## 索引
+
+- [P001 · HG-DAgger: Interactive Imitation Learning with Human Experts](#p001)
+- [P002 · Abductive Commonsense Reasoning](#p002)
+- [P004 · WebGPT: Browser-assisted question-answering with human feedback](#p004)
+- [P005 · There’s a Time and Place for Reasoning Beyond the Image](#p005)
+- [P006 · Learning Iterative Reasoning through Energy Minimization](#p006)
+- [P007 · The Abduction of Sherlock Holmes: A Dataset for Visual Abductive Reasoning](#p007)
+- [P008 · Visual Abductive Reasoning](#p008)
+- [P009 · Breaking Common Sense: WHOOPS! A Vision-and-Language Benchmark of Synthetic and Compositional Images](#p009)
+- [P010 · Visual Writing Prompts: Character-Grounded Story Generation with Curated Image Sequences](#p010)
+- [P011 · Reasoning or Reciting? Exploring the Capabilities and Limitations of Language Models Through Counterfactual Tasks](#p011)
+- [P012 · Reflexion: Language Agents with Verbal Reinforcement Learning](#p012)
+- [P013 · Sequential Modeling Enables Scalable Learning for Large Vision Models](#p013)
+- [P014 · VOYAGER: An Open-Ended Embodied Agent with Large Language Models](#p014)
+- [P015 · Inductive or Deductive? Rethinking the Fundamental Reasoning Abilities of LLMs](#p015)
+- [P016 · DIVE: Towards Descriptive and Diverse Visual Commonsense Generation](#p016)
+- [P017 · Exploring Defeasibility in Causal Reasoning](#p017)
+- [P018 · Learning Iterative Reasoning through Energy Diffusion](#p018)
+- [P019 · NL-EYE: Abductive NLI for Images](#p019)
+- [P020 · ViCor: Bridging Visual Understanding and Commonsense Reasoning with Large Language Models](#p020)
+- [P021 · Black Swan: Abductive and Defeasible Video Reasoning in Unpredictable Events](#p021)
+- [P022 · Enabling Self-Improving Agents to Learn at Test Time With Human-In-The-Loop Guidance](#p022)
+- [P023 · Generalizable Reasoning through Compositional Energy Minimization](#p023)
+- [P024 · Nested Learning: The Illusion of Deep Learning Architecture](#p024)
+- [P025 · Reasoning with Sampling: Your Base Model is Smarter Than You Think](#p025)
+- [P026 · Training Large Language Models to Reason in a Continuous Latent Space](#p026)
+- [P027 · VCD: A Dataset for Visual Commonsense Discovery in Images](#p027)
+- [P028 · Video models are zero-shot learners and reasoners](#p028)
+- [P029 · VideoDiff: Human-AI Video Co-Creation with Alternatives](#p029)
+- [P030 · AbductiveMLLM: Boosting Visual Abductive Reasoning Within MLLMs](#p030)
+- [P031 · Agentic Reasoning for Large Language Models](#p031)
+- [P032 · Autoregressive, Yet Revisable: In Decoding Revision for Secure Code Generation](#p032)
+- [P033 · Gen-Searcher: Reinforcing Agentic Search for Image Generation](#p033)
+- [P034 · Lost in Transmission: When and Why LLMs Fail to Reason Globally](#p034)
+- [P035 · Mind-Brush: Integrating Agentic Cognitive Search and Reasoning into Image Generation](#p035)
+- [P036 · SimStep: Human-in-the-Loop Authoring of Interactive Educational Simulations Through Task-Level Abstractions](#p036)
+- [P037 · SLM-MUX: Orchestrating Small Language Models for Reasoning](#p037)
+- [P038 · “I’m Not Sure, But...”: Examining the Impact of Large Language Models’ Uncertainty Expression on User Reliance and Trust](#p038)
+- [P039 · Make-a-Story: Visual Memory Conditioned Consistent Story Generation](#p039)
+- [P040 · Collaposer: Transforming Photo Collections into Visual Assets for Storytelling with Collages](#p040)
+- [P041 · Learning to Complement Humans](#p041)
+- [P042 · LLMs Struggle to Balance Reasoning and World Knowledge in Causal Narrative Understanding](#p042)
+- [P043 · LLMs Struggle to Perform Counterfactual Reasoning with Parametric Knowledge](#p043)
+- [P044 · Orthogonal Causal Calibration](#p044)
+- [P045 · Failure Modes of LLMs for Causal Reasoning on Narratives](#p045)
+- [P046 · Explaining Concept Shift with Interpretable Feature Attribution](#p046)
+- [P047 · Can LLMs Propose Instrumental Variables for Causal Reasoning?](#p047)
+- [P048 · Utility-Directed Conformal Prediction: A Decision-Aware Framework for Actionable Uncertainty Quantification](#p048)
+- [P049 · Decision-Focused Learning without Differentiable Optimization: Learning Locally Optimized Decision Losses](#p049)
+- [P050 · Distributionally Robust Feature Selection](#p050)
+- [P051 · Fostering the Ecosystem of AI for Social Impact Requires Expanding and Strengthening Evaluation Standards](#p051)
+- [P052 · Valid Inference with Imperfect Synthetic Data](#p052)
+- [P053 · Superhuman performance of a large language model on the reasoning tasks of a physician](#p053)
+- [P054 · Melding the Data-Decisions Pipeline: Decision-Focused Learning for Combinatorial Optimization](#p054)
+- [P055 · Principles of Mixed-Initiative User Interfaces](#p055)
+- [P056 · Vibe Coding XR: Accelerating AI + XR Prototyping with XR Blocks and Gemini](#p056)
+- [P057 · Thing2Reality: Enabling Spontaneous Creation of 3D Objects from 2D Content using Generative AI in XR Meetings](#p057)
+- [P058 · How Well Can 3D Accessibility Guidelines Support XR Development? An Interview Study with XR Practitioners in Industry](#p058)
+- [P059 · Sensible Agent: A Framework for Unobtrusive Interaction with Proactive AR Agents](#p059)
+- [P060 · XR Blocks: Accelerating Human-centered AI + XR Innovation](#p060)
+- [P061 · AgentHands: Generating Interactive Hand Gestures for Spatially Grounded Agent Conversations in XR](#p061)
+- [P062 · InstructPipe: Generating Visual Blocks Pipelines with Human Instructions and LLMs](#p062)
+- [P063 · Large Language Models and Causal Inference in Collaboration: A Comprehensive Survey](#p063)
+- [P064 · Causality Model for Semantic Understanding on Videos](#p064)
+- [P065 · Human-in-the-Loop through Chain-of-Thought](#p065)
+- [P066 · Let’s Verify Step by Step](#p066)
+- [P067 · τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains](#p067)
+- [P068 · TPDiff: Temporal Pyramid Video Diffusion Model](#p068)
+- [P069 · VideoMind: A Chain-of-LoRA Agent for Temporal-Grounded Video Reasoning](#p069)
+- [P070 · Impossible Videos](#p070)
+- [P071 · Counterfactual World Models via Digital Twin-conditioned Video Diffusion](#p071)
+- [P072 · Wan-Move: Motion-controllable Video Generation via Latent Trajectory Guidance](#p072)
+- [P073 · The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity](#p073)
+- [P074 · Beyond Single-Sentence Prompts: Upgrading Value Alignment Benchmarks with Dialogues and Stories](#p074)
+- [P075 · Chain-of-Evidence Multimodal Reasoning for Few-shot Temporal Action Localization](#p075)
+- [P076 · Interactive Reasoning: Visualizing and Controlling Chain-of-Thought Reasoning in Large Language Models](#p076)
+- [P077 · Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens](#p077)
+- [P078 · Seeing but Not Believing: Probing the Disconnect Between Visual Attention and Answer Correctness in VLMs](#p078)
+- [P079 · Thinking in 360°: Humanoid Visual Search in the Wild](#p079)
+- [P080 · Vis-CoT: A Human-in-the-Loop Framework for Interactive Visualization and Intervention in LLM Chain-of-Thought Reasoning](#p080)
+- [P081 · Olaf-World: Orienting Latent Actions for Video World Modeling](#p081)
+- [P083 · Causal-JEPA: Learning World Models through Object-Level Latent Masking](#p083)
+- [P084 · CRONOS: Benchmarking Counterfactual Physical Consistency in Video Models](#p084)
+- [P085 · SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models](#p085)
+- [P086 · See It, Say It, Sorted: An Iterative Training-Free Framework for Visually-Grounded Multimodal Reasoning in LVLMs](#p086)
+- [P087 · Don't Blink: Evidence Collapse during Multimodal Reasoning](#p087)
+- [P088 · V-Retrver: Evidence-Driven Agentic Reasoning for Universal Multimodal Retrieval](#p088)
+- [P089 · Fill the GAP: A Granular Alignment Paradigm for Visual Reasoning in Multimodal Large Language Models](#p089)
+- [P090 · From &lt;Answer&gt; to &lt;Think&gt;: Multi-Dimensional Supervision of Reasoning Process for LLM Optimization](#p090)
+- [P091 · Improving Human Verification of LLM Reasoning through Interactive Explanation Interfaces](#p091)
+- [P092 · Improving Visual Reasoning with Iterative Evidence Refinement](#p092)
+- [P093 · Instruction-Evidence Contrastive Dual-Stream Decoding for Grounded Vision-Language Reasoning](#p093)
+- [P094 · SaaS-Bench: Can Computer-Use Agents Leverage Real-World SaaS to Solve Professional Workflows?](#p094)
+- [P095 · TIR-Flow: Active Video Search and Reasoning with Frozen VLMs](#p095)
+- [P096 · TSRBench: A Comprehensive Multi-task Multi-modal Time Series Reasoning Benchmark for Generalist Models](#p096)
+- [P097 · Useful Memories Become Faulty When Continuously Updated by LLMs](#p097)
+- [P098 · First Logit Boosting: Visual Grounding Method to Mitigate Object Hallucination in Large Vision-Language Models](#p098)
+- [P099 · VGS-Decoding: Visual Grounding Score Guided Decoding for Hallucination Mitigation in Medical VLMs](#p099)
+- [P100 · When Thinking Drifts: Evidential Grounding for Robust Video Reasoning](#p100)
+- [P101 · Computational Understanding of Narratives: A Survey](#p101)
+- [P102 · Long-Context State-Space Video World Models](#p102)
+- [P103 · Training Large Language Models to Reason in a Continuous Latent Space](#p103)
+- [P104 · Reasoning with Language Model is Planning with World Model](#p104)
+- [P105 · New Evaluation, Library, and Analysis of Step-by-Step Reasoning with Large Language Models](#p105)
+- [P106 · Pandora: Towards General World Model with Natural Language Actions and Video States](#p106)
+- [P107 · Offline Reinforcement Learning for LLM Multi-step Reasoning](#p107)
+- [P108 · Flow of Reasoning: Training LLMs for Divergent Problem Solving with Minimal Examples](#p108)
+- [P110 · Understanding the Sources of Uncertainty for Large Language and Multimodal Models](#p110)
+- [P111 · CocoaBench: Evaluating Unified Digital Agents in the Wild](#p111)
+- [P112 · Vision-G1: Towards General Reasoning Vision-Language Models via Reinforcement Learning](#p112)
+- [P113 · Emergence of Superposition: Unveiling the Training Dynamics of Chain of Continuous Thought](#p113)
+- [P114 · LLM Pretraining with Continuous Concepts](#p114)
+- [P115 · ToolkenGPT: Augmenting Frozen Language Models with Massive Tools via Tool Embeddings](#p115)
+- [P116 · Reasoning by Superposition: A Theoretical Perspective on Chain of Continuous Thought](#p116)
+- [P117 · Revisiting Reinforcement Learning for LLM Reasoning from A Cross-Domain Perspective](#p117)
+- [P118 · Calibrating Reasoning in Language Models with Internal Consistency](#p118)
+- [P119 · Reasoning Models Know When They’re Right: Probing Hidden States for Self-Verification](#p119)
+- [P120 · Imagine This! Scripts to Compositions to Videos](#p120)
+- [P121 · World Models](#p121)
+- [P122 · Phenaki: Variable Length Video Generation from Open Domain Textual Descriptions](#p122)
+- [P123 · Genie: Generative Interactive Environments](#p123)
+- [P124 · iVideoGPT: Interactive VideoGPTs are Scalable World Models](#p124)
+- [P125 · Causally Steered Diffusion for Automated Video Counterfactual Generation](#p125)
+- [P126 · Diffusion-Based Visual Art Creation: A Survey and New Perspectives](#p126)
+- [P127 · MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequences](#p127)
+- [P128 · StoryMem: Multi-shot Long Video Storytelling with Memory](#p128)
+- [P129 · StoryReasoning Dataset: Using Chain-of-Thought for Scene Understanding and Grounded Story Generation](#p129)
+- [P130 · CounterVid: Counterfactual Video Generation for Mitigating Action and Temporal Hallucinations in Video-Language Models](#p130)
+- [P131 · Controllable Video Generation: A Survey](#p131)
+- [P132 · Pre-trained Video Generative Models as World Simulators](#p132)
+- [P133 · OneStory: Coherent Multi-Shot Video Generation with Adaptive Memory](#p133)
+- [P134 · MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequences](#p134)
+- [P135 · WorldMem: Long-term Consistent World Simulation with Memory](#p135)
+- [P136 · StoryBench: A Multifaceted Benchmark for Continuous Story Visualization](#p136)
+- [P137 · Long-Context State-Space Video World Models](#p137)
+- [P138 · StoryGAN: A Sequential Conditional GAN for Story Visualization](#p138)
+- [P139 · Is Your World Simulator a Good Story Presenter? A Consecutive Events-Based Benchmark for Future Long Video Generation](#p139)
+- [P140 · VideoAuteur: Towards Long Narrative Video Generation](#p140)
+- [P141 · Watch-And-Help: A Challenge for Social Perception and Human-AI Collaboration](#p141)
+- [P142 · Alchemy: A Benchmark and Analysis Toolkit for Meta-Reinforcement Learning Agents](#p142)
+- [P143 · Interactive Visual Reasoning under Uncertainty](#p143)
+- [P144 · Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation](#p144)
+- [P145 · Generative Agent-Based Modeling with Actions Grounded in Physical, Social, or Digital Space Using Concordia](#p145)
+- [P146 · ExpertAF: Expert Actionable Feedback from Video](#p146)
+- [P147 · DreamGarden: A Designer Assistant for Growing Games from a Single Prompt](#p147)
+- [P148 · Detecting Hallucinations in Large Language Models Using Semantic Entropy](#p148)
+- [P149 · Learning to Clarify: Multi-turn Conversations with Action-Based Contrastive Self-Training](#p149)
+- [P150 · WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment](#p150)
+- [P151 · COMBO: Compositional World Models for Embodied Multi-Agent Cooperation](#p151)
+- [P152 · DiscoveryWorld: A Virtual Environment for Developing and Evaluating Automated Scientific Discovery Agents](#p152)
+- [P153 · Internal Consistency and Self-Feedback in Large Language Models: A Survey](#p153)
+- [P154 · Text2World: Benchmarking Large Language Models for Symbolic World Model Generation](#p154)
+- [P155 · EgoPlan-Bench2: A Benchmark for Multimodal Large Language Model Planning in Real-World Scenarios](#p155)
+- [P156 · PoE-World: Compositional World Modeling with Products of Programmatic Experts](#p156)
+- [P157 · Exploring Exploration with Foundation Agents in Interactive Environments](#p157)
+- [P158 · RULER-Bench: Probing Rule-based Reasoning Abilities of Next-level Video Generation Models for Vision Foundation Intelligence](#p158)
+- [P159 · GPS: Graph-guided Proactive Information Seeking in Large Language Models](#p159)
+- [P160 · Fictional Worldbuilding: Multi-Agent LLM Collaboration with Hierarchical Context Compression and Iterative Review](#p160)
+
+<a id="p001"></a>
+## P001 · HG-DAgger: Interactive Imitation Learning with Human Experts
+
+- **作者**：Michael Kelly; Chelsea Sidrane; Katherine Driggs-Campbell; Mykel J. Kochenderfer
+- **时间**：本地版本：2019-03-11（arXiv:1810.02890v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：ICRA 2019（正式发表）；初稿 2018；本地 arXiv v2：2019-03-11。 [作者机构记录](https://experts.illinois.edu/en/publications/hg-dagger-interactive-imitation-learning-with-human-experts/)
+- **论文链接**：[arXiv本地版本 1810.02890v2](https://arxiv.org/abs/1810.02890v2)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：XR与人机协作
+- **PDF版本**：7页；SHA-256：`5e3aefda8fa803c4bbd5c6760cc468a9ce926f0d2b38da24834069c3fdadbbd0`
+
+### 中文摘要
+
+让人类自主接管和交还控制权，改进真实系统中的交互式模仿学习，并从接管行为学习基于模型不确定性的风险阈值。
+
+### 核心贡献
+
+提出 Human-Gated DAgger，减少随机切换控制导致的人类标注失真；同时估计策略的可接受状态区域。
+
+### 实现边界
+
+实现于仿真与实车驾驶任务；人类负责判断何时接管，风险阈值是经验估计，未给出无碰撞保证。
+
+### Method／方法
+
+迭代执行新手策略；专家接管时独占控制并收集示范，数据聚合后重训网络集成；用集成输出分歧及接管前的不确定性学习阈值。
+
+### Results／主要结果
+
+实车在 5 组障碍配置上优于 DAgger/行为克隆；与人类转向分布的 Bhattacharyya 距离相较 DAgger 改善 21.1%。仿真中阈值内初始化的碰撞率约为阈值外的 1/12。
+
+### Shortcomings／局限与可能不足
+
+【作者】实车测试数据少，统计显著性有限；【解读】效果依赖专家及时接管，不确定性与真实危险之间并非严格等价。
+
+### 证据定位
+
+摘要 p1；方法 p2–3；实验 p4–6，表 I–II。
+
+### Abstract
+
+Imitation learning has proven to be useful for many real-world problems, but approaches such as behavioral cloning suffer from data mismatch and compounding error issues. One attempt to address these limitations is the DA GGER algorithm, which uses the state distribution induced by the novice to sample corrective actions from the expert. Such sampling schemes, however, require the expert to provide action labels without being fully in control of the system. This can decrease safety and, when using humans as experts, is likely to degrade the quality of the collected labels due to perceived actuator lag. In this work, we propose HG-DA GGER , a variant of DA GGER that is more suitable for interactive imitation learning from human experts in real-world systems. In addition to training a novice policy, HG-DA GGER also learns a safety threshold for a model-uncertainty-based risk metric that can be used to predict the performance of the fully trained novice in different regions of the state space. We evaluate our method on both a simulated and real-world autonomous driving task, and demonstrate improved performance over both DA GGER and behavioral cloning.
+
+<a id="p002"></a>
+## P002 · Abductive Commonsense Reasoning
+
+- **作者**：Chandra Bhagavatula; Ronan Le Bras; Chaitanya Malaviya; Keisuke Sakaguchi; Ari Holtzman; Hannah Rashkin; Doug Downey; Scott Wen-tau Yih; Yejin Choi
+- **时间**：本地版本：2020-02-14（arXiv:1908.05739v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：ICLR 2020（PDF 明示）；本地 arXiv v2：2020-02-14
+- **论文链接**：[arXiv本地版本 1908.05739v2](https://arxiv.org/abs/1908.05739v2)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+- **版本关系**：[P003](#p003)与本文件SHA-256完全一致，共用此总结。
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：18页；SHA-256：`c6d69ad1817d26ff208441dae37d9b638e82e6a0e85ce4eea2063adffbd1cdf7`
+
+### 中文摘要
+
+把溯因推理定义为根据前后观察寻找最合理解释，构建 ART 数据及解释选择、解释生成两类任务。
+
+### 核心贡献
+
+提供超过 2 万叙事情境和 20 万解释；提出 Abductive NLI/NLG，并分析预训练语言模型的推理缺口。
+
+### 实现边界
+
+英语短篇常识叙事中的候选解释选择/文本生成；合理解释不等于唯一、可验证的真实原因。
+
+### Method／方法
+
+众包构造观察及正负解释，使用对抗筛选降低捷径；比较 GPT/BERT 微调和不同观察依赖结构，进行人工与自动评价。
+
+### Results／主要结果
+
+ART 测试集最佳 BERT 68.9%±0.5%，人类多数投票 91.4%；5 个训练随机种子；生成任务仍有明显常识与因果连贯性问题。
+
+### Shortcomings／局限与可能不足
+
+【解读】故事和众包解释限定了常识分布；二选一准确率不能代表开放世界因果发现，生成评价受多解性影响。
+
+### 证据定位
+
+摘要 p1；任务/数据 §2–4；结果 §5，表1；分析 §6。
+
+### Abstract
+
+Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation. While abduction has long been considered to be at the core of how people interpret and read between the lines in natural language (Hobbs et al., 1988), there has been relatively little research in support of abductive natural language inference and generation. We present the first study that investigates the viability of language-based abductive reasoning. We introduce a challenge dataset, ART, that consists of over 20k commonsense narrative contexts and 200k explanations. Based on this dataset, we conceptualize two new tasks – (i) Abductive NLI: a multiple-choice question answering task for choosing the more likely explanation, and (ii) Abductive NLG: a conditional generation task for explaining given observations in natural language. On Abductive NLI, the best model achieves 68.9% accuracy, well below human performance of 91.4%. On Abductive NLG, the current best language generators struggle even more, as they lack reasoning capabilities that are trivial for humans. Our analysis leads to new insights into the types of reasoning that deep pre-trained language models fail to perform—despite their strong performance on the related but more narrowly defined task of entailment NLI—pointing to interesting avenues for future research.
+
+<a id="p004"></a>
+## P004 · WebGPT: Browser-assisted question-answering with human feedback
+
+- **作者**：Reiichiro Nakano; Jacob Hilton; Suchir Balaji; Jeff Wu; Long Ouyang; Christina Kim; Christopher Hesse; Shantanu Jain; Vineet Kosaraju; William Saunders; Xu Jiang; Karl Cobbe; Tyna Eloundou; Gretchen Krueger; Kevin Button; Matthew Knight; Benjamin Chess; John Schulman
+- **时间**：本地版本：2022-06-01（arXiv:2112.09332v3）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：arXiv 技术报告；初稿 2021；本地 v3：2022-06-01；PDF 未标正式会议/期刊
+- **论文链接**：[arXiv本地版本 2112.09332v3](https://arxiv.org/abs/2112.09332v3)
+- **项目／代码／数据**：[项目/演示页面](https://openaipublic.blob.core.windows.net/webgpt-answer-viewer/index.html)
+
+- **主题**：XR与人机协作
+- **PDF版本**：32页；SHA-256：`acad8d9fd55a30b94de9dfdae413e10b21e07bde54d767b2405b31341739cedb`
+
+### 中文摘要
+
+训练 GPT-3 操作文本浏览器、收集引用并回答长问题，以示范学习和人类偏好反馈提升答案质量。
+
+### 核心贡献
+
+把检索、浏览、引用和回答统一为可训练的交互轨迹，并利用带引用答案支持人类评价。
+
+### 实现边界
+
+文本浏览器和 ELI5 长问答；最强模型使用 175B、best-of-64，有引用不代表引用真实或推断正确。
+
+### Method／方法
+
+约 6,000 条人类示范做行为克隆，约 21,500 组偏好比较训练奖励模型；比较 PPO 与拒绝采样，主要最优配置采用行为克隆加奖励筛选。
+
+### Results／主要结果
+
+在 ELI5 上，最强模型相对人类示范答案的偏好率为 56%，相对 Reddit 高赞答案为 69%（平局计半）；这是偏好评价，不是事实准确率。
+
+### Shortcomings／局限与可能不足
+
+【作者】分布外问题仍困难，引用支持性不能替代真实性，存在偏见和奖励优化问题；【解读】多次浏览与采样成本高。
+
+### 证据定位
+
+摘要 p1；训练 §3；评价 §4–5；真实性和引用局限 §6。
+
+### Abstract
+
+We fine-tune GPT-3 to answer long-form questions using a text-based webbrowsing environment, which allows the model to search and navigate the web. By setting up the task so that it can be performed by humans, we are able to train models on the task using imitation learning, and then optimize answer quality with human feedback. To make human evaluation of factual accuracy easier, models must collect references while browsing in support of their answers. We train and evaluate our models on ELI5, a dataset of questions asked by Reddit users. Our best model is obtained by fine-tuning GPT-3 using behavior cloning, and then performing rejection sampling against a reward model trained to predict human preferences. This model’s answers are preferred by humans 56% of the time to those of our human demonstrators, and 69% of the time to the highest-voted answer from Reddit.
+
+<a id="p005"></a>
+## P005 · There’s a Time and Place for Reasoning Beyond the Image
+
+- **作者**：Xingyu Fu; Ben Zhou; Ishaan Preetam Chandratreya; Carl Vondrick; Dan Roth
+- **时间**：2022年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：ACL 2022，Long Papers，1138–1149；会议 2022-05-22 至 05-27
+- **项目／代码／数据**：[代码：zeyofu/TARA](https://github.com/zeyofu/TARA)
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：12页；SHA-256：`aaf98fccea956b5824724ffc590c892f805b3814ef30ed5f8e096a11dd9987f1`
+
+### 中文摘要
+
+提出图像时空定位任务 TARA，要求综合画面线索与背景知识判断拍摄时间和地点。
+
+### 核心贡献
+
+构建约 16K 新闻图片和额外 61K WIT 弱监督样本，并提供基于局部图像线索的 CLIP 变体。
+
+### 实现边界
+
+主要为 NYT/Wikipedia 图片和给定标签集合的分类，不是无需候选的任意地点、精确日期识别。
+
+### Method／方法
+
+自动抽取新闻时空标签，众包验证可推理子集；比较 CLIP、微调、WIT 监督及 segment-wise 表征，使用 Accuracy 和层级 Example-F1。
+
+### Results／主要结果
+
+全测试集地点准确率 CLIP 11.11%、CLIP+Seg 16.46%。在人类对照子集，地点 23.33% vs 人类 86.21%，时间 3.33% vs 75.86%；不能把两个测试集合并比较。
+
+### Shortcomings／局限与可能不足
+
+【作者/设定】人类只测 test set of interest；【解读】新闻来源和标签分布有偏，图片可能不足以确定唯一时间，WIT 的分布差异限制收益。
+
+### 证据定位
+
+摘要 p1；数据 §3–4；方法 §5；表2、表3及 §6.3。
+
+### Abstract
+
+Images are often more significant than only the pixels to human eyes, as we can infer, associate, and reason with contextual information from other sources to establish a more complete picture. For example, in Figure 1, we can find a way to identify the news articles related to the picture through segment-wise understandings of the signs, the buildings, the crowds, and more. This reasoning could provide the time and place the image was taken, which will help us in subsequent tasks, such as automatic storyline construction, correction of image source in intended effect photographs, and upper-stream processing such as image clustering for certain location or time. In this work, we formulate this problem and introduce TARA: a dataset with 16k images with their associated news, time, and location, automatically extracted from New York Times1 (NYT), and an additional 61k examples as distant supervision from WIT (Srinivasan et al., 2021). On top of the extractions, we present a crowdsourced subset in which we believe it is possible to find the images’ spatiotemporal information for evaluation purpose. We show that there exists a 70% gap between a state-of-the-art joint model and human performance, which is slightly filled by our proposed model that uses segment-wise reasoning, motivating higher-level vision-language joint models that can conduct open-ended reasoning with world knowledge. The data and code are publicly available at https://github. com/zeyofu/TARA.
+
+<a id="p006"></a>
+## P006 · Learning Iterative Reasoning through Energy Minimization
+
+- **作者**：Yilun Du; Shuang Li; Joshua Tenenbaum; Igor Mordatch
+- **时间**：本地版本：2022-06-30（arXiv:2206.15448v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：ICML 2022（PDF 元数据与正文）；本地 arXiv v1：2022-06-30
+- **论文链接**：[arXiv本地版本 2206.15448v1](https://arxiv.org/abs/2206.15448v1)
+- **项目／代码／数据**：[项目/演示页面](https://energy-based-model.github.io/iterative-reasoning-as-energy-minimization/)
+
+- **主题**：世界机制与演化
+- **PDF版本**：14页；SHA-256：`2c44b73b49bf1fad468a2f7a4e03c2ddfd5eaef4447890c7a5d980bc1c8ceead`
+
+### 中文摘要
+
+把推理写成学习能量函数后的迭代优化，使测试时可以增加计算以处理更大或更难的问题。
+
+### 核心贡献
+
+IREM 用统一能量最小化处理图与连续算法任务，并演示嵌套组合求解。
+
+### 实现边界
+
+验证于合成图运算、加法、矩阵补全/求逆等；优化过程不保证任意实例达到全局最优。
+
+### Method／方法
+
+学习输入与候选输出之间的能量景观；通过迭代梯度更新寻找低能量解，以回放缓冲和末步截断反传控制训练开销。
+
+### Results／主要结果
+
+10 节点训练、15 节点测试的最短路元素 MSE 为 0.0464，循环网络 0.1083、前馈模型 1.4089；更难加法 MSE 为 0.0021，对比最佳列示基线 0.1577。
+
+### Shortcomings／局限与可能不足
+
+【解读】收益依赖能量函数及优化质量；增加推理时间有成本，合成任务的规模泛化不等于自然语言或开放世界推理。
+
+### 证据定位
+
+方法 §3；表1 p5；消融表2；§5 Conclusion and Limitations。
+
+### Abstract
+
+Deep learning has excelled on complex pattern recognition tasks such as image classification and object recognition. However, it struggles with tasks requiring nontrivial reasoning, such as algorithmic computation. Humans are able to solve such tasks through iterative reasoning – spending more time thinking about harder tasks. Most existing neural networks, however, exhibit a fixed computational budget controlled by the neural network architecture, preventing additional computational processing on harder tasks. In this work, we present a new framework for iterative reasoning with neural networks. We train a neural network to parameterize an energy landscape over all outputs, and implement each step of the iterative reasoning as an energy minimization step to find a minimal energy solution. By formulating reasoning as an energy minimization problem, for harder problems that lead to more complex energy landscapes, we may then adjust our underlying computational budget by running a more complex optimization procedure. We empirically illustrate that our iterative reasoning approach can solve more accurate and generalizable algorithmic reasoning tasks in both graph and continuous domains. Finally, we illustrate that our approach can recursively solve algorithmic problems requiring nested reasoning. Code and additional information is available at https://energy-based-model.github.io/iterativereasoning-as-energy-minimization/.
+
+<a id="p007"></a>
+## P007 · The Abduction of Sherlock Holmes: A Dataset for Visual Abductive Reasoning
+
+- **作者**：Jack Hessel; Jena D. Hwang; Jae Sung Park; Rowan Zellers; Chandra Bhagavatula; Anna Rohrbach; Kate Saenko; Yejin Choi
+- **时间**：2022年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：ECCV 2022（官方记录核验）。 [ECVA官方论文页](https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/5263_ECCV_2022_paper.php)
+- **项目／代码／数据**：[项目/演示页面](http://visualabduction.com/)
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：18页；SHA-256：`6d3154700273e8716a1894925a16c6890426adc4cd9bb9d54a4fe1bde03c78ac`
+
+### 中文摘要
+
+构建 Sherlock，收集视觉线索和超出字面画面的合理推断，评估机器的视觉溯因能力。
+
+### 核心贡献
+
+103K 图片、363K 线索—推断对及约 19K 合理性判断，覆盖推断检索、证据定位和合理性比较。
+
+### 实现边界
+
+推断是人类认为合理的假设；主要评价检索/定位/比较，开放式生成评价仍待解决。
+
+### Method／方法
+
+自由观察式众包标注线索框和推断；训练图像、区域、文本兼容性评分器，比较 LXMERT、UNITER 和 CLIP，并加入多任务训练。
+
+### Results／主要结果
+
+CLIP-RN50x64 加多任务目标在三类评测中优于所列强基线，但与人类判断一致性仍有明显差距；文中同时报告定位及排序指标，不能统一当作准确率。
+
+### Shortcomings／局限与可能不足
+
+【作者】显著线索选择、合理推断的歧义及生成评价未解决；文字识别、动作识别等基础视觉错误也会传递到推断。
+
+### 证据定位
+
+摘要 p1；任务 §4；方法/结果 §5、表2；结论 §6。
+
+### Abstract
+
+Humans have remarkable capacity to reason abductively and hypothesize about what lies beyond the literal content of an image. By identifying concrete visual clues scattered throughout a scene, we almost can’t help but draw probable inferences beyond the literal scene based on our everyday experience and knowledge about the world. For example, if we see a “20 mph” sign alongside a road, we might assume the street sits in a residential area (rather than on a highway), even if no houses are pictured. Can machines perform similar visual reasoning? We present Sherlock, an annotated corpus of 103K images for testing machine capacity for abductive reasoning beyond literal image contents. We adopt a free-viewing paradigm: participants first observe and identify salient clues within images (e.g., objects, actions ) and then provide a plausible inference about the scene, given the clue. In total, we collect 363K (clue, inference) pairs, which form a first-of-its-kind abductive visual reasoning dataset. Using our corpus, we test three complementary axes of abductive reasoning. We evaluate the capacity of models to: i) retrieve relevant inferences from a large candidate corpus; ii) localize evidence for inferences via bounding boxes, and iii) compare plausible inferences to match human judgments on a newlycollected diagnostic corpus of 19K Likert-scale judgments. While we find that fine-tuning CLIP-RN50x64 with a multitask objective outperforms strong baselines, significant headroom exists between model performance and human agreement. Data, models, and leaderboard available at http://visualabduction.com/.
+
+<a id="p008"></a>
+## P008 · Visual Abductive Reasoning
+
+- **作者**：Chen Liang; Wenguan Wang; Tianfei Zhou; Yi Yang
+- **时间**：本地版本：2022-03-26（arXiv:2203.14040v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：CVPR 2022，pp.15565–15575（官方CVF记录核验）。 [CVF官方论文页](https://openaccess.thecvf.com/content/CVPR2022/html/Liang_Visual_Abductive_Reasoning_CVPR_2022_paper.html)
+- **论文链接**：[arXiv本地版本 2203.14040v1](https://arxiv.org/abs/2203.14040v1)
+- **项目／代码／数据**：[代码：leonnnop/VAR](https://github.com/leonnnop/VAR)
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：16页；SHA-256：`90f39a03b4c4a282706963260126887bfd7658133b53f6b586bfe9e39cc5febe`
+
+### 中文摘要
+
+在事件片段被遮蔽的视频中描述已知事件并生成最可能的缺失事件解释，提出 VAR 数据集和 REASONER。
+
+### 核心贡献
+
+设计因果方向感知编码及置信度引导的级联解码，逐轮改进前提描述与假设。
+
+### 实现边界
+
+输入已有事件分段，缺失事件以黑帧遮蔽；实现的是语言解释生成，未识别或验证真实因果结构。
+
+### Method／方法
+
+使用预提取动作/外观特征，contextualized directional position embedding 区分关系；三个级联 Transformer 解码器通过句子置信度交换信息。
+
+### Results／主要结果
+
+消融中，普通 Transformer 的平均事件 CIDEr 30.04、BLEU-4 3.39；同时加入两个组件后为 36.13、4.66。完整模型领先比较的视频语言基线，但仍落后人类。
+
+### Shortcomings／局限与可能不足
+
+【解读】依赖事件分割和视觉特征；多种合理解释会使参考文本指标失真，因果位置编码并非干预意义上的因果保证。
+
+### 证据定位
+
+任务 §3；实现 §4.4；实验 §5、表8；附录失败案例。
+
+### Abstract
+
+Abductive reasoning seeks the likeliest possible explanation for partial observations. Although abduction is frequently employed in human daily reasoning, it is rarely explored in computer vision literature. In this paper, we propose a new task and dataset, Visual Abductive Reasoning (VAR), for examining abductive reasoning ability of machine intelligence in everyday visual situations. Given an incomplete set of visual events, AI systems are required to not only describe what is observed, but also infer the hypothesis that can best explain the visual premise. Based on our large-scale VAR dataset, we devise a strong baseline model, REASONER (causal-and-cascaded reasoning Transformer). First, to capture the causal structure of the observations, a contextualized directional position embedding strategy is adopted in the encoder, that yields discriminative representations for the premise and hypothesis. Then, multiple decoders are cascaded to generate and progressively refine the premise and hypothesis sentences. The prediction scores of the sentences are used to guide cross-sentence information flow in the cascaded reasoning procedure. Our VAR benchmarking results show that REASONER surpasses many famous video-language models, while still being far behind human performance. This work is expected to foster future efforts in the reasoning-beyond-observation paradigm.
+
+<a id="p009"></a>
+## P009 · Breaking Common Sense: WHOOPS! A Vision-and-Language Benchmark of Synthetic and Compositional Images
+
+- **作者**：Nitzan Bitton-Guetta; Yonatan Bitton; Jack Hessel; Ludwig Schmidt; Yuval Elovici; Gabriel Stanovsky; Roy Schwartz
+- **时间**：本地版本：2023-08-12（arXiv:2303.07274v4）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：ICCV 2023，2616–2627；本地 arXiv v4：2023-08-12。 [CVF官方论文页](https://openaccess.thecvf.com/content/ICCV2023/html/Bitton-Guetta_Breaking_Common_Sense_WHOOPS_A_Vision-and-Language_Benchmark_of_Synthetic_and_ICCV_2023_paper.html)
+- **论文链接**：[arXiv本地版本 2303.07274v4](https://arxiv.org/abs/2303.07274v4)
+- **项目／代码／数据**：[项目/演示页面](https://whoops-benchmark.github.io/)
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：15页；SHA-256：`342485fdb71a2e2931d66cfd760bc87c9f78d58bd7edaf325cf0e921621629ab`
+
+### 中文摘要
+
+通过人为设计的反常识合成图像，评价模型是否能识别和解释图像中的异常，而不只描述物体。
+
+### 核心贡献
+
+提供视觉常识基准及解释异常任务，结合 captioning、匹配和 VQA；分析感知与推理各自的瓶颈。
+
+### 实现边界
+
+小规模、人工筛选的合成图像及四类任务；不能直接代表真实图像中的所有常识错误。
+
+### Method／方法
+
+设计师用文生图工具制作异常组合，众包标注解释；比较端到端 BLIP2 和图像描述→LLM 管线，并用人类及 GPT-4 评价解释。
+
+### Results／主要结果
+
+表1中，微调 BLIP2-XXL 异常识别 73%，人类 92%；解释的人类评分为 27%，oracle caption→GPT-3 为 68%，人类 95%。
+
+### Shortcomings／局限与可能不足
+
+【作者】数据规模小，仍可能含令人不适内容；【解读】生成工具、文化常识及 GPT 评价器带来偏差，oracle 描述结果不是实际端到端水平。
+
+### 证据定位
+
+摘要；数据 §2；表1；结果 §5.2；局限 §8。
+
+### Abstract
+
+Weird, unusual, and uncanny images pique the curiosity of observers because they challenge commonsense. For example, an image released during the 2022 world cup depicts the famous soccer stars Lionel Messi and Cristiano Ronaldo playing chess, which playfully violates our expectation that their competition should occur on the football field.1 Humans can easily recognize and interpret these unconventional images, but can AI models do the same? We introduce WHOOPS !, a new dataset and benchmark for visual commonsense. The dataset is comprised of purposefully commonsense-defying images created by designers using publicly-available image generation tools like Midjourney. We consider several tasks posed over the dataset. In addition to image captioning, cross-modal matching, and visual question answering, we introduce a difficult explanation generation task, where models must identify and explain why a given image is unusual. Our results show that state-of-the-art models such as GPT3 and BLIP2 still lag behind human performance on WHOOPS !. We hope our dataset will inspire the development of AI models with stronger visual commonsense reasoning abilities.
+
+<a id="p010"></a>
+## P010 · Visual Writing Prompts: Character-Grounded Story Generation with Curated Image Sequences
+
+- **作者**：Xudong Hong; Asad Sayeed; Khushboo Mehra; Vera Demberg; Bernt Schiele
+- **时间**：本地版本：2023-01-20（arXiv:2301.08571v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：TACL 2023，11:565–581；本地为 2023-01-20 预出版稿。 [ACL Anthology记录](https://aclanthology.org/2023.tacl-1.33/)
+- **论文链接**：[arXiv本地版本 2301.08571v1](https://arxiv.org/abs/2301.08571v1)
+- **项目／代码／数据**：[项目/演示页面](https://vwprompt.github.io/)
+
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：15页；SHA-256：`33a8162c030e1f548ed7f94972bf7154d3efeb6b1ac91db896cf0d37217b1870`
+
+### 中文摘要
+
+用经过筛选的电影镜头序列和明确角色构建 VWP，以更好的输入与角色表示提升视觉故事的连贯性。
+
+### 核心贡献
+
+约 2K 个、每个 5–10 图的序列及约 12K 众包故事；提出角色感知的 CharGrid 基线。
+
+### 实现边界
+
+生成图像序列对应的文本故事；依赖电影镜头、角色框和筛选流程，不生成视频或验证事件真实发生。
+
+### Method／方法
+
+过滤低信息和重复镜头，提供角色名称/裁剪图引导写作；冻结 Swin 特征提取，结合角色特征与角色网格建模跨句连贯性。
+
+### Results／主要结果
+
+28 名众包者比较 50 对故事；本地稿表7中 CharGrid 相较 TAPM+char 的人类判断差值：连贯性 +8.41、视觉依据 +6.25、多样性 +11.06 个百分点。
+
+### Shortcomings／局限与可能不足
+
+【作者】叙事结构/narrativity 和写作者能力差异未充分建模；【解读】人工评价样本小，电影域与现实相册存在分布差异。
+
+### 证据定位
+
+摘要；构建 §3–5；模型 §6.1；人评 §6.3/表7；§7。
+
+### Abstract
+
+Current work on image-based story generation suffers from the fact that the existing image sequences collections do not have coherent plots behind them. We improve visual story generation by producing a new image-grounded dataset, Visual Writing Prompts (VWP). VWP contains almost 2K selected sequences of movie shots, each including 5-10 images. The image sequences are aligned with a total of 12K stories which were collected via crowdsourcing given the image sequences and a set of grounded characters from the corresponding image sequence. Our new image sequence collection and filtering process has allowed us to obtain stories that are more coherent and more diverse compared to previous work. We also propose a characterbased story generation model driven by coherence as a strong baseline. Evaluations show that our generated stories are more coherent, visually grounded, and more diverse than stories generated with the current stateof-the-art model.
+
+<a id="p011"></a>
+## P011 · Reasoning or Reciting? Exploring the Capabilities and Limitations of Language Models Through Counterfactual Tasks
+
+- **作者**：Zhaofeng Wu; Linlu Qiu; Alexis Ross; Ekin Akyürek; Boyuan Chen; Bailin Wang; Najoung Kim; Jacob Andreas; Yoon Kim
+- **时间**：本地版本：2024-03-28（arXiv:2307.02477v3）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：NAACL 2024，Long Papers，pp.1819–1862（官方ACL记录核验）；本地arXiv v3：2024-03-28。 [ACL Anthology记录](https://aclanthology.org/2024.naacl-long.102/)
+- **论文链接**：[arXiv本地版本 2307.02477v3](https://arxiv.org/abs/2307.02477v3)
+- **项目／代码／数据**：[代码：ZhaofengWu/counterfactual-evaluation](https://github.com/ZhaofengWu/counterfactual-evaluation)
+
+- **主题**：世界机制与演化
+- **PDF版本**：49页；SHA-256：`c7e3f360460c7a66c6d1329891aabebf7bff4e1ef4ee67896538d803d5dec75b`
+
+### 中文摘要
+
+用改变默认规则的反事实任务区分可迁移推理与对熟悉任务模式的依赖。
+
+### 核心贡献
+
+构造 11 类任务的默认/反事实配对评测，并加入反事实规则理解检查及不同提示条件。
+
+### 实现边界
+
+任务包括算术、代码、逻辑、空间、音乐和游戏；研究基于指定的 2023 版闭源模型，不是对全部 LLM 的不可推理证明。
+
+### Method／方法
+
+保持任务结构、改动进制/索引/坐标/游戏规则等条件，比较 GPT-4、GPT-3.5、Claude、PaLM-2，控制 CoT 与 few-shot 提示。
+
+### Results／主要结果
+
+11 项任务整体呈现反事实条件下显著且一致的性能下降；few-shot 能缩小但不能消除差距，理解规则也不保证正确执行。
+
+### Shortcomings／局限与可能不足
+
+【作者】默认与反事实任务难度不总能严格匹配，预训练内容未知，结果可能高估或低估能力；【解读】分布偏移与抽象推理失败不能完全分离。
+
+### 证据定位
+
+摘要；框架 §2；结果 §4；分析 §5；局限 §7。
+
+### Abstract
+
+The impressive performance of recent language models across a wide range of tasks suggests that they possess a degree of abstract reasoning skills. Are these skills general and transferable, or specialized to specific tasks seen during pretraining? To disentangle these effects, we propose an evaluation framework based on “counterfactual” task variants that deviate from the default assumptions underlying standard tasks. Across a suite of 11 tasks, we observe nontrivial performance on the counterfactual variants, but nevertheless find that performance substantially and consistently degrades compared to the default conditions. This suggests that while current LMs may possess abstract task-solving skills to an extent, they often also rely on narrow, non-transferable procedures for task-solving. These results motivate a more careful interpretation of language model performance that teases apart these aspects of behavior.
+
+<a id="p012"></a>
+## P012 · Reflexion: Language Agents with Verbal Reinforcement Learning
+
+- **作者**：Noah Shinn; Federico Cassano; Ashwin Gopinath; Karthik Narasimhan; Shunyu Yao
+- **时间**：2023年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：NeurIPS 2023（会议论文）
+- **项目／代码／数据**：[代码：noahshinn024/reflexion](https://github.com/noahshinn024/reflexion)
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：19页；SHA-256：`efba04cd48b779131fc4c3c58ae49e8523ded534f9225a7c57c7bdad0823803d`
+
+### 中文摘要
+
+让语言智能体把失败反馈总结成文字反思，并在后续尝试中利用记忆改进决策。
+
+### 核心贡献
+
+提出 actor—evaluator—self-reflection 框架，以语言记忆实现跨尝试改进。
+
+### 实现边界
+
+不更新模型参数；依赖可重复尝试、可获得反馈的环境，所谓 verbal RL 与梯度训练式 RL 不同。
+
+### Method／方法
+
+执行任务后由外部或内部评价器给出反馈，生成反思并写入有限情节记忆，下次提示时检索/拼接；在 ALFWorld、HotpotQA 和代码任务验证。
+
+### Results／主要结果
+
+论文报告 HumanEval 91% pass@1，相较引用的 GPT-4 80%；该数值来自允许反馈与迭代的完整协议，不能等同无反馈单次生成准确率。
+
+### Shortcomings／局限与可能不足
+
+【作者】可能停在局部最优，记忆窗口有限；生成的测试不足以可靠检验非确定性、外部 API 或并发程序。
+
+### 证据定位
+
+摘要；§3；§4.3；局限 §5。
+
+### Abstract
+
+Large language models (LLMs) have been increasingly used to interact with external environments (e.g., games, compilers, APIs) as goal-driven agents. However, it remains challenging for these language agents to quickly and efficiently learn from trial-and-error as traditional reinforcement learning methods require extensive training samples and expensive model fine-tuning. We propose Reflexion, a novel framework to reinforce language agents not by updating weights, but instead through linguistic feedback. Concretely, Reflexion agents verbally reflect on task feedback signals, then maintain their own reflective text in an episodic memory buffer to induce better decision-making in subsequent trials. Reflexion is flexible enough to incorporate various types (scalar values or free-form language) and sources (external or internally simulated) of feedback signals, and obtains significant improvements over a baseline agent across diverse tasks (sequential decision-making, coding, language reasoning). For example, Reflexion achieves a 91% pass@1 accuracy on the HumanEval coding benchmark, surpassing the previous state-of-the-art GPT-4 that achieves 80%. We also conduct ablation and analysis studies using different feedback signals, feedback incorporation methods, and agent types, and provide insights into how they affect performance. We release all code, demos, and datasets at https://github.com/noahshinn024/reflexion.
+
+<a id="p013"></a>
+## P013 · Sequential Modeling Enables Scalable Learning for Large Vision Models
+
+- **作者**：Yutong Bai; Xinyang Geng; Karttikeya Mangalam; Amir Bar; Alan Yuille; Trevor Darrell; Jitendra Malik; Alexei A. Efros
+- **时间**：本地版本：2023-12-01（arXiv:2312.00785v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：CVPR 2024，pp.22861–22872（官方CVF记录核验）；本地为2023-12-01预印版。 [CVF官方论文页](https://openaccess.thecvf.com/content/CVPR2024/html/Bai_Sequential_Modeling_Enables_Scalable_Learning_for_Large_Vision_Models_CVPR_2024_paper.html)
+- **论文链接**：[arXiv本地版本 2312.00785v1](https://arxiv.org/abs/2312.00785v1)
+- **项目／代码／数据**：[项目/演示页面](https://yutongbai.com/lvm.html)
+
+- **主题**：世界机制与演化
+- **PDF版本**：33页；SHA-256：`6e6272927d093a531405429818c6067df826310ba8983a8a2968bb8d117c390e`
+
+### 中文摘要
+
+把图像、视频和视觉标注统一为视觉句子，使用下一 token 预测训练无需语言输入的大视觉模型。
+
+### 核心贡献
+
+构建统一视觉序列表示并展示多任务视觉提示和模型/数据扩展趋势。
+
+### 实现边界
+
+任务由示例图像定义，输出为视觉 token；训练与评价不证明任意视觉任务均能零样本解决。
+
+### Method／方法
+
+VQGAN 将图像离散化，再用自回归 Transformer 学习跨图像序列；在 420B 视觉 token 上训练 300M、600M、1B、3B 模型。
+
+### Results／主要结果
+
+420B token 约对应 1.64B 图像；文中语义分割视觉序列困惑度随规模从 23.1（300M）降到 14.0（3B），并展示类比、视频预测等视觉提示结果。
+
+### Shortcomings／局限与可能不足
+
+【作者】视觉提示可能欠约束，tokenizer 与视频数据质量导致失败；算力限制了消融，对真正的涌现/泛化尚无定论。
+
+### 证据定位
+
+摘要；方法 §4；规模实验 §5.1/图3–4；局限 §6。
+
+### Abstract
+
+We introduce a novel sequential modeling approach which enables learning a Large Vision Model (LVM) without making use of any linguistic data. To do this, we define a common format, “visual sentences”, in which we can represent raw images and videos as well as annotated data sources such as semantic segmentations and depth reconstructions without needing any meta-knowledge beyond the pixels. Once this wide variety of visual data (comprising 420 billion tokens) is represented as sequences, the model can be trained to minimize a cross-entropy loss for next token prediction. By training across various scales of model architecture and data diversity, we provide empirical evidence that our models scale effectively. Many different vision tasks can be solved by designing suitable visual prompts at test time.
+
+<a id="p014"></a>
+## P014 · VOYAGER: An Open-Ended Embodied Agent with Large Language Models
+
+- **作者**：Guanzhi Wang; Yuqi Xie; Yunfan Jiang; Ajay Mandlekar; Chaowei Xiao; Yuke Zhu; Linxi “Jim” Fan; Anima Anandkumar
+- **时间**：本地版本：2023-10-19（arXiv:2305.16291v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：本地 arXiv v2：2023-10-19；正式平台待核验
+- **论文链接**：[arXiv本地版本 2305.16291v2](https://arxiv.org/abs/2305.16291v2)
+- **项目／代码／数据**：[项目/演示页面](https://voyager.minedojo.org)
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：42页；SHA-256：`769a4e33ddeeb73870849232eece49afe882c2d146362e33917ccb432ba0efb8`
+
+### 中文摘要
+
+在 Minecraft 中用自动课程、可执行技能库和反馈驱动的代码修正实现持续探索与技能积累。
+
+### 核心贡献
+
+以代码技能外部记忆实现组合和迁移，配合自适应课程扩大探索范围。
+
+### 实现边界
+
+通过 Mineflayer JavaScript API 和结构化环境状态控制游戏；未训练模型权重，也未实现真实机器人上的终身学习。
+
+### Method／方法
+
+GPT-4 提议技能与代码，利用执行错误、环境反馈和自检反复修改；成功技能存入库，按任务检索重用。
+
+### Results／主要结果
+
+160 次提示迭代内发现 63 种物品，约为对照的 3.3 倍；探索距离 2.3 倍，关键科技里程碑最多快 15.3 倍；演示新地图任务迁移。
+
+### Shortcomings／局限与可能不足
+
+【作者】API 成本高，代码生成/自检失败和不可完成的幻觉任务仍存在；【解读】技能迁移限于同一游戏/API 体系。
+
+### 证据定位
+
+摘要；方法 §2；实验 §3.3；局限 §4。
+
+### Abstract
+
+We introduce VOYAGER, the first LLM-powered embodied lifelong learning agent in Minecraft that continuously explores the world, acquires diverse skills, and makes novel discoveries without human intervention. VOYAGER consists of three key components: 1) an automatic curriculum that maximizes exploration, 2) an ever-growing skill library of executable code for storing and retrieving complex behaviors, and 3) a new iterative prompting mechanism that incorporates environment feedback, execution errors, and self-verification for program improvement. VOYAGER interacts with GPT-4 via blackbox queries, which bypasses the need for model parameter fine-tuning. The skills developed by VOYAGER are temporally extended, interpretable, and compositional, which compounds the agent’s abilities rapidly and alleviates catastrophic forgetting. Empirically, VOYAGER shows strong in-context lifelong learning capability and exhibits exceptional proficiency in playing Minecraft. It obtains 3.3× more unique items, travels 2.3× longer distances, and unlocks key tech tree milestones up to 15.3× faster than prior SOTA. VOYAGER is able to utilize the learned skill library in a new Minecraft world to solve novel tasks from scratch, while other techniques struggle to generalize.
+
+<a id="p015"></a>
+## P015 · Inductive or Deductive? Rethinking the Fundamental Reasoning Abilities of LLMs
+
+- **作者**：Kewei Cheng; Jingfeng Yang; Haoming Jiang; Zhengyang Wang; Binxuan Huang; Ruirui Li; Shiyang Li; Zheng Li; Yifan Gao; Xian Li; Bing Yin; Yizhou Sun
+- **时间**：本地版本：2024-08-07（arXiv:2408.00114v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：arXiv:2408.00114v2（本地版本）；正式会议/期刊未核实
+- **论文链接**：[arXiv本地版本 2408.00114v2](https://arxiv.org/abs/2408.00114v2)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化
+- **PDF版本**：18页；SHA-256：`565fc1b5b46f783169964078ab1dc9b1c1a075d382e428cb899ceac208044240`
+
+### 中文摘要
+
+用 SolverLearner 分离从样例归纳规则与执行规则，重新比较 LLM 的归纳和演绎能力。
+
+### 核心贡献
+
+让 LLM 生成映射程序，再交给外部解释器执行，降低执行错误对归纳能力评价的干扰。
+
+### 实现边界
+
+限于具有明确函数族和可执行规则的合成任务；程序执行由工具完成。
+
+### Method／方法
+
+比较直接输入输出提示、显式给规则、由样例生成 Python 规则三种设置，测试算术、空间等默认/反事实任务。
+
+### Results／主要结果
+
+GPT-4 在大部分受限归纳条件下接近或达到准确率 1；直接演绎特别是反事实执行较弱，GPT-3.5 并不普遍达到同等水平。
+
+### Shortcomings／局限与可能不足
+
+【作者】无搜索空间约束时归纳困难，结论依赖基础模型，主比较未纳入 CoT；【解读】不宜概括为所有归纳推理均强于演绎。
+
+### 证据定位
+
+§3 SolverLearner；§5；结论后的 Limitations。
+
+### Abstract
+
+Reasoning encompasses two typical types: deductive reasoning and inductive reasoning. Despite extensive research into the reasoning capabilities of Large Language Models (LLMs), moststudieshavefailedtorigorouslydifferentiate between inductive and deductive reasoning, leading to a blending of the two. This raises an essential question:In LLM reasoning, which poses a greater challenge - deductive or inductive reasoning?While the deductive reasoning capabilities of LLMs, (i.e. their capacity to follow instructions in reasoning tasks), have received considerable attention, their abilities intrueinductivereasoningremainlargelyunexplored. To investigate the true inductive reasoning capabilities of LLMs, we propose a novel framework, SolverLearner. This framework enables LLMs to learn the underlying function (i.e., y = fw (x)), that maps input data points (x) to their corresponding output values(y), using only in-context examples. By focusing on inductive reasoning and separating it from LLM-baseddeductivereasoning,wecanisolate and investigate inductive reasoning of LLMs in its pure form viaSolverLearner. Our observationsrevealthatLLMsdemonstrateremarkable inductive reasoning capabilities throughSolver- Learner, achieving near-perfect performance with ACC of 1 in most cases. Surprisingly, despite their strong inductive reasoning abilities, LLMs tend to relatively lack deductive reasoning capabilities, particularly in tasks involving “counterfactual” reasoning.
+
+<a id="p016"></a>
+## P016 · DIVE: Towards Descriptive and Diverse Visual Commonsense Generation
+
+- **作者**：Jun-Hyung Park; Hyuntae Park; Youjin Kang; Eojin Jeon; SangKeun Lee
+- **时间**：本地版本：2024-08-15（arXiv:2408.08021v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：EMNLP 2023，pp.9677–9695（官方ACL记录核验）；本地arXiv上传时间2024-08-15晚于会议。 [ACL Anthology记录](https://aclanthology.org/2023.emnlp-main.601/)
+- **论文链接**：[arXiv本地版本 2408.08021v1](https://arxiv.org/abs/2408.08021v1)
+- **项目／代码／数据**：[代码：Park-ing-lot/DIVE](https://github.com/Park-ing-lot/DIVE)
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：19页；SHA-256：`e888c768a6d50a1c93040f51ec1e578f60acca8697a9dbe7af12f1d0fcdb7a06`
+
+### 中文摘要
+
+通过过滤泛泛的推断并改进训练目标，让视觉常识生成更具体、多样。
+
+### 核心贡献
+
+提出 generic inference filtering 与 contrastive retrieval learning。
+
+### 实现边界
+
+主要验证于 Visual Commonsense Graphs；“人类水平”限定于所测描述性/多样性指标。
+
+### Method／方法
+
+利用频次及图像语义集中度过滤通用推断，再用图结构构造对比检索监督；在原始、unique、novel 子集及人评中比较。
+
+### Results／主要结果
+
+在 VCG 的描述性和多样性指标上超过所列基线；450 条推断的人类成对评价支持改进，但并未证明常识正确性达到人类水平。
+
+### Shortcomings／局限与可能不足
+
+【作者】主要只测 VCG，仍会产生与上下文无关的推断；【解读】过滤通用答案可能改变覆盖率，多样性不等于真实性。
+
+### 证据定位
+
+§3–4，表1–3；§4.3 人评；结论后局限。
+
+### Abstract
+
+Towards human-level visual understanding, visual commonsense generation has been introduced to generate commonsense inferences beyond images. However, current research on visual commonsense generation has overlooked an important human cognitive ability: generating descriptive and diverse inferences. In this work, we propose a novel visual commonsense generation framework, called DIVE, which aims to improve the descriptiveness and diversity of generated inferences. DIVE involves two methods, generic inference filtering and contrastive retrieval learning, which address the limitations of existing visual commonsense resources and training objectives. Experimental results verify that DIVE outperforms state-ofthe-art models for visual commonsense generation in terms of both descriptiveness and diversity, while showing a superior quality in generating unique and novel inferences. Notably, DIVE achieves human-level descriptiveness and diversity on Visual Commonsense Graphs. Furthermore, human evaluations confirm that DIVE aligns closely with human judgments on descriptiveness and diversity.
+
+<a id="p017"></a>
+## P017 · Exploring Defeasibility in Causal Reasoning
+
+- **作者**：Shaobo Cui; Lazar Milikic; Yiyang Feng; Mete Ismayilzada; Debjit Paul; Antoine Bosselut; Boi Faltings
+- **时间**：本地版本：2024-06-27（arXiv:2401.03183v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：Findings of ACL 2024，pp.6433–6452（官方记录核验）。 [ACL Anthology记录](https://aclanthology.org/2024.findings-acl.384/)
+- **论文链接**：[arXiv本地版本 2401.03183v2](https://arxiv.org/abs/2401.03183v2)
+- **项目／代码／数据**：[代码：cui-shaobo/defeasibility-in-causality](https://github.com/cui-shaobo/defeasibility-in-causality)
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：20页；SHA-256：`86878994aeac20a87a1e4ff2d654bf615daf836681fdd1cf128fdaa7b2919652`
+
+### 中文摘要
+
+研究新信息如何增强或削弱常识因果关系，提出 δ-CAUSAL 与 CESAR 评分。
+
+### 核心贡献
+
+约 11K 事件、10 个领域的可撤销因果数据；测量加入 supporter/defeater 后因果强度变化。
+
+### 实现边界
+
+文本常识因果关系的相对变化评价，不是通过干预数据估计因果效应。
+
+### Method／方法
+
+构造原因—结果及支持/反驳论据；以 token 级因果关联和注意力构建 CESAR，另测论据生成。
+
+### Results／主要结果
+
+捕捉强度变化的指标从基线 47.2% 提高到 80.1%，相对提升 69.7%；GPT-3.5 生成支持/反驳论据的人评分别比人类低 4.5/10.7 点。
+
+### Shortcomings／局限与可能不足
+
+【作者】分数用于定量解释存在限制，领域覆盖待扩展；【解读】基于语言关联的强度并非已校准的因果概率。
+
+### 证据定位
+
+摘要；§5 CESAR；§6；Limitations。
+
+### Abstract
+
+Defeasibility in causal reasoning implies that the causal relationship between cause and effect can be strengthened or weakened. Namely, the causal strength between cause and effect should increase or decrease with the incorporation of strengthening arguments (supporters) or weakening arguments (defeaters), respectively. However, existing works ignore defeasibility in causal reasoning and fail to evaluate existing causal strength metrics in defeasible settings. In this work, we present δ-CAUSAL, the first benchmark dataset for studying defeasibility in causal reasoning. δ-CAUSAL includes around 11K events spanning ten domains, featuring defeasible causality pairs, namely, cause-effect pairs accompanied by supporters and defeaters. We further show that current causal strength metrics fail to reflect the change of causal strength with the incorporation of supporters or defeaters in δ-CAUSAL. To this end, we propose CESAR (Causal Embedding a Ssociation with Attention Rating), a metric that measures causal strength based on token-level causal relationships. CESAR achieves a significant 69.7% relative improvement over existing metrics, increasing from 47.2% to 80.1% in capturing the causal strength change brought by supporters and defeaters. We further demonstrate even Large Language Models (LLMs) like GPT-3.5 still lag 4.5 and 10.7 points behind humans in generating supporters and defeaters, emphasizing the challenge posed by δ-CAUSAL.
+
+<a id="p018"></a>
+## P018 · Learning Iterative Reasoning through Energy Diffusion
+
+- **作者**：Yilun Du; Jiayuan Mao; Joshua Tenenbaum
+- **时间**：本地版本：2024-06-17（arXiv:2406.11179v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：ICML 2024（PDF 明示）
+- **论文链接**：[arXiv本地版本 2406.11179v1](https://arxiv.org/abs/2406.11179v1)
+- **项目／代码／数据**：[项目/演示页面](https://energy-based-model.github.io/ired)
+
+- **主题**：世界机制与演化
+- **PDF版本**：13页；SHA-256：`c68d47bc3b18df31bf9e8dc7aff3a0ea46cf4a94f6a634102cbad1e7462c8771`
+
+### 中文摘要
+
+IRED 通过退火能量景观与扩散训练提升迭代推理，允许测试时增加优化计算。
+
+### 核心贡献
+
+结合分数匹配与能量监督，降低 IREM 训练不稳定和优化困难。
+
+### 实现边界
+
+连续算法、数独、图连通和离散规划；未扩展验证到通用语言推理。
+
+### Method／方法
+
+学习多噪声级能量函数，用对比监督塑造低能量正确解；推理时沿退火景观迭代梯度优化。
+
+### Results／主要结果
+
+数独同分布/更难测试准确率为 99.4%/62.1%，IREM 为 93.5%/24.6%，RRN 为 99.8%/28.6%；说明主要优势在更难分布，非所有设置最优。
+
+### Shortcomings／局限与可能不足
+
+【作者】仍需许多梯度步，对需要中间记忆的任务可能不足；【解读】测试时扩算与鲁棒全局求解不同。
+
+### 证据定位
+
+§3；§4.2 表格 p7；§5 Conclusion and Discussions。
+
+### Abstract
+
+We introduce iterative reasoning through energy diffusion (IRED), a novel framework for learning to reason for a variety of tasks by formulating reasoning and decision-making problems with energy-based optimization. IRED learns energy functions to represent the constraints between input conditions and desired outputs. After training, IRED adapts the number of optimization steps during inference based on problem difficulty, enabling it to solve problems outside its training distribution — such as more complex Sudoku puzzles, matrix completion with large value magnitudes, and path finding in larger graphs. Key to our method’s success is two novel techniques: learning a sequence of annealed energy landscapes for easier inference and a combination of score function and energy landscape supervision for faster and more stable training. Our experiments show that IRED outperforms existing methods in continuous-space reasoning, discrete-space reasoning, and planning tasks, particularly in more challenging scenarios. Code and visualizations are at https://energy-based-model. github.io/ired.
+
+<a id="p019"></a>
+## P019 · NL-EYE: Abductive NLI for Images
+
+- **作者**：Mor Ventura; Michael Toker; Nitay Calderon; Zorik Gekhman; Yonatan Bitton; Roi Reichart
+- **时间**：本地版本：2024-10-03（arXiv:2410.02613v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：本地稿标注 Under review；arXiv v1：2024-10-03；不据此认定已被某会议接收
+- **论文链接**：[arXiv本地版本 2410.02613v1](https://arxiv.org/abs/2410.02613v1)
+- **项目／代码／数据**：[项目/演示页面](https://venturamor.github.io/NLEye/)
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：27页；SHA-256：`45dd19e417d1745940b12cc81023a0b7891e578e4bcfc24b69fe07fdc4032a67`
+
+### 中文摘要
+
+把溯因 NLI 扩展到多图输入，要求比较后果/原因图像的合理性并解释选择。
+
+### 核心贡献
+
+350 个三元组、1,050 张人工策划合成图，覆盖物理、功能、逻辑、情绪、文化和社会推理。
+
+### 实现边界
+
+受控合成图像比较任务；事故预防和生成视频验证是潜在应用，未作为系统实现验证。
+
+### Method／方法
+
+人工撰写场景并迭代文生图；比较 triplet/pair 设置、合理性预测及解释，分析纯视觉和文本替代条件。
+
+### Results／主要结果
+
+被测 VLM 在多项设置接近随机基线，人类在合理性和解释质量上明显更好；结果限于本地版本使用的模型与测试集。
+
+### Shortcomings／局限与可能不足
+
+【作者】常识标签存在文化/社会偏差，合成图仍可能含敏感内容；【解读】样本小、图像生成伪影与推理难度可能耦合。
+
+### 证据定位
+
+摘要；§2–4；结果 §5；失败分析 §6；Ethics。
+
+### Abstract
+
+Will a Visual Language Model (VLM)-based bot warn us about slipping if it detects a wet floor? Recent VLMs have demonstrated impressive capabilities, yet their ability to infer outcomes and causes remains underexplored. To address this, we introduce NL-E YE, a benchmark designed to assess VLMs’ visual abductive reasoning skills. NL-E YE adapts the abductive Natural Language Inference (NLI) task to the visual domain, requiring models to evaluate the plausibility of hypothesis images based on a premise image and explain their decisions. NL-E YE consists of 350 carefully curated triplet examples (1,050 images) spanning diverse reasoning categories: physical, functional, logical, emotional, cultural, and social. The data curation process involved two steps—writing textual descriptions and generating images using text-to-image models, both requiring substantial human involvement to ensure high-quality and challenging scenes. Our experiments show that VLMs struggle significantly on NL-E YE, often performing at random baseline levels, while humans excel in both plausibility prediction and explanation quality. This demonstrates a deficiency in the abductive reasoning capabilities of modern VLMs. NL-E YE represents a crucial step toward developing VLMs capable of robust multimodal reasoning for real-world applications, including accident-prevention bots and generated video verification.
+
+<a id="p020"></a>
+## P020 · ViCor: Bridging Visual Understanding and Commonsense Reasoning with Large Language Models
+
+- **作者**：Kaiwen Zhou; Kwonjoon Lee; Teruhisa Misu; Xin Eric Wang
+- **时间**：本地版本：2024-05-17（arXiv:2310.05872v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：Findings of ACL 2024，pp.10783–10795（官方记录核验）；本地末位作者名Xin Eric Wang，ACL记录简写Xin Wang。 [ACL Anthology记录](https://aclanthology.org/2024.findings-acl.640/)
+- **论文链接**：[arXiv本地版本 2310.05872v2](https://arxiv.org/abs/2310.05872v2)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：12页；SHA-256：`4503d215534a2016f3544189c73da3f8d25b8d674ba4dd04c05280d32364d827`
+
+### 中文摘要
+
+区分直接视觉理解与超出画面的常识推断，让 LLM 选择并指挥合适的视觉处理路线。
+
+### 核心贡献
+
+任务分类加主动视觉取证的 VLM/LLM 协作流程。
+
+### 实现边界
+
+VCR 和 A-OKVQA 四选一；不做域内微调，但依赖多个预训练模型及 in-context 示例。
+
+### Method／方法
+
+先从图像描述评估候选；不确定时由 LLM 分类为 VCU/VCI，调用 BLIP2 直接匹配或询问关键视觉因素，再重新推理。
+
+### Results／主要结果
+
+在论文所测无需域内微调的方法中表现最好；分析中 VCU 的 VLM/LLM+caption 平均准确率 63.6%/56.0%，VCI 为 50.5%/53.6%。
+
+### Shortcomings／局限与可能不足
+
+【作者】文本沟通丢失视觉细节、仍落后最佳监督模型；VCR 主方法比较仅 500 个样本，受 GPT-4 调用成本限制。
+
+### 证据定位
+
+§4；§5.1–5.2；§6；§8。
+
+### Abstract
+
+In our work, we explore the synergistic capabilities of pre-trained vision-and-language models (VLMs) and large language models (LLMs) on visual commonsense reasoning (VCR) problems. We find that VLMs and LLMs-based decision pipelines are good at different kinds of VCR problems. Pre-trained VLMs exhibit strong performance for problems involving understanding the literal visual content, which we noted as visual commonsense understanding (VCU). For problems where the goal is to infer conclusions beyond image content, which we noted as visual commonsense inference (VCI), VLMs face difficulties, while LLMs, given sufficient visual evidence, can use commonsense to infer the answer well. We empirically validate this by letting LLMs classify VCR problems into these two categories and show the significant difference between VLM and LLM with image caption decision pipelines on two subproblems. Moreover, we identify a challenge with VLMs’ passive perception, which may miss crucial context information, leading to incorrect reasoning by LLMs. Based on these, we suggest a collaborative approach, named ViCor, where pre-trained LLMs serve as problem classifiers to analyze the problem category, then either use VLMs to answer the question directly or actively instruct VLMs to concentrate on and gather relevant visual elements to support potential commonsense inferences. We evaluate our framework on two VCR benchmark datasets and outperform all other methods that do not require in-domain fine-tuning.
+
+<a id="p021"></a>
+## P021 · Black Swan: Abductive and Defeasible Video Reasoning in Unpredictable Events
+
+- **作者**：Aditya Chinchure; Sahithya Ravi; Raymond Ng; Vered Shwartz; Boyang Li; Leonid Sigal
+- **时间**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：CVPR 2025（PDF 元数据及官方记录）
+- **项目／代码／数据**：[项目/演示页面](https://blackswan.cs.ubc.ca)
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：10页；SHA-256：`91efca47ea0eadf531cb7523e3cf6f4016d01a79de26626f2b5748c87ecfc46d`
+
+### 中文摘要
+
+以反常视频事件检验模型能否解释隐藏事件，以及获得新证据后修正原先假设。
+
+### 核心贡献
+
+BlackSwanSuite 包含 1,655 个视频、超过 3,800 个选择题、4,900 个生成题和 6,700 个是非题。
+
+### 实现边界
+
+通过遮蔽或揭示视频片段构建 Forecaster/Detective/Reporter；是评测基准，未提出训练后消除缺陷的新模型。
+
+### Method／方法
+
+分阶段给出视觉证据，评估溯因和可撤销推理；使用选择题准确率、CLIP/LLM 生成指标及人类评价。
+
+### Results／主要结果
+
+表2 Detective MCQ：GPT-4o 65.1%、人类 90.0%，相差 24.9 个百分点；Reporter Y/N 为 60.1% vs 92.0%。注意本地表2图注与表头存在任务名称不一致，以上按表头及正文解释。
+
+### Shortcomings／局限与可能不足
+
+【解读】反常事件样本有选择偏差，感知失败与推理失败相互影响；开放式解释评价依赖参考与评价器。
+
+### 证据定位
+
+§3–5；表2和 §6.1；§7–8。
+
+### Abstract
+
+The commonsense reasoning capabilities of visionlanguage models (VLMs), especially in abductive reasoning and defeasible reasoning, remain poorly understood. Most benchmarks focus on typical visual scenarios [ 1, 23, 42], making it difficult to discern whether model performance stems from keen perception and reasoning skills, or reliance on pure statistical recall. We argue that by focusing on atypical events in videos, clearer insights can be gained on the core capabilities of VLMs. Explaining and understanding such out-of-distribution events requires models to extend beyond basic pattern recognition and regurgitation of their prior knowledge. To this end, we introduce Black- SwanSuite, a benchmark for evaluating VLMs’ ability to reason about unexpected events through abductive and defeasible tasks. Our tasks artificially limit the amount of visual information provided to models while questioning them about hidden unexpected events, or provide new visual information that could change an existing hypothesis about the event. We curate a comprehensive benchmark suite comprising over 3,800 MCQ, 4,900 generative and 6,700 yes/no questions, spanning 1,655 videos. After extensively evaluating various state-of-the-art VLMs, including GPT-4o and Gemini 1.5 Pro, as well as open-source VLMs such as LLaVA-Video, we find significant performance gaps of up to 32% from humans on these tasks. Our findings reveal key limitations in current VLMs, emphasizing the need for enhanced model architectures and training strategies. Our data and leaderboard is available at https://blackswan.cs.ubc.ca.
+
+<a id="p022"></a>
+## P022 · Enabling Self-Improving Agents to Learn at Test Time With Human-In-The-Loop Guidance
+
+- **作者**：Yufei He; Ruoyu Li; Alex Chen; Yue Liu; Yulin Chen; Yuan Sui; Cheng Chen; Yi Zhu; Luca Luo; Frank Yang; Bryan Hooi
+- **时间**：本地版本：2025-10-10（arXiv:2507.17131v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：EMNLP 2025 Industry Track，pp.1625–1653（官方记录核验）；正文结果按本地arXiv v2。 [ACL Anthology记录](https://aclanthology.org/2025.emnlp-industry.115/)
+- **论文链接**：[arXiv本地版本 2507.17131v2](https://arxiv.org/abs/2507.17131v2)
+- **项目／代码／数据**：[代码：yf-he/aria](https://github.com/yf-he/aria)
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：30页；SHA-256：`9a42692cacd30f0379aaa6d69bbbc4370208f53e0c08516c6d8fe84cd268ce0b`
+
+### 中文摘要
+
+ARIA 识别知识缺口、向专家求助并维护带时间戳的知识库，以适应运行中变化的规则。
+
+### 核心贡献
+
+将主动询问、冲突消解和时效性知识更新结合，用于动态名称筛查与合同理解。
+
+### 实现边界
+
+更新主要是外部知识库；TikTok Pay 部署和用户覆盖是论文自述，不能将平台月活当作实验人数；公开 CUAD 实验用 LLM 模拟专家。
+
+### Method／方法
+
+自对话评估不确定性，在查询预算内请求解释/纠错；抽取知识、加时间戳，检测冲突并澄清后检索用于后续决策。
+
+### Results／主要结果
+
+真实序列测试为 11,846 例（156 阳性）；CUAD 在 B=2000 时 GPT-4o+ARIA 准确率 0.6358，静态模型 0.4872，RAG 0.5735。
+
+### Shortcomings／局限与可能不足
+
+【作者】依赖专家反馈质量和预算，运行开销未充分评测；【解读】模拟专家与人工长期使用存在差异。
+
+### 证据定位
+
+§4；表1；§6.1–6.2/表4；Limitations。
+
+### Abstract
+
+Large language model (LLM) agents often struggle in environments where rules and required domain knowledge frequently change, such as regulatory compliance and user risk screening. Current approaches—like offline fine-tuning and standard prompting—are insufficient because they cannot effectively adapt to new knowledge during actual operation. To address this limitation, we propose theAdaptive ReflectiveInteractiveAgent (ARIA) 1, an LLM agent framework designed specifically to continuously learn updated domain knowledge at test time. ARIA assesses its own uncertainty through structured self-dialogue, proactively identifying knowledge gaps and requesting targeted explanations or corrections from human experts. It then systematically updates an internal, timestamped knowledge repository with provided human guidance, detecting and resolving conflicting or outdated knowledge through comparisons and clarification queries. We evaluate ARIA on the realistic customer due diligence name screening task on TikTok Pay, alongside publicly available dynamic knowledge tasks. Results demonstrate significant improvements in adaptability and accuracy compared to baselines using standard offline fine-tuning and existing self-improving agents.ARIA is deployed within TikTok Pay serving over 150 million monthly active users, confirming its practicality and effectiveness for operational use in rapidly evolving environments.
+
+<a id="p023"></a>
+## P023 · Generalizable Reasoning through Compositional Energy Minimization
+
+- **作者**：Alexandru Oarga; Yilun Du
+- **时间**：本地版本：2025-10-23（arXiv:2510.20607v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：NeurIPS 2025 Main Conference Track（官方论文集核验）。 [NeurIPS官方论文集](https://proceedings.neurips.cc/paper_files/paper/2025/hash/7b22ed7325629fd4c041d47139410fd9-Abstract-Conference.html)
+- **论文链接**：[arXiv本地版本 2510.20607v1](https://arxiv.org/abs/2510.20607v1)
+- **项目／代码／数据**：[项目/演示页面](https://alexoarga.github.io/compositional_reasoning/)
+
+- **主题**：世界机制与演化
+- **PDF版本**：22页；SHA-256：`26f0122c9977bee78286c8587ae868a3fe2db86dc60f7dabe4a4710c6ac3f5f9`
+
+### 中文摘要
+
+先学习小子问题的能量函数，再在测试时组合约束求解更大、更复杂的问题。
+
+### 核心贡献
+
+组合能量景观与 Parallel Energy Minimization（PEM），支持增加约束和计算预算。
+
+### 实现边界
+
+N-Queens、3-SAT、图着色和填字；子问题分解由任务结构提供，不是自动发现任意问题分解。
+
+### Method／方法
+
+扩散与对比损失训练局部能量函数；求和形成全局目标，用多个并行候选进行能量最小化和筛选。
+
+### Results／主要结果
+
+只用一个 8 皇后训练实例时，P=1024 的方法在 100 次生成中得到 97 个有效解，表1最强比较设置为 41 个。
+
+### Shortcomings／局限与可能不足
+
+【作者】高斯初始化/增量限制，图着色仍未充分达到最优；【解读】并行采样成本显著，不能把 97% 视为单一低成本轨迹成功率。
+
+### 证据定位
+
+§3；表1 p6；§4；§5。
+
+### Abstract
+
+Generalization is a key challenge in machine learning, specifically in reasoning tasks, where models are expected to solve problems more complex than those encountered during training. Existing approaches typically train reasoning models in an end-to-end fashion, directly mapping input instances to solutions. While this allows models to learn useful heuristics from data, it often results in limited generalization beyond the training distribution. In this work, we propose a novel approach to reasoning generalization by learning energy landscapes over the solution spaces of smaller, more tractable subproblems. At test time, we construct a global energy landscape for a given problem by combining the energy functions of multiple subproblems. This compositional approach enables the incorporation of additional constraints during inference, allowing the construction of energy landscapes for problems of increasing difficulty. To improve the sample quality from this newly constructed energy landscape, we introduce Parallel Energy Minimization (PEM). We evaluate our approach on a wide set of reasoning problems. Our method outperforms existing state-of-the-art methods, demonstrating its ability to generalize to larger and more complex problems. Project website can be found at:https://alexoarga.github.io/compositional_reasoning/
+
+<a id="p024"></a>
+## P024 · Nested Learning: The Illusion of Deep Learning Architecture
+
+- **作者**：Ali Behrouz; Meisam Razaviyayn; Peilin Zhong; Vahab Mirrokni
+- **时间**：本地版本：2025-12-31（arXiv:2512.24695v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：NeurIPS 2025 Main Conference Track（官方论文集核验）；正式题名末词Architectures为复数，本地首页Architecture为单数。 [NeurIPS官方论文集](https://proceedings.neurips.cc/paper_files/paper/2025/hash/4309616aaed8e848009bc4a7ef73b493-Abstract-Conference.html)
+- **论文链接**：[arXiv本地版本 2512.24695v1](https://arxiv.org/abs/2512.24695v1)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化、XR与人机协作
+- **PDF版本**：52页；SHA-256：`e87a9ce82ff24e96f55b83fb9713a5d6fc9e4a1a232c12d42da49c10022ed891`
+
+### 中文摘要
+
+把网络、优化器和记忆统一为不同更新频率的嵌套优化过程，并据此设计连续记忆系统和 Hope。
+
+### 核心贡献
+
+提出 NL 视角、表达力更强的优化器、自修改学习模块和 Continuum Memory System。
+
+### 实现边界
+
+提供理论重述与具体原型实验；作者明确表示未普遍解决灾难性遗忘。标题按首页单数 Architecture，元数据为 Architectures。
+
+### Method／方法
+
+将梯度/上下文压缩解释为关联记忆；设计多个时间尺度更新的 MLP 记忆、M3 优化器，以及结合自指 Titans 的 Hope。
+
+### Results／主要结果
+
+在语言建模、知识更新、形式语言和长上下文任务中展示收益；如表1 16K UUID 检索 Hope 24.8%、Titans 21.2%、Transformer 40.8%，说明优势取决于任务，非全面领先。
+
+### Shortcomings／局限与可能不足
+
+【作者】有限容量的压缩仍带来遗忘；【解读】新概念的统一性不等于普适能力保证，需分别评价各组件、参数量和训练预算。
+
+### 证据定位
+
+§3–8；§9、表1–5；§10 的 Is Catastrophic Forgetting Solved?。
+
+### Abstract
+
+Over the last decades, developing more powerful neural architectures and simultaneously designing optimization algorithms to effectively train them have been the core of research efforts to enhance the capability of machine learning models. Despite the recent progresses, particularly in developing Language Models (LMs), there are fundamental challenges and unanswered questions about how such models cancontinually learn/memorize, self-improve, and find effective solutions. In this paper, we present a new learning paradigm, called Nested Learning (NL), that coherently represents a machine learning model with a set of nested, multi-level, and/or parallel optimization problems, each of which with its own “context flow”. Through the lenses of NL, existing deep learning methods learns from data throughcompressingtheir own context flow, andin-context learningnaturally emerges in large models. NL suggests a philosophy to design more expressive learning algorithms with more “levels”, resulting in higher-order in-context learning and potentially unlocking effective continual learning capabilities. In addition to its neuro-scientific motivation, we advocate for NL by presenting three core contributions: (1) Expressive Optimizers: We show that known gradient-based optimizers, such as Adam, SGD with Momentum, etc., are in fact associative memory modules that aim to compress the gradients’ information (by gradient descent). Building on this insight, we present other “more expressive" optimizers with deep memory and/or more powerful learning rules; (2) Self-Modifying Learning Module: Taking advantage of NL’s insights on learning algorithms, we present a sequence model that learns how to modify itself by learning its own update algorithm; and (3) Continuum Memory System: We present a new formulation for memory system that generalizes the traditional viewpoint of “long-term/short-term memory”. Combining our self-modifying sequence model with the continuum memory system, we present a continual learning module, calledHope, showing promising results in language modeling, knowledge incorporation, and few-shot generalization tasks, continual learning, and long-context reasoning tasks.
+
+<a id="p025"></a>
+## P025 · Reasoning with Sampling: Your Base Model is Smarter Than You Think
+
+- **作者**：Aayush Karan; Yilun Du
+- **时间**：本地版本：2025-10-16（arXiv:2510.14901v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：arXiv:2510.14901v1（本地版本）；正式会议/期刊未核实
+- **论文链接**：[arXiv本地版本 2510.14901v1](https://arxiv.org/abs/2510.14901v1)
+- **项目／代码／数据**：[项目/演示页面](https://aakaran.github.io/reasoning_with_sampling/)；[代码：aakaran/reasoning-with-sampling](https://github.com/aakaran/reasoning-with-sampling)
+
+- **主题**：世界机制与演化、AI方法与评测
+- **PDF版本**：20页；SHA-256：`8f029968f20292b320dda95d253911a187e34a18d33aa6cdc65883b9cc1a47d4`
+

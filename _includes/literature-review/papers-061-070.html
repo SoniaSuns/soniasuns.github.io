@@ -1,0 +1,945 @@
+<details
+  class="lr-paper"
+  id="p070"
+  data-id="P070"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world"
+  data-new="false"
+  data-title="Impossible Videos"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P070 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Impossible Videos</span>
+    <span class="lr-authors">Zechen Bai; Hai Ci; Mike Zheng Shou</span>
+    <span class="lr-snippet">构建违背物理、生物、地理或社会常识的视频生成/理解基准，检查模型能否遵循不可能情景提示并识别视频异常。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p070" aria-label="P070的固定链接">#P070</a><span>26页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Zechen Bai; Hai Ci; Mike Zheng Shou</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-03-18（arXiv:2503.14378v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>arXiv:2503.14378v1，2025-03（本地版本）</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2503.14378v1">arXiv本地版本 2503.14378v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://showlab.github.io/Impossible-Videos/">项目/演示页面</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>构建违背物理、生物、地理或社会常识的视频生成/理解基准，检查模型能否遵循不可能情景提示并识别视频异常。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>IPV-Bench分类体系（4域14类）、IPV-TXT生成提示与IPV-VID理解数据及综合生成指标。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>目标是按提示生成反现实内容，不能把高分解读为更准确模拟物理；“不可能”包括语境化社会/地理常识，非全是严格物理定律。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>按分类设计提示、收集筛选生成视频，对生成质量/提示跟随及Video-LLM异常理解做评测。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>所测生成模型最佳Mochi1仅37.3%情形生成高质量不可能视频；高视觉质量与异常提示跟随常不一致；视频理解模型仍难联合时间动态和世界知识识别异常。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】人工分类、生成器分布和评判者影响结果；反现实题材不覆盖普通现实视频能力，模型排名仅对应本地版本评测。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §3–5，表2、§4.1 p.8。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Synthetic videos nowadays is widely used to complement data scarcity and diversity of realworld videos. Current synthetic datasets primarily
+          replicate real-world scenarios, leaving impossible, counterfactual and anti-reality video concepts underexplored. This work aims to answer
+          two questions: 1) Can today’s video generation models effectively follow prompts to create impossible video content? 2) Are today’s video
+          understanding models good enough for understanding impossible videos? To this end, we introduce IPV-B ENCH , a novel benchmark designed to
+          evaluate and foster progress in video understanding and generation. IPV-B ENCH is underpinned by a comprehensive taxonomy, encompassing 4
+          domains, 14 categories. It features diverse scenes that defy physical, biological, geographical, or social laws. Based on the taxonomy, a
+          prompt suite is constructed to evaluate video generation models, challenging their prompt following and creativity capabilities. In
+          addition, a video benchmark is curated to assess Video-LLMs on their ability of understanding impossible videos, which particularly requires
+          reasoning on temporal dynamics and world knowledge. Comprehensive evaluations reveal limitations and insights for future directions of video
+          models, paving the way for next-generation video models.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>5b6d3239d06f838dbbfd470e42f62eeea8a74a38479c99979b2fc1a3edf6918e</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p069"
+  data-id="P069"
+  data-years="2026"
+  data-year="2026"
+  data-topics="world xr"
+  data-new="false"
+  data-title="VideoMind: A Chain-of-LoRA Agent for Temporal-Grounded Video Reasoning"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P069 <span aria-hidden="true">/</span> 2026</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">VideoMind: A Chain-of-LoRA Agent for Temporal-Grounded Video Reasoning</span>
+    <span class="lr-authors">Ye Liu; Kevin Qinghong Lin; Chang Wen Chen et al.</span>
+    <span class="lr-snippet">用规划、时刻定位、验证、回答四个角色进行带时间证据的视频问答，以共享骨干上的多个LoRA切换角色。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p069" aria-label="P069的固定链接">#P069</a><span>26页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Ye Liu; Kevin Qinghong Lin; Chang Wen Chen; Mike Zheng Shou</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2026-02-21（arXiv:2503.13444v3）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>ICLR 2026（PDF页眉）；arXiv:2503.13444v3</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2503.13444v3">arXiv本地版本 2503.13444v3</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://videomind.github.io/">项目/演示页面</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>用规划、时刻定位、验证、回答四个角色进行带时间证据的视频问答，以共享骨干上的多个LoRA切换角色。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>角色化视频推理与Chain-of-LoRA，兼顾专门训练能力与显存效率，评估15个基准。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>各角色有专门训练数据/优化，并非零训练工具链；定位证据不代表严格因果解释，尚未结合音频。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>planner决定需要何种角色，grounder提出时间段，verifier筛选，answerer基于片段回答；同一Qwen2-VL骨干动态加载角色LoRA。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        表7（2B）Chain-of-LoRA峰值显存4.2GB，对独立四模型16.6GB，性能相同；Video-MME总分55.4对基础53.0，长视频46.3对43.1；NExT-GQA准确率71.4对69.6、mIoU28.6。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】角色与数据需精细优化，联合优化/音频待研究；【解读】多步定位验证仍增加延迟，收益跨基准不均匀。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §3–4、表7 p.9、结论局限。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Videos, with their unique temporal dimension, demand precise grounded understanding, where answers are directly linked to visual,
+          interpretable evidence. Despite significant breakthroughs in text-based reasoning with large language models, multi-modal reasoning –
+          especially for videos – remains limited. In this work, we fill this gap by introducingVideoMind, a novel video-language agent for
+          temporal-grounded video reasoning. Our method involves two key innovations: (1) We identify four essential capabilities for grounded video
+          reasoning and propose a role-based agentic workflow, comprising aplannerto coordinate roles, a grounderfor temporal event localization,
+          averifierto assess event candidates, and ananswererfor question answering. (2) To efficiently integrate these roles during inference, we
+          propose a novelChain-of-LoRAmechanism, where a unified base model with multiple LoRA adapters is leveraged to enable seamless role
+          switching, balancing efficiency and flexibility. Extensive experiments on 15 benchmarks across Grounded VideoQA, Video Temporal Grounding,
+          and General VideoQA tasks demonstrate the effectiveness of the proposed scheme in advancing video agent, test-time scaling, and long-form
+          video reasoning. Code, models, datasets, and demos are available athttps://videomind.github.io/.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>7e5ba7dcd966c8bd72980a005b98027b8f67c0a05fb6f778f241a2a0bf09e666</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p068"
+  data-id="P068"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world"
+  data-new="false"
+  data-title="TPDiff: Temporal Pyramid Video Diffusion Model"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P068 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">TPDiff: Temporal Pyramid Video Diffusion Model</span>
+    <span class="lr-authors">Lingmin Ran; Mike Zheng Shou</span>
+    <span class="lr-snippet">利用扩散前期高噪声下的帧冗余，以低帧率起步并逐阶段增加帧率，配合分阶段扩散训练降低视频生成成本。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p068" aria-label="P068的固定链接">#P068</a><span>11页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Lingmin Ran; Mike Zheng Shou</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-03-12（arXiv:2503.09566v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>arXiv:2503.09566v1，2025-03（本地预印本）</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2503.09566v1">arXiv本地版本 2503.09566v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://showlab.github.io/TPDiff/">项目/演示页面</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>利用扩散前期高噪声下的帧冗余，以低帧率起步并逐阶段增加帧率，配合分阶段扩散训练降低视频生成成本。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>时间金字塔扩散与stage-wise训练，统一减少训练和采样计算。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>需要相应训练/适配；验证以MiniFlux-vid、AnimateDiff等配置为主，不是任意预训练视频模型的无损即插即用加速。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>沿去噪过程分段求解概率流ODE，阶段间时序插值并对齐数据/噪声，仅末段使用完整帧率。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>30步采样：MiniFlux-vid20.79→12.18秒（1.71倍），AnimateDiff6.01→4.04秒（1.49倍）；训练速度约2/2.13倍，所评VBench多数指标保持或改善。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】速度依赖帧数/架构/硬件；早期低时间分辨率可能丢失快速运动信息，长视频/高动态真实需求的普遍质量保证未建立。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §3–4、表1–2、图5 pp.6–8。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          The development of video diffusion models unveils a significant challenge: the substantial computational demands. To mitigate this
+          challenge, we note that the reverse process of diffusion exhibits an inherent entropy-reducing nature. Given the inter-frame redundancy in
+          video modality, maintaining full frame rates in high-entropy stages is unnecessary. Based on this insight, we propose TPDiff, a unified
+          framework to enhance training and inference efficiency. By dividing diffusion into several stages, our framework progressively increases
+          frame rate along the diffusion process with only the last stage operating on full frame rate, thereby optimizing computational efficiency.
+          To train the multi-stage diffusion model, we introduce a dedicated training framework: stage-wise diffusion. By solving the partitioned
+          probability flow ordinary differential equations (ODE) of diffusion under aligned data and noise, our training strategy is applicable to
+          various diffusion forms and further enhances training efficiency. Comprehensive experimental evaluations validate the generality of our
+          method, demonstrating 50% reduction in training cost and 1.5x improvement in inference efficiency. Our project page is:
+          https://showlab.github.io/TPDiff/
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>6b838eac12b8bc1270dcdc00e5c80b63d18971a73a7554cd9d0f9f90206ced06</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p067"
+  data-id="P067"
+  data-years="2024"
+  data-year="2024"
+  data-topics="xr"
+  data-new="false"
+  data-title="τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P067 <span aria-hidden="true">/</span> 2024</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains</span>
+    <span class="lr-authors">Shunyu Yao; Noah Shinn; Pedram Razavi et al.</span>
+    <span class="lr-snippet">用模拟用户、领域规则和API数据库交互评估语言代理，检查最终数据库是否达成目标，并衡量多次执行都成功的可靠性。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">XR与人机协作</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p067" aria-label="P067的固定链接">#P067</a><span>50页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Shunyu Yao; Noah Shinn; Pedram Razavi; Karthik Narasimhan</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2024-06-17（arXiv:2406.12045v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>2024年arXiv预印本（本地版本）</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2406.12045v1">arXiv本地版本 2406.12045v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/sierra-research/tau-bench">代码：sierra-research/tau-bench</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>用模拟用户、领域规则和API数据库交互评估语言代理，检查最终数据库是否达成目标，并衡量多次执行都成功的可靠性。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>零售/航空服务任务及pass^k一致性指标，补充静态工具调用基准。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>用户由LLM模拟，后端为受控数据库；pass^k指k次都成功，和至少一次成功的pass@k相反；数据库结果匹配无法穷尽所有对话品质/规则违规。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>给代理政策与工具、模拟用户给需求，通过交互完成状态改变；匹配最终状态并重复运行估计一致成功率。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>表2 GPT-4o pass^1零售61.2%、航空35.2%，按领域平均48.2%；零售pass^8低于25%。因此摘要“&lt;50%”是跨领域平均，不是每个域都低于50%。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】两域、模拟用户和有限任务影响外部效度；成功依赖模型版本/提示/工具实现，最终状态评估也可能漏掉过程中错误。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §2–5、表2、图4。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Existing benchmarks do not test language agents on their interaction with human users or ability to follow domain-specific rules, both of
+          which are vital for deploying them in real world applications. We propose τ-bench, a benchmark emulating dynamic conversations between a
+          user (simulated by language models) and a language agent provided with domain-specific API tools and policy guidelines. We employ an
+          efficient and faithful evaluation process that compares the database state at the end of a conversation with the annotated goal state. We
+          also propose a new metric (pass^k) to evaluate the reliability of agent behavior over multiple trials. Our experiments show that even
+          state-of-the-art function calling agents (like gpt-4o) succeed on &lt; 50% of the tasks, and are quite inconsistent (pass^8 &lt; 25% in
+          retail). Our findings point to the need for methods that can improve the ability of agents to act consistently and follow rules reliably.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>0ce66a1763d698c61bb311c3c874bf593d1e9a5bfff11bb35f6f72b981f6da56</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p066"
+  data-id="P066"
+  data-years="2024"
+  data-year="2024"
+  data-topics="creation world xr"
+  data-new="false"
+  data-title="Let’s Verify Step by Step"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P066 <span aria-hidden="true">/</span> 2024</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Let’s Verify Step by Step</span>
+    <span class="lr-authors">Hunter Lightman; Vineet Kosaraju; Yura Burda et al.</span>
+    <span class="lr-snippet"
+      >比较对每一步推理给反馈的过程监督与只标记最终答案的结果监督，在数学推理中过程奖励模型更适合挑选可靠解答，并发布PRM800K人工标注。</span
+    >
+    <span class="lr-tags"
+      ><span class="lr-tag">创作与规则补全</span><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p066" aria-label="P066的固定链接">#P066</a><span>29页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd>
+        <p>
+          Hunter Lightman; Vineet Kosaraju; Yura Burda; Harri Edwards; Bowen Baker; Teddy Lee; Jan Leike; John Schulman; Ilya Sutskever; Karl Cobbe
+        </p>
+      </dd>
+      <dt>时间与版本</dt>
+      <dd><p>预印稿2023年；正式发表于ICLR 2024，本地版本具体修订日未明示</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          ICLR 2024（官方论文集核验）；本地为2023年较早预印稿。
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://proceedings.iclr.cc/paper_files/paper/2024/file/aca97732e30bcf1303bc22ac3924fd16-Paper-Conference.pdf"
+            >ICLR官方记录</a
+          >
+        </p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/openai/prm800k">代码：openai/prm800k</a></p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>比较对每一步推理给反馈的过程监督与只标记最终答案的结果监督，在数学推理中过程奖励模型更适合挑选可靠解答，并发布PRM800K人工标注。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>系统对比PRM/ORM、主动学习收集步骤标注及约80万条反馈数据集。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>主要训练奖励/排序模型，固定生成器进行best-of-N选择；作者明确没有用奖励模型对生成器做RL。78%是在代表性MATH测试子集、较大采样预算下的结果。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>人类逐步判断正确/错误/中性，训练步骤奖励模型；与自动最终答案标签训练的ORM和多数投票比较；主动选择高价值错误样本。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>最佳过程监督系统在所评MATH子集解出约78%；PRM随N增加优于ORM和多数投票；主动学习带来约2.6倍数据效率提升。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>
+        【作者/解读】数学域和可检查答案限制泛化；大规模PRM/ORM训练数据并非完全可比，小规模实验补充控制；人工步骤标注昂贵，多样本排序增加推理成本。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §2、§3–5、图3、§8；方法边界p.3。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          In recent years, large language models have greatly improved in their ability to perform complex multi-step reasoning. However, even
+          stateof-the-art models still regularly produce logical mistakes. To train more reliable models, we can turn either to outcome supervision,
+          which provides feedback for a final result, or process supervision, which provides feedback for each intermediate reasoning step. Given the
+          importance of training reliable models, and given the high cost of human feedback, it is important to carefully compare the both methods.
+          Recent work has already begun this comparison, but many questions still remain. We conduct our own investigation, finding that process
+          supervision significantly outperforms outcome supervision for training models to solve problems from the challenging MATH dataset. Our
+          process-supervised model solves 78% of problems from a representative subset of the MATH test set. Additionally, we show that active
+          learning significantly improves the efficacy of process supervision. To support related research, we also release PRM800K, the complete
+          dataset of 800,000 step-level human feedback labels used to train our best reward model.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>af32cabec7d40ca2d5b6bfc8ea28d6b5fdcf987eabb0843ca9a5a6f2371fdfaf</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p065"
+  data-id="P065"
+  data-years="2023"
+  data-year="2023"
+  data-topics="creation world xr"
+  data-new="false"
+  data-title="Human-in-the-Loop through Chain-of-Thought"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P065 <span aria-hidden="true">/</span> 2023</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Human-in-the-Loop through Chain-of-Thought</span>
+    <span class="lr-authors">Zefan Cai; Baobao Chang; Wenjuan Han</span>
+    <span class="lr-snippet">通过人类局部修改LLM推理链提升多步推理，并用成本—效用模型分析人工纠错投入的取舍。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">创作与规则补全</span><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p065" aria-label="P065的固定链接">#P065</a><span>20页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Zefan Cai; Baobao Chang; Wenjuan Han</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2023-06-23（arXiv:2306.07932v2）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd>
+        <p>
+          arXiv:2306.07932，首发2023-06-10；本地稿未标明正式会议。
+          <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2306.07932">arXiv记录</a>
+        </p>
+      </dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2306.07932v2">arXiv本地版本 2306.07932v2</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>通过人类局部修改LLM推理链提升多步推理，并用成本—效用模型分析人工纠错投入的取舍。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>Manual Correction System（MCS）与CAMLOP成本效用模型，将中间逻辑修正和人工成本一起评估。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>使用text-davinci-002及12个推理数据集；改善包含额外人工信息，不能等同模型自主推理提升；经济模型最优性仅相对其成本/效用假设。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>人工检查并修正推理子步骤，继续生成；可结合self-consistency；以Cobb–Douglas式效用与预算分析纠错策略。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>8个算术数据集MCS比CoT平均+4.68个百分点，结合self-consistency平均+6.39；GSM8K56.48→61.56→62.92（5次运行中位）；还评估常识/符号任务。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【解读】人工知识、纠错质量及时间计价会影响结论；旧单一骨干和有限任务限制对现今模型与真实人机协作的外推。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §3–4、表2–3、§5–6。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          While the emergence of powerful language models along with Chain-of-thought prompting has made automation more and more omnipresent, it
+          sometimes demonstrates its weakness in long-term or multi-step logical reasoning. For example, users don’t always get desirable answers for
+          complex mathematical problems without human involvement. Against this background, we present the Manual Correction System (MCS) — a
+          human-in-the-loop system enhanced by Chainof-Thought prompting, which explores how manual correction of sub-logics in rationales can improve
+          LLM’s reasoning performance. Moving one step forward, considering a system with human-in-the-loop involves more than having humans improve
+          performance but also controlling the cost. Therefore, we post a Costutility Analysis Model for Human-in-the-Loop systems (CAMLOP) based on
+          classical economics theory to analyze, quantify and balance the utility and the corresponding cost. We conduct experiments of MCS and CAMLOP
+          with twelve datasets. A significant advantage w.r.t cost and utility proves its superiority over strong baselines.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>0a48c6cfe64884bc4292a0b31e6fd639697b72ad6161f55fcdbc5369721205f6</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p064"
+  data-id="P064"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world xr"
+  data-new="false"
+  data-title="Causality Model for Semantic Understanding on Videos"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P064 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Causality Model for Semantic Understanding on Videos</span>
+    <span class="lr-authors">Yicong Li（李逸聪；学位作者）；导师Tat-Seng Chua</span>
+    <span class="lr-snippet"
+      >围绕视频关系检测与视频问答中的长尾、背景混淆和复杂时空结构，依次提出IVRD、IGV、EIGV和STR/TranSTR，研究因果建模与视觉证据选择。</span
+    >
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p064" aria-label="P064的固定链接">#P064</a><span>139页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Yicong Li（李逸聪；学位作者）；导师Tat-Seng Chua</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>本地版本：2025-03-16（arXiv:2503.12447v1）；正式发表时间如已核实，见下一项。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>National University of Singapore博士学位论文，封面2023；arXiv:2503.12447v1，2025-03-16上传；各章对应ACM MM/CVPR/ICCV等独立论文</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2503.12447v1">arXiv本地版本 2503.12447v1</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+      <dt>版本关系</dt>
+      <dd>
+        <p>
+          封面学位年份与arXiv上传年份不同；摘要中STR“question-irrelevant…as causal
+          patterns”与方法描述矛盾，按正文应理解为选择问题相关证据，保留原文不擅改。
+        </p>
+      </dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>围绕视频关系检测与视频问答中的长尾、背景混淆和复杂时空结构，依次提出IVRD、IGV、EIGV和STR/TranSTR，研究因果建模与视觉证据选择。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>四部分：关系原型与干预去偏；问题关键场景的不变定位；结合等变性的可解释定位；复杂长视频中关键帧和对象的时空选择。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>针对具体监督视频理解任务的结构建模与正则化；没有证实任意现实因果发现。作者明确缺少人类因果场景定位标注，主要由QA准确率间接验证定位质量。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>
+        IVRD以对象轨迹和关系原型降低对象—关系偏置；IGV置换环境保持答案不变；EIGV再要求因果场景/问题语义变化引发答案等变；TranSTR可微选择时刻/对象并改进候选答案解码。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        表3.2 ImageNet-VidVRD：mAP22.97对基线21.24，零样本mAP1.47对0.60；表4.2 IGV NExT-QA51.34对HGA50.01；表5.2
+        EIGV跨骨干/数据集提升1.3–5.2个百分点；表6.3 TranSTR NExT-QA61.5、MSVD47.1、MSRVTT43.1，表6.4
+        Causal-VidQA62.2对VGT55.4。不同章的骨干/设置不同，不能视为单一连续受控消融。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>
+        【作者】缺乏直接视觉因果定位评估、迁移到大型VLM计算开销高、3D与现实复杂场景待探索；【解读】背景置换和因果图是建模假设，QA改进本身不证明识别真实因果机制。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>摘要PDF pp.9–11；表3.2 p.46、表4.2–3 p.71、表5.2 p.91、表6.3–4 p.114；结论pp.120–123。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          After a decade of prosperity, the development of video understanding has reached a critical juncture, where the sole reliance on massive
+          data and complex architectures is no longer a one-size-fits-all solution to all situations. The presence of ubiquitous data imbalance
+          hampers DNNs from effectively learning the underlying causal mechanisms, leading to significant performance drops when encountering
+          distribution shifts, such as long-tail imbalances and perturbed imbalances. This realization has prompted researchers to seek alternative
+          methodologies to capture causal patterns in video data. To tackle these challenges and increase the robustness of DNNs, causal modeling
+          emerged as a principle to discover the true causal patterns behind the observed correlations. This thesis focuses on the domain of semantic
+          video understanding and explores the potential of causal modeling to advance two fundamental tasks: Video Relation Detection (VidVRD) and
+          Video Question Answering (VideoQA). In summary, the major contributions of this thesis are as follows: • We propose an interventional video
+          relation detection method , named IVRD, to address the long-tail imbalance of relation in VidVRD, where tail relations, despite being
+          informative, are difficult to predict due to their scarcity in the dataset. Specifically, we form a set of relation prototypes in a
+          hierarchical manner, which forces the relation reasoning module to focus on the visual content of dynamic interactions between entities
+          rather than relying on spurious correlations between objects and relation labels. By incorporating causal reasoning, IVRD offers a promising
+          direction for improving video understanding in the presence of long-tail imbalances, enabling models to better generalize to real-world
+          scenarios where rare or infrequent relations may play a crucial role in the overall understanding of the scene. • We introduce the invariant
+          grounding for VideoQA , dubbed as IGV, a model-agnostic learning framework that addresses the negative effect induced by the spurious
+          correlations in the answer-environment. In essence, IGV discovers the causal reasoning pattern by grounding the questioncritical (causal)
+          scene. Specifically, it leverages the fact that the relations between causal scenes and answers are invariant regardless of changes in the
+          environment, and the removal of causal scenes should cause failure in answering the question. By grounding these critical scenes, IGV
+          compels the VideoQA models to focus on the essential visual content for accurate reasoning, while shielding them from the negative influence
+          of the environment, thus significantly improving the reasoning ability of the backbone models. • We introduce the equivariant grounding for
+          VideoQA , EIGV, to further advance the robustness and visual explainability in a model-agnostic manner. Built on top of IGV, EIGV
+          additionally incorporates equivariance, which encourages the answering process to be sensitive to the semantic changes in the causal scene
+          and question. In comparison, invariant grounding enforces the answering to be insensitive to changes in the environmental scene. As a
+          result, these two regularizations work collaboratively to distinguish the causal scene from the environment while providing more
+          transparency by presenting the visual-linguistic alignment. By combining the strengths of both invariant and equivariant grounding, EIGV
+          creates a more robust and explainable framework for VideoQA. • We discover spatio-Temporal rationales for VideoQA, which solve the low
+          accuracy on samples with long video and multiple objects ( i.e.complex VideoQA). Since current VideoQA practices (including pretrained
+          models, e.g.SeVila [158]) are mostly trained with short video clips ( ∼15s) with few entities (∼2), they tend to suffer from poor
+          transferability to complex video (over 80s and 5 objects). The reason behind is that long videos inevitably introduce vast redundancy and
+          spurious correlations due to the presence of numerous question-irrelevant environmental objects. Confronting this challenge, we first
+          highlight the importance of modeling question-critical temporal moments and spatial objects, and then introduce Spatio-Temporal
+          Rationalization (STR), which utilizes a differentiable selection module to adaptively gather question-critical moments and objects through
+          cross-modal interaction. Coupled with a more reasonable candidate answer decoding strategy, STR effectively identifies question-irrelevant
+          frames and objects as causal patterns, leading to improved predictions, especially in complex scenarios. A limitation of this thesis
+          pertains to the evaluation of the identified causal scenes. Throughout the research, we have relied on the overall Question Answering (QA)
+          performance as an indirect indicator of the discovered causal scene’s quality, which is based on the rationale that a more accurate
+          localization of the causal scene can potentially yield richer question-relation visual cues, subsequently enhancing QA performance. However,
+          it is essential to acknowledge that a direct quantitative measure rooted in the causal scene would offer more compelling insights.
+          Regrettably, due to the absence of human-level grounding annotations, such a measurement remains absent in the current work. Therefore,
+          future endeavors will focus on establishing an evaluation benchmark specifically tailored to the causal scene, involving human annotations
+          on the visual elements that underpin the answering process. This initiative will contribute to a more comprehensive and rigorous assessment
+          of causal scene discovery. In summary, our contributions extend the frontiers of causal modeling in semantic video understanding, empowering
+          AI systems to grasp causal patterns and improve performance on challenging video understanding tasks.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>f9114bfd9eae7a7dc8539edb63337135da99bd93a5bc3319fd7cf0c0e06ad626</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p063"
+  data-id="P063"
+  data-years="2025"
+  data-year="2025"
+  data-topics="world"
+  data-new="false"
+  data-title="Large Language Models and Causal Inference in Collaboration: A Comprehensive Survey"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P063 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">Large Language Models and Causal Inference in Collaboration: A Comprehensive Survey</span>
+    <span class="lr-authors">Xiaoyu Liu; Paiheng Xu; Junda Wu et al.</span>
+    <span class="lr-snippet"
+      >从双向关系综述因果推断与LLM：因果方法帮助推理、公平安全、可解释性和多模态建模；LLM知识与生成能力帮助因果发现和效应估计。</span
+    >
+    <span class="lr-tags"
+      ><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p063" aria-label="P063的固定链接">#P063</a><span>17页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd>
+        <p>
+          Xiaoyu Liu; Paiheng Xu; Junda Wu; Jiaxin Yuan; Yifan Yang; Yuhang Zhou; Fuxiao Liu; Tianrui Guan; Haoliang Wang; Tong Yu; Julian McAuley;
+          Wei Ai; Furong Huang
+        </p>
+      </dd>
+      <dt>时间与版本</dt>
+      <dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>Findings of ACL: NAACL 2025，2025-04-29—05-04，pp.7683–7699</p></dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>从双向关系综述因果推断与LLM：因果方法帮助推理、公平安全、可解释性和多模态建模；LLM知识与生成能力帮助因果发现和效应估计。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>提供双向任务分类与方法梳理，组织因果视角下的LLM评测、干预和知识辅助推断。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>综述，没有提出统一因果求解器或新实验排行榜；文献中的因果保证依赖各自识别假设。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>按“因果推断→LLM”和“LLM→因果推断”组织研究，人工筛选相关论文/预印本并归纳挑战。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>主要产出为分类、研究对照和开放问题：因果知识、可识别性、模型偏差和评估可靠性仍需结合；无统一效应量可报告。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】领域快速发展，侧重关键工作覆盖而非穷尽检索，预印本质量由人工判断；【解读】不同因果任务与数据假设之间的结果不可直接横比。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §2–5、p.9 Limitations。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Causal inference has demonstrated significant potential to enhance Natural Language Processing (NLP) models in areas such as predictive
+          accuracy, fairness, robustness, and explainability by capturing causal relationships among variables. The rise of generative Large Language
+          Models (LLMs) has greatly impacted various language processing tasks. This survey focuses on research that evaluates or improves LLMs from a
+          causal view in the following areas: reasoning capacity, fairness and safety issues, explainability, and handling multimodality. Meanwhile,
+          LLMs can assist in causal inference tasks, such as causal relationship discovery and causal effect estimation, by leveraging their
+          generation ability and knowledge learned during pre-training. This review explores the interplay between causal inference frameworks and
+          LLMs from both perspectives, emphasizing their collective potential to further the development of more advanced and robust artificial
+          intelligence systems.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>c65902b8d31e407e95a5902d022c21236bf54757c131aea82c03d264e43e73ee</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p062"
+  data-id="P062"
+  data-years="2025"
+  data-year="2025"
+  data-topics="creation xr"
+  data-new="false"
+  data-title="InstructPipe: Generating Visual Blocks Pipelines with Human Instructions and LLMs"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P062 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">InstructPipe: Generating Visual Blocks Pipelines with Human Instructions and LLMs</span>
+    <span class="lr-authors">Zhongyi Zhou; Jing Jin; Vrushank Phadnis et al.</span>
+    <span class="lr-snippet">用自然语言生成Visual Blocks的ML可视化流水线，再由用户检查和编辑节点图，减少从空白画布寻找和连接节点的工作。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">创作与规则补全</span><span class="lr-tag">XR与人机协作</span
+      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p062" aria-label="P062的固定链接">#P062</a><span>22页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd>
+        <p>
+          Zhongyi Zhou; Jing Jin; Vrushank Phadnis; Xiuxiu Yuan; Jun Jiang; Xun Qian; Kristen Wright; Mark Sherwood; Jason Mayes; Jingtao Zhou; Yiyi
+          Huang; Zheng Xu; Yinda Zhang; Johnny Lee; Alex Olwal; David Kim; Ram Iyengar; Na Li; Ruofei Du
+        </p>
+      </dd>
+      <dt>时间与版本</dt>
+      <dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>CHI 2025，2025-04-26—05-01；DOI 10.1145/3706598.3713905</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3706598.3713905">DOI正式记录</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>用自然语言生成Visual Blocks的ML可视化流水线，再由用户检查和编辑节点图，减少从空白画布寻找和连接节点的工作。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>节点选择器、伪代码生成器与纠错编译器的模块化助手，结合技术评测及N=16用户研究。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>生成范围受已支持节点/API和解释器约束；不保证流水线语义完全正确，用户仍需理解和调试。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>LLM按指令选择节点→依据节点文档生成伪代码→解释器修复并编译JSON节点图→Visual Blocks交互修改。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        用户研究表2：完成时间中位203.5秒对304.5秒；交互次数中位5对16，均p&lt;.001；NASA-TLX六项中五项改善，心理需求未显著下降。论文“5倍”交互缩减来自其他评测条件，不能代替该用户研究的3.2倍。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】生成结果的理解与调试、精确提示编写会增加心理负担；语言与视觉思考切换有成本；有限节点及用户任务限制外推。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §3–5、§6.5、表2 p.9、§7–8。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Visual programming has the potential of providing novice programmers with a low-code experience to build customized processing pipelines.
+          Existing systems typically require users to build pipelines from scratch, implying that novice users are expected to set up and link
+          appropriate nodes from a blank workspace. In this paper, we introduce InstructPipe, an AI assistant for prototyping machine learning (ML)
+          pipelines with text instructions. We contribute two large language model (LLM) modules and a code interpreter as part of our framework. The
+          LLM modules generate pseudocode for a target pipeline, and the interpreter renders the pipeline in the node-graph editor for further
+          human-AI collaboration. Both technical and user evaluation (N=16) shows that InstructPipe empowers users to streamline their ML pipeline
+          workflow, reduce their learning curve, and leverage open-ended commands to spark innovative ideas.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>1c79bb8d2488e8d95ccebbb3496de4af2ac61c9a35d52e479d9b7237d307b410</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>
+<details
+  class="lr-paper"
+  id="p061"
+  data-id="P061"
+  data-years="2026"
+  data-year="2026"
+  data-topics="xr"
+  data-new="false"
+  data-title="AgentHands: Generating Interactive Hand Gestures for Spatially Grounded Agent Conversations in XR"
+>
+  <summary>
+    <span class="lr-paper-meta"
+      ><span>P061 <span aria-hidden="true">/</span> 2026</span><span class="lr-badges"></span
+    ></span>
+    <span class="lr-title">AgentHands: Generating Interactive Hand Gestures for Spatially Grounded Agent Conversations in XR</span>
+    <span class="lr-authors">Ziyi Liu; David Li; Zhongyi Zhou et al.</span>
+    <span class="lr-snippet">让XR会话助手以与语音同步、指向真实场景的虚拟手势解释对象、动作和位置，缩小语言指令与空间理解之间的差距。</span>
+    <span class="lr-tags"
+      ><span class="lr-tag">XR与人机协作</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
+    >
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p061" aria-label="P061的固定链接">#P061</a><span>24页 · 核对于 2026-09-15</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Ziyi Liu; David Li; Zhongyi Zhou; David Kim; Ruofei Du; Xun Qian</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2026年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>CHI 2026；DOI 10.1145/3772318.3790938</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd>
+        <p><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3772318.3790938">DOI正式记录</a></p>
+      </dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>让XR会话助手以与语音同步、指向真实场景的虚拟手势解释对象、动作和位置，缩小语言指令与空间理解之间的差距。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>形成手势设计分类并实现带GestureEvents的语言生成、解析和动画流水线。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>依赖轻量预扫描对象注册表，主要适合静态场景；手势实例来自人工编写的有限集合，并非任意动作生成或物理机器人操作。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>N=10形成性研究→LLM生成按词对齐的手势类型/参数→解析为时间戳姿态→Unity/OpenXR渲染；Galaxy XR、Gemini2.5Flash与语音识别/合成。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>
+        N=12被试内研究，定位对象评分6.50对4.58/7，参与感6.08对4.58，理解困难1.83对3.58；数值信息理解差异不显著。主要指标是体验问卷，未证明长期记忆或实际任务正确率提升。
+      </p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者】预注册静态场景、有限手势库、细粒度操作精度、文化和个性化适配不足；【解读】小样本短时语音基线比较，不能分离所有视觉/同步因素。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF §4.5、§6、图8 p.13、§7 pp.14–15。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en">
+        <p>
+          Communicating spatial tasks via text or speech creates “a mental mapping gap” that limits an agent’s expressiveness. Inspired by co-speech
+          gestures in face-to-face conversation, we proposeAgentHands, an LLM-powered XR system that equips agents with hands to render responses
+          clearer and more engaging. Guided by a design taxonomy distilled from a formative study (N=10), we implement a novel pipeline to generate
+          and render a hand agent that augments conversational responses with synchronized, space-aware, and interactive hand gestures: using a
+          meta-instruction,AgentHands generates verbal responses embedded withGestureEvents aligned to specific words; each event specifies gesture
+          type and parameters. At runtime, a parser converts events into time-stamped poses and motions, driving an animation system that renders
+          expressive hands synchronized with speech. In a within-subjects study (N=12), AgentHands increased engagement and made spatially grounded
+          conversations easier to follow compared to a speech-only baseline.
+        </p>
+      </div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>4e70cdb316ca2322b9d9f88e65c0f61e7650371854027fe51de20c96b656225c</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>

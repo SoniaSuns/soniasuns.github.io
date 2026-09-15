@@ -1,0 +1,1183 @@
+World models simulate future states of the world in response to different actions. They facilitate interactive content creation and provides a foundation for grounded, long-horizon reasoning. Current foundation models do not fully meet the capabilities of general world models: large language models (LLMs) are constrained by their reliance on language modality and their limited understanding of the physical world, while video models lack interactive action control over the world simulations. This paper makes a step towards building a general world model by introducing Pandora , a hybrid autoregressive-diffusion model that simulates world states by generating videos and allows real-time control with free-text actions. Pandora achieves domain generality, video consistency, and controllability through large-scale pretraining and instruction tuning. Crucially, Pandora bypasses the cost of training-from-scratch by integrating a pretrained LLM (7B) and a pretrained video model, requiring only additional lightweight finetuning. We illustrate extensive outputs by Pandora across diverse domains (indoor/outdoor, natural/urban, human/robot, 2D/3D, etc.). The results indicate great potential of building stronger general world models with larger-scale training.
+
+<a id="p107"></a>
+## P107 · Offline Reinforcement Learning for LLM Multi-step Reasoning
+
+- **作者**：Huaijie Wang; Shibo Hao; Hanze Dong; Shenao Zhang; Yilin Bao; Ziran Yang; Yi Wu
+- **时间**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：Findings of ACL 2025，2025-07-27—08-01，pp.8881–8893
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化、XR与人机协作、AI方法与评测
+- **PDF版本**：13页；SHA-256：`54bc06c0e9082ca1d952447839dd3ba3a39d109632f75bd5f0e1b4818d9458b2`
+
+### 中文摘要
+
+OREO用离线轨迹联合学习策略与价值函数，以soft Bellman方程进行细粒度信用分配，减少对成对偏好数据的依赖。
+
+### 核心贡献
+
+离线推理优化目标，可复用学到的价值函数指导测试时树搜索。
+
+### 实现边界
+
+不需要偏好对不等于不需要带奖励数据；价值模型可直接复用不代表搜索没有额外算力成本。
+
+### Method／方法
+
+最大熵RL下优化策略/价值的Bellman一致性，支持token或响应层次目标、迭代数据更新和价值引导搜索。
+
+### Results／主要结果
+
+Qwen1.5B GSM8K77.3%、MATH52.5%，SFT73.5/47.5；DeepSeekMath7B85.9/49.2；ALFWorld unseen79.1%、seen80.7%，SFT67.2/62.9。
+
+### Shortcomings／局限与可能不足
+
+【作者】部分消融/搜索仅1.5B，任务主要数学与ALFWorld，代码/浏览待验证；【解读】离线分布覆盖与价值误差会限制策略改进。
+
+### 证据定位
+
+PDF §3–5、表1–2 p.7、§7 p.9。
+
+### Abstract
+
+Improving the multi-step reasoning ability of large language models (LLMs) with offline reinforcement learning (RL) is essential for quickly adapting them to complex tasks. While Direct Preference Optimization (DPO) has shown promise in aligning LLMs with human preferences, it is less suitable for multi-step reasoning tasks because (1) DPO relies on paired preference data, which is not readily available for multi-step reasoning tasks, and (2) it treats all tokens uniformly, making it ineffective for credit assignment in multi-step reasoning tasks, which often come with sparse reward. In this work, we propose OREO (Offline REasoning Optimization), an offline RL method for enhancing LLM multi-step reasoning. Building on insights from previous works of maximum entropy reinforcement learning, it jointly learns a policy model and value function by optimizing the soft Bellman Equation. We show in principle that it reduces the need to collect pairwise data and enables better credit assignment. Empirically, OREO surpasses existing offline learning methods on multi-step reasoning benchmarks, including mathematical reasoning tasks (GSM8K, MATH), and embodied agent control (ALFWorld). The approach can be extended to a multi-iteration framework when additional resources are available. Furthermore, the learned value function can be leveraged to guide the tree search for free, which can further boost the performance during test time.
+
+<a id="p108"></a>
+## P108 · Flow of Reasoning: Training LLMs for Divergent Problem Solving with Minimal Examples
+
+- **作者**：Anonymous authors（本地双盲稿）
+- **时间**：本地匿名稿未注明日期；ICLR 2025是投稿轮次，不作为正式发表时间
+- **发表平台／版本状态**：Under review as a conference paper at ICLR 2025；不能据此视为已录用；具体日期不详
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化、AI方法与评测
+- **PDF版本**：32页；SHA-256：`938263956875f85c04bb18094173c51bb5da27b8f308b3a4ccec5dc96e60e47b`
+
+### 中文摘要
+
+用GFlowNet式训练让LLM按奖励比例采样不同有效推理路径，在少量问题示例下同时提高正确性和解法多样性。
+
+### 核心贡献
+
+Flow of Reasoning（FOR）把多步推理表示为DAG上的概率流，优化多样高奖励轨迹。
+
+### 实现边界
+
+“15示例”是部分任务的问题数，不代表只有15次训练交互；依赖任务奖励/模拟器，创造性是任务定义的解法多样性指标。
+
+### Method／方法
+
+以Markov推理状态与路径奖励构造流匹配/轨迹训练，从有限问题反复探索高质量路径并微调LLM。
+
+### Results／主要结果
+
+五类谜题评测；Rubik四步183题、15训练示例时FOR准确率10.87±1.18%，SFT1.82%，XoT4.92%；FOR多样性1.29、创造性82.61%。Game24仍落后GPT4o/o1-mini等更强基础模型。
+
+### Shortcomings／局限与可能不足
+
+【解读】奖励设计和有限可验证环境限制一般开放创意任务；魔方绝对成功率仍低，更多样不等同更正确或更有实际创新价值。
+
+### 证据定位
+
+PDF §3–4、表1–3、§4.4 p.8。
+
+### Abstract
+
+The ability to generate diverse solutions to a given problem is a hallmark of human creativity. This divergent reasoning is also crucial for machines, enhancing their robustness and enabling them to assist humans in many applications such as scientific discovery. However, existing approaches to multi-step reasoning with large language models (LLMs) have mostly focused only on reasoning accuracy, without further discovering more diverse valid solutions. For example, supervised fine-tuning can improve LLM reasoning quality, but requires extensive supervised data to capture the full range of possible solutions. Reinforcement learning aims to find limited highest-reward solutions while neglecting the solution diversity. To fill this gap, we propose Flow of Reasoning (FOR), an efficient diversity-seeking LLM finetuning method aimed at improving reasoning quality and diversity with minimal data. FOR formulates multi-step LLM reasoning as a Markovian flow on a DAG-structured reasoning graph. This formulation allows us to incorporate and adapt principled GFlowNet approaches, for finetuning LLMs to sample diverse reasoning paths with probabilities proportional to the (unnormalized) reward of target problems. Extensive experiments show that, with limited training examples (e.g., 15 examples), FOR enables the discovery of diverse, creative, high-quality solutions, greatly outperforming a wide range of existing inference and training methods across five challenging puzzle-solving tasks, including BlocksWorld (embodied reasoning), Game24 (math puzzle solving), Rubik’s Cube (spatial reasoning), 1D-ARC (abstraction reasoning), and PrOntoQA (logical reasoning).
+
+<a id="p110"></a>
+## P110 · Understanding the Sources of Uncertainty for Large Language and Multimodal Models
+
+- **作者**：Ziran Yang; Shibo Hao; Hao Sun; Lai Jiang; Qiyue Gao; Yian Ma; Zhiting Hu
+- **时间**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：ICLR 2025 Workshop：Quantify Uncertainty and Hallucination in Foundation Models: The Next Frontier in Reliable AI（首页）
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：XR与人机协作、AI方法与评测
+- **PDF版本**：20页；SHA-256：`2cd60cc497dacba53d97c7c56ccb153e879d408445af64b57ed24429940e268c`
+
+### 中文摘要
+
+将模型输出不确定性按提示措辞、上下文和视觉预处理等因素分解，识别与错误率更相关的分量以用于幻觉检测和自训练筛选。
+
+### 核心贡献
+
+超出传统epistemic/aleatoric二分的信息论分解框架及effective calibrator概念。
+
+### 实现边界
+
+分量含义依赖选定扰动因素与采样分布；与错误相关不意味着识别真正因果来源，也不保证概率校准。
+
+### Method／方法
+
+用条件熵与互信息逐层分解总熵，对提示/输入变体采样，比较分量与错误关联；用于VQA及SVAMP自训练。
+
+### Results／主要结果
+
+部分分量比总不确定性更能指示幻觉；在视觉QA和数学推理展示检测/筛选收益；SVAMP采用Gemma2-9B、6种实体改写和6种CoT模板，结论受该扰动空间约束。
+
+### Shortcomings／局限与可能不足
+
+【解读】需多次查询和语义等价改写，改写错误可污染分解；有效分量跨域/模型是否稳定尚无通用保证。
+
+### 证据定位
+
+PDF §2、表1、§3–4 pp.6–9。
+
+### Abstract
+
+Understanding and quantifying uncertainty in large model predictions is critical for their safe and trustworthy deployment. However, existing methods that estimate the overall prediction uncertainty often fail due to miscalibration like model overconfidence. Uncertainty decomposition provides a way to focus on some specific parts in total uncertainty, removing those unrelated components. Traditional uncertainty decomposition into epistemic (model-related) and aleatoric (data-related) components is insufficient for current model usage, as additional factors like prompt phrasing and context significantly influence the model’s predictions and add the source of uncertainty. We introduce a unified uncertainty decomposition framework that systematically separates uncertainty contributed by various factors such as prompting, context, and preprocessing of multimodal inputs. By quantifying each component’s uncertainty, our approach identifies which uncertainty terms are well-correlated with the model’s hallucination rates, thereby enhancing hallucination detection and model improvement. We validate our framework through applications in visual question answering and math reasoning, demonstrating that effective uncertainty components can serve as metrics for hallucination detection and improve model performance through self-training. Grounded in information theory and highly extensible, our framework provides a novel perspective on uncertainty decomposition in large language and multimodal models, offering valuable insights for future research.
+
+<a id="p111"></a>
+## P111 · CocoaBench: Evaluating Unified Digital Agents in the Wild
+
+- **作者**：CocoaBench Team; Shibo Hao; Zhining Zhang; Zhiqi Liang; Tianyang Liu; Yuheng Zha; Qiyue Gao; Jixuan Chen; Zilong Wang; Zhoujun Cheng; Haoxiang Zhang; Junli Wang; Hexi Jin; Boyuan Zheng; Kun Zhou; Yu Wang; Feng Yao; Licheng Liu; Yijiang Li; Zhifei Li; Zhengtao Han; Pracha Promthaw; Tommaso Cerruti; Xiaohan Fu; Ziqiao Ma; Jingbo Shang; Lianhui Qin; Julian McAuley; Eric P. Xing; Zhengzhong Liu; Rupesh Kumar Srivastava; Zhiting Hu
+- **时间**：本地版本：2026-04-14（arXiv:2604.11201v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：Preprint, Under review；arXiv:2604.11201v2
+- **论文链接**：[arXiv本地版本 2604.11201v2](https://arxiv.org/abs/2604.11201v2)
+- **项目／代码／数据**：[项目/演示页面](https://cocoabench.github.io/)
+
+- **主题**：XR与人机协作
+- **PDF版本**：26页；SHA-256：`2832e5b0a617129a2f6de538b03da95a3b71e29e4f4d9fdce9996040d7423fe4`
+
+### 中文摘要
+
+用同时需要视觉、搜索和编程的长流程任务评估统一数字代理，以最终输出自动评测，并提供轻量共享Cocoa-Agent框架。
+
+### 核心贡献
+
+CocoaBench跨能力组合任务及控制模型骨干差异的统一实验支架。
+
+### 实现边界
+
+完整代理系统和共享框架的成绩不可混为纯模型能力；“in the wild”仍是人工设计、有自动验证器的任务样本。
+
+### Method／方法
+
+只给任务说明，以最终产物函数判定成功；分别测完整系统和相同Cocoa-Agent下的模型，分析规划/执行/视觉错误。
+
+### Results／主要结果
+
+GPT5.4在Codex/OpenClaw中45.1%，共享Cocoa-Agent36.6%；ClaudeSonnet4.6在OpenClaw34.0%、ClaudeCode25.5%、Cocoa-Agent15.7%，显示框架影响显著。
+
+### Shortcomings／局限与可能不足
+
+【解读】评估函数覆盖范围、基础设施与外部环境变化影响可复现性，成功率不能代替所有产物质量；所测任务离可靠全能代理仍有差距。
+
+### 证据定位
+
+PDF §3–5、图4、§6。
+
+### Abstract
+
+LLM agents now perform strongly in software engineering, deep research, GUI automation, and various other applications, while recent agent scaffolds and models are increasingly integrating these capabilities into unified systems. Yet, most evaluations still test these capabilities in isolation, which leaves a gap for more diverse use cases that require agents to combine different capabilities. We introduce COCOABENCH, a benchmark for unified digital agents built from human-designed, long-horizon tasks that require flexible composition ofvision,search, andcoding. Tasks are specified only by an instruction and an automatic evaluation function over the final output, enabling reliable and scalable evaluation across diverse agent infrastructures. We also present COCOA-AGENT, a lightweight shared scaffold for controlled comparison across model backbones. Experiments show that current agents remain far from reliable on COCOABENCH, with the best evaluated system achieving only 45.1% success rate. Our analysis further points to substantial room for improvement in reasoning and planning, tool use and execution, and visual grounding.1
+
+<a id="p112"></a>
+## P112 · Vision-G1: Towards General Reasoning Vision-Language Models via Reinforcement Learning
+
+- **作者**：Yuheng Zha, Kun Zhou, Yujia Wu, Yushu Wang, Jie Feng, Zhi Xu, Shibo Hao, Zhengzhong Liu, Eric P. Xing, Zhiting Hu
+- **时间**：2026-03-14正式上线（AAAI期刊式论文集记录）
+- **发表平台／版本状态**：AAAI 2026，40(33):28131–28139；正式上线2026-03-14，DOI 10.1609/aaai.v40i33.40039（AAAI官方核验）。 [AAAI官方论文页](https://ojs.aaai.org/index.php/AAAI/article/view/40039)
+- **论文链接**：[DOI正式记录](https://doi.org/10.1609/aaai.v40i33.40039)
+- **项目／代码／数据**：[代码：yuh-zha/Vision-G1](https://github.com/yuh-zha/Vision-G1)
+
+- **主题**：世界机制与演化、XR与人机协作、AI方法与评测
+- **PDF版本**：9页；SHA-256：`244c5846a1bf20d1a4a57c0c793e431a075dbeaa5279de26c5b3664d63cb9753`
+
+### 中文摘要
+
+汇集多域视觉推理可验证奖励数据，结合影响函数筛选与难度课程，多轮RL训练通用视觉推理模型。
+
+### 核心贡献
+
+46数据集、5域13维度的RL-ready数据及Vision-G1-7B训练方案。
+
+### 实现边界
+
+“general”限于涵盖的图像任务；视频和3D是未来方向；正文对评测数量有9/18/17三种表述，按具体表格任务阅读。
+
+### Method／方法
+
+统一题目/奖励格式，影响函数过滤低价值样本，再按中等难度及类别平衡进行多轮GRPO。
+
+### Results／主要结果
+
+数学表2平均42.1%，基础Qwen2.5VL-7B39.0，但Vision-R1-7B42.5%、GPT4o45.7%更高；因此不能将摘要领先描述套到每个数学指标。跨综合/专业任务另有收益。
+
+### Shortcomings／局限与可能不足
+
+【作者/解读】数据/奖励质量、任务均衡及影响近似影响结果；数据混合收益不等于全面推理泛化，需防跨基准数据重叠。
+
+### 证据定位
+
+PDF Approach、Main Results、表1–3、Conclusion p.7；指标例外见表2。
+
+### Abstract
+
+Recent vision-language models (VLMs) show strong reasoning capabilities through training with reinforcement learning from verifiable rewards (RLVR). Despite their impressive capabilities, current VLMs focus on a limited range of reasoning tasks, such as mathematical and logical reasoning, due to the lack of readily available verifiable reward data in broader domains. As a result, these models struggle to generalize their reasoning abilities to the wide variety of challenges encountered in real-world environments. To address this limitation, we collect and assemble a comprehensive RL-ready visual reasoning training dataset encompassing 46 datasets across 13 dimensions of 5 domains, covering a wide range of realistic scenarios such as infographic reasoning, mathematical reasoning, spatial reasoning, and general science reasoning. Based on this dataset, we propose an influence function-based data filtering strategy and a multi-round data curriculum method to iteratively strengthen general visual reasoning abilities. Using this approach, we train a general reasoning VLM, namely Vision-G1. Our 7B model achieves state-of-the-art performance across nine visual reasoning benchmarks, surpassing similar-sized VLMs and even GPT-4o and Gemini-1.5 Flash. Code — https://github.com/yuh-zha/Vision-G1
+
+<a id="p113"></a>
+## P113 · Emergence of Superposition: Unveiling the Training Dynamics of Chain of Continuous Thought
+
+- **作者**：Hanlin Zhu; Shibo Hao; Zhiting Hu; Jiantao Jiao; Stuart Russell; Yuandong Tian
+- **时间**：本地版本：2026-03-01（arXiv:2509.23365v3）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：ICLR 2026（PDF首页）；arXiv:2509.23365v3
+- **论文链接**：[arXiv本地版本 2509.23365v3](https://arxiv.org/abs/2509.23365v3)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化、AI方法与评测
+- **PDF版本**：32页；SHA-256：`0618e8beba581d69a8b8483fc36d8930855935373137d66090116eebb07bb01e`
+
+### 中文摘要
+
+分析连续CoT隐式并行搜索如何在训练中形成，针对简化两层Transformer的有向图可达任务刻画关键注意力logit动态。
+
+### 核心贡献
+
+在思考生成和答案预测两阶段分析index-matching logit先增长再有界，从而保留多个可能前沿的理论机制。
+
+### 实现边界
+
+定理依赖简化两层模型、任务结构与对称等假设，不适用于任意大模型训练；superposition是向量多路径编码，不是量子计算。
+
+### Method／方法
+
+推导梯度训练下局部搜索logit变化，用课程训练跟踪注意力及潜状态，检验理论预测。
+
+### Results／主要结果
+
+受控图任务测试准确率96.2%，训练logit轨迹与有界假设一致；部分候选提升通路随设置/随机种子改变，并不总经同一&lt;R&gt; token。
+
+### Shortcomings／局限与可能不足
+
+【解读】简化参数化和合成图数据限制一般性，多层大模型、预训练/不同优化器的机制仍需检验。
+
+### 证据定位
+
+PDF §3–5、§5训练细节p.9、§6及附录E。
+
+### Abstract
+
+Previous work shows that the chain of continuous thought (continuous CoT) improves the reasoning capability of large language models (LLMs) by enabling implicit parallel thinking, and a subsequent work provided theoretical insight by showing that a two-layer transformer equipped with continuous CoT can efficiently solve directed graph reachability by maintaining a superposition of multiple reasoning traces in the continuous thought. However, it remains unclear how the superposition mechanism is naturally learned from gradient-based training methods. To fill this gap, we theoretically analyze the training dynamics of a simplified two-layer transformer on the directed graph reachability problem to unveil how the superposition mechanism emerges during training in two training stages – (i) athought-generationstage that autoregressively expands the continuous thought, and (ii) apredictionstage that converts the thought into the final answer. Our analysis reveals that during training using continuous thought, the index-matching logit, an important quantity which reflects the strength of the model’s local search ability, will first increase and then remain bounded under mild assumptions. The bounded index-matching logit effectively balances exploration and exploitation during the reasoning process: the model will exploit local problem structures to identify plausible search traces, and assign comparable weights to multiple such traces to explore when it is uncertain about which solution is correct, which results in superposition. Our experimental results tracking the growth of logits further validate our theory.
+
+<a id="p114"></a>
+## P114 · LLM Pretraining with Continuous Concepts
+
+- **作者**：Jihoon Tack; Jack Lanchantin; Jane Yu; Andrew Cohen; Ilia Kulikov; Janice Lan; Shibo Hao; Yuandong Tian; Jason Weston; Xian Li
+- **时间**：本地版本：2025-02-12（arXiv:2502.08524v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：ICLR 2026（官方会议论文列表核验）；本地为2025-02-13稿面日期的早期预印版，arXiv v1为2025-02-12。 [ICLR官方记录](https://iclr.cc/virtual/2026/papers.html)；[OpenReview稿件](https://openreview.net/pdf?id=P7RwEIiCyh)
+- **论文链接**：[arXiv本地版本 2502.08524v1](https://arxiv.org/abs/2502.08524v1)
+- **项目／代码／数据**：[代码：facebookresearch/RAM/tree/main/projects/cocomix](https://github.com/facebookresearch/RAM/tree/main/projects/cocomix)
+
+- **主题**：世界机制与演化、AI方法与评测
+- **PDF版本**：17页；SHA-256：`02442c5e0d6a0156893b45222b6d2ce4089a8eb5414986bac6760a7f82781f59`
+
+### 中文摘要
+
+CoCoMix在下一token预训练之外预测来自稀疏自编码器的连续概念，并与token表示交错输入，以提高样本效率及一定程度的可控性。
+
+### 核心贡献
+
+连续概念预测+混合的端到端预训练方案，比较NTP、蒸馏和pause tokens。
+
+### 实现边界
+
+需要预训练模型/SAE提供概念目标；概念可解释性依赖SAE，不能保证全模型透明；主要模型规模69M–1.38B。
+
+### Method／方法
+
+从教师隐状态经SAE提取稀疏概念，学生同时预测token和概念，将压缩概念向量插入隐状态流。
+
+### Results／主要结果
+
+200B token实验中1.38B模型平均下游准确率49.7对NTP48.7、KD49.1%；报告达到NTP同等性能所需token减少21.5%；124M概念教师也可帮助更大模型。
+
+### Shortcomings／局限与可能不足
+
+【解读】总体提升温和且不保证逐任务领先；教师概念提取有额外成本，token节省不直接等于总训练算力同比下降。
+
+### 证据定位
+
+PDF §2–3、表1 p.6、§5；首页日期。
+
+### Abstract
+
+Next token prediction has been the standard training objective used in large language model pretraining. Representations are learned as a result of optimizing for token-level perplexity. We propose Continuous Concept Mixing (CoCoMix), a novel pretraining framework that combines discrete next token prediction with continuous concepts. Specifically, CoCoMix predicts “continuous concepts” learned from a pretrained sparse autoencoder and mixes them into the model’s hidden state by interleaving with token hidden representations. Through experiments on multiple benchmarks, including language modeling and downstream reasoning tasks, we show that CoCoMix is more sample efficient and consistently outperforms standard next token prediction, knowledge distillation and inserting pause tokens. We find that combining both concept learning and interleaving in an end-to-end framework is critical to performance gains. Furthermore, CoCoMix enhances interpretability and steerability by allowing direct inspection and modification of the predicted concept, offering a transparent way to guide the model’s internal reasoning process.
+
+<a id="p115"></a>
+## P115 · ToolkenGPT: Augmenting Frozen Language Models with Massive Tools via Tool Embeddings
+
+- **作者**：Shibo Hao; Tianyang Liu; Zhen Wang; Zhiting Hu
+- **时间**：2023年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：NeurIPS 2023（论文版）
+- **项目／代码／数据**：[代码：Ber666/ToolkenGPT](https://github.com/Ber666/ToolkenGPT)
+
+- **主题**：世界机制与演化、XR与人机协作、AI方法与评测
+- **PDF版本**：25页；SHA-256：`052e79422c205ba6f4155a8f06c22ad1766da376e8077be3a75cf45c7efe88e3`
+
+### 中文摘要
+
+把工具当作词表里的特殊token，仅学习工具embedding，使冻结LLM能选择大量工具，再通过提示生成参数并执行。
+
+### 核心贡献
+
+toolken表示及低参数工具学习，支持扩展工具集合并利用示范数据。
+
+### 实现边界
+
+冻结骨干不等于无训练；每个新工具仍需embedding学习/示范，参数生成及执行错误未被消除。
+
+### Method／方法
+
+把工具embedding矩阵拼到输出词表，联合选择文字/工具；触发工具后切参数提示，执行结果回填上下文。
+
+### Results／主要结果
+
+GSM8K-XL（568题）ToolkenGPT33%对ReAct32%；FuncQA13工具单跳73%对57%，多跳15%对6%，多跳绝对成功率仍低；另有知识库与具身规划实验。
+
+### Shortcomings／局限与可能不足
+
+【解读】工具数量扩展的选择质量依赖演示分布，复杂组合与参数泛化困难；不是任意未知工具零样本使用保证。
+
+### 证据定位
+
+PDF §3–4、表2 p.6、§5。
+
+### Abstract
+
+Augmenting large language models (LLMs) with external tools has emerged as a promising approach to solving complex problems. However, traditional methods, which fine-tune LLMs with tool demonstration data, can be both costly and restricted to a predefined set of tools. Recent in-context learning paradigm alleviates these issues, but the limited context length only allows for a few shots of demonstrations, leading to suboptimal understandings of the tools. Moreover, when there are numerous tools to choose from, in-context learning could completely fail to work. In this paper, we propose an alternative approach, ToolkenGPT, which combines the benefits of both sides. Our approach represents each tool as a token (“toolken”) and learns an embedding for it, enabling tool calls in the same way as generating a regular word token. Once a toolken is triggered, the LLM is prompted to complete arguments for the tool to execute. ToolkenGPT offers the flexibility to plug in an arbitrary number of tools by expanding the set of toolkens on the fly. In addition, it improves tool use by allowing extensive demonstration data for learning the toolken embeddings. In diverse domains, including numerical reasoning, knowledge-based question answering, and embodied plan generation, our approach effectively augments LLMs with tools and substantially outperforms various latest baselines. ToolkenGPT demonstrates the promising ability to use relevant tools from a large tool set in complex scenarios.1
+
+<a id="p116"></a>
+## P116 · Reasoning by Superposition: A Theoretical Perspective on Chain of Continuous Thought
+
+- **作者**：Hanlin Zhu; Shibo Hao; Zhiting Hu; Jiantao Jiao; Stuart Russell; Yuandong Tian
+- **时间**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：NeurIPS 2025（论文版）
+- **项目／代码／数据**：[代码：Ber666/reasoning-by-superposition](https://github.com/Ber666/reasoning-by-superposition)
+
+- **主题**：世界机制与演化、AI方法与评测
+- **PDF版本**：33页；SHA-256：`d40150700bdbfbb721e65bc728c473fc266d716cba5479f5e1387d5a88870849`
+
+### 中文摘要
+
+构造两层Transformer在连续CoT中并行编码多个搜索前沿，以图直径D步解决有向图可达，并用训练实验观察相似潜表示。
+
+### 核心贡献
+
+连续thought并行BFS的表达能力构造及经验对应分析。
+
+### 实现边界
+
+与离散CoT的O(n²)是对比已有最好构造，不是已证明离散CoT必需Ω(n²)；严格分离的下界明确留作未来。
+
+### Method／方法
+
+在连续向量中叠加搜索前沿，用两层注意力迭代扩展；ProsQA合成子集上课程训练与潜态/注意力分析。
+
+### Results／主要结果
+
+2层Coconut在所评ProsQA接近满分，CoT/无CoT约75%，12层CoT约83%；理论需D个连续步骤，条件和数值精度按构造。
+
+### Shortcomings／局限与可能不足
+
+【作者/解读】离散CoT下界未建立，结论局限图可达和构造假设；训练动力学与更广任务的充分解释仍需研究（P113进一步分析）。
+
+### 证据定位
+
+PDF 定理及§3–4、§5图4、§6 p.10。
+
+### Abstract
+
+Large Language Models (LLMs) have demonstrated remarkable performance in many applications, including challenging reasoning problems via chain-ofthought (CoT) techniques that generate “thinking tokens” before answering the questions. While existing theoretical works demonstrate that CoT with discrete tokens boosts the capability of LLMs, recent work on continuous CoT lacks a theoretical understanding of why it outperforms discrete counterparts in various reasoning tasks, such as directed graph reachability, a fundamental graph reasoning problem that includes many practical domain applications as special cases. In this paper, we prove that a two-layer transformer with D steps of continuous CoT can solve the directed graph reachability problem, whereD is the diameter of the graph, while the best known result of constant-depth transformers with discrete CoT requires O(n2) decoding steps where n is the number of vertices (D &lt; n). In our construction, each continuous thought vector is a superposition state that encodes multiple search frontiers simultaneously (i.e., parallel breadth-first search (BFS)), while discrete CoT must choose a single path sampled from the superposition state, which leads to a sequential search that requires many more steps and may be trapped in local solutions. We also performed extensive experiments to verify that our theoretical construction aligns well with the empirical solution obtained via training dynamics. Notably, encoding of multiple search frontiers as a superposition state automatically emerges in training continuous CoT, without explicit supervision to guide the model to explore multiple paths simultaneously. Our code is available at https://github.com/Ber666/reasoning-by-superposition .
+
+<a id="p117"></a>
+## P117 · Revisiting Reinforcement Learning for LLM Reasoning from A Cross-Domain Perspective
+
+- **作者**：Zhoujun Cheng; Shibo Hao; Tianyang Liu; Fan Zhou; Yutao Xie; Feng Yao; Yuexin Bian; Yonghao Zhuang; Nilabjo Dey; Yuheng Zha; Yi Gu; Kun Zhou; Yuqi Wang; Yuan Li; Richard Fan; Jianshu She; Chengqian Gao; Abulhair Saparov; Haonan Li; Taylor W. Killian; Mikhail Yurochkin; Zhengzhong Liu; Eric P. Xing; Zhiting Hu
+- **时间**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：NeurIPS 2025 Datasets and Benchmarks Track（论文版）
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+- **版本关系**：摘要/§4.2称32B比ORZ提升7.8，但表3为52.68−46.95=5.73个百分点；7.80对应SimpleRL32B44.88。以表格为准。
+
+- **主题**：世界机制与演化、XR与人机协作、AI方法与评测
+- **PDF版本**：21页；SHA-256：`47973c5ee52be94e5c210f58fa1f1df7f9a775538d9752decff760f7ba8d31e5`
+
+### 中文摘要
+
+构建92K条六域可验证推理数据GURU，研究RL跨域迁移及难度影响，并训练7B/32B多域推理模型。
+
+### 核心贡献
+
+数学、代码、科学、逻辑、仿真、表格数据与验证器，跨域训练分析和17任务评估套件。
+
+### 实现边界
+
+只覆盖可构造验证奖励的领域；混合训练并非每项都优于专用模型，难源域还可能负迁移到简单任务。
+
+### Method／方法
+
+来源清洗去重、领域/难度过滤，Qwen2.5-Base上GRPO训练，控制域混合和难度研究迁移。
+
+### Results／主要结果
+
+表3平均GURU7B41.17对ORZ7B33.90（+7.27）；32B52.68对ORZ46.95（+5.73）。32B AIME24为32.29，低于ORZ47.50，说明总体更均衡不等于数学全面领先。
+
+### Shortcomings／局限与可能不足
+
+【解读】任务平均权重、验证器可靠性和混合比例影响结论，数据规模/在线混合未充分研究；摘要提升数值存在口径冲突。
+
+### 证据定位
+
+PDF §2–4、表3 p.8、§6。
+
+### Abstract
+
+Reinforcement learning (RL) has shown promise in enhancing large language model (LLM) reasoning, yet progress towards broader capabilities is limited by the availability of high-quality, multi-domain datasets. This work introduces GURU, a 92K RL-for-reasoning dataset designed to address this gap, covering six reasoning domains: Math, Code, Science, Logic, Simulation, and Tabular, each with corresponding verifiers. We build GURU via a careful data-curation pipeline, including sourcing, deduplication, reward design, and domain-specific and difficulty-based filtering. With GURU, we present a systematic investigation of cross-domain RL generalization, and reveal several key aspects affecting crossdomain transferability. We further train two models GURU-7B and GURU-32B purely with RL on our curated data and observe largely improved performance over leading open RL reasoning model baselines, with gains of 7.3% and 7.8% respectively on an extensive 17-task, six-domain evaluation suite. We are releasing our dataset, code, and evaluation suite to the community, aiming to support further research and development of more general RL-enhanced reasoning models.
+
+<a id="p118"></a>
+## P118 · Calibrating Reasoning in Language Models with Internal Consistency
+
+- **作者**：Zhihui Xie; Jizhou Guo; Tong Yu; Shuai Li
+- **时间**：本地版本：2024-12-05（arXiv:2405.18711v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：NeurIPS 2024 Main Conference Track（官方论文集核验）；本地arXiv v2为2024-12-05。 [NeurIPS官方论文集](https://proceedings.neurips.cc/paper_files/paper/2024/hash/d037fd021c9aace128b8ce25001cdb6c-Abstract-Conference.html)
+- **论文链接**：[arXiv本地版本 2405.18711v2](https://arxiv.org/abs/2405.18711v2)
+- **项目／代码／数据**：[代码：zhxieml/internal-consistency](https://github.com/zhxieml/internal-consistency)
+
+- **主题**：XR与人机协作、AI方法与评测
+- **PDF版本**：23页；SHA-256：`ab6abe3fc5cdc39c45c1f877d6426ca7303d79f918e3f8d84f9ca2e84d783661`
+
+### 中文摘要
+
+解码中间层对答案的潜在预测，以层间一致性衡量置信度，并优先选择内部更一致的推理路径。
+
+### 核心贡献
+
+Internal consistency无需训练置信信号、推理路径加权与attention/FFN跨层分析。
+
+### 实现边界
+
+需要隐状态访问和可定义答案的任务；内部一致不保证正确，也不是标准概率意义的普遍校准保证。
+
+### Method／方法
+
+用中间层潜预测与末层比较，计算一致性；对多条CoT/L2M路径加权，提高更可信答案的权重。
+
+### Results／主要结果
+
+跨模型/数据发现错误CoT常有更低内部一致性，加权后推理表现改善；实验使用二分类50/50平衡的calibrated accuracy，不能当作原始类别比例下准确率。
+
+### Shortcomings／局限与可能不足
+
+【作者】主要decoder-only、基础CoT，其他架构/推理方式待扩展；【解读】需要多路径采样，任务格式及层选择影响可靠性。
+
+### 证据定位
+
+PDF §3–4、§4.1–3、§6 p.10。
+
+### Abstract
+
+Large language models (LLMs) have demonstrated impressive capabilities in various reasoning tasks, aided by techniques like chain-of-thought prompting that elicits verbalized reasoning. However, LLMs often generate text with obvious mistakes and contradictions, raising doubts about their ability to robustly process and utilize generated rationales. In this work, we investigate reasoning in LLMs through the lens of internal representations, focusing on how these representations are influenced by generated rationales. Our preliminary analysis reveals that while generated rationales improve answer accuracy, inconsistencies emerge between the model’s internal representations in middle layers and those in final layers, potentially undermining the reliability of their reasoning processes. To address this, we propose internal consistency as a measure of the model’s confidence by examining the agreement of latent predictions decoded from intermediate layers. Extensive empirical studies across different models and datasets demonstrate that internal consistency effectively distinguishes between correct and incorrect reasoning paths. Motivated by this, we propose a new approach to calibrate reasoning by up-weighting reasoning paths with high internal consistency, resulting in a significant boost in reasoning performance. Further analysis uncovers distinct patterns in attention and feed-forward modules across layers, providing insights into the emergence of internal inconsistency. In summary, our results demonstrate the potential of using internal representations for self-evaluation of LLMs. Our code is available at github.com/zhxieml/internal-consistency.
+
+<a id="p119"></a>
+## P119 · Reasoning Models Know When They’re Right: Probing Hidden States for Self-Verification
+
+- **作者**：Anqi Zhang; Yulin Chen; Jane Pan; Chen Zhao; Aurojit Panda; Jinyang Li; He He
+- **时间**：本地版本：2025-04-07（arXiv:2504.05419v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：COLM 2025正式论文已核实；本地仍为2025-04-07的arXiv v1，首页Preprint, Under review反映当时状态。以下实验数字按本地稿保留。[COLM正式论文](https://openreview.net/forum?id=O6I0Av7683)
+- **论文链接**：[arXiv本地版本 2504.05419v1](https://arxiv.org/abs/2504.05419v1)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：XR与人机协作、AI方法与评测
+- **PDF版本**：18页；SHA-256：`c32a216f1eb0d49db8a1c6873e465b0a52e3c67fb15dc3961361cc6edf700504`
+
+### 中文摘要
+
+训练隐状态探针识别中间答案正确性，发现答案形成前已有可预测信号，并用高置信提前结束降低过度推理。
+
+### 核心贡献
+
+中间/未来答案正确性探测、校准分析和动态早退出。
+
+### 实现边界
+
+需要带正确性标签训练探针、访问隐状态；标题“知道”指可解码统计信号，并非意识或无监督自证。
+
+### Method／方法
+
+收集中间答案隐状态与标签，训练MLP探针，验证集调参/校准，推理中达到阈值时退出并输出答案。
+
+### Results／主要结果
+
+阈值0.85约节省24%token，准确率88.2对不退出88.6%，是近似保持并非完全相等；0.9阈值节省19%，准确率同为88.6%；同预算胜固定退出约5个百分点。
+
+### Shortcomings／局限与可能不足
+
+【解读】探针迁移/校准可能随模型任务改变；阈值越低越可能提前接受错误，token减少不必然线性缩短端到端延迟。
+
+### 证据定位
+
+PDF §3–5、§5.2 p.8、图5。
+
+### Abstract
+
+Reasoning models have achieved remarkable performance on tasks like math and logical reasoning thanks to their ability to search during reasoning. However, they still suffer from overthinking, often performing unnecessary reasoning steps even after reaching the correct answer. This raises the question: can models evaluate the correctness of their intermediate answers during reasoning? In this work, we study whether reasoning models encode information about answer correctness through probing the model’s hidden states. The resulting probe can verify intermediate answers with high accuracy and produces highly calibrated scores. Additionally, we find models’ hidden states encode correctness of future answers, enabling early prediction of the correctness before the intermediate answer is fully formulated. We then use the probe as a verifier to decide whether to exit reasoning at intermediate answers during inference, reducing the number of inference tokens by 24% without compromising performance. These findings confirm that reasoning models do encode a notion of correctness yet fail to exploit it, revealing substantial untapped potential to enhance their efficiency.
+
+<a id="p120"></a>
+## P120 · Imagine This! Scripts to Compositions to Videos
+
+- **作者**：Tanmay Gupta; Dustin Schwenk; Ali Farhadi; Derek Hoiem; Aniruddha Kembhavi
+- **时间**：本地版本：2018-04-10（arXiv:1804.03608v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：ECCV 2018，pp.598–613（官方ECVA核验）；文件名中的cvpr有误。 [ECVA官方论文页](https://www.ecva.net/papers/eccv_2018/papers_ECCV/html/Tanmay_Gupta_Imagine_This_Scripts_ECCV_2018_paper.php)
+- **论文链接**：[arXiv本地版本 1804.03608v1](https://arxiv.org/abs/1804.03608v1)
+- **项目／代码／数据**：[作者演示视频](https://youtu.be/688Vv86n0z8)
+- **版本关系**：发表会议以ECCV为准，不采用文件名CVPR。
+
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：22页；SHA-256：`aeae85082dd70d12d6744a5045231e6a74fa98947a26e4fc29249b04339f83e9`
+
+### 中文摘要
+
+CRAFT先从文本预测实体的时空布局，再检索视频实体片段并合成视频，利用组合式表示提高语义匹配和视觉一致性。
+
+### 核心贡献
+
+Composition/Retrieval/Fusion网络、布局与外观联合建模及超过25,000视频的Flintstones标注数据。
+
+### 实现边界
+
+主要动画域和已有视频片段重组，不能任意合成库中不存在的对象/运动；不同模块评测有使用前序真值布局/外观的条件。
+
+### Method／方法
+
+逐实体布局预测、联合文本/场景/位置检索，triplet与辅助分类学习检索空间，融合时空片段。
+
+### Results／主要结果
+
+在语义名词/形容词/动词召回、布局与人评视觉质量上优于直接像素生成基线；可组合未见描述并转移到无字幕视频库。
+
+### Shortcomings／局限与可能不足
+
+【解读】依赖精细实体标注与候选片段覆盖，检索组合易产生接缝/动态不一致；动画证据不能外推写实长视频。
+
+### 证据定位
+
+PDF §3–5、表1–3与§5.3；ECVA用于会议信息。
+
+### Abstract
+
+Imagining a scene described in natural language with realistic layout and appearance of entities is the ultimate test of spatial, visual, and semantic world knowledge. Towards this goal, we present the Composition, Retrieval and Fusion Network (Craft), a model capable of learning this knowledge from video-caption data and applying it while generating videos from novel captions. Craft explicitly predicts a temporal-layout of mentioned entities (characters and objects), retrieves spatio-temporal entity segments from a video database and fuses them to generate scene videos. Our contributions include sequential training of components of Craft while jointly modeling layout and appearances, and losses that encourage learning compositional representations for retrieval. We evaluate Craft on semantic fidelity to caption, composition consistency, and visual quality . Craft outperforms direct pixel generation approaches and generalizes well to unseen captions and to unseen video databases with no text annotations. We demonstrate Craft on Flintstones, a new richly annotated video-caption dataset with over 25000 videos. For a glimpse of videos generated by Craft, see https://youtu.be/688Vv86n0z8.
+
+<a id="p121"></a>
+## P121 · World Models
+
+- **作者**：David Ha, Jürgen Schmidhuber
+- **时间**：本地版本：2018-05-09（arXiv:1803.10122v4）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：2018年World Models研究稿及互动论文网站；不与后续改题版本混合
+- **论文链接**：[arXiv本地版本 1803.10122v4](https://arxiv.org/abs/1803.10122v4)
+- **项目／代码／数据**：[项目/演示页面](https://worldmodels.github.io)
+
+- **主题**：世界机制与演化
+- **PDF版本**：21页；SHA-256：`b0c1e30aab53efd28ddf61d661f680150918d4d03b77bae62bc52d62dbd76cce`
+
+### 中文摘要
+
+用生成式模型压缩视觉并预测时间动态，训练小控制器，展示在学到的梦境中学习策略后迁移回真实游戏环境。
+
+### 核心贡献
+
+VAE视觉模型、MDN-RNN记忆模型和简洁控制器的模块化世界模型，区分表征学习与控制优化。
+
+### 实现边界
+
+CarRacing和VizDoom等游戏；CarRacing控制器并非全部仅在梦中训练，梦中转移主要由Doom实验展示；不能保证学到完整物理因果结构。
+
+### Method／方法
+
+无监督学习V和M，控制器用z及RNN隐状态选动作，由进化策略优化；在随机梦境模型中训练并调温防利用模型缺陷。
+
+### Results／主要结果
+
+CarRacing100随机试验906±21，视觉表示单独632±251、加隐藏层788±141；展示Doom梦境训练后的真实环境迁移。
+
+### Shortcomings／局限与可能不足
+
+【作者/解读】代理可利用世界模型错误，温度和数据覆盖影响转移；简单低分辨率游戏与独立模块训练不代表普遍开放环境控制。
+
+### 证据定位
+
+PDF §3表1、§4梦境实验及讨论。
+
+### Abstract
+
+We explore building generative neural network models of popular reinforcement learning environments. Our world model can be trained quickly in an unsupervised manner to learn a compressed spatial and temporal representation of the environment. By using features extracted from the world model as inputs to an agent, we can train a very compact and simple policy that can solve the required task. We can even train our agent entirely inside of its own hallucinated dream generated by its world model, and transfer this policy back into the actual environment. An interactive version of this paper is available at https://worldmodels.github.io
+
+<a id="p122"></a>
+## P122 · Phenaki: Variable Length Video Generation from Open Domain Textual Descriptions
+
+- **作者**：Ruben Villegas; Mohammad Babaeizadeh; Pieter-Jan Kindermans; Hernan Moraldo; Han Zhang; Mohammad Taghi Saffar; Santiago Castro; Julius Kunze; Dumitru Erhan
+- **时间**：2023年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：ICLR 2023（PDF首页）
+- **项目／代码／数据**：[项目/演示页面](https://phenaki.github.io/)
+
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：14页；SHA-256：`176243b1066c4db80df9b1f3de4de6fb8d6f9631fd65726c3e19015eaff5e4e2`
+
+### 中文摘要
+
+通过因果视频tokenizer与文本条件掩码Transformer，从随时间改变的文字提示生成可延续的视频。
+
+### 核心贡献
+
+C-ViViT变长视频离散表示、图文与视频文本联合训练、随故事提示自回归延续。
+
+### 实现边界
+
+“任意长”是可反复延长的机制，不保证任意时长保持质量/角色记忆；训练短片与展示长片之间没有无限泛化保证。
+
+### Method／方法
+
+因果时间注意力压缩视频token，T5文本条件下迭代补全被掩token，解码后以已有帧/新提示生成后续片段。
+
+### Results／主要结果
+
+相较逐帧编码减少约40%或更多视频token并改善时空重建一致性；训练1.4秒、8fps片段后展示分钟级变提示生成；图文联合数据帮助覆盖视频训练中未见概念组合。
+
+### Shortcomings／局限与可能不足
+
+【解读】长期误差积累、低分辨率/细节和精确动作控制限制；token效率和视觉演示不能等同电影级叙事/物理可靠性。
+
+### 证据定位
+
+PDF §2–4、tokenizer及生成实验、附录；首页摘要。
+
+### Abstract
+
+We present Phenaki, a model capable of realistic video synthesis, given a sequence of textual prompts. Generating videos from text is particularly challenging due to the computational cost, limited quantities of high quality text-video data and variable length of videos. To address these issues, we introduce a new model for learning video representation which compresses the video to a small representation of discrete tokens. This tokenizer uses causal attention in time, which allows it to work with variable-length videos. To generate video tokens from text we are using a bidirectional masked transformer conditioned on pre-computed text tokens. The generated video tokens are subsequently de-tokenized to create the actual video. To address data issues, we demonstrate how joint training on a large corpus of image-text pairs as well as a smaller number of video-text examples can result in generalization beyond what is available in the video datasets. Compared to the previous video generation methods, Phenaki can generate arbitrary long videos conditioned on a sequence of prompts (i.e. time variable text or a story) in open domain. To the best of our knowledge, this is the first time a paper studies generating videos from open domain time variable prompts. In addition, compared to the per-frame baselines, the proposed video encoder-decoder computes fewer tokens per video but results in better spatio-temporal consistency.
+
+<a id="p123"></a>
+## P123 · Genie: Generative Interactive Environments
+
+- **作者**：Jake Bruce; Michael Dennis; Ashley Edwards; Jack Parker-Holder; Yuge (Jimmy) Shi; Edward Hughes; Matthew Lai; Aditi Mavalankar; Richie Steigerwald; Chris Apps; Yusuf Aytar; Sarah Bechtle; Feryal Behbahani; Stephanie Chan; Nicolas Heess; Lucy Gonzalez; Simon Osindero; Sherjil Ozair; Scott Reed; Jingwei Zhang; Konrad Zolna; Jeff Clune; Nando de Freitas; Satinder Singh; Tim Rocktäschel
+- **时间**：本地版本：2024-02-23（arXiv:2402.15391v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：本地Google DeepMind稿首页2024-02-26；页边arXiv:2402.15391v1标2024-02-23，区分稿面日期与版本时间
+- **论文链接**：[arXiv本地版本 2402.15391v1](https://arxiv.org/abs/2402.15391v1)
+- **项目／代码／数据**：[项目/演示页面](https://sites.google.com/view/genie-2024/home)
+
+- **主题**：世界机制与演化
+- **PDF版本**：27页；SHA-256：`94c63a5ced89355326706c88236591c2972ced12f3dece4f8982f020110c81f3`
+
+### 中文摘要
+
+从无动作标签的互联网视频学习潜动作和动态，用图像、照片或草图初始化可逐帧控制的生成式环境。
+
+### 核心贡献
+
+11B生成式交互环境，时空tokenizer、潜动作模型与自回归动态模型联合支持视频到可控世界。
+
+### 实现边界
+
+文字提示经图像生成可间接初始化，模型本体主要图像提示/潜动作控制；主要平台游戏等域，非任意真实世界高保真模拟。
+
+### Method／方法
+
+潜动作模型从相邻帧推断离散控制，ST-transformer编码视频token，动态模型根据历史与动作预测下一帧；不需真实动作标签训练。
+
+### Results／主要结果
+
+展示未见图片/手绘初始化、潜动作可控性和从视频模仿策略；模型约1fps、记忆仅16帧，作者明确长时一致与交互速度待提升。
+
+### Shortcomings／局限与可能不足
+
+【作者】可幻觉不合理未来、上下文短、速度低；【解读】无监督动作语义在所有情境并不保证一致，视觉可玩不等于任务可用。
+
+### 证据定位
+
+PDF §2–4、§5 p.11。
+
+### Abstract
+
+We introduce Genie, the first generative interactive environment trained in an unsupervised manner from unlabelled Internet videos. The model can be prompted to generate an endless variety of actioncontrollable virtual worlds described through text, synthetic images, photographs, and even sketches. At 11B parameters, Genie can be considered a foundation world model. It is comprised of a spatiotemporal video tokenizer, an autoregressive dynamics model, and a simple and scalable latent action model. Genie enables users to act in the generated environments on a frame-by-frame basis despite training without any ground-truth action labels or other domain-specific requirements typically found in the world model literature. Further the resulting learned latent action space facilitates training agents to imitate behaviors from unseen videos, opening the path for training generalist agents of the future.
+
+<a id="p124"></a>
+## P124 · iVideoGPT: Interactive VideoGPTs are Scalable World Models
+
+- **作者**：Jialong Wu; Shaofeng Yin; Ningya Feng; Xu He; Dong Li; Jianye Hao; Mingsheng Long
+- **时间**：本地版本：2024-05-24（arXiv:2405.15223v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：NeurIPS 2024 Main Conference Track（官方论文集核验）。 [NeurIPS官方论文集](https://proceedings.neurips.cc/paper_files/paper/2024/hash/7dbb5bfab324e3b86af9bd0df15498dd-Abstract-Conference.html)
+- **论文链接**：[arXiv本地版本 2405.15223v1](https://arxiv.org/abs/2405.15223v1)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化
+- **PDF版本**：25页；SHA-256：`1e2d26119085edcf56158c4a199484aba285e21059fae3de0815d87574ff80e6`
+
+### 中文摘要
+
+把视觉、动作与奖励统一为token序列，使用压缩视频tokenizer及自回归Transformer预训练，适配预测、规划与模型式RL。
+
+### 核心贡献
+
+交互VideoGPT框架、上下文条件压缩tokenization及大规模人类/机器人轨迹预训练。
+
+### 实现边界
+
+主要机器人操作/视觉控制任务；未经适配在新机器人上会生成旧机器人外观，少样本tokenizer适配仍重要。
+
+### Method／方法
+
+用上下文帧帮助大幅压缩后续帧token，将动作奖励交错建模；下游微调模型/编码器，并以模型生成经验供策略学习。
+
+### Results／主要结果
+
+在所评连续控制上改善相对无模型方法的样本效率，与DreamerV3相当或更高；100/1000轨迹时预训练优势更明显，全量数据时较小；压缩方案按自回归forward次数计约16倍降低。
+
+### Shortcomings／局限与可能不足
+
+【解读】16倍是token/调用计数，不是端到端硬件实测速比；预训练机器人多样性不足，模型误差与合成轨迹偏差仍影响策略。
+
+### 证据定位
+
+PDF §3–4，图6–8、§4.4 p.8。
+
+### Abstract
+
+World models empower model-based agents to interactively explore, reason, and plan within imagined environments for real-world decision-making. However, the high demand for interactivity poses challenges in harnessing recent advancements in video generative models for developing world models at scale. This work introduces Interactive VideoGPT (iVideoGPT), a scalable autoregressive transformer framework that integrates multimodal signals—visual observations, actions, and rewards—into a sequence of tokens, facilitating an interactive experience of agents via next-token prediction. iVideoGPT features a novel compressive tokenization technique that efficiently discretizes high-dimensional visual observations. Leveraging its scalable architecture, we are able to pre-train iVideoGPT on millions of human and robotic manipulation trajectories, establishing a versatile foundation that is adaptable to serve as interactive world models for a wide range of downstream tasks. These include action-conditioned video prediction, visual planning, and model-based reinforcement learning, where iVideoGPT achieves competitive performance compared with state-of-the-art methods. Our work advances the development of interactive general world models, bridging the gap between generative video models and practical model-based reinforcement learning applications.
+
+<a id="p125"></a>
+## P125 · Causally Steered Diffusion for Automated Video Counterfactual Generation
+
+- **作者**：Nikos Spyrou; Athanasios Vlontzos; Paraskevas Pegios; Thomas Melistas; Nefeli Gkouti; Yannis Panagakis; Giorgos Papanastasiou; Sotirios A. Tsaftaris
+- **时间**：本地版本：2025-08-05（arXiv:2506.14404v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：arXiv:2506.14404v2（本地版本）
+- **论文链接**：[arXiv本地版本 2506.14404v2](https://arxiv.org/abs/2506.14404v2)
+- **项目／代码／数据**：[代码：nysp78/counterfactual-video-generation](https://github.com/nysp78/counterfactual-video-generation)
+
+- **主题**：世界机制与演化、AI方法与评测
+- **PDF版本**：23页；SHA-256：`6d89932cdf6a8eceef98e749d795c15861c7334d7a30d7bc4f32914e6c72bd67`
+
+### 中文摘要
+
+给定属性因果图，把干预及其应保留/改变的关系写入提示，用VLM文字反馈反复优化视频编辑以生成更符合指定因果关系的反事实。
+
+### 核心贡献
+
+黑箱可接入的CSVC提示级因果引导，评估有效性、最小性和时序质量。
+
+### 实现边界
+
+依赖先验因果图，主要真实人脸年龄/性别/胡须/秃发等属性编辑；不是从视频发现因果结构，基于外观标签的假设不等于生物学因果真值。
+
+### Method／方法
+
+因果目标/解耦提示→TokenFlow/FLATTEN/Tune-A-Video等编辑器→VLM评估损失→语言提示迭代，核心框架不需改编辑器内部。
+
+### Results／主要结果
+
+表1中CSVC通常提高各编辑后端的目标属性有效性，加入因果解耦提示效果更佳；通过LPIPS、VLM、DOVER、FVD及帧间CLIP检查最小性/质量。
+
+### Shortcomings／局限与可能不足
+
+【解读】评估和优化共享VLM语义偏差，有限属性图与人脸域限制因果解释；基础编辑器若需one-shot适配，整体并非完全无训练。
+
+### 证据定位
+
+PDF §3–5、表1、§6。
+
+### Abstract
+
+Adapting text-to-image (T2I) latent diffusion models (LDMs) to video editing has shown strong visual fidelity and controllability, but challenges remain in maintaining causal relationships inherent to the video data generating process. Edits affecting causally dependent attributes often generate unrealistic or misleading outcomes if these relationships are ignored. In this work, we introduce a causally faithful framework for counterfactual video generation, formulated as an Out-of-Distribution (OOD) prediction problem. We embed prior causal knowledge by encoding the relationships specified in a causal graph into text prompts and guide the generation process by optimizing these prompts using a vision-language model (VLM)-based textual loss. This loss encourages the latent space of the LDMs to capture OOD variations in the form of counterfactuals, effectively steering generation toward causally meaningful alternatives. The proposed framework, dubbed CSVC, is agnostic to the underlying video editing system and does not require access to its internal mechanisms or fine-tuning. We evaluate our approach using standard video quality metrics and counterfactual-specific criteria, such as causal effectiveness and minimality. Experimental results show that CSVC generates causally faithful video counterfactuals within the LDM distribution via prompt-based causal steering, achieving state-of-the-art causal effectiveness without compromising temporal consistency or visual quality on real-world facial videos. Due to its compatibility with any black-box video editing system, our framework has significant potential to generate realistic ’what if’ hypothetical video scenarios in diverse areas such as digital media and healthcare. Code: https://github.com/nysp78/counterfactual-video-generation.
+
+<a id="p126"></a>
+## P126 · Diffusion-Based Visual Art Creation: A Survey and New Perspectives
+
+- **作者**：Bingyuan Wang; Qifeng Chen; Zeyu Wang
+- **时间**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：ACM Computing Surveys 57(10), Article268；2025-05-07上线，2025-10卷期；2025-04-01接受；DOI10.1145/3728459
+- **论文链接**：[DOI正式记录](https://doi.org/10.1145/3728459)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：创作与规则补全
+- **PDF版本**：38页；SHA-256：`18c343dc471df6180c288a6b3bc1c30e4075f42475deec95b9f059a3c5981f6e`
+
+### 中文摘要
+
+从艺术需求和技术方法共同审视扩散视觉艺术创作，系统编码相关论文，建立应用、理解和生成的分析框架及人机协作展望。
+
+### 核心贡献
+
+四阶段文献筛选、七维编码和场景—模态—任务—方法框架，连接艺术要求与计算问题。
+
+### 实现边界
+
+综述，不是新的图像/视频生成模型；PDF封面的2026-01-31为下载日期，不是发表日。
+
+### Method／方法
+
+明确研究问题和纳入条件，结构/时间分析论文编码，归纳技术与人机协作趋势。
+
+### Results／主要结果
+
+识别视觉艺术的风格控制、内容编辑、跨模态与多场景生成热点，提出技术能力与艺术家参与方式共同演化的研究方向；无统一新实验排名。
+
+### Shortcomings／局限与可能不足
+
+【解读】文献筛选/编码有解释性，领域更新快；创作质量和创造性没有跨艺术门类统一客观标准。
+
+### 证据定位
+
+PDF封面元数据；§4–6、图4、§7–8（正文到PDF p.30）。
+
+### Abstract
+
+The integration of generative AI in visual art has revolutionized not only how visual content is created but also how AI interacts with and reflects the underlying domain knowledge. This survey explores the emerging realm of diffusion-based visual art creation, examining its development from both artistic and technical perspectives. We structure the survey into three phases: data feature and framework identification, detailed analyses using a structured coding process, and open-ended prospective outlooks. Our findings reveal how artistic requirements are transformed into technical challenges and highlight the design and application of diffusion-based methods within visual art creation. We also provide insights into future directions from technical and synergistic perspectives, suggesting that the confluence of generative AI and art has shifted the creative paradigm and opened up new possibilities. By summarizing the development and trends of this emerging interdisciplinary area, we aim to shed light on the mechanisms through which AI systems emulate and, possibly, enhance human capacities in artistic perception and creativity.
+
+<a id="p127"></a>
+## P127 · MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequences
+
+- **作者**：Canyu Zhao; Mingyu Liu; Wen Wang; Weihua Chen; Fan Wang; Hao Chen; Bo Zhang; Chunhua Shen
+- **时间**：本地版本：2025-11-25（arXiv:2407.16655v3）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：ICLR 2025（PDF首页）；arXiv:2407.16655v3
+- **论文链接**：[arXiv本地版本 2407.16655v3](https://arxiv.org/abs/2407.16655v3)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+- **版本关系**：与[P134](#p134)同一论文不同文件；本稿首页3位作者标共同一作，[P134](#p134)首页只对前2位标星，作者顺序相同。
+
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：31页；SHA-256：`19dcbd7282b7ec5eab617b7d97a0aaaa42d43b765a7c7d57a866b1f88d22f93a`
+
+### 中文摘要
+
+用自回归模型规划长序列关键帧token，再以扩散渲染图像和视频，以多模态剧本和人脸身份条件维持跨场景角色一致。
+
+### 核心贡献
+
+叙事/渲染分层框架、包含角色及风格的剧本和身份保持渲染。
+
+### 实现边界
+
+“叙事一致”主要由脚本对齐和角色视觉指标代理；关键帧及短片段组装不保证每项事件真实发生或长时物理因果一致。
+
+### Method／方法
+
+扩散自动编码器产生紧凑关键帧token，自回归预测下一个keyframe，文本/FaceID条件解码，再生成帧间视频。
+
+### Results／主要结果
+
+表1无参考Ours长期一致LT0.814对StoryDiffusion0.596，FID2.043对4.643；审美6.093略低于6.134，非逐项最佳；有参考Ours-ref LT0.893但使用额外条件。
+
+### Shortcomings／局限与可能不足
+
+【解读】人脸身份覆盖、长时错误累积和剧本粒度影响结果；参考/无参考条件需分开比较，电影域指标不等于人类叙事理解。
+
+### 证据定位
+
+PDF §3–4、表1–2 p.9、§5。
+
+### Abstract
+
+Recent advancements in video generation have primarily leveraged diffusion models for short-duration content. However, these approaches often fall short in modeling complex narratives and maintaining character consistency over extended periods, which is essential for long-form video production like movies. We propose MovieDreamer, a novel hierarchical framework that integrates the strengths of autoregressive models with diffusion-based rendering to pioneer long-duration video generation with intricate plot progressions and high visual fidelity. Our approach utilizes autoregressive models for global narrative coherence, predicting sequences of visual tokens that are subsequently transformed into high-quality video frames through diffusion rendering. This method is akin to traditional movie production processes, where complex stories are factorized down into manageable scene capturing. Further, we employ a multimodal script that enriches scene descriptions with detailed character information and visual style, enhancing continuity and character identity across scenes. We present extensive experiments across various movie genres, demonstrating that our approach not only achieves superior visual and narrative quality but also effectively extends the duration of generated content significantly beyond current capabilities.
+
+<a id="p128"></a>
+## P128 · StoryMem: Multi-shot Long Video Storytelling with Memory
+
+- **作者**：Kaiwen Zhang; Liming Jiang; Angtian Wang; Jacob Zhiyuan Fang; Tiancheng Zhi; Qing Yan; Hao Kang; Xin Lu; Xingang Pan
+- **时间**：本地版本：2025-12-22（arXiv:2512.19539v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：首页2025-12-23；arXiv:2512.19539v1
+- **论文链接**：[arXiv本地版本 2512.19539v1](https://arxiv.org/abs/2512.19539v1)
+- **项目／代码／数据**：[项目/演示页面](https://kevin-thu.github.io/StoryMem)
+
+- **主题**：创作与规则补全、世界机制与演化、XR与人机协作
+- **PDF版本**：20页；SHA-256：`893eb41d0811d6480248c118b3146657400c5b93dfc5ae1c4ff1a62b75d116af`
+
+### 中文摘要
+
+用动态历史关键帧记忆把单镜头视频扩散改造成逐镜头长叙事生成，并通过语义/审美选择维持紧凑记忆。
+
+### 核心贡献
+
+Memory-to-Video（M2V）、负RoPE位置与latent拼接、LoRA训练及ST-Bench。
+
+### 实现边界
+
+需微调单镜头骨干；分钟级逐镜头生成不是无限记忆，纯视觉记忆可能混淆多角色；平滑过渡和提示跟随有取舍。
+
+### Method／方法
+
+历史镜头选相关美观关键帧写入记忆，潜空间拼接注入模型；MI2V/MR2V支持过渡和定制。
+
+### Results／主要结果
+
+ST-Bench总体跨镜头一致性0.5065，报告比基础模型相对提高28.7%、比HoloCine提高9.4%；用户成对偏好更高；单镜头提示跟随略下降。
+
+### Shortcomings／局限与可能不足
+
+【作者】复杂多角色和大运动差异过渡困难；【解读】视觉一致性/审美不证明事件链完成，记忆选择会过滤重要但不美观的状态。
+
+### 证据定位
+
+PDF §3–4、表1–2、图7、§5。
+
+### Abstract
+
+Visual storytelling requires generating multi-shot videos with cinematic quality and long-range consistency. Inspired by human memory, we proposeStoryMem, a paradigm that reformulates long-form video storytelling as iterative shot synthesis conditioned on explicit visual memory, transforming pre-trained single-shot video diffusion models into multi-shot storytellers. This is achieved by a novelMemory-to-Video (M2V)design, which maintains a compact and dynamically updated memory bank of keyframes from historical generated shots. The stored memory is then injected into single-shot video diffusion models via latent concatenation and negative RoPE shifts with only LoRA fine-tuning. A semantic keyframe selection strategy, together with aesthetic preference filtering, further ensures informative and stable memory throughout generation. Moreover, the proposed framework naturally accommodates smooth shot transitions and customized story generation application. To facilitate evaluation, we introduce ST-Bench, a diverse benchmark for multi-shot video storytelling. Extensive experiments demonstrate thatStoryMemachieves superior cross-shot consistency over previous methods while preserving high aesthetic quality and prompt adherence, marking a significant step toward coherent minute-long video storytelling.
+
+<a id="p129"></a>
+## P129 · StoryReasoning Dataset: Using Chain-of-Thought for Scene Understanding and Grounded Story Generation
+
+- **作者**：Daniel A. P. Oliveira; David Martins de Matos
+- **时间**：本地版本：2025-08-30（arXiv:2505.10292v2）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：arXiv:2505.10292v2（本地版本）
+- **论文链接**：[arXiv本地版本 2505.10292v2](https://arxiv.org/abs/2505.10292v2)
+- **项目／代码／数据**：[数据/模型：datasets/daniel3303/StoryReasoning](https://huggingface.co/datasets/daniel3303/StoryReasoning)
+
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：31页；SHA-256：`ba6b37f97eb4e938f932a69fc2e4f6572cdd454f72329fffc733ac3dedb43ca1`
+
+### 中文摘要
+
+为电影图像序列生成带跨帧实体链接的场景分析和故事，建立StoryReasoning并微调Qwen Storyteller，减少人物/物体指代幻觉。
+
+### 核心贡献
+
+4,178故事、52,016图像的结构化分析/grounded叙事数据，跨帧重识别和基线模型。
+
+### 实现边界
+
+输出以多图到文字故事为主，不是生成视频；创造性/幻觉主要由LLM评判，不能等同人类创意评估。
+
+### Method／方法
+
+视觉相似性与人脸识别匹配对象，表格组织跨帧场景，CoT生成并将词语链接到实体，微调Qwen2.5VL7B。
+
+### Results／主要结果
+
+平均每故事幻觉4.06→3.56（相对−12.3%）；创造性评分2.58→3.38/5（+31%）；描述准确评分2.69→2.76，收益较小。
+
+### Shortcomings／局限与可能不足
+
+【作者】外观相似实体如双胞胎可混淆、电影构图偏差、对话第一人称难grounding；LLM评判偏差和文本相似指标可能惩罚合理创作。
+
+### 证据定位
+
+PDF §3–5、表1–2 p.8、§6。
+
+### Abstract
+
+Visual storytelling systems struggle to maintain character identity across frames and link actions to appropriate subjects, frequently leading to referential hallucinations. These issues can be addressed through grounding of characters, objects, and other entities on the visual elements. We propose StoryReasoning, a dataset containing 4,178 stories derived from 52,016 movie images, with both structured scene analyses and grounded stories. Each story maintains character and object consistency across frames while explicitly modeling multi-frame relationships through structured tabular representations. Our approach features cross-frame object re-identification using visual similarity and face recognition, chain-of-thought reasoning for explicit narrative modeling, and a grounding scheme that links textual elements to visual entities across multiple frames. We establish baseline performance by fine-tuning Qwen2.5-VL 7B, creating Qwen Storyteller, which performs end-to-end object detection, re-identification, and landmark detection while maintaining consistent object references throughout the story. Evaluation demonstrates a reduction from 4.06 to 3.56 (-12.3%) hallucinations on average per story and an improvement in creativity from 2.58 to 3.38 (+31.0%) when compared to a non-fine-tuned model.
+
+<a id="p130"></a>
+## P130 · CounterVid: Counterfactual Video Generation for Mitigating Action and Temporal Hallucinations in Video-Language Models
+
+- **作者**：Tobia Poppi; Burak Uzkent; Amanmeet Garg; Lucas Porto; Garin Kessler; Yezhou Yang; Marcella Cornia; Lorenzo Baraldi; Rita Cucchiara; Florian Schiffers
+- **时间**：本地版本：2026-01-08（arXiv:2601.04778v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：arXiv:2601.04778v1（本地版本）；代码/模型在稿中为待公开承诺
+- **论文链接**：[arXiv本地版本 2601.04778v1](https://arxiv.org/abs/2601.04778v1)
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化、AI方法与评测
+- **PDF版本**：16页；SHA-256：`473d1665bbd2a82bfbf319b6598336ea9023c21145d6fc9bf9d750622bb9b610`
+
+### 中文摘要
+
+生成保留场景但改变短时动作/顺序的反事实视频硬负例，以文字和视觉偏好联合DPO减少视频VLM动作与时间幻觉。
+
+### 核心贡献
+
+约26K偏好对CounterVid与MixDPO，面向语言先验导致的时间/动作错误。
+
+### 实现边界
+
+反事实主要是&lt;2秒动作的语义替换，不是严格结构因果模型干预；生成数据质量不完美，评估中只有68%标为good。
+
+### Method／方法
+
+多模态LLM提出替代动作/编辑指导，图像与视频扩散合成负例，过滤并构造文字/视觉偏好，冻结视觉编码器进行参数高效优化。
+
+### Results／主要结果
+
+留出集Qwen2.5VL7B平均57.8→66.2%；顺序列表16.5→43.8%；3B平均36.9→45.2%。样本审核7%视觉质量差，部分任务有约17%歧义。
+
+### Shortcomings／局限与可能不足
+
+【作者】过滤和生成质量、短动作限制、冻结视觉编码器；【解读】合成负例收益需关注跨真实域迁移而非只看内部留出集。
+
+### 证据定位
+
+PDF §3–4、表1–2 p.6、Limitations p.9。
+
+### Abstract
+
+Video-language models (VLMs) achieve strong multimodal understanding but remain prone to hallucinations, especially when reasoning about actions and temporal order. Existing mitigation strategies, such as textual filtering or random video perturbations, often fail to address the root cause: over-reliance on language priors rather than fine-grained visual dynamics. We propose a scalable framework forcounterfactual video generationthat synthesizes videos differing only in actions or temporal structure while preserving scene context. Our pipeline combines multimodal LLMs for action proposal and editing guidance with diffusion-based image and video models to generate semantic hard negatives at scale. Using this framework, we build CounterVid, a synthetic dataset of ∼26k preference pairs targeting action recognition and temporal reasoning. We further introduce MixDPO, a unified Direct Preference Optimization approach that jointly leverages textual and visual preferences. Finetuning Qwen2.5-VL with MixDPO yields consistent improvements, notably in temporal ordering, and transfers effectively to standard video hallucination benchmarks. Code and models will be made publicly available.
+
+<a id="p131"></a>
+## P131 · Controllable Video Generation: A Survey
+
+- **作者**：Yue Ma; Kunyu Feng; Zhongyuan Hu; Xinyu Wang; Yucheng Wang; Mingzhe Zheng; Bingyuan Wang; Qinghe Wang; Xuanhua He; Hongfa Wang; Chenyang Zhu; Hongyu Liu; Yingqing He; Zeyu Wang; Zhifeng Li; Xiu Li; Sirui Han; Yike Guo; Wei Liu; Dan Xu; Linfeng Zhang; Qifeng Chen
+- **时间**：本地版本：2026-01-19（arXiv:2507.16869v3）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：arXiv:2507.16869v3（本地版本）；检索方法主要覆盖2020–2025，文件名26不等于内容只属2026
+- **论文链接**：[arXiv本地版本 2507.16869v3](https://arxiv.org/abs/2507.16869v3)
+- **项目／代码／数据**：[代码：mayuelala/Awesome-Controllable-Video-Generation](https://github.com/mayuelala/Awesome-Controllable-Video-Generation)
+
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：41页；SHA-256：`a14847ae33974419f181f58ca0c4df227f2c1fdafdeb7b9910470cd15a236f86`
+
+### 中文摘要
+
+系统梳理文本之外的姿态、深度、轨迹、相机、音频、身份等视频生成控制，比较单条件、多条件和通用控制机制。
+
+### 核心贡献
+
+控制信号/注入方式分类、基础视频模型及文献资源汇集。
+
+### 实现边界
+
+综述，列出的生成分辨率、速度和代码状态属于原文时点/原实验配置；不是同硬件复现实验排行榜。
+
+### Method／方法
+
+PRISMA式四阶段筛选，按基础模型、条件类型、去噪注入方式和应用分析研究。
+
+### Results／主要结果
+
+形成控制分类与模型对照，指出多条件协调、精确局部控制、时序一致、通用接口和评估标准的挑战；无新模型统一提升数值。
+
+### Shortcomings／局限与可能不足
+
+【解读】快速更新导致覆盖时点有限，各论文预算/数据/控制难度不同，列表不可直接作为质量排名。
+
+### 证据定位
+
+PDF §3检索流程、§4–7、§8 p.26。
+
+### Abstract
+
+With the rapid development of AI-generated content (AIGC), video generation has emerged as one of its most dynamic and impactful subfields. In particular, the advancement of video generation foundation models has led to growing demand for controllable video generation methods that can more accurately reflect user intent. Most existing foundation models are designed for text-to-video generation, where text prompts alone are often insufficient to express complex, multi-modal, and fine-grained user requirements. This limitation makes it challenging for users to generate videos with precise control using current models. To address this issue, recent research has explored the integration of additional non-textual conditions—such as camera motion, depth maps, and human pose—to extend pretrained video generation models and enable more controllable video synthesis. These approaches aim to enhance the flexibility and practical applicability of AIGC-driven video generation systems. In this survey, we provide a systematic review of controllable video generation, covering both theoretical foundations and recent advances in the field. We begin by introducing the key concepts and commonly used open-source video generation models. We then focus on control mechanisms in video diffusion models, analyzing how different types of conditions can be incorporated into the denoising process to guide generation. Finally, we categorize existing methods based on the types of control signals they leverage, including single-condition generation, multi-condition generation, and universal controllable generation. For a complete list of the literature on controllable video generation reviewed, please visit our curated repository at https://github.com/mayuelala/Awesome-Controllable-Video-Generation.
+
+<a id="p132"></a>
+## P132 · Pre-trained Video Generative Models as World Simulators
+
+- **作者**：Haoran He; Yang Zhang; Liang Lin; Zhongwen Xu; Ling Pan
+- **时间**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台／版本状态**：ICLR 2025（PDF首页）；文件名77无可靠年份含义
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+
+- **主题**：世界机制与演化
+- **PDF版本**：17页；SHA-256：`dce93f666b6f970e5163c61fe1c0ead37843cbe44eaebd66be8bedc4d76dee43`
+
+### 中文摘要
+
+DWS在预训练视频生成器上添加动作条件模块和运动强化损失，获得可按动作轨迹生成的动态模型，再通过优先想象改进模型式RL。
+
+### 核心贡献
+
+适配扩散/自回归骨干的动作接口、动态转移训练与prioritized imagination。
+
+### 实现边界
+
+需要任务动作数据和微调；“任何模型通用”仅在所测架构证实，主要游戏/机器人域，非现实通用仿真。
+
+### Method／方法
+
+轻量动作模块对齐动作与视觉变化，以运动损失强化动态；按价值选想象轨迹供PPO/离线策略训练。
+
+### Results／主要结果
+
+Procgen/Atari展示较PPO及部分模型式RL的样本效率收益；Breakout报告约7倍分数提升，限定具体预算/基线；另用合成经验增强离线策略。
+
+### Shortcomings／局限与可能不足
+
+【解读】模型动态误差、动作覆盖和想象优先级可造成偏差；Procgen策略训练中世界模型仍需继续微调，不能当作一次预训练后通吃。
+
+### 证据定位
+
+PDF §3–5、§5.2图6–7、§5.3。
+
+### Abstract
+
+Video generative models pre-trained on large-scale internet datasets have achieved remarkable success, excelling at producing realistic synthetic videos. However, they often generate clips based on static prompts (e.g., text or images), limiting their ability to model interactive and dynamic scenarios. In this paper, we propose Dynamic World Simulation (DWS), a novel approach to transform pre-trained video generative models into controllable world simulators capable of executing specified action trajectories. To achieve precise alignment between conditioned actions and generated visual changes, we introduce a lightweight, universal actionconditioned module that seamlessly integrates into any existing model. Instead of focusing on complex visual details, we demonstrate that consistent dynamic transition modeling is the key to building powerful world simulators. Building upon this insight, we further introduce a motion-reinforced loss that enhances action controllability by compelling the model to capture dynamic changes more effectively. Experiments demonstrate that DWS can be versatilely applied to both diffusion and autoregressive transformer models, achieving significant improvements in generating action-controllable, dynamically consistent videos across games and robotics domains. Moreover, to facilitate the applications of the learned world simulator in downstream tasks such as model-based reinforcement learning, we propose prioritized imagination to improve sample efficiency, demonstrating competitive performance compared with state-of-the-art methods.
+
+<a id="p133"></a>
+## P133 · OneStory: Coherent Multi-Shot Video Generation with Adaptive Memory
+
+- **作者**：Zhaochong An; Menglin Jia; Haonan Qiu; Zijian Zhou; Xiaoke Huang; Zhiheng Liu; Weiming Ren; Kumara Kahatapitiya; Ding Liu; Sen He; Chenyang Zhang; Tao Xiang; Fanny Yang; Serge Belongie; Tian Xie
+- **时间**：本地版本：2025-12-08（arXiv:2512.07802v1）；正式发表时间如已核实，见下一项。
+- **发表平台／版本状态**：arXiv:2512.07802v1（本地版本）
+- **论文链接**：[arXiv本地版本 2512.07802v1](https://arxiv.org/abs/2512.07802v1)
+- **项目／代码／数据**：[项目/演示页面](https://zhaochongan.github.io/projects/OneStory)
+
+- **主题**：创作与规则补全、世界机制与演化、XR与人机协作
+- **PDF版本**：17页；SHA-256：`31338f0d7ecd2fa06661eb61cdcf6e0c6af71ad9266062b66478796afd0ce453`
+
+### 中文摘要
+
+OneStory把多镜头生成视为下一镜头预测，从全局历史挑选相关帧并自适应压缩为紧凑条件，保持角色/环境一致。
+
+### 核心贡献
+
+Frame Selection、Adaptive Conditioner、带指代字幕的多镜头数据及shot inflation/解耦条件训练。
+
+### 实现边界
+
+历史经选择压缩，不能保留所有事件状态；依赖预训练I2V模型和相应训练，并非无需训练的记忆外挂。
+
+### Method／方法
+
+按当前镜头字幕检索历史信息帧，重要性引导patchification压缩上下文，直接条件注入下一镜头视频生成器。
+
+### Results／主要结果
+
+表2无AC/FS时角色/环境一致0.5153/0.5112，完整0.5874/0.5752；语义对齐0.1814→0.2389。增加至3帧等价上下文后角色/环境0.5926/0.5863，说明预算仍有影响。
+
+### Shortcomings／局限与可能不足
+
+【解读】历史选择失误、对象混淆和累积漂移仍可能发生；指标主要衡量视觉/语义一致，不能保证复杂故事事件因果完整。
+
+### 证据定位
+
+PDF §3–5、表2 p.8、§6。
+
+### Abstract
+
+Storytelling in real-world videos often unfolds through multiple shots—discontinuous yet semantically connected clips that together convey a coherent narrative. However, existing multi-shot video generation (MSV) methods struggle to effectively model long-range cross-shot context, as they rely on limited temporal windows or single keyframe conditioning, leading to degraded performance under complex narratives. In this work, we propose OneStory, enabling global yet compact cross-shot context modeling for consistent and scalable narrative generation. OneStory reformulates MSV as a next-shot generation task, enabling autoregressive shot synthesis while leveraging pretrained image-to-video (I2V) models for strong visual conditioning. We introduce two key modules: a Frame Selection module that constructs a semantically-relevant global memory based on informative frames from prior shots, and an Adaptive Conditioner that performs importance-guided patchification to generate compact context for direct conditioning. We further curate a high-quality multi-shot dataset with referential captions to mirror real-world storytelling patterns, and design effective training strategies under the next-shot paradigm. Finetuned from a pretrained I2V model on our curated 60K dataset, OneStory achieves state-of-the-art narrative coherence across diverse and complex scenes in both text- and image-conditioned settings, enabling controllable and immersive long-form video storytelling.
+
+<a id="p134"></a>
+## P134 · MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequences
+
+- **作者**：Canyu Zhao; Mingyu Liu; Wen Wang; Weihua Chen; Fan Wang; Hao Chen; Bo Zhang; Chunhua Shen
+- **时间**：本地PDF未明确；未按文件名或PDF制作时间推断。
+- **发表平台／版本状态**：ICLR 2025正式论文版（PDF首页）
+- **项目／代码／数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+- **版本关系**：与[P127](#p127)同一工作，31页但SHA不同；本稿前2位作者标星，[P127](#p127)前3位标星；下述主要表格结果一致，版本不计为独立证据。
+
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：31页；SHA-256：`1b087586ac8870db8a1387f8b29b51504d15a408053d5e9e4a226976dc9d8bb0`
+
+### 中文摘要
+
+以多模态剧本、自回归关键帧及扩散视频渲染组合实现长叙事视觉序列，强调角色与风格跨镜头保持。
+
+### 核心贡献
+
+分层生成与身份保持渲染，支持有/无参考故事生成。
+
+### 实现边界
+
+主要验证脚本对齐和视觉角色一致；不保证长序列每项事件完成/真实因果正确，有参考条件不能和纯文本输入直接比较。
+
+### Method／方法
+
+预测紧凑关键帧token，使用FaceID及文字渲染，再以关键帧条件生成视频片段。
+
+### Results／主要结果
+
+表1无参考LT0.814、ST0.646、FID2.043；有参考LT0.893/ST0.701/FID1.912。表2视频CLIP19.520、Inception8.642、Aesthetic6.049、CLIP-sim0.704；各指标口径限该测试集。
+
+### Shortcomings／局限与可能不足
+
+【解读】叙事与角色指标不等同完整事件序列正确，长时误差和身份覆盖仍有限；不同条件与不同版本须保留标识。
+
+### 证据定位
+
+PDF §3–4、表1–2 p.9。
+
+### Abstract
+

@@ -1,0 +1,88 @@
+---
+layout: null
+permalink: /assets/data/literature-review.json
+sitemap: false
+---
+{ "schema_version": 1, "scope": "paper_notes_only", "updated": "2026-09-15", "records": 157, "pages": 3833, "historical_aliases": { "P003": "P002",
+"P082": "P081", "P109": "P103" }, "topic_labels": { "xr": "XR与人机协作", "creation": "创作与规则补全", "world": "世界机制与演化", "ai":
+"AI方法与评测" } , "papers": [
+{% for paper in site.data.literature_review.papers_151_160 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_141_150 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_131_140 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_121_130 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_111_120 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_101_110 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_091_100 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_081_090 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_071_080 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_061_070 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_051_060 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_041_050 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_031_040 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_021_030 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_011_020 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
+{% for paper in site.data.literature_review.papers_001_010 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor %}
+]}
