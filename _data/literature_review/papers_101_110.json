@@ -132,7 +132,7 @@
     "date": "2023年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。",
     "venue": "EMNLP 2023，2023-12-06—10，pp.8154–8173",
     "paper_links": "",
-    "project_links": "[代码：Ber666/llm-reasoners](https://github.com/Ber666/llm-reasoners)",
+    "project_links": "[代码（现地址）：maitrix-org/llm-reasoners](https://github.com/maitrix-org/llm-reasoners)；2026-09-16核验现仓库，README列有本论文及其Reasoning-via-Planning实现。",
     "version": "",
     "sha256": "f67d075c889d885db80355f6d398fb2aa6830406340c365140e234af05056dc3",
     "pages": 20,

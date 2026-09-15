@@ -232,7 +232,7 @@
     "date": "初稿2020；本地arXiv:2010.09890v2，2021-05-03。",
     "venue": "ICLR 2021；本地PDF首页明确标注正式会议。",
     "paper_links": "[论文/发表记录 1](https://arxiv.org/abs/2010.09890v2)",
-    "project_links": "[资源 1](https://virtual-home.org) · [资源 2](https://github.com/xavierpuigf/watch_and_help)",
+    "project_links": "[Watch-And-Help代码](https://github.com/xavierpuigf/watch_and_help) · [VirtualHome模拟器代码](https://github.com/xavierpuigf/virtualhome)；原项目页在2026-09-16核验时存在证书域名不匹配，网页入口改用维护者代码仓库。",
     "version": "",
     "sha256": "35fd46183bb785e6f8eb0303083ca59036322f09fc4b20bea243bfc52d84486f",
     "pages": 23,
