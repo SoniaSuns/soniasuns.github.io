@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | escape }}">
+    <meta name="author" content="Yusi Sun">
+    <title>{{ page.title | escape }}</title>
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/literature-review.css' | relative_url }}">
+  </head>
+  <body class="lr-standalone">
+    <a class="lr-skip" href="#lr-library">跳转到文献清单</a>
+    <main class="lr-page">
+      <header class="lr-page-header">
+        <h1>{{ page.title | escape }}</h1>
+        <p>{{ page.description | escape }}</p>
+      </header>
+      {{ content }}
+    </main>
+  </body>
+</html>

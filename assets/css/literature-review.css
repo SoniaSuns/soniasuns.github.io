@@ -1,3 +1,47 @@
+.lr-standalone {
+  margin: 0;
+  background: #fff;
+  color: #23262d;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color-scheme: light;
+}
+.lr-standalone *,
+.lr-standalone *::before,
+.lr-standalone *::after {
+  box-sizing: border-box;
+}
+.lr-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 28px 40px;
+}
+.lr-page-header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+.lr-page-header p {
+  margin: 0 0 28px;
+  color: #627082;
+  font-size: 14px;
+}
+.lr-skip {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  transform: translateY(-200%);
+  background: #fff;
+  color: #315ca8;
+  padding: 8px 12px;
+  z-index: 1;
+}
+.lr-skip:focus {
+  transform: translateY(0);
+}
 #literature-review {
   --lr-ink: var(--global-text-color, #23262d);
   --lr-muted: var(--global-text-color-light, #627082);
@@ -59,20 +103,20 @@
 }
 #literature-review .lr-kicker {
   font-size: 11px;
-  letter-spacing: 0.15em;
+  letter-spacing: 0;
   color: var(--lr-accent);
   margin: 1.5rem 0 1rem;
 }
 #literature-review .lr-kicker span {
   margin-left: 1.2em;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   color: var(--lr-muted);
 }
 #literature-review .lr-lead {
-  font-size: clamp(1.45rem, 4vw, 2rem);
+  font-size: 24px;
   line-height: 1.4;
   font-weight: 600;
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
   margin-bottom: 0.7em;
 }
 #literature-review .lr-description {
@@ -126,7 +170,7 @@
     11px ui-monospace,
     monospace;
   color: var(--lr-muted);
-  letter-spacing: 0.07em;
+  letter-spacing: 0;
 }
 #literature-review .lr-muted {
   color: var(--lr-muted);
@@ -242,7 +286,7 @@
   font:
     11px/1.6 ui-monospace,
     monospace;
-  letter-spacing: 0.025em;
+  letter-spacing: 0;
   color: var(--lr-muted);
 }
 #literature-review .lr-paper-meta > span > span {
@@ -267,7 +311,7 @@
   line-height: 1.45;
   font-weight: 600;
   margin: 0.45rem 0;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 #literature-review .lr-authors {
   display: block;
@@ -445,6 +489,12 @@
   gap: 12px 24px;
 }
 @media (max-width: 600px) {
+  .lr-page {
+    padding: 28px 18px;
+  }
+  .lr-page-header h1 {
+    font-size: 28px;
+  }
   #literature-review .lr-reading-grid {
     grid-template-columns: 1fr;
     gap: 18px;
