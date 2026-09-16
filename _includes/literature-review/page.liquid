@@ -56,9 +56,19 @@
       <div class="lr-filter-footer">
         <label class="lr-check"><input id="lr-new" type="checkbox" /> 只看近期新增21份</label><button id="lr-reset" type="button">清除筛选</button>
       </div>
+      <div id="lr-noted-filter" hidden><label class="lr-check"><input id="lr-noted" type="checkbox" /> 只看有个人笔记的论文</label></div>
     </form>
     <noscript><p class="lr-notice">当前浏览器未开启JavaScript。仍可展开全部笔记，或用浏览器的查找功能检索。</p></noscript>
     <div class="lr-list-actions"><span>点击标题展开完整笔记</span><button id="lr-collapse" type="button">收起全部</button></div>
+    <div id="lr-notes-toolbar" class="lr-notes-toolbar" hidden>
+      <span>我的笔记 <span class="lr-muted">· 仅此浏览器</span></span>
+      <div class="lr-note-actions">
+        <button id="lr-notes-export" type="button" title="导出个人笔记备份">导出备份</button>
+        <button id="lr-notes-import" type="button" title="导入个人笔记备份">导入备份</button>
+        <input id="lr-notes-file" type="file" accept=".json,application/json" hidden aria-label="选择个人笔记备份">
+      </div>
+    </div>
+    <p id="lr-notes-message" class="lr-note-status" role="status" hidden></p>
     <p id="lr-empty" hidden>没有找到匹配的笔记。试试缩短关键词，或清除筛选条件。</p>
     <div id="lr-papers">
       {% include literature-review/papers-161-170.html -%}
@@ -96,3 +106,4 @@
   </section>
 </div>
 <script defer src="{{ '/assets/js/literature-review.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/literature-notes.js' | relative_url }}"></script>

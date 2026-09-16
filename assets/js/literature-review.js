@@ -10,6 +10,7 @@
   var priority = document.getElementById("lr-priority");
   var sort = document.getElementById("lr-sort");
   var recent = document.getElementById("lr-new");
+  var noted = document.getElementById("lr-noted");
   var texts = new Map(
     cards.map(function (card) {
       return [card, card.textContent.normalize("NFKC").toLocaleLowerCase()];
@@ -25,12 +26,13 @@
       var data = card.dataset;
       var visible =
         tokens.every(function (token) {
-          return texts.get(card).includes(token);
+          return texts.get(card).includes(token) || (data.noteSearch || "").includes(token);
         }) &&
         (topic.value === "all" || data.topics.split(" ").includes(topic.value)) &&
         (year.value === "all" || data.years.split(" ").includes(year.value)) &&
         (!priority || priority.value === "all" || data.priority === priority.value) &&
-        (!recent.checked || data.new === "true");
+        (!recent.checked || data.new === "true") &&
+        (!noted || !noted.checked || data.hasNote === "true");
       card.hidden = !visible;
       if (visible) count += 1;
     });
@@ -58,6 +60,7 @@
     topic.value = year.value = "all";
     if (priority) priority.value = "all";
     recent.checked = false;
+    if (noted) noted.checked = false;
     filter();
   }
 
@@ -86,7 +89,7 @@
     clearTimeout(timer);
     timer = setTimeout(filter, 120);
   });
-  [topic, year, priority, recent].filter(Boolean).forEach(function (control) {
+  [topic, year, priority, recent, noted].filter(Boolean).forEach(function (control) {
     control.addEventListener("change", filter);
   });
   sort.addEventListener("change", order);
@@ -109,6 +112,7 @@
     if (anchor.hash === window.location.hash) setTimeout(openHash, 0);
   });
   window.addEventListener("hashchange", openHash);
+  root.addEventListener("lr-notes-changed", filter);
   filter();
   openHash();
 })();
