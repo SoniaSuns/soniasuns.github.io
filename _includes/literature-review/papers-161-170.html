@@ -1,0 +1,60 @@
+<details class="lr-paper" id="p161" data-id="P161" data-years="2026" data-year="2026" data-topics="creation ai" data-new="true" data-title="Learning Long-form Movie Prior via Large Language Models">
+  <summary>
+    <span class="lr-paper-meta"><span>P161 <span aria-hidden="true">/</span> 2026</span><span class="lr-badges"><span class="lr-new">新增</span></span></span>
+    <span class="lr-title">Learning Long-form Movie Prior via Large Language Models</span>
+    <span class="lr-authors">Jinheng Xie; Jiajun Feng; Mike Zheng Shou</span>
+    <span class="lr-snippet">将电影中的剧本、人物身份、站位、动作和场景物体表示为可离散化的文本与空间坐标序列，使用LLaMA的下一token预测学习联合分镜先验，再通过指令微调从简短创意生成分镜。提出Storyboard20K，为跨镜头身份、边界框与全身关键点提供细粒度标注；生成结果可作为可控图像模型的布局条件，辅助视觉叙事创作。</span>
+    <span class="lr-tags"><span class="lr-tag">创作与规则补全</span><span class="lr-tag">AI方法与评测</span><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span>
+  </summary>
+  <div class="lr-paper-body">
+    <div class="lr-paper-tools"><a href="#p161" aria-label="P161的固定链接">#P161</a><span>8页 · 核对于 2026-09-16</span></div>
+    <dl class="lr-metadata">
+      <dt>作者</dt>
+      <dd><p>Jinheng Xie; Jiajun Feng; Mike Zheng Shou</p></dd>
+      <dt>时间与版本</dt>
+      <dd><p>2026；作者仓库于2026-08-23宣布TPAMI录用。本地PDF为2026年IEEE已接收作者稿，页眉注明尚未完成最终编辑；本地下载日期为2026-09-16。</p></dd>
+      <dt>发表平台</dt>
+      <dd><p>IEEE Transactions on Pattern Analysis and Machine Intelligence（TPAMI），2026，已接收作者版本；DOI: 10.1109/TPAMI.2026.3729756。当前PDF不能当作已完成最终编辑的卷期排版版。</p></dd>
+      <dt>论文与正式记录</dt>
+      <dd><p><a href="https://doi.org/10.1109/TPAMI.2026.3729756" target="_blank" rel="noopener noreferrer">IEEE DOI（本地版本）</a>；<a href="https://sierkinhane.github.io/" target="_blank" rel="noopener noreferrer">作者发表列表</a>；<a href="https://arxiv.org/abs/2404.15909v1" target="_blank" rel="noopener noreferrer">相关早期预印本（旧题名）</a></p></dd>
+      <dt>项目 · 代码 · 数据</dt>
+      <dd><p><a href="https://github.com/showlab/Long-form-Video-Prior" target="_blank" rel="noopener noreferrer">作者代码与数据仓库</a>。仓库提供Storyboard20K标注下载及预处理、可视化脚本；截至核查时，仓库首页未提供完整训练流程或模型权重。原始电影帧需按仓库说明先申请MPII-MD访问授权。</p></dd>
+      <dt>版本关系</dt>
+      <dd><p>作者仓库关联的早期预印本为Learning Long-form Video Prior via Generative Pre-Training（arXiv:2404.15909v1，2024-04-24，11位作者）；本条依据所给8页TPAMI版本，题名及3位作者按本地PDF记录，不混用早期版本的作者表或实验设置。</p></dd>
+    </dl>
+    <section class="lr-field">
+      <h3>中文摘要</h3>
+      <p>将电影中的剧本、人物身份、站位、动作和场景物体表示为可离散化的文本与空间坐标序列，使用LLaMA的下一token预测学习联合分镜先验，再通过指令微调从简短创意生成分镜。提出Storyboard20K，为跨镜头身份、边界框与全身关键点提供细粒度标注；生成结果可作为可控图像模型的布局条件，辅助视觉叙事创作。</p>
+    </section>
+    <section class="lr-field">
+      <h3>核心贡献</h3>
+      <p>构建来自MovieNet与LSMDC的20,310个分镜、149,528个关键帧，覆盖约400部电影；标注约319K人物框、180K场景物体框、跨帧一致身份及全身关键点，并提供GPT-4生成的标题、类型、情绪、场景和短摘要。将script、objects、main characters统一编码为JSON形式的token序列，以LLaMA-3/3.2的1B、3B、8B模型学习结构化电影先验。</p>
+    </section>
+    <section class="lr-field">
+      <h3>实现边界</h3>
+      <p>核心输出是剧本文本、边界框和关键点组成的稀疏分镜，不是直接生成连续像素视频。数据通常每个分镜3–10个关键帧，源片段平均33.9秒；不能据此声称已验证整部长电影的长期一致性。ROICtrl等现成图像模型用于可视化。人物身份与布局连贯不等于已学得可执行的因果世界模型；论文没有验证世界规则编辑、物理干预或规则修改后的依赖更新。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Method · 方法</h3>
+      <p>先用检测、姿态估计和人脸识别自动标注，再由7名标注者校准人物身份、框、关键点及开放类别场景物体，并进行多轮复核。将连续坐标量化到m个整数区间，与文本共同tokenize；大于96×96像素面积的人物用98个全身关键点，否则用17个关键点或边界框。预训练时随机交换script、objects、main characters的顺序，以最大似然学习联合分布；随后把概括性标注作为指令、剧本和空间标注作为回答进行微调。训练/testA/testB分别为18,207/905/1,198个分镜，testA使用概括描述，testB使用逐镜头描述。对照商业模型获得2个上下文示例。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Results · 主要结果</h3>
+      <p>Table 3中8B模型在testA/testB的布局FID为4.05/17.72，3B为4.35/16.86，对照Gemini-Pro为8.53/22.30、GPT-3.5-turbo为23.08/35.14；FID由训练的布局分类器特征计算，且这里只评估边界框，不是生成图像/视频的画质FID，也不是关键点精度。Table 2中8B的ROUGE-L为19.1/19.6，GPT-3.5为20.4/17.6，说明文本指标并非全面领先。Table 4中8B的指令遵循/关键帧变化/时间连贯评分为7.27/7.68/7.83（0–10分），GPT-4o为7.91/6.06/6.42；8B获得68%的首选比例，Gemini-Pro/GPT-4/GPT-4o分别为7%/13%/12%。68%是该人工比较中的偏好比例，不是任务准确率。</p>
+    </section>
+    <section class="lr-field">
+      <h3>Shortcomings · 局限</h3>
+      <p>【作者说明的评估边界】商业对照在该设置下无法生成98个全身关键点，因此FID比较仅限边界框；训练实现细节与更多评估样例指向附录，但所给8页PDF未包含附录。【解读】微调模型与仅2-shot的商业模型存在训练数据暴露差异，不能把优势全部归因于模型结构。文本相似度、布局分布和偏好评分不能证明动作物理正确、因果合理或长视频连续性；下游图像渲染质量也可能影响主观评价。本地正文未交代人工评估人数、样本数、置信区间或显著性检验，也未明确说明按电影隔离训练与测试集，因而跨电影泛化与结果稳健性仍需补充核查。未提供创作者实际工作流中的效率或可控性用户研究。</p>
+    </section>
+    <section class="lr-field">
+      <h3>证据定位</h3>
+      <p>PDF p.1：题名、3位作者、DOI和已接收作者稿声明；pp.3–4 §3及Table 1：20,310分镜、149,528帧、约400电影、平均33.9秒、标注流程；p.5 §4：坐标离散化、98/17关键点与两阶段学习；p.6 Fig.5、§5.1及Tables 2–3：数据划分、两示例对照、文本指标与布局FID；pp.6–7 §5.3及Table 4：人工评价和68%偏好率；p.8 Fig.6：ROICtrl可视化。资源状态另核对作者主页、官方仓库及arXiv旧版记录（2026-09-16）。</p>
+    </section>
+    <details class="lr-abstract">
+      <summary>Abstract · 英文原摘要</summary>
+      <div lang="en"><p>Concepts in movies like characters, objects, and their positions and interactions, can be viewed as following an implicit prior. They are notably too complex to be comprehensively learned. Recent large language models have exhibited capacities in modeling text content even visual locations. Can these models work for learning movie prior? Instead of operating on pixel space, it is possible to represent movie prior using texts and visual locations like object bounding boxes and keypoints, which can be tokenized for consumption by language models. Due to the scarcity of suitable data, we curate the Storyboard20K from movies to serve as a representative. It includes scripts, shot-by-shot keyframes, and fine-grained annotations of film sets and characters with consistent IDs, bounding boxes, and whole body keypoints. Hence, movies can be represented by a set of tokens and learned via next-token prediction. We validate that our approach can learn movie prior and sample professional storyboards, serving as guidance for visual story generation and even inspiration for movie creation.</p></div>
+    </details>
+    <p class="lr-provenance">版本指纹 <code>5a757c4328c5277e646eb67a770d5f4e10998a3aa4469c5e04d38d6573a202eb</code></p>
+    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+  </div>
+</details>

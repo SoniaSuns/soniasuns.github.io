@@ -3,9 +3,14 @@ layout: null
 permalink: /assets/data/literature-review.json
 sitemap: false
 ---
-{ "schema_version": 1, "scope": "paper_notes_only", "updated": "2026-09-15", "records": 157, "pages": 3833, "historical_aliases": { "P003": "P002",
+{ "schema_version": 1, "scope": "paper_notes_only", "updated": "2026-09-16", "records": 158, "pages": 3841, "historical_aliases": { "P003": "P002",
 "P082": "P081", "P109": "P103" }, "topic_labels": { "xr": "XR与人机协作", "creation": "创作与规则补全", "world": "世界机制与演化", "ai":
 "AI方法与评测" } , "papers": [
+{% for paper in site.data.literature_review.papers_161_170 -%}
+  {{- paper | jsonify -}}
+  {%- unless forloop.last %},{% endunless -%}
+{%- endfor -%}
+,
 {% for paper in site.data.literature_review.papers_151_160 -%}
   {{- paper | jsonify -}}
   {%- unless forloop.last %},{% endunless -%}

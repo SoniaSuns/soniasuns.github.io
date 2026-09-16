@@ -1,6 +1,6 @@
 # Literature Review
 
-更新：2026-09-15。157份按PDF内容去重的笔记；结果依据本地版本，未重跑实验。
+更新：2026-09-16。158份按PDF内容去重的笔记；结果依据本地版本，未重跑实验。
 
 <a id="index"></a>
 ## 索引
@@ -162,6 +162,7 @@
 - [P158 · RULER-Bench: Probing Rule-based Reasoning Abilities of Next-level Video Generation Models for Vision Foundation Intelligence](#p158)
 - [P159 · GPS: Graph-guided Proactive Information Seeking in Large Language Models](#p159)
 - [P160 · Fictional Worldbuilding: Multi-Agent LLM Collaboration with Hierarchical Context Compression and Iterative Review](#p160)
+- [P161 · Learning Long-form Movie Prior via Large Language Models](#p161)
 
 <a id="p001"></a>
 ## P001 · HG-DAgger: Interactive Imitation Learning with Human Experts
