@@ -253,90 +253,48 @@
     <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
   </div>
 </details>
-<details
-  class="lr-paper"
-  id="p137"
-  data-id="P137"
-  data-years="2025"
-  data-year="2025"
-  data-topics="creation world xr"
-  data-new="false"
-  data-title="Long-Context State-Space Video World Models"
->
+
+
+
+<a id="p102" href="#p137" class="lr-historical-alias" aria-label="P102已合并到P137"></a>
+<details class="lr-paper" id="p137" data-id="P137" data-years="2025" data-year="2025" data-topics="creation world xr" data-new="false" data-title="Long-Context State-Space Video World Models">
   <summary>
-    <span class="lr-paper-meta"
-      ><span>P137 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
-    ></span>
+    <span class="lr-paper-meta"><span>P137 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span></span>
     <span class="lr-title">Long-Context State-Space Video World Models</span>
-    <span class="lr-authors">Ryan Po; Yotam Nitzan; Richard Zhang et al.</span>
+    <span class="lr-authors">Ryan Po; Yotam Nitzan; Richard Zhang; Berlin Chen; Tri Dao; Eli Shechtman; Gordon Wetzstein; Xun Huang</span>
     <span class="lr-snippet">以块级SSM扫描存储较长视频历史，结合局部注意力维持局部连贯，降低动作条件世界模型长上下文计算。</span>
-    <span class="lr-tags"
-      ><span class="lr-tag">创作与规则补全</span><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
-      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
-    >
+    <span class="lr-tags"><span class="lr-tag">创作与规则补全</span><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span><span class="lr-open-hint">展开笔记</span></span>
   </summary>
   <div class="lr-paper-body">
     <div class="lr-paper-tools"><a href="#p137" aria-label="P137的固定链接">#P137</a><span>12页 · 核对于 2026-09-15</span></div>
-    <dl class="lr-metadata">
-      <dt>作者</dt>
-      <dd><p>Ryan Po; Yotam Nitzan; Richard Zhang; Berlin Chen; Tri Dao; Eli Shechtman; Gordon Wetzstein; Xun Huang</p></dd>
-      <dt>时间与版本</dt>
-      <dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p></dd>
-      <dt>发表平台</dt>
-      <dd><p>ICCV 2025，正文页码8733起（PDF论文版）</p></dd>
-      <dt>项目 · 代码 · 数据</dt>
-      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
-      <dt>版本关系</dt>
-      <dd>
-        <p>与<a href="#p102">P102</a>为同一工作；本条是12页ICCV 2025论文版，<a href="#p102">P102</a>为15页arXiv版本。</p>
-      </dd>
-    </dl>
-    <section class="lr-field">
-      <h3>中文摘要</h3>
-      <p>以块级SSM扫描存储较长视频历史，结合局部注意力维持局部连贯，降低动作条件世界模型长上下文计算。</p>
-    </section>
-    <section class="lr-field">
-      <h3>核心贡献</h3>
-      <p>因果视频SSM架构、训练策略及长时空间记忆测试。</p>
-    </section>
-    <section class="lr-field">
-      <h3>实现边界</h3>
-      <p>每帧推理成本不随历史增长，但作者明确尚不支持交互帧率，无法有效超训练长度记忆；仅低分辨率合成环境。</p>
-    </section>
-    <section class="lr-field">
-      <h3>Method · 方法</h3>
-      <p>Mamba状态压缩长历史，block-wise扫描与frame-local attention结合，逐帧扩散生成。</p>
-    </section>
-    <section class="lr-field">
-      <h3>Results · 主要结果</h3>
-      <p>576历史帧/224预测帧任务PSNR28.2、LPIPS0.099、SSIM0.855；接近全历史Transformer28.8/0.089/0.860并优于较低复杂度比较方法。</p>
-    </section>
-    <section class="lr-field">
-      <h3>Shortcomings · 局限</h3>
-      <p>【作者】速度、长度外推和高分辨率真实视频扩展待解决；【解读】压缩状态对长期精细记忆仍有容量约束。</p>
-    </section>
-    <section class="lr-field">
-      <h3>证据定位</h3>
-      <p>PDF §4–5、表3 p.6、§6 p.8。</p>
-    </section>
-    <details class="lr-abstract">
-      <summary>Abstract · 英文原摘要</summary>
-      <div lang="en">
-        <p>
-          Video diffusion models have recently shown promise for world modeling through autoregressive frame prediction conditioned on actions.
-          However , they struggle to maintain long-term memory due to the high computational cost associated with processing extended sequences in
-          attention layers. To overcome this limitation, we propose a novel architecture leveraging state-space models (SSMs) to extend temporal
-          memory without compromising computational efficiency. Unlike previous approaches that retrofit SSMs for non-causal vision tasks, our method
-          fully exploits the inherent advantages of SSMs in causal sequence modeling. Central to our design is a block-wise SSM scanning scheme, which
-          strategically trades off spatial consistency for extended temporal memory, combined with dense local attention to ensure coherence between
-          consecutive frames. We evaluate the long-term memory capabilities of our model through spatial retrieval and reasoning tasks over extended
-          horizons. Experiments on Memory Maze and Minecraft datasets demonstrate that our approach surpasses baselines in preserving long-range
-          memory, while maintaining practical inference speeds suitable for interactive applications.
-        </p>
-      </div>
-    </details>
+    <dl class="lr-metadata"><dt>作者</dt><dd><p>Ryan Po; Yotam Nitzan; Richard Zhang; Berlin Chen; Tri Dao; Eli Shechtman; Gordon Wetzstein; Xun Huang</p>
+</dd>
+<dt>时间与版本</dt><dd><p>2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。</p>
+</dd>
+<dt>发表平台</dt><dd><p>ICCV 2025，正文页码8733起（PDF论文版）</p>
+</dd>
+<dt>项目 · 代码 · 数据</dt><dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p>
+</dd>
+<dt>版本关系</dt><dd><p>同一论文只保留本地ICCV 2025正式论文版本。P102为2025-05-26 arXiv v1，已归档；该预印本的附录与提取全文仍在本地归档保留。旧条目链接跳转到本条。</p>
+</dd></dl>
+    <section class="lr-field"><h3>中文摘要</h3><p>以块级SSM扫描存储较长视频历史，结合局部注意力维持局部连贯，降低动作条件世界模型长上下文计算。</p>
+</section>
+<section class="lr-field"><h3>核心贡献</h3><p>因果视频SSM架构、训练策略及长时空间记忆测试。</p>
+</section>
+<section class="lr-field"><h3>实现边界</h3><p>每帧推理成本不随历史增长，但作者明确尚不支持交互帧率，无法有效超训练长度记忆；仅低分辨率合成环境。</p>
+</section>
+<section class="lr-field"><h3>Method · 方法</h3><p>Mamba状态压缩长历史，block-wise扫描与frame-local attention结合，逐帧扩散生成。</p>
+</section>
+<section class="lr-field"><h3>Results · 主要结果</h3><p>576历史帧/224预测帧任务PSNR28.2、LPIPS0.099、SSIM0.855；接近全历史Transformer28.8/0.089/0.860并优于较低复杂度比较方法。</p>
+</section>
+<section class="lr-field"><h3>Shortcomings · 局限</h3><p>【作者】速度、长度外推和高分辨率真实视频扩展待解决；【解读】压缩状态对长期精细记忆仍有容量约束。</p>
+</section>
+<section class="lr-field"><h3>证据定位</h3><p>PDF §4–5、表3 p.6、§6 p.8。</p>
+</section>
+    <details class="lr-abstract"><summary>Abstract · 英文原摘要</summary><div lang="en"><p>Video diffusion models have recently shown promise for world modeling through autoregressive frame prediction conditioned on actions. However , they struggle to maintain long-term memory due to the high computational cost associated with processing extended sequences in attention layers. To overcome this limitation, we propose a novel architecture leveraging state-space models (SSMs) to extend temporal memory without compromising computational efficiency. Unlike previous approaches that retrofit SSMs for non-causal vision tasks, our method fully exploits the inherent advantages of SSMs in causal sequence modeling. Central to our design is a block-wise SSM scanning scheme, which strategically trades off spatial consistency for extended temporal memory, combined with dense local attention to ensure coherence between consecutive frames. We evaluate the long-term memory capabilities of our model through spatial retrieval and reasoning tasks over extended horizons. Experiments on Memory Maze and Minecraft datasets demonstrate that our approach surpasses baselines in preserving long-range memory, while maintaining practical inference speeds suitable for interactive applications.</p>
+</div></details>
     <p class="lr-provenance">版本指纹 <code>fe20255bf4824c5ed9d408c9963ac7efce53b1f043971ba20e541fd658969a2c</code></p>
-    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+    <a class="lr-return" href="#lr-library">返回筛选与清单</a>
   </div>
 </details>
 <details
@@ -528,98 +486,7 @@
     <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
   </div>
 </details>
-<details
-  class="lr-paper"
-  id="p134"
-  data-id="P134"
-  data-years=""
-  data-year="0"
-  data-topics="creation world"
-  data-new="false"
-  data-title="MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequences"
->
-  <summary>
-    <span class="lr-paper-meta"
-      ><span>P134 <span aria-hidden="true">/</span> 待核实</span><span class="lr-badges"></span
-    ></span>
-    <span class="lr-title">MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequences</span>
-    <span class="lr-authors">Canyu Zhao; Mingyu Liu; Wen Wang et al.</span>
-    <span class="lr-snippet">以多模态剧本、自回归关键帧及扩散视频渲染组合实现长叙事视觉序列，强调角色与风格跨镜头保持。</span>
-    <span class="lr-tags"
-      ><span class="lr-tag">创作与规则补全</span><span class="lr-tag">世界机制与演化</span
-      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
-    >
-  </summary>
-  <div class="lr-paper-body">
-    <div class="lr-paper-tools"><a href="#p134" aria-label="P134的固定链接">#P134</a><span>31页 · 核对于 2026-09-15</span></div>
-    <dl class="lr-metadata">
-      <dt>作者</dt>
-      <dd><p>Canyu Zhao; Mingyu Liu; Wen Wang; Weihua Chen; Fan Wang; Hao Chen; Bo Zhang; Chunhua Shen</p></dd>
-      <dt>时间与版本</dt>
-      <dd><p>本地PDF未明确；未按文件名或PDF制作时间推断。</p></dd>
-      <dt>发表平台</dt>
-      <dd><p>ICLR 2025正式论文版（PDF首页）</p></dd>
-      <dt>项目 · 代码 · 数据</dt>
-      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
-      <dt>版本关系</dt>
-      <dd>
-        <p>
-          与<a href="#p127">P127</a>同一工作，31页但SHA不同；本稿前2位作者标星，<a href="#p127">P127</a
-          >前3位标星；下述主要表格结果一致，版本不计为独立证据。
-        </p>
-      </dd>
-    </dl>
-    <section class="lr-field">
-      <h3>中文摘要</h3>
-      <p>以多模态剧本、自回归关键帧及扩散视频渲染组合实现长叙事视觉序列，强调角色与风格跨镜头保持。</p>
-    </section>
-    <section class="lr-field">
-      <h3>核心贡献</h3>
-      <p>分层生成与身份保持渲染，支持有/无参考故事生成。</p>
-    </section>
-    <section class="lr-field">
-      <h3>实现边界</h3>
-      <p>主要验证脚本对齐和视觉角色一致；不保证长序列每项事件完成/真实因果正确，有参考条件不能和纯文本输入直接比较。</p>
-    </section>
-    <section class="lr-field">
-      <h3>Method · 方法</h3>
-      <p>预测紧凑关键帧token，使用FaceID及文字渲染，再以关键帧条件生成视频片段。</p>
-    </section>
-    <section class="lr-field">
-      <h3>Results · 主要结果</h3>
-      <p>
-        表1无参考LT0.814、ST0.646、FID2.043；有参考LT0.893/ST0.701/FID1.912。表2视频CLIP19.520、Inception8.642、Aesthetic6.049、CLIP-sim0.704；各指标口径限该测试集。
-      </p>
-    </section>
-    <section class="lr-field">
-      <h3>Shortcomings · 局限</h3>
-      <p>【解读】叙事与角色指标不等同完整事件序列正确，长时误差和身份覆盖仍有限；不同条件与不同版本须保留标识。</p>
-    </section>
-    <section class="lr-field">
-      <h3>证据定位</h3>
-      <p>PDF §3–4、表1–2 p.9。</p>
-    </section>
-    <details class="lr-abstract">
-      <summary>Abstract · 英文原摘要</summary>
-      <div lang="en">
-        <p>
-          Recent advancements in video generation have primarily leveraged diffusion models for short-duration content. However, these approaches
-          often fall short in modeling complex narratives and maintaining character consistency over extended periods, which is essential for
-          long-form video production like movies. We propose MovieDreamer, a novel hierarchical framework that integrates the strengths of
-          autoregressive models with diffusion-based rendering to pioneer long-duration video generation with intricate plot progressions and high
-          visual fidelity. Our approach utilizes autoregressive models for global narrative coherence, predicting sequences of visual tokens that are
-          subsequently transformed into high-quality video frames through diffusion rendering. This method is akin to traditional movie production
-          processes, where complex stories are factorized down into manageable scene capturing. Further, we employ a multimodal script that enriches
-          scene descriptions with detailed character information and visual style, enhancing continuity and character identity across scenes. We
-          present extensive experiments across various movie genres, demonstrating that our approach not only achieves superior visual and narrative
-          quality but also effectively extends the duration of generated content significantly beyond current capabilities.
-        </p>
-      </div>
-    </details>
-    <p class="lr-provenance">版本指纹 <code>1b087586ac8870db8a1387f8b29b51504d15a408053d5e9e4a226976dc9d8bb0</code></p>
-    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
-  </div>
-</details>
+
 <details
   class="lr-paper"
   id="p133"

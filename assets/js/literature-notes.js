@@ -7,7 +7,7 @@
   var entries = new Map();
   var initialized = false;
   var message = document.getElementById("lr-notes-message");
-  var aliases = { P003: "P002", P082: "P081", P109: "P103" };
+  var aliases = JSON.parse(root.dataset.aliases || "{}");
 
   // Lucide icon paths; license is distributed in lucide-LICENSE.txt.
   var icons = {
@@ -51,6 +51,8 @@
     entry.card.dataset.noteSearch = entry.input.value.normalize("NFKC").toLocaleLowerCase();
     entry.badge.hidden = !hasText;
     entry.indicator.textContent = hasText ? "有内容" : "未添加";
+    entry.preview.textContent = hasText ? entry.input.value.trim().replace(/\s+/g, " ").slice(0, 160) : "";
+    entry.preview.hidden = !hasText;
     if (initialized) root.dispatchEvent(new Event("lr-notes-changed"));
   }
   function failure(entry, text) {
@@ -65,6 +67,7 @@
       entry.raw = raw;
       entry.input.value = record.text;
       entry.updated = record.updated_at;
+      entry.mergedAliases = record.merged_aliases && typeof record.merged_aliases === "object" ? record.merged_aliases : {};
       entry.dirty = false;
       entry.blocked = false;
       entry.recovery.hidden = true;
@@ -88,7 +91,7 @@
       }
       if (entry.input.value.length > maxLength) throw new Error("Note too long");
       var updated = new Date().toISOString();
-      var raw = JSON.stringify({ version: 1, text: entry.input.value, updated_at: updated });
+      var raw = JSON.stringify({ version: 1, text: entry.input.value, updated_at: updated, merged_aliases: entry.mergedAliases || {} });
       // A key per paper avoids overwriting edits to other papers in another tab.
       localStorage.setItem(prefix + entry.id, raw);
       entry.raw = raw;
@@ -140,7 +143,10 @@
     var badge = element("span", "lr-personal-badge", "有个人笔记");
     badge.hidden = true;
     card.querySelector(".lr-badges").appendChild(badge);
-    var entry = { id: card.dataset.id, card: card, input: input, indicator: indicator, badge: badge, status: status, recovery: recovery, dirty: false, raw: null, updated: null, blocked: false };
+    var preview = element("span", "lr-note-preview");
+    preview.hidden = true;
+    card.querySelector("summary").appendChild(preview);
+    var entry = { id: card.dataset.id, card: card, input: input, indicator: indicator, badge: badge, preview: preview, status: status, recovery: recovery, dirty: false, raw: null, updated: null, blocked: false };
     entries.set(entry.id, entry);
     input.addEventListener("input", function () { save(entry, false); });
     clear.addEventListener("click", function () {
@@ -156,6 +162,25 @@
       if (!entry.dirty || window.confirm("放弃此篇尚未保存的编辑，载入已保存内容？")) load(entry);
     });
     load(entry);
+  });
+  // Preserve old-ID notes when duplicate versions are removed from the catalog.
+  Object.entries(aliases).forEach(function (pair) {
+    var entry = entries.get(pair[1]);
+    if (!entry) return;
+    try {
+      var raw = localStorage.getItem(prefix + pair[0]);
+      if (!raw || entry.mergedAliases && entry.mergedAliases[pair[0]] === raw) return;
+      var old = decode(raw);
+      if (!old.text.trim()) return;
+      if (entry.blocked || entry.dirty) throw new Error("Unsafe merge");
+      var section = "\n\n--- 合并自 " + pair[0] + " ---\n\n" + old.text;
+      var merged = entry.input.value === old.text ? entry.input.value : entry.input.value.trim() ? entry.input.value + section : old.text;
+      if (merged.length > maxLength) throw new Error("Merged note too long");
+      entry.input.value = merged;
+      entry.mergedAliases = entry.mergedAliases || {};
+      entry.mergedAliases[pair[0]] = raw;
+      if (!save(entry, false)) throw new Error("Merge not saved");
+    } catch (_) { announce("旧编号个人笔记仍保留在浏览器，但未能全部合并。请导出备份保留历史内容。"); }
   });
   initialized = true;
   document.getElementById("lr-notes-toolbar").hidden = false;
@@ -176,7 +201,11 @@
       if (!entry.input.value.trim()) return;
       notes.push({ paper_id: entry.id, paper_title: entry.card.dataset.title, text: entry.input.value, updated_at: entry.updated || new Date().toISOString(), unsaved: entry.dirty });
     });
-    var backup = { format: "literature-review-personal-notes", version: 1, exported_at: new Date().toISOString(), notes: notes };
+    var legacy = [];
+    Object.keys(aliases).forEach(function (id) {
+      try { var raw = localStorage.getItem(prefix + id); if (raw) legacy.push({ paper_id: id, stored_record: JSON.parse(raw) }); } catch (_) { unreadable += 1; }
+    });
+    var backup = { format: "literature-review-personal-notes", version: 1, exported_at: new Date().toISOString(), notes: notes, legacy_notes: legacy };
     var url = URL.createObjectURL(new Blob([JSON.stringify(backup, null, 2)], { type: "application/json;charset=utf-8" }));
     var anchor = element("a");
     anchor.href = url;
@@ -203,18 +232,20 @@
       backup.notes.forEach(function (note) {
         if (!note || typeof note.paper_id !== "string" || !/^P\d{3,6}$/.test(note.paper_id) || typeof note.text !== "string" || note.text.length > maxLength || typeof note.updated_at !== "string" || !Number.isFinite(Date.parse(note.updated_at))) throw new Error("Invalid note");
         var id = aliases[note.paper_id] || note.paper_id;
-        if (seen.has(id)) throw new Error("Duplicate note");
-        seen.add(id);
+        if (seen.has(note.paper_id)) throw new Error("Duplicate note");
+        seen.add(note.paper_id);
         if (!entries.has(id)) { unknown += 1; return; }
         var entry = entries.get(id);
-        if (!entry.dirty) load(entry);
-        var current = entry.input.value;
+        var existing = plans.find(function (plan) { return plan.entry === entry; });
+        if (!existing && !entry.dirty) load(entry);
+        var current = existing ? existing.text : entry.input.value;
         if (!note.text.trim() || current === note.text) return;
         var section = "\n\n--- 导入备份 " + note.updated_at + " ---\n\n" + note.text;
         if (current.includes(section)) return;
         var merged = current.trim() ? current + section : note.text;
         if (merged.length > maxLength) throw new Error("Merged note too long");
-        plans.push({ entry: entry, text: merged });
+        if (existing) existing.text = merged;
+        else plans.push({ entry: entry, text: merged });
       });
       var unsaved = 0;
       plans.forEach(function (plan) {

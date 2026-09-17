@@ -16,7 +16,8 @@
       return [card, card.textContent.normalize("NFKC").toLocaleLowerCase()];
     })
   );
-  var aliases = { p003: "p002", p082: "p081", p109: "p103" };
+  var aliases = {};
+  Object.entries(JSON.parse(root.dataset.aliases || "{}")).forEach(function (pair) { aliases[pair[0].toLowerCase()] = pair[1].toLowerCase(); });
   var timer;
 
   function filter() {

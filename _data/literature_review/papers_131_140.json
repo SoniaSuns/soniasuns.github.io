@@ -12,7 +12,10 @@
     "sha256": "e4087daed3ec8e414c07c7654a84cad474d99d436bbe67eaa7f5e1ae5f857671",
     "pages": 11,
     "folder": "VideoGeneration",
-    "topics": ["creation", "world"],
+    "topics": [
+      "creation",
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "面向烹饪长叙事视频构建数据和分层生成流程，交错语言/视觉导演规划步骤，滚动关键帧渲染再生成视频。",
@@ -37,7 +40,10 @@
     "sha256": "cba490f9ce2d4f8ebd0372826b3fcca803dbd37770ce22a2f3df199f55bac24b",
     "pages": 10,
     "folder": "VideoGeneration",
-    "topics": ["creation", "world"],
+    "topics": [
+      "creation",
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "用2–4个连续事件的短故事提示测量视频模型是否完成所要求事件，补充审美与时空一致性等细节指标。",
@@ -62,7 +68,10 @@
     "sha256": "f81df8beff3dd5f58ca33af45475b7e70b19fff4e47d9c08a4b3016e5e2f32bc",
     "pages": 10,
     "folder": "VideoGeneration",
-    "topics": ["creation", "world"],
+    "topics": [
+      "creation",
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "每句话生成一张图，把故事可视化为有角色和场景一致性的图片序列。",
@@ -83,11 +92,15 @@
     "venue": "ICCV 2025，正文页码8733起（PDF论文版）",
     "paper_links": "",
     "project_links": "本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。",
-    "version": "与[P102](#p102)为同一工作；本条是12页ICCV 2025论文版，[P102](#p102)为15页arXiv版本。",
+    "version": "同一论文只保留本地ICCV 2025正式论文版本。P102为2025-05-26 arXiv v1，已归档；该预印本的附录与提取全文仍在本地归档保留。旧条目链接跳转到本条。",
     "sha256": "fe20255bf4824c5ed9d408c9963ac7efce53b1f043971ba20e541fd658969a2c",
     "pages": 12,
     "folder": "VideoGeneration",
-    "topics": ["creation", "world", "xr"],
+    "topics": [
+      "creation",
+      "world",
+      "xr"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "以块级SSM扫描存储较长视频历史，结合局部注意力维持局部连贯，降低动作条件世界模型长上下文计算。",
@@ -112,7 +125,10 @@
     "sha256": "1d7fde670c781d256bb4a41b4ad1375c75af97ae3941b4fa447725078a20c2f5",
     "pages": 31,
     "folder": "VideoGeneration",
-    "topics": ["creation", "world"],
+    "topics": [
+      "creation",
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "在三个既有视频数据集上增加带时间戳的多句故事标注，评估动作执行、故事续写和纯文本故事视频生成。",
@@ -137,7 +153,11 @@
     "sha256": "f1c77acf725e4d4c657bb11fa04abd75c418854abb04e6d8a7b2477c6c0ead78",
     "pages": 14,
     "folder": "VideoGeneration",
-    "topics": ["creation", "world", "xr"],
+    "topics": [
+      "creation",
+      "world",
+      "xr"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "以过去帧、位姿和时间戳组成记忆库，通过状态相关的memory attention重建之前去过的地方并表达世界随时间演化。",
@@ -148,31 +168,6 @@
     "limitations": "【解读】真值位姿和已访问参考带来条件优势，未知位姿、动态遮挡和记忆容量扩张仍有风险；回访重建好不等于开放新场景因果预测准确。",
     "evidence": "PDF §3–4、§4.1 pp.6–7、表1–2。",
     "abstract_en": "World simulation has gained increasing popularity due to its ability to model virtual environments and predict the consequences of actions. However, the limited temporal context window often leads to failures in maintaining longterm consistency, particularly in preserving 3D spatial consistency. In this work, we present WorldMem, a framework that enhances scene generation with a memory bank consisting of memory units that store memory frames and states (e.g., poses and timestamps). By employing a memory attention mechanism that effectively extracts relevant information from these memory frames based on their states, our method is capable of accurately reconstructing previously observed scenes, even under significant viewpoint or temporal gaps. Furthermore, by incorporating timestamps into the states, our framework not only models a static world but also captures its dynamic evolution over time, enabling both perception and interaction within the simulated world. Extensive experiments in both virtual and real scenarios validate the effectiveness of our approach."
-  },
-  {
-    "id": "P134",
-    "title": "MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequences",
-    "authors": "Canyu Zhao; Mingyu Liu; Wen Wang; Weihua Chen; Fan Wang; Hao Chen; Bo Zhang; Chunhua Shen",
-    "year": "待核实",
-    "date": "本地PDF未明确；未按文件名或PDF制作时间推断。",
-    "venue": "ICLR 2025正式论文版（PDF首页）",
-    "paper_links": "",
-    "project_links": "本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。",
-    "version": "与[P127](#p127)同一工作，31页但SHA不同；本稿前2位作者标星，[P127](#p127)前3位标星；下述主要表格结果一致，版本不计为独立证据。",
-    "sha256": "1b087586ac8870db8a1387f8b29b51504d15a408053d5e9e4a226976dc9d8bb0",
-    "pages": 31,
-    "folder": "VideoGeneration",
-    "topics": ["creation", "world"],
-    "added": false,
-    "verified": "2026-09-15",
-    "abstract_zh": "以多模态剧本、自回归关键帧及扩散视频渲染组合实现长叙事视觉序列，强调角色与风格跨镜头保持。",
-    "contribution": "分层生成与身份保持渲染，支持有/无参考故事生成。",
-    "boundary": "主要验证脚本对齐和视觉角色一致；不保证长序列每项事件完成/真实因果正确，有参考条件不能和纯文本输入直接比较。",
-    "method": "预测紧凑关键帧token，使用FaceID及文字渲染，再以关键帧条件生成视频片段。",
-    "results": "表1无参考LT0.814、ST0.646、FID2.043；有参考LT0.893/ST0.701/FID1.912。表2视频CLIP19.520、Inception8.642、Aesthetic6.049、CLIP-sim0.704；各指标口径限该测试集。",
-    "limitations": "【解读】叙事与角色指标不等同完整事件序列正确，长时误差和身份覆盖仍有限；不同条件与不同版本须保留标识。",
-    "evidence": "PDF §3–4、表1–2 p.9。",
-    "abstract_en": "Recent advancements in video generation have primarily leveraged diffusion models for short-duration content. However, these approaches often fall short in modeling complex narratives and maintaining character consistency over extended periods, which is essential for long-form video production like movies. We propose MovieDreamer, a novel hierarchical framework that integrates the strengths of autoregressive models with diffusion-based rendering to pioneer long-duration video generation with intricate plot progressions and high visual fidelity. Our approach utilizes autoregressive models for global narrative coherence, predicting sequences of visual tokens that are subsequently transformed into high-quality video frames through diffusion rendering. This method is akin to traditional movie production processes, where complex stories are factorized down into manageable scene capturing. Further, we employ a multimodal script that enriches scene descriptions with detailed character information and visual style, enhancing continuity and character identity across scenes. We present extensive experiments across various movie genres, demonstrating that our approach not only achieves superior visual and narrative quality but also effectively extends the duration of generated content significantly beyond current capabilities."
   },
   {
     "id": "P133",
@@ -187,7 +182,11 @@
     "sha256": "31338f0d7ecd2fa06661eb61cdcf6e0c6af71ad9266062b66478796afd0ce453",
     "pages": 17,
     "folder": "VideoGeneration",
-    "topics": ["creation", "world", "xr"],
+    "topics": [
+      "creation",
+      "world",
+      "xr"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "OneStory把多镜头生成视为下一镜头预测，从全局历史挑选相关帧并自适应压缩为紧凑条件，保持角色/环境一致。",
@@ -212,7 +211,9 @@
     "sha256": "dce93f666b6f970e5163c61fe1c0ead37843cbe44eaebd66be8bedc4d76dee43",
     "pages": 17,
     "folder": "VideoGeneration",
-    "topics": ["world"],
+    "topics": [
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "DWS在预训练视频生成器上添加动作条件模块和运动强化损失，获得可按动作轨迹生成的动态模型，再通过优先想象改进模型式RL。",
@@ -237,7 +238,10 @@
     "sha256": "a14847ae33974419f181f58ca0c4df227f2c1fdafdeb7b9910470cd15a236f86",
     "pages": 41,
     "folder": "VideoGeneration",
-    "topics": ["creation", "world"],
+    "topics": [
+      "creation",
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "系统梳理文本之外的姿态、深度、轨迹、相机、音频、身份等视频生成控制，比较单条件、多条件和通用控制机制。",

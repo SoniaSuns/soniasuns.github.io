@@ -533,196 +533,58 @@
     <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
   </div>
 </details>
-<span id="p109" data-alias="p103"></span>
-<details
-  class="lr-paper"
-  id="p103"
-  data-id="P103"
-  data-years="2025"
-  data-year="2025"
-  data-topics="world ai"
-  data-new="false"
-  data-title="Training Large Language Models to Reason in a Continuous Latent Space"
->
+
+
+
+
+
+
+
+<a id="p109" href="#p103" class="lr-historical-alias" aria-label="P109已合并到P103"></a>
+<a id="p026" href="#p103" class="lr-historical-alias" aria-label="P026已合并到P103"></a>
+<details class="lr-paper" id="p103" data-id="P103" data-years="2025" data-year="2025" data-topics="world ai" data-new="false" data-title="Training Large Language Models to Reason in a Continuous Latent Space">
   <summary>
-    <span class="lr-paper-meta"
-      ><span>P103 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
-    ></span>
+    <span class="lr-paper-meta"><span>P103 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span></span>
     <span class="lr-title">Training Large Language Models to Reason in a Continuous Latent Space</span>
-    <span class="lr-authors">Shibo Hao; Sainbayar Sukhbaatar; DiJia Su et al.</span>
+    <span class="lr-authors">Shibo Hao; Sainbayar Sukhbaatar; DiJia Su; Xian Li; Zhiting Hu; Jason Weston; Yuandong Tian</span>
     <span class="lr-snippet">Coconut把LLM最后隐状态直接作为下一个输入embedding，在连续潜空间进行中间推理，以课程训练逐步取代文本CoT。</span>
-    <span class="lr-tags"
-      ><span class="lr-tag">世界机制与演化</span><span class="lr-tag">AI方法与评测</span
-      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
-    >
+    <span class="lr-tags"><span class="lr-tag">世界机制与演化</span><span class="lr-tag">AI方法与评测</span><span class="lr-open-hint">展开笔记</span></span>
   </summary>
   <div class="lr-paper-body">
     <div class="lr-paper-tools"><a href="#p103" aria-label="P103的固定链接">#P103</a><span>18页 · 核对于 2026-09-15</span></div>
-    <dl class="lr-metadata">
-      <dt>作者</dt>
-      <dd><p>Shibo Hao; Sainbayar Sukhbaatar; DiJia Su; Xian Li; Zhiting Hu; Jason Weston; Yuandong Tian</p></dd>
-      <dt>时间与版本</dt>
-      <dd><p>本地版本：2025-11-03（arXiv:2412.06769v3）；正式发表时间如已核实，见下一项。</p></dd>
-      <dt>发表平台</dt>
-      <dd><p>arXiv:2412.06769v3（本地署名版）；正式平台另待核验</p></dd>
-      <dt>论文与正式记录</dt>
-      <dd>
-        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2412.06769v3">arXiv本地版本 2412.06769v3</a></p>
-      </dd>
-      <dt>项目 · 代码 · 数据</dt>
-      <dd>
-        <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/facebookresearch/coconut">代码：facebookresearch/coconut</a></p>
-      </dd>
-      <dt>版本关系</dt>
-      <dd>
-        <p><a href="#p109">P109</a>与本文件SHA-256完全一致；<a href="#p026">P026</a>为同一工作的较早匿名版，独立保留版本差异。</p>
-      </dd>
-    </dl>
-    <section class="lr-field">
-      <h3>中文摘要</h3>
-      <p>Coconut把LLM最后隐状态直接作为下一个输入embedding，在连续潜空间进行中间推理，以课程训练逐步取代文本CoT。</p>
-    </section>
-    <section class="lr-field">
-      <h3>核心贡献</h3>
-      <p>Chain of Continuous Thought架构及课程，展示某些任务中潜状态可同时容纳备选路径的行为。</p>
-    </section>
-    <section class="lr-field">
-      <h3>实现边界</h3>
-      <p>以小模型和合成逻辑/数学任务验证，潜状态类似BFS的观察不等于通用、严格或无限宽搜索；数学表现仍低于文本CoT。</p>
-    </section>
-    <section class="lr-field">
-      <h3>Method · 方法</h3>
-      <p>逐阶段用连续thought替代更多文本步骤，回馈隐状态，再生成文字答案；比较无CoT、iCoT、pause token等。</p>
-    </section>
-    <section class="lr-field">
-      <h3>Results · 主要结果</h3>
-      <p>
-        表1
-        GSM8K34.1±1.5%对CoT42.9±0.2%，但高于无CoT16.5%；ProsQA97.0对CoT77.5，仍低于iCoT98.2；GSM8K平均生成位置8.2对25.0（包含潜步骤的效率定义须遵循论文）。
-      </p>
-    </section>
-    <section class="lr-field">
-      <h3>Shortcomings · 局限</h3>
-      <p>【作者/解读】课程与已有CoT监督重要、规模和任务有限，难解释/检查潜过程；减少显式token不自动等于同比例实际速度提升。</p>
-    </section>
-    <section class="lr-field">
-      <h3>证据定位</h3>
-      <p>PDF §3–5、表1 p.9、§5.3–6。</p>
-    </section>
-    <details class="lr-abstract">
-      <summary>Abstract · 英文原摘要</summary>
-      <div lang="en">
-        <p>
-          Large language models (LLMs) are restricted to reason in the “language space”, where they typically express the reasoning process with a
-          chain-of-thought (CoT) to solve a complex reasoning problem. However, we argue that language space may not always be optimal for reasoning.
-          For example, most word tokens primarily ensure textual coherence and are not essential for reasoning, while some critical tokens require
-          complex planning and pose huge challenges to LLMs. To explore the potential of LLM reasoning in an unrestricted latent space instead of
-          using natural language, we introduce a new paradigm Coconut (Chain of Continuous Thought). We utilize the last hidden state of the LLM as a
-          representation of the reasoning state (termed “continuous thought”). Rather than decoding this into a word token, we feed it back to the LLM
-          as the subsequent input embedding directly in the continuous space. This latent reasoning paradigm leads to the emergence of an advanced
-          reasoning pattern: the continuous thought can encode multiple alternative next reasoning steps, allowing the model to perform a
-          breadth-first search (BFS) to solve the problem, rather than prematurely committing to a single deterministic path like CoT. Coconut
-          outperforms CoT on certain logical reasoning tasks that require substantial search during planning, and shows a better trade-off between
-          accuracy and efficiency.
-        </p>
-      </div>
-    </details>
+    <dl class="lr-metadata"><dt>作者</dt><dd><p>Shibo Hao; Sainbayar Sukhbaatar; DiJia Su; Xian Li; Zhiting Hu; Jason Weston; Yuandong Tian</p>
+</dd>
+<dt>时间与版本</dt><dd><p>本地版本：2025-11-03（arXiv:2412.06769v3）；正式发表时间如已核实，见下一项。</p>
+</dd>
+<dt>发表平台</dt><dd><p>arXiv:2412.06769v3（本地署名版）；正式平台另待核验</p>
+</dd>
+<dt>论文与正式记录</dt><dd><p><a href="https://arxiv.org/abs/2412.06769v3">arXiv本地版本 2412.06769v3</a></p>
+</dd>
+<dt>项目 · 代码 · 数据</dt><dd><p><a href="https://github.com/facebookresearch/coconut">代码：facebookresearch/coconut</a></p>
+</dd>
+<dt>版本关系</dt><dd><p>同一论文只保留本地较新的2025-11-03 arXiv v3署名稿。P026的15页早期匿名稿已归档；P109为完全相同副本的历史别名。旧条目链接跳转到本条，旧个人笔记保留并合并。</p>
+</dd></dl>
+    <section class="lr-field"><h3>中文摘要</h3><p>Coconut把LLM最后隐状态直接作为下一个输入embedding，在连续潜空间进行中间推理，以课程训练逐步取代文本CoT。</p>
+</section>
+<section class="lr-field"><h3>核心贡献</h3><p>Chain of Continuous Thought架构及课程，展示某些任务中潜状态可同时容纳备选路径的行为。</p>
+</section>
+<section class="lr-field"><h3>实现边界</h3><p>以小模型和合成逻辑/数学任务验证，潜状态类似BFS的观察不等于通用、严格或无限宽搜索；数学表现仍低于文本CoT。</p>
+</section>
+<section class="lr-field"><h3>Method · 方法</h3><p>逐阶段用连续thought替代更多文本步骤，回馈隐状态，再生成文字答案；比较无CoT、iCoT、pause token等。</p>
+</section>
+<section class="lr-field"><h3>Results · 主要结果</h3><p>表1 GSM8K34.1±1.5%对CoT42.9±0.2%，但高于无CoT16.5%；ProsQA97.0对CoT77.5，仍低于iCoT98.2；GSM8K平均生成位置8.2对25.0（包含潜步骤的效率定义须遵循论文）。</p>
+</section>
+<section class="lr-field"><h3>Shortcomings · 局限</h3><p>【作者/解读】课程与已有CoT监督重要、规模和任务有限，难解释/检查潜过程；减少显式token不自动等于同比例实际速度提升。</p>
+</section>
+<section class="lr-field"><h3>证据定位</h3><p>PDF §3–5、表1 p.9、§5.3–6。</p>
+</section>
+    <details class="lr-abstract"><summary>Abstract · 英文原摘要</summary><div lang="en"><p>Large language models (LLMs) are restricted to reason in the “language space”, where they typically express the reasoning process with a chain-of-thought (CoT) to solve a complex reasoning problem. However, we argue that language space may not always be optimal for reasoning. For example, most word tokens primarily ensure textual coherence and are not essential for reasoning, while some critical tokens require complex planning and pose huge challenges to LLMs. To explore the potential of LLM reasoning in an unrestricted latent space instead of using natural language, we introduce a new paradigm Coconut (Chain of Continuous Thought). We utilize the last hidden state of the LLM as a representation of the reasoning state (termed “continuous thought”). Rather than decoding this into a word token, we feed it back to the LLM as the subsequent input embedding directly in the continuous space. This latent reasoning paradigm leads to the emergence of an advanced reasoning pattern: the continuous thought can encode multiple alternative next reasoning steps, allowing the model to perform a breadth-first search (BFS) to solve the problem, rather than prematurely committing to a single deterministic path like CoT. Coconut outperforms CoT on certain logical reasoning tasks that require substantial search during planning, and shows a better trade-off between accuracy and efficiency.</p>
+</div></details>
     <p class="lr-provenance">版本指纹 <code>6eb32c71eaa571b727ee95bce20396243fd70dc1ee8a37f91a7de717790d5b46</code></p>
-    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+    <a class="lr-return" href="#lr-library">返回筛选与清单</a>
   </div>
 </details>
-<details
-  class="lr-paper"
-  id="p102"
-  data-id="P102"
-  data-years="2025"
-  data-year="2025"
-  data-topics="creation world xr"
-  data-new="false"
-  data-title="Long-Context State-Space Video World Models"
->
-  <summary>
-    <span class="lr-paper-meta"
-      ><span>P102 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
-    ></span>
-    <span class="lr-title">Long-Context State-Space Video World Models</span>
-    <span class="lr-authors">Ryan Po; Yotam Nitzan; Richard Zhang et al.</span>
-    <span class="lr-snippet">以状态空间模型扩展动作条件视频生成的时间记忆，用块级扫描加局部注意力降低长上下文成本。</span>
-    <span class="lr-tags"
-      ><span class="lr-tag">创作与规则补全</span><span class="lr-tag">世界机制与演化</span><span class="lr-tag">XR与人机协作</span
-      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
-    >
-  </summary>
-  <div class="lr-paper-body">
-    <div class="lr-paper-tools"><a href="#p102" aria-label="P102的固定链接">#P102</a><span>15页 · 核对于 2026-09-15</span></div>
-    <dl class="lr-metadata">
-      <dt>作者</dt>
-      <dd><p>Ryan Po; Yotam Nitzan; Richard Zhang; Berlin Chen; Tri Dao; Eli Shechtman; Gordon Wetzstein; Xun Huang</p></dd>
-      <dt>时间与版本</dt>
-      <dd><p>本地版本：2025-05-26（arXiv:2505.20171v1）；正式发表时间如已核实，见下一项。</p></dd>
-      <dt>发表平台</dt>
-      <dd><p>本地arXiv:2505.20171v1，2025-05-26；对应ICCV 2025正式版见P137</p></dd>
-      <dt>论文与正式记录</dt>
-      <dd>
-        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2505.20171v1">arXiv本地版本 2505.20171v1</a></p>
-      </dd>
-      <dt>项目 · 代码 · 数据</dt>
-      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
-      <dt>版本关系</dt>
-      <dd>
-        <p>与<a href="#p137">P137</a>为同一工作；本条是15页arXiv版本，<a href="#p137">P137</a>为12页ICCV 2025论文版。</p>
-      </dd>
-    </dl>
-    <section class="lr-field">
-      <h3>中文摘要</h3>
-      <p>以状态空间模型扩展动作条件视频生成的时间记忆，用块级扫描加局部注意力降低长上下文成本。</p>
-    </section>
-    <section class="lr-field">
-      <h3>核心贡献</h3>
-      <p>面向因果视频的SSM扫描架构、训练策略及长时空间回访/推理评测。</p>
-    </section>
-    <section class="lr-field">
-      <h3>实现边界</h3>
-      <p>低分辨率合成Memory Maze/Minecraft；每帧成本恒定不等于达到实时交互，作者明确当前尚未达到交互帧率，记忆不能有效超出训练上下文。</p>
-    </section>
-    <section class="lr-field">
-      <h3>Method · 方法</h3>
-      <p>空间块级Mamba/SSM扫描处理长历史，局部稠密注意力保持邻帧一致，递归状态支持固定每帧推理成本。</p>
-    </section>
-    <section class="lr-field">
-      <h3>Results · 主要结果</h3>
-      <p>
-        576帧上下文后的224帧推理任务：SSIM0.855、LPIPS0.099、PSNR28.2；192帧上下文因果模型0.839/0.125/27.1；全上下文Transformer0.860/0.089/28.8，仍略好但成本更高。
-      </p>
-    </section>
-    <section class="lr-field">
-      <h3>Shortcomings · 局限</h3>
-      <p>【作者】速度未实时、训练上下文外记忆泛化不足、仅合成低分辨率；【解读】固定状态容量可能压缩/遗忘长时细节。</p>
-    </section>
-    <section class="lr-field">
-      <h3>证据定位</h3>
-      <p>PDF §4–5、表3 p.6、§6 p.8。</p>
-    </section>
-    <details class="lr-abstract">
-      <summary>Abstract · 英文原摘要</summary>
-      <div lang="en">
-        <p>
-          Video diffusion models have recently shown promise for world modeling through autoregressive frame prediction conditioned on actions.
-          However, they struggle to maintain long-term memory due to the high computational cost associated with processing extended sequences in
-          attention layers. To overcome this limitation, we propose a novel architecture leveraging state-space models (SSMs) to extend temporal
-          memory without compromising computational efficiency. Unlike previous approaches that retrofit SSMs for non-causal vision tasks, our method
-          fully exploits the inherent advantages of SSMs in causal sequence modeling. Central to our design is a block-wise SSM scanning scheme, which
-          strategically trades off spatial consistency for extended temporal memory, combined with dense local attention to ensure coherence between
-          consecutive frames. We evaluate the long-term memory capabilities of our model through spatial retrieval and reasoning tasks over extended
-          horizons. Experiments on Memory Maze and Minecraft datasets demonstrate that our approach surpasses baselines in preserving long-range
-          memory, while maintaining practical inference speeds suitable for interactive applications.
-        </p>
-      </div>
-    </details>
-    <p class="lr-provenance">版本指纹 <code>3ae3aef450f64712291ea605ecc1bb56f27130519a13e9b64d17289ce71553ce</code></p>
-    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
-  </div>
-</details>
+
 <details
   class="lr-paper"
   id="p101"

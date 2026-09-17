@@ -1,14 +1,16 @@
-<div id="literature-review" lang="zh-CN">
+<div id="literature-review" lang="zh-CN" data-aliases="{{ site.data.literature_review.catalog.historical_aliases | jsonify | escape }}">
   <div class="lr-intro">
     <p class="lr-kicker">READING NOTES <span>持续更新的研究资料库</span></p>
     <p class="lr-lead">从论文出发，找清问题与边界。</p>
     <p class="lr-description">围绕 XR 智能体、创作者与架空世界，以及推理、世界模型与不确定性，记录每篇工作的贡献、方法、结果和实现边界。</p>
     <div class="lr-stats">
-      <span><strong>158</strong> 份内容笔记</span><span><strong>21</strong> 近期新增</span><span><strong>3,841</strong> PDF页</span
-      ><span>更新于 <strong>2026.09.16</strong></span>
+      <span><strong>{{ site.data.literature_review.catalog.records }}</strong> 篇论文</span><span><strong>{{ site.data.literature_review.catalog.extracted }}</strong> 篇全文已提取至本机</span><span><strong>{{ site.data.literature_review.catalog.pages }}</strong> PDF页</span
+      ><span>更新于 <strong>{{ site.data.literature_review.catalog.updated }}</strong></span>
     </div>
     <nav class="lr-jump-nav" aria-label="文献页导航"><a href="#lr-library">浏览文献</a><a href="#lr-about">阅读说明</a></nav>
   </div>
+  <div class="lr-mobile-tabs" role="group" aria-label="工作区视图"><button type="button" data-lr-view="library" aria-pressed="true">文献与笔记</button><button type="button" data-lr-view="chat" aria-pressed="false">论文问答</button></div>
+  <div class="lr-workspace">
   <section id="lr-library" aria-labelledby="lr-library-heading">
     <span id="index"></span>
     <div class="lr-section-title">
@@ -54,7 +56,7 @@
         >
       </div>
       <div class="lr-filter-footer">
-        <label class="lr-check"><input id="lr-new" type="checkbox" /> 只看近期新增21份</label><button id="lr-reset" type="button">清除筛选</button>
+        <label class="lr-check"><input id="lr-new" type="checkbox" /> 只看近期新增{{ site.data.literature_review.catalog.recent }}份</label><button id="lr-reset" type="button">清除筛选</button>
       </div>
       <div id="lr-noted-filter" hidden><label class="lr-check"><input id="lr-noted" type="checkbox" /> 只看有个人笔记的论文</label></div>
     </form>
@@ -90,13 +92,46 @@
       {%- include literature-review/papers-001-010.html %}
     </div>
   </section>
+  <aside id="lr-chat" class="lr-chat" aria-labelledby="lr-chat-heading">
+    <div class="lr-chat-heading"><h2 id="lr-chat-heading">论文问答</h2><span id="lr-chat-status" role="status">未连接本机</span></div>
+    <details id="lr-chat-connection" class="lr-chat-connection">
+      <summary>本机连接</summary>
+      <form id="lr-connect-form">
+        <label for="lr-bridge-port">端口<input id="lr-bridge-port" type="number" min="1024" max="65535" value="8765" required></label>
+        <label for="lr-bridge-token">配对令牌<input id="lr-bridge-token" type="password" autocomplete="off" required></label>
+        <button type="submit">连接</button><button id="lr-disconnect" type="button">断开</button>
+      </form>
+      <button id="lr-local-workspace" type="button">本机工作区</button>
+    </details>
+    <div class="lr-chat-toolbar">
+      <label class="lr-visually-hidden" for="lr-chat-sessions">历史会话</label>
+      <select id="lr-chat-sessions" aria-label="历史会话"><option value="">新对话</option></select>
+      <button id="lr-chat-new" type="button" title="新建对话" aria-label="新建对话" data-lr-icon="plus"></button>
+      <button id="lr-chat-rename" type="button" title="重命名会话" aria-label="重命名会话" data-lr-icon="pencil" disabled></button>
+      <button id="lr-chat-export" type="button" title="导出全部问答记录" aria-label="导出全部问答记录" data-lr-icon="download" disabled></button>
+      <button id="lr-chat-delete" type="button" title="删除当前会话" aria-label="删除当前会话" data-lr-icon="trash" disabled></button>
+    </div>
+    <div class="lr-chat-scope"><span>参考论文</span><div id="lr-chat-papers"></div><span id="lr-chat-scope-empty" class="lr-muted">尚未选择</span></div>
+    <div id="lr-chat-messages" class="lr-chat-messages" aria-label="会话内容" tabindex="0"><p class="lr-chat-empty">新对话</p></div>
+    <p id="lr-chat-error" class="lr-chat-error" role="alert" hidden></p>
+    <form id="lr-chat-form" class="lr-chat-composer">
+      <label class="lr-visually-hidden" for="lr-chat-question">向 Codex 提问</label>
+      <textarea id="lr-chat-question" rows="3" maxlength="12000" placeholder="针对所选论文提问…" required></textarea>
+      <div class="lr-chat-send-row"><span id="lr-chat-save-state">历史保存在本机 · Codex 联网回答</span><button id="lr-chat-stop" type="button" title="停止回答" aria-label="停止回答" data-lr-icon="square" hidden></button><button id="lr-chat-send" type="submit" title="发送问题" aria-label="发送问题" data-lr-icon="arrow-up" disabled></button></div>
+    </form>
+  </aside>
+  </div>
+  <dialog id="lr-fulltext-dialog" class="lr-fulltext-dialog" aria-labelledby="lr-fulltext-title">
+    <header><h2 id="lr-fulltext-title">提取全文</h2><button id="lr-fulltext-close" type="button" title="关闭全文" aria-label="关闭全文" data-lr-icon="x"></button></header>
+    <p id="lr-fulltext-status" role="status"></p><pre id="lr-fulltext-content"></pre>
+  </dialog>
   <section id="lr-about" class="lr-about">
     <h2>阅读说明</h2>
     <p>
       摘要、方法与结果依据本地PDF版本整理，部分发表信息另经官方记录核验。结果为论文作者报告，未重跑实验；“作者局限”与资料库的研究判断在正文区分。PDF页码从文件第一页起计。
     </p>
     <p>
-      本库有158份不同文件内容的笔记，同一论文不同版本可以分别保留。P003、P082、P109保留为历史别名。方向和年份支持交叉筛选；年份可能包含正式发表年和本地修订年。
+      本库每篇论文保留本地最新版；旧版本和完全相同副本已归档，旧编号保留跳转。全文为本机逐页文本层提取，不含图片OCR；公开网站保留摘要，不公开托管全文。
     </p>
     <p class="lr-downloads">
       <a href="{{ '/assets/data' | relative_url }}/literature-review.md" download>下载Markdown笔记</a
@@ -105,5 +140,6 @@
     </p>
   </section>
 </div>
-<script defer src="{{ '/assets/js/literature-review.js' | relative_url }}"></script>
-<script defer src="{{ '/assets/js/literature-notes.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/literature-review.js' | relative_url }}?v={{ site.data.literature_review.catalog.updated }}"></script>
+<script defer src="{{ '/assets/js/literature-notes.js' | relative_url }}?v={{ site.data.literature_review.catalog.updated }}"></script>
+<script defer src="{{ '/assets/js/literature-chat.js' | relative_url }}?v={{ site.data.literature_review.catalog.updated }}"></script>

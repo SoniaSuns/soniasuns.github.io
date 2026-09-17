@@ -12,7 +12,10 @@
     "sha256": "2cd60cc497dacba53d97c7c56ccb153e879d408445af64b57ed24429940e268c",
     "pages": 20,
     "folder": "shibo hao",
-    "topics": ["xr", "ai"],
+    "topics": [
+      "xr",
+      "ai"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "将模型输出不确定性按提示措辞、上下文和视觉预处理等因素分解，识别与错误率更相关的分量以用于幻觉检测和自训练筛选。",
@@ -37,7 +40,10 @@
     "sha256": "938263956875f85c04bb18094173c51bb5da27b8f308b3a4ccec5dc96e60e47b",
     "pages": 32,
     "folder": "shibo hao",
-    "topics": ["world", "ai"],
+    "topics": [
+      "world",
+      "ai"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "用GFlowNet式训练让LLM按奖励比例采样不同有效推理路径，在少量问题示例下同时提高正确性和解法多样性。",
@@ -62,7 +68,11 @@
     "sha256": "54bc06c0e9082ca1d952447839dd3ba3a39d109632f75bd5f0e1b4818d9458b2",
     "pages": 13,
     "folder": "shibo hao",
-    "topics": ["world", "xr", "ai"],
+    "topics": [
+      "world",
+      "xr",
+      "ai"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "OREO用离线轨迹联合学习策略与价值函数，以soft Bellman方程进行细粒度信用分配，减少对成对偏好数据的依赖。",
@@ -87,7 +97,9 @@
     "sha256": "11a16778bc562baf9abab2aa90a8b8b32c0827fa034d9510da76779a515c401d",
     "pages": 21,
     "folder": "shibo hao",
-    "topics": ["world"],
+    "topics": [
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "把语言自回归模型与视频扩散生成器结合，按自由文本动作连续生成下一段世界状态视频。",
@@ -112,7 +124,11 @@
     "sha256": "e76d095d0dd17d3c7c502650e2f93035e3bc9f9a914df1c72075b73cd9a35f32",
     "pages": 24,
     "folder": "shibo hao",
-    "topics": ["world", "xr", "ai"],
+    "topics": [
+      "world",
+      "xr",
+      "ai"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "提出自动生成任务特定评价标准的AutoRace与统一搜索、奖励、世界模型组件的LLM Reasoners库，系统比较多步推理策略。",
@@ -137,7 +153,11 @@
     "sha256": "f67d075c889d885db80355f6d398fb2aa6830406340c365140e234af05056dc3",
     "pages": 20,
     "folder": "shibo hao",
-    "topics": ["world", "xr", "ai"],
+    "topics": [
+      "world",
+      "xr",
+      "ai"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "RAP让LLM分别提出推理动作和预测状态变化，再用蒙特卡洛树搜索规划较高价值的推理路径。",
@@ -158,11 +178,14 @@
     "venue": "arXiv:2412.06769v3（本地署名版）；正式平台另待核验",
     "paper_links": "[arXiv本地版本 2412.06769v3](https://arxiv.org/abs/2412.06769v3)",
     "project_links": "[代码：facebookresearch/coconut](https://github.com/facebookresearch/coconut)",
-    "version": "[P109](#p109)与本文件SHA-256完全一致；[P026](#p026)为同一工作的较早匿名版，独立保留版本差异。",
+    "version": "同一论文只保留本地较新的2025-11-03 arXiv v3署名稿。P026的15页早期匿名稿已归档；P109为完全相同副本的历史别名。旧条目链接跳转到本条，旧个人笔记保留并合并。",
     "sha256": "6eb32c71eaa571b727ee95bce20396243fd70dc1ee8a37f91a7de717790d5b46",
     "pages": 18,
     "folder": "shibo hao",
-    "topics": ["world", "ai"],
+    "topics": [
+      "world",
+      "ai"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "Coconut把LLM最后隐状态直接作为下一个输入embedding，在连续潜空间进行中间推理，以课程训练逐步取代文本CoT。",
@@ -173,31 +196,6 @@
     "limitations": "【作者/解读】课程与已有CoT监督重要、规模和任务有限，难解释/检查潜过程；减少显式token不自动等于同比例实际速度提升。",
     "evidence": "PDF §3–5、表1 p.9、§5.3–6。",
     "abstract_en": "Large language models (LLMs) are restricted to reason in the “language space”, where they typically express the reasoning process with a chain-of-thought (CoT) to solve a complex reasoning problem. However, we argue that language space may not always be optimal for reasoning. For example, most word tokens primarily ensure textual coherence and are not essential for reasoning, while some critical tokens require complex planning and pose huge challenges to LLMs. To explore the potential of LLM reasoning in an unrestricted latent space instead of using natural language, we introduce a new paradigm Coconut (Chain of Continuous Thought). We utilize the last hidden state of the LLM as a representation of the reasoning state (termed “continuous thought”). Rather than decoding this into a word token, we feed it back to the LLM as the subsequent input embedding directly in the continuous space. This latent reasoning paradigm leads to the emergence of an advanced reasoning pattern: the continuous thought can encode multiple alternative next reasoning steps, allowing the model to perform a breadth-first search (BFS) to solve the problem, rather than prematurely committing to a single deterministic path like CoT. Coconut outperforms CoT on certain logical reasoning tasks that require substantial search during planning, and shows a better trade-off between accuracy and efficiency."
-  },
-  {
-    "id": "P102",
-    "title": "Long-Context State-Space Video World Models",
-    "authors": "Ryan Po; Yotam Nitzan; Richard Zhang; Berlin Chen; Tri Dao; Eli Shechtman; Gordon Wetzstein; Xun Huang",
-    "year": "2025",
-    "date": "本地版本：2025-05-26（arXiv:2505.20171v1）；正式发表时间如已核实，见下一项。",
-    "venue": "本地arXiv:2505.20171v1，2025-05-26；对应ICCV 2025正式版见P137",
-    "paper_links": "[arXiv本地版本 2505.20171v1](https://arxiv.org/abs/2505.20171v1)",
-    "project_links": "本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。",
-    "version": "与[P137](#p137)为同一工作；本条是15页arXiv版本，[P137](#p137)为12页ICCV 2025论文版。",
-    "sha256": "3ae3aef450f64712291ea605ecc1bb56f27130519a13e9b64d17289ce71553ce",
-    "pages": 15,
-    "folder": "reasoning",
-    "topics": ["creation", "world", "xr"],
-    "added": false,
-    "verified": "2026-09-15",
-    "abstract_zh": "以状态空间模型扩展动作条件视频生成的时间记忆，用块级扫描加局部注意力降低长上下文成本。",
-    "contribution": "面向因果视频的SSM扫描架构、训练策略及长时空间回访/推理评测。",
-    "boundary": "低分辨率合成Memory Maze/Minecraft；每帧成本恒定不等于达到实时交互，作者明确当前尚未达到交互帧率，记忆不能有效超出训练上下文。",
-    "method": "空间块级Mamba/SSM扫描处理长历史，局部稠密注意力保持邻帧一致，递归状态支持固定每帧推理成本。",
-    "results": "576帧上下文后的224帧推理任务：SSIM0.855、LPIPS0.099、PSNR28.2；192帧上下文因果模型0.839/0.125/27.1；全上下文Transformer0.860/0.089/28.8，仍略好但成本更高。",
-    "limitations": "【作者】速度未实时、训练上下文外记忆泛化不足、仅合成低分辨率；【解读】固定状态容量可能压缩/遗忘长时细节。",
-    "evidence": "PDF §4–5、表3 p.6、§6 p.8。",
-    "abstract_en": "Video diffusion models have recently shown promise for world modeling through autoregressive frame prediction conditioned on actions. However, they struggle to maintain long-term memory due to the high computational cost associated with processing extended sequences in attention layers. To overcome this limitation, we propose a novel architecture leveraging state-space models (SSMs) to extend temporal memory without compromising computational efficiency. Unlike previous approaches that retrofit SSMs for non-causal vision tasks, our method fully exploits the inherent advantages of SSMs in causal sequence modeling. Central to our design is a block-wise SSM scanning scheme, which strategically trades off spatial consistency for extended temporal memory, combined with dense local attention to ensure coherence between consecutive frames. We evaluate the long-term memory capabilities of our model through spatial retrieval and reasoning tasks over extended horizons. Experiments on Memory Maze and Minecraft datasets demonstrate that our approach surpasses baselines in preserving long-range memory, while maintaining practical inference speeds suitable for interactive applications."
   },
   {
     "id": "P101",
@@ -212,7 +210,10 @@
     "sha256": "976245eb5b4ee27353330a79987c9c069803301b597c0adbedf36e2ae4e9318c",
     "pages": 20,
     "folder": "reasoning",
-    "topics": ["creation", "world"],
+    "topics": [
+      "creation",
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "综述叙事的计算理解，特别是在线多源碎片化叙事的构建、抽取、演化、生成、表示与评估。",

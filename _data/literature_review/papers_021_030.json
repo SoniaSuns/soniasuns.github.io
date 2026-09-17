@@ -12,7 +12,10 @@
     "sha256": "2e9d58f9985c584aa48d97dbf51d1f7b98f81da5cc7bacd01997e66b8e388ea0",
     "pages": 9,
     "folder": "reasoning",
-    "topics": ["world", "xr"],
+    "topics": [
+      "world",
+      "xr"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "结合语言假设筛选与图像想象，增强多模态模型对缺失视觉事件的溯因推理。",
@@ -37,7 +40,9 @@
     "sha256": "4387e6879b388b1371bad2857839323e56437fdc255065cc2245000586305adc",
     "pages": 19,
     "folder": "abductive",
-    "topics": ["creation"],
+    "topics": [
+      "creation"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "用对齐时间轴、转录文本和差异高亮，帮助视频创作者比较、筛选和修改多种 AI 剪辑方案。",
@@ -62,7 +67,9 @@
     "sha256": "e4bb6ec0a03c7a08e7fedf5beb10e54fbdbb54f6de4569fbb87883ad8b498219",
     "pages": 46,
     "folder": "abductive",
-    "topics": ["world"],
+    "topics": [
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "探索 Veo 3 能否仅通过提示执行感知、操作和视觉推理任务，提出视频模型具备通用视觉能力的早期证据。",
@@ -87,7 +94,10 @@
     "sha256": "8fde486cc3f7096a777b415c3b45f71bd4d074255948644b0f7daf9eeea921da",
     "pages": 16,
     "folder": "abductive",
-    "topics": ["world", "xr"],
+    "topics": [
+      "world",
+      "xr"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "VCD 将物体框与可见、不可见常识三元组连接，支持图像中的常识发现。",
@@ -98,31 +108,6 @@
     "limitations": "【作者】下游验证较简单、仅静态图像；【解读】大量自动构造常识可能保留知识库偏差，规模不代表每条均正确。",
     "evidence": "§3；表3–5；Limitations。",
     "abstract_en": "Visual commonsense plays a vital role in understanding and reasoning about the visual world. While commonsense knowledge bases like ConceptNet provide structured collections of general facts, they lack visually grounded representations. Scene graph datasets like Visual Genome, though rich in object-level descriptions, primarily focus on directly observable information and lack systematic categorization of commonsense knowledge. We present Visual Commonsense Dataset ( VCD), a large-scale dataset containing over 100,000 images and 14 million object-commonsense pairs that bridges this gap. VCD introduces a novel three-level taxonomy for visual commonsense, integrating both Seen (directly observable) and Unseen (inferrable) commonsense across Property, Action, and Space aspects. Each commonsense is represented as a triple where the head entity is grounded to object bounding boxes in images, enabling scenedependent and object-specific visual commonsense representation. To demonstrate VCD’s utility, we develop VCM, a generative model that combines a vision-language model with instruction tuning to discover diverse visual commonsense from images. Extensive evaluations demonstrate both the high quality of VCD and its value as a resource for advancing visually grounded commonsense understanding and reasoning. Our dataset and code will be released on https://github.com/NUSTM/VCD."
-  },
-  {
-    "id": "P026",
-    "title": "Training Large Language Models to Reason in a Continuous Latent Space",
-    "authors": "本地稿匿名（Anonymous authors）；实名版本见 P103/P109",
-    "year": "未注明（匿名稿）",
-    "date": "本地匿名稿未注明日期；ICLR 2025是投稿轮次，不作为正式发表时间",
-    "venue": "Under review as a conference paper at ICLR 2025（匿名投稿版本，不能据此视作接收）",
-    "paper_links": "",
-    "project_links": "本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。",
-    "version": "与[P103](#p103)/[P109](#p109)为同一COCONUT工作；本地15页匿名版与18页署名版分别记录，不能作为两项独立证据。",
-    "sha256": "4d75acf8306a57d2554cae06f6842f73ecde9b3c4176684508ed6be077b0958d",
-    "pages": 15,
-    "folder": "abductive",
-    "topics": ["world", "ai"],
-    "added": false,
-    "verified": "2026-09-15",
-    "abstract_zh": "COCONUT 把隐藏状态直接反馈为下一输入，实现不经文字解码的连续潜在推理。",
-    "contribution": "连续 thought 的循环计算与逐阶段替换文本 CoT 的训练方案。",
-    "boundary": "基于 GPT-2，在 GSM8K、ProntoQA、ProsQA 验证；正文明确把每个连续 thought 计为一个计算 token。",
-    "method": "从语言 CoT 监督开始，逐步以隐藏向量取代早期推理步骤，保留可输出答案的语言阶段；用 ProsQA 分析潜在搜索分支。",
-    "results": "各任务优于 no-CoT，ProsQA 上超过文本 CoT，生成步数较少；不能据此称所有任务优于 CoT。具体实名版本数值见 P103，避免混用版本表格。",
-    "limitations": "【解读】潜在状态不易审计，训练需推理轨迹与阶段设置；类似 BFS 的证据来自受控逻辑任务，不是任意问题的搜索保证。",
-    "evidence": "§3；§4/表1；§5 潜在搜索树；本地匿名封面。",
-    "abstract_en": "Large language models are restricted to reason in the “language space”, where they typically express the reasoning process with a chain-of-thoughts (CoT) to solve a complex reasoning problem. However, we argue that language space may not be the optimal reasoning space. For example, most word tokens are primarily for textual coherence and not essential for reasoning, while some critical tokens require complex planning and pose huge challenges to LLMs. To explore the potential of LLM reasoning in an unrestricted latent space instead of using human language, we introduce a new paradigm C OCONUT (Chain of Continuous Thought). We utilize the last hidden state of the LLM as a representation of the reasoning state (termed “continuous thought”). Rather than decoding this into a word token, we feed it back to the LLM as the subsequent input embedding directly in the continuous space. Experiments show that C OCONUT can effectively augment the LLM on several reasoning tasks. It even outperforms CoT in certain logical reasoning tasks that require substantial planning, despite generating fewer tokens during inference. More interestingly, we observe an advanced reasoning patterns emerging from latent reasoning: the continuous thought can encode multiple potential next reasoning steps, allowing the model to perform a breadth-first search (BFS) to solve the problem, rather than prematurely committing to a single deterministic path like CoT. These findings demonstrate the promise of latent reasoning and offer valuable insights for future research on latent reasoning methods."
   },
   {
     "id": "P025",
@@ -137,7 +122,10 @@
     "sha256": "8f029968f20292b320dda95d253911a187e34a18d33aa6cdc65883b9cc1a47d4",
     "pages": 20,
     "folder": "abductive",
-    "topics": ["world", "ai"],
+    "topics": [
+      "world",
+      "ai"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "不训练模型或使用验证器，而通过基础模型自身似然驱动的采样提升推理表现。",
@@ -162,7 +150,10 @@
     "sha256": "e87a9ce82ff24e96f55b83fb9713a5d6fc9e4a1a232c12d42da49c10022ed891",
     "pages": 52,
     "folder": "abductive",
-    "topics": ["world", "xr"],
+    "topics": [
+      "world",
+      "xr"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "把网络、优化器和记忆统一为不同更新频率的嵌套优化过程，并据此设计连续记忆系统和 Hope。",
@@ -187,7 +178,9 @@
     "sha256": "26f0122c9977bee78286c8587ae868a3fe2db86dc60f7dabe4a4710c6ac3f5f9",
     "pages": 22,
     "folder": "abductive",
-    "topics": ["world"],
+    "topics": [
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "先学习小子问题的能量函数，再在测试时组合约束求解更大、更复杂的问题。",
@@ -212,7 +205,10 @@
     "sha256": "9a42692cacd30f0379aaa6d69bbbc4370208f53e0c08516c6d8fe84cd268ce0b",
     "pages": 30,
     "folder": "abductive",
-    "topics": ["world", "xr"],
+    "topics": [
+      "world",
+      "xr"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "ARIA 识别知识缺口、向专家求助并维护带时间戳的知识库，以适应运行中变化的规则。",
@@ -237,7 +233,10 @@
     "sha256": "91efca47ea0eadf531cb7523e3cf6f4016d01a79de26626f2b5748c87ecfc46d",
     "pages": 10,
     "folder": "abductive",
-    "topics": ["world", "xr"],
+    "topics": [
+      "world",
+      "xr"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "以反常视频事件检验模型能否解释隐藏事件，以及获得新证据后修正原先假设。",

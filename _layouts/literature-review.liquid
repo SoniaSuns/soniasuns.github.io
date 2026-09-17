@@ -7,7 +7,7 @@
     <meta name="author" content="Yusi Sun">
     <title>{{ page.title | escape }}</title>
     <link rel="canonical" href="{{ page.url | absolute_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/literature-review.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/literature-review.css' | relative_url }}?v={{ site.data.literature_review.catalog.updated }}">
   </head>
   <body class="lr-standalone">
     <a class="lr-skip" href="#lr-library">跳转到文献清单</a>

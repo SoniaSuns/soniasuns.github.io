@@ -1,178 +1,954 @@
-- **项目／代码／数据**：本地PDF及本次核查未检出明确属于本文的项目/代码入口；不代表作者没有发布资源。
-- **版本关系**：基于P142 Alchemy构造部分实验；是环境/能力评测的后续工作，非相同PDF。
 
-- **主题**：XR与人机协作、世界机制与演化、AI方法与评测
-- **PDF版本**：30页；SHA-256：`18991b9ca070b5bc1ca4355db21012d97ce34c4715cf6d16d738eab85b96125c`
+<a id="p126"></a>
+## P126 · Diffusion-Based Visual Art Creation: A Survey and New Perspectives
 
-### 中文摘要
-
-考查基础模型能否在交互环境中主动收集信息、检验假设并适应隐藏机制。以文本/三维Feature World和更复杂的Alchemy实验，分析模型、先验说明及周期总结对探索质量、跨试次学习和机制突变后适应的作用。
-
-### 核心贡献
-
-区分探索动作是否提供足够信息与模型是否正确利用信息；从简单特征发现扩展到跨试次隐藏动力学学习，并测试不预告的规则改变。包含模型从视频读取状态、提出行动指令、由人类执行的三维概念验证。
-
-### 实现边界
-
-无需微调的模型能力研究，非新训练算法。三维试验用Gemini 1.5 Pro，由人类执行移动/放置指令；这一设置已经覆盖‘新证据需要请求人类行动’的基本形态。每个三维条件15个episode，任务结构简单，未优化人类注意力、行动可接受性或XR空间提示。
-
-### Method／方法
-
-Feature World中寻找产生奖励的颜色/形状属性或属性组合，比较模型探索与随机及理想策略；将Gemini扩展到三维视频输入和人类执行。TextAlchemy比较GPT-4o、o4-mini、Claude 3.7与Gemini 2.5 Pro，控制是否给结构先验、是否每轮自总结，并在后续试次静默更换环境机制。
-
-### Results／主要结果
-
-三维Gemini行动条件的15个episode有8个出现视觉错误；保留这些错误时，奖励属性识别相对随机行动者的提升不显著（p=0.13），去除视觉错误后才显示优势。Alchemy在无先验且不总结时，没有模型显示显著的跨试次提升；增加总结后，除o4-mini外模型在无先验设置也能改善。机制改变后，Gemini 2.5 Pro和Claude 3.7在相应增强条件下能恢复表现，GPT-4o/o4-mini适应较弱。
-
-### Shortcomings／局限与可能不足
-
-【解读】固定合成环境族及Alchemy每条件10次随机重复限制统计与开放世界结论；人类承担底层动作控制，掩盖真实部署的行动落地问题。论文没有处理取证与用户当前任务的注意力冲突、请求被拒绝、提示污染观察及人机私有信息差异。作者关于能力上限的推测不应当作无内在障碍的证明。
-
-### 证据定位
-
-PDF pp.5–7：Feature World与三维人类执行，p.7 Figure 3及视觉错误；pp.8–11：Alchemy、总结/先验和机制突变；p.12：局限。
-
-### Abstract
-
-Foundation models excel at single-turn reasoning, but many real-world challenges, from scientific research to technology development, require multi-turn exploration in dynamic interactive environments. Crucial components of learning from experience in these settings, such as efficiently gathering information to test hypotheses, meta-learning a model of the world’s dynamics, and adapting to unexpected changes, remain largely unexplored for these models. We first evaluate foundation models in Feature World, a setting that primarily tests information gathering about a static hidden reward function. In this initial setting, we show that state-of-the-art foundation models come close to optimal efficiency in selecting maximally informative actions in tasks with simple reward functions. As a proof of concept, we also show a model can gather information efficiently in a 3D embodied version of this task, though errors in vision limit some aspects of performance. In order to test exploration across multiple dependent turns and trials, we implement a custom, text-based version of the Alchemy environment, a benchmark designed for meta-learning. Here, agents must deduce a latent causal structure by integrating information across multiple state-dependent trials. In this more complex setting, we find that recent foundation models struggle to meta-learn strategies that enable improved performance over time. However, prompting the models to summarize their observations at regular intervals enables an emergent meta-learning process, allowing them to improve across trials. Notably, in some models, summarization also enabled adaptive re-learning of this information when the environment’s rules change unexpectedly. While most models performed reasonably well on simple Feature World tasks, evaluations in Alchemy reveal stark differences in robustness among the models, with Gemini 2.5 performing best, followed by Claude 3.7, and ChatGPT-4o and o4-mini struggling the most. These results underscore Alchemy’s value as a benchmark for meta-learning and strategy adaptation in foundation models. By moving beyond simple discovery to complex, stateful environments, we demonstrate that the most significant challenge for foundation agents is not selecting informative actions in the moment, but rather seeking and integrating knowledge through adaptive strategies over time. Intriguingly, we find there is likely no intrinsic barrier to future generations of foundation agents more fully mastering these abilities.
-
-<a id="p158"></a>
-## P158 · RULER-Bench: Probing Rule-based Reasoning Abilities of Next-level Video Generation Models for Vision Foundation Intelligence
-
-- **作者**：Xuming He; Zehao Fan; Hengjia Li; Fan Zhuo; Hankun Xu; Senlin Cheng; Di Weng; Haifeng Liu; Can Ye; Boxi Wu（前三位共同贡献）
-- **时间**：本地arXiv:2512.02622v1，2025-12-02。
-- **发表平台／版本状态**：arXiv预印本；项目页亦采用预印本引用，尚未核实正式会议录用。
-- **论文链接**：[论文/发表记录 1](https://arxiv.org/abs/2512.02622v1)
-- **项目／代码／数据**：[资源 1](https://hexmseeu.github.io/RULER-Bench-proj/)
-
-- **主题**：世界机制与演化
-- **PDF版本**：30页；SHA-256：`fab16d768eec43e7f891e6e6993e0bd77ca4f4fdffd675d5e978c408dcd9e90b`
+- **作者**：Bingyuan Wang; Qifeng Chen; Zeyu Wang
+- **时间与版本**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台**：ACM Computing Surveys 57(10), Article268；2025-05-07上线，2025-10卷期；2025-04-01接受；DOI10.1145/3728459
+- **论文与正式记录**：[DOI正式记录](https://doi.org/10.1145/3728459)
+- **项目 · 代码 · 数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+- **主题**：创作与规则补全
+- **PDF版本**：38页；SHA-256：`18c343dc471df6180c288a6b3bc1c30e4075f42475deec95b9f059a3c5981f6e`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
 
 ### 中文摘要
 
-为视频生成模型建立规则推理基准，要求生成的过程在科学、视觉、假设、游戏、语义与人文任务中体现隐含规则。通过人工核验的规则解释和逐项问题，将指令遵循、视觉一致性、视觉保真度与规则连贯性分开评价。
+从艺术需求和技术方法共同审视扩散视觉艺术创作，系统编码相关论文，建立应用、理解和生成的分析框架及人机协作展望。
 
 ### 核心贡献
 
-提供622个样本、40种任务、6个大类和约6,500条核查问题，分别测试文本到视频及图像到视频模型；揭示视觉质量较高仍可能缺少正确规则后果的现象。
+四阶段文献筛选、七维编码和场景—模态—任务—方法框架，连接艺术要求与计算问题。
 
 ### 实现边界
 
-评价短视频生成是否符合给定场景/隐含规则，包含假设性世界条件，但没有交互式创作者规则编辑或同一规则下多条演化的覆盖实验。o3按good/medium/bad映射100/50/0做问题级评分，RC是归一化评分，不是整段视频严格满足规则的比例。
+综述，不是新的图像/视频生成模型；PDF封面的2026-01-31为下载日期，不是发表日。
 
-### Method／方法
+### Method · 方法
 
-人工与GPT-5构造任务、隐含解释和核查表并复核；评测10个视频模型（6闭源、4开源），由o3逐项评分。另比较加入规则/预期结果解释的增强提示，并以80个视频、813个问题的人类标注核对自动评审。
+明确研究问题和纳入条件，结构/时间分析论文编码，归纳技术与人机协作趋势。
 
-### Results／主要结果
+### Results · 主要结果
 
-Table 2中Veo 3.1的RC为48.87、IF 68.70、VC 76.68、VF 86.72；Sora 2的RC为41.23，体现画面质量与规则得分的差距。游戏类Sora 2为19.97、Veo 3.1为17.70；正文‘全部低于15’与表格不一致，本条依表格记录。o3与人工判断一致率85.12%，Spearman 0.8011。增强提示下Veo假设类RC由46.79到58.12；该提示包含额外规则/结果信息。
+识别视觉艺术的风格控制、内容编辑、跨模态与多场景生成热点，提出技术能力与艺术家参与方式共同演化的研究方向；无统一新实验排名。
 
-### Shortcomings／局限与可能不足
+### Shortcomings · 局限
 
-【解读】自动评审仍会误判，逐条平均分不能证明长时间轨迹的逻辑有效性；感知与渲染质量可能混入推理指标。提供预期后果的提示不能单独证明模型本身学会了推导。另Table 4科学类50.97→62.62的实际增量为11.65，表内印成+9.65；记录数据时需复算。
-
-### 证据定位
-
-PDF p.3：分类；p.5：指标与问题构建；p.6 Tables 2–3：主结果；p.7 Table 4：提示实验；p.8：人工一致性研究。
-
-### Abstract
-
-Recent advances in video generation have enabled the synthesis of videos with strong temporal consistency and impressive visual quality, marking a crucial step toward vision foundation models. To evaluate these video generation models, existing benchmarks primarily focus on factors related to visual perception and understanding, like visual aesthetics, instruction adherence, and temporal coherence. However, the rule-based reasoning capabilities of video generation models remain largely unexplored. Although recent studies have carried out preliminary explorations into whether video models can serve as zero-shot learners, they still lack a fine-grained decomposition of reasoning capabilities and a comprehensive evaluation protocol. To address this gap, we introduce RULER-Bench, a benchmark designed to evaluate the reasoning ability of video generation models from the perspective of cognitive rules. Built upon two fundamental paradigms: text-to-video and image-to-video, RULER-Bench covers 40 representative tasks spanning six rule categories with 622 high-quality annotated instances. For the evaluation of each generated video, we construct a checklist covering four metrics and leverage GPT-o3 to assign scores to each question, achieving 85% alignment with human judgements. Extensive experiments show that the state-of-the-art model achieves only 48.87% on the rule coherence metric, highlighting significant room for improvement in the reasoning capability of next-level video models. We expect that the insight obtained from RULER-Bench will facilitate further development of reasoning-aware video generation, advancing video generation models toward vision foundation intelligence.
-
-<a id="p159"></a>
-## P159 · GPS: Graph-guided Proactive Information Seeking in Large Language Models
-
-- **作者**：Ruiqing Li; Yifeng Xu; Xinke Jiang; Zhibang Yang; Xinyu Ma; Yue Fang; Junfeng Zhao; Yasha Wang; Xu Chu
-- **时间**：2026；本地标注Published as a conference paper at ICLR 2026，未检出独立的精确版本日期。
-- **发表平台／版本状态**：International Conference on Learning Representations（ICLR 2026），正式论文集已核实。
-- **论文链接**：[论文/发表记录 1](https://proceedings.iclr.cc/paper_files/paper/2026/hash/1f49b7fbd7c7afc52c1db0d4ed1a338d-Abstract-Conference.html)
-- **项目／代码／数据**：[资源 1](https://github.com/lrq111/GPS)
-
-- **主题**：XR与人机协作、创作与规则补全、AI方法与评测
-- **PDF版本**：25页；SHA-256：`59c114d720cc8d31d8c53fede1b4298921279d14a9bc5a59d93dfdd3b0f4c314`
-
-### 中文摘要
-
-面向检索增强问答中缺少用户条件的问题，将文档中的条件规则组织为有向无环图，沿图主动澄清缺失变量，并根据回答裁剪无关分支。通过条件路径合成训练数据和面向澄清结果的强化学习，同时改善回答正确性和提问效率。
-
-### 核心贡献
-
-把条件逻辑表示、主动澄清与训练目标结合：DAG为提问提供结构，动态遍历降低冗余，混合奖励共同考虑最终正确性、交互轮数和图质量。
-
-### 实现边界
-
-理论的逻辑完备性针对有限取值函数可被DAG表示，不保证LLM会从真实文档正确抽取全部规则。实验的用户模拟器回答已有条件事实；没有通过物理行动创造新证据。世界规则已给定，未知的是用户条件，并非从观察发现未知环境机制。
-
-### Method／方法
-
-Reasoner输出条件变量、值分支与答案叶节点；Clarifier按可达路径代价选择问题，收到回答后剪枝。用ConditionalQA中的欠明确样本及DeepSeek-R1合成条件路径，筛选完整输入可答而缺失输入不可答的数据。GRPO训练Reasoner，结合正确性、轮数惩罚与结构质量奖励；在Qwen2.5-7B和Llama3-8B骨干上验证。
-
-### Results／主要结果
-
-Table 1中Qwen-GPS在Synthetic/ConditionalQA/ShARC的成功率为60.2/73.4/79.3%，WCT为4.59/2.91/2.41；对应Clarify-DPO成功率59.2/72.0/78.5%，WCT 4.67/3.52/2.93。WCT把失败样本按最大10轮计罚，不等于原始平均提问次数；另列F1衡量是否需要澄清，不是答案F1。Llama-GPS在ShARC为75.8%，低于Clarify-DPO的82.7%，并非所有设置均最佳。Qwen在ConditionalQA移除RL后成功率73.4→67.7%。
-
-### Shortcomings／局限与可能不足
-
-【解读】有限离散条件、相对固定规则库及模拟用户限制复杂开放场景；图抽取错误可系统性排除正确路径。LLM判分和模拟用户偏差仍在；轮数成本没有表达用户动作风险、注意力中断及不同取证行动对后续观察的影响。
+【解读】文献筛选/编码有解释性，领域更新快；创作质量和创造性没有跨艺术门类统一客观标准。
 
 ### 证据定位
 
-PDF pp.3–7：DAG、算法、数据合成与奖励；p.8：SR/WCT/澄清需要F1定义；pp.9–10 Tables 1–2：主结果和消融；附录A/B：理论。
+PDF封面元数据；§4–6、图4、§7–8（正文到PDF p.30）。
 
 ### Abstract
 
-Equipping Large Language Models (LLMs) with the ability to proactively ask clarifying questions is essential to mitigate ambiguity when faced with underspecified user queries in retrieval-augmented generation (RAG) systems. However, existing methods often neglect the rule-based reasoning structures embedded in the retrieved knowledge that are central to ambiguity, making it challenging to learn an effective and efficient question-asking strategy. To address these issues, we introduce GPS, a two-stage framework for enhancing proactive information seeking abilities of LLMs in RAG systems. In the reasoning stage, we propose a Directed Acyclic Graph (DAG) reasoning structure with theoretical guarantees of logical completeness, which facilitates capturing all conditional logic in the retrieved knowledge and supports effective clarification. In the clarification stage, we design a traversal-based algorithm that dynamically prunes the DAG based on user responses, enabling efficient clarification. To further enhance DAG construction, we first propose a conditional paths guided data synthesis method to address data scarcity challenge, then we apply a clarification-oriented reinforcement learning method with a hybrid reward that jointly considers effectiveness and efficiency to optimize the LLM. Experiments on three benchmarks demonstrate that GPS outperforms baseline methods in both success rate and clarification efficiency.
+The integration of generative AI in visual art has revolutionized not only how visual content is created but also how AI interacts with and reflects the underlying domain knowledge. This survey explores the emerging realm of diffusion-based visual art creation, examining its development from both artistic and technical perspectives. We structure the survey into three phases: data feature and framework identification, detailed analyses using a structured coding process, and open-ended prospective outlooks. Our findings reveal how artistic requirements are transformed into technical challenges and highlight the design and application of diffusion-based methods within visual art creation. We also provide insights into future directions from technical and synergistic perspectives, suggesting that the confluence of generative AI and art has shifted the creative paradigm and opened up new possibilities. By summarizing the development and trends of this emerging interdisciplinary area, we aim to shed light on the mechanisms through which AI systems emulate and, possibly, enhance human capacities in artistic perception and creativity.
 
-<a id="p160"></a>
-## P160 · Fictional Worldbuilding: Multi-Agent LLM Collaboration with Hierarchical Context Compression and Iterative Review
+---
 
-- **作者**：Jingbo Chen; He Wang; Wei Yuan; Yuqiao Lai; Zhenyan Lu
-- **时间**：本地arXiv:2607.09403v1，2026-07-10。首页所写August 2026为未核实模板信息，不采用为正式发表日期。
-- **发表平台／版本状态**：arXiv预印本。PDF含JAIR期刊模板及占位DOI 10.1613/jair.1.xxxxx；未查到足以确认JAIR正式发表的记录，不能按已发表JAIR论文引用。
-- **论文链接**：[论文/发表记录 1](https://arxiv.org/abs/2607.09403v1)
-- **项目／代码／数据**：本地PDF及本次核查未检出明确属于本文的项目/代码入口；不代表作者没有发布资源。
+<a id="p134"></a>
+<a id="p127"></a>
+## P127 · MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequences
 
+- **作者**：Canyu Zhao; Mingyu Liu; Wen Wang; Weihua Chen; Fan Wang; Hao Chen; Bo Zhang; Chunhua Shen
+- **时间与版本**：本地版本：2025-11-25（arXiv:2407.16655v3）；正式发表时间如已核实，见下一项。
+- **发表平台**：ICLR 2025（PDF首页）；arXiv:2407.16655v3
+- **论文与正式记录**：[arXiv本地版本 2407.16655v3](https://arxiv.org/abs/2407.16655v3)
+- **项目 · 代码 · 数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+- **版本关系**：同一论文只保留本地2025-11-25 arXiv v3。P134的ICLR 2025会议文件已归档；作者顺序相同，v3首页3位共同一作，旧文件2位标星。旧条目链接跳转到本条。
 - **主题**：创作与规则补全、世界机制与演化
-- **PDF版本**：36页；SHA-256：`e116379992778595245b5564198d216a171c7b88850d71d691789788ed2f450b`
+- **PDF版本**：31页；SHA-256：`19dcbd7282b7ec5eab617b7d97a0aaaa42d43b765a7c7d57a866b1f88d22f93a`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
 
 ### 中文摘要
 
-AutoWorldBuilder从一两句世界设定生成地理、社会、资源与文化等概念。系统以多智能体分工、任务依赖调度、分层上下文预算和迭代审核控制规模与内部一致性；在20个设定任务、两种LLM后端上报告运行及内部评审结果。
+用自回归模型规划长序列关键帧token，再以扩散渲染图像和视频，以多模态剧本和人脸身份条件维持跨场景角色一致。
 
 ### 核心贡献
 
-整合概念存储、DAG与语义分组调度、FAISS检索和四层上下文、专门Auditor与可配置角色。是架空世界概念扩展系统的直接前作，但其提出的数据结构与实际启用功能必须区分。
+叙事/渲染分层框架、包含角色及风格的剧本和身份保持渲染。
 
 ### 实现边界
 
-作者在§6.4明确：16种概念关系只完成定义，关系解析模块未实现，实验关系类型覆盖率为0%；不能称已验证完整知识图谱推理。输出是概念设定集合，未实现可执行世界演化、因果干预或规则修改后的依赖更新；接受/拒绝设定等实时人机协作列为未来工作。质量来自系统内部LLM评审，无独立外部正确性基准。
+“叙事一致”主要由脚本对齐和角色视觉指标代理；关键帧及短片段组装不保证每项事件真实发生或长时物理因果一致。
 
-### Method／方法
+### Method · 方法
 
-将输入拆成有依赖的任务，拓扑排序后按语义与批大小分组；从已完成批次检索相关概念，按Essential/Relevant/Summary/Collaboration四层分配上下文。21种专门角色按技能配置加载，8种Auditor参与评分、修订和筛选；主要测试中文输入。20个案例覆盖5类世界，每种后端各运行20次，共40次。
+扩散自动编码器产生紧凑关键帧token，自回归预测下一个keyframe，文本/FaceID条件解码，再生成帧间视频。
 
-### Results／主要结果
+### Results · 主要结果
 
-Table 8中GPT-OSS 120B和DeepSeek v3.2均19/20次完成（95%）；成功世界平均56.2/103.4个概念，平均18/31分钟，内部最终通过率85.5/99.2%。作者称初轮42%经审核到85%以上，但Table 14中DeepSeek平均评分从8.40降至8.21。所谓89.9/90.7%压缩对应平均304.3/278.4 token相对3,000-token预算的未用比例，不能当作相对未压缩完整上下文的受控节省率。Auditor全部通过只说明未检出问题，不代表零冲突。
+表1无参考Ours长期一致LT0.814对StoryDiffusion0.596，FID2.043对4.643；审美6.093略低于6.134，非逐项最佳；有参考Ours-ref LT0.893但使用额外条件。
 
-### Shortcomings／局限与可能不足
+### Shortcomings · 局限
 
-【作者】关系解析未启用、Auditor零检出值得怀疑、缺外部标准化评估、任务分解会产生环或解析错误、主要支持中文。§5.4明确模块分析是理论预期而非受控消融，因此+10–15百分点审核收益及50–70%时间缩减等预测不能记为实验测得。表2预算比例与各层token数亦不一致。【解读】两后端批大小下限略有不同，且内部判分、少量任务、无创作者研究限制关于一致性和效率的强结论。
+【解读】人脸身份覆盖、长时错误累积和剧本粒度影响结果；参考/无参考条件需分开比较，电影域指标不等于人类叙事理解。
 
 ### 证据定位
 
-PDF pp.12–20：概念/调度/压缩/审核；pp.21–25 Tables 6–14：20×2实验及压缩分母；pp.27–28 §5.4：非受控消融声明；p.30 §6.4：关系模块未实现及质量评估局限；p.31：人机协作列为未来工作。
+PDF §3–4、表1–2 p.9、§5。
 
 ### Abstract
 
-Worldbuilding, the construction of coherent fictional worlds, is a foundational task in game design and literary creation. Large Language Models (LLMs) offer new possibilities for automated content generation, but their application to worldbuilding faces three challenges: context explosion that grows linearly with the building process, the tension between creative diversity and content consistency, and the absence of automated quality assurance. This paper presents AutoWorldBuilder, a multi-agent collaborative system that addresses these challenges through five integrated components: a structured concept network with conflict detection; a DAG-based hybrid batch scheduler that groups tasks by semantic locality; a four-layer context compression mechanism achieving approximately 90% token reduction; an iterative review system with specialized Auditor agents that improves proposal pass rates from 42% to over 85%; and a skill-driven agent architecture supporting zero-code extension with differentiated temperature configuration. Two experiments across 20 diverse worldbuilding tasks, using GPT-OSS 120B and DeepSeek v3.2 as LLM backends, demonstrate a 95.0% success rate. The system generated 56–103 self-consistent concepts per world in 18–31 minutes, with no conflicts detected by the review pipeline. The architectural patterns validated here, including layer-as-budget compression, semantic-locality scheduling, and separation of generation and review, may transfer to the broader class of knowledge-intensive, multi-agent LLM applications.
+Recent advancements in video generation have primarily leveraged diffusion models for short-duration content. However, these approaches often fall short in modeling complex narratives and maintaining character consistency over extended periods, which is essential for long-form video production like movies. We propose MovieDreamer, a novel hierarchical framework that integrates the strengths of autoregressive models with diffusion-based rendering to pioneer long-duration video generation with intricate plot progressions and high visual fidelity. Our approach utilizes autoregressive models for global narrative coherence, predicting sequences of visual tokens that are subsequently transformed into high-quality video frames through diffusion rendering. This method is akin to traditional movie production processes, where complex stories are factorized down into manageable scene capturing. Further, we employ a multimodal script that enriches scene descriptions with detailed character information and visual style, enhancing continuity and character identity across scenes. We present extensive experiments across various movie genres, demonstrating that our approach not only achieves superior visual and narrative quality but also effectively extends the duration of generated content significantly beyond current capabilities.
 
-<a id="p003"></a>
-历史别名：[P002](#p002)
+---
 
-<a id="p082"></a>
-历史别名：[P081](#p081)
 
-<a id="p109"></a>
-历史别名：[P103](#p103)
+<a id="p128"></a>
+## P128 · StoryMem: Multi-shot Long Video Storytelling with Memory
+
+- **作者**：Kaiwen Zhang; Liming Jiang; Angtian Wang; Jacob Zhiyuan Fang; Tiancheng Zhi; Qing Yan; Hao Kang; Xin Lu; Xingang Pan
+- **时间与版本**：本地版本：2025-12-22（arXiv:2512.19539v1）；正式发表时间如已核实，见下一项。
+- **发表平台**：首页2025-12-23；arXiv:2512.19539v1
+- **论文与正式记录**：[arXiv本地版本 2512.19539v1](https://arxiv.org/abs/2512.19539v1)
+- **项目 · 代码 · 数据**：[项目/演示页面](https://kevin-thu.github.io/StoryMem)
+- **主题**：创作与规则补全、世界机制与演化、XR与人机协作
+- **PDF版本**：20页；SHA-256：`893eb41d0811d6480248c118b3146657400c5b93dfc5ae1c4ff1a62b75d116af`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+用动态历史关键帧记忆把单镜头视频扩散改造成逐镜头长叙事生成，并通过语义/审美选择维持紧凑记忆。
+
+### 核心贡献
+
+Memory-to-Video（M2V）、负RoPE位置与latent拼接、LoRA训练及ST-Bench。
+
+### 实现边界
+
+需微调单镜头骨干；分钟级逐镜头生成不是无限记忆，纯视觉记忆可能混淆多角色；平滑过渡和提示跟随有取舍。
+
+### Method · 方法
+
+历史镜头选相关美观关键帧写入记忆，潜空间拼接注入模型；MI2V/MR2V支持过渡和定制。
+
+### Results · 主要结果
+
+ST-Bench总体跨镜头一致性0.5065，报告比基础模型相对提高28.7%、比HoloCine提高9.4%；用户成对偏好更高；单镜头提示跟随略下降。
+
+### Shortcomings · 局限
+
+【作者】复杂多角色和大运动差异过渡困难；【解读】视觉一致性/审美不证明事件链完成，记忆选择会过滤重要但不美观的状态。
+
+### 证据定位
+
+PDF §3–4、表1–2、图7、§5。
+
+### Abstract
+
+Visual storytelling requires generating multi-shot videos with cinematic quality and long-range consistency. Inspired by human memory, we proposeStoryMem, a paradigm that reformulates long-form video storytelling as iterative shot synthesis conditioned on explicit visual memory, transforming pre-trained single-shot video diffusion models into multi-shot storytellers. This is achieved by a novelMemory-to-Video (M2V)design, which maintains a compact and dynamically updated memory bank of keyframes from historical generated shots. The stored memory is then injected into single-shot video diffusion models via latent concatenation and negative RoPE shifts with only LoRA fine-tuning. A semantic keyframe selection strategy, together with aesthetic preference filtering, further ensures informative and stable memory throughout generation. Moreover, the proposed framework naturally accommodates smooth shot transitions and customized story generation application. To facilitate evaluation, we introduce ST-Bench, a diverse benchmark for multi-shot video storytelling. Extensive experiments demonstrate thatStoryMemachieves superior cross-shot consistency over previous methods while preserving high aesthetic quality and prompt adherence, marking a significant step toward coherent minute-long video storytelling.
+
+---
+
+
+<a id="p129"></a>
+## P129 · StoryReasoning Dataset: Using Chain-of-Thought for Scene Understanding and Grounded Story Generation
+
+- **作者**：Daniel A. P. Oliveira; David Martins de Matos
+- **时间与版本**：本地版本：2025-08-30（arXiv:2505.10292v2）；正式发表时间如已核实，见下一项。
+- **发表平台**：arXiv:2505.10292v2（本地版本）
+- **论文与正式记录**：[arXiv本地版本 2505.10292v2](https://arxiv.org/abs/2505.10292v2)
+- **项目 · 代码 · 数据**：[数据/模型：datasets/daniel3303/StoryReasoning](https://huggingface.co/datasets/daniel3303/StoryReasoning)
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：31页；SHA-256：`ba6b37f97eb4e938f932a69fc2e4f6572cdd454f72329fffc733ac3dedb43ca1`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+为电影图像序列生成带跨帧实体链接的场景分析和故事，建立StoryReasoning并微调Qwen Storyteller，减少人物/物体指代幻觉。
+
+### 核心贡献
+
+4,178故事、52,016图像的结构化分析/grounded叙事数据，跨帧重识别和基线模型。
+
+### 实现边界
+
+输出以多图到文字故事为主，不是生成视频；创造性/幻觉主要由LLM评判，不能等同人类创意评估。
+
+### Method · 方法
+
+视觉相似性与人脸识别匹配对象，表格组织跨帧场景，CoT生成并将词语链接到实体，微调Qwen2.5VL7B。
+
+### Results · 主要结果
+
+平均每故事幻觉4.06→3.56（相对−12.3%）；创造性评分2.58→3.38/5（+31%）；描述准确评分2.69→2.76，收益较小。
+
+### Shortcomings · 局限
+
+【作者】外观相似实体如双胞胎可混淆、电影构图偏差、对话第一人称难grounding；LLM评判偏差和文本相似指标可能惩罚合理创作。
+
+### 证据定位
+
+PDF §3–5、表1–2 p.8、§6。
+
+### Abstract
+
+Visual storytelling systems struggle to maintain character identity across frames and link actions to appropriate subjects, frequently leading to referential hallucinations. These issues can be addressed through grounding of characters, objects, and other entities on the visual elements. We propose StoryReasoning, a dataset containing 4,178 stories derived from 52,016 movie images, with both structured scene analyses and grounded stories. Each story maintains character and object consistency across frames while explicitly modeling multi-frame relationships through structured tabular representations. Our approach features cross-frame object re-identification using visual similarity and face recognition, chain-of-thought reasoning for explicit narrative modeling, and a grounding scheme that links textual elements to visual entities across multiple frames. We establish baseline performance by fine-tuning Qwen2.5-VL 7B, creating Qwen Storyteller, which performs end-to-end object detection, re-identification, and landmark detection while maintaining consistent object references throughout the story. Evaluation demonstrates a reduction from 4.06 to 3.56 (-12.3%) hallucinations on average per story and an improvement in creativity from 2.58 to 3.38 (+31.0%) when compared to a non-fine-tuned model.
+
+---
+
+
+<a id="p130"></a>
+## P130 · CounterVid: Counterfactual Video Generation for Mitigating Action and Temporal Hallucinations in Video-Language Models
+
+- **作者**：Tobia Poppi; Burak Uzkent; Amanmeet Garg; Lucas Porto; Garin Kessler; Yezhou Yang; Marcella Cornia; Lorenzo Baraldi; Rita Cucchiara; Florian Schiffers
+- **时间与版本**：本地版本：2026-01-08（arXiv:2601.04778v1）；正式发表时间如已核实，见下一项。
+- **发表平台**：arXiv:2601.04778v1（本地版本）；代码/模型在稿中为待公开承诺
+- **论文与正式记录**：[arXiv本地版本 2601.04778v1](https://arxiv.org/abs/2601.04778v1)
+- **项目 · 代码 · 数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+- **主题**：世界机制与演化、AI方法与评测
+- **PDF版本**：16页；SHA-256：`473d1665bbd2a82bfbf319b6598336ea9023c21145d6fc9bf9d750622bb9b610`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+生成保留场景但改变短时动作/顺序的反事实视频硬负例，以文字和视觉偏好联合DPO减少视频VLM动作与时间幻觉。
+
+### 核心贡献
+
+约26K偏好对CounterVid与MixDPO，面向语言先验导致的时间/动作错误。
+
+### 实现边界
+
+反事实主要是&lt;2秒动作的语义替换，不是严格结构因果模型干预；生成数据质量不完美，评估中只有68%标为good。
+
+### Method · 方法
+
+多模态LLM提出替代动作/编辑指导，图像与视频扩散合成负例，过滤并构造文字/视觉偏好，冻结视觉编码器进行参数高效优化。
+
+### Results · 主要结果
+
+留出集Qwen2.5VL7B平均57.8→66.2%；顺序列表16.5→43.8%；3B平均36.9→45.2%。样本审核7%视觉质量差，部分任务有约17%歧义。
+
+### Shortcomings · 局限
+
+【作者】过滤和生成质量、短动作限制、冻结视觉编码器；【解读】合成负例收益需关注跨真实域迁移而非只看内部留出集。
+
+### 证据定位
+
+PDF §3–4、表1–2 p.6、Limitations p.9。
+
+### Abstract
+
+Video-language models (VLMs) achieve strong multimodal understanding but remain prone to hallucinations, especially when reasoning about actions and temporal order. Existing mitigation strategies, such as textual filtering or random video perturbations, often fail to address the root cause: over-reliance on language priors rather than fine-grained visual dynamics. We propose a scalable framework forcounterfactual video generationthat synthesizes videos differing only in actions or temporal structure while preserving scene context. Our pipeline combines multimodal LLMs for action proposal and editing guidance with diffusion-based image and video models to generate semantic hard negatives at scale. Using this framework, we build CounterVid, a synthetic dataset of ∼26k preference pairs targeting action recognition and temporal reasoning. We further introduce MixDPO, a unified Direct Preference Optimization approach that jointly leverages textual and visual preferences. Finetuning Qwen2.5-VL with MixDPO yields consistent improvements, notably in temporal ordering, and transfers effectively to standard video hallucination benchmarks. Code and models will be made publicly available.
+
+---
+
+
+<a id="p131"></a>
+## P131 · Controllable Video Generation: A Survey
+
+- **作者**：Yue Ma; Kunyu Feng; Zhongyuan Hu; Xinyu Wang; Yucheng Wang; Mingzhe Zheng; Bingyuan Wang; Qinghe Wang; Xuanhua He; Hongfa Wang; Chenyang Zhu; Hongyu Liu; Yingqing He; Zeyu Wang; Zhifeng Li; Xiu Li; Sirui Han; Yike Guo; Wei Liu; Dan Xu; Linfeng Zhang; Qifeng Chen
+- **时间与版本**：本地版本：2026-01-19（arXiv:2507.16869v3）；正式发表时间如已核实，见下一项。
+- **发表平台**：arXiv:2507.16869v3（本地版本）；检索方法主要覆盖2020–2025，文件名26不等于内容只属2026
+- **论文与正式记录**：[arXiv本地版本 2507.16869v3](https://arxiv.org/abs/2507.16869v3)
+- **项目 · 代码 · 数据**：[代码：mayuelala/Awesome-Controllable-Video-Generation](https://github.com/mayuelala/Awesome-Controllable-Video-Generation)
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：41页；SHA-256：`a14847ae33974419f181f58ca0c4df227f2c1fdafdeb7b9910470cd15a236f86`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+系统梳理文本之外的姿态、深度、轨迹、相机、音频、身份等视频生成控制，比较单条件、多条件和通用控制机制。
+
+### 核心贡献
+
+控制信号/注入方式分类、基础视频模型及文献资源汇集。
+
+### 实现边界
+
+综述，列出的生成分辨率、速度和代码状态属于原文时点/原实验配置；不是同硬件复现实验排行榜。
+
+### Method · 方法
+
+PRISMA式四阶段筛选，按基础模型、条件类型、去噪注入方式和应用分析研究。
+
+### Results · 主要结果
+
+形成控制分类与模型对照，指出多条件协调、精确局部控制、时序一致、通用接口和评估标准的挑战；无新模型统一提升数值。
+
+### Shortcomings · 局限
+
+【解读】快速更新导致覆盖时点有限，各论文预算/数据/控制难度不同，列表不可直接作为质量排名。
+
+### 证据定位
+
+PDF §3检索流程、§4–7、§8 p.26。
+
+### Abstract
+
+With the rapid development of AI-generated content (AIGC), video generation has emerged as one of its most dynamic and impactful subfields. In particular, the advancement of video generation foundation models has led to growing demand for controllable video generation methods that can more accurately reflect user intent. Most existing foundation models are designed for text-to-video generation, where text prompts alone are often insufficient to express complex, multi-modal, and fine-grained user requirements. This limitation makes it challenging for users to generate videos with precise control using current models. To address this issue, recent research has explored the integration of additional non-textual conditions—such as camera motion, depth maps, and human pose—to extend pretrained video generation models and enable more controllable video synthesis. These approaches aim to enhance the flexibility and practical applicability of AIGC-driven video generation systems. In this survey, we provide a systematic review of controllable video generation, covering both theoretical foundations and recent advances in the field. We begin by introducing the key concepts and commonly used open-source video generation models. We then focus on control mechanisms in video diffusion models, analyzing how different types of conditions can be incorporated into the denoising process to guide generation. Finally, we categorize existing methods based on the types of control signals they leverage, including single-condition generation, multi-condition generation, and universal controllable generation. For a complete list of the literature on controllable video generation reviewed, please visit our curated repository at https://github.com/mayuelala/Awesome-Controllable-Video-Generation.
+
+---
+
+
+<a id="p132"></a>
+## P132 · Pre-trained Video Generative Models as World Simulators
+
+- **作者**：Haoran He; Yang Zhang; Liang Lin; Zhongwen Xu; Ling Pan
+- **时间与版本**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台**：ICLR 2025（PDF首页）；文件名77无可靠年份含义
+- **项目 · 代码 · 数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+- **主题**：世界机制与演化
+- **PDF版本**：17页；SHA-256：`dce93f666b6f970e5163c61fe1c0ead37843cbe44eaebd66be8bedc4d76dee43`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+DWS在预训练视频生成器上添加动作条件模块和运动强化损失，获得可按动作轨迹生成的动态模型，再通过优先想象改进模型式RL。
+
+### 核心贡献
+
+适配扩散/自回归骨干的动作接口、动态转移训练与prioritized imagination。
+
+### 实现边界
+
+需要任务动作数据和微调；“任何模型通用”仅在所测架构证实，主要游戏/机器人域，非现实通用仿真。
+
+### Method · 方法
+
+轻量动作模块对齐动作与视觉变化，以运动损失强化动态；按价值选想象轨迹供PPO/离线策略训练。
+
+### Results · 主要结果
+
+Procgen/Atari展示较PPO及部分模型式RL的样本效率收益；Breakout报告约7倍分数提升，限定具体预算/基线；另用合成经验增强离线策略。
+
+### Shortcomings · 局限
+
+【解读】模型动态误差、动作覆盖和想象优先级可造成偏差；Procgen策略训练中世界模型仍需继续微调，不能当作一次预训练后通吃。
+
+### 证据定位
+
+PDF §3–5、§5.2图6–7、§5.3。
+
+### Abstract
+
+Video generative models pre-trained on large-scale internet datasets have achieved remarkable success, excelling at producing realistic synthetic videos. However, they often generate clips based on static prompts (e.g., text or images), limiting their ability to model interactive and dynamic scenarios. In this paper, we propose Dynamic World Simulation (DWS), a novel approach to transform pre-trained video generative models into controllable world simulators capable of executing specified action trajectories. To achieve precise alignment between conditioned actions and generated visual changes, we introduce a lightweight, universal actionconditioned module that seamlessly integrates into any existing model. Instead of focusing on complex visual details, we demonstrate that consistent dynamic transition modeling is the key to building powerful world simulators. Building upon this insight, we further introduce a motion-reinforced loss that enhances action controllability by compelling the model to capture dynamic changes more effectively. Experiments demonstrate that DWS can be versatilely applied to both diffusion and autoregressive transformer models, achieving significant improvements in generating action-controllable, dynamically consistent videos across games and robotics domains. Moreover, to facilitate the applications of the learned world simulator in downstream tasks such as model-based reinforcement learning, we propose prioritized imagination to improve sample efficiency, demonstrating competitive performance compared with state-of-the-art methods.
+
+---
+
+
+<a id="p133"></a>
+## P133 · OneStory: Coherent Multi-Shot Video Generation with Adaptive Memory
+
+- **作者**：Zhaochong An; Menglin Jia; Haonan Qiu; Zijian Zhou; Xiaoke Huang; Zhiheng Liu; Weiming Ren; Kumara Kahatapitiya; Ding Liu; Sen He; Chenyang Zhang; Tao Xiang; Fanny Yang; Serge Belongie; Tian Xie
+- **时间与版本**：本地版本：2025-12-08（arXiv:2512.07802v1）；正式发表时间如已核实，见下一项。
+- **发表平台**：arXiv:2512.07802v1（本地版本）
+- **论文与正式记录**：[arXiv本地版本 2512.07802v1](https://arxiv.org/abs/2512.07802v1)
+- **项目 · 代码 · 数据**：[项目/演示页面](https://zhaochongan.github.io/projects/OneStory)
+- **主题**：创作与规则补全、世界机制与演化、XR与人机协作
+- **PDF版本**：17页；SHA-256：`31338f0d7ecd2fa06661eb61cdcf6e0c6af71ad9266062b66478796afd0ce453`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+OneStory把多镜头生成视为下一镜头预测，从全局历史挑选相关帧并自适应压缩为紧凑条件，保持角色/环境一致。
+
+### 核心贡献
+
+Frame Selection、Adaptive Conditioner、带指代字幕的多镜头数据及shot inflation/解耦条件训练。
+
+### 实现边界
+
+历史经选择压缩，不能保留所有事件状态；依赖预训练I2V模型和相应训练，并非无需训练的记忆外挂。
+
+### Method · 方法
+
+按当前镜头字幕检索历史信息帧，重要性引导patchification压缩上下文，直接条件注入下一镜头视频生成器。
+
+### Results · 主要结果
+
+表2无AC/FS时角色/环境一致0.5153/0.5112，完整0.5874/0.5752；语义对齐0.1814→0.2389。增加至3帧等价上下文后角色/环境0.5926/0.5863，说明预算仍有影响。
+
+### Shortcomings · 局限
+
+【解读】历史选择失误、对象混淆和累积漂移仍可能发生；指标主要衡量视觉/语义一致，不能保证复杂故事事件因果完整。
+
+### 证据定位
+
+PDF §3–5、表2 p.8、§6。
+
+### Abstract
+
+Storytelling in real-world videos often unfolds through multiple shots—discontinuous yet semantically connected clips that together convey a coherent narrative. However, existing multi-shot video generation (MSV) methods struggle to effectively model long-range cross-shot context, as they rely on limited temporal windows or single keyframe conditioning, leading to degraded performance under complex narratives. In this work, we propose OneStory, enabling global yet compact cross-shot context modeling for consistent and scalable narrative generation. OneStory reformulates MSV as a next-shot generation task, enabling autoregressive shot synthesis while leveraging pretrained image-to-video (I2V) models for strong visual conditioning. We introduce two key modules: a Frame Selection module that constructs a semantically-relevant global memory based on informative frames from prior shots, and an Adaptive Conditioner that performs importance-guided patchification to generate compact context for direct conditioning. We further curate a high-quality multi-shot dataset with referential captions to mirror real-world storytelling patterns, and design effective training strategies under the next-shot paradigm. Finetuned from a pretrained I2V model on our curated 60K dataset, OneStory achieves state-of-the-art narrative coherence across diverse and complex scenes in both text- and image-conditioned settings, enabling controllable and immersive long-form video storytelling.
+
+---
+
+
+<a id="p135"></a>
+## P135 · WorldMem: Long-term Consistent World Simulation with Memory
+
+- **作者**：Zeqi Xiao; Yushi Lan; Yifan Zhou; Wenqi Ouyang; Shuai Yang; Yanhong Zeng; Xingang Pan
+- **时间与版本**：2025-04-16首发预印本；2025年NeurIPS发表；本地版本日期未明示
+- **发表平台**：NeurIPS 2025 Main Conference Track（官方论文集核验）；arXiv:2504.12369首发2025-04-16；本地文件未明确具体版本日。 [NeurIPS官方论文集](https://papers.neurips.cc/paper_files/paper/2025/hash/470629a47e2d65ce0606c40055df5d26-Abstract-Conference.html)；[arXiv记录](https://arxiv.org/abs/2504.12369)
+- **论文与正式记录**：[arXiv论文记录](https://arxiv.org/abs/2504.12369)
+- **项目 · 代码 · 数据**：[项目/演示页面](https://xizaoqu.github.io/worldmem/)
+- **主题**：创作与规则补全、世界机制与演化、XR与人机协作
+- **PDF版本**：14页；SHA-256：`f1c77acf725e4d4c657bb11fa04abd75c418854abb04e6d8a7b2477c6c0ead78`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+以过去帧、位姿和时间戳组成记忆库，通过状态相关的memory attention重建之前去过的地方并表达世界随时间演化。
+
+### 核心贡献
+
+显式状态帧记忆与检索式世界生成，扩展有限上下文的视频模拟。
+
+### 实现边界
+
+Minecraft主要实验使用模拟器提供的真值位姿；现实只给动作时位姿需预测，误差条件不同；记忆增强并不证明完整3D世界模型。
+
+### Method · 方法
+
+为帧存姿态/时间，按当前目标状态检索并注意历史视图；扩散模型结合当前上下文与记忆生成。
+
+### Results · 主要结果
+
+超上下文Minecraft PSNR25.32对DiffusionForcing18.04，LPIPS0.1429对0.4376；RealEstate10K回访PSNR20.19对DFoT8.396。主要是回到已见视角的重建任务。
+
+### Shortcomings · 局限
+
+【解读】真值位姿和已访问参考带来条件优势，未知位姿、动态遮挡和记忆容量扩张仍有风险；回访重建好不等于开放新场景因果预测准确。
+
+### 证据定位
+
+PDF §3–4、§4.1 pp.6–7、表1–2。
+
+### Abstract
+
+World simulation has gained increasing popularity due to its ability to model virtual environments and predict the consequences of actions. However, the limited temporal context window often leads to failures in maintaining longterm consistency, particularly in preserving 3D spatial consistency. In this work, we present WorldMem, a framework that enhances scene generation with a memory bank consisting of memory units that store memory frames and states (e.g., poses and timestamps). By employing a memory attention mechanism that effectively extracts relevant information from these memory frames based on their states, our method is capable of accurately reconstructing previously observed scenes, even under significant viewpoint or temporal gaps. Furthermore, by incorporating timestamps into the states, our framework not only models a static world but also captures its dynamic evolution over time, enabling both perception and interaction within the simulated world. Extensive experiments in both virtual and real scenarios validate the effectiveness of our approach.
+
+---
+
+
+<a id="p136"></a>
+## P136 · StoryBench: A Multifaceted Benchmark for Continuous Story Visualization
+
+- **作者**：Emanuele Bugliarello; Hernan Moraldo; Ruben Villegas; Mohammad Babaeizadeh; Mohammad Taghi Saffar; Han Zhang; Dumitru Erhan; Vittorio Ferrari; Pieter-Jan Kindermans; Paul Voigtlaender
+- **时间与版本**：2023年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台**：NeurIPS 2023 Datasets and Benchmarks Track（PDF首页）
+- **项目 · 代码 · 数据**：[代码：google/storybench](https://github.com/google/storybench)
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：31页；SHA-256：`1d7fde670c781d256bb4a41b4ad1375c75af97ae3941b4fa447725078a20c2f5`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+在三个既有视频数据集上增加带时间戳的多句故事标注，评估动作执行、故事续写和纯文本故事视频生成。
+
+### 核心贡献
+
+Oops/UVO/DiDeMo的连续故事基准、不同训练设置及视频人评指南。
+
+### 实现边界
+
+多数为较短、单镜头用户视频，不能代表长电影多镜头；虽为“continuous story”不意味着无限时长评测。
+
+### Method · 方法
+
+人工标注时间段/动作及诊断标签；用小型Phenaki基线进行零样本、单任务、多任务微调；比较自动指标与人类评价。
+
+### Results · 主要结果
+
+续写专门微调改善动作与上下文一致；Oops动作执行FVD：GEN-ZS416、CONT-ST350；但自动分数与人评存在偏离，作者强调仍需人工核查。
+
+### Shortcomings · 局限
+
+【作者】视频不长、以单镜头非专业内容为主、自动指标不足；【解读】少数小基线不能穷尽所有生成模型能力。
+
+### 证据定位
+
+PDF §3–6、表4–7、§7–8。
+
+### Abstract
+
+Generating video stories from text prompts is a complex task. In addition to having high visual quality, videos need to realistically adhere to a sequence of text prompts whilst being consistent throughout the frames. Creating a benchmark for video generation requires data annotated over time, which contrasts with the single caption used often in video datasets. To fill this gap, we collect comprehensive human annotations on three existing datasets, and introduce StoryBench: a new, challenging multi-task benchmark to reliably evaluate forthcoming text-to-video models. Our benchmark includes three video generation tasks of increasing difficulty: action execution, where the next action must be generated starting from a conditioning video; story continuation, where a sequence of actions must be executed starting from a conditioning video; and story generation, where a video must be generated from only text prompts. We evaluate small yet strong text-to-video baselines, and show the benefits of training on story-like data algorithmically generated from existing video captions. Finally, we establish guidelines for human evaluation of video stories, and reaffirm the need of better automatic metrics for video generation. StoryBench aims at encouraging future research efforts in this exciting new area.
+
+---
+
+<a id="p102"></a>
+<a id="p137"></a>
+## P137 · Long-Context State-Space Video World Models
+
+- **作者**：Ryan Po; Yotam Nitzan; Richard Zhang; Berlin Chen; Tri Dao; Eli Shechtman; Gordon Wetzstein; Xun Huang
+- **时间与版本**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台**：ICCV 2025，正文页码8733起（PDF论文版）
+- **项目 · 代码 · 数据**：本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。
+- **版本关系**：同一论文只保留本地ICCV 2025正式论文版本。P102为2025-05-26 arXiv v1，已归档；该预印本的附录与提取全文仍在本地归档保留。旧条目链接跳转到本条。
+- **主题**：创作与规则补全、世界机制与演化、XR与人机协作
+- **PDF版本**：12页；SHA-256：`fe20255bf4824c5ed9d408c9963ac7efce53b1f043971ba20e541fd658969a2c`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+以块级SSM扫描存储较长视频历史，结合局部注意力维持局部连贯，降低动作条件世界模型长上下文计算。
+
+### 核心贡献
+
+因果视频SSM架构、训练策略及长时空间记忆测试。
+
+### 实现边界
+
+每帧推理成本不随历史增长，但作者明确尚不支持交互帧率，无法有效超训练长度记忆；仅低分辨率合成环境。
+
+### Method · 方法
+
+Mamba状态压缩长历史，block-wise扫描与frame-local attention结合，逐帧扩散生成。
+
+### Results · 主要结果
+
+576历史帧/224预测帧任务PSNR28.2、LPIPS0.099、SSIM0.855；接近全历史Transformer28.8/0.089/0.860并优于较低复杂度比较方法。
+
+### Shortcomings · 局限
+
+【作者】速度、长度外推和高分辨率真实视频扩展待解决；【解读】压缩状态对长期精细记忆仍有容量约束。
+
+### 证据定位
+
+PDF §4–5、表3 p.6、§6 p.8。
+
+### Abstract
+
+Video diffusion models have recently shown promise for world modeling through autoregressive frame prediction conditioned on actions. However , they struggle to maintain long-term memory due to the high computational cost associated with processing extended sequences in attention layers. To overcome this limitation, we propose a novel architecture leveraging state-space models (SSMs) to extend temporal memory without compromising computational efficiency. Unlike previous approaches that retrofit SSMs for non-causal vision tasks, our method fully exploits the inherent advantages of SSMs in causal sequence modeling. Central to our design is a block-wise SSM scanning scheme, which strategically trades off spatial consistency for extended temporal memory, combined with dense local attention to ensure coherence between consecutive frames. We evaluate the long-term memory capabilities of our model through spatial retrieval and reasoning tasks over extended horizons. Experiments on Memory Maze and Minecraft datasets demonstrate that our approach surpasses baselines in preserving long-range memory, while maintaining practical inference speeds suitable for interactive applications.
+
+---
+
+
+<a id="p138"></a>
+## P138 · StoryGAN: A Sequential Conditional GAN for Story Visualization
+
+- **作者**：Yitong Li, Zhe Gan, Yelong Shen, Jingjing Liu, Yu Cheng, Yuexin Wu, Lawrence Carin, David Carlson, Jianfeng Gao
+- **时间与版本**：2019年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台**：CVPR 2019（论文版）
+- **项目 · 代码 · 数据**：[代码：yitong91/StoryGAN](https://github.com/yitong91/StoryGAN)
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：10页；SHA-256：`f81df8beff3dd5f58ca33af45475b7e70b19fff4e47d9c08a4b3016e5e2f32bc`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+每句话生成一张图，把故事可视化为有角色和场景一致性的图片序列。
+
+### 核心贡献
+
+StoryGAN顺序条件GAN、动态Context Encoder/Text2Gist、图像级与故事级判别器，以及CLEVR-SV/Pororo-SV数据。
+
+### 实现边界
+
+是句子到图片序列，不是连续视频生成；重点为全局一致而非帧间运动平滑；主要合成/动画小域。
+
+### Method · 方法
+
+故事编码初始化状态，Text2Gist融合当前句与历史，逐图生成；两级对抗损失约束单图和全序列。
+
+### Results · 主要结果
+
+CLEVR-SV SSIM0.672，ImageGAN0.596、SVC0.641、SVFN0.654；用户排序平均名次1.94优于ImageGAN2.91（越低越好）。
+
+### Shortcomings · 局限
+
+【解读】低分辨率、数据域窄，角色细节和长故事能力有限；SSIM仅在该合成布局约束下具可比性，非通用故事质量指标。
+
+### 证据定位
+
+PDF §3–4、表1 p.6、表3–4 p.8。
+
+### Abstract
+
+In this work, we propose a new task called Story Visualization. Given a multi-sentence paragraph, the story is visualized by generating a sequence of images, one for each sentence. In contrast to video generation, story visualization focuses less on the continuity in generated images (frames), but more on the global consistency across dynamic scenes and characters – a challenge that has not been addressed by any single-image or video generation methods. Therefore, we propose a new story-to-image-sequence generation model, StoryGAN, based on the sequential conditional GAN framework. Our model is unique in that it consists of a deep Context Encoder that dynamically tracks the story flow, and two discriminators at the story and image levels, to enhance the image quality and the consistency of the generated sequences. To evaluate the model, we modified existing datasets to create the CLEVR-SV and Pororo- SV datasets. Empirically, StoryGAN outperformed stateof-the-art models in image quality, contextual consistency metrics, and human evaluation.
+
+---
+
+
+<a id="p139"></a>
+## P139 · Is Your World Simulator a Good Story Presenter? A Consecutive Events-Based Benchmark for Future Long Video Generation
+
+- **作者**：Yiping Wang; Xuehai He; Kuan Wang; Luyao Ma; Jianwei Yang; Shuohang Wang; Simon Shaolei Du; Yelong Shen
+- **时间与版本**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台**：CVPR 2025（论文版）
+- **项目 · 代码 · 数据**：[项目/演示页面](https://ypwang61.github.io/project/StoryEval)
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：10页；SHA-256：`cba490f9ce2d4f8ebd0372826b3fcca803dbd37770ce22a2f3df199f55bac24b`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+用2–4个连续事件的短故事提示测量视频模型是否完成所要求事件，补充审美与时空一致性等细节指标。
+
+### 核心贡献
+
+StoryEval423提示、7类场景，逐事件自动核验与一致投票。
+
+### 实现边界
+
+completion rate是已完成事件比例，不是全故事全对比例；视频时长有限，不能直接代表分钟级长叙事表现。
+
+### Method · 方法
+
+检索真实视频/人工构思提示，VLM如GPT4o和LLaVAOV72B核验每一事件并投票，与人工评价检查一致性。
+
+### Results · 主要结果
+
+11模型无一平均事件完成率超过50%，hard类无一超过20%；Kling1.5总体40.1%，Pika1.5为19.4%；高传统时间一致性分数仍可伴随低事件完成。
+
+### Shortcomings · 局限
+
+【解读】VLM评分存在误判，一致投票也可能共同偏差；可生成时长/动作复杂度、提示类别和模型版本影响排名。
+
+### 证据定位
+
+PDF §2–3、表1–2、§3.1 pp.7–8。
+
+### Abstract
+
+The current state-of-the-art video generative models can produce commercial-grade videos with highly realistic details. However, they still struggle to coherently present multiple sequential events in the stories specified by the prompts, which is foreseeable an essential capability for future long video generation scenarios. For example, top T2V generative models still fail to generate a video of the short simple story ”how to put an elephant into a refrigerator. ” While existing detail-oriented benchmarks primarily focus on fine-grained metrics like aesthetic quality and spatial-temporal consistency, they fall short of evaluating models’ abilities to handle event-level story presentation. To address this gap, we introduce StoryEval, a story-oriented benchmark specifically designed to assess text-to-video (T2V) models’ story-completion capabilities. StoryEval features 423 prompts spanning 7 classes, each representing short stories composed of 2–4 consecutive events. We employ Vision-Language Models, such as GPT-4o and LLaVA-OV-Chat-72B, to verify the completion of each event in the generated videos, applying a unanimous voting method to enhance reliability. Our methods ensure high alignment with human evaluations, and the evaluation of 11 models reveals its challenge, with none exceeding an average story-completion rate of 50%. StoryEval provides a new benchmark for advancing T2V models and highlights the challenges and opportunities in developing next-generation solutions for coherent storydriven video generation. Project website is available at https://ypwang61.github.io/project/StoryEval.
+
+---
+
+
+<a id="p140"></a>
+## P140 · VideoAuteur: Towards Long Narrative Video Generation
+
+- **作者**：Junfei Xiao; Feng Cheng; Lu Qi; Liangke Gui; Yang Zhao; Shanchuan Lin; Jiepeng Cen; Zhibei Ma; Alan Yuille; Lu Jiang
+- **时间与版本**：2025年；具体日期、卷期及稿件状态见下一项。本地独立修订日期未明确。
+- **发表平台**：ICCV 2025（论文版）
+- **项目 · 代码 · 数据**：[项目/演示页面](https://videoauteur.github.io)
+- **主题**：创作与规则补全、世界机制与演化
+- **PDF版本**：11页；SHA-256：`e4087daed3ec8e414c07c7654a84cad474d99d436bbe67eaa7f5e1ae5f857671`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+面向烹饪长叙事视频构建数据和分层生成流程，交错语言/视觉导演规划步骤，滚动关键帧渲染再生成视频。
+
+### 核心贡献
+
+烹饪数据整理、Long Narrative Video Director、滚动历史条件渲染及视觉embedding对齐。
+
+### 实现边界
+
+实证集中烹饪域；自动VLM检查和人评不保证食谱正确/操作安全；不是任意电影场景通用导演。
+
+### Method · 方法
+
+导演交替生成语言状态与视觉embedding，以滚动参考图条件DiT渲染关键帧，正则化视觉embedding驱动视频模型。
+
+### Results · 主要结果
+
+表3 YouCook2 CLIP-T25.9→26.4、FVD557.7→512.6；HowTo100M26.6→27.3、541.1→520.7；去掉embedding正则反而更差，说明对齐是必要因素。
+
+### Shortcomings · 局限
+
+【解读】域特定数据、阶段间误差累积、角色/步骤的长程一致仍受基础生成器限制，需更广题材和事件完成验证。
+
+### 证据定位
+
+PDF §3–5、表3 pp.6–7、§6。
+
+### Abstract
+
+Recent video generation models have shown promising results in producing high-quality video clips lasting several seconds. However, these models face challenges in generating long sequences that convey clear and informative events, limiting their ability to support coherent narrations. In this paper, we present a large-scale cooking video dataset designed to advance long-form narrative generation in the cooking domain. We validate the quality of our proposed dataset in terms of visual fidelity and textual caption accuracy using state-of-the-art Vision-Language Models (VLMs) and video generation models, respectively. We further introduce a Long Narrative Video Director to enhance both visual and semantic coherence in generated videos and emphasize the role of aligning visual embeddings to achieve improved overall video quality. Our method demonstrates substantial improvements in generating visually detailed and semantically aligned keyframes, supported by finetuning techniques that integrate text and image embeddings within the video generation process.
+
+---
+
+
+<a id="p141"></a>
+## P141 · Watch-And-Help: A Challenge for Social Perception and Human-AI Collaboration
+
+- **作者**：Xavier Puig; Tianmin Shu; Shuang Li; Zilin Wang; Yuan-Hong Liao; Joshua B. Tenenbaum; Sanja Fidler; Antonio Torralba
+- **时间与版本**：初稿2020；本地arXiv:2010.09890v2，2021-05-03。
+- **发表平台**：ICLR 2021；本地PDF首页明确标注正式会议。
+- **论文与正式记录**：[论文/发表记录 1](https://arxiv.org/abs/2010.09890v2)
+- **项目 · 代码 · 数据**：[Watch-And-Help代码](https://github.com/xavierpuigf/watch_and_help) · [VirtualHome模拟器代码](https://github.com/xavierpuigf/virtualhome)；原项目页在2026-09-16核验时存在证书域名不匹配，网页入口改用维护者代码仓库。
+- **主题**：XR与人机协作
+- **PDF版本**：23页；SHA-256：`35fd46183bb785e6f8eb0303083ca59036322f09fc4b20bea243bfc52d84486f`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+提出先观察、后协助的两阶段家庭任务：助手从另一智能体的一次示范中推断目标，再在不同房间配置中协助完成同一目标。VirtualHome-Social支持多智能体互动，并以规划、学习基线和真人实验评估社会感知与协作效率。
+
+### 核心贡献
+
+将目标推断与跨场景协作联合纳入可复现基准；提供多智能体家庭仿真、任务划分、成功率/加速比指标，并检验仿真人类与真实参与者配合时的结论是否一致。
+
+### 实现边界
+
+Watch阶段学习目标，Help阶段执行；本文基线使用视野内物体的真值符号状态，并非端到端像素感知。目标以预设谓词组合表示，低层动作受模拟器限制；未实现在线澄清对话、XR头显取证或持续更新目标推断。
+
+### Method · 方法
+
+Transformer编码示范中的物体状态，再经LSTM与时间聚合预测目标谓词；对比层次规划HP、层次RL及学习高层策略与规划低层动作的Hybrid。规划器考虑Alice的未来计划，降低重复劳动与动作冲突。训练1,011个任务；两个测试集各100个任务，保留未见公寓及谓词组合，单轮最多250步。
+
+### Results · 主要结果
+
+Test-1目标识别precision/recall为0.85/0.96；仅看最终观察为0.79/0.75；输入Alice动作则为0.99/0.99，说明结果明显依赖输入条件。Test-2组合任务降至0.68/0.64。HP和Hybrid能提供帮助，随机目标HP在40%的回合产生目标冲突。真人单人实验6人，协作实验12人、90次试验：三种助手的总体排序与仿真评估一致。
+
+### Shortcomings · 局限
+
+作者指出在线目标推断和智能体通信仍是后续方向；错误目标可能使强规划器帮倒忙。研究判断：符号真值感知、较小真人样本和有限家庭谓词空间限制向真实XR迁移，成功率不能直接代表人类注意力成本或请求行动的可接受性。
+
+### 证据定位
+
+PDF pp.3–5：任务、输入条件与基线；pp.6–7：目标识别和协作结果；pp.8–9及附录D：真人实验与边界。
+
+### Abstract
+
+In this paper, we introduce Watch-And-Help (WAH), a challenge for testing social intelligence in agents. In WAH, an AI agent needs to help a human-like agent perform a complex household task efficiently. To succeed, the AI agent needs to i) understand the underlying goal of the task by watching a single demonstration of the human-like agent performing the same task (social perception), and ii) coordinate with the human-like agent to solve the task in an unseen environment as fast as possible (human-AI collaboration). For this challenge, we build VirtualHomeSocial, a multi-agent household environment, and provide a benchmark including both planning and learning based baselines. We evaluate the performance of AI agents with the human-like agent as well as with real humans using objective metrics and subjective user ratings. Experimental results demonstrate that the proposed challenge and virtual environment enable a systematic evaluation on the important aspects of machine social intelligence at scale.
+
+---
+
+
+<a id="p142"></a>
+## P142 · Alchemy: A Benchmark and Analysis Toolkit for Meta-Reinforcement Learning Agents
+
+- **作者**：Jane X. Wang; Michael King; Nicolas Porcel; Zeb Kurth-Nelson; Tina Zhu; Charlie Deck; Peter Choy; Mary Cassin; Malcolm Reynolds; Francis Song; Gavin Buttimore; David P. Reichert; Neil Rabinowitz; Loic Matthey; Demis Hassabis; Alexander Lerchner; Matthew Botvinick（Wang与King共同一作）
+- **时间与版本**：初稿2021；本地arXiv:2102.02926v3，2021-10-20。
+- **发表平台**：NeurIPS 2021 Datasets and Benchmarks Track；本地首页有会议标注。
+- **论文与正式记录**：[论文/发表记录 1](https://arxiv.org/abs/2102.02926v3)
+- **项目 · 代码 · 数据**：[资源 1](https://github.com/deepmind/dm_alchemy)
+- **主题**：世界机制与演化、AI方法与评测
+- **PDF版本**：24页；SHA-256：`af6e9cd02d6a8d10c3a76e30b09c56e39b10fc4f265338f8e3b7142a15dedf9d`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+提出具有可分析潜在因果结构的元强化学习环境Alchemy。智能体通过试用药水、改变石头属性来发现每个episode的化学规则，并利用跨trial知识提高收益；同时提供符号版本、理想观察者和行为诊断工具，定位强化学习未能学会哪些抽象规律。
+
+### 核心贡献
+
+兼顾组合任务丰富度和机制透明性，使环境机制、belief与参考策略可计算；把总体分数拆解为结构发现、信息利用和动作执行的能力诊断。
+
+### 实现边界
+
+每个episode包含10个trial；机制在episode内固定，跨episode重新采样，共167,424种预设化学配置。它研究已有真值机制的发现，不是创作者尚未定义规则的开放补全。理想观察者仅对当前trial做精确前瞻，并非对整个10-trial episode进行全局最优规划。
+
+### Method · 方法
+
+Unity第一人称3D环境与共享机制的符号环境；药水在三维属性立方体上改变石头状态，目标是提高投入坩埚的石头价值。训练IMPALA/LSTM与VMPO/Transformer-XL基线，另实现维护可能机制集合并搜索动作的理想观察者。通过额外提供真值机制或Bayesian belief、增加预测辅助损失，诊断感知与推断瓶颈。
+
+### Results · 主要结果
+
+表1在1,000个测试episode上报告均值±标准误：IMPALA 140.2±1.5，VMPO 156.2±1.6，符号VMPO 155.4±1.6，随机启发式145.7±1.5，理想观察者284.4±1.6，oracle 288.5±1.5。基线虽训练2×10^10步仍远低于参考策略；提供显式belief/机制显著改善表现，说明困难不只来自视觉控制。
+
+### Shortcomings · 局限
+
+机制族人为设计，主要强调深入诊断而非跨领域覆盖；理想观察者的搜索复杂度限制更大环境。基线使用特权信息的增强实验仅用于诊断，不算解决原任务；也未证明对自然科学开放发现或用户改写规则的泛化。
+
+### 证据定位
+
+PDF pp.4–5：任务机制、规模与表1；p.5脚注6：理想观察者的trial内边界；pp.6–10：训练、诊断和讨论。
+
+### Abstract
+
+There has been rapidly growing interest in meta-learning as a method for increasing the flexibility and sample efficiency of reinforcement learning. One problem in this area of research, however, has been a scarcity of adequate benchmark tasks. In general, the structure underlying past benchmarks has either been too simple to be inherently interesting, or too ill-defined to support principled analysis. In the present work, we introduce a new benchmark for meta-RL research, emphasizing transparency and potential for in-depth analysis as well as structural richness. Alchemy is a 3D video game, implemented in Unity, which involves a latent causal structure that is resampled procedurally from episode to episode, affording structure learning, online inference, hypothesis testing and action sequencing based on abstract domain knowledge. We evaluate a pair of powerful RL agents on Alchemy and present an in-depth analysis of one of these agents. Results clearly indicate a frank and specific failure of meta-learning, providing validation for Alchemy as a challenging benchmark for meta-RL. Concurrent with this report, we are releasing Alchemy as public resource, together with a suite of analysis tools and sample agent trajectories.
+
+---
+
+
+<a id="p143"></a>
+## P143 · Interactive Visual Reasoning under Uncertainty
+
+- **作者**：Manjie Xu; Guangyuan Jiang; Wei Liang; Chi Zhang; Yixin Zhu（Xu与Jiang共同一作）
+- **时间与版本**：初稿2022；本地arXiv:2206.09203v2，2023-10-29。文件名的22对应初稿，不是正式会议年。
+- **发表平台**：NeurIPS 2023 Datasets and Benchmarks Track；本地首页明确标注。
+- **论文与正式记录**：[论文/发表记录 1](https://arxiv.org/abs/2206.09203v2)
+- **项目 · 代码 · 数据**：[资源 1](https://sites.google.com/view/ivre)
+- **主题**：XR与人机协作、AI方法与评测
+- **PDF版本**：24页；SHA-256：`033de0d7f6d538c695e793bd8cf3786452225117d3899019655999dc8a7ea5cc`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+IVRE把Blicket检测变成主动视觉推理任务：仅凭初始场景不能知道所有物体是否会使机器激活，智能体必须提出新实验、根据结果更新belief，并在有限次数内解除不确定性。对符号、像素、LLM和人类基线的比较显示，实验选择和证据整合均构成明显瓶颈。
+
+### 核心贡献
+
+提供可干预、可反馈的视觉推理环境，联合评估假设更新与实验效率；用共享底层机制的符号/像素版本区分推理难度与感知难度。
+
+### 实现边界
+
+9个物体、其中1–4个Blicket，4个初始context面板，总时步上限T=10；机制为至少一个Blicket出现即激活的OR规则，且告知Blicket总数。行动简化为选取物体集合，不含机器人运动控制、用户代执行、空间提示或注意力中断。
+
+### Method · 方法
+
+智能体同时输出下一实验的物体选择与各物体Blicketness belief；观测为二进制向量或160×120合成图。奖励联合全体识别成功、每步成本及与搜索oracle belief的Jensen–Shannon距离。对比随机/Bayes/逐个测试/NOTEARS/搜索组合、actor-critic RL与GPT-3.5/4。
+
+### Results · 主要结果
+
+PDF表2的episode全物体识别准确率：人类98.15%，Search-Naive 83.80%，符号DDPG-Re 46.03%，GPT-4 26%，GPT-3.5 11%；像素DDPG与TD3仅0.72%/0.31%。机器基线通常评估10,000个随机episode，LLM评估100个，不能把这些值视作等样本量对照；人类为单独实验。
+
+### Shortcomings · 局限
+
+作者明确指出合成场景和简单因果结构的限制；最佳启发式依赖OR机制先验及逐个实验策略。研究判断：该基准已经覆盖主动取证，XR研究需进一步处理行动由用户执行、观察受到提示影响与任务成本，不能只把同一任务搬进头显。
+
+### 证据定位
+
+PDF pp.4–5：环境及奖励；pp.6–7：基线和人类设置；p.8表2：结果；pp.9–10：分析与明确局限。
+
+### Abstract
+
+One of the fundamental cognitive abilities of humans is to quickly resolve uncertainty by generating hypotheses and testing them via active trials. Encountering a novel phenomenon accompanied by ambiguous cause-effect relationships, humans make hypotheses against data, conduct inferences from observation, test their theory via experimentation, and correct the proposition if inconsistency arises. These iterative processes persist until the underlying mechanism becomes clear. In this work, we devise the IVRE (pronounced as ivory) environment for evaluating artificial agents’ reasoning ability under uncertainty. IVRE is an interactive environment featuring rich scenarios centered around Blicket detection. Agents in IVRE are placed into environments with various ambiguous action-effect pairs and asked to determine each object’s role. They are encouraged to propose effective and efficient experiments to validate their hypotheses based on observations and actively gather new information. The game ends when all uncertainties are resolved or the maximum number of trials is consumed. By evaluating modern artificial agents in IVRE, we notice a clear failure of today’s learning methods compared to humans. Such inefficacy in interactive reasoning ability under uncertainty calls for future research in building human-like intelligence.
+
+---
+
+
+<a id="p144"></a>
+## P144 · Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation
+
+- **作者**：Lorenz Kuhn; Yarin Gal; Sebastian Farquhar
+- **时间与版本**：本地arXiv:2302.09664v3，2023-04-15。
+- **发表平台**：ICLR 2023；本地首页明确标注。
+- **论文与正式记录**：[论文/发表记录 1](https://arxiv.org/abs/2302.09664v3)
+- **项目 · 代码 · 数据**：[资源 1](https://github.com/lorenzkuhn/semantic_uncertainty)
+- **版本关系**：与P148为前后续工作，内容不同，均保留。
+- **主题**：AI方法与评测
+- **PDF版本**：19页；SHA-256：`0cc1c0b189dbe6ccdf12deb2f11761ff183ee4813a04f7add8b28ec35375f330`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+针对同一含义可有多种语言表达的问题，将LLM输出不确定性从token序列层提升到语义层：采样多个答案，将语义等价答案聚类，再对含义的概率分布计算熵。无需重新训练被测生成模型，在自由回答QA上更有效预测答案是否可靠。
+
+### 核心贡献
+
+提出semantic entropy及基于双向蕴含的语义聚类；分析采样温度、表达长度、样本数如何影响语言不确定性估计，避免把措辞差异误当作事实分歧。
+
+### 实现边界
+
+实验以OPT 2.7B–30B、CoQA开放书QA和TriviaQA闭卷QA为主；需要多次生成、序列概率以及用于双向蕴含判断的DeBERTa模型。无监督指无需该任务的正确性标签训练不确定性估计器，不表示系统完全没有经过监督训练的组件。
+
+### Method · 方法
+
+对同一问题采样M个答案；将问题与答案一起输入NLI模型，在两个方向均为entailment时聚为同一含义；聚合簇内序列概率并估计语义熵。对照普通/长度归一化预测熵、词面相似度和p(True)，用错误检测AUROC评价。
+
+### Results · 主要结果
+
+表2中30B设置：CoQA语义熵AUROC 0.77，单纯不同含义数量为0.66；TriviaQA分别0.83/0.79。人工核对聚类等价判断准确率为CoQA 95.5%、TriviaQA 92.7%。更多样本和合适的中间温度通常有利，文中主要采样温度0.5；AUROC衡量排序辨别能力，不能当作答案正确率。
+
+### Shortcomings · 局限
+
+语义聚类会出错，最坏情况下需要O(M²)对比较；多次生成增加推理成本。作者指出不防止模型欺骗，长篇摘要等任务还需更强语义等价判断。研究判断：稳定重复的错误可能低熵；创作中多个均合规则的答案也可能高熵，不能直接等同于需要纠错。
+
+### 证据定位
+
+PDF pp.4–6：语义熵与双向蕴含；p.7：模型、数据及评价；p.8表2及p.9：结果、采样敏感性与讨论。
+
+### Abstract
+
+We introduce a method to measure uncertainty in large language models. For tasks like question answering, it is essential to know when we can trust the natural language outputs of foundation models. We show that measuring uncertainty in natural language is challenging because of ‘semantic equivalence’—different sentences can mean the same thing. To overcome these challenges we introduce semantic entropy—an entropy which incorporates linguistic invariances created by shared meanings. Our method is unsupervised, uses only a single model, and requires no modifications to ‘off-the-shelf’ language models. In comprehensive ablation studies we show that the semantic entropy is more predictive of model accuracy on question answering data sets than comparable baselines.
+
+---
+
+
+<a id="p145"></a>
+## P145 · Generative Agent-Based Modeling with Actions Grounded in Physical, Social, or Digital Space Using Concordia
+
+- **作者**：Alexander Sasha Vezhnevets; John P. Agapiou; Avia Aharon; Ron Ziv; Jayd Matyas; Edgar A. Duéñez-Guzmán; William A. Cunningham; Simon Osindero; Danny Karmon; Joel Z. Leibo
+- **时间与版本**：本地arXiv:2312.03664v2，2023-12-13；封面标注December 2023。
+- **发表平台**：Google DeepMind/Google Research技术报告、arXiv预印本；本地版本未标明正式会议或期刊。
+- **论文与正式记录**：[论文/发表记录 1](https://arxiv.org/abs/2312.03664v2)
+- **项目 · 代码 · 数据**：[资源 1](https://github.com/google-deepmind/concordia)
+- **主题**：世界机制与演化
+- **PDF版本**：32页；SHA-256：`ac0a23ef187ebef1820b8aebc19d2610035b1f234527b9f854151cb77ad966fb`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+Concordia是构建生成式多智能体模拟的框架。智能体以组件和关联记忆组织行为，由Game Master维护环境并将自然语言动作转为情境后果或结构化/API操作，从而连接社会互动、模拟物理状态和数字服务。论文讨论应用场景及验证模拟可信度的方法。
+
+### 核心贡献
+
+以可组合组件统一LLM调用、记忆检索、角色行为和Game Master环境更新；支持将自然语言社会行为接到明确的外部状态变量与数字操作，提供开放实现与建模讨论。
+
+### 实现边界
+
+自然语言GM对物理合理性的判断属于语言模型模拟；只有明确接入程序/状态变量的部分拥有相应执行语义。论文包含已实现案例与潜在应用设想，不能把法律/规范涌现、真实用户预测、所有外部应用接入都视为已验证功能。
+
+### Method · 方法
+
+每个智能体用长期关联记忆与工作记忆组件回答身份、情境、适当行动等问题；GM解析尝试动作、更新状态并向不同角色发送其可见观察。数字案例通过嵌套PhoneGameMaster和PhoneUniverse选择app、函数和参数，再更新应用状态及通知。
+
+### Results · 主要结果
+
+主要结果为框架与定性案例：展示多智能体叙事、数字手机/日历操作的调用流程，以及可接入确定性状态更新的模拟方式。本地报告未提供统一任务集上的成功率、基线消融或真实人类行为预测误差，不能据此声称社会模拟已达真实预测精度。
+
+### Shortcomings · 局限
+
+作者强调必须针对具体研究问题检验泛化和algorithmic fidelity，LLM可能呈现刻板印象；用同一模型生成并解释模拟亦不能替代外部验证。研究判断：语言层一致性不保证长期因果正确性或改规则后的局部更新，开放动作解析也可能产生累积状态错误。
+
+### 证据定位
+
+PDF pp.5–10：组件、GM及实验设计；pp.10–11：模拟验证边界；pp.16–19：数字服务实例与明确标为潜在的应用；后续章节：讨论。
+
+### Abstract
+
+Agent-based modeling has been around for decades, and applied widely across the social and natural sciences. The scope of this research method is now poised to grow dramatically as it absorbs the new affordances provided by Large Language Models (LLM)s. Generative Agent-Based Models (GABM) are not just classic Agent-Based Models (ABM)s where the agents talk to one another. Rather, GABMs are constructed using an LLM to apply common sense to situations, act “reasonably”, recall common semantic knowledge, produce API calls to control digital technologies like apps, and communicate both within the simulation and to researchers viewing it from the outside. Here we present Concordia, a library to facilitate constructing and working with GABMs. Concordia makes it easy to construct language-mediated simulations of physically- or digitally-grounded environments. Concordia agents produce their behavior using a flexible component system which mediates between two fundamental operations: LLM calls and associative memory retrieval. A special agent called the Game Master (GM), which was inspired by tabletop role-playing games, is responsible for simulating the environment where the agents interact. Agents take actions by describing what they want to do in natural language. The GM then translates their actions into appropriate implementations. In a simulated physical world, the GM checks the physical plausibility of agent actions and describes their effects. In digital environments simulating technologies such as apps and services, the GM may handle API calls to integrate with external tools such as general AI assistants (e.g., Bard, ChatGPT), and digital apps (e.g., Calendar, Email, Search, etc.). Concordia was designed to support a wide array of applications both in scientific research and for evaluating performance of real digital services by simulating users and/or generating synthetic data.
+
+---
+
+
+<a id="p146"></a>
+## P146 · ExpertAF: Expert Actionable Feedback from Video
+
+- **作者**：Kumar Ashutosh; Tushar Nagarajan; Georgios Pavlakos; Kris Kitani; Kristen Grauman
+- **时间与版本**：初稿2024；本地arXiv:2408.00672v3，2025-04-11。
+- **发表平台**：CVPR 2025；以CVF正式论文入口核实。
+- **论文与正式记录**：[论文/发表记录 1](https://openaccess.thecvf.com/content/CVPR2025/papers/Ashutosh_ExpertAF_Expert_Actionable_Feedback_from_Video_CVPR_2025_paper.pdf) · [论文/发表记录 2](https://arxiv.org/abs/2408.00672v3)
+- **项目 · 代码 · 数据**：[资源 1](https://vision.cs.utexas.edu/projects/ExpertAF/)
+- **主题**：XR与人机协作
+- **PDF版本**：18页；SHA-256：`cf0af650338c144587b2147b95007535684c74908d1499a87c87f67266954b56`
+- **核查日期**：2026-09-15
+- **全文提取**：已在本机建立逐页文本；问答优先读取提取文件。
+
+### 中文摘要
+
+从学习者执行体育动作的视频和3D姿态生成可操作的指导，包括指出优缺点的专家式文字反馈、检索正确示范，以及生成修正后的3D姿态。利用Ego-Exo4D专家评论构建弱监督错误—正确动作配对，训练统一视频、姿态与文本模型。
+
+### 核心贡献
+
+将技能评价从单一分数推进到具体纠正建议与示范；贡献弱监督配对数据和支持三类输出的多模态自回归模型。
+
+### 实现边界
+
+实际评估篮球、足球、攀岩三类身体技能；主设置输入包含ego/exo视频与3D姿态，假定一个主要动作执行者。输出视频是检索已有示范，生成的是姿态序列；新专家视频生成留作未来。没有进行长期训练者技能提升或实时XR闭环试验。
+
+### Method · 方法
+
+Llama3-70B压缩专家评论并标注身体部位/正确性；按技能等级匹配错误与正确演示，用PA-MPJPE对齐时间并过滤。InternVideo2视频特征、姿态codebook和文本映射至Llama3-8B，联合学习评论、示范检索与姿态token生成。训练25,505个tuple，人工核验测试1,272个。
+
+### Results · 主要结果
+
+表1：ExpertAF的BLEU-4/METEOR/ROUGE-L为44.9/49.6/54.6；示范检索recall@50为19.1%、median rank 158，优于LLaVA-FT w/pose的18.0%/172；姿态误差PA-MPJPE由该基线150mm降至135mm。每场景5名评价者的1–4分质量评分也优于基线。带正确示范等特权输入的full-sup行不可与主设置混用。
+
+### Shortcomings · 局限
+
+作者指出对疲劳等不可直接见到的状态较弱，自动提取姿态有噪声；配对真值只覆盖可能错误中的一部分。研究判断：质量偏好与姿态距离未证明建议能在实际交互中改善技能，也未评估提示导致的注意分配或后续观察变化。
+
+### 证据定位
+
+PDF pp.3–6：任务、配对数据、编码器及训练；p.7表1：三类输出结果及特权输入说明；p.8：人评和失败案例。
+
+### Abstract
+
+Feedback is essential for learning a new skill or improving one’s current skill-level. However, current methods for skill-assessment from video only provide scores or compare demonstrations, leaving the burden of knowing what to do differently on the user. We introduce a novel method to generate actionable feedback (AF) from video of a person doing a physical activity, such as basketball or soccer. Our method takes a video demonstration and its accompanying 3D body pose and generates (1) free-form expert commentary describing what the person is doing well and what they could improve, and (2) a visual expert demonstration that incorporates the required corrections. We show how to leverage Ego-Exo4D’s [29] videos of skilled activity and expert commentary together with a strong language model to create a weakly-supervised training dataset for this task, and we devise a multimodal video-language model to infer coaching feedback. Our method is able to reason across multi-modal input combinations to output fullspectrum, actionable coaching—expert commentary, expert video retrieval, and expert pose generation—outperforming strong vision-language models on both established metrics and human preference studies.

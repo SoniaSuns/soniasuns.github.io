@@ -12,7 +12,10 @@
     "sha256": "473d1665bbd2a82bfbf319b6598336ea9023c21145d6fc9bf9d750622bb9b610",
     "pages": 16,
     "folder": "VideoGeneration",
-    "topics": ["world", "ai"],
+    "topics": [
+      "world",
+      "ai"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "生成保留场景但改变短时动作/顺序的反事实视频硬负例，以文字和视觉偏好联合DPO减少视频VLM动作与时间幻觉。",
@@ -37,7 +40,10 @@
     "sha256": "ba6b37f97eb4e938f932a69fc2e4f6572cdd454f72329fffc733ac3dedb43ca1",
     "pages": 31,
     "folder": "VideoGeneration",
-    "topics": ["creation", "world"],
+    "topics": [
+      "creation",
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "为电影图像序列生成带跨帧实体链接的场景分析和故事，建立StoryReasoning并微调Qwen Storyteller，减少人物/物体指代幻觉。",
@@ -62,7 +68,11 @@
     "sha256": "893eb41d0811d6480248c118b3146657400c5b93dfc5ae1c4ff1a62b75d116af",
     "pages": 20,
     "folder": "VideoGeneration",
-    "topics": ["creation", "world", "xr"],
+    "topics": [
+      "creation",
+      "world",
+      "xr"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "用动态历史关键帧记忆把单镜头视频扩散改造成逐镜头长叙事生成，并通过语义/审美选择维持紧凑记忆。",
@@ -83,11 +93,14 @@
     "venue": "ICLR 2025（PDF首页）；arXiv:2407.16655v3",
     "paper_links": "[arXiv本地版本 2407.16655v3](https://arxiv.org/abs/2407.16655v3)",
     "project_links": "本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。",
-    "version": "与[P134](#p134)同一论文不同文件；本稿首页3位作者标共同一作，[P134](#p134)首页只对前2位标星，作者顺序相同。",
+    "version": "同一论文只保留本地2025-11-25 arXiv v3。P134的ICLR 2025会议文件已归档；作者顺序相同，v3首页3位共同一作，旧文件2位标星。旧条目链接跳转到本条。",
     "sha256": "19dcbd7282b7ec5eab617b7d97a0aaaa42d43b765a7c7d57a866b1f88d22f93a",
     "pages": 31,
     "folder": "VideoGeneration",
-    "topics": ["creation", "world"],
+    "topics": [
+      "creation",
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "用自回归模型规划长序列关键帧token，再以扩散渲染图像和视频，以多模态剧本和人脸身份条件维持跨场景角色一致。",
@@ -112,7 +125,9 @@
     "sha256": "18c343dc471df6180c288a6b3bc1c30e4075f42475deec95b9f059a3c5981f6e",
     "pages": 38,
     "folder": "VideoGeneration",
-    "topics": ["creation"],
+    "topics": [
+      "creation"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "从艺术需求和技术方法共同审视扩散视觉艺术创作，系统编码相关论文，建立应用、理解和生成的分析框架及人机协作展望。",
@@ -137,7 +152,10 @@
     "sha256": "6d89932cdf6a8eceef98e749d795c15861c7334d7a30d7bc4f32914e6c72bd67",
     "pages": 23,
     "folder": "VideoGeneration",
-    "topics": ["world", "ai"],
+    "topics": [
+      "world",
+      "ai"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "给定属性因果图，把干预及其应保留/改变的关系写入提示，用VLM文字反馈反复优化视频编辑以生成更符合指定因果关系的反事实。",
@@ -162,7 +180,9 @@
     "sha256": "1e2d26119085edcf56158c4a199484aba285e21059fae3de0815d87574ff80e6",
     "pages": 25,
     "folder": "VideoGeneration",
-    "topics": ["world"],
+    "topics": [
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "把视觉、动作与奖励统一为token序列，使用压缩视频tokenizer及自回归Transformer预训练，适配预测、规划与模型式RL。",
@@ -187,7 +207,9 @@
     "sha256": "94c63a5ced89355326706c88236591c2972ced12f3dece4f8982f020110c81f3",
     "pages": 27,
     "folder": "VideoGeneration",
-    "topics": ["world"],
+    "topics": [
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "从无动作标签的互联网视频学习潜动作和动态，用图像、照片或草图初始化可逐帧控制的生成式环境。",
@@ -212,7 +234,10 @@
     "sha256": "176243b1066c4db80df9b1f3de4de6fb8d6f9631fd65726c3e19015eaff5e4e2",
     "pages": 14,
     "folder": "VideoGeneration",
-    "topics": ["creation", "world"],
+    "topics": [
+      "creation",
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "通过因果视频tokenizer与文本条件掩码Transformer，从随时间改变的文字提示生成可延续的视频。",
@@ -237,7 +262,9 @@
     "sha256": "b0c1e30aab53efd28ddf61d661f680150918d4d03b77bae62bc52d62dbd76cce",
     "pages": 21,
     "folder": "VideoGeneration",
-    "topics": ["world"],
+    "topics": [
+      "world"
+    ],
     "added": false,
     "verified": "2026-09-15",
     "abstract_zh": "用生成式模型压缩视觉并预测时间动态，训练小控制器，展示在学到的梦境中学习策略后迁移回真实游戏环境。",

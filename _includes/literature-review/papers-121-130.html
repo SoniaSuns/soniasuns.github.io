@@ -275,97 +275,50 @@
     <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
   </div>
 </details>
-<details
-  class="lr-paper"
-  id="p127"
-  data-id="P127"
-  data-years="2025"
-  data-year="2025"
-  data-topics="creation world"
-  data-new="false"
-  data-title="MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequences"
->
+
+
+
+<a id="p134" href="#p127" class="lr-historical-alias" aria-label="P134已合并到P127"></a>
+<details class="lr-paper" id="p127" data-id="P127" data-years="2025" data-year="2025" data-topics="creation world" data-new="false" data-title="MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequences">
   <summary>
-    <span class="lr-paper-meta"
-      ><span>P127 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span
-    ></span>
+    <span class="lr-paper-meta"><span>P127 <span aria-hidden="true">/</span> 2025</span><span class="lr-badges"></span></span>
     <span class="lr-title">MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequences</span>
-    <span class="lr-authors">Canyu Zhao; Mingyu Liu; Wen Wang et al.</span>
+    <span class="lr-authors">Canyu Zhao; Mingyu Liu; Wen Wang; Weihua Chen; Fan Wang; Hao Chen; Bo Zhang; Chunhua Shen</span>
     <span class="lr-snippet">用自回归模型规划长序列关键帧token，再以扩散渲染图像和视频，以多模态剧本和人脸身份条件维持跨场景角色一致。</span>
-    <span class="lr-tags"
-      ><span class="lr-tag">创作与规则补全</span><span class="lr-tag">世界机制与演化</span
-      ><span class="lr-open-hint">展开笔记 <span aria-hidden="true">↗</span></span></span
-    >
+    <span class="lr-tags"><span class="lr-tag">创作与规则补全</span><span class="lr-tag">世界机制与演化</span><span class="lr-open-hint">展开笔记</span></span>
   </summary>
   <div class="lr-paper-body">
     <div class="lr-paper-tools"><a href="#p127" aria-label="P127的固定链接">#P127</a><span>31页 · 核对于 2026-09-15</span></div>
-    <dl class="lr-metadata">
-      <dt>作者</dt>
-      <dd><p>Canyu Zhao; Mingyu Liu; Wen Wang; Weihua Chen; Fan Wang; Hao Chen; Bo Zhang; Chunhua Shen</p></dd>
-      <dt>时间与版本</dt>
-      <dd><p>本地版本：2025-11-25（arXiv:2407.16655v3）；正式发表时间如已核实，见下一项。</p></dd>
-      <dt>发表平台</dt>
-      <dd><p>ICLR 2025（PDF首页）；arXiv:2407.16655v3</p></dd>
-      <dt>论文与正式记录</dt>
-      <dd>
-        <p><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2407.16655v3">arXiv本地版本 2407.16655v3</a></p>
-      </dd>
-      <dt>项目 · 代码 · 数据</dt>
-      <dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p></dd>
-      <dt>版本关系</dt>
-      <dd>
-        <p>与<a href="#p134">P134</a>同一论文不同文件；本稿首页3位作者标共同一作，<a href="#p134">P134</a>首页只对前2位标星，作者顺序相同。</p>
-      </dd>
-    </dl>
-    <section class="lr-field">
-      <h3>中文摘要</h3>
-      <p>用自回归模型规划长序列关键帧token，再以扩散渲染图像和视频，以多模态剧本和人脸身份条件维持跨场景角色一致。</p>
-    </section>
-    <section class="lr-field">
-      <h3>核心贡献</h3>
-      <p>叙事/渲染分层框架、包含角色及风格的剧本和身份保持渲染。</p>
-    </section>
-    <section class="lr-field">
-      <h3>实现边界</h3>
-      <p>“叙事一致”主要由脚本对齐和角色视觉指标代理；关键帧及短片段组装不保证每项事件真实发生或长时物理因果一致。</p>
-    </section>
-    <section class="lr-field">
-      <h3>Method · 方法</h3>
-      <p>扩散自动编码器产生紧凑关键帧token，自回归预测下一个keyframe，文本/FaceID条件解码，再生成帧间视频。</p>
-    </section>
-    <section class="lr-field">
-      <h3>Results · 主要结果</h3>
-      <p>
-        表1无参考Ours长期一致LT0.814对StoryDiffusion0.596，FID2.043对4.643；审美6.093略低于6.134，非逐项最佳；有参考Ours-ref LT0.893但使用额外条件。
-      </p>
-    </section>
-    <section class="lr-field">
-      <h3>Shortcomings · 局限</h3>
-      <p>【解读】人脸身份覆盖、长时错误累积和剧本粒度影响结果；参考/无参考条件需分开比较，电影域指标不等于人类叙事理解。</p>
-    </section>
-    <section class="lr-field">
-      <h3>证据定位</h3>
-      <p>PDF §3–4、表1–2 p.9、§5。</p>
-    </section>
-    <details class="lr-abstract">
-      <summary>Abstract · 英文原摘要</summary>
-      <div lang="en">
-        <p>
-          Recent advancements in video generation have primarily leveraged diffusion models for short-duration content. However, these approaches
-          often fall short in modeling complex narratives and maintaining character consistency over extended periods, which is essential for
-          long-form video production like movies. We propose MovieDreamer, a novel hierarchical framework that integrates the strengths of
-          autoregressive models with diffusion-based rendering to pioneer long-duration video generation with intricate plot progressions and high
-          visual fidelity. Our approach utilizes autoregressive models for global narrative coherence, predicting sequences of visual tokens that are
-          subsequently transformed into high-quality video frames through diffusion rendering. This method is akin to traditional movie production
-          processes, where complex stories are factorized down into manageable scene capturing. Further, we employ a multimodal script that enriches
-          scene descriptions with detailed character information and visual style, enhancing continuity and character identity across scenes. We
-          present extensive experiments across various movie genres, demonstrating that our approach not only achieves superior visual and narrative
-          quality but also effectively extends the duration of generated content significantly beyond current capabilities.
-        </p>
-      </div>
-    </details>
+    <dl class="lr-metadata"><dt>作者</dt><dd><p>Canyu Zhao; Mingyu Liu; Wen Wang; Weihua Chen; Fan Wang; Hao Chen; Bo Zhang; Chunhua Shen</p>
+</dd>
+<dt>时间与版本</dt><dd><p>本地版本：2025-11-25（arXiv:2407.16655v3）；正式发表时间如已核实，见下一项。</p>
+</dd>
+<dt>发表平台</dt><dd><p>ICLR 2025（PDF首页）；arXiv:2407.16655v3</p>
+</dd>
+<dt>论文与正式记录</dt><dd><p><a href="https://arxiv.org/abs/2407.16655v3">arXiv本地版本 2407.16655v3</a></p>
+</dd>
+<dt>项目 · 代码 · 数据</dt><dd><p>本地PDF未检出明确属于本文的项目链接；不代表作者没有发布资源。</p>
+</dd>
+<dt>版本关系</dt><dd><p>同一论文只保留本地2025-11-25 arXiv v3。P134的ICLR 2025会议文件已归档；作者顺序相同，v3首页3位共同一作，旧文件2位标星。旧条目链接跳转到本条。</p>
+</dd></dl>
+    <section class="lr-field"><h3>中文摘要</h3><p>用自回归模型规划长序列关键帧token，再以扩散渲染图像和视频，以多模态剧本和人脸身份条件维持跨场景角色一致。</p>
+</section>
+<section class="lr-field"><h3>核心贡献</h3><p>叙事/渲染分层框架、包含角色及风格的剧本和身份保持渲染。</p>
+</section>
+<section class="lr-field"><h3>实现边界</h3><p>“叙事一致”主要由脚本对齐和角色视觉指标代理；关键帧及短片段组装不保证每项事件真实发生或长时物理因果一致。</p>
+</section>
+<section class="lr-field"><h3>Method · 方法</h3><p>扩散自动编码器产生紧凑关键帧token，自回归预测下一个keyframe，文本/FaceID条件解码，再生成帧间视频。</p>
+</section>
+<section class="lr-field"><h3>Results · 主要结果</h3><p>表1无参考Ours长期一致LT0.814对StoryDiffusion0.596，FID2.043对4.643；审美6.093略低于6.134，非逐项最佳；有参考Ours-ref LT0.893但使用额外条件。</p>
+</section>
+<section class="lr-field"><h3>Shortcomings · 局限</h3><p>【解读】人脸身份覆盖、长时错误累积和剧本粒度影响结果；参考/无参考条件需分开比较，电影域指标不等于人类叙事理解。</p>
+</section>
+<section class="lr-field"><h3>证据定位</h3><p>PDF §3–4、表1–2 p.9、§5。</p>
+</section>
+    <details class="lr-abstract"><summary>Abstract · 英文原摘要</summary><div lang="en"><p>Recent advancements in video generation have primarily leveraged diffusion models for short-duration content. However, these approaches often fall short in modeling complex narratives and maintaining character consistency over extended periods, which is essential for long-form video production like movies. We propose MovieDreamer, a novel hierarchical framework that integrates the strengths of autoregressive models with diffusion-based rendering to pioneer long-duration video generation with intricate plot progressions and high visual fidelity. Our approach utilizes autoregressive models for global narrative coherence, predicting sequences of visual tokens that are subsequently transformed into high-quality video frames through diffusion rendering. This method is akin to traditional movie production processes, where complex stories are factorized down into manageable scene capturing. Further, we employ a multimodal script that enriches scene descriptions with detailed character information and visual style, enhancing continuity and character identity across scenes. We present extensive experiments across various movie genres, demonstrating that our approach not only achieves superior visual and narrative quality but also effectively extends the duration of generated content significantly beyond current capabilities.</p>
+</div></details>
     <p class="lr-provenance">版本指纹 <code>19dcbd7282b7ec5eab617b7d97a0aaaa42d43b765a7c7d57a866b1f88d22f93a</code></p>
-    <a class="lr-return" href="#lr-library">返回筛选与清单 ↑</a>
+    <a class="lr-return" href="#lr-library">返回筛选与清单</a>
   </div>
 </details>
 <details
