@@ -1,0 +1,34 @@
+<section id="lr-rq-atlas" class="rq-atlas" aria-labelledby="rq-heading">
+  <div class="rq-heading-row">
+    <div><p class="rq-eyebrow">RESEARCH QUESTION ATLAS</p><h2 id="rq-heading">从问题读懂文献脉络 <span>RQ · 条件变化 · 来源</span></h2></div>
+    <a class="rq-download" href="{{ '/assets/data/literature-rq.json' | relative_url }}" download>下载脉络 JSON ↗</a>
+  </div>
+  <p class="rq-intro">先选路线，再沿「核心问题 → 重要问题 → 分支 → 论文」展开。点击论文可查看它解决的部分、适用边界和引用来源。</p>
+  <div class="rq-legend" aria-label="图例"><span class="rq-legend-collected">● 已收集 PDF</span><span class="rq-legend-external">● 未收集 PDF · 滚雪球补充</span><span>实线 → 已核实引用</span><span>虚线 ⇢ 综合关联 / 并行对照</span></div>
+  <div class="rq-route-tabs" role="group" aria-label="选择研究路线">
+    <button type="button" data-rq-route="world" aria-pressed="true">01 世界机制与演化</button>
+    <button type="button" data-rq-route="xr" aria-pressed="false">02 XR 与人机协作</button>
+  </div>
+  <div id="rq-route-summary"></div>
+  <div class="rq-controls">
+    <label for="rq-search">搜索图中论文 / 问题<input id="rq-search" type="search" placeholder="例如：WorldCoder、假设、hci_du" autocomplete="off"></label>
+    <label for="rq-collection">收集状态<select id="rq-collection"><option value="all">全部论文</option><option value="collected">已收集 PDF</option><option value="external">未收集 PDF</option></select></label>
+    <label for="rq-parent">重要问题<select id="rq-parent"><option value="all">全部重要问题</option></select></label>
+    <button id="rq-reset" type="button">重置</button>
+  </div>
+  <div class="rq-view-tabs" role="group" aria-label="脉络图视图">
+    <button type="button" data-rq-view="tree" aria-pressed="true">RQ 层级图</button>
+    <button type="button" data-rq-view="lineage" aria-pressed="false">论文承接图</button>
+    <button type="button" data-rq-view="bridges" aria-pressed="false">两条路线的交汇</button>
+    <button type="button" data-rq-view="coverage" aria-pressed="false">目录覆盖与检索记录</button>
+  </div>
+  <p id="rq-status" class="rq-status" role="status" aria-live="polite"></p>
+  <div class="rq-workspace">
+    <div id="rq-visual" class="rq-visual" aria-label="文献与研究问题关系图"></div>
+    <aside id="rq-detail" class="rq-detail" aria-label="选中问题或论文详情" tabindex="-1"></aside>
+  </div>
+  <details class="rq-method"><summary>如何解读这些 RQ、箭头和覆盖数字？</summary><ol>{% for item in site.data.literature_rq.methodology %}<li>{{ item | escape }}</li>{% endfor %}</ol></details>
+  <noscript><p>交互图需要 JavaScript。以下是两条核心问题；完整分支、论文和来源也可通过上方 JSON 下载查看。</p>{% for route in site.data.literature_rq.routes %}<h3>{{ route.label | escape }}</h3><p>{{ route.question | escape }}</p>{% endfor %}</noscript>
+</section>
+<script id="lr-rq-data" type="application/json">{{ site.data.literature_rq | jsonify }}</script>
+<script defer src="{{ '/assets/js/literature-rq.js' | relative_url }}"></script>

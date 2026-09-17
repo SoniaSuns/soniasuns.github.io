@@ -7,8 +7,9 @@
       <span><strong>{{ site.data.literature_review.catalog.records }}</strong> 篇论文</span><span><strong>{{ site.data.literature_review.catalog.extracted }}</strong> 篇全文已提取至本机</span><span><strong>{{ site.data.literature_review.catalog.pages }}</strong> PDF页</span
       ><span>更新于 <strong>{{ site.data.literature_review.catalog.updated }}</strong></span>
     </div>
-    <nav class="lr-jump-nav" aria-label="文献页导航"><a href="#lr-library">浏览文献</a><a href="#lr-about">阅读说明</a></nav>
+    <nav class="lr-jump-nav" aria-label="文献页导航"><a href="#lr-rq-atlas">RQ 与文献脉络</a><a href="#lr-library">浏览文献</a><a href="#lr-about">阅读说明</a></nav>
   </div>
+  {% include literature-review/rq-map.liquid %}
   <div class="lr-mobile-tabs" role="group" aria-label="工作区视图"><button type="button" data-lr-view="library" aria-pressed="true">文献与笔记</button><button type="button" data-lr-view="chat" aria-pressed="false">论文问答</button></div>
   <div class="lr-workspace">
   <section id="lr-library" aria-labelledby="lr-library-heading">
