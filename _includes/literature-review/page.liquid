@@ -1,14 +1,15 @@
 <div id="literature-review" lang="zh-CN" data-aliases="{{ site.data.literature_review.catalog.historical_aliases | jsonify | escape }}">
   <div class="lr-intro">
-    <p class="lr-kicker">READING NOTES <span>持续更新的研究资料库</span></p>
-    <p class="lr-lead">从论文出发，找清问题与边界。</p>
-    <p class="lr-description">围绕 XR 智能体、创作者与架空世界，以及推理、世界模型与不确定性，记录每篇工作的贡献、方法、结果和实现边界。</p>
+    <p class="lr-kicker">RESEARCH & LITERATURE <span>问题 · 条件 · 证据</span></p>
+    <p class="lr-lead">面向世界推演与人类探索的视频生成</p>
+    <p class="lr-description">关注视频生成模型如何依据规则与操作预测后果，以及人如何在 XR 中比较、检查和修正这些生成的未来。沿两条研究路线整理已有能力、适用范围与待验证问题。</p>
     <div class="lr-stats">
-      <span><strong>{{ site.data.literature_review.catalog.records }}</strong> 篇论文</span><span><strong>{{ site.data.literature_review.catalog.extracted }}</strong> 篇全文已提取至本机</span><span><strong>{{ site.data.literature_review.catalog.pages }}</strong> PDF页</span
-      ><span>更新于 <strong>{{ site.data.literature_review.catalog.updated }}</strong></span>
+      <span><strong>{{ site.data.literature_review.catalog.records }}</strong> 篇本地文献</span><span><strong>{{ site.data.literature_teams.teams.size }}</strong> 个研究者收藏</span><span>更新于 <strong>{{ site.data.literature_review.catalog.updated }}</strong></span>
     </div>
-    <nav class="lr-jump-nav" aria-label="文献页导航"><a href="#lr-rq-atlas">RQ 与文献脉络</a><a href="#lr-library">浏览文献</a><a href="#lr-about">阅读说明</a></nav>
+    <nav class="lr-jump-nav" aria-label="文献页导航"><a href="#lr-research">当前关注</a><a href="#lr-evidence">论文标注与团队收藏</a><a href="#lr-rq-atlas">完整文献脉络</a><a href="#lr-library">文献与问答</a></nav>
   </div>
+  {% include literature-review/research-overview.liquid %}
+  {% include literature-review/paper-evidence.liquid %}
   {% include literature-review/rq-map.liquid %}
   <div class="lr-mobile-tabs" role="group" aria-label="工作区视图"><button type="button" data-lr-view="library" aria-pressed="true">文献与笔记</button><button type="button" data-lr-view="chat" aria-pressed="false">论文问答</button></div>
   <div class="lr-workspace">
@@ -16,7 +17,7 @@
     <span id="index"></span>
     <div class="lr-section-title">
       <h2 id="lr-library-heading">文献清单 <span>Literature</span></h2>
-      <p id="lr-count" role="status" aria-live="polite">158 / 158 份笔记</p>
+      <p id="lr-count" role="status" aria-live="polite">{{ site.data.literature_review.catalog.records }} / {{ site.data.literature_review.catalog.records }} 份笔记</p>
     </div>
     <form id="lr-filters" class="lr-filters" role="search" aria-label="搜索与筛选文献">
       <label class="lr-search-label" for="lr-search"
@@ -74,6 +75,7 @@
     <p id="lr-notes-message" class="lr-note-status" role="status" hidden></p>
     <p id="lr-empty" hidden>没有找到匹配的笔记。试试缩短关键词，或清除筛选条件。</p>
     <div id="lr-papers">
+      {% include literature-review/papers-team-collection.html -%}
       {% include literature-review/papers-161-170.html -%}
       {%- include literature-review/papers-151-160.html -%}
       {%- include literature-review/papers-141-150.html -%}
@@ -128,8 +130,9 @@
   </dialog>
   <section id="lr-about" class="lr-about">
     <h2>阅读说明</h2>
+    <p>本地文献 {{ site.data.literature_review.catalog.records }} 篇，已提取 {{ site.data.literature_review.catalog.extracted }} 篇、{{ site.data.literature_review.catalog.pages }} 页。逐页全文仅保存在本机；论文标注分别注明既有笔记、摘要初筛与方法核查的证据深度。</p>
     <p>
-      摘要、方法与结果依据本地PDF版本整理，部分发表信息另经官方记录核验。结果为论文作者报告，未重跑实验；“作者局限”与资料库的研究判断在正文区分。PDF页码从文件第一页起计。
+      每条记录分别说明依据作者摘要、既有笔记还是具体方法页整理；下载和全文提取不代表人工全文精读。结果为作者报告，未重跑实验；作者观察到的局限与资料库的适用范围判断分开。PDF页码从文件第一页起计。
     </p>
     <p>
       本库每篇论文保留本地最新版；旧版本和完全相同副本已归档，旧编号保留跳转。全文为本机逐页文本层提取，不含图片OCR；公开网站保留摘要，不公开托管全文。

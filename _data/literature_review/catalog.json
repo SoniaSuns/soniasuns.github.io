@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-17",
-  "records": 158,
-  "pages": 3833,
-  "recent": 24,
+  "updated": "2026-09-19",
+  "records": 398,
+  "pages": 9528,
+  "recent": 264,
   "historical_aliases": {
     "P003": "P002",
     "P082": "P081",
@@ -12,5 +12,5 @@
     "P134": "P127"
   },
   "fulltext_scope": "Local page-numbered PDF text; not public full-text hosting; no OCR",
-  "extracted": 158
+  "extracted": 398
 }

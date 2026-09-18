@@ -1,7 +1,7 @@
 """Build the source-linked RQ atlas from the local PDF inventory and curated relations.
 
 Run from the research workspace: python website/_tools/rq-map/build.py
-Only a PDF in the inventory counts as collected. No external PDF is downloaded.
+Only a PDF in the inventory counts as collected. Downloads are managed separately.
 """
 import collections
 import html
@@ -11,7 +11,7 @@ import re
 
 SITE = pathlib.Path(__file__).resolve().parents[2]
 ROOT = SITE.parent
-DATE = "2026-09-17"
+DATE = "2026-09-19"
 catalog_path = SITE / "_data/literature_review/catalog.json"
 catalog = json.loads(catalog_path.read_text(encoding="utf-8")) if catalog_path.exists() else {}
 aliases = catalog.get("historical_aliases", {"P003":"P002", "P082":"P081", "P109":"P103"})
@@ -55,6 +55,7 @@ branch("W3d", "W3", "创作者修改世界", "人修改规则或任务节点后�
 branch("W4a", "W4", "组合与搜索（方法支撑）", "当推理深度与分支增加时，什么表示与搜索机制支持全局约束？", "单条文字 CoT 或固定计算预算", "显式状态规划、树搜索、连续潜推理、能量组合与训练/采样策略", "这些论文多用数学/合成任务；支持推理组件，不等于已实现可编辑物理世界。", "P104 P105 S10 S11 S22", "P006 P018 P023 P025 P026 P103 P108 P113 P114 P116 P034 P037 P073 P077 P107 P112 P117 P115 P031", "S10 P104 P103 P023 P034")
 branch("W4b", "W4", "推理是否仍有视觉依据", "长推理过程中怎样发现证据丢失、重新观察并约束输出？", "一次视觉编码后继续语言推理", "时间定位、证据池、双流解码、特征重访和过程监督", "注意力、熵与视觉依赖是代理指标；‘关注了’不等于因果使用或答对。", "P069 P075 P078 P086 P087 P088 P089 P092 P093 P098 P099 P100", "P090", "P078 P087 P086 P092 P100")
 branch("W4c", "W4", "校准、漂移与有效推断", "模型或数据机制变化后，怎样判断结论仍可靠且对决策有用？", "静态准确率和合成数据拟合", "概念漂移归因、因果校准、真实/合成数据推断及多任务时间序列评价", "统计识别、交换性和数据条件需明确；这组是验证方法支撑，不是世界生成系统。", "", "P046 P044 P047 P051 P052 P063 P096", "P046 P044 P052 P096")
+branch("W4d", "W4", "生成过程作为推理", "视频生成过程能否执行规则与计算视觉答案，训练或测试时外援分别贡献了什么？", "用 VLM 先求解，再把结果交给视频生成器", "区分无外援生成、外部教师监督、测试时优化，以及生成预训练到感知的迁移", "视觉轨迹像推理步骤不代表步骤忠实；需要任务规则、未见组合、过程约束和外部依赖消融。", "P158", "", "P158")
 branch("X1a", "X1", "空间指涉与表达", "怎样让‘这个/那里/这样做’成为双方共享、可消歧的空间信息？", "屏幕上的语音+指向；用户输入端消歧", "可穿戴注视/指向/历史；对象锚定；智能体输出同步手势", "AgentHands 依赖预扫描对象与有限手势；不能视为开放世界的任意动作理解。", "P061 P057 S17 S18 S24", "", "S18 S17 S24 P061")
 branch("X1b", "X1", "目标与任务状态", "怎样从示范、第一人称历史或动作表现推断用户目标与下一步需求？", "显式目标或单张当前画面", "观察后协助、历史进度、他者意图、动作技能反馈与 BDI 用户模型", "离线下一动作选择不等于闭环执行；专家式反馈不等于已证明长期技能提升。", "P141 P155 P151 P146 S23", "", "P141 P155 P151 S23")
 branch("X1c", "X1", "通过行动获得证据", "不知道发生了什么时，应该看哪里、问谁，或请求人执行什么辨别动作？", "固定观察与文本澄清", "主动转头/视频搜索、物理实验、由人执行的取证动作", "要区分澄清已有事实和创造新证据；P143/P157 已覆盖实验式取证，尚不足以验证自然 XR 中的负担权衡。", "P143 P157 P079 P095 S12", "P005 P007 P009 P020 P021 P027 P030 P069 P075 P088", "P143 P157 P079 P095")
@@ -111,6 +112,10 @@ for r in records:
     d = docs[r["id"]]
     papers.append(dict(id=r["id"], title=html.unescape(r["title"]), short=html.unescape(r["title"].split(":")[0]), year=r["year"], authors=r["authors"], collected=True, note=r["id"].lower(), scope="本地全文笔记", summary=html.unescape(r["abstract_zh"]), boundary=html.unescape(r["boundary"]), evidence=r["evidence"], sources=[s.replace("\\", "/") for s in d["sources"]], sha256=d["sha256"], pages=d["pages"], links=local_links(r.get("paper_links", "")), verified=r.get("verified", ""), mappings=[]))
 
+annotation_path = SITE / "_data/literature_annotations.json"
+annotations = json.loads(annotation_path.read_text(encoding="utf-8")) if annotation_path.exists() else {"papers": []}
+annotations_by_id = {p["id"]: p for p in annotations["papers"]}
+
 extra = [
     ("L162", "2411.19108", "Timestep Embedding Tells: It’s Time to Cache for Video Diffusion Model", "TeaCache", "2024 / 2025", "Liu et al.", "根据时间步输入变化估计模型输出变化，选择缓存复用以降低视频扩散推理成本。", "无需训练的加速方法；不解决长期状态记忆或因果规则。", "PDF pp.1–3：摘要、引言与缓存方法"),
     ("L163", "2412.17799", "Automating the Search for Artificial Life with Foundation Models", "ASAL", "2024 / 2025", "Kumar et al.", "以视觉语言模型评价模拟结果，搜索目标现象、持续新颖性和多样模拟，覆盖 Lenia、Boids、细胞自动机等基底。", "优化的是基础模型定义的指标与有限模拟；新颖性不等于无限开放演化或真实生命。", "PDF pp.1–2：目标；pp.4–9：搜索与基底；pp.14–17：参考文献"),
@@ -124,7 +129,14 @@ for i, arxiv, title, short, year, authors, summary, boundary, evidence in extra:
         continue
     papers.append(dict(id=i, title=title, short=short, year=year, authors=authors, collected=True, note=None, scope="本地已收集 · 本次补入脉络，尚无独立全文笔记", summary=summary, boundary=boundary, evidence=evidence, sources=[s.replace("\\", "/") for s in d["sources"]], sha256=d["sha256"], pages=d["pages"], links=[dict(label="arXiv 原文", url="https://arxiv.org/abs/"+arxiv)], verified=DATE, mappings=[]))
 for i, title, short, year, authors, url, summary, boundary, seed, depth, evidence in external_rows:
+    if canonical(i) != i:
+        continue
     papers.append(dict(id=i, title=title, short=short, year=year, authors=authors, collected=False, note=None, scope="滚雪球新增 · 未收集 PDF", summary=summary, boundary=boundary, evidence=evidence, sources=[], links=[dict(label="论文 / 作者来源", url=url)], verified=DATE, seed=seed, depth=depth, mappings=[]))
+known_ids = {p["id"] for p in papers}
+for a in annotations["papers"]:
+    if a["id"] in known_ids or a.get("collected"):
+        continue
+    papers.append(dict(id=a["id"], title=a["title"], short=a["title"].split(":")[0], year=a["year"], authors=a["authors"], collected=False, note=None, scope="公开文献记录 · PDF 待收集", summary=a.get("summary", a.get("question", "")), boundary=a.get("boundary", ""), evidence=a.get("evidence", ""), sources=[], links=a.get("links", []), verified=DATE, seed=a.get("discovery", "研究者公开论文记录"), depth=1, discovery_method="context_search" if a["id"].startswith("C") else "author_search", mappings=[]))
 by_id = {p["id"]: p for p in papers}
 for node in routes + parents + branches:
     node["anchors"] = list(dict.fromkeys(canonical(i) for i in node["anchors"]))
@@ -135,6 +147,19 @@ for b in branches:
             b[role] = [i for i in b[role] if i not in b["core"]]
         for i in b[role]:
             by_id[i]["mappings"].append(dict(rq=b["id"], role=role))
+branch_by_id = {b["id"]: b for b in branches}
+for p in papers:
+    a = annotations_by_id.get(p["id"])
+    if not a:
+        continue
+    p["annotation"] = a
+    p["scope"] = {"abstract_review":"本地 PDF · 摘要初读", "method_checked":"本地 PDF · 方法条件已核查", "existing_notes":"本地 PDF · 既有阅读笔记"}.get(a.get("review_status"), p["scope"]) if p["collected"] else p["scope"]
+    for rq in a.get("rqs", []):
+        if rq not in branch_by_id or any(m["rq"] == rq for m in p["mappings"]):
+            continue
+        role = a.get("mapping_roles", {}).get(rq, a.get("mapping_role", "support"))
+        branch_by_id[rq][role].append(p["id"])
+        p["mappings"].append(dict(rq=rq, role=role))
 
 # Verified arrows run from earlier work to the paper that cites it.
 # The condition-change interpretation is our synthesis; the citation is independently evidenced.
@@ -192,6 +217,39 @@ edge("P002", "P019", "文本溯因 NLI → 比较原因/后果图像并解释选
 edge("P002", "P021", "一般常识解释 → 意外视频事件与证据逐步揭示", "P021 PDF p.2 将 Bhagavatula 等[3]列为语言计算溯因起点")
 edge("P138", "P039", "故事级一致性判别 → 视觉记忆中的实体/背景与指代保持", "P039 PDF p.3 Story Generation 明确称 Li 等[30]/StoryGAN 提出初始任务")
 
+# New author collections: attach verified citations and label analytical comparisons.
+aid_to_id = {a["arxiv_id"]:a["id"] for a in annotations["papers"] if a.get("arxiv_id")}
+new_lanes = []
+def team_relation(aid, bid, rq, title, change, evidence, kind="citation"):
+    a = aid_to_id.get(aid, aid)
+    b = aid_to_id.get(bid, bid)
+    if a not in by_id or b not in by_id:
+        return
+    edge(a,b,change,evidence,kind=kind)
+    new_lanes.append(dict(route="world",rq=rq,title=title,papers=[a,b]))
+
+team_relation("2512.24766","2606.04811","W2d","从生成运动到执行检验",
+    "以生成视频恢复三维物体流并控制 → 将生成模型作为固定被测对象，独立评价执行成功",
+    "Dream.exe PDF p.3 明确讨论 Dream2Flow，并区分本工作的评价定位")
+team_relation("2605.13724","2609.02886","W3a","少步视频方法进入长程训练流程",
+    "任意步 flow map 蒸馏 → 在多骨干世界模型中用于自回归适配，再进行 DMD",
+    "SolarWM PDF p.5 明列 teacher-forced AnyFlow autoregressive initialization")
+team_relation("2411.04983","2606.32026","W1d","从冻结潜空间规划到测试时适应",
+    "离线学模型、测试时优化动作 → 执行新转移后更新部分模型参数再规划",
+    "AdaJEPA PDF p.9 比较 DINO-WM 的 Frozen/Adapt；p.14 明确沿用其 PushT 设置")
+team_relation("P158","2606.02564","W4d","规则评测成为测试时监督参照",
+    "评估生成视频的规则执行 → 用外部 VLM 生成目标和过程查询并优化视频 LoRA",
+    "VLM-as-Teacher PDF pp.2–3 引用 RULER-Bench，p.6 Table II 使用其指标；不声称基准本身提供优化方法")
+team_relation("2511.16669","2606.02564","W4d","两种外部推理支持的位置",
+    "VLM 先预测下一事件文字 → VLM 对生成过程提供测试时可微监督",
+    "资料库对照 VANS PDF pp.4、12 与教师方法 PDF pp.4、6；本轮未核实直接引用",kind="comparison")
+team_relation("2607.19343","2608.24101","W1c","实体未来与稀疏轨迹两种动作接口",
+    "给定部分实体像素轨迹、预测其余后果 → 联合提出动作和稀疏轨迹，生成并评分多个未来",
+    "资料库比较 Masked Visual Actions PDF pp.3–7 与 TrAct pp.3–5；不是已核实的技术继承",kind="comparison")
+team_relation("P150","C01","W1b","可执行机制已有直接前作",
+    "从交互合成世界程序 → 把任务分数、可回答性和主动探针一起用于局部机制编辑",
+    "WorldCoder 既有全文笔记与 ESBM 作者摘要的条件比较；尚未在本轮核查后者引用表",kind="comparison")
+
 lanes = [
     ("world", "W1c", "视觉世界模型：从预测到控制", ["S01", "P121", "S03", "P123", "P081"]),
     ("world", "W1c", "第二轮追溯：Dreamer 的状态表示从哪里来", ["S05", "S03", "P123"]),
@@ -219,12 +277,20 @@ lanes = [
     ("xr", "X1c", "由实验到人执行的取证", ["S12", "P143", "P157"]),
 ]
 lanes = [dict(route=r, rq=q, title=t, papers=[canonical(i) for i in p]) for r,q,t,p in lanes]
+lanes.extend(new_lanes)
 
 bridges = [
     dict(id="B1", title="让人参与机制辨别，而不只是补充事实", question="智能体维护多个隐藏机制假设时，怎样选择一个值得请求人执行的空间取证动作？", rqs=["W1d", "W2b", "X1c", "X2b", "X2c"], papers=["P143", "P157", "P159", "P059", "P041"], known="IVRE 已让智能体主动实验；P157 已让人执行 3D 放置/移动；GPS 已优化提问，但规则已知。", delta="把未知机制、人的行动负担、介入通道和证据收益放到同一个闭环中。", test="比较直接建议、文本澄清、自由取证与成本敏感取证；同时测假设淘汰、任务成功、打扰次数/身体负担、错误介入与修复时间。"),
     dict(id="B2", title="可修正的假设成为 XR 交互对象", question="怎样向人呈现少量有区分度的假设、来源与缺失证据，并让修正改变后续行为？", rqs=["W2b", "X1a", "X3a", "X3b"], papers=["P021", "P038", "P061", "P080", "P091", "P097"], known="新证据修正、空间表达、置信表达和交互解释分别已有工作；可见 CoT 不能直接当成内部真因。", delta="在对象和任务上绑定假设，而不是仅展示一个置信数；明确区分用户确认指涉与用户提供新证据。", test="对照单一解释、概率显示与可编辑假设；测恰当依赖、纠错成本、共享指涉、错误记忆持续与恢复。"),
     dict(id="B3", title="规则编辑后的局部保持与长期后果", question="创作者修改一条规则后，怎样只更新应受影响的状态和事件，并保持其余设定？", rqs=["W1a", "W1b", "W2c", "W3b", "W3d", "X4a"], papers=["P154", "P150", "P156", "P071", "P147", "P160", "P158"], known="代码世界模型、数字孪生干预和创作计划树均已有；AutoWorldBuilder 尚未实现关系解析，DreamGarden 的撤销并非精确依赖分析。", delta="把规则本身当作可版本化、可执行和可验证的编辑对象，检查多步因果后果与不受影响部分。", test="使用有真值规则的可执行小世界；同时测规则满足、编辑局部性、长期一致、不同合法演化和用户修改成本。"),
 ]
+for route in routes:
+    route["short_title"] = "世界机制的学习、修订与一致演化" if route["id"] == "world" else "共享理解、主动权与协作修复"
+for bridge in bridges:
+    bridge["papers"] = list(dict.fromkeys(canonical(p) for p in bridge["papers"]))
+    if bridge["id"] == "B3":
+        bridge.update(status="deferred", title="规则编辑方向：暂缓拟题", question="先核对相关论文的能力、输入条件与验证范围，再重新界定问题。", known="WorldCoder、PoE-World 和 ESBM 已研究可执行机制及修订；WorldEvolver 的更新发生在部署上下文。当前文献用于对照不同条件。", delta="暂不提出新的 RQ；不将可执行、可修订、可验证本身标为研究空白。", test="先完成论文标注，再确定是否存在值得验证的具体差别。")
+        bridge["papers"].extend(i for i in ["C01","C02"] if i in by_id)
 
 family_groups = [dict(ids=["P026", "P103"], reason="Coconut 的不同本地版本"), dict(ids=["P102", "P137"], reason="Long-Context State-Space Video World Models 的不同文件"), dict(ids=["P127", "P134"], reason="MovieDreamer 的不同本地版本"), dict(ids=["P042", "P045"], reason="同一叙事因果研究的后续/早期版本，题名不同")]
 for group in family_groups:
@@ -280,5 +346,10 @@ archive_manifest = ROOT / "duplicate-paper-archive/2026-09-17/archive-manifest.j
 data["coverage"]["archived_duplicates"] = len(json.loads(archive_manifest.read_text(encoding="utf-8"))["moves"]) if archive_manifest.exists() else 0
 data["methodology"][3] = f"按当前目录与 SHA-256 清单核对：{len(local_files)} 个活跃 PDF、{sum(p['collected'] for p in papers)} 个本地文献节点。duplicate-paper-archive 中归档的重复/旧版本不重复计数，历史 ID 保留别名跳转。"
 data["methodology"][-1] = "TeaCache、ASAL、Diffusion as Shader 已随本地目录同步成为 P162–P164，使用当前正式笔记；没有把这些已收集文献误标成外部检索项。"
+data["coverage"]["external_papers"] = sum(not p["collected"] for p in papers)
+data["methodology"][0] = "长期母问题、父子层级及条件变化均为文献组织框架。候选选题与母问题分别呈现；B3 暂缓拟题，先标注文献。"
+data["methodology"][2] = "颜色仅表示本地 PDF 是否存在：蓝色已收集，橙色未收集。证据深度与复现状态另用文字标注；在线摘要、下载 PDF、提取全文与方法核查是不同状态。"
+data["methodology"][4] = "覆盖现有文献目录及研究者收藏。新增记录注明摘要初读或方法核查；方法支撑不等于已解决对应应用问题。"
+data["methodology"][6] = "检索快照更新至 " + DATE + "；作者署名检索与引用滚雪球分别记录。未穷尽全部团队工作或参考文献，没有证据时不建立引用继承边。"
 out.write_text(json.dumps(data, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-print(json.dumps({"papers":len(papers),"local_documents":data["coverage"]["local_documents"],"external":len(external_rows),"branches":len(branches),"edges":len(edges),"folders":len(folder_counts)}, ensure_ascii=False))
+print(json.dumps({"papers":len(papers),"local_documents":data["coverage"]["local_documents"],"external":data["coverage"]["external_papers"],"branches":len(branches),"edges":len(edges),"folders":len(folder_counts)}, ensure_ascii=False))

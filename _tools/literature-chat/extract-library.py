@@ -66,14 +66,15 @@ def main():
             document["first_page_excerpt"] = first[:1600]
             document["arxiv_candidates"] = sorted(set(re.findall(r"arXiv\s*:\s*(\d{4}\.\d{4,5})(?:v\d+)?", first, re.I)))
             if record:
-                lines = [f"# {record['id']} · {record['title']}", "", f"全文提取：{len(pages)} 页；SHA-256：`{digest}`。", f"完整提取文本：`../text/{digest}.txt`。", "", f"摘要来源：已有结构化阅读笔记（原核查日期：{record.get('verified', '未记录')}）。全文缓存重建不等于人工重新核验全部摘要。", ""]
+                level = {"abstract_review": "摘要初读", "method_checked": "方法条件已核查"}.get(record.get("review_status"), "既有结构化阅读笔记")
+                lines = [f"# {record['id']} · {record['title']}", "", f"全文提取：{len(pages)} 页；SHA-256：`{digest}`。", f"完整提取文本：`../text/{digest}.txt`。", "", f"摘要来源：{level}（原核查日期：{record.get('verified', '未记录')}）。全文缓存重建不等于人工重新核验全部摘要。", ""]
                 labels = {"authors": "作者", "date": "时间与版本", "venue": "发表信息", "abstract_zh": "中文摘要", "contribution": "贡献", "boundary": "问题边界", "method": "方法", "results": "结果", "limitations": "局限", "evidence": "依据", "paper_links": "论文链接", "project_links": "项目链接", "abstract_en": "原文摘要"}
                 for field, title in labels.items():
                     if record.get(field):
                         lines.extend([f"## {title}", "", str(record[field]), ""])
                 (notes_dir / (record["id"] + ".md")).write_text("\n".join(lines), encoding="utf-8")
                 document["summary_file"] = "notes/" + record["id"] + ".md"
-                document["summary_status"] = "existing_review"
+                document["summary_status"] = record.get("review_status", "existing_review")
             else:
                 document["summary_status"] = "needs_review"
         except Exception as error:

@@ -1,0 +1,391 @@
+{
+  "updated": "2026-09-19",
+  "scope": "2023年至2026-09-19公开的相关工作；2022预印本仅在已核实2023正式发表时纳入。以作者署名关联，不声称穷尽全部团队工作。",
+  "teams": [
+    {
+      "id": "mike-zheng-shou",
+      "name": "Mike Zheng Shou",
+      "focus": "视频生成、可控世界模型、GUI agent 与教程",
+      "url": "https://sites.google.com/view/showlab/publications",
+      "count": 81,
+      "collected": 76,
+      "method_checked": 4,
+      "assessment": "与 Foresee 最直接相邻的是动作条件视频、后果可执行性和教程表达。视频编辑、世界模型及 GUI agent 是相互关联的几组工作，不能由署名关系推成一条单线技术继承。",
+      "stages": [
+        {
+          "label": "运动控制 → 动作后果",
+          "question": "怎样把动作与视觉效果联系起来？",
+          "delta": "从给定运动的定制与轨迹控制，转向潜动作跨场景对齐，再检验生成动作能否执行。",
+          "papers": [
+            {
+              "id": "P402",
+              "title": "MotionDirector: Motion Customization of Text-to-Video Diffusion Models",
+              "url": "https://arxiv.org/abs/2310.08465"
+            },
+            {
+              "id": "P219",
+              "title": "DragAnything: Motion Control for Anything using Entity Representation",
+              "url": "https://arxiv.org/abs/2403.07420"
+            },
+            {
+              "id": "P081",
+              "title": "Olaf-World: Orienting Latent Actions for Video World Modeling",
+              "url": "https://arxiv.org/abs/2602.10104"
+            },
+            {
+              "id": "P380",
+              "title": "Dream.exe: Can Video Generation Models Dream Executable Robot Manipulation?",
+              "url": "https://arxiv.org/abs/2606.04811"
+            }
+          ]
+        },
+        {
+          "label": "短片质量 → 长程与延迟",
+          "question": "怎样在计算预算下保持长期生成？",
+          "delta": "上下文组织、flow 蒸馏、因果流式生成和跨骨干训练是不同技术维度；加速后仍须检验任务正确性。",
+          "papers": [
+            {
+              "id": "P286",
+              "title": "Long-Context Autoregressive Video Modeling with Next-Frame Prediction",
+              "url": "https://arxiv.org/abs/2503.19325"
+            },
+            {
+              "id": "P369",
+              "title": "AnyFlow: Any-Step Video Diffusion Model with On-Policy Flow Map Distillation",
+              "url": "https://arxiv.org/abs/2605.13724"
+            },
+            {
+              "id": "P370",
+              "title": "StreamingEffect: Real-Time Human-Centric Video Effect Generation",
+              "url": "https://arxiv.org/abs/2605.17019"
+            },
+            {
+              "id": "P085",
+              "title": "SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models",
+              "url": "https://arxiv.org/abs/2609.02886"
+            }
+          ]
+        },
+        {
+          "label": "模仿示范 → 教程与协作",
+          "question": "既有操作经验怎样帮助人或 agent 学习？",
+          "delta": "从教学视频理解和人类录屏采集，走向结构化图文教程；未知未来的多分支生成仍需另外评价。",
+          "papers": [
+            {
+              "id": "P234",
+              "title": "VideoGUI: A Benchmark for GUI Automation from Instructional Videos",
+              "url": "https://arxiv.org/abs/2406.10227"
+            },
+            {
+              "id": "P335",
+              "title": "ShowUI-Aloha: Human-Taught GUI Agent",
+              "url": "https://arxiv.org/abs/2601.07181"
+            },
+            {
+              "id": "P379",
+              "title": "Demo2Tutorial: From Human Experience to Multimodal Software Tutorials",
+              "url": "https://arxiv.org/abs/2606.03951"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jing-liao",
+      "name": "Jing Liao",
+      "focus": "可控视觉生成、3D／4D、视频回答与规则推理",
+      "url": "https://arxiv.org/search/?searchtype=author&query=Liao%2C+J",
+      "count": 41,
+      "collected": 38,
+      "method_checked": 2,
+      "assessment": "适合重点讨论可控生成与视频规则执行：VANS 与 Foresee 的输出形式接近，VLM-as-Teacher 提供训练／测试时监督的明确参照。显式 3D／4D 的工作则要区分重建、动画控制和未知物理后果预测。",
+      "stages": [
+        {
+          "label": "视频回答 → 规则监督",
+          "question": "视频里的后果或答案究竟由哪个模块推断？",
+          "delta": "VANS 由 VLM 预测描述再生成；教师方法在测试时对视觉过程反传奖励，两种外援的位置不同。",
+          "papers": [
+            {
+              "id": "P315",
+              "title": "Video-as-Answer: Predict and Generate Next Video Event with Joint-GRPO",
+              "url": "https://arxiv.org/abs/2511.16669"
+            },
+            {
+              "id": "P378",
+              "title": "VLMs are Good Teachers for Video Reasoning via Adaptive Test-Time Optimization",
+              "url": "https://arxiv.org/abs/2606.02564"
+            }
+          ]
+        },
+        {
+          "label": "显式控制 → 动态呈现",
+          "question": "哪些未来信息已经由控制信号给定？",
+          "delta": "点轨迹、材质／几何通道和骨架分别提供不同强度的未来约束，不能统称自主世界推演。",
+          "papers": [
+            {
+              "id": "T251008527",
+              "title": "FlexTraj: Image-to-Video Generation with Flexible Point Trajectory Control",
+              "url": "https://arxiv.org/abs/2510.08527"
+            },
+            {
+              "id": "P307",
+              "title": "X2Video: Adapting Diffusion Models for Multimodal Controllable Neural Video Rendering",
+              "url": "https://arxiv.org/abs/2510.08530"
+            },
+            {
+              "id": "P345",
+              "title": "Ani3DHuman: Photorealistic 3D Human Animation with Self-guided Stochastic Sampling",
+              "url": "https://arxiv.org/abs/2602.19089"
+            },
+            {
+              "id": "P325",
+              "title": "Animus3D: Text-driven 3D Animation via Motion Score Distillation",
+              "url": "https://arxiv.org/abs/2512.12534"
+            }
+          ]
+        },
+        {
+          "label": "可编辑场景 → agent 构建",
+          "question": "人如何检查和修改中间结构？",
+          "delta": "静态布局编辑与逐步场景搭建为可解释界面提供线索；与视频动力学训练仍需显式连接。",
+          "papers": [
+            {
+              "id": "T230613078",
+              "title": "Continuous Layout Editing of Single Images with Diffusion Models",
+              "url": "https://arxiv.org/abs/2306.13078"
+            },
+            {
+              "id": "P253",
+              "title": "SGEdit: Bridging LLM with Text2Image Generative Model for Scene Graph-based Image Editing",
+              "url": "https://arxiv.org/abs/2410.11815"
+            },
+            {
+              "id": "P393",
+              "title": "ThinkBLOX: 3D Indoor Scene Generation with Progressive Reasoning",
+              "url": "https://arxiv.org/abs/2607.13539"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kaiming-he",
+      "name": "Kaiming He",
+      "focus": "生成基础方法、视频预训练到感知、几何与仿真",
+      "url": "https://people.csail.mit.edu/kaiming/publications.html",
+      "count": 21,
+      "collected": 21,
+      "method_checked": 2,
+      "assessment": "这组工作更适合作为生成训练目标、表征迁移和高效推理的基础。GenCeption 表明视频生成预训练能服务感知任务；它并未直接回答多分支动作后果是否正确。",
+      "stages": [
+        {
+          "label": "生成预训练 → 通用感知",
+          "question": "生成模型学到的表示能迁移到什么任务？",
+          "delta": "从图像感知接口到视频稠密／稀疏任务；输出类型改变，不能继续按未来生成来解读。",
+          "papers": [
+            {
+              "id": "P363",
+              "title": "Image Generators are Generalist Vision Learners",
+              "url": "https://arxiv.org/abs/2604.20329"
+            },
+            {
+              "id": "P392",
+              "title": "Video Generation Models are General-Purpose Vision Learners",
+              "url": "https://arxiv.org/abs/2607.09024"
+            }
+          ]
+        },
+        {
+          "label": "多步采样 → 少步生成",
+          "question": "怎样改变训练目标以降低采样成本？",
+          "delta": "基础生成方法可为小预算系统提供候选组件，但视频时序、物理任务和 A10 延迟需另测。",
+          "papers": [
+            {
+              "id": "P293",
+              "title": "Mean Flows for One-step Generative Modeling",
+              "url": "https://arxiv.org/abs/2505.13447"
+            },
+            {
+              "id": "P340",
+              "title": "Generative Modeling via Drifting",
+              "url": "https://arxiv.org/abs/2602.04770"
+            }
+          ]
+        },
+        {
+          "label": "几何 → 神经仿真",
+          "question": "静态几何能否提供物理动力学的预训练信号？",
+          "delta": "GeoPT 以合成动态扩充几何学习，接入物理预测器；与写实视频解码是两个问题。",
+          "papers": [
+            {
+              "id": "P346",
+              "title": "GeoPT: Scaling Physics Simulation via Lifted Geometric Pre-Training",
+              "url": "https://arxiv.org/abs/2602.20399"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yann-lecun",
+      "name": "Yann LeCun",
+      "focus": "JEPA、潜空间动力学、规划与测试时适应",
+      "url": "https://arxiv.org/search/?searchtype=author&query=LeCun%2C+Y",
+      "count": 52,
+      "collected": 52,
+      "method_checked": 1,
+      "assessment": "最清楚的脉络是表征预测 → 动作条件潜空间规划 → 部署时适应。它适合帮助界定世界模型 RQ，但多数方法不输出可供用户探索的写实视频；需要与像素生成路线并列比较。",
+      "stages": [
+        {
+          "label": "图像表征 → 视频预测",
+          "question": "不重建像素，预测潜特征能学到什么？",
+          "delta": "I-JEPA、V-JEPA 和 V-JEPA 2 分别扩展时间信息及动作适配；理解指标与规划指标应分开。",
+          "papers": [
+            {
+              "id": "P167",
+              "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture",
+              "url": "https://arxiv.org/abs/2301.08243"
+            },
+            {
+              "id": "P223",
+              "title": "Revisiting Feature Prediction for Learning Visual Representations from Video",
+              "url": "https://arxiv.org/abs/2404.08471"
+            },
+            {
+              "id": "P299",
+              "title": "V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning",
+              "url": "https://arxiv.org/abs/2506.09985"
+            }
+          ]
+        },
+        {
+          "label": "冻结模型规划 → 在线适应",
+          "question": "部署条件改变后世界模型怎样修订？",
+          "delta": "DINO-WM 提供冻结特征上的规划参照；AdaJEPA 使用新转移更新部分参数，不是符号机制编辑。",
+          "papers": [
+            {
+              "id": "P256",
+              "title": "DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning",
+              "url": "https://arxiv.org/abs/2411.04983"
+            },
+            {
+              "id": "P353",
+              "title": "LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels",
+              "url": "https://arxiv.org/abs/2603.19312"
+            },
+            {
+              "id": "P391",
+              "title": "AdaJEPA: An Adaptive Latent World Model",
+              "url": "https://arxiv.org/abs/2606.32026"
+            }
+          ]
+        },
+        {
+          "label": "物理异常 → 可观看后果",
+          "question": "检测异常、潜空间控制与生成视频有什么不同？",
+          "delta": "直觉物理的预期违背测试、导航视频和身体动作条件预测使用不同输入与输出。",
+          "papers": [
+            {
+              "id": "P273",
+              "title": "Intuitive physics understanding emerges from self-supervised pretraining on natural videos",
+              "url": "https://arxiv.org/abs/2502.11831"
+            },
+            {
+              "id": "P262",
+              "title": "Navigation World Models",
+              "url": "https://arxiv.org/abs/2412.03572"
+            },
+            {
+              "id": "P303",
+              "title": "Whole-Body Conditioned Egocentric Video Prediction",
+              "url": "https://arxiv.org/abs/2506.21552"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fei-fei-li",
+      "name": "Fei-Fei Li",
+      "focus": "空间智能、行动后果、机器人学习与人本交互",
+      "url": "https://svl.stanford.edu/publications/",
+      "count": 62,
+      "collected": 61,
+      "method_checked": 2,
+      "assessment": "最贴近当前选题的是三维／视觉动作接口、生成后果的决策效用，以及人的交互成本。这里既有世界模型，也有利用已有轨迹或显式仿真进行控制的工作，必须分别标注输入条件。",
+      "stages": [
+        {
+          "label": "三维动作 → 可比较的视频未来",
+          "question": "什么动作接口能让未来预测支持决策？",
+          "delta": "PointWorld 预测三维点流，Masked Visual Actions 预测掩码之外的像素后果，TrAct 进一步对候选视频进行评分。",
+          "papers": [
+            {
+              "id": "P333",
+              "title": "PointWorld: Scaling 3D World Models for In-The-Wild Robotic Manipulation",
+              "url": "https://arxiv.org/abs/2601.03782"
+            },
+            {
+              "id": "P396",
+              "title": "Masked Visual Actions for Unified World Modeling",
+              "url": "https://arxiv.org/abs/2607.19343"
+            },
+            {
+              "id": "P398",
+              "title": "TrAct: Bridging Robot Control and Visual Prediction with Visual Tracks",
+              "url": "https://arxiv.org/abs/2608.24101"
+            }
+          ]
+        },
+        {
+          "label": "观感质量 → 空间与物理验证",
+          "question": "怎样判断生成或理解结果真的使用物理信息？",
+          "delta": "WorldScore、HumanScore、QuantiPhy 和 ENACT 分别测世界生成、人体运动、数值理解与语义后果，不是可互换指标。",
+          "papers": [
+            {
+              "id": "P287",
+              "title": "WorldScore: A Unified Evaluation Benchmark for World Generation",
+              "url": "https://arxiv.org/abs/2504.00983"
+            },
+            {
+              "id": "P362",
+              "title": "HumanScore: Benchmarking Human Motions in Generated Videos",
+              "url": "https://arxiv.org/abs/2604.20157"
+            },
+            {
+              "id": "P328",
+              "title": "QuantiPhy: A Quantitative Benchmark Evaluating Physical Reasoning Abilities of Vision-Language Models",
+              "url": "https://arxiv.org/abs/2512.19526"
+            },
+            {
+              "id": "P316",
+              "title": "ENACT: Evaluating Embodied Cognition with World Modeling of Egocentric Interaction",
+              "url": "https://arxiv.org/abs/2511.20937"
+            }
+          ]
+        },
+        {
+          "label": "人的示范 → 反馈与控制权",
+          "question": "XR 能怎样帮助人提供有效动作和纠正？",
+          "delta": "ARCap 的可执行示范反馈、TRANSIC 的在线纠正和 SEED 的技能评价，为 Foresee 用户实验提供不同对照。",
+          "papers": [
+            {
+              "id": "P251",
+              "title": "ARCap: Collecting High-quality Human Demonstrations for Robot Learning with Augmented Reality Feedback",
+              "url": "https://arxiv.org/abs/2410.08464"
+            },
+            {
+              "id": "P229",
+              "title": "TRANSIC: Sim-to-Real Policy Transfer by Learning from Online Correction",
+              "url": "https://arxiv.org/abs/2405.10315"
+            },
+            {
+              "id": "P184",
+              "title": "Primitive Skill-based Robot Learning from Human Evaluative Feedback",
+              "url": "https://arxiv.org/abs/2307.15801"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

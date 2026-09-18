@@ -1,0 +1,23 @@
+<section id="lr-evidence" class="lr-evidence" aria-labelledby="lr-evidence-heading">
+  <div class="lr-section-title"><h2 id="lr-evidence-heading">论文标注与团队收藏 <span>2023 — {{ site.data.literature_teams.updated }}</span></h2><a href="{{ '/assets/data/literature-evidence.json' | relative_url }}" download>下载标注 JSON ↗</a></div>
+  <p class="lr-section-description">按研究者署名关联收藏，覆盖视频生成、世界模型、视频推理、4D / 物理建模及相邻 agent / HCI。论文可以出现在多个收藏中；署名关联不代表该团队主导。</p>
+  <div class="lr-team-grid" role="group" aria-label="按研究者筛选">
+    {% for team in site.data.literature_teams.teams %}<button type="button" class="lr-team-card" data-evidence-team="{{ team.id | escape }}" aria-pressed="false"><span>{{ team.name | escape }}</span><small>{{ team.count }} 篇 · {{ team.collected }} 篇已收集</small><span class="lr-team-focus">{{ team.focus | escape }}</span></button>{% endfor %}
+  </div>
+  <div id="lr-team-insight" class="lr-team-insight" aria-live="polite"></div>
+  <form id="lr-evidence-filters" class="lr-evidence-filters" role="search" aria-label="筛选论文标注">
+    <label for="lr-evidence-search">搜索论文与标注<input id="lr-evidence-search" type="search" placeholder="例如：Video-as-Answer、物理、训练、JEPA" autocomplete="off"></label>
+    <label for="lr-evidence-topic">研究内容<select id="lr-evidence-topic"><option value="all">全部内容</option>{% for topic in site.data.literature_annotations.topics %}<option value="{{ topic.id | escape }}">{{ topic.label | escape }}</option>{% endfor %}</select></label>
+    <label for="lr-evidence-review">证据深度<select id="lr-evidence-review"><option value="all">全部标注</option><option value="method_checked">已核查方法条件</option><option value="abstract_review">摘要初读</option><option value="existing_notes">既有阅读笔记</option><option value="metadata_only">仅书目 / 待补读</option></select></label>
+    <label for="lr-evidence-collection">PDF 状态<select id="lr-evidence-collection"><option value="all">全部</option><option value="collected">已收集</option><option value="external">未收集</option></select></label>
+    <button id="lr-evidence-reset" type="button">清除筛选</button>
+  </form>
+  <div class="lr-evidence-legend"><span class="lr-collected">● 已收集 PDF</span><span class="lr-external">● 未收集 PDF</span><span>“未测试”不表示失败；“作者报告”不表示已独立复现。</span></div>
+  <p id="lr-evidence-status" role="status" aria-live="polite"></p>
+  <div class="lr-evidence-workspace"><div><div id="lr-evidence-list"></div><div class="lr-evidence-pagination"><button id="lr-evidence-prev" type="button">上一页</button><span id="lr-evidence-page"></span><button id="lr-evidence-next" type="button">下一页</button></div></div><aside id="lr-evidence-detail" tabindex="-1" aria-label="选中论文的研究条件"></aside></div>
+  <details class="lr-evidence-method"><summary>收藏范围与标注方式</summary><p>{{ site.data.literature_teams.scope | escape }}</p><p>先从公开作者记录建立候选清单，再按研究主题筛选。蓝色和橙色只表示本地 PDF 是否存在。摘要初读仅用于定位问题与待核查事项；方法核查记录 PDF 页码，实验结果仍为作者报告。</p><p>未知规则发现、创作者规则补全、固定世界中的误解修正、真实机制变化与给定反常识规则分别标注。提供未来轨迹的可控生成，与隐藏未来结果的预测使用不同评价条件。</p></details>
+  <noscript><p>论文标注的交互筛选需要 JavaScript；可下载上方 JSON，或继续浏览下方静态阅读笔记。</p></noscript>
+</section>
+<script id="lr-evidence-data" type="application/json">{{ site.data.literature_annotations | jsonify }}</script>
+<script id="lr-evidence-team-data" type="application/json">{{ site.data.literature_teams | jsonify }}</script>
+<script defer src="{{ '/assets/js/literature-evidence.js' | relative_url }}?v={{ site.data.literature_annotations.updated }}"></script>

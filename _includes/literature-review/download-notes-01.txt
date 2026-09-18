@@ -1,6 +1,6 @@
 # Literature Review
 
-更新：2026-09-17。158篇去重论文，每篇只保留本地最新版；结果依据所列本地版本，未重跑实验。全文已提取至本机literature-corpus，公开网页不托管论文全文。
+更新：{{ site.data.literature_review.catalog.updated }}。{{ site.data.literature_review.catalog.records }} 篇本地文献；摘要初读、方法条件核查与既有笔记分别标明。结果未独立复现。全文仅保存在本机，公开网页不托管论文全文。下方原有索引之后附研究者收藏的新增标注。
 
 <a id="index"></a>
 ## 索引
