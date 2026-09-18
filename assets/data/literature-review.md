@@ -1,6 +1,6 @@
 # Literature Review
 
-更新：2026-09-17。158篇去重论文，每篇只保留本地最新版；结果依据所列本地版本，未重跑实验。全文已提取至本机literature-corpus，公开网页不托管论文全文。
+更新：2026-09-19。398 篇本地文献；摘要初读、方法条件核查与既有笔记分别标明。结果未独立复现。全文仅保存在本机，公开网页不托管论文全文。下方原有索引之后附研究者收藏的新增标注。
 
 <a id="index"></a>
 ## 索引
@@ -7714,4 +7714,8887 @@ PDF p.1：作者、v2日期、训练规模；pp.4–5 §3：点编码、18块条
 ### Abstract
 
 Diffusion models have demonstrated impressive performance in generating high-quality videos from text prompts or images. However, precise control over the video generation process—such as camera manipulation or content editing—remains a significant challenge. Existing methods for controlled video generation are typically limited to a single control type, lacking the flexibility to handle diverse control demands. In this paper, we introduce Diffusion as Shader (DaS), a novel approach that supports multiple video control tasks within a unified architecture. Our key insight is that achiev- ing versatile video control necessitates leveraging 3D control signals, as videos are fundamentally 2D renderings of dynamic 3D content. Unlike prior methods limited to 2D control signals, DaS leverages 3D tracking videos as control inputs, making the video diffusion process inherently 3D-aware. This innovation allows DaS to achieve a wide range of video controls by simply manipulating the 3D tracking videos. A further advantage of using 3D tracking videos is their ability to effectively link frames, significantly en- hancing the temporal consistency of the generated videos. With just 3 days of fine-tuning on 8 H800 GPUs using less than 10k videos, DaS demonstrates strong control capabilities across diverse tasks, including mesh-to-video generation, camera control, motion transfer, and object manipulation. Codes and more results are available at https://igl-hkust.github.io/das/.
+
+# 研究者收藏补充 · 2026-09-19
+
+首轮标注与方法核查分开记录；全文文本仅本地存储。
+
+## P404 · DeformGS: Scene Flow in Highly Deformable Scenes for Deformable Object Manipulation
+
+Bardienus P. Duisterhof; Zhao Mandi; Yunchao Yao; Jia-Wei Liu; Jenny Seidenschwarz; Mike Zheng Shou; Deva Ramanan; Shuran Song; Stan Birchfield; Bowen Wen; Jeffrey Ichnowski
+
+[arXiv 作者记录](https://arxiv.org/abs/2312.00583)
+
+状态：abstract_review；18 页。
+
+### 内容摘要
+
+DeformGS 通过 Gaussian 表示和动量、等距启发正则估计场景流。
+
+### 本篇研究的问题
+
+多视角视频怎样重建高形变物体的稠密运动？
+
+### 适用条件
+
+这是已观测动态的重建；物理启发正则不等于未知未来的完整模拟器。
+
+### 方法与训练
+
+DeformGS 通过 Gaussian 表示和动量、等距启发正则估计场景流。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】这是已观测动态的重建；物理启发正则不等于未知未来的完整模拟器。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P403 · MagicAnimate: Temporally Consistent Human Image Animation using Diffusion Model
+
+Zhongcong Xu; Jianfeng Zhang; Jun Hao Liew; Hanshu Yan; Jia-Wei Liu; Chenxu Zhang; Jiashi Feng; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2311.16498)
+
+状态：abstract_review；10 页。
+
+### 内容摘要
+
+MagicAnimate 使用视频扩散、外观编码与片段融合改善人物动画。
+
+### 本篇研究的问题
+
+人物图像动画怎样保持身份和时间连续？
+
+### 适用条件
+
+运动条件控制与物理规律推断需要不同实验。
+
+### 方法与训练
+
+MagicAnimate 使用视频扩散、外观编码与片段融合改善人物动画。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】运动条件控制与物理规律推断需要不同实验。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P402 · MotionDirector: Motion Customization of Text-to-Video Diffusion Models
+
+Rui Zhao; Yuchao Gu; Jay Zhangjie Wu; David Junhao Zhang; Jiawei Liu; Weijia Wu; Jussi Keppo; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2310.08465)
+
+状态：abstract_review；19 页。
+
+### 内容摘要
+
+MotionDirector 用双路径 LoRA 和去外观偏差的时间损失学习运动定制。
+
+### 本篇研究的问题
+
+少量视频中的运动概念怎样与外观解耦迁移？
+
+### 适用条件
+
+运动风格迁移不直接验证动作导致的对象状态变化。
+
+### 方法与训练
+
+MotionDirector 用双路径 LoRA 和去外观偏差的时间损失学习运动定制。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】运动风格迁移不直接验证动作导致的对象状态变化。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P401 · Show-Harness: Just a VLM Agent Can Play Robots
+
+Yanzhe Chen; Zechen Bai; Zhijun Cao; Wenzheng Zeng; Kevin Qinghong Lin; Yiqi Lin; Guoqiang Liang; Kevin Yuchen Ma; Qiming Huang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2609.10522)
+
+状态：abstract_review；30 页。
+
+### 内容摘要
+
+Show-Harness 通过语义动作接口连接意图与执行，并以 GUMI 支持 GUI 示范采集。
+
+### 本篇研究的问题
+
+怎样用紧凑的语义接口让人和 VLM 操控不同机器人？
+
+### 适用条件
+
+属于机器人交互与执行接口，不直接生成或验证未来视频。
+
+### 方法与训练
+
+Show-Harness 通过语义动作接口连接意图与执行，并以 GUMI 支持 GUI 示范采集。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】属于机器人交互与执行接口，不直接生成或验证未来视频。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P400 · One Demonstration, Many Objects: Generalizing Manipulation via Local Contact Geometry
+
+Satvik Sharma; Samrat Sahoo; Huang Huang; Fei-Fei Li; Jiajun Wu; Dorsa Sadigh; Jeannette Bohg
+
+[arXiv 作者记录](https://arxiv.org/abs/2609.01938)
+
+状态：abstract_review；21 页。
+
+### 内容摘要
+
+DemoMimic 关注接触点附近的物体几何，学习更可泛化的灵巧操作策略。
+
+### 本篇研究的问题
+
+少量示范如何通过局部接触几何迁移到不同物体？
+
+### 适用条件
+
+策略的接触泛化不是视频生成的直接证据；奖励和真实测试条件仍需细读。
+
+### 方法与训练
+
+DemoMimic 关注接触点附近的物体几何，学习更可泛化的灵巧操作策略。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】策略的接触泛化不是视频生成的直接证据；奖励和真实测试条件仍需细读。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P399 · LeVJEPA: Efficient & Scalable Video Pretraining without the Heuristics
+
+Lukas Kuhn; Lucas Maes; Giuseppe Serra; Quentin Le Lidec; Yann LeCun; Randall Balestriero; Florian Buettner
+
+[arXiv 作者记录](https://arxiv.org/abs/2608.27395)
+
+状态：abstract_review；12 页。
+
+### 内容摘要
+
+LeVJEPA 将 LeJEPA 的表征学习目标扩展到视频，并比较外观与运动任务中的表示质量。
+
+### 本篇研究的问题
+
+怎样以较少训练启发式学习兼顾外观与运动的视频表征？
+
+### 适用条件
+
+视频编码能力不等于像素级未来生成；需另测动作条件预测。
+
+### 方法与训练
+
+LeVJEPA 将 LeJEPA 的表征学习目标扩展到视频，并比较外观与运动任务中的表示质量。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】视频编码能力不等于像素级未来生成；需另测动作条件预测。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P398 · TrAct: Bridging Robot Control and Visual Prediction with Visual Tracks
+
+Zhi Cao; Howard Ji; Kevin Zhang; Kuangzhi Ge; Li Fei-Fei; Jiajun Wu; Huang Huang
+
+[arXiv 作者记录](https://arxiv.org/abs/2608.24101)
+
+状态：method_checked；22 页。
+
+### 内容摘要
+
+TrAct 联合提出动作及视觉轨迹，用轨迹条件世界模型预测后果，再由视觉语言奖励模型排序。
+
+### 本篇研究的问题
+
+视觉轨迹能否连接候选机器人动作与未来视频评价？
+
+### 适用条件
+
+动作提出与结果评分有独立模块；需要区分轨迹跟随、被动物体预测及最终执行成功。
+
+### 方法与训练
+
+π0.5 改为动作／轨迹联合 flow 训练；SVD 加轨迹 ControlNet。预训练用 DROID/EgoDex，轨迹来自校准投影和 CoTracker；动作模型报告 4 张 H100、3 万步。
+
+### 验证范围
+
+LIBERO-INTEGRAL 包括稳健性和跨本体任务；比较 π0.5、仅 VLAT、动作条件及轨迹条件世界模型，并测试真实 Franka。统一数据适配用于检验轨迹接口的作用。
+
+### 边界与待核查事项
+
+【作者对照观察】动作条件基线出现夹爪姿态错误、物体消失与跨视图位置不一致；这是论文 Fig.3 的方法对照，不是所有当前模型的普遍缺陷结论。
+
+### 证据定位
+
+PDF pp.3–5 §3–4：完整接口、训练、推理与 LIBERO-INTEGRAL；p.5 §4.2：对照错误。方法已核查，未复现实验。
+
+
+## P397 · LpWM: A Case for Sparse Representations in World Models
+
+Yilun Kuang; Yash Dagade; Quentin Le Lidec; Lucas Maes; Randall Balestriero; Yann LeCun
+
+[arXiv 作者记录](https://arxiv.org/abs/2608.22764)
+
+状态：abstract_review；28 页。
+
+### 内容摘要
+
+LpWM 从稀疏表征与动力学近似的关系出发研究世界模型的潜空间结构。
+
+### 本篇研究的问题
+
+什么潜空间几何更适合学习和规划非线性动力学？
+
+### 适用条件
+
+理论假设与实验环境需单独核对，不能直接推成任意真实世界的可解释规则。
+
+### 方法与训练
+
+LpWM 从稀疏表征与动力学近似的关系出发研究世界模型的潜空间结构。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】理论假设与实验环境需单独核对，不能直接推成任意真实世界的可解释规则。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P396 · Masked Visual Actions for Unified World Modeling
+
+Hadi Alzayer; Wenlong Huang; Haonan Chen; Christopher Luey; Lvmin Zhang; Maneesh Agrawala; Gordon Wetzstein; Li Fei-Fei; Yilun Du; Jiajun Wu; Jia-Bin Huang
+
+[arXiv 作者记录](https://arxiv.org/abs/2607.19343)
+
+状态：method_checked；21 页。
+
+### 内容摘要
+
+Masked Visual Actions 以部分可见的实体轨迹视频作为动作接口，预测其余交互并支持候选策略评价。
+
+### 本篇研究的问题
+
+遮挡不同实体的未来轨迹能否统一前向、逆向与无条件世界建模？
+
+### 适用条件
+
+部分实体未来已知，但被遮挡实体后果仍需预测；输入条件强于仅给首帧。
+
+### 方法与训练
+
+Wan-Fun-Control 2.2 14B；同一 VAE 编码条件，缺失区域置灰后拼接。LoRA rank 256，batch 4，8 张 H200，约 1 万步／4 天。
+
+### 验证范围
+
+DROID、未见末端形态与 BEHAVIOR 本体上的视觉保真和控制比较，另有策略评价、规划和逆向建模实验。Table 1 各基线条件不完全相同，需连同正文说明比较。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】部分实体未来已知，但被遮挡实体后果仍需预测；输入条件强于仅给首帧。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+PDF pp.3–5：实体掩码接口、数据构造；p.6 §4.2：训练规模；p.7 §5.1、Tables 1–2：跨本体条件与比较。方法已核查，未复现实验。
+
+
+## P395 · Patch Policy: Efficient Embodied Control via Dense Visual Representations
+
+Gaoyue Zhou; Zichen Jeff Cui; Ada Langford; Bowen Tan; Yann LeCun; Lerrel Pinto
+
+[arXiv 作者记录](https://arxiv.org/abs/2607.18236)
+
+状态：abstract_review；27 页。
+
+### 内容摘要
+
+Patch Policy 使用预训练视觉特征中的局部 token，减少对完整视觉语言模型的依赖。
+
+### 本篇研究的问题
+
+能否直接利用稠密视觉 token 学习高效的机器人策略？
+
+### 适用条件
+
+机器人动作策略并非可供人浏览的后果视频生成器。
+
+### 方法与训练
+
+Patch Policy 使用预训练视觉特征中的局部 token，减少对完整视觉语言模型的依赖。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】机器人动作策略并非可供人浏览的后果视频生成器。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P394 · RoboTTT: Context Scaling for Robot Policies
+
+Yunfan Jiang; Yevgen Chebotar; Ruijie Zheng; Fengyuan Hu; Yunhao Ge; Jimmy Wu; Tianyuan Dai; Scott Reed; Li Fei-Fei; Yuke Zhu; Linxi "Jim" Fan
+
+[arXiv 作者记录](https://arxiv.org/abs/2607.15275)
+
+状态：abstract_review；22 页。
+
+### 内容摘要
+
+RoboTTT 用测试时训练机制扩展视觉运动上下文，研究示范学习、扰动恢复与多阶段任务。
+
+### 本篇研究的问题
+
+机器人策略怎样利用很长的交互历史而控制推理成本？
+
+### 适用条件
+
+长策略上下文不等于像素视频的长期世界记忆。
+
+### 方法与训练
+
+RoboTTT 用测试时训练机制扩展视觉运动上下文，研究示范学习、扰动恢复与多阶段任务。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】长策略上下文不等于像素视频的长期世界记忆。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P393 · ThinkBLOX: 3D Indoor Scene Generation with Progressive Reasoning
+
+Yuan Xiao; Can Wang; Xiangyu Kong; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2607.13539)
+
+状态：abstract_review；20 页。
+
+### 内容摘要
+
+ThinkBLOX 用 VLM 逐步放置和修整场景，构建带多视图、推理说明和 JSON 布局的训练数据，并使用分层奖励优化。
+
+### 本篇研究的问题
+
+三维室内场景能否通过逐步推理与局部反馈来构建和修改？
+
+### 适用条件
+
+推理发生在 VLM 与显式场景布局层；尚不能据此认定视频模型自身推断物理后果。
+
+### 方法与训练
+
+ThinkBLOX 用 VLM 逐步放置和修整场景，构建带多视图、推理说明和 JSON 布局的训练数据，并使用分层奖励优化。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】推理发生在 VLM 与显式场景布局层；尚不能据此认定视频模型自身推断物理后果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P392 · Video Generation Models are General-Purpose Vision Learners
+
+Letian Wang; Chuhan Zhang; Rishabh Kabra; Jasper Uijlings; Steven Waslander; Andrew Zisserman; Joao Carreira; Kaiming He; Misha Andriluka; Eduard Gabriel Bazavan; Andrei Zanfir; Cristian Sminchisescu
+
+[arXiv 作者记录](https://arxiv.org/abs/2607.09024)
+
+状态：method_checked；19 页。
+
+### 内容摘要
+
+GenCeption 将预训练视频扩散骨干改为前馈感知模型，经任务条件后训练支持深度、法线、分割、姿态和关键点等任务。
+
+### 本篇研究的问题
+
+视频生成预训练能否提供可迁移到多种视觉任务的通用表征？
+
+### 适用条件
+
+重点是生成预训练到感知的迁移，不能把感知任务泛化等同于视频模型预测干预后果。
+
+### 方法与训练
+
+将视频扩散骨干改成干净 latent、固定 t=0 的单次前向感知模型；稠密任务映射到 RGB，稀疏任务加可学习 token，主要使用合成监督。
+
+### 验证范围
+
+多类稠密与稀疏视觉感知任务；本条核查了接口和训练任务，未逐表复核全部分数。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】重点是生成预训练到感知的迁移，不能把感知任务泛化等同于视频模型预测干预后果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+PDF pp.5–7 §3、Fig.4–5：生成到感知改造和统一输出；方法已核查，未复现实验。
+
+
+## P391 · AdaJEPA: An Adaptive Latent World Model
+
+Ying Wang; Oumayma Bounou; Yann LeCun; Mengye Ren
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.32026)
+
+状态：method_checked；19 页。
+
+### 内容摘要
+
+AdaJEPA 在执行动作后，用观测到的转移更新编码器和预测器的部分参数，再进行规划。
+
+### 本篇研究的问题
+
+部署时遇到外观或动力学变化，潜空间世界模型能否利用刚发生的交互快速适应？
+
+### 适用条件
+
+属于潜空间模型的测试时适应；不等于显式规则编辑，也没有直接验证写实视频质量。
+
+### 方法与训练
+
+测试时每次 MPC 后用自监督转移损失更新编码器、预测器的后层；近期 5 个样本回放，每次一步梯度更新。
+
+### 验证范围
+
+PushT、PointMaze 上的变化测试；按目标达成评价，而不是视频 FVD。正文给出种子和每种环境的具体变化，不能概括为任意机制突变均已解决。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】属于潜空间模型的测试时适应；不等于显式规则编辑，也没有直接验证写实视频质量。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+PDF pp.2–6：方法闭环、更新参数、回放、数据与变化设置。方法已核查，未复现实验。
+
+
+## P390 · ReGRPO: Reflection-Augmented Policy Optimization for Tool-Using Agents
+
+Binjie Zhang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.31392)
+
+状态：abstract_review；29 页。
+
+### 内容摘要
+
+ReGRPO 用错误类型、证据和修复计划构造训练数据，再联合优化反思与纠正动作并计入反思成本。
+
+### 本篇研究的问题
+
+工具智能体怎样从实际失败中学习有效且不过量的反思？
+
+### 适用条件
+
+工具任务中的纠错不直接证明物理世界机制修订或视频推理。
+
+### 方法与训练
+
+ReGRPO 用错误类型、证据和修复计划构造训练数据，再联合优化反思与纠正动作并计入反思成本。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】工具任务中的纠错不直接证明物理世界机制修订或视频推理。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P389 · SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation
+
+Nadun Ranawaka; Josiah Wong; Wei-Lin Pai; Wei-Teng Chu; Tianyuan Dai; Masoud Moghani; Hang Yin; Yunfan Jiang; Wesley Durbano; Brandon Huynh; Yu Fang; Danfei Xu; Ruohan Zhang; Li Fei-Fei; Linxi Fan; Bowen Wen; Ajay Mandlekar; Yuke Zhu
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.28276)
+
+状态：abstract_review；52 页。
+
+### 内容摘要
+
+SimFoundry 以模块化 real-to-sim 管线生成场景，并比较仿真排序和真实执行结果。
+
+### 本篇研究的问题
+
+真实视频能否自动转成适合策略学习和评价的模拟场景？
+
+### 适用条件
+
+仿真与真实的相关性在所测任务中成立，不能作为所有生成世界的物理保真保证。
+
+### 方法与训练
+
+SimFoundry 以模块化 real-to-sim 管线生成场景，并比较仿真排序和真实执行结果。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】仿真与真实的相关性在所测任务中成立，不能作为所有生成世界的物理保真保证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P388 · Supervise What Survives: Geometry-Guided VLA Adaptation from Synthetic Robot Videos
+
+Danze Chen; Yanzhe Chen; Qiming Huang; Zhijun Cao; Chen Gao; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.24448)
+
+状态：abstract_review；14 页。
+
+### 内容摘要
+
+GRA 将合成数据中的几何运动提炼为二维末端路径，用辅助预测和表征对齐适配 VLA。
+
+### 本篇研究的问题
+
+合成机器人视频中的哪些信息适合监督真实动作模型？
+
+### 适用条件
+
+视频中的几何轨迹与低层电机控制分开处理；不能直接把像素恢复成可靠控制标签。
+
+### 方法与训练
+
+GRA 将合成数据中的几何运动提炼为二维末端路径，用辅助预测和表征对齐适配 VLA。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】视频中的几何轨迹与低层电机控制分开处理；不能直接把像素恢复成可靠控制标签。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P387 · MeshFlow: Mesh Generation with Equivariant Flow Matching
+
+Qi Sun; Kiyohiro Nakayama; Jing Nathan Yan; Qixing Huang; Alexander Rush; Leonidas Guibas; Gordon Wetzstein; Jing Liao; Guandao Yang
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.23489)
+
+状态：abstract_review；19 页。
+
+### 内容摘要
+
+MeshFlow 在三角形集合上使用等变最优传输流匹配，修改 Transformer 与训练目标以保持排列对称性。
+
+### 本篇研究的问题
+
+网格生成如何尊重面与顶点排列的对称性？
+
+### 适用条件
+
+研究网格表示和生成，未在摘要中提出动态机制学习或动作后果预测。
+
+### 方法与训练
+
+MeshFlow 在三角形集合上使用等变最优传输流匹配，修改 Transformer 与训练目标以保持排列对称性。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】研究网格表示和生成，未在摘要中提出动态机制学习或动作后果预测。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P386 · SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors
+
+Pratyaksh Rao; Wancong Zhang; Randall Balestriero; Yann LeCun; Giuseppe Loianno
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.23444)
+
+状态：abstract_review；18 页。
+
+### 内容摘要
+
+SkyJEPA 将隐空间动力学、物理启发的状态探针与采样规划结合，研究仿真到真实的飞行控制。
+
+### 本篇研究的问题
+
+如何把潜空间世界模型用于高频无人机控制？
+
+### 适用条件
+
+可读出的物理状态与控制成功不代表模型内部是完整可解释的物理机制。
+
+### 方法与训练
+
+SkyJEPA 将隐空间动力学、物理启发的状态探针与采样规划结合，研究仿真到真实的飞行控制。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】可读出的物理状态与控制成功不代表模型内部是完整可解释的物理机制。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P385 · BoxCtrl: 3D-Aware Visual Prompting for Geometric Image Editing
+
+Feifei Wang; Shiyuan Yang; Xiaoyu Li; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.23270)
+
+状态：abstract_review；10 页。
+
+### 内容摘要
+
+BoxCtrl 以 RGB 三维框的二维投影作为视觉提示，先使用合成数据监督微调，再通过真实数据与几何、画质奖励进行强化学习。
+
+### 本篇研究的问题
+
+如何通过投影的三维框精确控制图像中的几何编辑？
+
+### 适用条件
+
+编辑目标由用户的几何控制给定；几何编辑准确性与未知物理后果预测应分别评价。
+
+### 方法与训练
+
+BoxCtrl 以 RGB 三维框的二维投影作为视觉提示，先使用合成数据监督微调，再通过真实数据与几何、画质奖励进行强化学习。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】编辑目标由用户的几何控制给定；几何编辑准确性与未知物理后果预测应分别评价。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P384 · Learning Stable Canonical Worlds for Novel View Synthesis and Beyond
+
+Xiaoyu Xu; Jian Zou; Sheyang Tang; Zhihua Wang; Jing Liao; Kede Ma
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.23027)
+
+状态：abstract_review；20 页。
+
+### 内容摘要
+
+CanonicalGS 将多视图观测聚合成场景中心表示，降低冗余和不可靠观测对前馈 Gaussian Splatting 的干扰。
+
+### 本篇研究的问题
+
+增加输入视图时，三维表示怎样收敛到稳定的场景坐标？
+
+### 适用条件
+
+摘要报告新视角合成与分割收益；静态表示稳定性不直接检验动态世界机制。
+
+### 方法与训练
+
+CanonicalGS 将多视图观测聚合成场景中心表示，降低冗余和不可靠观测对前馈 Gaussian Splatting 的干扰。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】摘要报告新视角合成与分割收益；静态表示稳定性不直接检验动态世界机制。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P383 · Cinematic Compositing Using Character-Environment-Harmonized Video Generation Models
+
+Tianyi Xiang; Mingming He; Li Ma; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.20233)
+
+状态：abstract_review；14 页。
+
+### 内容摘要
+
+通过三类掩码和 RGB-D 联合去噪协调角色、交互道具与环境，并构造重光照训练配对。
+
+### 本篇研究的问题
+
+视频合成如何同时表现角色对环境的交互与环境对角色的光照影响？
+
+### 适用条件
+
+视频合成中的交互合理性需要与指定动作下的正确后果区分；控制输入与配对数据条件待正文核查。
+
+### 方法与训练
+
+通过三类掩码和 RGB-D 联合去噪协调角色、交互道具与环境，并构造重光照训练配对。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】视频合成中的交互合理性需要与指定动作下的正确后果区分；控制输入与配对数据条件待正文核查。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P382 · You Don't Need Strong Assumptions: Visual Representation Learning via Temporal Differences
+
+Ninad Daithankar; Alexi Gladstone; Yann LeCun; Heng Ji
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.15956)
+
+状态：abstract_review；25 页。
+
+### 内容摘要
+
+这项工作研究利用时间差分学习视觉表示，重新审视常见预训练假设。
+
+### 本篇研究的问题
+
+时间差分能否在较弱假设下提供有用的视觉学习信号？
+
+### 适用条件
+
+本轮只核对摘要层的问题定位；具体目标与理论条件仍需方法复核。
+
+### 方法与训练
+
+这项工作研究利用时间差分学习视觉表示，重新审视常见预训练假设。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】本轮只核对摘要层的问题定位；具体目标与理论条件仍需方法复核。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P381 · Unifying Object-Centric World Models and Diffusion Policy: A Hierarchical Framework for Multi-Stage Robotic Tasks
+
+Raktim Gautam Goswami; Prashanth Krishnamurthy; Yann LeCun; Farshad Khorrami
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.08775)
+
+状态：abstract_review；20 页。
+
+### 内容摘要
+
+WorldDP 在运行时提出可行的子目标，由低层 diffusion policy 执行，连接世界预测与多阶段机器人任务。
+
+### 本篇研究的问题
+
+对象级世界模型能否为长任务提供可执行的中间目标？
+
+### 适用条件
+
+高层目标有效性与生成视频中的细粒度物理正确性属于不同评价。
+
+### 方法与训练
+
+WorldDP 在运行时提出可行的子目标，由低层 diffusion policy 执行，连接世界预测与多阶段机器人任务。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】高层目标有效性与生成视频中的细粒度物理正确性属于不同评价。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P380 · Dream.exe: Can Video Generation Models Dream Executable Robot Manipulation?
+
+Rui Zhao; Kaiming Yang; Jifeng Zhu; Siyang Chen; Ziqi Wang; Weijia Wu; Kevin Qinghong Lin; Heng Wang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.04811)
+
+状态：method_checked；18 页。
+
+### 内容摘要
+
+Dream.exe 以视频到执行管线，分别评估视觉质量、轨迹保真和执行成功。
+
+### 本篇研究的问题
+
+视频中看似合理的机器人操作是否真的可执行？
+
+### 适用条件
+
+执行评价也受运动恢复与控制管线影响，需与视频生成错误分开归因。
+
+### 方法与训练
+
+主要贡献是评价框架；包含通用闭源、开源及机器人专用模型，并另测在测试集外数据微调的 Wan。
+
+### 验证范围
+
+约 101 个经过视角、遮挡与轨迹可辨性筛选的任务，分原子动作、多对象交互、多阶段任务；视觉质量、轨迹保真与执行成功分开。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】执行评价也受运动恢复与控制管线影响，需与视频生成错误分开归因。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+PDF pp.3–4 §3.1–3.3：任务筛选、难度层级、模型类别与执行评价管线。方法已核查，未重新跑执行实验。
+
+
+## P379 · Demo2Tutorial: From Human Experience to Multimodal Software Tutorials
+
+Zechen Bai; Zhiheng Chen; Yiqi Lin; Kevin Qinghong Lin; Difei Gao; Xiangwu Guo; Xin Wang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.03951)
+
+状态：method_checked；22 页。
+
+### 内容摘要
+
+Demo2Tutorial 将录屏和交互日志解析为动作与意图，再形成层级任务图及图文教程，评估人和 GUI agent 的使用效果。
+
+### 本篇研究的问题
+
+人类的软件操作记录怎样转成可学习的多模态教程？
+
+### 适用条件
+
+生成的是软件操作教程，不能等同于预测物理干预后果的视频。
+
+### 方法与训练
+
+GPT-4o 解析状态变化和意图，Step Planner 组成层级图；不是训练视频扩散模型来预测下一操作后果。
+
+### 验证范围
+
+TutorialBench 的教程质量比较、教程作为 Agent-S3 外部知识时的 OSWorld 完成率，以及用户完成时间和形式偏好。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】生成的是软件操作教程，不能等同于预测物理干预后果的视频。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+PDF pp.4–5 §3.2–5：动作解析、任务图、选帧、TutorialBench 与三类评价。方法已核查，未复现实验。
+
+
+## P378 · VLMs are Good Teachers for Video Reasoning via Adaptive Test-Time Optimization
+
+Junhao Cheng; Liang Hou; Tianxiong Zhong; Xin Tao; Pengfei Wan; Kun Gai; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.02564)
+
+状态：method_checked；14 页。
+
+### 内容摘要
+
+VLM 作为教师构造可微奖励，在测试时优化视频模型的轻量 LoRA，并在 VBVR 与 RULER 上评价。
+
+### 本篇研究的问题
+
+外部视觉语言模型能否通过过程奖励提升视频生成模型的规则执行？
+
+### 适用条件
+
+推理阶段仍需要外部教师及在线优化，不能当作无需外部帮助的视频内生推理。
+
+### 方法与训练
+
+测试时冻结教师与视频骨干，只更新 rank-16 LoRA，最多 40 步；通过轻量 VAE 与可微 VLM 奖励反传。
+
+### 验证范围
+
+VBVR-Bench 与 RULER-Bench 分开报告；在所述 89 帧设置下比较推理预算。另人工检查每个基准 100 个生成案例，定义过程或最终目标违反为失败。
+
+### 边界与待核查事项
+
+【作者观察】教师有时漏掉细粒度视觉错误或生成不完整目标；pp.11 的两组 100 案例中剩余失败为 18%／29%。这是该人工子集的比例，不是总榜失败率。优化还有轻微画质损失。
+
+### 证据定位
+
+PDF p.4 Algorithm 1 与 §B：教师查询和更新流程；p.6 Tables I–II 与参数；p.11 Fig.7、Table V：人工失败归因。方法已核查，未复现实验。
+
+
+## P377 · PAI-Studio: Cinematic Video Background Replacement with Camera-Aware Motion
+
+Heyuan Gao; Bangxun Tang; Yiren Song; Guian Fang; Zijian He; Jie Yang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2606.01399)
+
+状态：abstract_review；26 页。
+
+### 内容摘要
+
+PAI-Studio 用参考条件与双向注意力联合建模前景动态和背景外观，并构建电影来源训练数据。
+
+### 本篇研究的问题
+
+更换动态背景时怎样保持前景运动、身份和光照协调？
+
+### 适用条件
+
+背景一致与重光照不直接验证接触、受力或反事实后果。
+
+### 方法与训练
+
+PAI-Studio 用参考条件与双向注意力联合建模前景动态和背景外观，并构建电影来源训练数据。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】背景一致与重光照不直接验证接触、受力或反事实后果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P376 · Planning with the Views
+
+Kangrui Wang; Linjie Li; Zhengyuan Yang; Shiqi Chen; Zihan Wang; Li Fei-Fei; Jiajun Wu; Leonidas Guibas; Lijuan Wang; Manling Li
+
+[arXiv 作者记录](https://arxiv.org/abs/2605.29563)
+
+状态：abstract_review；39 页。
+
+### 内容摘要
+
+Planning with the Views 在 ViewSuite 中评估视角变换，通过自探索和视图图蒸馏改善规划。
+
+### 本篇研究的问题
+
+智能体能否预测视角改变并组合多步观察计划？
+
+### 适用条件
+
+对象是主动观察与空间推理，不直接生成物理交互后果。
+
+### 方法与训练
+
+Planning with the Views 在 ViewSuite 中评估视角变换，通过自探索和视图图蒸馏改善规划。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】对象是主动观察与空间推理，不直接生成物理交互后果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P375 · When Does LeJEPA Learn a World Model?
+
+David Klindt; Yann LeCun; Randall Balestriero
+
+[arXiv 作者记录](https://arxiv.org/abs/2605.26379)
+
+状态：abstract_review；48 页。
+
+### 内容摘要
+
+作者分析 LeJEPA 的线性可辨识性以及状态分布、噪声假设与规划性能之间的关系。
+
+### 本篇研究的问题
+
+在什么条件下，JEPA 学到的表示可辨识为世界状态？
+
+### 适用条件
+
+结论依赖所给生成过程和分布假设，不能外推为真实世界因果机制的普遍可辨识性。
+
+### 方法与训练
+
+作者分析 LeJEPA 的线性可辨识性以及状态分布、噪声假设与规划性能之间的关系。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】结论依赖所给生成过程和分布假设，不能外推为真实世界因果机制的普遍可辨识性。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P374 · stable-worldmodel: A Platform for Reproducible World Modeling Research and Evaluation
+
+Lucas Maes; Quentin Le Lidec; Luiz Facury; Nassim Massaudi; Ayush Chaurasia; Francesco Capuano; Richard Gao; Taj Gillin; Dan Haramati; Damien Scieur; Yann LeCun; Randall Balestriero
+
+[arXiv 作者记录](https://arxiv.org/abs/2605.21800)
+
+状态：abstract_review；36 页。
+
+### 内容摘要
+
+stable-worldmodel 提供数据、模型和规划器接口，以及视觉、几何和物理变化的统一实验平台。
+
+### 本篇研究的问题
+
+怎样使世界模型在受控环境变化下的比较可复现？
+
+### 适用条件
+
+这是比较基础设施；具体模型是否解决某类变化仍须查看实验结果。
+
+### 方法与训练
+
+stable-worldmodel 提供数据、模型和规划器接口，以及视觉、几何和物理变化的统一实验平台。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】这是比较基础设施；具体模型是否解决某类变化仍须查看实验结果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P373 · SWEET: Sparse World Modeling with Image Editing for Embodied Task Execution
+
+Yiren Song; Yihan Wang; Xiyao Deng; Zhuoran Yan; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2605.19319)
+
+状态：abstract_review；13 页。
+
+### 内容摘要
+
+SWEET 在相同机器人数据设置下比较视频生成和图像编辑，再用逐次编辑产生任务关键帧。
+
+### 本篇研究的问题
+
+机器人任务是否可以用稀疏关键状态替代密集视频规划？
+
+### 适用条件
+
+稀疏目标的执行收益不表示帧间动态正确；对 Foresee 是预览预算的对照方法。
+
+### 方法与训练
+
+SWEET 在相同机器人数据设置下比较视频生成和图像编辑，再用逐次编辑产生任务关键帧。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】稀疏目标的执行收益不表示帧间动态正确；对 Foresee 是预览预算的对照方法。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P372 · ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop
+
+Yining Hong; Jiageng Liu; Han Yin; Manling Li; Leonidas Guibas; Li Fei-Fei; Jiajun Wu; Yejin Choi
+
+[arXiv 作者记录](https://arxiv.org/abs/2605.18746)
+
+状态：abstract_review；38 页。
+
+### 内容摘要
+
+ESI-Bench 在 OmniGibson 中让观察者执行动作取证，比较主动探索、被动观察与三维辅助。
+
+### 本篇研究的问题
+
+空间理解从固定观察转为主动探索后会发生什么？
+
+### 适用条件
+
+显式三维表示错误也可能损害推理；不能预设 3D 辅助必然更可靠。
+
+### 方法与训练
+
+ESI-Bench 在 OmniGibson 中让观察者执行动作取证，比较主动探索、被动观察与三维辅助。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】显式三维表示错误也可能损害推理；不能预设 3D 辅助必然更可靠。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P371 · VISTA: Triplet-Supervised Video Style Transfer with Diffusion Transformers
+
+Yiren Song; Wangzi Yao; Haofan Wang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2605.17312)
+
+状态：abstract_review；13 页。
+
+### 内容摘要
+
+VISTA 使用运动对齐的三元组数据与风格适配器训练视频扩散模型。
+
+### 本篇研究的问题
+
+视频风格迁移怎样解耦风格、内容和运动？
+
+### 适用条件
+
+风格和时间一致性的结果不能证明物理规则遵循。
+
+### 方法与训练
+
+VISTA 使用运动对齐的三元组数据与风格适配器训练视频扩散模型。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】风格和时间一致性的结果不能证明物理规则遵循。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P370 · StreamingEffect: Real-Time Human-Centric Video Effect Generation
+
+Yiren Song; Cheng Liu; Yuxin Jiang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2605.17019)
+
+状态：abstract_review；15 页。
+
+### 内容摘要
+
+StreamingEffect 将双向教师蒸馏为因果学生并减少采样步数，支持在线注入关键帧特效。
+
+### 本篇研究的问题
+
+交互式人物视频特效怎样做到因果流式生成？
+
+### 适用条件
+
+论文的实时设置使用 H200；不能直接承诺 A10 上同等分辨率和延迟。
+
+### 方法与训练
+
+StreamingEffect 将双向教师蒸馏为因果学生并减少采样步数，支持在线注入关键帧特效。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】论文的实时设置使用 H200；不能直接承诺 A10 上同等分辨率和延迟。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P369 · AnyFlow: Any-Step Video Diffusion Model with On-Policy Flow Map Distillation
+
+Yuchao Gu; Guian Fang; Yuxin Jiang; Weijia Mao; Song Han; Han Cai; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2605.13724)
+
+状态：abstract_review；19 页。
+
+### 内容摘要
+
+AnyFlow 学习任意时间区间的 flow map，并通过在策略分布上的模拟蒸馏改善少步采样。
+
+### 本篇研究的问题
+
+视频扩散怎样同时适应不同采样预算并减少因果滚动误差？
+
+### 适用条件
+
+速度与质量需按模型、帧数、硬件共同报告；蒸馏本身不保证物理推理保留。
+
+### 方法与训练
+
+AnyFlow 学习任意时间区间的 flow map，并通过在策略分布上的模拟蒸馏改善少步采样。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】速度与质量需按模型、帧数、硬件共同报告；蒸馏本身不保证物理推理保留。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P368 · World Action Models: The Next Frontier in Embodied AI
+
+Siyin Wang; Junhao Shi; Zhaoyang Fu; Xinzhe He; Feihong Liu; Chenchen Yang; Yikang Zhou; Zhaoye Fei; Jingjing Gong; Jinlan Fu; Mike Zheng Shou; Xuanjing Huang; Xipeng Qiu; Yu-Gang Jiang
+
+[arXiv 作者记录](https://arxiv.org/abs/2605.12090)
+
+状态：abstract_review；69 页。
+
+### 内容摘要
+
+World Action Models 综述区分级联和联合建模，梳理数据、条件和动作解码方式。
+
+### 本篇研究的问题
+
+怎样统一描述未来状态预测和动作生成的结合方式？
+
+### 适用条件
+
+综述中的研究议程不是新模型能力已被验证的证据。
+
+### 方法与训练
+
+World Action Models 综述区分级联和联合建模，梳理数据、条件和动作解码方式。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】综述中的研究议程不是新模型能力已被验证的证据。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P367 · OmniHumanoid: Streaming Cross-Embodiment Video Generation with Paired-Free Adaptation
+
+Yiren Song; Xiyao Deng; Pei Yang; Yihan Wang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2605.12038)
+
+状态：abstract_review；15 页。
+
+### 内容摘要
+
+OmniHumanoid 将共享运动迁移与外形适配器分开，并支持流式人形视频生成。
+
+### 本篇研究的问题
+
+跨机器人外形的视频动作迁移能否减少新外形配对数据需求？
+
+### 适用条件
+
+保持动作外观与真实机器人可执行性需要不同测试。
+
+### 方法与训练
+
+OmniHumanoid 将共享运动迁移与外形适配器分开，并支持流式人形视频生成。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】保持动作外观与真实机器人可执行性需要不同测试。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P366 · On Training in Imagination
+
+Nadav Timor; Ravid Shwartz-Ziv; Micah Goldblum; Yann LeCun; David Harel
+
+[arXiv 作者记录](https://arxiv.org/abs/2605.06732)
+
+状态：abstract_review；28 页。
+
+### 内容摘要
+
+作者分析动力学和奖励误差对策略学习的影响，讨论噪声、方差与计算预算之间的关系。
+
+### 本篇研究的问题
+
+在想象轨迹上训练策略时，模型误差怎样影响策略回报？
+
+### 适用条件
+
+理论中的误差与平滑性假设需要对应到实际模型；不能以视频观感代替回报验证。
+
+### 方法与训练
+
+作者分析动力学和奖励误差对策略学习的影响，讨论噪声、方差与计算预算之间的关系。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】理论中的误差与平滑性假设需要对应到实际模型；不能以视频观感代替回报验证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P365 · Sparkle: Realizing Lively Instruction-Guided Video Background Replacement via Decoupled Guidance
+
+Ziyun Zeng; Yiqi Lin; Guoqiang Liang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2605.06535)
+
+状态：abstract_review；28 页。
+
+### 内容摘要
+
+Sparkle 构建解耦引导和质量筛选的数据管线，并发布背景替换数据与基准。
+
+### 本篇研究的问题
+
+怎样为背景替换生成更准确的前景和背景监督？
+
+### 适用条件
+
+已知原视频内容的编辑，不等同于预测新动作的后果。
+
+### 方法与训练
+
+Sparkle 构建解耦引导和质量筛选的数据管线，并发布背景替换数据与基准。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】已知原视频内容的编辑，不等同于预测新动作的后果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P364 · Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond
+
+Meng Chu; Xuan Billy Zhang; Kevin Qinghong Lin; Lingdong Kong; Jize Zhang; Teng Tu; Weijian Ma; Ziqi Huang; Senqiao Yang; Wei Huang; Yeying Jin; Zhefan Rao; Jinhui Ye; Xinyu Lin; Xichen Zhang; Qisheng Hu; Shuai Yang; Leyang Shen; Wei Chow; Yifei Dong; Fengyi Wu; Quanyu Long; Bin Xia; Shaozuo Yu; Mingkang Zhu; Wenhu Zhang; Jiehui Huang; Haokun Gui; Runyi Li; Chenyu Tang; Dong Huang; Xuhang Chen; Rui Liu; Chengzu Li; Shiyi Du; Xu Huang; Haoxuan Che; Long Chen; Qifeng Chen; Wenya Wang; Wenxuan Zhang; Xiaojuan Qi; Yang Deng; Yanwei Li; Mike Zheng Shou; Zhi-Qi Cheng; See-Kiong Ng; Ziwei Liu; Philip Torr; Jiaya Jia
+
+[arXiv 作者记录](https://arxiv.org/abs/2604.22748)
+
+状态：abstract_review；92 页。
+
+### 内容摘要
+
+Agentic World Modeling 以能力层级和规律类型整理文献，并提出面向决策的评价原则。
+
+### 本篇研究的问题
+
+跨不同环境和规则类型，怎样比较 agent 的世界建模能力？
+
+### 适用条件
+
+分类框架用于组织证据，不能把所有子领域的进展当成同一种能力。
+
+### 方法与训练
+
+Agentic World Modeling 以能力层级和规律类型整理文献，并提出面向决策的评价原则。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】分类框架用于组织证据，不能把所有子领域的进展当成同一种能力。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P363 · Image Generators are Generalist Vision Learners
+
+Valentin Gabeur; Shangbang Long; Songyou Peng; Paul Voigtlaender; Shuyang Sun; Yanan Bao; Karen Truong; Zhicheng Wang; Wenlei Zhou; Jonathan T. Barron; Kyle Genova; Nithish Kannen; Sherry Ben; Yandong Li; Mandy Guo; Suhas Yogin; Yiming Gu; Huizhong Chen; Oliver Wang; Saining Xie; Howard Zhou; Kaiming He; Thomas Funkhouser; Jean-Baptiste Alayrac; Radu Soricut
+
+[arXiv 作者记录](https://arxiv.org/abs/2604.20329)
+
+状态：abstract_review；30 页。
+
+### 内容摘要
+
+Vision Banana 将多种感知任务的输出编码成 RGB 图像，以图像生成骨干进行统一指令微调。
+
+### 本篇研究的问题
+
+图像生成模型能否通过少量指令微调成为通用视觉模型？
+
+### 适用条件
+
+任务涉及二维和三维感知；视频动力学与反事实后果需要独立评价。
+
+### 方法与训练
+
+Vision Banana 将多种感知任务的输出编码成 RGB 图像，以图像生成骨干进行统一指令微调。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】任务涉及二维和三维感知；视频动力学与反事实后果需要独立评价。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P362 · HumanScore: Benchmarking Human Motions in Generated Videos
+
+Yusu Fang; Tiange Xiang; Tian Tan; Narayan Schuetz; Scott Delp; Li Fei-Fei; Ehsan Adeli
+
+[arXiv 作者记录](https://arxiv.org/abs/2604.20157)
+
+状态：abstract_review；50 页。
+
+### 内容摘要
+
+HumanScore 用多种运动强度提示及物理相关指标评估生成视频中的人体运动。
+
+### 本篇研究的问题
+
+生成的人体动作是否符合身体结构和生物力学约束？
+
+### 适用条件
+
+人体运动评价不直接覆盖液体、接触物体或任意自定义规律。
+
+### 方法与训练
+
+HumanScore 用多种运动强度提示及物理相关指标评估生成视频中的人体运动。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】人体运动评价不直接覆盖液体、接触物体或任意自定义规律。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P361 · GameWorld: Towards Standardized and Verifiable Evaluation of Multimodal Game Agents
+
+Mingyu Ouyang; Siyuan Hu; Kevin Qinghong Lin; Hwee Tou Ng; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2604.07429)
+
+状态：abstract_review；52 页。
+
+### 内容摘要
+
+GameWorld 统一浏览器游戏动作接口，并用可检验状态度量任务结果。
+
+### 本篇研究的问题
+
+多模态游戏 agent 能否用状态真值进行可复现评价？
+
+### 适用条件
+
+游戏执行成功不同于生成的视频是否遵循同一规则。
+
+### 方法与训练
+
+GameWorld 统一浏览器游戏动作接口，并用可检验状态度量任务结果。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】游戏执行成功不同于生成的视频是否遵循同一规则。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P360 · RAGEN-2: Reasoning Collapse in Agentic RL
+
+Zihan Wang; Chi Gui; Xing Jin; Qineng Wang; Licheng Liu; Kangrui Wang; Shiqi Chen; Linjie Li; Zhengyuan Yang; Pingyue Zhang; Yiping Lu; Jiajun Wu; Li Fei-Fei; Lijuan Wang; Yejin Choi; Manling Li
+
+[arXiv 作者记录](https://arxiv.org/abs/2604.06268)
+
+状态：abstract_review；44 页。
+
+### 内容摘要
+
+RAGEN-2 区分输出多样性与跨输入可辨别性，提出互信息代理诊断和信噪比筛选。
+
+### 本篇研究的问题
+
+强化学习中的推理是否依赖当前输入，而非套用模板？
+
+### 适用条件
+
+agent 文本推理的模板坍塌与视频生成的推理能力须分别测量。
+
+### 方法与训练
+
+RAGEN-2 区分输出多样性与跨输入可辨别性，提出互信息代理诊断和信噪比筛选。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】agent 文本推理的模板坍塌与视频生成的推理能力须分别测量。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P359 · OpenWorldLib: A Unified Codebase and Definition of Advanced World Models
+
+DataFlow Team; Bohan Zeng; Daili Hua; Kaixin Zhu; Yifan Dai; Bozhou Li; Yuran Wang; Chengzhuo Tong; Yifan Yang; Mingkun Chang; Jianbin Zhao; Zhou Liu; Hao Liang; Xiaochen Ma; Ruichuan An; Junbo Niu; Zimo Meng; Tianyi Bai; Meiyi Qiang; Huanyao Zhang; Zhiyou Xiao; Tianyu Guo; Qinhan Yu; Runhao Zhao; Zhengpin Li; Xinyi Huang; Yisheng Pan; Yiwen Tang; Juanxi Tian; Yang Shi; Yue Ding; Xinlong Chen; Hongcheng Gao; Minglei Shi; Jialong Wu; Zekun Wang; Yuanxing Zhang; Xintao Wang; Pengfei Wan; Yiren Song; Mike Zheng Shou; Wentao Zhang
+
+[arXiv 作者记录](https://arxiv.org/abs/2604.04707)
+
+状态：abstract_review；28 页。
+
+### 内容摘要
+
+OpenWorldLib 提供多任务推理框架和能力分类，连接感知、交互与长期记忆模块。
+
+### 本篇研究的问题
+
+异构世界模型如何通过统一接口复用和比较？
+
+### 适用条件
+
+统一代码接口不意味着模型在全部能力上均已达标。
+
+### 方法与训练
+
+OpenWorldLib 提供多任务推理框架和能力分类，连接感知、交互与长期记忆模块。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】统一代码接口不意味着模型在全部能力上均已达标。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P358 · Hierarchical Planning with Latent World Models
+
+Wancong Zhang; Basile Terver; Artem Zholus; Soham Chitnis; Harsh Sutaria; Mido Assran; Randall Balestriero; Amir Bar; Adrien Bardes; Yann LeCun; Nicolas Ballas
+
+[arXiv 作者记录](https://arxiv.org/abs/2604.03208)
+
+状态：abstract_review；29 页。
+
+### 内容摘要
+
+HWM 使用分层世界模型与模型预测控制，在不同层级组织目标和动作搜索。
+
+### 本篇研究的问题
+
+视觉潜空间规划怎样扩展到更长时间尺度？
+
+### 适用条件
+
+层级规划成功不自动保证像素生成长期一致。
+
+### 方法与训练
+
+HWM 使用分层世界模型与模型预测控制，在不同层级组织目标和动作搜索。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】层级规划成功不自动保证像素生成长期一致。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P357 · IMPASTO: Integrating Model-Based Planning with Learned Dynamics Models for Robotic Oil Painting Reproduction
+
+Yingke Wang; Hao Li; Yifeng Zhu; Hong-Xing Yu; Ken Goldberg; Li Fei-Fei; Jiajun Wu; Yunzhu Li; Ruohan Zhang
+
+[arXiv 作者记录](https://arxiv.org/abs/2603.29315)
+
+状态：abstract_review；14 页。
+
+### 内容摘要
+
+IMPASTO 将像素变化预测与模型规划结合进行机器人油画复现。
+
+### 本篇研究的问题
+
+学习的像素动力学怎样用于真实油画笔触规划？
+
+### 适用条件
+
+与绘画任务直接相邻；需要细读画材、笔触参数及预测误差的具体范围。
+
+### 方法与训练
+
+IMPASTO 将像素变化预测与模型规划结合进行机器人油画复现。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】与绘画任务直接相邻；需要细读画材、笔触参数及预测误差的具体范围。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P356 · CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation
+
+Letian Fu; Justin Yu; Karim El-Refai; Ethan Kou; Haoru Xue; Huang Huang; Wenli Xiao; Guanzhi Wang; Dantong Niu; Fei-Fei Li; Guanya Shi; Jiajun Wu; Shankar Sastry; Yuke Zhu; Ken Goldberg; Linxi "Jim" Fan
+
+[arXiv 作者记录](https://arxiv.org/abs/2603.22435)
+
+状态：abstract_review；58 页。
+
+### 内容摘要
+
+CaP-X 统一代码策略评价，并研究多轮反馈、技能合成和强化学习改进。
+
+### 本篇研究的问题
+
+代码作为机器人策略时，抽象层级与执行反馈怎样影响可靠性？
+
+### 适用条件
+
+显式代码策略与可执行环境动力学模型不同，也非视频生成器推理。
+
+### 方法与训练
+
+CaP-X 统一代码策略评价，并研究多轮反馈、技能合成和强化学习改进。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】显式代码策略与可执行环境动力学模型不同，也非视频生成器推理。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P355 · P-Flow: Prompting Visual Effects Generation
+
+Rui Zhao; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2603.22091)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+P-Flow 探索免训练的动态特效定制，在文本和图像条件视频任务中评估效果。
+
+### 本篇研究的问题
+
+不更新模型参数能否按提示定制动态视觉特效？
+
+### 适用条件
+
+特效生成可以违背现实物理，但不因此证明用户指定机制被系统性执行。
+
+### 方法与训练
+
+P-Flow 探索免训练的动态特效定制，在文本和图像条件视频任务中评估效果。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】特效生成可以违背现实物理，但不因此证明用户指定机制被系统性执行。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P354 · MIRAGE: The Illusion of Visual Understanding
+
+Mohammad Asadi; Jack W. O'Sullivan; Fang Cao; Tahoura Nedaee; Kamyar Rajabalifardi; Fei-Fei Li; Ehsan Adeli; Euan Ashley
+
+[arXiv 作者记录](https://arxiv.org/abs/2603.21687)
+
+状态：abstract_review；29 页。
+
+### 内容摘要
+
+MIRAGE 检查缺失图像时仍产生详细描述和高分的现象，并提出减少文本泄漏的评价方法。
+
+### 本篇研究的问题
+
+多模态模型的正确回答是否真正使用了图像？
+
+### 适用条件
+
+主要实验涉及图像问答；作为视觉依赖测试的设计参照，不能直接外推视频生成失败率。
+
+### 方法与训练
+
+MIRAGE 检查缺失图像时仍产生详细描述和高分的现象，并提出减少文本泄漏的评价方法。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】主要实验涉及图像问答；作为视觉依赖测试的设计参照，不能直接外推视频生成失败率。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P353 · LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels
+
+Lucas Maes; Quentin Le Lidec; Damien Scieur; Yann LeCun; Randall Balestriero
+
+[arXiv 作者记录](https://arxiv.org/abs/2603.19312)
+
+状态：abstract_review；28 页。
+
+### 内容摘要
+
+LeWorldModel 联合学习编码与未来潜状态预测，并以高斯正则约束表示分布，考察规划和物理异常信号。
+
+### 本篇研究的问题
+
+能否以简洁的端到端目标从像素学习可用于规划的世界模型？
+
+### 适用条件
+
+物理异常可检测不等于已识别具体因果规律，也不直接提供人可观看的后果视频。
+
+### 方法与训练
+
+LeWorldModel 联合学习编码与未来潜状态预测，并以高斯正则约束表示分布，考察规划和物理异常信号。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】物理异常可检测不等于已识别具体因果规律，也不直接提供人可观看的后果视频。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P352 · V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning
+
+Lorenzo Mur-Labadia; Matthew Muckley; Amir Bar; Mido Assran; Koustuv Sinha; Mike Rabbat; Yann LeCun; Nicolas Ballas; Adrien Bardes
+
+[arXiv 作者记录](https://arxiv.org/abs/2603.14482)
+
+状态：abstract_review；37 页。
+
+### 内容摘要
+
+V-JEPA 2.1 通过图像与视频上的自监督学习及中间层监督改善稠密视觉表示。
+
+### 本篇研究的问题
+
+怎样获得空间与时间上更稠密、稳定的视频表征？
+
+### 适用条件
+
+重点是表示学习；应与动作条件世界模型和视频生成模块区分。
+
+### 方法与训练
+
+V-JEPA 2.1 通过图像与视频上的自监督学习及中间层监督改善稠密视觉表示。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】重点是表示学习；应与动作条件世界模型和视频生成模块区分。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P351 · Representation Learning for Spatiotemporal Physical Systems
+
+Helen Qu; Rudy Morel; Michael McCabe; Alberto Bietti; François Lanusse; Shirley Ho; Yann LeCun
+
+[arXiv 作者记录](https://arxiv.org/abs/2603.13227)
+
+状态：abstract_review；9 页。
+
+### 内容摘要
+
+作者用物理参数估计等下游任务评估时空物理系统的表示，比较预测式与通用自监督学习。
+
+### 本篇研究的问题
+
+物理系统表征的质量是否能由下一帧预测准确率代表？
+
+### 适用条件
+
+评价强调任务差别；不能把一个下游任务的优势泛化到全部物理推理。
+
+### 方法与训练
+
+作者用物理参数估计等下游任务评估时空物理系统的表示，比较预测式与通用自监督学习。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】评价强调任务差别；不能把一个下游任务的优势泛化到全部物理推理。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P350 · Temporal Straightening for Latent Planning
+
+Ying Wang; Oumayma Bounou; Gaoyue Zhou; Randall Balestriero; Tim G. J. Rudner; Yann LeCun; Mengye Ren
+
+[arXiv 作者记录](https://arxiv.org/abs/2603.12231)
+
+状态：abstract_review；29 页。
+
+### 内容摘要
+
+Temporal Straightening 用轨迹曲率约束改善潜空间距离和规划优化条件。
+
+### 本篇研究的问题
+
+怎样使潜空间轨迹更利于梯度规划？
+
+### 适用条件
+
+更易优化的潜空间不必等同于真实世界的线性动力学或显式机制。
+
+### 方法与训练
+
+Temporal Straightening 用轨迹曲率约束改善潜空间距离和规划优化条件。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】更易优化的潜空间不必等同于真实世界的线性动力学或显式机制。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P349 · EffectMaker: Unifying Reasoning and Generation for Customized Visual Effect Creation
+
+Shiyuan Yang; Ruihuang Li; Jiale Tao; Shuai Shao; Qinglin Lu; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2603.06014)
+
+状态：abstract_review；22 页。
+
+### 内容摘要
+
+EffectMaker 将推理和特效生成连接，构建覆盖多类视觉效果的合成训练数据以支持参考条件定制。
+
+### 本篇研究的问题
+
+如何从参考效果中推断并生成可定制的视频特效？
+
+### 适用条件
+
+特效可以刻意违背真实物理；应分别核对参考一致性、可控性与推理承担者。
+
+### 方法与训练
+
+EffectMaker 将推理和特效生成连接，构建覆盖多类视觉效果的合成训练数据以支持参考条件定制。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】特效可以刻意违背真实物理；应分别核对参考一致性、可控性与推理承担者。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P348 · Kiwi-Edit: Versatile Video Editing via Instruction and Reference Guidance
+
+Yiqi Lin; Guoqiang Liang; Ziyun Zeng; Zechen Bai; Yanzhe Chen; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2603.02175)
+
+状态：abstract_review；18 页。
+
+### 内容摘要
+
+Kiwi-Edit 构建参考图引导的编辑四元组数据，并以多阶段训练融合语义查询和视觉特征。
+
+### 本篇研究的问题
+
+视频编辑能否同时精确遵循语言与视觉参考？
+
+### 适用条件
+
+参考遵循和编辑保持与干预后果的因果正确性不同。
+
+### 方法与训练
+
+Kiwi-Edit 构建参考图引导的编辑四元组数据，并以多阶段训练融合语义查询和视觉特征。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】参考遵循和编辑保持与干预后果的因果正确性不同。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P347 · Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs
+
+Yining Hong; Huang Huang; Manling Li; Li Fei-Fei; Leonidas Guibas; Jiajun Wu; Yejin Choi
+
+[arXiv 作者记录](https://arxiv.org/abs/2602.21198)
+
+状态：abstract_review；33 页。
+
+### 内容摘要
+
+Reflective Test-Time Planning 在行动前评分候选，行动后以外部反馈更新模型，并追溯早期决策。
+
+### 本篇研究的问题
+
+执行前后反思怎样共同改善长程具身规划？
+
+### 适用条件
+
+推理和更新主要由具身语言 agent 承担，不能作为视频生成模型内生推理证据。
+
+### 方法与训练
+
+Reflective Test-Time Planning 在行动前评分候选，行动后以外部反馈更新模型，并追溯早期决策。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】推理和更新主要由具身语言 agent 承担，不能作为视频生成模型内生推理证据。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P346 · GeoPT: Scaling Physics Simulation via Lifted Geometric Pre-Training
+
+Haixu Wu; Minghao Guo; Zongyi Li; Zhiyang Dou; Mingsheng Long; Kaiming He; Wojciech Matusik
+
+[arXiv 作者记录](https://arxiv.org/abs/2602.20399)
+
+状态：method_checked；28 页。
+
+### 内容摘要
+
+GeoPT 用合成动态信息扩展静态几何上的自监督任务，再适配流体、固体等神经仿真任务。
+
+### 本篇研究的问题
+
+静态几何预训练怎样为物理仿真提供有用的动态表征？
+
+### 适用条件
+
+这是神经仿真器预训练，输出与评价并非写实视频生成。
+
+### 方法与训练
+
+GeoPT 用随机速度、粒子和动态距离等构造预训练信号，把静态几何数据扩展为动态表征学习。
+
+### 验证范围
+
+下游神经仿真任务评估；本轮未把仿真误差转写为视频生成质量结论。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】这是神经仿真器预训练，输出与评价并非写实视频生成。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+PDF pp.3–6：预训练任务、合成动态与下游适配。方法已核查，未复现实验。
+
+
+## P345 · Ani3DHuman: Photorealistic 3D Human Animation with Self-guided Stochastic Sampling
+
+Qi Sun; Can Wang; Jiaxiang Shang; Yingchun Liu; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2602.19089)
+
+状态：abstract_review；26 页。
+
+### 内容摘要
+
+Ani3DHuman 将刚性骨架运动与残余非刚性运动分层，由粗渲染引导视频扩散，再通过自引导随机采样兼顾外观质量和身份保持。
+
+### 本篇研究的问题
+
+如何同时保持三维人体身份、关节运动和非刚性细节？
+
+### 适用条件
+
+刚性动作由运动学方法提供；衣物等细节的视觉合理性不等于完整物理仿真。
+
+### 方法与训练
+
+Ani3DHuman 将刚性骨架运动与残余非刚性运动分层，由粗渲染引导视频扩散，再通过自引导随机采样兼顾外观质量和身份保持。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】刚性动作由运动学方法提供；衣物等细节的视觉合理性不等于完整物理仿真。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P344 · Exploring a Multimodal Chatbot as a Facilitator in Therapeutic Art Activity
+
+Le Lin; Zihao Zhu; Rainbow Tin Hung Ho; Jing Liao; Yuhan Luo
+
+[arXiv 作者记录](https://arxiv.org/abs/2602.14183)
+
+状态：abstract_review；6 页。
+
+### 内容摘要
+
+系统分析创作画面并与创作者对话，报告五位相关专家的初步评价和后续设计问题。
+
+### 本篇研究的问题
+
+多模态聊天机器人如何支持艺术创作中的反思交流？
+
+### 适用条件
+
+属于进行中的探索性研究；专家意见不能替代临床疗效或长期用户收益验证。
+
+### 方法与训练
+
+系统分析创作画面并与创作者对话，报告五位相关专家的初步评价和后续设计问题。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】属于进行中的探索性研究；专家意见不能替代临床疗效或长期用户收益验证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P343 · stable-worldmodel-v1: Reproducible World Modeling Research and Evaluation
+
+Lucas Maes; Quentin Le Lidec; Dan Haramati; Nassim Massaudi; Damien Scieur; Yann LeCun; Randall Balestriero
+
+[arXiv 作者记录](https://arxiv.org/abs/2602.08968)
+
+状态：abstract_review；10 页。
+
+### 内容摘要
+
+stable-worldmodel-v1 提供统一模型与规划评测，讨论 DINO-WM 等方法对分布变化的表现。
+
+### 本篇研究的问题
+
+怎样系统比较潜空间世界模型在环境变化下的规划稳健性？
+
+### 适用条件
+
+与后续 stable-worldmodel 报告属于同一项目脉络，保留独立预印本记录而不视作独立复现实验。
+
+### 方法与训练
+
+stable-worldmodel-v1 提供统一模型与规划评测，讨论 DINO-WM 等方法对分布变化的表现。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】与后续 stable-worldmodel 报告属于同一项目脉络，保留独立预印本记录而不视作独立复现实验。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P342 · Theory of Space: Can Foundation Models Construct Spatial Beliefs through Active Exploration?
+
+Pingyue Zhang; Zihan Huang; Yue Wang; Jieyu Zhang; Letian Xue; Zihan Wang; Qineng Wang; Keshigeyan Chandrasegaran; Ruohan Zhang; Yejin Choi; Ranjay Krishna; Jiajun Wu; Li Fei-Fei; Manling Li
+
+[arXiv 作者记录](https://arxiv.org/abs/2602.07055)
+
+状态：abstract_review；34 页。
+
+### 内容摘要
+
+Theory of Space 用逐步空间信念探针分析探索效率、知识退化及错误信念的修正。
+
+### 本篇研究的问题
+
+智能体怎样从主动探索的部分观察建立和修正空间信念？
+
+### 适用条件
+
+显式报告的信念是探针输出，不应默认忠实等同于全部内部状态。
+
+### 方法与训练
+
+Theory of Space 用逐步空间信念探针分析探索效率、知识退化及错误信念的修正。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】显式报告的信念是探针输出，不应默认忠实等同于全部内部状态。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P341 · World-VLA-Loop: Closed-Loop Learning of Video World Model and VLA Policy
+
+Xiaokang Liu; Zechen Bai; Hai Ci; Kevin Yuchen Ma; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2602.06508)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+World-VLA-Loop 以状态感知视频模型预测帧和二元奖励，形成世界模型与 VLA 的闭环训练。
+
+### 本篇研究的问题
+
+视频世界模型与动作策略能否通过成功及近成功轨迹共同改进？
+
+### 适用条件
+
+策略收益需与模型误差区分；闭环改进不自动解决新规律或反常识机制。
+
+### 方法与训练
+
+World-VLA-Loop 以状态感知视频模型预测帧和二元奖励，形成世界模型与 VLA 的闭环训练。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】策略收益需与模型误差区分；闭环改进不自动解决新规律或反常识机制。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P340 · Generative Modeling via Drifting
+
+Mingyang Deng; He Li; Tianhong Li; Yilun Du; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2602.04770)
+
+状态：abstract_review；28 页。
+
+### 内容摘要
+
+Drifting Models 通过漂移场推动生成样本分布与数据分布匹配，形成单步推理的生成器。
+
+### 本篇研究的问题
+
+能否在训练阶段演化生成分布，从而只用一步采样？
+
+### 适用条件
+
+ImageNet 图像结果不能直接作为视频时序质量或小显存实时性的证据。
+
+### 方法与训练
+
+Drifting Models 通过漂移场推动生成样本分布与数据分布匹配，形成单步推理的生成器。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】ImageNet 图像结果不能直接作为视频时序质量或小显存实时性的证据。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P339 · A Lightweight Library for Energy-Based Joint-Embedding Predictive Architectures
+
+Basile Terver; Randall Balestriero; Megi Dervishi; David Fan; Quentin Garrido; Tushar Nagarajan; Koustuv Sinha; Wancong Zhang; Mike Rabbat; Yann LeCun; Amir Bar
+
+[arXiv 作者记录](https://arxiv.org/abs/2602.03604)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+EB-JEPA 整理表征学习与世界建模的模块化实现和实验接口。
+
+### 本篇研究的问题
+
+怎样以统一组件实现图像、视频和动作条件 JEPA？
+
+### 适用条件
+
+软件框架的覆盖范围不是每类下游能力已验证的证据。
+
+### 方法与训练
+
+EB-JEPA 整理表征学习与世界建模的模块化实现和实验接口。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】软件框架的覆盖范围不是每类下游能力已验证的证据。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P338 · Rectified LpJEPA: Joint-Embedding Predictive Architectures with Sparse and Maximum-Entropy Representations
+
+Yilun Kuang; Yash Dagade; Tim G. J. Rudner; Randall Balestriero; Yann LeCun
+
+[arXiv 作者记录](https://arxiv.org/abs/2602.01456)
+
+状态：abstract_review；50 页。
+
+### 内容摘要
+
+Rectified LpJEPA 以整流广义高斯分布约束表示，研究稀疏性与视觉表征学习。
+
+### 本篇研究的问题
+
+能否用稀疏非负表征的分布匹配目标改善自监督学习？
+
+### 适用条件
+
+主要是表征基础方法；视频后果预测与规划需要另外验证。
+
+### 方法与训练
+
+Rectified LpJEPA 以整流广义高斯分布约束表示，研究稀疏性与视觉表征学习。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】主要是表征基础方法；视频后果预测与规划需要另外验证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P337 · Parallel Stochastic Gradient-Based Planning for World Models
+
+Michael Psenka; Michael Rabbat; Aditi Krishnapriyan; Yann LeCun; Amir Bar
+
+[arXiv 作者记录](https://arxiv.org/abs/2602.00475)
+
+状态：abstract_review；23 页。
+
+### 内容摘要
+
+GRASP 引入并行优化的虚拟状态和软动力学约束，缓解逐步展开的规划成本。
+
+### 本篇研究的问题
+
+怎样加速通过可微世界模型进行动作规划？
+
+### 适用条件
+
+收益依赖已学习的世界模型及优化条件，不直接解决视频生成显存占用。
+
+### 方法与训练
+
+GRASP 引入并行优化的虚拟状态和软动力学约束，缓解逐步展开的规划成本。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】收益依赖已学习的世界模型及优化条件，不直接解决视频生成显存占用。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P336 · One-step Latent-free Image Generation with Pixel Mean Flows
+
+Yiyang Lu; Susie Lu; Qiao Sun; Hanhong Zhao; Zhicheng Jiang; Xianbang Wang; Tianhong Li; Zhengyang Geng; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2601.22158)
+
+状态：abstract_review；13 页。
+
+### 内容摘要
+
+Pixel MeanFlow 区分网络输出空间和损失空间，在图像流形与平均速度之间建立转换。
+
+### 本篇研究的问题
+
+如何实现无需潜空间编码器的单步像素图像生成？
+
+### 适用条件
+
+评价主要为静态图像生成；直接迁移到视频仍需处理时间维度与资源需求。
+
+### 方法与训练
+
+Pixel MeanFlow 区分网络输出空间和损失空间，在图像流形与平均速度之间建立转换。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】评价主要为静态图像生成；直接迁移到视频仍需处理时间维度与资源需求。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P335 · ShowUI-Aloha: Human-Taught GUI Agent
+
+Yichun Zhang; Xiangwu Guo; Yauhong Goh; Jessica Hu; Zhiheng Chen; Xin Wang; Difei Gao; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2601.07181)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+ShowUI-Aloha 结合录屏和精确交互记录，整理可执行任务与示范数据。
+
+### 本篇研究的问题
+
+怎样把非结构化人类录屏转成 GUI agent 可学习的任务？
+
+### 适用条件
+
+软件界面操作与物理 AR 任务存在状态和动作接口差别。
+
+### 方法与训练
+
+ShowUI-Aloha 结合录屏和精确交互记录，整理可执行任务与示范数据。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】软件界面操作与物理 AR 任务存在状态和动作接口差别。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P334 · Learning Latent Action World Models In The Wild
+
+Quentin Garrido; Tushar Nagarajan; Basile Terver; Nicolas Ballas; Yann LeCun; Michael Rabbat
+
+[arXiv 作者记录](https://arxiv.org/abs/2601.05230)
+
+状态：abstract_review；37 页。
+
+### 内容摘要
+
+作者从自然视频学习受约束的连续潜动作并用于动作条件世界建模，减少对离散动作码的依赖。
+
+### 本篇研究的问题
+
+无动作标注的真实视频能否提供可迁移的连续潜动作？
+
+### 适用条件
+
+潜动作的控制效果不代表动作语义具有唯一的因果解释。
+
+### 方法与训练
+
+作者从自然视频学习受约束的连续潜动作并用于动作条件世界建模，减少对离散动作码的依赖。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】潜动作的控制效果不代表动作语义具有唯一的因果解释。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P333 · PointWorld: Scaling 3D World Models for In-The-Wild Robotic Manipulation
+
+Wenlong Huang; Yu-Wei Chao; Arsalan Mousavian; Ming-Yu Liu; Dieter Fox; Kaichun Mo; Li Fei-Fei
+
+[arXiv 作者记录](https://arxiv.org/abs/2601.03782)
+
+状态：abstract_review；38 页。
+
+### 内容摘要
+
+PointWorld 从 RGB-D 与动作预测逐像素三维位移，并以真实、合成轨迹研究跨本体规模化训练。
+
+### 本篇研究的问题
+
+不同机器人能否在统一三维点流中表达动作和状态变化？
+
+### 适用条件
+
+三维位移预测与写实视频渲染是不同输出；动作和深度是额外条件。
+
+### 方法与训练
+
+PointWorld 从 RGB-D 与动作预测逐像素三维位移，并以真实、合成轨迹研究跨本体规模化训练。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】三维位移预测与写实视频渲染是不同输出；动作和深度是额外条件。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P332 · Value-guided action planning with JEPA world models
+
+Matthieu Destrade; Oumayma Bounou; Quentin Le Lidec; Jean Ponce; Yann LeCun
+
+[arXiv 作者记录](https://arxiv.org/abs/2601.00844)
+
+状态：abstract_review；7 页。
+
+### 内容摘要
+
+Value-guided action planning 使表示距离近似目标条件价值，从而为动作优化提供更有用的信号。
+
+### 本篇研究的问题
+
+如何让潜空间距离更接近任务价值而改善动作规划？
+
+### 适用条件
+
+引入任务价值改变了监督条件，不能直接与纯无奖励表示学习等同。
+
+### 方法与训练
+
+Value-guided action planning 使表示距离近似目标条件价值，从而为动作优化提供更有用的信号。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】引入任务价值改变了监督条件，不能直接与纯无奖励表示学习等同。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P331 · ShowUI-$π$: Flow-based Generative Models as GUI Dexterous Hands
+
+Siyuan Hu; Kevin Qinghong Lin; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2512.24965)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+ShowUI-π 用 flow 模型生成连续鼠标调整，并构建拖拽数据与 ScreenDrag 基准。
+
+### 本篇研究的问题
+
+GUI agent 怎样同时生成点击与连续拖拽动作？
+
+### 适用条件
+
+输出是界面动作轨迹，不能当作像素视频生成模型的推理结果。
+
+### 方法与训练
+
+ShowUI-π 用 flow 模型生成连续鼠标调整，并构建拖拽数据与 ScreenDrag 基准。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】输出是界面动作轨迹，不能当作像素视频生成模型的推理结果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P330 · Dream2Flow: Bridging Video Generation and Open-World Manipulation with 3D Object Flow
+
+Karthik Dharmarajan; Wenlong Huang; Jiajun Wu; Li Fei-Fei; Ruohan Zhang
+
+[arXiv 作者记录](https://arxiv.org/abs/2512.24766)
+
+状态：abstract_review；13 页。
+
+### 内容摘要
+
+Dream2Flow 从生成视频恢复三维物体流，再以轨迹跟踪连接操作控制。
+
+### 本篇研究的问题
+
+生成视频中的物体运动怎样转成机器人可追踪的任务？
+
+### 适用条件
+
+真实执行还依赖三维恢复与控制器；必须区分生成和下游转换的误差。
+
+### 方法与训练
+
+Dream2Flow 从生成视频恢复三维物体流，再以轨迹跟踪连接操作控制。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】真实执行还依赖三维恢复与控制器；必须区分生成和下游转换的误差。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P329 · What Drives Success in Physical Planning with Joint-Embedding Predictive World Models?
+
+Basile Terver; Tsung-Yen Yang; Jean Ponce; Adrien Bardes; Yann LeCun
+
+[arXiv 作者记录](https://arxiv.org/abs/2512.24497)
+
+状态：abstract_review；55 页。
+
+### 内容摘要
+
+作者系统比较表示、训练目标和规划器配置，并在仿真和真实任务中检查效果。
+
+### 本篇研究的问题
+
+JEPA 世界模型的物理规划成功主要受哪些设计影响？
+
+### 适用条件
+
+需要按统一数据和预算读比较结果；规划成功不能替代视频真实性评价。
+
+### 方法与训练
+
+作者系统比较表示、训练目标和规划器配置，并在仿真和真实任务中检查效果。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】需要按统一数据和预算读比较结果；规划成功不能替代视频真实性评价。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P328 · QuantiPhy: A Quantitative Benchmark Evaluating Physical Reasoning Abilities of Vision-Language Models
+
+Li Puyin; Tiange Xiang; Ella Mao; Shirley Wei; Xinye Chen; Adnan Masood; Li Fei-fei; Ehsan Adeli
+
+[arXiv 作者记录](https://arxiv.org/abs/2512.19526)
+
+状态：abstract_review；50 页。
+
+### 内容摘要
+
+QuantiPhy 以数值真值评价尺寸、速度和加速度估计，并改变背景和反事实先验。
+
+### 本篇研究的问题
+
+模型能否从视频和给定量纲先验准确估计运动物理量？
+
+### 适用条件
+
+主要测试 VLM 数值推理，不是生成未来视频的物理正确率。
+
+### 方法与训练
+
+QuantiPhy 以数值真值评价尺寸、速度和加速度估计，并改变背景和反事实先验。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】主要测试 VLM 数值推理，不是生成未来视频的物理正确率。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P327 · Mitty: Diffusion-based Human-to-Robot Video Generation
+
+Yiren Song; Cheng Liu; Weijia Mao; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2512.17253)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+Mitty 利用视频上下文学习与自动合成人机配对数据进行 Human2Robot 转换。
+
+### 本篇研究的问题
+
+人类操作视频怎样端到端转成机器人外形的视频？
+
+### 适用条件
+
+动作来源视频已知；外形迁移质量与真实操作成功需要分开验证。
+
+### 方法与训练
+
+Mitty 利用视频上下文学习与自动合成人机配对数据进行 Human2Robot 转换。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】动作来源视频已知；外形迁移质量与真实操作成功需要分开验证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P326 · World Models for Learning Dexterous Hand-Object Interactions from Human Videos
+
+Raktim Gautam Goswami; Amir Bar; David Fan; Tsung-Yen Yang; Gaoyue Zhou; Prashanth Krishnamurthy; Michael Rabbat; Farshad Khorrami; Yann LeCun
+
+[arXiv 作者记录](https://arxiv.org/abs/2512.13644)
+
+状态：abstract_review；23 页。
+
+### 内容摘要
+
+DexWM 使用手指关键点动作表示与潜状态、手部一致性目标，学习可用于灵巧规划的动态表示。
+
+### 本篇研究的问题
+
+人类第一人称手部视频能否支持灵巧操作世界模型？
+
+### 适用条件
+
+主要预测潜状态；人到机器人动作映射与写实后果生成是另外的环节。
+
+### 方法与训练
+
+DexWM 使用手指关键点动作表示与潜状态、手部一致性目标，学习可用于灵巧规划的动态表示。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】主要预测潜状态；人到机器人动作映射与写实后果生成是另外的环节。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P325 · Animus3D: Text-driven 3D Animation via Motion Score Distillation
+
+Qi Sun; Can Wang; Jiaxiang Shang; Wensen Feng; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2512.12534)
+
+状态：abstract_review；11 页。
+
+### 内容摘要
+
+Animus3D 以运动分数蒸馏优化运动场，利用 LoRA 静态分布、反演估噪及时空正则保持外观与运动细节。
+
+### 本篇研究的问题
+
+如何从文本和静态三维资产生成稳定且明显的运动？
+
+### 适用条件
+
+由视频先验蒸馏出的运动仍需单独检验物理参数和干预后果。
+
+### 方法与训练
+
+Animus3D 以运动分数蒸馏优化运动场，利用 LoRA 静态分布、反演估噪及时空正则保持外观与运动细节。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】由视频先验蒸馏出的运动仍需单独检验物理参数和干预后果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P324 · Bidirectional Normalizing Flow: From Data to Noise and Back
+
+Yiyang Lu; Qiao Sun; Xianbang Wang; Zhicheng Jiang; Hanhong Zhao; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2512.10953)
+
+状态：abstract_review；18 页。
+
+### 内容摘要
+
+BiFlow 放宽精确解析逆的要求，通过双向归一化流改进生成质量和采样效率。
+
+### 本篇研究的问题
+
+归一化流怎样避免因果解码带来的采样瓶颈？
+
+### 适用条件
+
+单次函数评估及图像采样速度不等于完整视频管线的端到端延迟。
+
+### 方法与训练
+
+BiFlow 放宽精确解析逆的要求，通过双向归一化流改进生成质量和采样效率。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】单次函数评估及图像采样速度不等于完整视频管线的端到端延迟。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P323 · VL-JEPA: Joint Embedding Predictive Architecture for Vision-language
+
+Delong Chen; Mustafa Shukor; Theo Moutakanni; Willy Chung; Jade Yu; Tejaswi Kasarla; Yejin Bang; Allen Bolourchi; Yann LeCun; Pascale Fung
+
+[arXiv 作者记录](https://arxiv.org/abs/2512.10942)
+
+状态：abstract_review；15 页。
+
+### 内容摘要
+
+VL-JEPA 将视觉语言预测放在语义嵌入空间，研究选择性解码与视频理解。
+
+### 本篇研究的问题
+
+视觉语言系统能否预测语义表示并按需解码文本？
+
+### 适用条件
+
+这是视觉语言理解架构，不是直接生成未来视频的世界模型。
+
+### 方法与训练
+
+VL-JEPA 将视觉语言预测放在语义嵌入空间，研究选择性解码与视频理解。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】这是视觉语言理解架构，不是直接生成未来视频的世界模型。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P322 · Closing the Train-Test Gap in World Models for Gradient-Based Planning
+
+Arjun Parthasarathy; Nimit Kalra; Rohun Agrawal; Yann LeCun; Oumayma Bounou; Pavel Izmailov; Micah Goldblum
+
+[arXiv 作者记录](https://arxiv.org/abs/2512.09929)
+
+状态：abstract_review；25 页。
+
+### 内容摘要
+
+作者以面向规划的数据合成和训练设计，改善 JEPA 在梯度动作规划中的使用效果。
+
+### 本篇研究的问题
+
+训练时预测转移与测试时优化动作之间的差别如何缩小？
+
+### 适用条件
+
+规划适配的收益需在一致预算下比较，不代表所有长程后果都可信。
+
+### 方法与训练
+
+作者以面向规划的数据合成和训练设计，改善 JEPA 在梯度动作规划中的使用效果。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】规划适配的收益需在一致预算下比较，不代表所有长程后果都可信。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P321 · H2R-Grounder: A Paired-Data-Free Paradigm for Translating Human Interaction Videos into Physically Grounded Robot Videos
+
+Hai Ci; Xiaokang Liu; Pei Yang; Yiren Song; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2512.09406)
+
+状态：abstract_review；13 页。
+
+### 内容摘要
+
+H2R-Grounder 用背景修补及夹爪位置、方向视觉提示连接人类与机器人视频，并微调 Wan 模型。
+
+### 本篇研究的问题
+
+没有人机配对视频时如何生成保持动作的机器人视频？
+
+### 适用条件
+
+运动提示提供额外轨迹信息；视觉上的物理贴合不等于低层控制可执行。
+
+### 方法与训练
+
+H2R-Grounder 用背景修补及夹爪位置、方向视觉提示连接人类与机器人视频，并微调 Wan 模型。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】运动提示提供额外轨迹信息；视觉上的物理贴合不等于低层控制可执行。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P320 · From Generated Human Videos to Physically Plausible Robot Trajectories
+
+James Ni; Zekai Wang; Wei Lin; Amir Bar; Yann LeCun; Trevor Darrell; Jitendra Malik; Roei Herzig
+
+[arXiv 作者记录](https://arxiv.org/abs/2512.05094)
+
+状态：abstract_review；18 页。
+
+### 内容摘要
+
+GenMimic 将视频生成、4D 人体重建、动作重定向和物理强化学习控制组合起来，并构建动作基准。
+
+### 本篇研究的问题
+
+生成的人类动作视频怎样转换成真实机器人能执行的全身行为？
+
+### 适用条件
+
+物理可行性依赖重建和控制器修正，不能归因于视频生成器独立掌握物理规律。
+
+### 方法与训练
+
+GenMimic 将视频生成、4D 人体重建、动作重定向和物理强化学习控制组合起来，并构建动作基准。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】物理可行性依赖重建和控制器修正，不能归因于视频生成器独立掌握物理规律。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P319 · X-Humanoid: Robotize Human Videos to Generate Humanoid Videos at Scale
+
+Pei Yang; Hai Ci; Yiren Song; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2512.04537)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+X-Humanoid 使用合成配对数据适配 Wan 2.2，再将真实人类视频机器人化。
+
+### 本篇研究的问题
+
+能否规模化把人类活动视频转换为人形机器人数据？
+
+### 适用条件
+
+本体替换保留既有动作，不直接预测新干预的未知后果。
+
+### 方法与训练
+
+X-Humanoid 使用合成配对数据适配 Wan 2.2，再将真实人类视频机器人化。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】本体替换保留既有动作，不直接预测新干预的未知后果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P318 · Improved Mean Flows: On the Challenges of Fastforward Generative Models
+
+Zhengyang Geng; Yiyang Lu; Zongze Wu; Eli Shechtman; J. Zico Kolter; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2512.02012)
+
+状态：abstract_review；13 页。
+
+### 内容摘要
+
+Improved MeanFlow 用平均速度参数化瞬时速度回归，并把引导作为显式条件，改善从零训练的一步生成。
+
+### 本篇研究的问题
+
+平均流的训练目标和引导方式怎样改善单步生成？
+
+### 适用条件
+
+属于生成模型基础方法；在目标视频骨干上的训练成本和后果保持尚未由该摘要验证。
+
+### 方法与训练
+
+Improved MeanFlow 用平均速度参数化瞬时速度回归，并把引导作为显式条件，改善从零训练的一步生成。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】属于生成模型基础方法；在目标视频骨干上的训练成本和后果保持尚未由该摘要验证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P317 · WorldWander: Bridging Egocentric and Exocentric Worlds in Video Generation
+
+Quanjian Song; Yiren Song; Kelly Peng; Yuan Gao; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2511.22098)
+
+状态：abstract_review；23 页。
+
+### 内容摘要
+
+WorldWander 以同步三元组数据训练上下文视角转换，并构建 EgoExo-8K。
+
+### 本篇研究的问题
+
+第一和第三人称视频之间怎样保持同步运动和主体身份？
+
+### 适用条件
+
+视角翻译的时间对应来自输入视频；不等同于未来世界演化。
+
+### 方法与训练
+
+WorldWander 以同步三元组数据训练上下文视角转换，并构建 EgoExo-8K。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】视角翻译的时间对应来自输入视频；不等同于未来世界演化。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P316 · ENACT: Evaluating Embodied Cognition with World Modeling of Egocentric Interaction
+
+Qineng Wang; Wenlong Huang; Yu Zhou; Hang Yin; Tianwei Bao; Jianwen Lyu; Weiyu Liu; Ruohan Zhang; Jiajun Wu; Li Fei-Fei; Manling Li
+
+[arXiv 作者记录](https://arxiv.org/abs/2511.20937)
+
+状态：abstract_review；60 页。
+
+### 内容摘要
+
+ENACT 用 BEHAVIOR 合成的状态动作轨迹形成视觉问答，测试具身认知与世界建模。
+
+### 本篇研究的问题
+
+第一视角长交互中的动作效果和记忆怎样排除画质干扰地评价？
+
+### 适用条件
+
+采用 VQA 而非像素生成；可作语义后果指标，不能独立评估视频真实性。
+
+### 方法与训练
+
+ENACT 用 BEHAVIOR 合成的状态动作轨迹形成视觉问答，测试具身认知与世界建模。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】采用 VQA 而非像素生成；可作语义后果指标，不能独立评估视频真实性。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P315 · Video-as-Answer: Predict and Generate Next Video Event with Joint-GRPO
+
+Junhao Cheng; Liang Hou; Xin Tao; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2511.16669)
+
+状态：method_checked；16 页。
+
+### 内容摘要
+
+VANS 将视频下一事件预测定义为任务，通过 Joint-GRPO 联合优化 VLM 的事件描述和视频扩散模型的可视化，并构建任务数据。
+
+### 本篇研究的问题
+
+如何用连续视频回答给定上下文中的下一事件问题？
+
+### 适用条件
+
+事件推断与视频生成由两个模型协作；不能仅凭视频回答就认定推理全部发生在视频模型内部。
+
+### 方法与训练
+
+Qwen2.5-VL-3B + Wan-2.1-1.3B；VANS-Data-100K 含程序与预测样本。先分别监督训练，再用 Joint-GRPO 联合对齐；不是只微调一个视频 LoRA。
+
+### 验证范围
+
+统一输出 352×640、33 帧；比较文本、FVD、CLIP 指标及人工评价。多未来展示位于附录；不等于配对干预的物理真值验证。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】事件推断与视频生成由两个模型协作；不能仅凭视频回答就认定推理全部发生在视频模型内部。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+PDF p.4 §3–4：数据与双模型接口；p.12 Appendix C、D.1：训练、统一输出与时延；pp.13–14：多未来及人工评价。方法已核查，未复现实验。
+
+
+## P314 · Computer-Use Agents as Judges for Generative User Interface
+
+Kevin Qinghong Lin; Siyuan Hu; Linjie Li; Zhengyuan Yang; Lijuan Wang; Philip Torr; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2511.15567)
+
+状态：abstract_review；22 页。
+
+### 内容摘要
+
+作者提出 AUI-Gym，以 Coder 与计算机使用 agent 协作，通过可执行任务和可视化反馈改进界面。
+
+### 本篇研究的问题
+
+界面生成能否用实际操作 agent 检查功能并指导修改？
+
+### 适用条件
+
+agent 评价不替代真实用户体验，需要区分功能可达与人的使用效用。
+
+### 方法与训练
+
+作者提出 AUI-Gym，以 Coder 与计算机使用 agent 协作，通过可执行任务和可视化反馈改进界面。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】agent 评价不替代真实用户体验，需要区分功能可达与人的使用效用。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P313 · ARC Is a Vision Problem!
+
+Keya Hu; Ali Cy; Linlu Qiu; Xiaoman Delores Ding; Runqian Wang; Yeyin Eva Zhu; Jacob Andreas; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2511.14761)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+Vision ARC 把 ARC 网格任务改写为画布上的图像到图像映射，从 ARC 数据训练，并通过测试时训练适应新任务。
+
+### 本篇研究的问题
+
+抽象规则任务能否用纯视觉表示和测试时训练来求解？
+
+### 适用条件
+
+视觉推理不等于视频推理；测试时适配成本与任务限定的数据范围需保留。
+
+### 方法与训练
+
+Vision ARC 把 ARC 网格任务改写为画布上的图像到图像映射，从 ARC 数据训练，并通过测试时训练适应新任务。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】视觉推理不等于视频推理；测试时适配成本与任务限定的数据范围需保留。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P312 · Back to Basics: Let Denoising Generative Models Denoise
+
+Tianhong Li; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2511.13720)
+
+状态：abstract_review；18 页。
+
+### 内容摘要
+
+JiT 以大块像素 Transformer 直接预测干净数据，研究去噪目标与流形假设，避免依赖额外 tokenizer。
+
+### 本篇研究的问题
+
+直接预测干净像素能否简化高维扩散模型？
+
+### 适用条件
+
+主要验证图像生成，尚需实测其设计在视频时间一致性上的效果。
+
+### 方法与训练
+
+JiT 以大块像素 Transformer 直接预测干净数据，研究去噪目标与流形假设，避免依赖额外 tokenizer。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】主要验证图像生成，尚需实测其设计在视频时间一致性上的效果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P311 · LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics
+
+Randall Balestriero; Yann LeCun
+
+[arXiv 作者记录](https://arxiv.org/abs/2511.08544)
+
+状态：abstract_review；50 页。
+
+### 内容摘要
+
+LeJEPA 提出 Sketched Isotropic Gaussian Regularization，研究表示分布与下游预测风险的联系。
+
+### 本篇研究的问题
+
+怎样简化并理论化 JEPA 的防坍塌表征学习目标？
+
+### 适用条件
+
+表示学习理论不是任意环境机制可辨识或长期规划可靠性的证明。
+
+### 方法与训练
+
+LeJEPA 提出 Sketched Isotropic Gaussian Regularization，研究表示分布与下游预测风险的联系。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】表示学习理论不是任意环境机制可辨识或长期规划可靠性的证明。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P310 · Cambrian-S: Towards Spatial Supersensing in Video
+
+Shusheng Yang; Jihan Yang; Pinzhi Huang; Ellis Brown; Zihao Yang; Yue Yu; Shengbang Tong; Zihan Zheng; Yifan Xu; Muhan Wang; Daohan Lu; Rob Fergus; Yann LeCun; Li Fei-Fei; Saining Xie
+
+[arXiv 作者记录](https://arxiv.org/abs/2511.04670)
+
+状态：abstract_review；49 页。
+
+### 内容摘要
+
+Cambrian-S 提出空间 supersensing 框架、VSI-SUPER 基准与 VSI-590K 数据，考察持续空间回忆和计数。
+
+### 本篇研究的问题
+
+视频系统怎样持续记忆并推断画面背后的空间状态？
+
+### 适用条件
+
+主要证据来自理解和空间记忆任务；不能直接视为可控像素世界生成。
+
+### 方法与训练
+
+Cambrian-S 提出空间 supersensing 框架、VSI-SUPER 基准与 VSI-590K 数据，考察持续空间回忆和计数。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】主要证据来自理解和空间记忆任务；不能直接视为可控像素世界生成。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P309 · MoMaGen: Generating Demonstrations under Soft and Hard Constraints for Multi-Step Bimanual Mobile Manipulation
+
+Chengshu Li; Mengdi Xu; Arpit Bahety; Hang Yin; Yunfan Jiang; Huang Huang; Josiah Wong; Sujay Garlanka; Cem Gokmen; Ruohan Zhang; Weiyu Liu; Jiajun Wu; Roberto Martín-Martín; Li Fei-Fei
+
+[arXiv 作者记录](https://arxiv.org/abs/2510.18316)
+
+状态：abstract_review；22 页。
+
+### 内容摘要
+
+MoMaGen 在软硬约束下扩展示范，综合安排底座、相机和多步操作。
+
+### 本篇研究的问题
+
+移动双臂任务的数据生成怎样同时满足可达性和可见性？
+
+### 适用条件
+
+仿真中的可行示范生成不是任意视频生成的物理推理。
+
+### 方法与训练
+
+MoMaGen 在软硬约束下扩展示范，综合安排底座、相机和多步操作。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】仿真中的可行示范生成不是任意视频生成的物理推理。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P308 · VAGEN: Reinforcing World Model Reasoning for Multi-Turn VLM Agents
+
+Kangrui Wang; Pingyue Zhang; Zihan Wang; Yaning Gao; Linjie Li; Qineng Wang; Hanyang Chen; Chi Wan; Yiping Lu; Zhengyuan Yang; Lijuan Wang; Ranjay Krishna; Jiajun Wu; Li Fei-Fei; Yejin Choi; Manling Li
+
+[arXiv 作者记录](https://arxiv.org/abs/2510.16907)
+
+状态：abstract_review；55 页。
+
+### 内容摘要
+
+VAGEN 用强化学习约束视觉状态推理，并提供逐轮状态预测奖励。
+
+### 本篇研究的问题
+
+显式状态估计和转移预测怎样帮助多轮 VLM agent？
+
+### 适用条件
+
+world model reasoning 由 VLM 的状态推理实现，不能与视频扩散内生推理混用。
+
+### 方法与训练
+
+VAGEN 用强化学习约束视觉状态推理，并提供逐轮状态预测奖励。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】world model reasoning 由 VLM 的状态推理实现，不能与视频扩散内生推理混用。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P307 · X2Video: Adapting Diffusion Models for Multimodal Controllable Neural Video Rendering
+
+Zhitong Huang; Mohan Zhang; Renhan Wang; Rui Tang; Hao Zhu; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2510.08530)
+
+状态：abstract_review；12 页。
+
+### 内容摘要
+
+X2Video 用固有属性通道引导视频扩散，通过混合自注意力、区域交叉注意力和递归采样处理多模态与长序列控制。
+
+### 本篇研究的问题
+
+多种材质、几何和语言条件怎样共同控制长视频渲染？
+
+### 适用条件
+
+大量几何和渲染条件已由输入提供；应按条件渲染评价，而非自动归为未来机制预测。
+
+### 方法与训练
+
+X2Video 用固有属性通道引导视频扩散，通过混合自注意力、区域交叉注意力和递归采样处理多模态与长序列控制。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】大量几何和渲染条件已由输入提供；应按条件渲染评价，而非自动归为未来机制预测。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P306 · Paper2Video: Automatic Video Generation from Scientific Papers
+
+Zeyu Zhu; Kevin Qinghong Lin; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2510.05096)
+
+状态：abstract_review；19 页。
+
+### 内容摘要
+
+Paper2Video 构建论文展示基准，PaperTalker 用多智能体协调幻灯片、语音、字幕和讲者。
+
+### 本篇研究的问题
+
+论文怎样自动转为信息协调的讲解视频？
+
+### 适用条件
+
+这是内容编排式生成；讲解质量不属于物理世界预测。
+
+### 方法与训练
+
+Paper2Video 构建论文展示基准，PaperTalker 用多智能体协调幻灯片、语音、字幕和讲者。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】这是内容编排式生成；讲解质量不属于物理世界预测。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P305 · Code2Video: A Code-centric Paradigm for Educational Video Generation
+
+Yanzhe Chen; Kevin Qinghong Lin; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2510.01174)
+
+状态：abstract_review；26 页。
+
+### 内容摘要
+
+Code2Video 组合规划、代码生成与视觉检查，并用学科视频和知识测验代理指标评价。
+
+### 本篇研究的问题
+
+教育视频能否用可执行代码实现可修改的内容规划？
+
+### 适用条件
+
+视频由代码与 agent 组织；VLM 测验也不能直接代表真实人的学习增益。
+
+### 方法与训练
+
+Code2Video 组合规划、代码生成与视觉检查，并用学科视频和知识测验代理指标评价。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】视频由代码与 agent 组织；VLM 测验也不能直接代表真实人的学习增益。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P304 · Back to the Features: DINO as a Foundation for Video World Models
+
+Federico Baldassarre; Marc Szafraniec; Basile Terver; Vasil Khalidov; Francisco Massa; Yann LeCun; Patrick Labatut; Maximilian Seitzer; Piotr Bojanowski
+
+[arXiv 作者记录](https://arxiv.org/abs/2507.19468)
+
+状态：abstract_review；24 页。
+
+### 内容摘要
+
+DINO-world 在 DINOv2 潜空间预测未来，并考察视频预测与观测—动作轨迹适配。
+
+### 本篇研究的问题
+
+预训练 DINO 表征能否支撑通用视频世界预测？
+
+### 适用条件
+
+潜空间预测和视频解码质量须分别衡量；动作适配有额外交互数据条件。
+
+### 方法与训练
+
+DINO-world 在 DINOv2 潜空间预测未来，并考察视频预测与观测—动作轨迹适配。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】潜空间预测和视频解码质量须分别衡量；动作适配有额外交互数据条件。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P303 · Whole-Body Conditioned Egocentric Video Prediction
+
+Yutong Bai; Danny Tran; Amir Bar; Yann LeCun; Trevor Darrell; Jitendra Malik
+
+[arXiv 作者记录](https://arxiv.org/abs/2506.21552)
+
+状态：abstract_review；30 页。
+
+### 内容摘要
+
+PEVA 用身体关节层级组织的三维姿态条件训练自回归扩散模型，并在 Nymeria 上设计分层预测与控制评价。
+
+### 本篇研究的问题
+
+给定全身动作轨迹，能否预测第一人称未来视频？
+
+### 适用条件
+
+输入已包含未来身体运动；它预测观察后果，不能与无动作输入的开放未来预测直接比较。
+
+### 方法与训练
+
+PEVA 用身体关节层级组织的三维姿态条件训练自回归扩散模型，并在 Nymeria 上设计分层预测与控制评价。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】输入已包含未来身体运动；它预测观察后果，不能与无动作输入的开放未来预测直接比较。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P302 · MindCube: Spatial Mental Modeling from Limited Views
+
+Qineng Wang; Baiqiao Yin; Pingyue Zhang; Jianshu Zhang; Kangrui Wang; Zihan Wang; Jieyu Zhang; Keshigeyan Chandrasegaran; Han Liu; Ranjay Krishna; Saining Xie; Jiajun Wu; Li Fei-Fei; Manling Li
+
+[arXiv 作者记录](https://arxiv.org/abs/2506.21458)
+
+状态：abstract_review；74 页。
+
+### 内容摘要
+
+MindCube 设计空间问答，并通过先生成认知地图再推理的训练改善空间理解。
+
+### 本篇研究的问题
+
+有限视角下的空间心智模型怎样支持位置、视角和假设运动推理？
+
+### 适用条件
+
+认知地图上的假设推演不同于物理视频后果生成。
+
+### 方法与训练
+
+MindCube 设计空间问答，并通过先生成认知地图再推理的训练改善空间理解。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】认知地图上的假设推演不同于物理视频后果生成。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P301 · FramePrompt: In-context Controllable Animation with Zero Structural Changes
+
+Guian Fang; Yuchao Gu; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2506.17301)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+FramePrompt 把参考外观、骨架运动和目标视频组织为统一视觉序列，减少专用结构修改。
+
+### 本篇研究的问题
+
+参考图与骨架动作能否直接作为视频序列条件实现动画控制？
+
+### 适用条件
+
+未来骨架已给定；主要验证动作控制而非自主预测动作或物理规律。
+
+### 方法与训练
+
+FramePrompt 把参考外观、骨架运动和目标视频组织为统一视觉序列，减少专用结构修改。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】未来骨架已给定；主要验证动作控制而非自主预测动作或物理规律。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P300 · Show-o2: Improved Native Unified Multimodal Models
+
+Jinheng Xie; Zhenheng Yang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2506.15564)
+
+状态：abstract_review；22 页。
+
+### 内容摘要
+
+Show-o2 结合自回归与 flow matching，并在因果三维 VAE 空间融合视觉表示。
+
+### 本篇研究的问题
+
+理解与图像、视频生成能否使用统一的原生模型？
+
+### 适用条件
+
+统一架构不自动证明理解能力会转移为可靠物理后果生成。
+
+### 方法与训练
+
+Show-o2 结合自回归与 flow matching，并在因果三维 VAE 空间融合视觉表示。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】统一架构不自动证明理解能力会转移为可靠物理后果生成。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P299 · V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning
+
+Mido Assran; Adrien Bardes; David Fan; Quentin Garrido; Russell Howes; Mojtaba; Komeili; Matthew Muckley; Ammar Rizvi; Claire Roberts; Koustuv Sinha; Artem Zholus; Sergio Arnaud; Abha Gejji; Ada Martin; Francois Robert Hogan; Daniel Dugas; Piotr Bojanowski; Vasil Khalidov; Patrick Labatut; Francisco Massa; Marc Szafraniec; Kapil Krishnakumar; Yong Li; Xiaodong Ma; Sarath Chandar; Franziska Meier; Yann LeCun; Michael Rabbat; Nicolas Ballas
+
+[arXiv 作者记录](https://arxiv.org/abs/2506.09985)
+
+状态：abstract_review；48 页。
+
+### 内容摘要
+
+V-JEPA 2 先学习视频潜表征，再以机器人数据训练动作条件预测器；语言对齐与机器人规划分别评价。
+
+### 本篇研究的问题
+
+大规模无动作视频预训练怎样支持理解与少量交互数据下的机器人规划？
+
+### 适用条件
+
+V-JEPA 2-AC 是潜空间规划模型；语言问答结果与机器人控制结果不能互作证明。
+
+### 方法与训练
+
+V-JEPA 2 先学习视频潜表征，再以机器人数据训练动作条件预测器；语言对齐与机器人规划分别评价。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】V-JEPA 2-AC 是潜空间规划模型；语言问答结果与机器人控制结果不能互作证明。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P298 · Diffuse and Disperse: Image Generation with Representation Regularization
+
+Runqian Wang; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2506.09027)
+
+状态：abstract_review；14 页。
+
+### 内容摘要
+
+Dispersive Loss 鼓励隐藏表征分散，不要求正样本配对或外部表征教师，作为生成训练的附加正则。
+
+### 本篇研究的问题
+
+扩散模型的内部表征分散正则能否改善生成？
+
+### 适用条件
+
+改善图像分布指标不能直接证明物理规律或操作后果更正确。
+
+### 方法与训练
+
+Dispersive Loss 鼓励隐藏表征分散，不要求正样本配对或外部表征教师，作为生成训练的附加正则。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】改善图像分布指标不能直接证明物理规律或操作后果更正确。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P297 · macOSWorld: A Multilingual Interactive Benchmark for GUI Agents
+
+Pei Yang; Hai Ci; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2506.04135)
+
+状态：abstract_review；43 页。
+
+### 内容摘要
+
+macOSWorld 提供可交互软件任务，比较多类 GUI agent 的完成情况。
+
+### 本篇研究的问题
+
+GUI agent 在 macOS 和多语言任务中的执行能力如何？
+
+### 适用条件
+
+这是相邻交互基准，不能直接支持视频世界模型结论。
+
+### 方法与训练
+
+macOSWorld 提供可交互软件任务，比较多类 GUI agent 的完成情况。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】这是相邻交互基准，不能直接支持视频世界模型结论。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P296 · UniRL: Self-Improving Unified Multimodal Models via Supervised and Reinforcement Learning
+
+Weijia Mao; Zhenheng Yang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2505.23380)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+UniRL 以模型合成图像形成迭代数据，比较监督微调和 GRPO。
+
+### 本篇研究的问题
+
+统一多模态模型能否利用自身生成图像进行后训练？
+
+### 适用条件
+
+自改进主要在所测图像任务中验证；不能推断自进化会顺带解决世界机制问题。
+
+### 方法与训练
+
+UniRL 以模型合成图像形成迭代数据，比较监督微调和 GRPO。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】自改进主要在所测图像任务中验证；不能推断自进化会顺带解决世界机制问题。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P295 · Video-Holmes: Can MLLM Think Like Holmes for Complex Video Reasoning?
+
+Junhao Cheng; Yuying Ge; Teng Wang; Yixiao Ge; Jing Liao; Ying Shan
+
+[arXiv 作者记录](https://arxiv.org/abs/2505.21374)
+
+状态：abstract_review；24 页。
+
+### 内容摘要
+
+Video-Holmes 构建需要跨线索整合的视频推理评测，分析 MLLM 在关键证据利用上的不足。
+
+### 本篇研究的问题
+
+视频理解模型能否组合分散线索完成复杂推断？
+
+### 适用条件
+
+评价对象为视频理解模型，不能将得分直接解释为视频生成模型的推演能力。
+
+### 方法与训练
+
+Video-Holmes 构建需要跨线索整合的视频推理评测，分析 MLLM 在关键证据利用上的不足。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】评价对象为视频理解模型，不能将得分直接解释为视频生成模型的推演能力。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P294 · OSVI-WM: One-Shot Visual Imitation for Unseen Tasks using World-Model-Guided Trajectory Generation
+
+Raktim Gautam Goswami; Prashanth Krishnamurthy; Yann LeCun; Farshad Khorrami
+
+[arXiv 作者记录](https://arxiv.org/abs/2505.20425)
+
+状态：abstract_review；24 页。
+
+### 内容摘要
+
+OSVI-WM 根据专家示范和当前观察生成潜状态、动作轨迹，以世界模型指导视觉模仿。
+
+### 本篇研究的问题
+
+单次示范如何迁移到训练中未见过的任务结构？
+
+### 适用条件
+
+示范提供额外目标信息；未见任务泛化与改变物理规律是不同设置。
+
+### 方法与训练
+
+OSVI-WM 根据专家示范和当前观察生成潜状态、动作轨迹，以世界模型指导视觉模仿。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】示范提供额外目标信息；未见任务泛化与改变物理规律是不同设置。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P293 · Mean Flows for One-step Generative Modeling
+
+Zhengyang Geng; Mingyang Deng; Xingjian Bai; J. Zico Kolter; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2505.13447)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+MeanFlow 以区间平均速度代替仅建模瞬时速度，构建不依赖预训练蒸馏的一步生成框架。
+
+### 本篇研究的问题
+
+平均速度场能否支持从零训练的单步生成模型？
+
+### 适用条件
+
+研究给定图像任务上的采样效率；不是现成视频模型的即插即用加速保证。
+
+### 方法与训练
+
+MeanFlow 以区间平均速度代替仅建模瞬时速度，构建不依赖预训练蒸馏的一步生成框架。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】研究给定图像任务上的采样效率；不是现成视频模型的即插即用加速保证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P292 · RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning
+
+Zihan Wang; Kangrui Wang; Qineng Wang; Pingyue Zhang; Linjie Li; Zhengyuan Yang; Xing Jin; Kefan Yu; Minh Nhat Nguyen; Licheng Liu; Eli Gottlieb; Yiping Lu; Kyunghyun Cho; Jiajun Wu; Li Fei-Fei; Lijuan Wang; Yejin Choi; Manling Li
+
+[arXiv 作者记录](https://arxiv.org/abs/2504.20073)
+
+状态：abstract_review；39 页。
+
+### 内容摘要
+
+RAGEN 提供轨迹级训练框架并分析奖励、采样和思维监督的作用。
+
+### 本篇研究的问题
+
+多轮强化学习怎样稳定改善交互 agent 的推理？
+
+### 适用条件
+
+自进化是训练过程；不能由此推断世界机制的识别、执行和修订已自动解决。
+
+### 方法与训练
+
+RAGEN 提供轨迹级训练框架并分析奖励、采样和思维监督的作用。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】自进化是训练过程；不能由此推断世界机制的识别、执行和修订已自动解决。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P291 · CasaGPT: Cuboid Arrangement and Scene Assembly for Interior Design
+
+Weitao Feng; Hang Zhou; Jing Liao; Li Cheng; Wenbo Zhou
+
+[arXiv 作者记录](https://arxiv.org/abs/2504.19478)
+
+状态：abstract_review；19 页。
+
+### 内容摘要
+
+CasaGPT 自回归排列长方体原语，使用拒绝采样降低对象碰撞，并整理场景布局数据。
+
+### 本篇研究的问题
+
+用分解的长方体原语能否改进室内场景的构成与放置？
+
+### 适用条件
+
+静态布局碰撞约束与动态物理演化不同；依赖所定义的几何原语和数据范围。
+
+### 方法与训练
+
+CasaGPT 自回归排列长方体原语，使用拒绝采样降低对象碰撞，并整理场景布局数据。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】静态布局碰撞约束与动态物理演化不同；依赖所定义的几何原语和数据范围。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P290 · LiveCC: Learning Video LLM with Streaming Speech Transcription at Scale
+
+Joya Chen; Ziyun Zeng; Yiqi Lin; Wei Li; Zejun Ma; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2504.16030)
+
+状态：abstract_review；20 页。
+
+### 内容摘要
+
+LiveCC 将词语和视频帧按时间交错训练，建立直播描述数据与体育评论评价。
+
+### 本篇研究的问题
+
+廉价语音转写能否支撑实时视频语言学习？
+
+### 适用条件
+
+语音是额外监督；评论正确性不同于未来后果预测。
+
+### 方法与训练
+
+LiveCC 将词语和视频帧按时间交错训练，建立直播描述数据与体育评论评价。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】语音是额外监督；评论正确性不同于未来后果预测。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P289 · Chain-of-Modality: Learning Manipulation Programs from Multimodal Human Videos with Vision-Language-Models
+
+Chen Wang; Fei Xia; Wenhao Yu; Tingnan Zhang; Ruohan Zhang; C. Karen Liu; Li Fei-Fei; Jie Tan; Jacky Liang
+
+[arXiv 作者记录](https://arxiv.org/abs/2504.13351)
+
+状态：abstract_review；9 页。
+
+### 内容摘要
+
+Chain-of-Modality 用多模态示范与 VLM 提取任务计划和控制参数。
+
+### 本篇研究的问题
+
+视频中难以看见的控制参数能否通过声音和肌肉信号补足？
+
+### 适用条件
+
+额外声音、肌肉传感与语言推理改变输入条件，不属于仅视频生成器推理。
+
+### 方法与训练
+
+Chain-of-Modality 用多模态示范与 VLM 提取任务计划和控制参数。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】额外声音、肌肉传感与语言推理改变输入条件，不属于仅视频生成器推理。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P288 · AnimeGamer: Infinite Anime Life Simulation with Next Game State Prediction
+
+Junhao Cheng; Yuying Ge; Yixiao Ge; Jing Liao; Ying Shan
+
+[arXiv 作者记录](https://arxiv.org/abs/2504.01014)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+AnimeGamer 由 MLLM 根据历史预测含动作信息的多模态状态表示，再由视频扩散模型解码动画镜头。
+
+### 本篇研究的问题
+
+互动动画如何在多轮游戏中更新角色状态和动态镜头？
+
+### 适用条件
+
+状态推断由 MLLM 承担；语境一致和游戏体验不能替代可执行物理规则检查。
+
+### 方法与训练
+
+AnimeGamer 由 MLLM 根据历史预测含动作信息的多模态状态表示，再由视频扩散模型解码动画镜头。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】状态推断由 MLLM 承担；语境一致和游戏体验不能替代可执行物理规则检查。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P287 · WorldScore: A Unified Evaluation Benchmark for World Generation
+
+Haoyi Duan; Hong-Xing Yu; Sirui Chen; Li Fei-Fei; Jiajun Wu
+
+[arXiv 作者记录](https://arxiv.org/abs/2504.00983)
+
+状态：abstract_review；21 页。
+
+### 内容摘要
+
+WorldScore 以明确相机轨迹组织下一场景生成，分开评价控制、质量和动态。
+
+### 本篇研究的问题
+
+不同三维、四维和视频生成方法怎样在统一世界生成任务上比较？
+
+### 适用条件
+
+相机驱动的世界生成不涵盖全部动作干预和物理机制验证。
+
+### 方法与训练
+
+WorldScore 以明确相机轨迹组织下一场景生成，分开评价控制、质量和动态。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】相机驱动的世界生成不涵盖全部动作干预和物理机制验证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P286 · Long-Context Autoregressive Video Modeling with Next-Frame Prediction
+
+Yuchao Gu; Weijia Mao; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2503.19325)
+
+状态：abstract_review；12 页。
+
+### 内容摘要
+
+FAR 使用远近不同的 patch 粒度组织历史帧，提高长视频建模效率。
+
+### 本篇研究的问题
+
+长上下文视频自回归怎样减少历史冗余又保留近期细节？
+
+### 适用条件
+
+长视频质量不必然意味着长期状态与规则始终正确。
+
+### 方法与训练
+
+FAR 使用远近不同的 patch 粒度组织历史帧，提高长视频建模效率。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】长视频质量不必然意味着长期状态与规则始终正确。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P285 · Repurposing 2D Diffusion Models with Gaussian Atlas for 3D Generation
+
+Tiange Xiang; Kai Li; Chengjiang Long; Christian Häne; Peihong Guo; Scott Delp; Ehsan Adeli; Li Fei-Fei
+
+[arXiv 作者记录](https://arxiv.org/abs/2503.15877)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+Gaussian Atlas 将三维结构展开到稠密二维网格，构建 GaussianVerse 数据进行微调。
+
+### 本篇研究的问题
+
+二维扩散预训练怎样迁移到三维 Gaussian 生成？
+
+### 适用条件
+
+主要是静态三维对象，尚不直接预测时空交互。
+
+### 方法与训练
+
+Gaussian Atlas 将三维结构展开到稠密二维网格，构建 GaussianVerse 数据进行微调。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】主要是静态三维对象，尚不直接预测时空交互。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P284 · MTV-Inpaint: Multi-Task Long Video Inpainting
+
+Shiyuan Yang; Zheng Gu; Liang Hou; Xin Tao; Pengfei Wan; Xiaodong Chen; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2503.11412)
+
+状态：abstract_review；14 页。
+
+### 内容摘要
+
+MTV-Inpaint 以双分支空间注意力统一补全和插入，通过关键帧处理与中间帧传播扩展序列长度。
+
+### 本篇研究的问题
+
+长视频如何兼顾区域补全与可控对象插入？
+
+### 适用条件
+
+长序列补全强调外观和时序一致，尚需另测编辑引发的真实因果后果。
+
+### 方法与训练
+
+MTV-Inpaint 以双分支空间注意力统一补全和插入，通过关键帧处理与中间帧传播扩展序列长度。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】长序列补全强调外观和时序一致，尚需另测编辑引发的真实因果后果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P283 · I2V3D: Controllable image-to-video generation with 3D guidance
+
+Zhiyuan Zhang; Dongdong Chen; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2503.09733)
+
+状态：abstract_review；11 页。
+
+### 内容摘要
+
+I2V3D 先用三维引导生成高质量关键帧，再采用双向引导的视频插值，支持相机、物体和角色动画控制。
+
+### 本篇研究的问题
+
+如何把粗糙三维渲染转换成可控且连贯的视频？
+
+### 适用条件
+
+动作与几何由图形管线提供，属于三维条件生成；插值无训练不表示整条管线无训练。
+
+### 方法与训练
+
+I2V3D 先用三维引导生成高质量关键帧，再采用双向引导的视频插值，支持相机、物体和角色动画控制。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】动作与几何由图形管线提供，属于三维条件生成；插值无训练不表示整条管线无训练。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P282 · Denoising Hamiltonian Network for Physical Reasoning
+
+Congyue Deng; Brandon Y. Feng; Cecilia Garraffo; Alan Garbarz; Robin Walters; William T. Freeman; Leonidas Guibas; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2503.07596)
+
+状态：abstract_review；12 页。
+
+### 内容摘要
+
+Denoising Hamiltonian Network 将物理算子推广成可学习的神经算子，覆盖前向模拟之外的物理推理任务。
+
+### 本篇研究的问题
+
+如何把哈密顿结构扩展到多种物理推理输入输出？
+
+### 适用条件
+
+需要核对变量表示、训练分布与物理约束；不能把算子任务直接视为写实视频推理。
+
+### 方法与训练
+
+Denoising Hamiltonian Network 将物理算子推广成可学习的神经算子，覆盖前向模拟之外的物理推理任务。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】需要核对变量表示、训练分布与物理约束；不能把算子任务直接视为写实视频推理。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P281 · Automated Movie Generation via Multi-Agent CoT Planning
+
+Weijia Wu; Zeyu Zhu; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2503.07314)
+
+状态：abstract_review；15 页。
+
+### 内容摘要
+
+MovieAgent 用层级多智能体思维链组织场景、镜头与角色，并调用视频生成。
+
+### 本篇研究的问题
+
+如何从剧本自动规划多场景、多镜头影片？
+
+### 适用条件
+
+叙事推理由 agent 提供，不能视为生成器自身的长程机制推理。
+
+### 方法与训练
+
+MovieAgent 用层级多智能体思维链组织场景、镜头与角色，并调用视频生成。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】叙事推理由 agent 提供，不能视为生成器自身的长程机制推理。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P280 · BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities
+
+Yunfan Jiang; Ruohan Zhang; Josiah Wong; Chen Wang; Yanjie Ze; Hang Yin; Cem Gokmen; Shuran Song; Jiajun Wu; Li Fei-Fei
+
+[arXiv 作者记录](https://arxiv.org/abs/2503.05652)
+
+状态：abstract_review；36 页。
+
+### 内容摘要
+
+BEHAVIOR Robot Suite 提供机器人系统、示范接口和学习方案，覆盖多种困难家庭活动。
+
+### 本篇研究的问题
+
+家庭任务的全身机器人学习怎样整合本体、采集和训练？
+
+### 适用条件
+
+是具身执行基础设施；人机协作与视频预览收益需独立评价。
+
+### 方法与训练
+
+BEHAVIOR Robot Suite 提供机器人系统、示范接口和学习方案，覆盖多种困难家庭活动。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】是具身执行基础设施；人机协作与视频预览收益需独立评价。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P279 · DoraCycle: Domain-Oriented Adaptation of Unified Generative Model in Multimodal Cycles
+
+Rui Zhao; Weijia Mao; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2503.03651)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+DoraCycle 通过图文双向循环利用单模态数据进行领域适配。
+
+### 本篇研究的问题
+
+没有配对图文时如何把统一模型适配到新风格领域？
+
+### 适用条件
+
+主要适用于不依赖精确配对知识的任务；视频动力学需要额外条件。
+
+### 方法与训练
+
+DoraCycle 通过图文双向循环利用单模态数据进行领域适配。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】主要适用于不依赖精确配对知识的任务；视频动力学需要额外条件。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P278 · Difix3D+: Improving 3D Reconstructions with Single-Step Diffusion Models
+
+Jay Zhangjie Wu; Yuxuan Zhang; Haithem Turki; Xuanchi Ren; Jun Gao; Mike Zheng Shou; Sanja Fidler; Zan Gojcic; Huan Ling
+
+[arXiv 作者记录](https://arxiv.org/abs/2503.01774)
+
+状态：abstract_review；15 页。
+
+### 内容摘要
+
+Difix3D+ 用单步图像扩散修复渲染结果，并将修复信号反馈到三维表示。
+
+### 本篇研究的问题
+
+少步扩散怎样修复三维重建的新视角伪影？
+
+### 适用条件
+
+新视角补全并不证明补出的隐藏几何是真实测量结果。
+
+### 方法与训练
+
+Difix3D+ 用单步图像扩散修复渲染结果，并将修复信号反馈到三维表示。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】新视角补全并不证明补出的隐藏几何是真实测量结果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P277 · Fractal Generative Models
+
+Tianhong Li; Qinyi Sun; Lijie Fan; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2502.17437)
+
+状态：abstract_review；13 页。
+
+### 内容摘要
+
+Fractal Generative Models 通过递归调用生成模块形成自相似结构，并以逐像素自回归图像生成进行验证。
+
+### 本篇研究的问题
+
+递归组合原子生成模块能否形成有效的生成架构？
+
+### 适用条件
+
+模块递归结构本身不提供多步物理或跨分支一致性保证。
+
+### 方法与训练
+
+Fractal Generative Models 通过递归调用生成模块形成自相似结构，并以逐像素自回归图像生成进行验证。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】模块递归结构本身不提供多步物理或跨分支一致性保证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P276 · Learning from Reward-Free Offline Data: A Case for Planning with Latent Dynamics Models
+
+Vlad Sobal; Wancong Zhang; Kyunghyun Cho; Randall Balestriero; Tim G. J. Rudner; Yann LeCun
+
+[arXiv 作者记录](https://arxiv.org/abs/2502.14819)
+
+状态：abstract_review；30 页。
+
+### 内容摘要
+
+作者在导航任务中系统改变数据质量、多样性和环境布局，比较 JEPA 动力学规划与强化学习。
+
+### 本篇研究的问题
+
+没有奖励标注的离线数据何时更适合模型规划而非无模型强化学习？
+
+### 适用条件
+
+结论依赖所测任务与数据分布，不是所有机器人场景的普遍排序。
+
+### 方法与训练
+
+作者在导航任务中系统改变数据质量、多样性和环境布局，比较 JEPA 动力学规划与强化学习。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】结论依赖所测任务与数据分布，不是所有机器人场景的普遍排序。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P275 · Is Noise Conditioning Necessary for Denoising Generative Models?
+
+Qiao Sun; Zhicheng Jiang; Hanhong Zhao; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2502.13129)
+
+状态：abstract_review；34 页。
+
+### 内容摘要
+
+研究去除噪声条件后的生成性能与误差，并给出理论和图像实验分析。
+
+### 本篇研究的问题
+
+去噪生成模型是否必须显式输入噪声等级？
+
+### 适用条件
+
+结论与噪声分布、模型和数据设置有关；视频模型迁移需单独测试。
+
+### 方法与训练
+
+研究去除噪声条件后的生成性能与误差，并给出理论和图像实验分析。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】结论与噪声分布、模型和数据设置有关；视频模型迁移需单独测试。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P274 · PhysReason: A Comprehensive Benchmark towards Physics-Based Reasoning
+
+Xinyu Zhang; Yuxuan Dong; Yanrui Wu; Jiaxing Huang; Chengyou Jia; Basura Fernando; Mike Zheng Shou; Lingling Zhang; Jun Liu
+
+[arXiv 作者记录](https://arxiv.org/abs/2502.12054)
+
+状态：abstract_review；23 页。
+
+### 内容摘要
+
+PhysReason 构建物理题及答案、步骤级评分，分析定理使用、条件判断与计算问题。
+
+### 本篇研究的问题
+
+模型在哪些物理知识和推导步骤上出错？
+
+### 适用条件
+
+物理题推理主要由语言模型完成，不能等同于视频生成中的物理行为。
+
+### 方法与训练
+
+PhysReason 构建物理题及答案、步骤级评分，分析定理使用、条件判断与计算问题。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】物理题推理主要由语言模型完成，不能等同于视频生成中的物理行为。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P273 · Intuitive physics understanding emerges from self-supervised pretraining on natural videos
+
+Quentin Garrido; Nicolas Ballas; Mahmoud Assran; Adrien Bardes; Laurent Najman; Michael Rabbat; Emmanuel Dupoux; Yann LeCun
+
+[arXiv 作者记录](https://arxiv.org/abs/2502.11831)
+
+状态：abstract_review；24 页。
+
+### 内容摘要
+
+作者使用预期违背实验，测试潜空间视频预测器对物体持续性和形状一致性等性质的敏感性。
+
+### 本篇研究的问题
+
+自然视频中的自监督预测是否学到直觉物理？
+
+### 适用条件
+
+识别异常的惊讶度不等于生成正确干预结果，也不证明规则可编辑。
+
+### 方法与训练
+
+作者使用预期违背实验，测试潜空间视频预测器对物体持续性和形状一致性等性质的敏感性。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】识别异常的惊讶度不等于生成正确干预结果，也不证明规则可编辑。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P272 · A Real-to-Sim-to-Real Approach to Robotic Manipulation with VLM-Generated Iterative Keypoint Rewards
+
+Shivansh Patel; Xinchen Yin; Wenlong Huang; Shubham Garg; Hooshang Nayyeri; Li Fei-Fei; Svetlana Lazebnik; Yunzhu Li
+
+[arXiv 作者记录](https://arxiv.org/abs/2502.08643)
+
+状态：abstract_review；12 页。
+
+### 内容摘要
+
+IKER 用 VLM 生成和修改 Python 奖励，在重建仿真中训练策略，再部署到真实环境。
+
+### 本篇研究的问题
+
+语言任务怎样变成可迭代的视觉关键点奖励？
+
+### 适用条件
+
+可执行奖励约束的是目标，不等于学到了可执行世界转移规律。
+
+### 方法与训练
+
+IKER 用 VLM 生成和修改 Python 奖励，在重建仿真中训练策略，再部署到真实环境。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】可执行奖励约束的是目标，不等于学到了可执行世界转移规律。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P271 · WorldGUI: An Interactive Benchmark for Desktop GUI Automation from Any Starting Point
+
+Henry Hengyuan Zhao; Kaiming Yang; Wendi Yu; Difei Gao; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2502.08047)
+
+状态：abstract_review；28 页。
+
+### 内容摘要
+
+WorldGUI 系统改变软件任务初始状态，用批评式执行框架比较恢复与适应能力。
+
+### 本篇研究的问题
+
+GUI agent 能否从非默认状态恢复并调整计划？
+
+### 适用条件
+
+界面状态变化与环境因果规律变化需要区分。
+
+### 方法与训练
+
+WorldGUI 系统改变软件任务初始状态，用批评式执行框架比较恢复与适应能力。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】界面状态变化与环境因果规律变化需要区分。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P270 · UniMoD: Efficient Unified Multimodal Transformers with Mixture-of-Depths
+
+Weijia Mao; Zhenheng Yang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2502.06474)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+UniMoD 用任务感知路由选择跳过计算的 token，比较训练成本和多模态任务表现。
+
+### 本篇研究的问题
+
+统一多模态模型怎样按任务和层减少冗余 token 计算？
+
+### 适用条件
+
+计算减少不自动等于视频生成延迟或显存同比减少。
+
+### 方法与训练
+
+UniMoD 用任务感知路由选择跳过计算的 token，比较训练成本和多模态任务表现。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】计算减少不自动等于视频生成延迟或显存同比减少。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P269 · MakeAnything: Harnessing Diffusion Transformers for Multi-Domain Procedural Sequence Generation
+
+Yiren Song; Cheng Liu; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2502.01572)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+MakeAnything 以多领域过程序列微调 DiT，并用非对称 LoRA 和时空约束生成或反推制作过程。
+
+### 本篇研究的问题
+
+不同制作任务的中间步骤如何保持一致地生成？
+
+### 适用条件
+
+合理制作序列未必是给定真实动作的可核验物理后果。
+
+### 方法与训练
+
+MakeAnything 以多领域过程序列微调 DiT，并用非对称 LoRA 和时空约束生成或反推制作过程。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】合理制作序列未必是给定真实动作的可核验物理后果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P268 · TalkingEyes: Pluralistic Speech-Driven 3D Eye Gaze Animation
+
+Yixiang Zhuang; Chunshan Ma; Yao Cheng; Xuan Cheng; Jing Liao; Juncong Lin
+
+[arXiv 作者记录](https://arxiv.org/abs/2501.09921)
+
+状态：abstract_review；13 页。
+
+### 内容摘要
+
+TalkingEyes 使用音频与三维运动配对数据，在分开的潜空间中生成头部和视线，并与面部动画整合。
+
+### 本篇研究的问题
+
+语音如何驱动多样且协调的眼神和头部运动？
+
+### 适用条件
+
+关注角色表现与语音运动协调，非动作干预下的环境后果模型。
+
+### 方法与训练
+
+TalkingEyes 使用音频与三维运动配对数据，在分开的潜空间中生成头部和视线，并与面部动画整合。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】关注角色表现与语音运动协调，非动作干预下的环境后果模型。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P267 · Why Automate This? Exploring Correlations Between Desire for Robotic Automation, Invested Time and Well-Being
+
+Ruchira Ray; Leona Pang; Sanjana Srivastava; Li Fei-Fei; Samantha Shorey; Roberto Martín-Martín
+
+[arXiv 作者记录](https://arxiv.org/abs/2501.06348)
+
+状态：abstract_review；26 页。
+
+### 内容摘要
+
+作者结合日常活动与福祉调查，分析自动化偏好和时间、情绪的关联。
+
+### 本篇研究的问题
+
+人希望自动化什么活动，是否能用耗时直接预测？
+
+### 适用条件
+
+相关性研究不证明机器人介入的因果收益，可为选任务提供人本动机。
+
+### 方法与训练
+
+作者结合日常活动与福祉调查，分析自动化偏好和时间、情绪的关联。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】相关性研究不证明机器人介入的因果收益，可为选任务提供人本动机。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P266 · Thinking in Space: How Multimodal Large Language Models See, Remember, and Recall Spaces
+
+Jihan Yang; Shusheng Yang; Anjali W. Gupta; Rilyn Han; Li Fei-Fei; Saining Xie
+
+[arXiv 作者记录](https://arxiv.org/abs/2412.14171)
+
+状态：abstract_review；28 页。
+
+### 内容摘要
+
+Thinking in Space 构建 VSI-Bench 并用语言与视觉表达探查空间推理。
+
+### 本篇研究的问题
+
+视频语言模型如何看见、记忆并回忆空间？
+
+### 适用条件
+
+空间问答表现不能等同于完整三维状态恢复或可控未来生成。
+
+### 方法与训练
+
+Thinking in Space 构建 VSI-Bench 并用语言与视觉表达探查空间推理。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】空间问答表现不能等同于完整三维状态恢复或可控未来生成。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P265 · MetaMorph: Multimodal Understanding and Generation via Instruction Tuning
+
+Shengbang Tong; David Fan; Jiachen Zhu; Yunyang Xiong; Xinlei Chen; Koustuv Sinha; Michael Rabbat; Yann LeCun; Saining Xie; Zhuang Liu
+
+[arXiv 作者记录](https://arxiv.org/abs/2412.14164)
+
+状态：abstract_review；25 页。
+
+### 内容摘要
+
+MetaMorph 在语言模型中加入视觉 token 预测，研究理解数据与生成能力的相互作用。
+
+### 本篇研究的问题
+
+视觉预测式指令微调能否统一理解与生成？
+
+### 适用条件
+
+以图像和多模态任务为主；不能直接当作视频世界推理的实验依据。
+
+### 方法与训练
+
+MetaMorph 在语言模型中加入视觉 token 预测，研究理解数据与生成能力的相互作用。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】以图像和多模态任务为主；不能直接当作视频世界推理的实验依据。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P264 · Video Representation Learning with Joint-Embedding Predictive Architectures
+
+Katrina Drozdov; Ravid Shwartz-Ziv; Yann LeCun
+
+[arXiv 作者记录](https://arxiv.org/abs/2412.10925)
+
+状态：abstract_review；18 页。
+
+### 内容摘要
+
+VJ-VCR 以方差协方差正则学习视频表征，并探索潜变量对不确定未来的表达。
+
+### 本篇研究的问题
+
+如何防止视频 JEPA 坍塌并表示多种可能未来？
+
+### 适用条件
+
+多未来潜表示并不直接验证人可观看的视频分支或反事实因果正确性。
+
+### 方法与训练
+
+VJ-VCR 以方差协方差正则学习视频表征，并探索潜变量对不确定未来的表达。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】多未来潜表示并不直接验证人可观看的视频分支或反事实因果正确性。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P263 · The Language of Motion: Unifying Verbal and Non-verbal Language of 3D Human Motion
+
+Changan Chen; Juze Zhang; Shrinidhi K. Lakshmikanth; Yusu Fang; Ruizhi Shao; Gordon Wetzstein; Li Fei-Fei; Ehsan Adeli
+
+[arXiv 作者记录](https://arxiv.org/abs/2412.10523)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+The Language of Motion 用多模态语言模型连接语言、手势、情绪与动作编辑。
+
+### 本篇研究的问题
+
+言语与三维非言语动作怎样统一理解和生成？
+
+### 适用条件
+
+动作表达生成不同于人物和物体接触的物理仿真。
+
+### 方法与训练
+
+The Language of Motion 用多模态语言模型连接语言、手势、情绪与动作编辑。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】动作表达生成不同于人物和物体接触的物理仿真。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P262 · Navigation World Models
+
+Amir Bar; Gaoyue Zhou; Danny Tran; Trevor Darrell; Yann LeCun
+
+[arXiv 作者记录](https://arxiv.org/abs/2412.03572)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+Navigation World Models 预测给定导航动作后的观察，再生成或排序抵达目标的候选轨迹。
+
+### 本篇研究的问题
+
+动作条件视频预测能否用于视觉导航规划？
+
+### 适用条件
+
+陌生环境生成与熟悉环境规划的条件不同；不能用视觉合理性代替到达成功率。
+
+### 方法与训练
+
+Navigation World Models 预测给定导航动作后的观察，再生成或排序抵达目标的候选轨迹。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】陌生环境生成与熟悉环境规划的条件不同；不能用视觉合理性代替到达成功率。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P261 · Distractor-free Generalizable 3D Gaussian Splatting
+
+Yanqi Bao; Jing Liao; Jing Huo; Yang Gao
+
+[arXiv 作者记录](https://arxiv.org/abs/2411.17605)
+
+状态：abstract_review；22 页。
+
+### 内容摘要
+
+DGGS 在训练中预测并修整干扰掩码，在推理中重选参考图像并裁剪受干扰的 Gaussian 表示。
+
+### 本篇研究的问题
+
+带有动态干扰的多视图输入如何支持泛化三维重建？
+
+### 适用条件
+
+新视角重建的抗干扰性能不等于长期动态状态记忆。
+
+### 方法与训练
+
+DGGS 在训练中预测并修整干扰掩码，在推理中重选参考图像并裁剪受干扰的 Gaussian 表示。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】新视角重建的抗干扰性能不等于长期动态状态记忆。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P260 · ShowUI: One Vision-Language-Action Model for GUI Visual Agent
+
+Kevin Qinghong Lin; Linjie Li; Difei Gao; Zhengyuan Yang; Shiwei Wu; Zechen Bai; Weixian Lei; Lijuan Wang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2411.17465)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+ShowUI 结合界面引导 token 选择、交错状态动作流与高质量指令数据。
+
+### 本篇研究的问题
+
+轻量视觉语言动作模型怎样处理 GUI 状态和历史？
+
+### 适用条件
+
+面向软件操作的动作模型，不是像素世界生成器。
+
+### 方法与训练
+
+ShowUI 结合界面引导 token 选择、交错状态动作流与高质量指令数据。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】面向软件操作的动作模型，不是像素世界生成器。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P259 · MovieBench: A Hierarchical Movie Level Dataset for Long Video Generation
+
+Weijia Wu; Mingyu Liu; Zeyu Zhu; Xi Xia; Haoen Feng; Wen Wang; Kevin Qinghong Lin; Chunhua Shen; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2411.15262)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+MovieBench 以电影和镜头层级组织视频、角色、音频与描述。
+
+### 本篇研究的问题
+
+长视频训练和评价如何覆盖跨镜头角色与叙事？
+
+### 适用条件
+
+角色和故事连续性指标不足以验证动态物理机制。
+
+### 方法与训练
+
+MovieBench 以电影和镜头层级组织视频、角色、音频与描述。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】角色和故事连续性指标不足以验证动态物理机制。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P258 · ReCapture: Generative Video Camera Controls for User-Provided Videos using Masked Video Fine-Tuning
+
+David Junhao Zhang; Roni Paiss; Shiran Zada; Nikhil Karnad; David E. Jacobs; Yael Pritch; Inbar Mosseri; Mike Zheng Shou; Neal Wadhwa; Nataniel Ruiz
+
+[arXiv 作者记录](https://arxiv.org/abs/2411.05003)
+
+状态：abstract_review；14 页。
+
+### 内容摘要
+
+ReCapture 先构造新视角的带噪锚定视频，再以掩码视频微调修复。
+
+### 本篇研究的问题
+
+怎样为用户已有视频生成新的相机轨迹？
+
+### 适用条件
+
+保留的动态来自输入视频；不可见部分是生成假设而非新增观测。
+
+### 方法与训练
+
+ReCapture 先构造新视角的带噪锚定视频，再以掩码视频微调修复。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】保留的动态来自输入视频；不可见部分是生成假设而非新增观测。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P257 · HourVideo: 1-Hour Video-Language Understanding
+
+Keshigeyan Chandrasegaran; Agrim Gupta; Lea M. Hadzic; Taran Kota; Jimming He; Cristóbal Eyzaguirre; Zane Durante; Manling Li; Jiajun Wu; Li Fei-Fei
+
+[arXiv 作者记录](https://arxiv.org/abs/2411.04998)
+
+状态：abstract_review；28 页。
+
+### 内容摘要
+
+HourVideo 包含总结、回忆、追踪、推理和导航任务，提供长视频问答评价。
+
+### 本篇研究的问题
+
+一小时视频中的事件和空间信息怎样持续理解？
+
+### 适用条件
+
+问答中的预测或反事实标签不表示模型会生成可验证的未来像素。
+
+### 方法与训练
+
+HourVideo 包含总结、回忆、追踪、推理和导航任务，提供长视频问答评价。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】问答中的预测或反事实标签不表示模型会生成可验证的未来像素。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P256 · DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning
+
+Gaoyue Zhou; Hengkai Pan; Yann LeCun; Lerrel Pinto
+
+[arXiv 作者记录](https://arxiv.org/abs/2411.04983)
+
+状态：abstract_review；21 页。
+
+### 内容摘要
+
+DINO-WM 在预训练视觉特征空间学习动力学，以目标条件搜索完成多类环境中的零样本规划。
+
+### 本篇研究的问题
+
+离线视觉轨迹能否支持不依赖专家策略的测试时规划？
+
+### 适用条件
+
+不重建像素世界；其规划优势不能直接转化为 Foresee 的视频观看质量。
+
+### 方法与训练
+
+DINO-WM 在预训练视觉特征空间学习动力学，以目标条件搜索完成多类环境中的零样本规划。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】不重建像素世界；其规划优势不能直接转化为 Foresee 的视频观看质量。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P255 · Skinned Motion Retargeting with Dense Geometric Interaction Perception
+
+Zijie Ye; Jia-Wei Liu; Jia Jia; Shikun Sun; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2410.20986)
+
+状态：abstract_review；21 页。
+
+### 内容摘要
+
+MeshRet 用语义传感点对应和稠密网格交互场建模动作重定向。
+
+### 本篇研究的问题
+
+跨角色动作迁移怎样考虑身体几何接触？
+
+### 适用条件
+
+几何交互保持与完整受力模拟不同，也不是未来视频预测。
+
+### 方法与训练
+
+MeshRet 用语义传感点对应和稠密网格交互场建模动作重定向。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】几何交互保持与完整受力模拟不同，也不是未来视频预测。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P254 · Fluid: Scaling Autoregressive Text-to-image Generative Models with Continuous Tokens
+
+Lijie Fan; Tianhong Li; Siyang Qin; Yuanzhen Li; Chen Sun; Michael Rubinstein; Deqing Sun; Kaiming He; Yonglong Tian
+
+[arXiv 作者记录](https://arxiv.org/abs/2410.13863)
+
+状态：abstract_review；22 页。
+
+### 内容摘要
+
+Fluid 对比离散或连续 token、固定或随机顺序，并采用连续 token 的随机顺序自回归生成。
+
+### 本篇研究的问题
+
+连续 token 与生成顺序怎样影响文本到图像模型的扩展？
+
+### 适用条件
+
+验证损失、生成指标与视觉质量可能呈现不同趋势，不能只靠损失判断应用能力。
+
+### 方法与训练
+
+Fluid 对比离散或连续 token、固定或随机顺序，并采用连续 token 的随机顺序自回归生成。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】验证损失、生成指标与视觉质量可能呈现不同趋势，不能只靠损失判断应用能力。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P253 · SGEdit: Bridging LLM with Text2Image Generative Model for Scene Graph-based Image Editing
+
+Zhiyuan Zhang; DongDong Chen; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2410.11815)
+
+状态：abstract_review；15 页。
+
+### 内容摘要
+
+SGEdit 将 LLM 与文本到图像模型通过场景图连接，支持结构化的对象及关系编辑。
+
+### 本篇研究的问题
+
+场景图怎样连接语言指令与可控图像编辑？
+
+### 适用条件
+
+属于外部语言模型与生成器协作的编辑管线；具体关系约束和执行范围待正文核查。
+
+### 方法与训练
+
+SGEdit 将 LLM 与文本到图像模型通过场景图连接，支持结构化的对象及关系编辑。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】属于外部语言模型与生成器协作的编辑管线；具体关系约束和执行范围待正文核查。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P252 · ControLRM: Fast and Controllable 3D Generation via Large Reconstruction Model
+
+Hongbin Xu; Weitao Chen; Zhipeng Zhou; Feng Xiao; Baigui Sun; Mike Zheng Shou; Wenxiong Kang
+
+[arXiv 作者记录](https://arxiv.org/abs/2410.09592)
+
+状态：abstract_review；18 页。
+
+### 内容摘要
+
+ControLRM 通过条件分支和图像分支联合训练，连接二维控制与三维表示。
+
+### 本篇研究的问题
+
+大重建模型怎样实现快速且可控的三维生成？
+
+### 适用条件
+
+主要生成静态三维内容，尚不能直接证明四维动力学正确。
+
+### 方法与训练
+
+ControLRM 通过条件分支和图像分支联合训练，连接二维控制与三维表示。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】主要生成静态三维内容，尚不能直接证明四维动力学正确。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P251 · ARCap: Collecting High-quality Human Demonstrations for Robot Learning with Augmented Reality Feedback
+
+Sirui Chen; Chen Wang; Kaden Nguyen; Li Fei-Fei; C. Karen Liu
+
+[arXiv 作者记录](https://arxiv.org/abs/2410.08464)
+
+状态：abstract_review；8 页。
+
+### 内容摘要
+
+ARCap 通过增强现实视觉反馈和触觉警告，帮助用户避免碰撞并匹配机器人运动学。
+
+### 本篇研究的问题
+
+AR 反馈能否帮助非专家采集机器人可执行的示范？
+
+### 适用条件
+
+与 AR tutorial 直接相邻，但目标是示范采集；不是多分支未来视频探索。
+
+### 方法与训练
+
+ARCap 通过增强现实视觉反馈和触觉警告，帮助用户避免碰撞并匹配机器人运动学。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】与 AR tutorial 直接相邻，但目标是示范采集；不是多分支未来视频探索。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P250 · Automated Creation of Digital Cousins for Robust Policy Learning
+
+Tianyuan Dai; Josiah Wong; Yunfan Jiang; Chen Wang; Cem Gokmen; Ruohan Zhang; Jiajun Wu; Li Fei-Fei
+
+[arXiv 作者记录](https://arxiv.org/abs/2410.07408)
+
+状态：abstract_review；32 页。
+
+### 内容摘要
+
+Digital Cousins 自动生成保留几何与语义可供性的相近场景，组成 real-to-sim-to-real 训练。
+
+### 本篇研究的问题
+
+不精确复制真实场景的数字近似能否仍支持策略迁移？
+
+### 适用条件
+
+可供性保持与精确物理孪生不同，不能据此验证某个具体反事实后果。
+
+### 方法与训练
+
+Digital Cousins 自动生成保留几何与语义可供性的相近场景，组成 real-to-sim-to-real 训练。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】可供性保持与精确物理孪生不同，不能据此验证某个具体反事实后果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P249 · Embodied Agent Interface: Benchmarking LLMs for Embodied Decision Making
+
+Manling Li; Shiyu Zhao; Qineng Wang; Kangrui Wang; Yu Zhou; Sanjana Srivastava; Cem Gokmen; Tony Lee; Li Erran Li; Ruohan Zhang; Weiyu Liu; Percy Liang; Li Fei-Fei; Jiayuan Mao; Jiajun Wu
+
+[arXiv 作者记录](https://arxiv.org/abs/2410.07166)
+
+状态：abstract_review；107 页。
+
+### 内容摘要
+
+Embodied Agent Interface 形式化任务和模块接口，超越单一终局成功率分析。
+
+### 本篇研究的问题
+
+具身决策的不同语言模块怎样用统一输入输出定位错误？
+
+### 适用条件
+
+语言模块诊断与视频生成正确性需要分别评价。
+
+### 方法与训练
+
+Embodied Agent Interface 形式化任务和模块接口，超越单一终局成功率分析。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】语言模块诊断与视频生成正确性需要分别评价。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P248 · Scaling Proprioceptive-Visual Learning with Heterogeneous Pre-trained Transformers
+
+Lirui Wang; Xinlei Chen; Jialiang Zhao; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2409.20537)
+
+状态：abstract_review；24 页。
+
+### 内容摘要
+
+HPT 用可共享 Transformer 主干连接不同本体的视觉和本体感知数据，研究异构预训练的扩展规律。
+
+### 本篇研究的问题
+
+跨机器人、任务和传感器的预训练怎样共享策略表征？
+
+### 适用条件
+
+学习对象为控制策略表征，不是可独立检验所有动作后果的世界模型。
+
+### 方法与训练
+
+HPT 用可共享 Transformer 主干连接不同本体的视觉和本体感知数据，研究异构预训练的扩展规律。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】学习对象为控制策略表征，不是可独立检验所有动作后果的世界模型。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P247 · High Quality Human Image Animation using Regional Supervision and Motion Blur Condition
+
+Zhongcong Xu; Chaoyue Song; Guoxian Song; Jianfeng Zhang; Jun Hao Liew; Hongyi Xu; You Xie; Linjie Luo; Guosheng Lin; Jiashi Feng; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2409.19580)
+
+状态：abstract_review；15 页。
+
+### 内容摘要
+
+作者增加关键区域监督、显式运动模糊条件和高分辨率训练策略。
+
+### 本篇研究的问题
+
+人物动画怎样改善脸、手与运动模糊细节？
+
+### 适用条件
+
+局部外观真实度不能替代动作的物理可行性验证。
+
+### 方法与训练
+
+作者增加关键区域监督、显式运动模糊条件和高分辨率训练策略。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】局部外观真实度不能替代动作的物理可行性验证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P246 · Generative Object Insertion in Gaussian Splatting with a Multi-View Diffusion Model
+
+Hongliang Zhong; Can Wang; Jingbo Zhang; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2409.16938)
+
+状态：abstract_review；15 页。
+
+### 内容摘要
+
+通过多视图扩散先验实现 Gaussian Splatting 场景的生成式对象插入。
+
+### 本篇研究的问题
+
+如何把生成对象以多视图一致的方式插入 Gaussian 场景？
+
+### 适用条件
+
+对象插入和多视图一致性不直接验证插入后接触、碰撞等动态后果。
+
+### 方法与训练
+
+通过多视图扩散先验实现 Gaussian Splatting 场景的生成式对象插入。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】对象插入和多视图一致性不直接验证插入后接触、碰撞等动态后果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P245 · LVCD: Reference-based Lineart Video Colorization with Diffusion Models
+
+Zhitong Huang; Mohan Zhang; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2409.12960)
+
+状态：abstract_review；11 页。
+
+### 内容摘要
+
+LVCD 使用扩散模型和参考条件处理线稿视频上色，关注颜色与时序一致。
+
+### 本篇研究的问题
+
+参考图引导的线稿视频上色如何保持长序列一致性？
+
+### 适用条件
+
+目标是上色和身份保持；不是下一事件预测或物理机制推断。
+
+### 方法与训练
+
+LVCD 使用扩散模型和参考条件处理线稿视频上色，关注颜色与时序一致。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】目标是上色和身份保持；不是下一事件预测或物理机制推断。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P244 · ReKep: Spatio-Temporal Reasoning of Relational Keypoint Constraints for Robotic Manipulation
+
+Wenlong Huang; Chen Wang; Yunzhu Li; Ruohan Zhang; Li Fei-Fei
+
+[arXiv 作者记录](https://arxiv.org/abs/2409.01652)
+
+状态：abstract_review；30 页。
+
+### 内容摘要
+
+ReKep 自动生成视觉关键点约束，并通过分层优化求解末端位姿序列。
+
+### 本篇研究的问题
+
+关系关键点约束能否把自然语言转成实时操作计划？
+
+### 适用条件
+
+显式任务约束不等于环境动力学模型；关键点与感知是重要条件。
+
+### 方法与训练
+
+ReKep 自动生成视觉关键点约束，并通过分层优化求解末端位姿序列。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】显式任务约束不等于环境动力学模型；关键点与感知是重要条件。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P243 · VideoLLM-MoD: Efficient Video-Language Streaming with Mixture-of-Depths Vision Computation
+
+Shiwei Wu; Joya Chen; Kevin Qinghong Lin; Qimeng Wang; Yan Gao; Qianli Xu; Tong Xu; Yao Hu; Enhong Chen; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2408.16730)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+VideoLLM-MoD 让部分视觉 token 跳过若干层，减少长视频处理计算。
+
+### 本篇研究的问题
+
+视频语言流式计算能否在保留视觉 token 的同时降成本？
+
+### 适用条件
+
+面向视频语言模型；不能直接推断视频扩散骨干有同样收益。
+
+### 方法与训练
+
+VideoLLM-MoD 让部分视觉 token 跳过若干层，减少长视频处理计算。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】面向视频语言模型；不能直接推断视频扩散骨干有同样收益。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P242 · Show-o: One Single Transformer to Unify Multimodal Understanding and Generation
+
+Jinheng Xie; Weijia Mao; Zechen Bai; David Junhao Zhang; Weihao Wang; Kevin Qinghong Lin; Yuchao Gu; Zhijie Chen; Zhenheng Yang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2408.12528)
+
+状态：abstract_review；25 页。
+
+### 内容摘要
+
+Show-o 在共享模型内结合文本建模与视觉生成，研究统一多模态能力。
+
+### 本篇研究的问题
+
+一个 Transformer 能否统一多模态理解和生成？
+
+### 适用条件
+
+共享参数并不直接证明物理推理或干预预测。
+
+### 方法与训练
+
+Show-o 在共享模型内结合文本建模与视觉生成，研究统一多模态能力。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】共享参数并不直接证明物理推理或干预预测。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P241 · PooDLe: Pooled and dense self-supervised learning from naturalistic videos
+
+Alex N. Wang; Christopher Hoang; Yuwen Xiong; Yann LeCun; Mengye Ren
+
+[arXiv 作者记录](https://arxiv.org/abs/2408.11208)
+
+状态：abstract_review；23 页。
+
+### 内容摘要
+
+PooDLe 结合全局不变表征与光流变换下的稠密等变目标，评估驾驶和行走视频中的特征。
+
+### 本篇研究的问题
+
+如何在自然视频中同时学习语义和空间对应？
+
+### 适用条件
+
+表征学习提供基础，不直接预测动作后果或处理规则突变。
+
+### 方法与训练
+
+PooDLe 结合全局不变表征与光流变换下的稠密等变目标，评估驾驶和行走视频中的特征。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】表征学习提供基础，不直接预测动作后果或处理规则突变。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P240 · Learning Video Context as Interleaved Multimodal Sequences
+
+Kevin Qinghong Lin; Pengchuan Zhang; Difei Gao; Xide Xia; Joya Chen; Ziteng Gao; Jinheng Xie; Xuhong Xiao; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2407.21757)
+
+状态：abstract_review；21 页。
+
+### 内容摘要
+
+MovieSeq 用交错多模态序列与指令微调连接画面、人物、情节和字幕。
+
+### 本篇研究的问题
+
+长视频上下文如何与角色、字幕和外部知识一起组织？
+
+### 适用条件
+
+外部人物信息与字幕改变输入条件；不是仅凭视频生成器完成推理。
+
+### 方法与训练
+
+MovieSeq 用交错多模态序列与指令微调连接画面、人物、情节和字幕。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】外部人物信息与字幕改变输入条件；不是仅凭视频生成器完成推理。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P239 · Chat2Layout: Interactive 3D Furniture Layout with a Multimodal LLM
+
+Can Wang; Hongliang Zhong; Menglei Chai; Mingming He; Dongdong Chen; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2407.21333)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+Chat2Layout 通过视觉文本提示和参考示例搜索引导 MLLM，利用反馈改善交互式家具布局，摘要声明无需修改模型权重。
+
+### 本篇研究的问题
+
+用户如何通过多模态对话迭代修改三维家具布局？
+
+### 适用条件
+
+推理与布局决策位于外部 MLLM；应另查真实用户负担和布局约束的评价。
+
+### 方法与训练
+
+Chat2Layout 通过视觉文本提示和参考示例搜索引导 MLLM，利用反馈改善交互式家具布局，摘要声明无需修改模型权重。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】推理与布局决策位于外部 MLLM；应另查真实用户负担和布局约束的评价。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P238 · OccFusion: Rendering Occluded Humans with Generative Diffusion Priors
+
+Adam Sun; Tiange Xiang; Scott Delp; Li Fei-Fei; Ehsan Adeli
+
+[arXiv 作者记录](https://arxiv.org/abs/2407.00316)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+OccFusion 将三维 Gaussian 表示与二维扩散监督结合，改善遮挡条件的人体重建。
+
+### 本篇研究的问题
+
+遮挡人体的自由视角渲染怎样利用扩散先验补全？
+
+### 适用条件
+
+生成补全部分未必是真实观测，不能直接用于物理后果真值。
+
+### 方法与训练
+
+OccFusion 将三维 Gaussian 表示与二维扩散监督结合，改善遮挡条件的人体重建。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】生成补全部分未必是真实观测，不能直接用于物理后果真值。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P237 · Cambrian-1: A Fully Open, Vision-Centric Exploration of Multimodal LLMs
+
+Shengbang Tong; Ellis Brown; Penghao Wu; Sanghyun Woo; Manoj Middepogu; Sai Charitha Akula; Jihan Yang; Shusheng Yang; Adithya Iyer; Xichen Pan; Ziteng Wang; Rob Fergus; Yann LeCun; Saining Xie
+
+[arXiv 作者记录](https://arxiv.org/abs/2406.16860)
+
+状态：abstract_review；51 页。
+
+### 内容摘要
+
+Cambrian-1 系统比较视觉编码器，引入 CV-Bench 与空间视觉聚合器，研究视觉中心的多模态学习。
+
+### 本篇研究的问题
+
+视觉编码和连接器如何影响多模态模型的视觉依据？
+
+### 适用条件
+
+视觉问答和图像空间任务不等同于视频动态推理。
+
+### 方法与训练
+
+Cambrian-1 系统比较视觉编码器，引入 CV-Bench 与空间视觉聚合器，研究视觉中心的多模态学习。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】视觉问答和图像空间任务不等同于视频动态推理。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P236 · Autoregressive Image Generation without Vector Quantization
+
+Tianhong Li; Yonglong Tian; He Li; Mingyang Deng; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2406.11838)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+通过扩散过程建模连续 token 的条件分布，将 Diffusion Loss 与自回归或掩码自回归架构结合。
+
+### 本篇研究的问题
+
+自回归生成是否一定需要离散量化 token？
+
+### 适用条件
+
+图像生成的连续表示基础可以提供方法参照，但未直接验证视频机制执行。
+
+### 方法与训练
+
+通过扩散过程建模连续 token 的条件分布，将 Diffusion Loss 与自回归或掩码自回归架构结合。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】图像生成的连续表示基础可以提供方法参照，但未直接验证视频机制执行。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P235 · VideoLLM-online: Online Video Large Language Model for Streaming Video
+
+Joya Chen; Zhaoyang Lv; Shiwei Wu; Kevin Qinghong Lin; Chenan Song; Difei Gao; Jia-Wei Liu; Ziteng Gao; Dongxing Mao; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2406.11816)
+
+状态：abstract_review；19 页。
+
+### 内容摘要
+
+VideoLLM-online 以 LIVE 目标、流式数据构造和推理优化支持时间对齐对话。
+
+### 本篇研究的问题
+
+模型怎样在连续视频流中及时回答和描述？
+
+### 适用条件
+
+在线响应与预测尚未发生的后果是不同能力。
+
+### 方法与训练
+
+VideoLLM-online 以 LIVE 目标、流式数据构造和推理优化支持时间对齐对话。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】在线响应与预测尚未发生的后果是不同能力。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P234 · VideoGUI: A Benchmark for GUI Automation from Instructional Videos
+
+Kevin Qinghong Lin; Linjie Li; Difei Gao; Qinchen WU; Mingyi Yan; Zhengyuan Yang; Lijuan Wang; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2406.10227)
+
+状态：abstract_review；24 页。
+
+### 内容摘要
+
+VideoGUI 以视频目标评估高层程序规划、中层动作叙述与原子执行。
+
+### 本篇研究的问题
+
+agent 能否从教学视频中重建并执行软件步骤？
+
+### 适用条件
+
+主要是 GUI 示范理解，不能直接评估物理 AR 教程效果。
+
+### 方法与训练
+
+VideoGUI 以视频目标评估高层程序规划、中层动作叙述与原子执行。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】主要是 GUI 示范理解，不能直接评估物理 AR 教程效果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P233 · Physically Compatible 3D Object Modeling from a Single Image
+
+Minghao Guo; Bohan Wang; Pingchuan Ma; Tianyuan Zhang; Crystal Elaine Owens; Chuang Gan; Joshua B. Tenenbaum; Kaiming He; Wojciech Matusik
+
+[arXiv 作者记录](https://arxiv.org/abs/2405.20510)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+把静态平衡作为约束，将物理属性分解并连接到三维重建优化中，使模型更适合仿真和制造。
+
+### 本篇研究的问题
+
+单图重建怎样同时考虑形状、物理属性与外力的相容性？
+
+### 适用条件
+
+单图中的物理属性可能不唯一；静态相容性需要与真实参数识别和长期动态准确性区分。
+
+### 方法与训练
+
+把静态平衡作为约束，将物理属性分解并连接到三维重建优化中，使模型更适合仿真和制造。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】单图中的物理属性可能不唯一；静态相容性需要与真实参数识别和长期动态准确性区分。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P232 · TetSphere Splatting: Representing High-Quality Geometry with Lagrangian Volumetric Meshes
+
+Minghao Guo; Bohan Wang; Kaiming He; Wojciech Matusik
+
+[arXiv 作者记录](https://arxiv.org/abs/2405.20283)
+
+状态：abstract_review；25 页。
+
+### 内容摘要
+
+TetSphere Splatting 通过四面体球的变形及几何正则构造高质量体网格，评价单视图和多视图重建。
+
+### 本篇研究的问题
+
+拉格朗日体网格表示怎样提高三维形状质量和可用性？
+
+### 适用条件
+
+几何表示适合后续物理应用，不表示论文已经学习完整动力学。
+
+### 方法与训练
+
+TetSphere Splatting 通过四面体球的变形及几何正则构造高质量体网格，评价单视图和多视图重建。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】几何表示适合后续物理应用，不表示论文已经学习完整动力学。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P231 · Hierarchical World Models as Visual Whole-Body Humanoid Controllers
+
+Nicklas Hansen; Jyothir S; Vlad Sobal; Yann LeCun; Xiaolong Wang; Hao Su
+
+[arXiv 作者记录](https://arxiv.org/abs/2405.18418)
+
+状态：abstract_review；21 页。
+
+### 内容摘要
+
+作者让高层视觉策略产生指令、低层控制器执行，并以奖励联合训练模拟人形机器人的多个任务。
+
+### 本篇研究的问题
+
+分层世界模型能否从视觉输入学习复杂全身控制？
+
+### 适用条件
+
+依赖模拟环境和奖励；动作偏好与物理控制不能替代像素生成评价。
+
+### 方法与训练
+
+作者让高层视觉策略产生指令、低层控制器执行，并以奖励联合训练模拟人形机器人的多个任务。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】依赖模拟环境和奖励；动作偏好与物理控制不能替代像素生成评价。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P230 · EG4D: Explicit Generation of 4D Object without Score Distillation
+
+Qi Sun; Zhiyang Guo; Ziyu Wan; Jing Nathan Yan; Shengming Yin; Wengang Zhou; Jing Liao; Houqiang Li
+
+[arXiv 作者记录](https://arxiv.org/abs/2405.18132)
+
+状态：abstract_review；20 页。
+
+### 内容摘要
+
+利用视频扩散生成多视图视频，再进行动态 Gaussian 重建与细节修整，减少对分数蒸馏的依赖。
+
+### 本篇研究的问题
+
+如何从单图获得时空一致的显式四维对象？
+
+### 适用条件
+
+显式四维表示在此指动态外观与几何；不能由此推出对象动力学机制可识别或可编辑。
+
+### 方法与训练
+
+利用视频扩散生成多视图视频，再进行动态 Gaussian 重建与细节修整，减少对分数蒸馏的依赖。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】显式四维表示在此指动态外观与几何；不能由此推出对象动力学机制可识别或可编辑。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P229 · TRANSIC: Sim-to-Real Policy Transfer by Learning from Online Correction
+
+Yunfan Jiang; Chen Wang; Ruohan Zhang; Jiajun Wu; Li Fei-Fei
+
+[arXiv 作者记录](https://arxiv.org/abs/2405.10315)
+
+状态：abstract_review；39 页。
+
+### 内容摘要
+
+TRANSIC 将仿真策略与真实执行时的人类辅助结合，学习应对接触复杂任务中的迁移误差。
+
+### 本篇研究的问题
+
+人的在线纠正怎样帮助策略跨越仿真到真实的差别？
+
+### 适用条件
+
+人的介入提供额外信息与成本，不能与完全自主系统忽略条件地比较。
+
+### 方法与训练
+
+TRANSIC 将仿真策略与真实执行时的人类辅助结合，学习应对接触复杂任务中的迁移误差。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】人的介入提供额外信息与成本，不能与完全自主系统忽略条件地比较。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P228 · Fine-Tuning Large Vision-Language Models as Decision-Making Agents via Reinforcement Learning
+
+Yuexiang Zhai; Hao Bai; Zipeng Lin; Jiayi Pan; Shengbang Tong; Yifei Zhou; Alane Suhr; Saining Xie; Yann LeCun; Yi Ma; Sergey Levine
+
+[arXiv 作者记录](https://arxiv.org/abs/2405.10292)
+
+状态：abstract_review；30 页。
+
+### 内容摘要
+
+作者将任务描述、语言思维链和文本动作接入强化学习，通过任务奖励优化视觉语言决策。
+
+### 本篇研究的问题
+
+强化学习能否把视觉语言模型训练成更有效的决策智能体？
+
+### 适用条件
+
+推理由 VLM 承担，不属于视频生成模型本身涌现的推理证据。
+
+### 方法与训练
+
+作者将任务描述、语言思维链和文本动作接入强化学习，通过任务奖励优化视觉语言决策。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】推理由 VLM 承担，不属于视频生成模型本身涌现的推理证据。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P227 · BEHAVIOR Vision Suite: Customizable Dataset Generation via Simulation
+
+Yunhao Ge; Yihe Tang; Jiashu Xu; Cem Gokmen; Chengshu Li; Wensi Ai; Benjamin Jose Martinez; Arman Aydin; Mona Anvari; Ayush K Chakravarthy; Hong-Xing Yu; Josiah Wong; Sanjana Srivastava; Sharon Lee; Shengxin Zha; Laurent Itti; Yunzhu Li; Roberto Martín-Martín; Miao Liu; Pengchuan Zhang; Ruohan Zhang; Li Fei-Fei; Jiajun Wu
+
+[arXiv 作者记录](https://arxiv.org/abs/2405.09546)
+
+状态：abstract_review；19 页。
+
+### 内容摘要
+
+BEHAVIOR Vision Suite 支持改变场景、外观和物理相关参数，生成带定制标注的合成数据。
+
+### 本篇研究的问题
+
+怎样生成可控制环境变量的视觉训练与评价数据？
+
+### 适用条件
+
+可控仿真便于因子实验，但需另外检查仿真到真实的差别。
+
+### 方法与训练
+
+BEHAVIOR Vision Suite 支持改变场景、外观和物理相关参数，生成带定制标注的合成数据。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】可控仿真便于因子实验，但需另外检查仿真到真实的差别。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P226 · Learn2Talk: 3D Talking Face Learns from 2D Talking Face
+
+Yixiang Zhuang; Baoping Cheng; Yao Cheng; Yuntao Jin; Renshuai Liu; Chengyang Li; Xuan Cheng; Jing Liao; Juncong Lin
+
+[arXiv 作者记录](https://arxiv.org/abs/2404.12888)
+
+状态：abstract_review；12 页。
+
+### 内容摘要
+
+Learn2Talk 从二维说话人方法获得唇音同步和教师监督，改进语音到三维面部运动的学习。
+
+### 本篇研究的问题
+
+二维说话人模型怎样监督三维语音面部动画？
+
+### 适用条件
+
+研究特定人体动画子任务，泛化到手部操作或环境后果需要新证据。
+
+### 方法与训练
+
+Learn2Talk 从二维说话人方法获得唇音同步和教师监督，改进语音到三维面部运动的学习。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】研究特定人体动画子任务，泛化到手部操作或环境后果需要新证据。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P225 · AniClipart: Clipart Animation with Text-to-Video Priors
+
+Ronghuan Wu; Wanchao Su; Kede Ma; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2404.12347)
+
+状态：abstract_review；18 页。
+
+### 内容摘要
+
+AniClipart 用贝塞尔曲线参数化关键点轨迹，并结合视频分数蒸馏与骨架保持损失优化动画。
+
+### 本篇研究的问题
+
+如何用视频扩散先验让静态剪贴画形成可控动画？
+
+### 适用条件
+
+轨迹优化以视频先验和骨架约束为依据，非物理仿真保证。
+
+### 方法与训练
+
+AniClipart 用贝塞尔曲线参数化关键点轨迹，并结合视频分数蒸馏与骨架保持损失优化动画。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】轨迹优化以视频先验和骨架约束为依据，非物理仿真保证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P224 · EgoPet: Egomotion and Interaction Data from an Animal's Perspective
+
+Amir Bar; Arya Bakhtiar; Danny Tran; Antonio Loquercio; Jathushan Rajasegaran; Yann LeCun; Amir Globerson; Trevor Darrell
+
+[arXiv 作者记录](https://arxiv.org/abs/2404.09991)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+EgoPet 收集宠物运动与交互视频，设计动物行为任务并评估其对四足机器人预训练的帮助。
+
+### 本篇研究的问题
+
+动物第一视角数据能为运动和交互学习提供什么信号？
+
+### 适用条件
+
+数据迁移收益不表示人类教程或可控未来视频生成已解决。
+
+### 方法与训练
+
+EgoPet 收集宠物运动与交互视频，设计动物行为任务并评估其对四足机器人预训练的帮助。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】数据迁移收益不表示人类教程或可控未来视频生成已解决。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P223 · Revisiting Feature Prediction for Learning Visual Representations from Video
+
+Adrien Bardes; Quentin Garrido; Jean Ponce; Xinlei Chen; Michael Rabbat; Yann LeCun; Mahmoud Assran; Nicolas Ballas
+
+[arXiv 作者记录](https://arxiv.org/abs/2404.08471)
+
+状态：abstract_review；23 页。
+
+### 内容摘要
+
+V-JEPA 从视频特征预测学习表征，以冻结骨干评估运动、外观和图像任务。
+
+### 本篇研究的问题
+
+不重建像素，仅预测视频特征能否获得通用视觉表示？
+
+### 适用条件
+
+下游理解准确率不是动作条件后果预测或视频生成的直接验证。
+
+### 方法与训练
+
+V-JEPA 从视频特征预测学习表征，以冻结骨干评估运动、外观和图像任务。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】下游理解准确率不是动作条件后果预测或视频生成的直接验证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P222 · RaFE: Generative Radiance Fields Restoration
+
+Zhongkai Wu; Ziyu Wan; Jing Zhang; Jing Liao; Dong Xu
+
+[arXiv 作者记录](https://arxiv.org/abs/2404.03654)
+
+状态：abstract_review；23 页。
+
+### 内容摘要
+
+RaFE 先修复多视图图像，再通过生成式辐射场处理各视角修复结果的不一致。
+
+### 本篇研究的问题
+
+如何利用二维生成先验修复不同退化类型的辐射场？
+
+### 适用条件
+
+针对场景恢复与新视角合成，不检验动作条件的未来演化。
+
+### 方法与训练
+
+RaFE 先修复多视图图像，再通过生成式辐射场处理各视角修复结果的不一致。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】针对场景恢复与新视角合成，不检验动作条件的未来演化。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P221 · BEHAVIOR-1K: A Human-Centered, Embodied AI Benchmark with 1,000 Everyday Activities and Realistic Simulation
+
+Chengshu Li; Ruohan Zhang; Josiah Wong; Cem Gokmen; Sanjana Srivastava; Roberto Martín-Martín; Chen Wang; Gabrael Levine; Wensi Ai; Benjamin Martinez; Hang Yin; Michael Lingelbach; Minjune Hwang; Ayano Hiranaka; Sujay Garlanka; Arman Aydin; Sharon Lee; Jiankai Sun; Mona Anvari; Manasi Sharma; Dhruva Bansal; Samuel Hunter; Kyu-Young Kim; Alan Lou; Caleb R Matthews; Ivan Villa-Renteria; Jerry Huayang Tang; Claire Tang; Fei Xia; Yunzhu Li; Silvio Savarese; Hyowon Gweon; C. Karen Liu; Jiajun Wu; Li Fei-Fei
+
+[arXiv 作者记录](https://arxiv.org/abs/2403.09227)
+
+状态：abstract_review；43 页。
+
+### 内容摘要
+
+BEHAVIOR-1K 提供大量人本活动与交互仿真，测试复杂操作及迁移。
+
+### 本篇研究的问题
+
+贴近日常需要的长程家庭任务怎样被模拟并评价？
+
+### 适用条件
+
+模拟任务成功与生成视频对人类探索的价值仍是不同结果。
+
+### 方法与训练
+
+BEHAVIOR-1K 提供大量人本活动与交互仿真，测试复杂操作及迁移。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】模拟任务成功与生成视频对人类探索的价值仍是不同结果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P220 · DexCap: Scalable and Portable Mocap Data Collection System for Dexterous Manipulation
+
+Chen Wang; Haochen Shi; Weizhuo Wang; Ruohan Zhang; Li Fei-Fei; C. Karen Liu
+
+[arXiv 作者记录](https://arxiv.org/abs/2403.07788)
+
+状态：abstract_review；20 页。
+
+### 内容摘要
+
+DexCap 提供手部捕捉系统，DexIL 将人类动作数据用于机器人技能学习。
+
+### 本篇研究的问题
+
+便携人手动作捕捉怎样支持灵巧机器人模仿？
+
+### 适用条件
+
+捕捉和策略迁移不直接预测未知物体后果。
+
+### 方法与训练
+
+DexCap 提供手部捕捉系统，DexIL 将人类动作数据用于机器人技能学习。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】捕捉和策略迁移不直接预测未知物体后果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P219 · DragAnything: Motion Control for Anything using Entity Representation
+
+Weijia Wu; Zhuang Li; Yuchao Gu; Rui Zhao; Yefei He; David Junhao Zhang; Mike Zheng Shou; Yan Li; Tingting Gao; Di Zhang
+
+[arXiv 作者记录](https://arxiv.org/abs/2403.07420)
+
+状态：abstract_review；20 页。
+
+### 内容摘要
+
+DragAnything 将实体表征与运动引导结合，支持对象和背景的轨迹控制。
+
+### 本篇研究的问题
+
+怎样通过实体表示分别控制多个对象的运动？
+
+### 适用条件
+
+输入轨迹已指定；控制跟随不能直接证明模型自主预测因果后果。
+
+### 方法与训练
+
+DragAnything 将实体表征与运动引导结合，支持对象和背景的轨迹控制。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】输入轨迹已指定；控制跟随不能直接证明模型自主预测因果后果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P218 · Position Paper: Agent AI Towards a Holistic Intelligence
+
+Qiuyuan Huang; Naoki Wake; Bidipta Sarkar; Zane Durante; Ran Gong; Rohan Taori; Yusuke Noda; Demetri Terzopoulos; Noboru Kuno; Ade Famoti; Ashley Llorens; John Langford; Hoi Vo; Li Fei-Fei; Katsu Ikeuchi; Jianfeng Gao
+
+[arXiv 作者记录](https://arxiv.org/abs/2403.00833)
+
+状态：abstract_review；22 页。
+
+### 内容摘要
+
+Agent AI 立场论文讨论感知、基础模型与行动模型的整合路线。
+
+### 本篇研究的问题
+
+基础模型如何与行动结合形成通用具身智能？
+
+### 适用条件
+
+研究主张和跨域展望不应当作统一系统已经实现的实验证据。
+
+### 方法与训练
+
+Agent AI 立场论文讨论感知、基础模型与行动模型的整合路线。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】研究主张和跨域展望不应当作统一系统已经实现的实验证据。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P217 · Learning and Leveraging World Models in Visual Representation Learning
+
+Quentin Garrido; Mahmoud Assran; Nicolas Ballas; Adrien Bardes; Laurent Najman; Yann LeCun
+
+[arXiv 作者记录](https://arxiv.org/abs/2403.00504)
+
+状态：abstract_review；23 页。
+
+### 内容摘要
+
+Image World Models 把 JEPA 从遮挡补全扩展到给定全局光度变化的潜空间预测，并研究条件和容量的影响。
+
+### 本篇研究的问题
+
+预测已知图像变换的作用能否学习更可控的视觉表征？
+
+### 适用条件
+
+这里的 world model 主要针对图像变换，不能泛化为任意物理环境模型。
+
+### 方法与训练
+
+Image World Models 把 JEPA 从遮挡补全扩展到给定全局光度变化的潜空间预测，并研究条件和容量的影响。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】这里的 world model 主要针对图像变换，不能泛化为任意物理环境模型。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P216 · Bring Your Own Character: A Holistic Solution for Automatic Facial Animation Generation of Customized Characters
+
+Zechen Bai; Peng Chen; Xiaolan Peng; Lu Liu; Hui Chen; Mike Zheng Shou; Feng Tian
+
+[arXiv 作者记录](https://arxiv.org/abs/2402.13724)
+
+状态：abstract_review；10 页。
+
+### 内容摘要
+
+Bring Your Own Character 预测表情系数进行面部重定向，并通过人在环反馈改进定制。
+
+### 本篇研究的问题
+
+不同虚拟角色的面部动画怎样适配并纳入用户反馈？
+
+### 适用条件
+
+角色表情编辑不是开放世界物理交互预测。
+
+### 方法与训练
+
+Bring Your Own Character 预测表情系数进行面部重定向，并通过人在环反馈改进定制。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】角色表情编辑不是开放世界物理交互预测。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P215 · An Interactive Agent Foundation Model
+
+Zane Durante; Bidipta Sarkar; Ran Gong; Rohan Taori; Yusuke Noda; Paul Tang; Ehsan Adeli; Shrinidhi Kowshika Lakshmikanth; Kevin Schulman; Arnold Milstein; Demetri Terzopoulos; Ade Famoti; Noboru Kuno; Ashley Llorens; Hoi Vo; Katsu Ikeuchi; Li Fei-Fei; Jianfeng Gao; Naoki Wake; Qiuyuan Huang
+
+[arXiv 作者记录](https://arxiv.org/abs/2402.05929)
+
+状态：abstract_review；22 页。
+
+### 内容摘要
+
+Interactive Agent Foundation Model 结合视觉遮挡、语言建模和下一动作预测，研究机器人及游戏等任务。
+
+### 本篇研究的问题
+
+多域多任务预训练能否形成通用交互动作模型？
+
+### 适用条件
+
+动作泛化与像素世界建模、物理机制可解释性需独立验证。
+
+### 方法与训练
+
+Interactive Agent Foundation Model 结合视觉遮挡、语言建模和下一动作预测，研究机器人及游戏等任务。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】动作泛化与像素世界建模、物理机制可解释性需独立验证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P214 · Direct-a-Video: Customized Video Generation with User-Directed Camera Movement and Object Motion
+
+Shiyuan Yang; Liang Hou; Haibin Huang; Chongyang Ma; Pengfei Wan; Di Zhang; Xiaodong Chen; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2402.03162)
+
+状态：abstract_review；15 页。
+
+### 内容摘要
+
+Direct-a-Video 分别建模相机参数和对象运动，以新增时间交叉注意力和数据增强训练相机控制。
+
+### 本篇研究的问题
+
+如何解耦控制相机运动与多个对象的运动？
+
+### 适用条件
+
+用户已指定运动条件；控制准确性需要与自主预测后果区分。
+
+### 方法与训练
+
+Direct-a-Video 分别建模相机参数和对象运动，以新增时间交叉注意力和数据增强训练相机控制。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】用户已指定运动条件；控制准确性需要与自主预测后果区分。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P213 · Advances in 3D Generation: A Survey
+
+Xiaoyu Li; Qi Zhang; Di Kang; Weihao Cheng; Yiming Gao; Jingbo Zhang; Zhihao Liang; Jing Liao; Yan-Pei Cao; Ying Shan
+
+[arXiv 作者记录](https://arxiv.org/abs/2401.17807)
+
+状态：abstract_review；33 页。
+
+### 内容摘要
+
+综述按前馈生成、优化生成、程序生成和生成式新视角合成组织三维文献。
+
+### 本篇研究的问题
+
+三维生成有哪些表示、算法、数据与应用路线？
+
+### 适用条件
+
+综述用于寻找来源与建立分类，本身不提供各能力的统一实证验证。
+
+### 方法与训练
+
+综述按前馈生成、优化生成、程序生成和生成式新视角合成组织三维文献。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】综述用于寻找来源与建立分类，本身不提供各能力的统一实证验证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P212 · Deconstructing Denoising Diffusion Models for Self-Supervised Learning
+
+Xinlei Chen; Zhuang Liu; Saining Xie; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2401.14404)
+
+状态：abstract_review；10 页。
+
+### 内容摘要
+
+逐项拆解去噪扩散模型并向去噪自编码器简化，对比其表征学习表现。
+
+### 本篇研究的问题
+
+扩散模型的哪些组成部分对自监督表征学习真正必要？
+
+### 适用条件
+
+感知表征质量与生成后果正确性使用不同任务和评价。
+
+### 方法与训练
+
+逐项拆解去噪扩散模型并向去噪自编码器简化，对比其表征学习表现。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】感知表征质量与生成后果正确性使用不同任务和评价。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P211 · Towards A Better Metric for Text-to-Video Generation
+
+Jay Zhangjie Wu; Guian Fang; Haoning Wu; Xintao Wang; Yixiao Ge; Xiaodong Cun; David Junhao Zhang; Jia-Wei Liu; Yuchao Gu; Rui Zhao; Weisi Lin; Wynne Hsu; Ying Shan; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2401.07781)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+T2VScore 分开建模文本视频对齐与视频质量，并用人工判断数据检验指标。
+
+### 本篇研究的问题
+
+文本到视频怎样同时评估提示对齐与视觉质量？
+
+### 适用条件
+
+两类观感指标仍不足以证明物理机制和干预结果正确。
+
+### 方法与训练
+
+T2VScore 分开建模文本视频对齐与视频质量，并用人工判断数据检验指标。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】两类观感指标仍不足以证明物理机制和干预结果正确。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P210 · Agent AI: Surveying the Horizons of Multimodal Interaction
+
+Zane Durante; Qiuyuan Huang; Naoki Wake; Ran Gong; Jae Sung Park; Bidipta Sarkar; Rohan Taori; Yusuke Noda; Demetri Terzopoulos; Yejin Choi; Katsushi Ikeuchi; Hoi Vo; Li Fei-Fei; Jianfeng Gao
+
+[arXiv 作者记录](https://arxiv.org/abs/2401.03568)
+
+状态：abstract_review；80 页。
+
+### 内容摘要
+
+Agent AI 综述梳理物理与虚拟环境中的交互系统和下一动作预测路线。
+
+### 本篇研究的问题
+
+多模态 agent 如何整合感知、外部知识与人类反馈？
+
+### 适用条件
+
+综述提供概念脉络，不能替代具体实验边界。
+
+### 方法与训练
+
+Agent AI 综述梳理物理与虚拟环境中的交互系统和下一动作预测路线。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】综述提供概念脉络，不能替代具体实验边界。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P209 · Moonshot: Towards Controllable Video Generation and Editing with Multimodal Conditions
+
+David Junhao Zhang; Dongxu Li; Hung Le; Mike Zheng Shou; Caiming Xiong; Doyen Sahoo
+
+[arXiv 作者记录](https://arxiv.org/abs/2401.01827)
+
+状态：abstract_review；12 页。
+
+### 内容摘要
+
+Moonshot 用多模态视频模块与解耦交叉注意力整合条件，并接入预训练 ControlNet。
+
+### 本篇研究的问题
+
+图像、文字和几何条件怎样共同控制视频？
+
+### 适用条件
+
+多条件可控性与未知后果预测是不同问题。
+
+### 方法与训练
+
+Moonshot 用多模态视频模块与解耦交叉注意力整合条件，并接入预训练 ControlNet。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】多条件可控性与未知后果预测是不同问题。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P208 · Gradient-based Planning with World Models
+
+Jyothir S; Siddhartha Jalagam; Yann LeCun; Vlad Sobal
+
+[arXiv 作者记录](https://arxiv.org/abs/2312.17227)
+
+状态：abstract_review；12 页。
+
+### 内容摘要
+
+作者比较梯度优化、其他模型预测控制和策略方法，考察样本效率与规划效果。
+
+### 本篇研究的问题
+
+可微世界模型中的梯度规划能否替代采样式动作搜索？
+
+### 适用条件
+
+优化器能找到低模型损失的动作，不代表模型误差或真实执行风险已消除。
+
+### 方法与训练
+
+作者比较梯度优化、其他模型预测控制和策略方法，考察样本效率与规划效果。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】优化器能找到低模型损失的动作，不代表模型误差或真实执行风险已消除。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P207 · ShowRoom3D: Text to High-Quality 3D Room Generation Using 3D Priors
+
+Weijia Mao; Yan-Pei Cao; Jia-Wei Liu; Zhongcong Xu; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2312.13324)
+
+状态：abstract_review；15 页。
+
+### 内容摘要
+
+ShowRoom3D 结合多视角扩散先验、渐进视角选择和姿态变换优化场景。
+
+### 本篇研究的问题
+
+三维先验怎样改善文本生成的房间场景？
+
+### 适用条件
+
+生成静态场景不直接提供随时间演化的物理状态。
+
+### 方法与训练
+
+ShowRoom3D 结合多视角扩散先验、渐进视角选择和姿态变换优化场景。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】生成静态场景不直接提供随时间演化的物理状态。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P206 · ASSISTGUI: Task-Oriented Desktop Graphical User Interface Automation
+
+Difei Gao; Lei Ji; Zechen Bai; Mingyu Ouyang; Peiran Li; Dongxing Mao; Qinchen Wu; Weichen Zhang; Peiyi Wang; Xiangwu Guo; Hengxu Wang; Luowei Zhou; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2312.13108)
+
+状态：abstract_review；14 页。
+
+### 内容摘要
+
+AssistGUI 建立 Windows 软件任务并用 GUI 解析与 actor-critic 推理组织执行。
+
+### 本篇研究的问题
+
+桌面 agent 能否完成真实软件中的长步骤任务？
+
+### 适用条件
+
+执行基准与人机协作效用不同，用户负担需额外实验。
+
+### 方法与训练
+
+AssistGUI 建立 Windows 软件任务并用 GUI 解析与 actor-critic 推理组织执行。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】执行基准与人机协作效用不同，用户负担需额外实验。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P205 · Model-Based Control with Sparse Neural Dynamics
+
+Ziang Liu; Genggeng Zhou; Jeff He; Tobia Marcucci; Li Fei-Fei; Jiajun Wu; Yunzhu Li
+
+[arXiv 作者记录](https://arxiv.org/abs/2312.12791)
+
+状态：abstract_review；21 页。
+
+### 内容摘要
+
+作者剪除冗余 ReLU 神经元，再用混合整数规划和分支定界求解动作。
+
+### 本篇研究的问题
+
+稀疏神经动力学能否更适合可优化的预测控制？
+
+### 适用条件
+
+结构可优化不等于语义规则可解释；优化保证也受模型误差限制。
+
+### 方法与训练
+
+作者剪除冗余 ReLU 神经元，再用混合整数规划和分支定界求解动作。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】结构可优化不等于语义规则可解释；优化保证也受模型误差限制。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P204 · HeadArtist: Text-conditioned 3D Head Generation with Self Score Distillation
+
+Hongyu Liu; Xuan Wang; Ziyu Wan; Yujun Shen; Yibing Song; Jing Liao; Qifeng Chen
+
+[arXiv 作者记录](https://arxiv.org/abs/2312.07539)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+HeadArtist 通过关键点引导的 ControlNet 先验与自分数蒸馏优化参数化头部。
+
+### 本篇研究的问题
+
+文本怎样生成可进一步编辑的三维头部？
+
+### 适用条件
+
+研究人体局部几何与外观生成；不涉及通用世界动力学。
+
+### 方法与训练
+
+HeadArtist 通过关键点引导的 ControlNet 先验与自分数蒸馏优化参数化头部。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】研究人体局部几何与外观生成；不涉及通用世界动力学。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P203 · CAD: Photorealistic 3D Generation via Adversarial Distillation
+
+Ziyu Wan; Despoina Paschalidou; Ian Huang; Hongyu Liu; Bokui Shen; Xiaoyu Xiang; Jing Liao; Leonidas Guibas
+
+[arXiv 作者记录](https://arxiv.org/abs/2312.06663)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+CAD 比较多视图渲染与扩散先验的分布差异，以对抗学习支持单图条件三维合成与插值。
+
+### 本篇研究的问题
+
+对抗蒸馏能否改善扩散先验引导的三维生成质量和多样性？
+
+### 适用条件
+
+质量和多样性评价不能替代几何或物理约束的完整验证。
+
+### 方法与训练
+
+CAD 比较多视图渲染与扩散先验的分布差异，以对抗学习支持单图条件三维合成与插值。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】质量和多样性评价不能替代几何或物理约束的完整验证。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P202 · Photorealistic Video Generation with Diffusion Models
+
+Agrim Gupta; Lijun Yu; Kihyuk Sohn; Xiuye Gu; Meera Hahn; Li Fei-Fei; Irfan Essa; Lu Jiang; José Lezama
+
+[arXiv 作者记录](https://arxiv.org/abs/2312.06662)
+
+状态：abstract_review；13 页。
+
+### 内容摘要
+
+W.A.L.T. 结合因果编码、窗口注意力和超分辨级联生成写实视频。
+
+### 本篇研究的问题
+
+视频扩散怎样联合利用图像数据并减少注意力成本？
+
+### 适用条件
+
+主要验证通用视频生成，不直接验证行动后果或新规则推理。
+
+### 方法与训练
+
+W.A.L.T. 结合因果编码、窗口注意力和超分辨级联生成写实视频。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】主要验证通用视频生成，不直接验证行动后果或新规则推理。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P201 · Chain of Code: Reasoning with a Language Model-Augmented Code Emulator
+
+Chengshu Li; Jacky Liang; Andy Zeng; Xinyun Chen; Karol Hausman; Dorsa Sadigh; Sergey Levine; Li Fei-Fei; Fei Xia; Brian Ichter
+
+[arXiv 作者记录](https://arxiv.org/abs/2312.04474)
+
+状态：abstract_review；19 页。
+
+### 内容摘要
+
+Chain of Code 用代码结构组织推理，并让语言模型模拟不易直接执行的语义步骤。
+
+### 本篇研究的问题
+
+代码与语言仿真能否组合精确计算和语义推理？
+
+### 适用条件
+
+部分步骤由语言模型近似，不能将整条链默认视为可验证程序执行。
+
+### 方法与训练
+
+Chain of Code 用代码结构组织推理，并让语言模型模拟不易直接执行的语义步骤。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】部分步骤由语言模型近似，不能将整条链默认视为可验证程序执行。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P200 · Return of Unconditional Generation: A Self-supervised Representation Generation Method
+
+Tianhong Li; Dina Katabi; Kaiming He
+
+[arXiv 作者记录](https://arxiv.org/abs/2312.03701)
+
+状态：abstract_review；28 页。
+
+### 内容摘要
+
+RCG 先在自监督编码器的表征空间生成条件，再让图像生成器利用这些条件，降低无条件与有条件生成的差距。
+
+### 本篇研究的问题
+
+无条件生成能否通过先生成自监督语义表征来改善？
+
+### 适用条件
+
+无标签图像生成并不意味着无需数据先验，也没有直接验证世界动力学。
+
+### 方法与训练
+
+RCG 先在自监督编码器的表征空间生成条件，再让图像生成器利用这些条件，降低无条件与有条件生成的差距。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】无标签图像生成并不意味着无需数据先验，也没有直接验证世界动力学。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P199 · Mesh-Guided Neural Implicit Field Editing
+
+Can Wang; Mingming He; Menglei Chai; Dongdong Chen; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2312.02157)
+
+状态：abstract_review；13 页。
+
+### 内容摘要
+
+以可微网格提取、颜色映射和八叉树优化连接易编辑网格与辐射场，支持不同粒度的局部编辑。
+
+### 本篇研究的问题
+
+显式网格如何帮助编辑隐式神经场？
+
+### 适用条件
+
+局部几何编辑与局部机制修订不同；动态后果不在摘要任务范围内。
+
+### 方法与训练
+
+以可微网格提取、颜色映射和八叉树优化连接易编辑网格与辐射场，支持不同粒度的局部编辑。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】局部几何编辑与局部机制修订不同；动态后果不在摘要任务范围内。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P198 · VideoSwap: Customized Video Subject Swapping with Interactive Semantic Point Correspondence
+
+Yuchao Gu; Yipin Zhou; Bichen Wu; Licheng Yu; Jia-Wei Liu; Rui Zhao; Jay Zhangjie Wu; David Junhao Zhang; Mike Zheng Shou; Kevin Tang
+
+[arXiv 作者记录](https://arxiv.org/abs/2312.02087)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+VideoSwap 用稀疏语义对应及拖动、删除交互控制主体身份和运动。
+
+### 本篇研究的问题
+
+交互式语义点怎样支持形状改变的视频主体替换？
+
+### 适用条件
+
+源动作已给定；编辑保持不代表新动作后果可预测。
+
+### 方法与训练
+
+VideoSwap 用稀疏语义对应及拖动、删除交互控制主体身份和运动。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】源动作已给定；编辑保持不代表新动作后果可预测。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P197 · Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives
+
+Kristen Grauman; Andrew Westbury; Lorenzo Torresani; Kris Kitani; Jitendra Malik; Triantafyllos Afouras; Kumar Ashutosh; Vijay Baiyya; Siddhant Bansal; Bikram Boote; Eugene Byrne; Zach Chavis; Joya Chen; Feng Cheng; Fu-Jen Chu; Sean Crane; Avijit Dasgupta; Jing Dong; Maria Escobar; Cristhian Forigua; Abrham Gebreselasie; Sanjay Haresh; Jing Huang; Md Mohaiminul Islam; Suyog Jain; Rawal Khirodkar; Devansh Kukreja; Kevin J Liang; Jia-Wei Liu; Sagnik Majumder; Yongsen Mao; Miguel Martin; Effrosyni Mavroudi; Tushar Nagarajan; Francesco Ragusa; Santhosh Kumar Ramakrishnan; Luigi Seminara; Arjun Somayazulu; Yale Song; Shan Su; Zihui Xue; Edward Zhang; Jinxu Zhang; Angela Castillo; Changan Chen; Xinzhu Fu; Ryosuke Furuta; Cristina Gonzalez; Prince Gupta; Jiabo Hu; Yifei Huang; Yiming Huang; Weslie Khoo; Anush Kumar; Robert Kuo; Sach Lakhavani; Miao Liu; Mi Luo; Zhengyi Luo; Brighid Meredith; Austin Miller; Oluwatumininu Oguntola; Xiaqing Pan; Penny Peng; Shraman Pramanick; Merey Ramazanova; Fiona Ryan; Wei Shan; Kiran Somasundaram; Chenan Song; Audrey Southerland; Masatoshi Tateno; Huiyu Wang; Yuchen Wang; Takuma Yagi; Mingfei Yan; Xitong Yang; Zecheng Yu; Shengxin Cindy Zha; Chen Zhao; Ziwei Zhao; Zhifan Zhu; Jeff Zhuo; Pablo Arbelaez; Gedas Bertasius; David Crandall; Dima Damen; Jakob Engel; Giovanni Maria Farinella; Antonino Furnari; Bernard Ghanem; Judy Hoffman; C. V. Jawahar; Richard Newcombe; Hyun Soo Park; James M. Rehg; Yoichi Sato; Manolis Savva; Jianbo Shi; Mike Zheng Shou; Michael Wray
+
+[arXiv 作者记录](https://arxiv.org/abs/2311.18259)
+
+状态：abstract_review；99 页。
+
+### 内容摘要
+
+Ego-Exo4D 提供第一／第三视角活动数据及技能、姿态和视角转换任务。
+
+### 本篇研究的问题
+
+多视角数据怎样支持技能理解和跨视角人体分析？
+
+### 适用条件
+
+观测数据与姿态任务本身不提供干预后果真值。
+
+### 方法与训练
+
+Ego-Exo4D 提供第一／第三视角活动数据及技能、姿态和视角转换任务。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】观测数据与姿态任务本身不提供干预后果真值。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P196 · HumanRef: Single Image to 3D Human Generation via Reference-Guided Diffusion
+
+Jingbo Zhang; Xiaoyu Li; Qi Zhang; Yanpei Cao; Ying Shan; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2311.16961)
+
+状态：abstract_review；11 页。
+
+### 内容摘要
+
+HumanRef 采用参考引导的分数蒸馏和区域注意力，让生成的人体与输入外观对应。
+
+### 本篇研究的问题
+
+单张参考图如何约束三维人体的几何、纹理和跨视角身份？
+
+### 适用条件
+
+主要目标是静态三维人体生成，不能直接证明运动或接触物理正确。
+
+### 方法与训练
+
+HumanRef 采用参考引导的分数蒸馏和区域注意力，让生成的人体与输入外观对应。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】主要目标是静态三维人体生成，不能直接证明运动或接触物理正确。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P195 · XAGen: 3D Expressive Human Avatars Generation
+
+Zhongcong Xu; Jianfeng Zhang; Jun Hao Liew; Jiashi Feng; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2311.13574)
+
+状态：abstract_review；14 页。
+
+### 内容摘要
+
+XAGen 采用多尺度、多部位表示与渲染、判别设计实现表情和姿态控制。
+
+### 本篇研究的问题
+
+三维人体生成怎样细粒度控制脸、手和身体？
+
+### 适用条件
+
+人体表示可控不等同于物理运动或多对象交互建模。
+
+### 方法与训练
+
+XAGen 采用多尺度、多部位表示与渲染、判别设计实现表情和姿态控制。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】人体表示可控不等同于物理运动或多对象交互建模。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P194 · GAIA: a benchmark for General AI Assistants
+
+Grégoire Mialon; Clémentine Fourrier; Craig Swift; Thomas Wolf; Yann LeCun; Thomas Scialom
+
+[arXiv 作者记录](https://arxiv.org/abs/2311.12983)
+
+状态：abstract_review；24 页。
+
+### 内容摘要
+
+GAIA 以需要检索、工具和综合推理的现实问题构建助手评测。
+
+### 本篇研究的问题
+
+怎样用真实问题评估通用助手的工具、推理和多模态能力？
+
+### 适用条件
+
+属于相邻 agent 基准，不直接测世界动力学或视频生成。
+
+### 方法与训练
+
+GAIA 以需要检索、工具和综合推理的现实问题构建助手评测。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】属于相邻 agent 基准，不直接测世界动力学或视频生成。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P193 · NOIR: Neural Signal Operated Intelligent Robots for Everyday Activities
+
+Ruohan Zhang; Sharon Lee; Minjune Hwang; Ayano Hiranaka; Chen Wang; Wensi Ai; Jin Jie Ryan Tan; Shreya Gupta; Yilun Hao; Gabrael Levine; Ruohan Gao; Anthony Norcia; Li Fei-Fei; Jiajun Wu
+
+[arXiv 作者记录](https://arxiv.org/abs/2311.01454)
+
+状态：abstract_review；24 页。
+
+### 内容摘要
+
+NOIR 将脑信号接口与智能机器人技能组合，研究多类家庭活动控制。
+
+### 本篇研究的问题
+
+人能否通过脑信号指挥机器人完成日常活动？
+
+### 适用条件
+
+交互通道和执行系统与视频预览不同；对 Foresee 更适合作为控制权设计参照。
+
+### 方法与训练
+
+NOIR 将脑信号接口与智能机器人技能组合，研究多类家庭活动控制。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】交互通道和执行系统与视频预览不同；对 Foresee 更适合作为控制权设计参照。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P192 · ZeroNVS: Zero-Shot 360-Degree View Synthesis from a Single Image
+
+Kyle Sargent; Zizhang Li; Tanmay Shah; Charles Herrmann; Hong-Xing Yu; Yunzhi Zhang; Eric Ryan Chan; Dmitry Lagun; Li Fei-Fei; Deqing Sun; Jiajun Wu
+
+[arXiv 作者记录](https://arxiv.org/abs/2310.17994)
+
+状态：abstract_review；12 页。
+
+### 内容摘要
+
+ZeroNVS 训练三维感知扩散先验，处理场景数据混合与尺度模糊，并改善完整视角生成。
+
+### 本篇研究的问题
+
+单张自然图像怎样支持更广视角的场景生成？
+
+### 适用条件
+
+单图隐藏内容是生成推测，尚非经观测验证的环境真值。
+
+### 方法与训练
+
+ZeroNVS 训练三维感知扩散先验，处理场景数据混合与尺度模糊，并改善完整视角生成。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】单图隐藏内容是生成推测，尚非经观测验证的环境真值。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P191 · VQ-NeRF: Neural Reflectance Decomposition and Editing with Vector Quantization
+
+Hongliang Zhong; Jingbo Zhang; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2310.11864)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+VQ-NeRF 将连续分支与离散材料码结合，并提供材质编辑界面。
+
+### 本篇研究的问题
+
+离散材质表示能否改善三维反射分解和交互编辑？
+
+### 适用条件
+
+材质可编辑性与由材质决定的动力学后果属于不同建模目标。
+
+### 方法与训练
+
+VQ-NeRF 将连续分支与离散材料码结合，并提供材质编辑界面。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】材质可编辑性与由材质决定的动力学后果属于不同建模目标。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P190 · DynVideo-E: Harnessing Dynamic NeRF for Large-Scale Motion- and View-Change Human-Centric Video Editing
+
+Jia-Wei Liu; Yan-Pei Cao; Jay Zhangjie Wu; Weijia Mao; Yuchao Gu; Rui Zhao; Jussi Keppo; Ying Shan; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2310.10624)
+
+状态：abstract_review；15 页。
+
+### 内容摘要
+
+DynVideo-E 在动态 NeRF 中编辑，并通过形变场传播，结合多视角多姿态扩散先验。
+
+### 本篇研究的问题
+
+大动作和视角变化下的视频编辑怎样保持一致？
+
+### 适用条件
+
+动态来自已观测视频；三维编辑一致性与未来预测分开判断。
+
+### 方法与训练
+
+DynVideo-E 在动态 NeRF 中编辑，并通过形变场传播，结合多视角多姿态扩散先验。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】动态来自已观测视频；三维编辑一致性与未来预测分开判断。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P189 · Mini-BEHAVIOR: A Procedurally Generated Benchmark for Long-horizon Decision-Making in Embodied AI
+
+Emily Jin; Jiaheng Hu; Zhuoyi Huang; Ruohan Zhang; Jiajun Wu; Li Fei-Fei; Roberto Martín-Martín
+
+[arXiv 作者记录](https://arxiv.org/abs/2310.01824)
+
+状态：abstract_review；13 页。
+
+### 内容摘要
+
+Mini-BEHAVIOR 以程序化环境提供日常活动式规划问题，便于扩大任务变化。
+
+### 本篇研究的问题
+
+如何低成本生成多变的长程具身任务？
+
+### 适用条件
+
+简化环境中的规划能力不能直接外推到写实视频或真实接触动力学。
+
+### 方法与训练
+
+Mini-BEHAVIOR 以程序化环境提供日常活动式规划问题，便于扩大任务变化。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】简化环境中的规划能力不能直接外推到写实视频或真实接触动力学。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P188 · D$^3$Fields: Dynamic 3D Descriptor Fields for Zero-Shot Generalizable Rearrangement
+
+Yixuan Wang; Mingtong Zhang; Zhuoran Li; Tarik Kelestemur; Katherine Driggs-Campbell; Jiajun Wu; Li Fei-Fei; Yunzhu Li
+
+[arXiv 作者记录](https://arxiv.org/abs/2309.16118)
+
+状态：abstract_review；12 页。
+
+### 内容摘要
+
+D3Fields 将多视角视觉特征投影到三维描述场，用于零样本重排。
+
+### 本篇研究的问题
+
+动态语义三维描述怎样支持跨物体的重排任务？
+
+### 适用条件
+
+动态描述场主要组织观测，未自动提供未知未来动力学。
+
+### 方法与训练
+
+D3Fields 将多视角视觉特征投影到三维描述场，用于零样本重排。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】动态描述场主要组织观测，未自动提供未知未来动力学。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P187 · Show-1: Marrying Pixel and Latent Diffusion Models for Text-to-Video Generation
+
+David Junhao Zhang; Jay Zhangjie Wu; Jia-Wei Liu; Rui Zhao; Lingmin Ran; Yuchao Gu; Difei Gao; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2309.15818)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+Show-1 先生成低分辨率像素视频，再以潜扩散放大并修复。
+
+### 本篇研究的问题
+
+像素和潜空间扩散怎样结合以兼顾对齐和生成成本？
+
+### 适用条件
+
+通用视频基准主要度量生成质量，不证明物理推理。
+
+### 方法与训练
+
+Show-1 先生成低分辨率像素视频，再以潜扩散放大并修复。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】通用视频基准主要度量生成质量，不证明物理推理。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P186 · MindAgent: Emergent Gaming Interaction
+
+Ran Gong; Qiuyuan Huang; Xiaojian Ma; Hoi Vo; Zane Durante; Yusuke Noda; Zilong Zheng; Song-Chun Zhu; Demetri Terzopoulos; Li Fei-Fei; Jianfeng Gao
+
+[arXiv 作者记录](https://arxiv.org/abs/2309.09971)
+
+状态：abstract_review；28 页。
+
+### 内容摘要
+
+MindAgent 提供 CUISINEWORLD 和协作效率评价，通过反馈进行上下文协调。
+
+### 本篇研究的问题
+
+语言模型怎样协调多个游戏角色并与人合作？
+
+### 适用条件
+
+多人协作基准与视频生成中的多主体动力学不能互相代替。
+
+### 方法与训练
+
+MindAgent 提供 CUISINEWORLD 和协作效率评价，通过反馈进行上下文协调。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】多人协作基准与视频生成中的多主体动力学不能互相代替。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P185 · Sequential Dexterity: Chaining Dexterous Policies for Long-Horizon Manipulation
+
+Yuanpei Chen; Chen Wang; Li Fei-Fei; C. Karen Liu
+
+[arXiv 作者记录](https://arxiv.org/abs/2309.00987)
+
+状态：abstract_review；21 页。
+
+### 内容摘要
+
+Sequential Dexterity 通过强化学习衔接多个策略，并研究新物体与真实机器人的迁移。
+
+### 本篇研究的问题
+
+多个灵巧技能怎样串接为长程操作？
+
+### 适用条件
+
+技能链可执行不意味着可生成供人观看的可信后果视频。
+
+### 方法与训练
+
+Sequential Dexterity 通过强化学习衔接多个策略，并研究新物体与真实机器人的迁移。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】技能链可执行不意味着可生成供人观看的可信后果视频。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P184 · Primitive Skill-based Robot Learning from Human Evaluative Feedback
+
+Ayano Hiranaka; Minjune Hwang; Sharon Lee; Chen Wang; Li Fei-Fei; Jiajun Wu; Ruohan Zhang
+
+[arXiv 作者记录](https://arxiv.org/abs/2307.15801)
+
+状态：abstract_review；9 页。
+
+### 内容摘要
+
+SEED 将参数化基础技能与人类评价强化学习结合，研究样本效率与人类负担。
+
+### 本篇研究的问题
+
+人能否在技能执行前评价高层意图以减少反馈成本？
+
+### 适用条件
+
+前瞻性的技能评价与视觉后果预览相邻，但并未直接验证视频分支界面。
+
+### 方法与训练
+
+SEED 将参数化基础技能与人类评价强化学习结合，研究样本效率与人类负担。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】前瞻性的技能评价与视觉后果预览相邻，但并未直接验证视频分支界面。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P183 · MC-JEPA: A Joint-Embedding Predictive Architecture for Self-Supervised Learning of Motion and Content Features
+
+Adrien Bardes; Jean Ponce; Yann LeCun
+
+[arXiv 作者记录](https://arxiv.org/abs/2307.12698)
+
+状态：abstract_review；20 页。
+
+### 内容摘要
+
+MC-JEPA 将光流估计与内容表征目标联合训练，评估运动和分割任务。
+
+### 本篇研究的问题
+
+运动和内容特征能否在同一自监督编码器中相互促进？
+
+### 适用条件
+
+光流与内容表征不直接验证多步物理预测。
+
+### 方法与训练
+
+MC-JEPA 将光流估计与内容表征目标联合训练，评估运动和分割任务。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】光流与内容表征不直接验证多步物理预测。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P182 · VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models
+
+Wenlong Huang; Chen Wang; Ruohan Zhang; Yunzhu Li; Jiajun Wu; Li Fei-Fei
+
+[arXiv 作者记录](https://arxiv.org/abs/2307.05973)
+
+状态：abstract_review；23 页。
+
+### 内容摘要
+
+VoxPoser 组合三维价值图进行闭环轨迹规划，并可从在线接触经验学习动力学。
+
+### 本篇研究的问题
+
+自然语言中的可供性和约束怎样变成三维动作计划？
+
+### 适用条件
+
+语言推理、视觉检测和规划器共同产生结果，不能归因于视频模型。
+
+### 方法与训练
+
+VoxPoser 组合三维价值图进行闭环轨迹规划，并可从在线接触经验学习动力学。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】语言推理、视觉检测和规划器共同产生结果，不能归因于视频模型。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P181 · EgoVLPv2: Egocentric Video-Language Pre-training with Fusion in the Backbone
+
+Shraman Pramanick; Yale Song; Sayan Nag; Kevin Qinghong Lin; Hardik Shah; Mike Zheng Shou; Rama Chellappa; Pengchuan Zhang
+
+[arXiv 作者记录](https://arxiv.org/abs/2307.05463)
+
+状态：abstract_review；22 页。
+
+### 内容摘要
+
+EgoVLPv2 将跨模态融合直接放入视频和语言骨干以支持不同下游任务。
+
+### 本篇研究的问题
+
+第一人称视频语言预训练怎样更早融合跨模态信息？
+
+### 适用条件
+
+理解表征是相邻基础，不能直接作为后果视频生成结果。
+
+### 方法与训练
+
+EgoVLPv2 将跨模态融合直接放入视频和语言骨干以支持不同下游任务。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】理解表征是相邻基础，不能直接作为后果视频生成结果。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P180 · Self-Supervised Learning with Lie Symmetries for Partial Differential Equations
+
+Grégoire Mialon; Quentin Garrido; Hannah Lawrence; Danyal Rehman; Yann LeCun; Bobak T. Kiani
+
+[arXiv 作者记录](https://arxiv.org/abs/2307.05432)
+
+状态：abstract_review；32 页。
+
+### 内容摘要
+
+作者利用 Lie 对称性构造联合嵌入自监督任务，评估方程参数回归与神经求解器时间步推进。
+
+### 本篇研究的问题
+
+偏微分方程的对称性怎样用于学习可迁移物理表示？
+
+### 适用条件
+
+已知 PDE 结构和数据条件与从真实视频发现未知规律不同。
+
+### 方法与训练
+
+作者利用 Lie 对称性构造联合嵌入自监督任务，评估方程参数回归与神经求解器时间步推进。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】已知 PDE 结构和数据条件与从真实视频发现未知规律不同。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P179 · Dynamic-Resolution Model Learning for Object Pile Manipulation
+
+Yixuan Wang; Yunzhu Li; Katherine Driggs-Campbell; Li Fei-Fei; Jiajun Wu
+
+[arXiv 作者记录](https://arxiv.org/abs/2306.16700)
+
+状态：abstract_review；11 页。
+
+### 内容摘要
+
+作者以动态粒子分辨率和图神经网络，在效率与操作精度间选择抽象层级。
+
+### 本篇研究的问题
+
+物体堆动力学的表示分辨率怎样按任务调节？
+
+### 适用条件
+
+粒状物模型有特定状态和任务条件，不是通用像素视频模型。
+
+### 方法与训练
+
+作者以动态粒子分辨率和图神经网络，在效率与操作精度间选择抽象层级。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】粒状物模型有特定状态和任务条件，不是通用像素视频模型。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P178 · Introduction to Latent Variable Energy-Based Models: A Path Towards Autonomous Machine Intelligence
+
+Anna Dawid; Yann LeCun
+
+[arXiv 作者记录](https://arxiv.org/abs/2306.02572)
+
+状态：abstract_review；29 页。
+
+### 内容摘要
+
+这篇介绍性论文梳理能量模型、潜变量和分层 JEPA 的关系，提供架构层面的研究动机。
+
+### 本篇研究的问题
+
+潜变量能量模型怎样组成自主智能的预测与规划架构？
+
+### 适用条件
+
+概念和教程性质的论述不能当成所有模块已经联合实现的实验证据。
+
+### 方法与训练
+
+这篇介绍性论文梳理能量模型、潜变量和分层 JEPA 的关系，提供架构层面的研究动机。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】概念和教程性质的论述不能当成所有模块已经联合实现的实验证据。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P177 · The ObjectFolder Benchmark: Multisensory Learning with Neural and Real Objects
+
+Ruohan Gao; Yiming Dou; Hao Li; Tanmay Agarwal; Jeannette Bohg; Yunzhu Li; Li Fei-Fei; Jiajun Wu
+
+[arXiv 作者记录](https://arxiv.org/abs/2306.00956)
+
+状态：abstract_review；22 页。
+
+### 内容摘要
+
+ObjectFolder Benchmark 结合神经对象及真实多感官对象数据，比较识别、重建和操作任务。
+
+### 本篇研究的问题
+
+视觉、声音与触觉分别怎样帮助对象理解和操作？
+
+### 适用条件
+
+多感官数据提供额外物理证据，不能与单目视频输入忽略条件地比较。
+
+### 方法与训练
+
+ObjectFolder Benchmark 结合神经对象及真实多感官对象数据，比较识别、重建和操作任务。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】多感官数据提供额外物理证据，不能与单目视频输入忽略条件地比较。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P176 · Sonicverse: A Multisensory Simulation Platform for Embodied Household Agents that See and Hear
+
+Ruohan Gao; Hao Li; Gokul Dharan; Zhuzhu Wang; Chengshu Li; Fei Xia; Silvio Savarese; Li Fei-Fei; Jiajun Wu
+
+[arXiv 作者记录](https://arxiv.org/abs/2306.00923)
+
+状态：abstract_review；8 页。
+
+### 内容摘要
+
+Sonicverse 将音视频模拟结合，研究多感官导航与仿真到真实迁移。
+
+### 本篇研究的问题
+
+听觉和视觉如何在家庭导航仿真中共同作用？
+
+### 适用条件
+
+导航和声音条件有专门目标，不直接评估可控视频后果生成。
+
+### 方法与训练
+
+Sonicverse 将音视频模拟结合，研究多感官导航与仿真到真实迁移。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】导航和声音条件有专门目标，不直接评估可控视频后果生成。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P175 · Modeling Dynamic Environments with Scene Graph Memory
+
+Andrey Kurenkov; Michael Lingelbach; Tanmay Agarwal; Emily Jin; Chengshu Li; Ruohan Zhang; Li Fei-Fei; Jiajun Wu; Silvio Savarese; Roberto Martín-Martín
+
+[arXiv 作者记录](https://arxiv.org/abs/2305.17537)
+
+状态：abstract_review；18 页。
+
+### 内容摘要
+
+Scene Graph Memory 累积对象和房间关系，以节点边预测指导动态家庭环境中的搜索。
+
+### 本篇研究的问题
+
+物体会移动且只能部分观察时，场景记忆怎样更新？
+
+### 适用条件
+
+图中的位置预测与持续生成动态视频不同，但可作为显式记忆对照。
+
+### 方法与训练
+
+Scene Graph Memory 累积对象和房间关系，以节点边预测指导动态家庭环境中的搜索。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】图中的位置预测与持续生成动态视频不同，但可作为显式记忆对照。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P174 · Text2NeRF: Text-Driven 3D Scene Generation with Neural Radiance Fields
+
+Jingbo Zhang; Xiaoyu Li; Ziyu Wan; Can Wang; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2305.11588)
+
+状态：abstract_review；14 页。
+
+### 内容摘要
+
+Text2NeRF 结合文本到图像先验、单目深度与渐进场景补全更新，优化场景辐射场。
+
+### 本篇研究的问题
+
+文本生成的三维场景如何保持跨视图几何与纹理一致？
+
+### 适用条件
+
+依赖图像与深度先验的静态场景构建，没有由摘要证明可执行动态机制。
+
+### 方法与训练
+
+Text2NeRF 结合文本到图像先验、单目深度与渐进场景补全更新，优化场景辐射场。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】依赖图像与深度先验的静态场景构建，没有由摘要证明可执行动态机制。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P173 · HOSNeRF: Dynamic Human-Object-Scene Neural Radiance Fields from a Single Video
+
+Jia-Wei Liu; Yan-Pei Cao; Tianyuan Yang; Eric Zhongcong Xu; Jussi Keppo; Ying Shan; Xiaohu Qie; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2304.12281)
+
+状态：abstract_review；15 页。
+
+### 内容摘要
+
+HOSNeRF 用对象骨骼与状态嵌入组织人体交互和场景表示。
+
+### 本篇研究的问题
+
+单目视频怎样重建动态人、物和场景以自由视角观看？
+
+### 适用条件
+
+重建既有轨迹与生成新干预下的动力学不同。
+
+### 方法与训练
+
+HOSNeRF 用对象骨骼与状态嵌入组织人体交互和场景表示。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】重建既有轨迹与生成新干预下的动力学不同。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P172 · Learning Neural Duplex Radiance Fields for Real-Time View Synthesis
+
+Ziyu Wan; Christian Richardt; Aljaž Božič; Chao Li; Vijay Rengarajan; Seonghyeon Nam; Xiaoyu Xiang; Tuotuo Li; Bo Zhu; Rakesh Ranjan; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2304.10537)
+
+状态：abstract_review；10 页。
+
+### 内容摘要
+
+将 NeRF 蒸馏到双层网格上的神经特征，结合屏幕空间卷积和多视图优化提升渲染效率。
+
+### 本篇研究的问题
+
+如何将辐射场转成适合实时渲染的网格特征表示？
+
+### 适用条件
+
+加速的是给定场景的新视角渲染，不能套用为视频生成模型的推理延迟。
+
+### 方法与训练
+
+将 NeRF 蒸馏到双层网格上的神经特征，结合屏幕空间卷积和多视图优化提升渲染效率。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】加速的是给定场景的新视角渲染，不能套用为视频生成模型的推理延迟。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P171 · AvatarCraft: Transforming Text into Neural Human Avatars with Parameterized Shape and Pose Control
+
+Ruixiang Jiang; Can Wang; Jingbo Zhang; Menglei Chai; Mingming He; Dongdong Chen; Jing Liao
+
+[arXiv 作者记录](https://arxiv.org/abs/2303.17606)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+AvatarCraft 用扩散先验优化人体几何和纹理，再通过参数化人体间的显式变形支持动画。
+
+### 本篇研究的问题
+
+文本生成的神经人体如何同时支持身份与形状姿态控制？
+
+### 适用条件
+
+姿态可控与模型自行预测人体运动或对象互动的能力不同。
+
+### 方法与训练
+
+AvatarCraft 用扩散先验优化人体几何和纹理，再通过参数化人体间的显式变形支持动画。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】姿态可控与模型自行预测人体运动或对象互动的能力不同。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P170 · Affordance Grounding from Demonstration Video to Target Image
+
+Joya Chen; Difei Gao; Kevin Qinghong Lin; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2303.14644)
+
+状态：abstract_review；13 页。
+
+### 内容摘要
+
+Afformer 逐步细化 affordance 定位，并用 MaskAHand 自监督预训练模拟上下文变化。
+
+### 本篇研究的问题
+
+演示视频中的可操作部位怎样迁移定位到目标图像？
+
+### 适用条件
+
+可操作部位定位不能直接说明动作执行或后果预测准确。
+
+### 方法与训练
+
+Afformer 逐步细化 affordance 定位，并用 MaskAHand 自监督预训练模拟上下文变化。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】可操作部位定位不能直接说明动作执行或后果预测准确。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P169 · 3D Video Loops from Asynchronous Input
+
+Li Ma; Xiaoyu Li; Jing Liao; Pedro V. Sander
+
+[arXiv 作者记录](https://arxiv.org/abs/2303.05312)
+
+状态：abstract_review；11 页。
+
+### 内容摘要
+
+Multi-Tile Video 以稀疏时空表示和两阶段优化构建视角一致的三维循环视频。
+
+### 本篇研究的问题
+
+异步多视图视频如何重建可实时浏览的循环动态场景？
+
+### 适用条件
+
+针对周期重放与视角变化，不能视为开放式未来预测或无限演化。
+
+### 方法与训练
+
+Multi-Tile Video 以稀疏时空表示和两阶段优化构建视角一致的三维循环视频。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】针对周期重放与视角变化，不能视为开放式未来预测或无限演化。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P168 · MimicPlay: Long-Horizon Imitation Learning by Watching Human Play
+
+Chen Wang; Linxi Fan; Jiankai Sun; Ruohan Zhang; Li Fei-Fei; Danfei Xu; Yuke Zhu; Anima Anandkumar
+
+[arXiv 作者记录](https://arxiv.org/abs/2302.12422)
+
+状态：abstract_review；21 页。
+
+### 内容摘要
+
+MimicPlay 从人类视频学习潜计划，指导少量遥操作数据训练的低层控制。
+
+### 本篇研究的问题
+
+人类自由玩耍视频怎样降低长程机器人模仿的数据需求？
+
+### 适用条件
+
+潜计划与真实动作仍由不同数据和模块连接，不是纯视频生成策略。
+
+### 方法与训练
+
+MimicPlay 从人类视频学习潜计划，指导少量遥操作数据训练的低层控制。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】潜计划与真实动作仍由不同数据和模块连接，不是纯视频生成策略。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P167 · Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture
+
+Mahmoud Assran; Quentin Duval; Ishan Misra; Piotr Bojanowski; Pascal Vincent; Michael Rabbat; Yann LeCun; Nicolas Ballas
+
+[arXiv 作者记录](https://arxiv.org/abs/2301.08243)
+
+状态：abstract_review；17 页。
+
+### 内容摘要
+
+I-JEPA 用上下文预测多个目标区域的表示，研究掩码规模和上下文信息对语义学习的影响。
+
+### 本篇研究的问题
+
+能否通过预测图像块的语义表征获得高效自监督学习？
+
+### 适用条件
+
+静态图像表征是后续视频 JEPA 的基础，不直接处理时间演化。
+
+### 方法与训练
+
+I-JEPA 用上下文预测多个目标区域的表示，研究掩码规模和上下文信息对语义学习的影响。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】静态图像表征是后续视频 JEPA 的基础，不直接处理时间演化。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P166 · Tune-A-Video: One-Shot Tuning of Image Diffusion Models for Text-to-Video Generation
+
+Jay Zhangjie Wu; Yixiao Ge; Xintao Wang; Weixian Lei; Yuchao Gu; Yufei Shi; Wynne Hsu; Ying Shan; Xiaohu Qie; Mike Zheng Shou
+
+[arXiv 作者记录](https://arxiv.org/abs/2212.11565)
+
+状态：abstract_review；16 页。
+
+### 内容摘要
+
+Tune-A-Video 通过时间注意力和单样本微调学习运动，使用反演提供结构条件。
+
+### 本篇研究的问题
+
+只有一个文本视频样本时怎样适配图像扩散生成视频？
+
+### 适用条件
+
+正式发表于 2023；单样本外观运动适配不等于可泛化的物理机制学习。
+
+### 方法与训练
+
+Tune-A-Video 通过时间注意力和单样本微调学习运动，使用反演提供结构条件。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】正式发表于 2023；单样本外观运动适配不等于可泛化的物理机制学习。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
+
+
+## P165 · VIMA: General Robot Manipulation with Multimodal Prompts
+
+Yunfan Jiang; Agrim Gupta; Zichen Zhang; Guanzhi Wang; Yongqiang Dou; Yanjun Chen; Li Fei-Fei; Anima Anandkumar; Yuke Zhu; Linxi Fan
+
+[arXiv 作者记录](https://arxiv.org/abs/2210.03094)
+
+状态：abstract_review；48 页。
+
+### 内容摘要
+
+VIMA 通过多模态提示、自回归动作预测和程序化桌面任务研究分层泛化。
+
+### 本篇研究的问题
+
+图文交错提示能否统一多种机器人操作任务？
+
+### 适用条件
+
+正式发表于 2023；动作预测基准不直接评价世界视频或物理机制修订。
+
+### 方法与训练
+
+VIMA 通过多模态提示、自回归动作预测和程序化桌面任务研究分层泛化。 本条方法定位来自摘要，训练细节待核。
+
+### 验证范围
+
+本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。
+
+### 边界与待核查事项
+
+【资料库适用范围判断】正式发表于 2023；动作预测基准不直接评价世界视频或物理机制修订。 此处不将未测条件标成作者已观察到的失败。
+
+### 证据定位
+
+依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。
 
