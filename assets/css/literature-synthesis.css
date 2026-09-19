@@ -1,0 +1,106 @@
+#literature-review .lr-synthesis { margin: 30px 0 38px; padding: 28px; border: 1px solid #cddbcf; border-radius: 12px; background: #fafcf9; scroll-margin-top: 20px; }
+#literature-review .ls-heading-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+#literature-review .ls-eyebrow { margin: 0 0 6px; font: 11px/1.5 ui-monospace, monospace; letter-spacing: .12em; color: #486a56; }
+#literature-review .ls-heading-row h2 { font-size: 24px; margin: 0; color: #243e30; }
+#literature-review .ls-download { font-size: 12px; flex-shrink: 0; }
+#literature-review .ls-question { margin: 18px 0; max-width: 66em; font-size: 16px; line-height: 1.9; }
+#literature-review .ls-assessment { display: grid; grid-template-columns: auto minmax(0,1fr); gap: 16px; padding: 15px 18px; border-left: 3px solid #5d8266; background: #edf3ec; }
+#literature-review .ls-assessment > span { font-size: 12px; font-weight: 650; color: #375742; padding-top: 2px; }
+#literature-review .ls-assessment p { font-size: 13px; line-height: 1.85; margin: 0; }
+#literature-review .ls-basis, #literature-review .ls-muted { color: #58675c; font-size: 12px; line-height: 1.8; }
+#literature-review .ls-basis { margin: 10px 0 20px; }
+#literature-review .ls-stage-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); border: 1px solid #d9e2d9; border-radius: 7px; overflow: hidden; background: #fff; }
+#literature-review .ls-stage-grid article { min-width: 0; padding: 18px; border-right: 1px solid #d9e2d9; }
+#literature-review .ls-stage-grid article:last-child { border-right: 0; }
+#literature-review .ls-step { font-size: 10px; line-height: 1.8; color: #54705a; display: block; }
+#literature-review .ls-stage-grid h3 { font-size: 18px; margin: 9px 0; }
+#literature-review .ls-stage-grid p { font-size: 12px; line-height: 1.85; margin: 8px 0; }
+#literature-review .ls-stage-grid .ls-refs { margin-top: 10px; }
+#literature-review .ls-refs { display: flex; flex-wrap: wrap; gap: 5px 8px; margin: 12px 0 0; }
+#literature-review .ls-paper-ref { display: inline; font-size: 10px; line-height: 1.7; text-decoration: none; border-bottom: 1px dotted currentColor; overflow-wrap: anywhere; }
+#literature-review .ls-paper-ref[data-collected="true"], #literature-review .ls-local { color: #245c9d; }
+#literature-review .ls-paper-ref[data-collected="false"], #literature-review .ls-external { color: #97520d; }
+#literature-review .ls-paper-ref:hover { text-decoration: underline; }
+#literature-review .ls-rq-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; font-size: 11px; }
+#literature-review .ls-rq-links a { color: #426b50; }
+#literature-review .ls-example { margin: 16px 0 22px; border-block: 1px solid #d9e2d9; padding: 12px 0; }
+#literature-review .ls-example summary, #literature-review .ls-cautions summary { cursor: pointer; font-size: 13px; color: #375742; }
+#literature-review .ls-example-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; margin-top: 18px; }
+#literature-review .ls-example-grid h3 { font-size: 13px; margin: 0 0 8px; }
+#literature-review .ls-example-grid p { font-size: 12px; margin: 0; line-height: 1.85; }
+#literature-review .ls-view-nav { display: flex; flex-wrap: wrap; gap: 7px; }
+#literature-review .ls-view-nav button { padding: 10px 15px; font-size: 13px; border: 1px solid #c5d4c8; background: #fff; color: #425d48; border-radius: 5px; min-height: 42px; }
+#literature-review .ls-view-nav button[aria-pressed="true"] { color: #fff; background: #3f6550; border-color: #3f6550; }
+#literature-review .ls-legend { display: flex; flex-wrap: wrap; gap: 7px 18px; font-size: 10px; color: #596b60; margin: 14px 0 18px; }
+#literature-review .ls-panel { scroll-margin-top: 22px; font-size: 13px; line-height: 1.85; }
+#literature-review .ls-panel[hidden], #literature-review .ls-progress-card[hidden], #literature-review .ls-controls[hidden], #literature-review .ls-stage-filter[hidden] { display: none; }
+#literature-review .ls-panel h3 { font-size: 18px; margin: 0 0 14px; }
+#literature-review .ls-panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+#literature-review .ls-panel-heading h3 { margin: 0; }
+#literature-review .ls-stage-filter { display: flex; align-items: center; gap: 8px; font-size: 11px; color: #596b60; }
+#literature-review .ls-stage-filter select { font: inherit; padding: 8px; min-height: 38px; max-width: 180px; border: 1px solid #c5d4c8; border-radius: 5px; background: #fff; color: #344e3c; }
+#literature-review .ls-progress-grid, #literature-review .ls-gap-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+#literature-review .ls-progress-card, #literature-review .ls-gap-grid article { padding: 18px 20px; border: 1px solid #d9e2d9; border-radius: 6px; background: #fff; min-width: 0; }
+#literature-review .ls-panel h4 { margin: 0 0 9px; font-size: 15px; }
+#literature-review .ls-progress-card p, #literature-review .ls-gap-grid p { font-size: 12px; }
+#literature-review .ls-evidence-state { font-size: 10px; color: #496952; margin: 0 0 6px; }
+#literature-review .ls-panel dl { margin: 12px 0; font-size: 12px; }
+#literature-review .ls-panel dt { font-weight: 600; color: #4b6052; margin-top: 10px; }
+#literature-review .ls-panel dd { margin: 4px 0 0; color: #536177; }
+#literature-review .ls-cautions { margin-top: 20px; padding: 13px 16px; border: 1px solid #e0d7c4; border-radius: 6px; background: #fffdf6; }
+#literature-review .ls-caution-grid, #literature-review .ls-regime-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin-top: 16px; }
+#literature-review .ls-caution-grid h4, #literature-review .ls-regime-grid h4 { font-size: 13px; }
+#literature-review .ls-caution-grid p, #literature-review .ls-regime-grid p { font-size: 12px; margin: 0; }
+#literature-review .ls-regime-grid article { background: #f0f5ef; border-radius: 5px; padding: 16px; min-width: 0; }
+#literature-review .ls-proposal-note { font-size: 12px; padding-left: 12px; border-left: 2px solid #9cab91; color: #596b60; margin: 18px 0; }
+#literature-review .ls-table-scroll { overflow-x: auto; max-width: 100%; border: 1px solid #d9e2d9; border-radius: 6px; background: #fff; }
+#literature-review .ls-evaluation-table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 700px; table-layout: fixed; }
+#literature-review .ls-evaluation-table th, #literature-review .ls-evaluation-table td { text-align: left; vertical-align: top; padding: 13px 15px; border-bottom: 1px solid #e2e8e0; font-weight: 400; overflow-wrap: anywhere; }
+#literature-review .ls-evaluation-table thead th { background: #eaf1e7; font-weight: 650; }
+#literature-review .ls-evaluation-table tbody th { font-weight: 650; width: 23%; }
+#literature-review .ls-evaluation-table .ls-refs { margin-top: 7px; font-weight: 400; }
+#literature-review .ls-evaluation-table tr:last-child td, #literature-review .ls-evaluation-table tr:last-child th { border-bottom: 0; }
+#literature-review .ls-panel .ls-subheading { margin-top: 24px; }
+#literature-review .ls-gap-grid h4 { display: flex; gap: 10px; align-items: baseline; }
+#literature-review .ls-gap-grid h4 > span { font: 13px/1.5 ui-monospace, monospace; color: #73836b; }
+#literature-review .ls-panel .ls-focus-question { font-size: 21px; max-width: 45em; line-height: 1.75; color: #2b4d36; }
+#literature-review .ls-focus-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; padding: 18px 20px; background: #edf3ec; border-radius: 6px; margin: 18px 0; }
+#literature-review .ls-focus-grid p { font-size: 12px; margin: 0; }
+#literature-review .ls-timeline { padding-left: 22px; }
+#literature-review .ls-timeline li { padding: 7px 0 7px 5px; }
+#literature-review .ls-timeline h4 { font-size: 13px; margin: 0 0 4px; }
+#literature-review .ls-timeline p { font-size: 12px; margin: 0; }
+#literature-review .ls-decision { padding: 14px 18px; border: 1px solid #c5d4c8; border-radius: 6px; font-size: 12px; }
+#literature-review .lr-synthesis :is(a,button,select,summary):focus-visible { outline: 2px solid #326d4a; outline-offset: 3px; }
+@media (max-width: 1100px) {
+  #literature-review .ls-stage-grid, #literature-review .ls-example-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #literature-review .ls-stage-grid article { border-bottom: 1px solid #d9e2d9; }
+  #literature-review .ls-stage-grid article:nth-child(2n) { border-right: 0; }
+  #literature-review .ls-stage-grid article:nth-child(n+3) { border-bottom: 0; }
+}
+@media (max-width: 760px) {
+  #literature-review .lr-synthesis { padding: 18px; }
+  #literature-review .ls-heading-row { align-items: flex-start; flex-direction: column; gap: 10px; }
+  #literature-review .ls-heading-row h2 { font-size: 21px; }
+  #literature-review .ls-question { font-size: 14px; }
+  #literature-review .ls-assessment { grid-template-columns: 1fr; gap: 6px; padding: 12px; }
+  #literature-review .ls-progress-grid, #literature-review .ls-gap-grid, #literature-review .ls-caution-grid, #literature-review .ls-regime-grid, #literature-review .ls-focus-grid { grid-template-columns: minmax(0,1fr); }
+  #literature-review .ls-stage-grid article { padding: 13px; }
+  #literature-review .ls-panel-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+  #literature-review .ls-view-nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #literature-review .ls-view-nav button { padding: 10px 6px; font-size: 12px; }
+  #literature-review .ls-panel .ls-focus-question { font-size: 18px; }
+}
+@media (max-width: 400px) {
+  #literature-review .lr-synthesis { padding: 13px; }
+  #literature-review .ls-stage-grid, #literature-review .ls-example-grid { grid-template-columns: minmax(0,1fr); }
+  #literature-review .ls-stage-grid article { border-right: 0; }
+  #literature-review .ls-stage-grid article:nth-child(3) { border-bottom: 1px solid #d9e2d9; }
+  #literature-review .ls-progress-card, #literature-review .ls-gap-grid article { padding: 14px; }
+}
+@media print {
+  #literature-review .ls-panel[hidden], #literature-review .ls-progress-card[hidden] { display: block; }
+  #literature-review .ls-controls, #literature-review .ls-stage-filter { display: none; }
+  #literature-review .ls-table-scroll { overflow: visible; }
+  #literature-review .ls-evaluation-table { min-width: 0; }
+}

@@ -6,19 +6,19 @@
       "id": "world",
       "label": "世界机制与演化",
       "root": "W0",
-      "question": "在规则不完整、会变化或违背常识时，如何建立可执行、可检验、可修订的世界机制，并让长期演化与干预后果持续遵循这些机制？",
-      "explanation": "核心对象是状态、规则和状态转移。先区分机制发现、给定规则的执行、创作者指定规则，以及仅生成视觉上连贯的内容。",
+      "question": "如何从稀疏示例和部分规则构造可扩展的世界，区分推导与补充假设，并使多步、跨领域的演化持续符合已确定的机制？",
+      "explanation": "区分归纳机制、按规则推导、补充假设、演化与拓展。世界内部状态变化、规则修订和模型自我改进是不同研究对象。",
       "anchors": [
         "P150",
         "P156",
-        "P154",
-        "P157",
-        "P071",
-        "P158",
-        "P147"
+        "C06",
+        "C04",
+        "P163",
+        "C08",
+        "P158"
       ],
-      "metrics": "转移预测与规划成功；规则满足率；干预影响与不受影响部分的保持；长程状态一致性；有效演化的多样性。",
-      "short_title": "世界机制的学习、修订与一致演化"
+      "metrics": "留出机制与组合泛化；假设可追踪性；逐步与整段规则满足；干预响应与保持；有效多样性；跨层反馈及用户理解。",
+      "short_title": "从示例与部分规则构造可推演世界"
     },
     {
       "id": "xr",
@@ -50,7 +50,10 @@
         "P150",
         "P154",
         "P156",
-        "P157"
+        "P157",
+        "C06",
+        "C07",
+        "C10"
       ]
     },
     {
@@ -78,7 +81,9 @@
         "P145",
         "P163",
         "P147",
-        "P160"
+        "P160",
+        "C04",
+        "C08"
       ]
     },
     {
@@ -381,7 +386,8 @@
         "P042",
         "P045",
         "P009",
-        "P070"
+        "P070",
+        "C04"
       ],
       "support": [
         "P077",
@@ -416,7 +422,8 @@
         "P021",
         "P027",
         "P030",
-        "S13"
+        "S13",
+        "C07"
       ],
       "support": [],
       "anchors": [
@@ -574,7 +581,8 @@
         "P139",
         "P140",
         "P161",
-        "S27"
+        "S27",
+        "C10"
       ],
       "support": [
         "P101",
@@ -614,14 +622,16 @@
       "question": "怎样使局部规则产生可解释的群体行为、协作或持续新颖演化？",
       "before": "单一智能体、固定目标",
       "after": "Game Master 维护共同世界、联合动作预测；搜索模拟参数和新颖行为",
-      "gap": "Concordia 的社会模拟、COMBO 的协作预测、ASAL 的人工生命搜索是三个侧面，不能互相当作验证。",
+      "gap": "社会模拟、命名博弈、个体预测和人工生命各有验证目标。要分别说明评价对象，不能将局部涌现或可信感当成完整社会预测。",
       "core": [
         "P145",
         "P151",
         "P163",
         "S07",
         "S08",
-        "S09"
+        "S09",
+        "C08",
+        "C09"
       ],
       "support": [
         "P074",
@@ -632,7 +642,9 @@
         "P145",
         "P151",
         "S07",
-        "P163"
+        "P163",
+        "C08",
+        "C09"
       ],
       "rq_origin": "跨论文综合归纳；不是作者逐字给出的统一 RQ"
     },
@@ -644,11 +656,12 @@
       "question": "人修改规则或任务节点后，如何更新相关后果并保留无关内容？",
       "before": "一次性设定/生成",
       "after": "计划树、任务图、分层设定与迭代审核",
-      "gap": "DreamGarden 是较粗的撤销重做；AutoWorldBuilder 尚未实现关系解析。精确依赖更新仍是待验证机会。",
+      "gap": "DreamGarden、Retcon 与 AutoWorldBuilder 采用不同粒度的编辑、约束或审核。精确依赖更新不能仅据这几篇未测就宣称无人研究；B3 继续暂缓。",
       "core": [
         "P036",
         "P147",
-        "P160"
+        "P160",
+        "C06"
       ],
       "support": [
         "P164",
@@ -748,7 +761,8 @@
         "P398",
         "P397",
         "P395",
-        "T240510316"
+        "T240510316",
+        "C07"
       ],
       "anchors": [
         "S10",
@@ -869,7 +883,7 @@
       "label": "生成过程作为推理",
       "question": "视频生成过程能否执行规则与计算视觉答案，训练或测试时外援分别贡献了什么？",
       "before": "用 VLM 先求解，再把结果交给视频生成器",
-      "after": "区分无外援生成、外部教师监督、测试时优化，以及生成预训练到感知的迁移",
+      "after": "训练可用教师或仿真监督；测试区分不给未来答案、外部求解、给定未来轨迹。进一步检验未见规则组合与重复触发。",
       "gap": "视觉轨迹像推理步骤不代表步骤忠实；需要任务规则、未见组合、过程约束和外部依赖消融。",
       "core": [
         "P158",
@@ -1227,7 +1241,9 @@
         "P036",
         "P147",
         "P029",
-        "P379"
+        "P379",
+        "C05",
+        "C06"
       ],
       "support": [
         "P032",
@@ -1323,6 +1339,65 @@
         "S15"
       ],
       "rq_origin": "跨论文综合归纳；不是作者逐字给出的统一 RQ"
+    },
+    {
+      "id": "W1e",
+      "parent": "W1",
+      "route": "world",
+      "label": "不完备设定与候选世界",
+      "question": "哪些结论由规则蕴含，哪些依赖补充假设；怎样保留多个相容世界？",
+      "before": "设定被视为完备，或把一个合理补全当作唯一答案",
+      "after": "区分真、假、未定事实与可撤销默认；延迟承诺，并检查相容性",
+      "gap": "有限规则通常不唯一决定世界。假设跟踪、约束生成已有前作；跨模态可执行拓展仍须单独验证。",
+      "core": [
+        "C05",
+        "C06",
+        "C07",
+        "C10"
+      ],
+      "support": [
+        "C04",
+        "P142",
+        "P160"
+      ],
+      "anchors": [
+        "C10",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "rq_origin": "本综述综合开放世界规划、约束 PCG、Retcon 与 PWM 的任务条件；不是某篇统一命名"
+    },
+    {
+      "id": "W3e",
+      "parent": "W3",
+      "route": "world",
+      "label": "世界拓展与跨层反馈",
+      "question": "新增对象、机制与制度后，如何保持已定约束，并验证生态、行动与社会之间的反馈？",
+      "before": "固定对象类型与单层机制，或将丰富设定当成演化证据",
+      "after": "分别验证表示扩展、新旧实体交互、资源账目和跨层干预传播",
+      "gap": "扩展容忍度、人工生命和社会模拟已有工作；这些局部结果没有自动构成统一世界的端到端验证。",
+      "core": [
+        "C04"
+      ],
+      "support": [
+        "C05",
+        "C06",
+        "C10",
+        "C08",
+        "C09",
+        "P145",
+        "P163",
+        "P160"
+      ],
+      "anchors": [
+        "C04",
+        "C10",
+        "P163",
+        "P145",
+        "C08"
+      ],
+      "rq_origin": "将表示拓展与跨层反馈作为综合阅读问题；下列前作分别支撑局部能力，不声称已解决全部目标"
     }
   ],
   "papers": [
@@ -2246,12 +2321,12 @@
     {
       "id": "P015",
       "title": "Inductive or Deductive? Rethinking the Fundamental Reasoning Abilities of LLMs",
-      "short": "Inductive or Deductive? Rethinking the Fundamental Reasoning Abilities of LLMs",
+      "short": "SolverLearner",
       "year": "2024",
       "authors": "Kewei Cheng; Jingfeng Yang; Haoming Jiang; Zhengyang Wang; Binxuan Huang; Ruirui Li; Shiyang Li; Zheng Li; Yifan Gao; Xian Li; Bing Yin; Yizhou Sun",
       "collected": true,
       "note": "p015",
-      "scope": "本地 PDF · 既有阅读笔记",
+      "scope": "本地 PDF · 方法条件已核查",
       "summary": "用 SolverLearner 分离从样例归纳规则与执行规则，重新比较 LLM 的归纳和演绎能力。",
       "boundary": "限于具有明确函数族和可执行规则的合成任务；程序执行由工具完成。",
       "evidence": "§3 SolverLearner；§5；结论后的 Limitations。",
@@ -2286,7 +2361,7 @@
           "W2a"
         ],
         "collected": true,
-        "review_status": "existing_notes",
+        "review_status": "method_checked",
         "question": "让 LLM 生成映射程序，再交给外部解释器执行，降低执行错误对归纳能力评价的干扰。",
         "question_origin": "沿用既有阅读笔记；本轮未重新精读。",
         "summary": "用 SolverLearner 分离从样例归纳规则与执行规则，重新比较 LLM 的归纳和演绎能力。",
@@ -2294,9 +2369,9 @@
         "training_supervision": "比较直接输入输出提示、显式给规则、由样例生成 Python 规则三种设置，测试算术、空间等默认/反事实任务。",
         "inference_support": "详见既有方法笔记；本轮未重新核查。",
         "evaluation": "GPT-4 在大部分受限归纳条件下接近或达到准确率 1；直接演绎特别是反事实执行较弱，GPT-3.5 并不普遍达到同等水平。",
-        "boundary": "【作者】无搜索空间约束时归纳困难，结论依赖基础模型，主比较未纳入 CoT；【解读】不宜概括为所有归纳推理均强于演绎。",
-        "evidence": "§3 SolverLearner；§5；结论后的 Limitations。",
-        "checked": "2026-09-15",
+        "boundary": "限于具有明确函数族和可执行规则的合成任务；程序执行由工具完成。 有限示例一般允许多个规则，识别依赖假设空间；见 PDF p.9。",
+        "evidence": "§3 SolverLearner；§5；结论后的 Limitations。 2026-09-19 复核相关缓存页；未重跑实验。",
+        "checked": "2026-09-19",
         "links": [
           {
             "label": "arXiv本地版本 2408.00114v2",
@@ -9994,7 +10069,7 @@
     {
       "id": "P150",
       "title": "WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment",
-      "short": "WorldCoder, a Model-Based LLM Agent",
+      "short": "WorldCoder",
       "year": "2024",
       "authors": "Hao Tang; Darren Key; Kevin Ellis",
       "collected": true,
@@ -10379,7 +10454,7 @@
     {
       "id": "P145",
       "title": "Generative Agent-Based Modeling with Actions Grounded in Physical, Social, or Digital Space Using Concordia",
-      "short": "Generative Agent-Based Modeling with Actions Grounded in Physical, Social, or Digital Space Using Concordia",
+      "short": "Concordia",
       "year": "2023",
       "authors": "Alexander Sasha Vezhnevets; John P. Agapiou; Avia Aharon; Ron Ziv; Jayd Matyas; Edgar A. Duéñez-Guzmán; William A. Cunningham; Simon Osindero; Danny Karmon; Joel Z. Leibo",
       "collected": true,
@@ -10404,6 +10479,10 @@
         {
           "rq": "W3c",
           "role": "core"
+        },
+        {
+          "rq": "W3e",
+          "role": "support"
         }
       ],
       "annotation": {
@@ -10416,7 +10495,8 @@
           "world_model"
         ],
         "rqs": [
-          "W3c"
+          "W3c",
+          "W3e"
         ],
         "collected": true,
         "review_status": "existing_notes",
@@ -10609,6 +10689,10 @@
         {
           "rq": "W1d",
           "role": "core"
+        },
+        {
+          "rq": "W1e",
+          "role": "support"
         }
       ],
       "annotation": {
@@ -10621,7 +10705,8 @@
           "world_model"
         ],
         "rqs": [
-          "W1d"
+          "W1d",
+          "W1e"
         ],
         "collected": true,
         "review_status": "existing_notes",
@@ -10719,7 +10804,7 @@
       "authors": "Jingbo Chen; He Wang; Wei Yuan; Yuqiao Lai; Zhenyan Lu",
       "collected": true,
       "note": "p160",
-      "scope": "本地 PDF · 既有阅读笔记",
+      "scope": "本地 PDF · 方法条件已核查",
       "summary": "AutoWorldBuilder从一两句世界设定生成地理、社会、资源与文化等概念。系统以多智能体分工、任务依赖调度、分层上下文预算和迭代审核控制规模与内部一致性；在20个设定任务、两种LLM后端上报告运行及内部评审结果。",
       "boundary": "作者在§6.4明确：16种概念关系只完成定义，关系解析模块未实现，实验关系类型覆盖率为0%；不能称已验证完整知识图谱推理。输出是概念设定集合，未实现可执行世界演化、因果干预或规则修改后的依赖更新；接受/拒绝设定等实时人机协作列为未来工作。质量来自系统内部LLM评审，无独立外部正确性基准。",
       "evidence": "PDF pp.12–20：概念/调度/压缩/审核；pp.21–25 Tables 6–14：20×2实验及压缩分母；pp.27–28 §5.4：非受控消融声明；p.30 §6.4：关系模块未实现及质量评估局限；p.31：人机协作列为未来工作。",
@@ -10743,6 +10828,14 @@
         {
           "rq": "W3d",
           "role": "core"
+        },
+        {
+          "rq": "W1e",
+          "role": "support"
+        },
+        {
+          "rq": "W3e",
+          "role": "support"
         }
       ],
       "annotation": {
@@ -10756,10 +10849,12 @@
         ],
         "rqs": [
           "W1a",
-          "W3d"
+          "W3d",
+          "W1e",
+          "W3e"
         ],
         "collected": true,
-        "review_status": "existing_notes",
+        "review_status": "method_checked",
         "question": "整合概念存储、DAG与语义分组调度、FAISS检索和四层上下文、专门Auditor与可配置角色。是架空世界概念扩展系统的直接前作，但其提出的数据结构与实际启用功能必须区分。",
         "question_origin": "沿用既有阅读笔记；本轮未重新精读。",
         "summary": "AutoWorldBuilder从一两句世界设定生成地理、社会、资源与文化等概念。系统以多智能体分工、任务依赖调度、分层上下文预算和迭代审核控制规模与内部一致性；在20个设定任务、两种LLM后端上报告运行及内部评审结果。",
@@ -10767,9 +10862,9 @@
         "training_supervision": "将输入拆成有依赖的任务，拓扑排序后按语义与批大小分组；从已完成批次检索相关概念，按Essential/Relevant/Summary/Collaboration四层分配上下文。21种专门角色按技能配置加载，8种Auditor参与评分、修订和筛选；主要测试中文输入。20个案例覆盖5类世界，每种后端各运行20次，共40次。",
         "inference_support": "详见既有方法笔记；本轮未重新核查。",
         "evaluation": "Table 8中GPT-OSS 120B和DeepSeek v3.2均19/20次完成（95%）；成功世界平均56.2/103.4个概念，平均18/31分钟，内部最终通过率85.5/99.2%。作者称初轮42%经审核到85%以上，但Table 14中DeepSeek平均评分从8.40降至8.21。所谓89.9/90.7%压缩对应平均304.3/278.4 token相对3,000-token预算的未用比例，不能当作相对未压缩完整上下文的受控节省率。Auditor全部通过只说明未检出问题，不代表零冲突。",
-        "boundary": "【作者】关系解析未启用、Auditor零检出值得怀疑、缺外部标准化评估、任务分解会产生环或解析错误、主要支持中文。§5.4明确模块分析是理论预期而非受控消融，因此+10–15百分点审核收益及50–70%时间缩减等预测不能记为实验测得。表2预算比例与各层token数亦不一致。【解读】两后端批大小下限略有不同，且内部判分、少量任务、无创作者研究限制关于一致性和效率的强结论。",
-        "evidence": "PDF pp.12–20：概念/调度/压缩/审核；pp.21–25 Tables 6–14：20×2实验及压缩分母；pp.27–28 §5.4：非受控消融声明；p.30 §6.4：关系模块未实现及质量评估局限；p.31：人机协作列为未来工作。",
-        "checked": "2026-09-15",
+        "boundary": "作者在§6.4明确：16种概念关系只完成定义，关系解析模块未实现，实验关系类型覆盖率为0%；不能称已验证完整知识图谱推理。输出是概念设定集合，未实现可执行世界演化、因果干预或规则修改后的依赖更新；接受/拒绝设定等实时人机协作列为未来工作。质量来自系统内部LLM评审，无独立外部正确性基准。",
+        "evidence": "PDF pp.12–20：概念/调度/压缩/审核；pp.21–25 Tables 6–14：20×2实验及压缩分母；pp.27–28 §5.4：非受控消融声明；p.30 §6.4：关系模块未实现及质量评估局限；p.31：人机协作列为未来工作。 2026-09-19 复核相关缓存页；未重跑实验。",
+        "checked": "2026-09-19",
         "links": [
           {
             "label": "论文/发表记录 1",
@@ -10777,7 +10872,8 @@
           }
         ],
         "note": "p160",
-        "priority": 0
+        "priority": 0,
+        "observed_failures": "§6.4：关系类型覆盖 0%，解析模块未实现；121 次内部审核未发现问题，作者指出审核可能过宽；缺少独立标准化评测。"
       },
       "aliases": []
     },
@@ -10859,7 +10955,7 @@
       "authors": "Xuming He; Zehao Fan; Hengjia Li; Fan Zhuo; Hankun Xu; Senlin Cheng; Di Weng; Haifeng Liu; Can Ye; Boxi Wu（前三位共同贡献）",
       "collected": true,
       "note": "p158",
-      "scope": "本地 PDF · 既有阅读笔记",
+      "scope": "本地 PDF · 方法条件已核查",
       "summary": "为视频生成模型建立规则推理基准，要求生成的过程在科学、视觉、假设、游戏、语义与人文任务中体现隐含规则。通过人工核验的规则解释和逐项问题，将指令遵循、视觉一致性、视觉保真度与规则连贯性分开评价。",
       "boundary": "评价短视频生成是否符合给定场景/隐含规则，包含假设性世界条件，但没有交互式创作者规则编辑或同一规则下多条演化的覆盖实验。o3按good/medium/bad映射100/50/0做问题级评分，RC是归一化评分，不是整段视频严格满足规则的比例。",
       "evidence": "PDF p.3：分类；p.5：指标与问题构建；p.6 Tables 2–3：主结果；p.7 Table 4：提示实验；p.8：人工一致性研究。",
@@ -10899,17 +10995,17 @@
           "W4d"
         ],
         "collected": true,
-        "review_status": "existing_notes",
+        "review_status": "method_checked",
         "question": "提供622个样本、40种任务、6个大类和约6,500条核查问题，分别测试文本到视频及图像到视频模型；揭示视觉质量较高仍可能缺少正确规则后果的现象。",
         "question_origin": "沿用既有阅读笔记；本轮未重新精读。",
         "summary": "为视频生成模型建立规则推理基准，要求生成的过程在科学、视觉、假设、游戏、语义与人文任务中体现隐含规则。通过人工核验的规则解释和逐项问题，将指令遵循、视觉一致性、视觉保真度与规则连贯性分开评价。",
         "input_conditions": "评价短视频生成是否符合给定场景/隐含规则，包含假设性世界条件，但没有交互式创作者规则编辑或同一规则下多条演化的覆盖实验。o3按good/medium/bad映射100/50/0做问题级评分，RC是归一化评分，不是整段视频严格满足规则的比例。",
         "training_supervision": "人工与GPT-5构造任务、隐含解释和核查表并复核；评测10个视频模型（6闭源、4开源），由o3逐项评分。另比较加入规则/预期结果解释的增强提示，并以80个视频、813个问题的人类标注核对自动评审。",
         "inference_support": "详见既有方法笔记；本轮未重新核查。",
-        "evaluation": "Table 2中Veo 3.1的RC为48.87、IF 68.70、VC 76.68、VF 86.72；Sora 2的RC为41.23，体现画面质量与规则得分的差距。游戏类Sora 2为19.97、Veo 3.1为17.70；正文‘全部低于15’与表格不一致，本条依表格记录。o3与人工判断一致率85.12%，Spearman 0.8011。增强提示下Veo假设类RC由46.79到58.12；该提示包含额外规则/结果信息。",
-        "boundary": "【解读】自动评审仍会误判，逐条平均分不能证明长时间轨迹的逻辑有效性；感知与渲染质量可能混入推理指标。提供预期后果的提示不能单独证明模型本身学会了推导。另Table 4科学类50.97→62.62的实际增量为11.65，表内印成+9.65；记录数据时需复算。",
-        "evidence": "PDF p.3：分类；p.5：指标与问题构建；p.6 Tables 2–3：主结果；p.7 Table 4：提示实验；p.8：人工一致性研究。",
-        "checked": "2026-09-15",
+        "evaluation": "RULER v1：622 个样例、40 个任务、6 类规则，约 6,500 个问项。Table 3 的 Veo 3.1 RC 为 48.87/100，VF 为 86.72/100；这是该版本所测模型结果，RC 不是整段通过率，也不是 2026 最新排名。",
+        "boundary": "评价短视频生成是否符合给定场景/隐含规则，包含假设性世界条件，但没有交互式创作者规则编辑或同一规则下多条演化的覆盖实验。o3按good/medium/bad映射100/50/0做问题级评分，RC是归一化评分，不是整段视频严格满足规则的比例。",
+        "evidence": "PDF p.3：分类；p.5：指标与问题构建；p.6 Tables 2–3：主结果；p.7 Table 4：提示实验；p.8：人工一致性研究。 2026-09-19 复核相关缓存页；未重跑实验。",
+        "checked": "2026-09-19",
         "links": [
           {
             "label": "论文/发表记录 1",
@@ -10924,7 +11020,7 @@
     {
       "id": "P157",
       "title": "Exploring Exploration with Foundation Agents in Interactive Environments",
-      "short": "Exploring Exploration with Foundation Agents in Interactive Environments",
+      "short": "Exploring Exploration",
       "year": "2025 / 2024",
       "authors": "Daniel P. Sawyer; Nan Rosemary Ke; Hubert Soyer; Martin Engelcke; David P. Reichert; Drew A. Hudson; John Reid; Alexander Lerchner; Danilo Jimenez Rezende; Timothy P. Lillicrap; Michael Mozer; Jane X. Wang",
       "collected": true,
@@ -12005,6 +12101,10 @@
         {
           "rq": "W3c",
           "role": "core"
+        },
+        {
+          "rq": "W3e",
+          "role": "support"
         }
       ],
       "annotation": {
@@ -12017,7 +12117,8 @@
           "world_model"
         ],
         "rqs": [
-          "W3c"
+          "W3c",
+          "W3e"
         ],
         "collected": true,
         "review_status": "existing_notes",
@@ -31573,13 +31674,13 @@
       "note": null,
       "scope": "公开文献记录 · PDF 待收集",
       "summary": "WorldEvolver 从真实转移检索经验、总结预测误差，并筛除低置信后果，保持模型参数与下游 agent 冻结。",
-      "boundary": "ALFWorld 和 ScienceWorld 上的语言环境预测；自进化在这里指上下文修订，不表示显式物理世界或像素视频生成。",
-      "evidence": "2026-09-19 核对 arXiv 作者摘要和版本记录；本轮尚未收藏 PDF。",
+      "boundary": "在 ALFWorld、ScienceWorld、Word2World 与 AgentBoard 等环境评估；更新的是部署时经验记忆，模型与 agent 冻结，不表示生态演化或视频像素推演。",
+      "evidence": "2026-09-19 核对 arXiv 2606.30639v2（2026-09-01）作者摘要与版本记录；未收集 PDF、未复现。",
       "sources": [],
       "links": [
         {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2606.30639"
+          "label": "arXiv v2",
+          "url": "https://arxiv.org/abs/2606.30639v2"
         }
       ],
       "verified": "2026-09-19",
@@ -31625,13 +31726,13 @@
         "training_supervision": "本条根据作者摘要定位；训练与数据细节待全文标注。",
         "inference_support": "见摘要所述接口；未将外部工具或语言环境推理归为视频模型内生能力。",
         "evaluation": "使用作者摘要所述任务定位；本条不转录未经本轮复核的定量表格。",
-        "boundary": "ALFWorld 和 ScienceWorld 上的语言环境预测；自进化在这里指上下文修订，不表示显式物理世界或像素视频生成。",
-        "evidence": "2026-09-19 核对 arXiv 作者摘要和版本记录；本轮尚未收藏 PDF。",
+        "boundary": "在 ALFWorld、ScienceWorld、Word2World 与 AgentBoard 等环境评估；更新的是部署时经验记忆，模型与 agent 冻结，不表示生态演化或视频像素推演。",
+        "evidence": "2026-09-19 核对 arXiv 2606.30639v2（2026-09-01）作者摘要与版本记录；未收集 PDF、未复现。",
         "checked": "2026-09-19",
         "links": [
           {
-            "label": "arXiv",
-            "url": "https://arxiv.org/abs/2606.30639"
+            "label": "arXiv v2",
+            "url": "https://arxiv.org/abs/2606.30639v2"
           }
         ],
         "note": null,
@@ -32467,6 +32568,622 @@
         "collection_note": "已保留摘要与来源；公开 PDF 下载尚未成功，失败日志在本地收藏索引。"
       },
       "aliases": []
+    },
+    {
+      "id": "C04",
+      "title": "Elaboration Tolerance",
+      "short": "Elaboration Tolerance",
+      "year": "2003（网页版本）",
+      "authors": "John McCarthy",
+      "collected": false,
+      "note": null,
+      "scope": "外部前作 · 尚未收藏 PDF",
+      "summary": "讨论事实、参数与谓词的扩展，以及非单调推理如何支持情境变化。",
+      "boundary": "不能把扩展容忍度的概念论证当成开放世界自动生成的完整实现或性能保证。",
+      "evidence": "作者 Stanford 页面摘要及扩展类型说明；2003-09-29 为该网页版本时间。",
+      "sources": [],
+      "links": [
+        {
+          "label": "论文原文 / 官方记录",
+          "url": "https://www-formal.stanford.edu/jmc/elaboration/elaboration.html"
+        }
+      ],
+      "verified": "2026-09-19",
+      "seed": "规则归纳—世界拓展的主题补充检索",
+      "depth": 1,
+      "discovery_method": "context_search",
+      "mappings": [
+        {
+          "rq": "W1e",
+          "role": "support"
+        },
+        {
+          "rq": "W3e",
+          "role": "core"
+        },
+        {
+          "rq": "W2a",
+          "role": "core"
+        }
+      ],
+      "research_question": {
+        "kind": "依论文改写",
+        "text": "表示怎样容纳新现象、条件变化与概念拓展，并允许撤销默认结论？",
+        "location": "作者 Stanford 页面摘要及扩展类型说明；2003-09-29 为该网页版本时间。"
+      },
+      "annotation": {
+        "id": "C04",
+        "title": "Elaboration Tolerance",
+        "year": "2003（网页版本）",
+        "authors": "John McCarthy",
+        "teams": [],
+        "topics": [
+          "world_model"
+        ],
+        "rqs": [
+          "W2a",
+          "W1e",
+          "W3e"
+        ],
+        "collected": false,
+        "review_status": "abstract_review",
+        "question": "表示怎样容纳新现象、条件变化与概念拓展，并允许撤销默认结论？",
+        "question_origin": "根据论文问题、方法或摘要改写；不是作者编号或逐字 RQ。",
+        "summary": "讨论事实、参数与谓词的扩展，以及非单调推理如何支持情境变化。",
+        "input_conditions": "已有逻辑表示与背景假设；以传教士与食人族问题的变体讨论表示适应性。",
+        "training_supervision": "本文使用形式化表示与求解；无视频生成器训练。",
+        "inference_support": "逻辑表示与非单调推理；不是视频生成模型。",
+        "evaluation": "概念与形式化挑战；网页摘要说明只完成了部分情境演算形式化。",
+        "boundary": "不能把扩展容忍度的概念论证当成开放世界自动生成的完整实现或性能保证。",
+        "observed_failures": "",
+        "evidence": "作者 Stanford 页面摘要及扩展类型说明；2003-09-29 为该网页版本时间。",
+        "checked": "2026-09-19",
+        "links": [
+          {
+            "label": "论文原文 / 官方记录",
+            "url": "https://www-formal.stanford.edu/jmc/elaboration/elaboration.html"
+          }
+        ],
+        "note": null,
+        "collection_status": "not_collected",
+        "collection_note": "已在线核查所标范围；本轮只补充文献关系，未下载本地 PDF。",
+        "priority": 65,
+        "discovery": "规则归纳—世界拓展的主题补充检索",
+        "mapping_roles": {
+          "W2a": "core",
+          "W1e": "support",
+          "W3e": "core"
+        }
+      },
+      "aliases": []
+    },
+    {
+      "id": "C05",
+      "title": "Imaginarium: A Tool for Casual Constraint-Based PCG",
+      "short": "Imaginarium",
+      "year": "2019",
+      "authors": "Ian Horswill",
+      "collected": false,
+      "note": null,
+      "scope": "外部前作 · 尚未收藏 PDF",
+      "summary": "面向桌面角色扮演的约束创作工具，把对象类型与属性约束交给求解器生成实例。",
+      "boundary": "对象生成的表达范围受语言与作者本体限制，不是任意生态或社会的长期演化。",
+      "evidence": "作者 PDF pp.1–2；EXAG 2019。只核查所述方法范围。",
+      "sources": [],
+      "links": [
+        {
+          "label": "论文原文 / 官方记录",
+          "url": "https://ianhorswill.github.io/Papers/EXAG-19-Imaginarium.pdf"
+        }
+      ],
+      "verified": "2026-09-19",
+      "seed": "规则归纳—世界拓展的主题补充检索",
+      "depth": 1,
+      "discovery_method": "context_search",
+      "mappings": [
+        {
+          "rq": "W1e",
+          "role": "core"
+        },
+        {
+          "rq": "W3e",
+          "role": "support"
+        },
+        {
+          "rq": "X4a",
+          "role": "core"
+        }
+      ],
+      "research_question": {
+        "kind": "依论文改写",
+        "text": "非程序员怎样用受限英语描述对象本体，并生成满足约束的实例？",
+        "location": "作者 PDF pp.1–2；EXAG 2019。只核查所述方法范围。"
+      },
+      "annotation": {
+        "id": "C05",
+        "title": "Imaginarium: A Tool for Casual Constraint-Based PCG",
+        "year": "2019",
+        "authors": "Ian Horswill",
+        "teams": [],
+        "topics": [
+          "world_model",
+          "hci"
+        ],
+        "rqs": [
+          "W1e",
+          "W3e",
+          "X4a"
+        ],
+        "collected": false,
+        "review_status": "method_checked",
+        "question": "非程序员怎样用受限英语描述对象本体，并生成满足约束的实例？",
+        "question_origin": "根据论文问题、方法或摘要改写；不是作者编号或逐字 RQ。",
+        "summary": "面向桌面角色扮演的约束创作工具，把对象类型与属性约束交给求解器生成实例。",
+        "input_conditions": "用户给定类型、属性、关系与约束；输入采用受限英语。",
+        "training_supervision": "本文使用形式化表示与求解；无视频生成器训练。",
+        "inference_support": "将声明转换为约束，依赖外部约束求解器。",
+        "evaluation": "在线核对 PDF pp.1–2 的接口、约束生成与示例；未复现系统。",
+        "boundary": "对象生成的表达范围受语言与作者本体限制，不是任意生态或社会的长期演化。",
+        "observed_failures": "",
+        "evidence": "作者 PDF pp.1–2；EXAG 2019。只核查所述方法范围。",
+        "checked": "2026-09-19",
+        "links": [
+          {
+            "label": "论文原文 / 官方记录",
+            "url": "https://ianhorswill.github.io/Papers/EXAG-19-Imaginarium.pdf"
+          }
+        ],
+        "note": null,
+        "collection_status": "not_collected",
+        "collection_note": "已在线核查所标范围；本轮只补充文献关系，未下载本地 PDF。",
+        "priority": 65,
+        "discovery": "规则归纳—世界拓展的主题补充检索",
+        "mapping_roles": {
+          "W1e": "core",
+          "W3e": "support",
+          "X4a": "core"
+        }
+      },
+      "aliases": []
+    },
+    {
+      "id": "C06",
+      "title": "Retcon: A Least-Commitment Story-World System",
+      "short": "Retcon",
+      "year": "2022",
+      "authors": "Ian Horswill",
+      "collected": false,
+      "note": null,
+      "scope": "外部前作 · 尚未收藏 PDF",
+      "summary": "给人工撰写的故事片段标注前提，用 SAT 检查器保留相容的后续选择，逐步收缩可能世界。",
+      "boundary": "不从零生成故事，也不允许玩家任意创造事实；区分写作设定状态与故事内部状态。",
+      "evidence": "PDF pp.1、4–6；2022 workshop 页脚；p.8 参考文献 [17] 引用 Open-World Planning。",
+      "sources": [],
+      "links": [
+        {
+          "label": "论文原文 / 官方记录",
+          "url": "https://www.exag.org/papers/Retcon%20A%20Least-Commitment%20Story-World%20System.pdf"
+        }
+      ],
+      "verified": "2026-09-19",
+      "seed": "规则归纳—世界拓展的主题补充检索",
+      "depth": 1,
+      "discovery_method": "context_search",
+      "mappings": [
+        {
+          "rq": "W1e",
+          "role": "core"
+        },
+        {
+          "rq": "W3e",
+          "role": "support"
+        },
+        {
+          "rq": "W3d",
+          "role": "core"
+        },
+        {
+          "rq": "X4a",
+          "role": "core"
+        }
+      ],
+      "research_question": {
+        "kind": "依论文改写",
+        "text": "怎样延迟确定世界设定，同时保证玩家选择的故事片段不与已定设定冲突？",
+        "location": "PDF pp.1、4–6；2022 workshop 页脚；p.8 参考文献 [17] 引用 Open-World Planning。"
+      },
+      "annotation": {
+        "id": "C06",
+        "title": "Retcon: A Least-Commitment Story-World System",
+        "year": "2022",
+        "authors": "Ian Horswill",
+        "teams": [],
+        "topics": [
+          "world_model",
+          "hci"
+        ],
+        "rqs": [
+          "W1e",
+          "W3d",
+          "W3e",
+          "X4a"
+        ],
+        "collected": false,
+        "review_status": "method_checked",
+        "question": "怎样延迟确定世界设定，同时保证玩家选择的故事片段不与已定设定冲突？",
+        "question_origin": "根据论文问题、方法或摘要改写；不是作者编号或逐字 RQ。",
+        "summary": "给人工撰写的故事片段标注前提，用 SAT 检查器保留相容的后续选择，逐步收缩可能世界。",
+        "input_conditions": "作者提供片段、设定前提、约束和状态转移；玩家选择有限的后续片段。",
+        "training_supervision": "本文使用形式化表示与求解；无视频生成器训练。",
+        "inference_support": "SAT 可满足性检查，加上片段的前置条件与状态更新。",
+        "evaluation": "在线核对 PDF pp.1、4–6 的限制、形式化与算法；不把示例当通用基准。",
+        "boundary": "不从零生成故事，也不允许玩家任意创造事实；区分写作设定状态与故事内部状态。",
+        "observed_failures": "",
+        "evidence": "PDF pp.1、4–6；2022 workshop 页脚；p.8 参考文献 [17] 引用 Open-World Planning。",
+        "checked": "2026-09-19",
+        "links": [
+          {
+            "label": "论文原文 / 官方记录",
+            "url": "https://www.exag.org/papers/Retcon%20A%20Least-Commitment%20Story-World%20System.pdf"
+          }
+        ],
+        "note": null,
+        "collection_status": "not_collected",
+        "collection_note": "已在线核查所标范围；本轮只补充文献关系，未下载本地 PDF。",
+        "priority": 65,
+        "discovery": "规则归纳—世界拓展的主题补充检索",
+        "mapping_roles": {
+          "W1e": "core",
+          "W3d": "core",
+          "W3e": "support",
+          "X4a": "core"
+        }
+      },
+      "aliases": []
+    },
+    {
+      "id": "C07",
+      "title": "Towards General Natural Language Understanding with Probabilistic Worldbuilding",
+      "short": "PWM",
+      "year": "2022",
+      "authors": "Abulhair Saparov; Tom M. Mitchell",
+      "collected": false,
+      "note": null,
+      "scope": "外部前作 · 尚未收藏 PDF",
+      "summary": "PWM 将句义、事实和推理写成形式语言，以解析和溯因更新潜在世界模型。",
+      "boundary": "问答任务中的世界建模，不能直接外推为生态、社会与文化的创造性演化。",
+      "evidence": "ACL Anthology 官方摘要与发表记录，TACL 2022，pp.325–342。",
+      "sources": [],
+      "links": [
+        {
+          "label": "论文原文 / 官方记录",
+          "url": "https://aclanthology.org/2022.tacl-1.19/"
+        }
+      ],
+      "verified": "2026-09-19",
+      "seed": "规则归纳—世界拓展的主题补充检索",
+      "depth": 1,
+      "discovery_method": "context_search",
+      "mappings": [
+        {
+          "rq": "W1e",
+          "role": "core"
+        },
+        {
+          "rq": "W2b",
+          "role": "core"
+        },
+        {
+          "rq": "W4a",
+          "role": "support"
+        }
+      ],
+      "research_question": {
+        "kind": "依论文改写",
+        "text": "能否用可解释的符号贝叶斯世界模型，联合解析语言、补充解释并进行推理？",
+        "location": "ACL Anthology 官方摘要与发表记录，TACL 2022，pp.325–342。"
+      },
+      "annotation": {
+        "id": "C07",
+        "title": "Towards General Natural Language Understanding with Probabilistic Worldbuilding",
+        "year": "2022",
+        "authors": "Abulhair Saparov; Tom M. Mitchell",
+        "teams": [],
+        "topics": [
+          "world_model"
+        ],
+        "rqs": [
+          "W1e",
+          "W2b",
+          "W4a"
+        ],
+        "collected": false,
+        "review_status": "abstract_review",
+        "question": "能否用可解释的符号贝叶斯世界模型，联合解析语言、补充解释并进行推理？",
+        "question_origin": "根据论文问题、方法或摘要改写；不是作者编号或逐字 RQ。",
+        "summary": "PWM 将句义、事实和推理写成形式语言，以解析和溯因更新潜在世界模型。",
+        "input_conditions": "文本观察与符号语义表示；具体语言覆盖需按论文方法核对。",
+        "training_supervision": "本文使用形式化表示与求解；无视频生成器训练。",
+        "inference_support": "符号贝叶斯推断；生成的是内部世界解释，不是像素视频。",
+        "evaluation": "作者在 ProofWriter 与 FictionalGeoQA 上报告概念验证；本条核对官方摘要与元数据。",
+        "boundary": "问答任务中的世界建模，不能直接外推为生态、社会与文化的创造性演化。",
+        "observed_failures": "",
+        "evidence": "ACL Anthology 官方摘要与发表记录，TACL 2022，pp.325–342。",
+        "checked": "2026-09-19",
+        "links": [
+          {
+            "label": "论文原文 / 官方记录",
+            "url": "https://aclanthology.org/2022.tacl-1.19/"
+          }
+        ],
+        "note": null,
+        "collection_status": "not_collected",
+        "collection_note": "已在线核查所标范围；本轮只补充文献关系，未下载本地 PDF。",
+        "priority": 65,
+        "discovery": "规则归纳—世界拓展的主题补充检索",
+        "mapping_roles": {
+          "W1e": "core",
+          "W2b": "core",
+          "W4a": "support"
+        }
+      },
+      "aliases": []
+    },
+    {
+      "id": "C08",
+      "title": "Emergent social conventions and collective bias in LLM populations",
+      "short": "Emergent Social Conventions",
+      "year": "2025",
+      "authors": "Ariel Flint Ashery; Luca Maria Aiello; Andrea Baronchelli",
+      "collected": false,
+      "note": null,
+      "scope": "外部前作 · 尚未收藏 PDF",
+      "summary": "在命名博弈中让 LLM 群体通过局部互动形成共同约定，并研究偏差与规范改变。",
+      "boundary": "验证命名博弈中的社会约定，不代表任意文化、制度或生态反馈已被准确模拟。",
+      "evidence": "arXiv v2 元数据与 HTML Experimental Setup；Science Advances 11, eadu9368 (2025)。",
+      "sources": [],
+      "links": [
+        {
+          "label": "论文原文 / 官方记录",
+          "url": "https://arxiv.org/abs/2410.08948v2"
+        }
+      ],
+      "verified": "2026-09-19",
+      "seed": "规则归纳—世界拓展的主题补充检索",
+      "depth": 1,
+      "discovery_method": "context_search",
+      "mappings": [
+        {
+          "rq": "W3e",
+          "role": "support"
+        },
+        {
+          "rq": "W3c",
+          "role": "core"
+        }
+      ],
+      "research_question": {
+        "kind": "依论文改写",
+        "text": "局部两两协调能否形成全局约定、集体偏差，并被坚定少数群体改变？",
+        "location": "arXiv v2 元数据与 HTML Experimental Setup；Science Advances 11, eadu9368 (2025)。"
+      },
+      "annotation": {
+        "id": "C08",
+        "title": "Emergent social conventions and collective bias in LLM populations",
+        "year": "2025",
+        "authors": "Ariel Flint Ashery; Luca Maria Aiello; Andrea Baronchelli",
+        "teams": [],
+        "topics": [
+          "agent",
+          "world_model"
+        ],
+        "rqs": [
+          "W3c",
+          "W3e"
+        ],
+        "collected": false,
+        "review_status": "method_checked",
+        "question": "局部两两协调能否形成全局约定、集体偏差，并被坚定少数群体改变？",
+        "question_origin": "根据论文问题、方法或摘要改写；不是作者编号或逐字 RQ。",
+        "summary": "在命名博弈中让 LLM 群体通过局部互动形成共同约定，并研究偏差与规范改变。",
+        "input_conditions": "有限名称集合、两两互动、协调收益和有限历史记忆；并非自由社会的任意行为。",
+        "training_supervision": "以模型提示与外部实验环境为主；本条不声称训练了视频生成器。",
+        "inference_support": "LLM 决策，外部实验循环维护配对、历史和得分。",
+        "evaluation": "查看原文 Experimental Setup：测局部协调到群体共识、名称偏好和少数群体影响；未复现。",
+        "boundary": "验证命名博弈中的社会约定，不代表任意文化、制度或生态反馈已被准确模拟。",
+        "observed_failures": "",
+        "evidence": "arXiv v2 元数据与 HTML Experimental Setup；Science Advances 11, eadu9368 (2025)。",
+        "checked": "2026-09-19",
+        "links": [
+          {
+            "label": "论文原文 / 官方记录",
+            "url": "https://arxiv.org/abs/2410.08948v2"
+          }
+        ],
+        "note": null,
+        "collection_status": "not_collected",
+        "collection_note": "已在线核查所标范围；本轮只补充文献关系，未下载本地 PDF。",
+        "priority": 65,
+        "discovery": "规则归纳—世界拓展的主题补充检索",
+        "mapping_roles": {
+          "W3c": "core",
+          "W3e": "support"
+        },
+        "arxiv_id": "2410.08948"
+      },
+      "aliases": []
+    },
+    {
+      "id": "C09",
+      "title": "LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals",
+      "short": "Self-Report Agents",
+      "year": "2026（v3）",
+      "authors": "Joon Sung Park; Carolyn Q. Zou; Jonne Kamphorst; Niles Egan; Aaron Shaw; Benjamin Mako Hill; Carrie Cai; Meredith Ringel Morris; Percy Liang; Robb Willer; Michael S. Bernstein",
+      "collected": false,
+      "note": null,
+      "scope": "外部前作 · 尚未收藏 PDF",
+      "summary": "依据 1,052 位美国参与者的自述数据构建个体模拟，检验留出回答、人格与行为任务。",
+      "boundary": "有经验验证，但人群、输入和任务边界明确；不能推断任意社会长期演化正确。",
+      "evidence": "arXiv 2411.10109v3 作者摘要与版本记录；2024 首版题为 Generative Agent Simulations of 1,000 People。",
+      "sources": [],
+      "links": [
+        {
+          "label": "论文原文 / 官方记录",
+          "url": "https://arxiv.org/abs/2411.10109v3"
+        }
+      ],
+      "verified": "2026-09-19",
+      "seed": "规则归纳—世界拓展的主题补充检索",
+      "depth": 1,
+      "discovery_method": "context_search",
+      "mappings": [
+        {
+          "rq": "W3e",
+          "role": "support"
+        },
+        {
+          "rq": "W3c",
+          "role": "core"
+        }
+      ],
+      "research_question": {
+        "kind": "依论文改写",
+        "text": "以个体访谈或问卷构建的 agent，能否预测该个体在新问项与行为任务中的反应？",
+        "location": "arXiv 2411.10109v3 作者摘要与版本记录；2024 首版题为 Generative Agent Simulations of 1,000 People。"
+      },
+      "annotation": {
+        "id": "C09",
+        "title": "LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals",
+        "year": "2026（v3）",
+        "authors": "Joon Sung Park; Carolyn Q. Zou; Jonne Kamphorst; Niles Egan; Aaron Shaw; Benjamin Mako Hill; Carrie Cai; Meredith Ringel Morris; Percy Liang; Robb Willer; Michael S. Bernstein",
+        "teams": [],
+        "topics": [
+          "agent",
+          "evaluation"
+        ],
+        "rqs": [
+          "W3c",
+          "W3e"
+        ],
+        "collected": false,
+        "review_status": "abstract_review",
+        "question": "以个体访谈或问卷构建的 agent，能否预测该个体在新问项与行为任务中的反应？",
+        "question_origin": "根据论文问题、方法或摘要改写；不是作者编号或逐字 RQ。",
+        "summary": "依据 1,052 位美国参与者的自述数据构建个体模拟，检验留出回答、人格与行为任务。",
+        "input_conditions": "访谈、结构化问卷或两者结合；个体模拟有真实人员数据作为条件。",
+        "training_supervision": "以模型提示与外部实验环境为主；本条不声称训练了视频生成器。",
+        "inference_support": "LLM 以个体自述资料为依据；不是从少量世界法则推出新社会。",
+        "evaluation": "核对 2026-06-28 v3 摘要；评价包含留出 GSS、人格、经济博弈与实验反应。不混用旧版百分比。",
+        "boundary": "有经验验证，但人群、输入和任务边界明确；不能推断任意社会长期演化正确。",
+        "observed_failures": "",
+        "evidence": "arXiv 2411.10109v3 作者摘要与版本记录；2024 首版题为 Generative Agent Simulations of 1,000 People。",
+        "checked": "2026-09-19",
+        "links": [
+          {
+            "label": "论文原文 / 官方记录",
+            "url": "https://arxiv.org/abs/2411.10109v3"
+          }
+        ],
+        "note": null,
+        "collection_status": "not_collected",
+        "collection_note": "已在线核查所标范围；本轮只补充文献关系，未下载本地 PDF。",
+        "priority": 65,
+        "discovery": "规则归纳—世界拓展的主题补充检索",
+        "mapping_roles": {
+          "W3c": "core",
+          "W3e": "support"
+        },
+        "arxiv_id": "2411.10109"
+      },
+      "aliases": []
+    },
+    {
+      "id": "C10",
+      "title": "Open-World Planning for Story Generation",
+      "short": "Open-World Story Planning",
+      "year": "2005",
+      "authors": "Mark O. Riedl; R. Michael Young",
+      "collected": false,
+      "note": null,
+      "scope": "外部前作 · 尚未收藏 PDF",
+      "summary": "ISR 在真、假与未定事实之间维护初态，按规划需要决定作者允许留空的部分。",
+      "boundary": "允许在已定义的事实空间内补全初态，不等于自主发明任意新物理或社会本体。",
+      "evidence": "IJCAI 官方 PDF pp.1–2；由 Retcon p.8 参考文献 [17] 向后追溯。",
+      "sources": [],
+      "links": [
+        {
+          "label": "论文原文 / 官方记录",
+          "url": "https://www.ijcai.org/Proceedings/05/Papers/post-0020.pdf"
+        }
+      ],
+      "verified": "2026-09-19",
+      "seed": "Retcon 参考文献 [17]",
+      "depth": 2,
+      "discovery_method": "citation_search",
+      "mappings": [
+        {
+          "rq": "W1e",
+          "role": "core"
+        },
+        {
+          "rq": "W3e",
+          "role": "support"
+        },
+        {
+          "rq": "W3b",
+          "role": "core"
+        }
+      ],
+      "research_question": {
+        "kind": "依论文改写",
+        "text": "规划故事时，能否延迟决定作者未指定的初始事实，以获得可行故事？",
+        "location": "IJCAI 官方 PDF pp.1–2；由 Retcon p.8 参考文献 [17] 向后追溯。"
+      },
+      "annotation": {
+        "id": "C10",
+        "title": "Open-World Planning for Story Generation",
+        "year": "2005",
+        "authors": "Mark O. Riedl; R. Michael Young",
+        "teams": [],
+        "topics": [
+          "world_model"
+        ],
+        "rqs": [
+          "W1e",
+          "W3b",
+          "W3e"
+        ],
+        "collected": false,
+        "review_status": "method_checked",
+        "question": "规划故事时，能否延迟决定作者未指定的初始事实，以获得可行故事？",
+        "question_origin": "根据论文问题、方法或摘要改写；不是作者编号或逐字 RQ。",
+        "summary": "ISR 在真、假与未定事实之间维护初态，按规划需要决定作者允许留空的部分。",
+        "input_conditions": "已知动作前置条件与效果；作者明确指定可留空的事实和互斥条件。",
+        "training_supervision": "本文使用形式化表示与求解；无视频生成器训练。",
+        "inference_support": "部分序因果链接规划，加上初始状态修订。",
+        "evaluation": "核查 IJCAI 2005 两页短文的初态划分、算法与示例；无现代大规模生成基准。",
+        "boundary": "允许在已定义的事实空间内补全初态，不等于自主发明任意新物理或社会本体。",
+        "observed_failures": "",
+        "evidence": "IJCAI 官方 PDF pp.1–2；由 Retcon p.8 参考文献 [17] 向后追溯。",
+        "checked": "2026-09-19",
+        "links": [
+          {
+            "label": "论文原文 / 官方记录",
+            "url": "https://www.ijcai.org/Proceedings/05/Papers/post-0020.pdf"
+          }
+        ],
+        "note": null,
+        "collection_status": "not_collected",
+        "collection_note": "已在线核查所标范围；本轮只补充文献关系，未下载本地 PDF。",
+        "priority": 65,
+        "discovery": "Retcon 参考文献 [17]",
+        "mapping_roles": {
+          "W1e": "core",
+          "W3b": "core",
+          "W3e": "support"
+        }
+      },
+      "aliases": []
     }
   ],
   "edges": [
@@ -32937,6 +33654,51 @@
       "change": "从交互合成世界程序 → 把任务分数、可回答性和主动探针一起用于局部机制编辑",
       "evidence": "WorldCoder 既有全文笔记与 ESBM 作者摘要的条件比较；尚未在本轮核查后者引用表",
       "url": "https://arxiv.org/abs/2606.07127"
+    },
+    {
+      "source": "C10",
+      "target": "C06",
+      "kind": "citation",
+      "change": "从按规划需要补全初态 → 对故事设定延迟承诺与约束检查",
+      "evidence": "Retcon PDF p.8 参考文献 [17] 明确列出 Riedl & Young (2005)；条件差别是本综述归纳，不表示算法直接继承。",
+      "url": "https://www.exag.org/papers/Retcon%20A%20Least-Commitment%20Story-World%20System.pdf",
+      "id": "C10-C06"
+    },
+    {
+      "source": "C05",
+      "target": "C06",
+      "kind": "comparison",
+      "change": "从约束对象生成 → 约束故事设定与片段选择",
+      "evidence": "两篇方法范围比较；本次没有核实它们之间的直接引用。",
+      "url": "https://www.exag.org/papers/Retcon%20A%20Least-Commitment%20Story-World%20System.pdf",
+      "id": "C05-C06"
+    },
+    {
+      "source": "S09",
+      "target": "C08",
+      "kind": "comparison",
+      "change": "从日常群体协调 → 受控命名博弈中的规范形成与改变",
+      "evidence": "不同任务与评价条件的并行比较；此边不声明引用继承。",
+      "url": "https://arxiv.org/abs/2410.08948v2",
+      "id": "S09-C08"
+    },
+    {
+      "source": "C08",
+      "target": "C09",
+      "kind": "comparison",
+      "change": "从群体约定涌现 → 真实个体的留出行为预测",
+      "evidence": "群体机制与个体预测是不同验证目标；此边只用于对照。",
+      "url": "https://arxiv.org/abs/2411.10109v3",
+      "id": "C08-C09"
+    },
+    {
+      "source": "P163",
+      "target": "C08",
+      "kind": "comparison",
+      "change": "从人工生命底层涌现 → 语言 agent 的社会协调",
+      "evidence": "底层规则、主体和评价目标不同；相似的涌现表述不能互相替代验证。",
+      "url": "https://arxiv.org/abs/2410.08948v2",
+      "id": "P163-C08"
     }
   ],
   "lanes": [
@@ -33229,6 +33991,43 @@
         "P150",
         "C01"
       ]
+    },
+    {
+      "route": "world",
+      "rq": "W1e",
+      "title": "不完备世界已有直接前作：初态与设定的延迟承诺",
+      "papers": [
+        "C10",
+        "C06"
+      ]
+    },
+    {
+      "route": "world",
+      "rq": "W1e",
+      "title": "约束对象与约束叙事：能力范围对照",
+      "papers": [
+        "C05",
+        "C06"
+      ]
+    },
+    {
+      "route": "world",
+      "rq": "W3c",
+      "title": "社会模拟的不同证据：协调、规范与个体预测",
+      "papers": [
+        "S09",
+        "C08",
+        "C09"
+      ]
+    },
+    {
+      "route": "world",
+      "rq": "W3e",
+      "title": "局部涌现的两类条件：人工生命与社会约定",
+      "papers": [
+        "P163",
+        "C08"
+      ]
     }
   ],
   "bridges": [
@@ -33340,7 +34139,7 @@
     "local_documents": 398,
     "existing_notes": 398,
     "map_only": 0,
-    "external_papers": 39,
+    "external_papers": 46,
     "folders": [
       {
         "name": "Reasoning",
@@ -33429,6 +34228,7 @@
     "覆盖现有文献目录及研究者收藏。新增记录注明摘要初读或方法核查；方法支撑不等于已解决对应应用问题。",
     "以本地论文及草稿为种子，优先向后追溯作者在引言/相关工作明确定位的问题；核对论文原文、官方记录或作者页面。第二轮实例：Genie→Dreamer→PlaNet，AgentHands→GazePointAR→Put-That-There。",
     "检索快照更新至 2026-09-19；作者署名检索与引用滚雪球分别记录。未穷尽全部团队工作或参考文献，没有证据时不建立引用继承边。",
-    "TeaCache、ASAL、Diffusion as Shader 已随本地目录同步成为 P162–P164，使用当前正式笔记；没有把这些已收集文献误标成外部检索项。"
+    "TeaCache、ASAL、Diffusion as Shader 已随本地目录同步成为 P162–P164，使用当前正式笔记；没有把这些已收集文献误标成外部检索项。",
+    "世界构建补充区分主题检索与引用滚雪球：C04–C09 为主题补充，C10 由 Retcon 参考文献 [17] 向后追溯。新增 W1e、W3e 是综合组织分支，不是某篇原文的统一命名。"
   ]
 }

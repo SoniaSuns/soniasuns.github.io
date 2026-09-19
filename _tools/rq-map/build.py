@@ -138,6 +138,17 @@ for a in annotations["papers"]:
         continue
     papers.append(dict(id=a["id"], title=a["title"], short=a["title"].split(":")[0], year=a["year"], authors=a["authors"], collected=False, note=None, scope="公开文献记录 · PDF 待收集", summary=a.get("summary", a.get("question", "")), boundary=a.get("boundary", ""), evidence=a.get("evidence", ""), sources=[], links=a.get("links", []), verified=DATE, seed=a.get("discovery", "研究者公开论文记录"), depth=1, discovery_method="context_search" if a["id"].startswith("C") else "author_search", mappings=[]))
 by_id = {p["id"]: p for p in papers}
+# Editorial additions are separate from collection metadata and survive a rebuild.
+overlay_path = SITE / "_tools/rq-map/world-synthesis-overlay.json"
+overlay = json.loads(overlay_path.read_text(encoding="utf-8")) if overlay_path.exists() else {}
+for addition in overlay.get("branches", []):
+    existing = next((b for b in branches if b["id"] == addition["id"]), None)
+    if existing is None:
+        branches.append(addition)
+    else:
+        existing.update(addition)
+for addition in overlay.get("papers", []):
+    by_id[addition["id"]].update(addition)
 for node in routes + parents + branches:
     node["anchors"] = list(dict.fromkeys(canonical(i) for i in node["anchors"]))
 for b in branches:
@@ -325,6 +336,11 @@ for identifier, (kind, question, location) in paper_questions.items():
         by_id[identifier]["research_question"] = dict(kind=kind, text=question, location=location)
 
 folder_counts = collections.Counter(s.split("/")[0] for p in papers if p["collected"] for s in p["sources"])
+for key, rows in [("routes", routes), ("parents", parents)]:
+    for addition in overlay.get(key, []):
+        next(row for row in rows if row["id"] == addition["id"]).update(addition)
+edges.extend(overlay.get("edges", []))
+lanes.extend(overlay.get("lanes", []))
 local_files = {s for p in papers if p["collected"] for s in p["sources"]}
 actual_files = {str(p.relative_to(ROOT)).replace("\\", "/") for folder in folder_counts for p in (ROOT / folder).rglob("*.pdf")}
 assert local_files == actual_files, f"Inventory changed: {local_files ^ actual_files}"
@@ -351,5 +367,6 @@ data["methodology"][0] = "长期母问题、父子层级及条件变化均为文
 data["methodology"][2] = "颜色仅表示本地 PDF 是否存在：蓝色已收集，橙色未收集。证据深度与复现状态另用文字标注；在线摘要、下载 PDF、提取全文与方法核查是不同状态。"
 data["methodology"][4] = "覆盖现有文献目录及研究者收藏。新增记录注明摘要初读或方法核查；方法支撑不等于已解决对应应用问题。"
 data["methodology"][6] = "检索快照更新至 " + DATE + "；作者署名检索与引用滚雪球分别记录。未穷尽全部团队工作或参考文献，没有证据时不建立引用继承边。"
+data["methodology"].extend(overlay.get("methodology", []))
 out.write_text(json.dumps(data, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 print(json.dumps({"papers":len(papers),"local_documents":data["coverage"]["local_documents"],"external":data["coverage"]["external_papers"],"branches":len(branches),"edges":len(edges),"folders":len(folder_counts)}, ensure_ascii=False))

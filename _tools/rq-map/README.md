@@ -58,10 +58,36 @@ source locations, not extracted paper bodies.
 
 ## Validation scope
 
-The initial snapshot has 158 local papers, 27 external additions, 26 leaf RQs,
-24 displayed literature chains, and 45 relations. Browser checks cover both
+The 2026-09-19 snapshot has 398 local papers, 46 external additions, 29 leaf RQs,
+and 57 relations. Browser checks cover both
 routes, all branches, filters, parent and paper sources, citation evidence,
 canonical-ID redirects, note links, data downloads, keyboard use, and mobile
 overflow. Existing library checks guard its sorting, search, notes, and exports.
 After publishing, run the browser checks with the public page URL as the first
 argument to verify the deployed assets and embedded data as well.
+
+## Worldbuilding synthesis
+
+The homepage synthesis uses `_data/literature_synthesis.json` and
+`world-synthesis.liquid`. The same data is exported at
+`/assets/data/literature-synthesis.json`. Paper links resolve against the atlas,
+so collection colors follow the actual inventory; reading an online PDF does
+not mark it collected. Evaluation protocols and candidate projects are labeled
+as proposals, separately from evidence about published work.
+
+`world-synthesis-overlay.json` preserves the reviewed root question, W1e/W3e,
+paper discovery provenance, and new relations during atlas regeneration.
+Keep the corresponding records in `_data/literature_annotations.json` when
+extending author collections. C10 was found in Retcon's reference [17]; other
+new cross-paper comparisons remain dashed. B3 remains deferred.
+
+After a synthesis change, run these workspace checks in addition to rebuilding:
+
+```powershell
+node .literature-tools/check-synthesis.cjs
+node .literature-tools/check-team-evidence.cjs
+```
+
+They check reference integrity, both directions of RQ mappings, collection
+colors, filters, deep links, data downloads, keyboard use, mobile layouts and
+the no-JavaScript fallback. No local PDF bodies or personal notes are exported.

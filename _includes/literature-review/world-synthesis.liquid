@@ -1,0 +1,58 @@
+{% assign synthesis = site.data.literature_synthesis %}
+<section id="lr-synthesis" class="lr-synthesis" aria-labelledby="ls-heading">
+  <div class="ls-heading-row">
+    <div><p class="ls-eyebrow">RULES → WORLDS</p><h2 id="ls-heading">{{ synthesis.title | escape }}</h2></div>
+    <a class="ls-download" href="{{ '/assets/data/literature-synthesis.json' | relative_url }}" download>下载研究综述 JSON ↗</a>
+  </div>
+  <p class="ls-question">{{ synthesis.question | escape }}</p>
+  <div class="ls-assessment"><span>当前判断</span><p>{{ synthesis.assessment | escape }}</p></div>
+  <p class="ls-basis">{{ synthesis.basis | escape }}</p>
+  <div class="ls-stage-grid" aria-label="四类问题与文献对应">
+    {% for stage in synthesis.stages %}
+      <article><span class="ls-step">{{ stage.number }} · {{ stage.input | escape }}</span><h3>{{ stage.label | escape }}</h3><p>{{ stage.question | escape }}</p><p class="ls-muted">{{ stage.boundary | escape }}</p><div class="ls-rq-links">{% for rq in stage.rqs %}<a href="#rq-{{ rq }}">{{ rq }} ↗</a>{% endfor %}</div>{% include literature-review/synthesis-refs.liquid ids=stage.papers %}</article>
+    {% endfor %}
+  </div>
+  <details class="ls-example"><summary>用一个例子区分：{{ synthesis.example.rule | escape }}</summary><div class="ls-example-grid">{% for item in synthesis.example.items %}<div><h3>{{ item.label | escape }}</h3><p>{{ item.text | escape }}</p></div>{% endfor %}</div><p class="ls-muted">{{ synthesis.example.note | escape }}</p></details>
+  <div class="ls-controls" hidden>
+    <div class="ls-view-nav" role="group" aria-label="研究综述视图">
+      <button type="button" data-ls-view="progress" aria-pressed="true" aria-controls="synthesis-progress">文献做到哪一步</button>
+      <button type="button" data-ls-view="evaluation" aria-pressed="false" aria-controls="synthesis-evaluation">如何评估</button>
+      <button type="button" data-ls-view="gaps" aria-pressed="false" aria-controls="synthesis-gaps">待验证的条件</button>
+      <button type="button" data-ls-view="focus" aria-pressed="false" aria-controls="synthesis-focus">近期候选题</button>
+    </div>
+  </div>
+  <p class="ls-legend"><span class="ls-local">● 已收集 PDF</span><span class="ls-external">● 未收集 PDF</span><span>点击论文查看来源、方法与证据深度</span></p>
+
+  <div id="synthesis-progress" class="ls-panel" data-ls-panel="progress" tabindex="-1" aria-labelledby="ls-progress-heading">
+    <div class="ls-panel-heading"><h3 id="ls-progress-heading">八条文献脉络，各自证明了什么</h3><label class="ls-stage-filter" hidden>按问题筛选<select id="ls-stage-filter"><option value="all">全部问题</option>{% for stage in synthesis.stages %}<option value="{{ stage.id }}">{{ stage.label | escape }}</option>{% endfor %}</select></label></div>
+    <p id="ls-progress-status" class="ls-muted" role="status" aria-live="polite">{{ synthesis.progress.size }} 条脉络 · 同一工作可以支撑多类问题</p>
+    <div class="ls-progress-grid">
+      {% for item in synthesis.progress %}
+        <article class="ls-progress-card" data-ls-stages="{{ item.stages | join: ' ' }}"><p class="ls-evidence-state">{{ item.status | escape }}</p><h4>{{ item.label | escape }}</h4><p>{{ item.achieved | escape }}</p><dl><dt>在哪些条件下</dt><dd>{{ item.condition | escape }}</dd><dt>尚不能推出</dt><dd>{{ item.limit | escape }}</dd></dl>{% include literature-review/synthesis-refs.liquid ids=item.papers %}<div class="ls-rq-links">{% for rq in item.rqs %}<a href="#rq-{{ rq }}">{{ rq }} ↗</a>{% endfor %}</div></article>
+      {% endfor %}
+    </div>
+    <details class="ls-cautions"><summary>读结果时，三个容易混淆的边界</summary><div class="ls-caution-grid">{% for item in synthesis.cautions %}<article><h4>{{ item.title | escape }}</h4><p>{{ item.text | escape }}</p>{% include literature-review/synthesis-refs.liquid ids=item.papers %}</article>{% endfor %}</div></details>
+  </div>
+
+  <div id="synthesis-evaluation" class="ls-panel" data-ls-panel="evaluation" tabindex="-1" aria-labelledby="ls-evaluation-heading">
+    <h3 id="ls-evaluation-heading">先明确任务，再选择正确性标准</h3>
+    <div class="ls-regime-grid">{% for item in synthesis.evaluation_regimes %}<article><h4>{{ item.title | escape }}</h4><p>{{ item.text | escape }}</p>{% include literature-review/synthesis-refs.liquid ids=item.papers %}</article>{% endfor %}</div>
+    <p class="ls-proposal-note">{{ synthesis.evaluation_note | escape }}</p>
+    <div class="ls-table-scroll" role="region" aria-label="评估维度、测试方式与常见误判" tabindex="0"><table class="ls-evaluation-table"><thead><tr><th scope="col">评价对象与依据</th><th scope="col">怎样测试</th><th scope="col">报告什么</th><th scope="col">避免的误判</th></tr></thead><tbody>{% for item in synthesis.evaluation %}<tr><th scope="row">{{ item.dimension | escape }}{% include literature-review/synthesis-refs.liquid ids=item.papers %}</th><td>{{ item.test | escape }}</td><td>{{ item.metrics | escape }}</td><td>{{ item.pitfall | escape }}</td></tr>{% endfor %}</tbody></table></div>
+    <h4 class="ls-subheading">视频推理的贡献归因：测试时究竟给了什么？</h4>
+    <div class="ls-regime-grid">{% for item in synthesis.attribution %}<article><h4>{{ item.title | escape }}</h4><p>{{ item.text | escape }}</p></article>{% endfor %}</div>
+  </div>
+
+  <div id="synthesis-gaps" class="ls-panel" data-ls-panel="gaps" tabindex="-1" aria-labelledby="ls-gaps-heading">
+    <h3 id="ls-gaps-heading">六组需要进一步验证的条件</h3><p class="ls-proposal-note">{{ synthesis.gaps_note | escape }}</p>
+    <div class="ls-gap-grid">{% for item in synthesis.gaps %}<article><h4><span>{{ forloop.index | prepend: '0' }}</span>{{ item.title | escape }}</h4><dl><dt>已有前作</dt><dd>{{ item.prior | escape }}</dd><dt>进一步改变条件</dt><dd>{{ item.delta | escape }}</dd><dt>可证伪的测试</dt><dd>{{ item.test | escape }}</dd></dl>{% include literature-review/synthesis-refs.liquid ids=item.papers %}<div class="ls-rq-links">{% for rq in item.rqs %}<a href="#rq-{{ rq }}">{{ rq }} ↗</a>{% endfor %}</div></article>{% endfor %}</div>
+  </div>
+
+  <div id="synthesis-focus" class="ls-panel" data-ls-panel="focus" tabindex="-1" aria-labelledby="ls-focus-heading">
+    <p class="ls-evidence-state">{{ synthesis.focus.label | escape }}</p><h3 id="ls-focus-heading" class="ls-focus-question">{{ synthesis.focus.question | escape }}</h3><p>{{ synthesis.focus.reason | escape }}</p>
+    <div class="ls-focus-grid"><article><h4>训练贡献在哪里</h4><p>{{ synthesis.focus.training | escape }}</p></article><article><h4>先验证计算预算</h4><p>{{ synthesis.focus.feasibility | escape }}</p></article></div>
+    <ol class="ls-timeline">{% for item in synthesis.focus.sequence %}<li><h4>{{ item.label | escape }}</h4><p>{{ item.text | escape }}</p></li>{% endfor %}</ol>
+    <p class="ls-decision">{{ synthesis.focus.go_no_go | escape }}</p><p>{{ synthesis.focus.xr | escape }}</p>{% include literature-review/synthesis-refs.liquid ids=synthesis.focus.papers %}<div class="ls-rq-links">{% for rq in synthesis.focus.rqs %}<a href="#rq-{{ rq }}">{{ rq }} ↗</a>{% endfor %}</div><p class="ls-proposal-note">{{ synthesis.focus.status | escape }}</p>
+  </div>
+</section>
+<script defer src="{{ '/assets/js/literature-synthesis.js' | relative_url }}?v={{ synthesis.updated }}-1"></script>

@@ -1,0 +1,8 @@
+<div class="ls-refs" aria-label="对应论文与证据">
+  {% for synthesis_ref_id in include.ids %}
+    {% assign synthesis_ref = site.data.literature_rq.papers | where: 'id', synthesis_ref_id | first %}
+    {% if synthesis_ref %}
+      <a class="ls-paper-ref" href="#rq-{{ synthesis_ref.id }}" data-collected="{{ synthesis_ref.collected }}" title="{{ synthesis_ref.title | escape }} · {% if synthesis_ref.collected %}已收集 PDF{% else %}未收集 PDF{% endif %}"><span aria-hidden="true">●</span> {{ synthesis_ref.id }} · {{ synthesis_ref.short | escape }}<span class="lr-visually-hidden">，{% if synthesis_ref.collected %}已收集 PDF{% else %}未收集 PDF{% endif %}，查看论文证据</span></a>
+    {% endif %}
+  {% endfor %}
+</div>

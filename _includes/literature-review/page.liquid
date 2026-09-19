@@ -2,13 +2,14 @@
   <div class="lr-intro">
     <p class="lr-kicker">RESEARCH & LITERATURE <span>问题 · 条件 · 证据</span></p>
     <p class="lr-lead">面向世界推演与人类探索的视频生成</p>
-    <p class="lr-description">关注视频生成模型如何依据规则与操作预测后果，以及人如何在 XR 中比较、检查和修正这些生成的未来。沿两条研究路线整理已有能力、适用范围与待验证问题。</p>
+    <p class="lr-description">从示例中归纳机制，按给定规则推演后果，在不完备设定下补充假设并拓展世界。关注视频生成模型承担了哪部分推理，以及人如何在 XR 中比较、检查和修正这些未来。</p>
     <div class="lr-stats">
       <span><strong>{{ site.data.literature_review.catalog.records }}</strong> 篇本地文献</span><span><strong>{{ site.data.literature_teams.teams.size }}</strong> 个研究者收藏</span><span>更新于 <strong>{{ site.data.literature_review.catalog.updated }}</strong></span>
     </div>
-    <nav class="lr-jump-nav" aria-label="文献页导航"><a href="#lr-research">当前关注</a><a href="#lr-evidence">论文标注与团队收藏</a><a href="#lr-rq-atlas">完整文献脉络</a><a href="#lr-library">文献与问答</a></nav>
+    <nav class="lr-jump-nav" aria-label="文献页导航"><a href="#lr-research">当前关注</a><a href="#lr-synthesis">研究进展与选题</a><a href="#lr-evidence">论文标注与团队收藏</a><a href="#lr-rq-atlas">完整文献脉络</a><a href="#lr-library">文献与问答</a></nav>
   </div>
   {% include literature-review/research-overview.liquid %}
+  {% include literature-review/world-synthesis.liquid %}
   {% include literature-review/paper-evidence.liquid %}
   {% include literature-review/rq-map.liquid %}
   <div class="lr-mobile-tabs" role="group" aria-label="工作区视图"><button type="button" data-lr-view="library" aria-pressed="true">文献与笔记</button><button type="button" data-lr-view="chat" aria-pressed="false">论文问答</button></div>

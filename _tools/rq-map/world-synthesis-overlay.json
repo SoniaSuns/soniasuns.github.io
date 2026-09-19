@@ -1,0 +1,338 @@
+{
+  "updated": "2026-09-19",
+  "routes": [
+    {
+      "id": "world",
+      "label": "世界机制与演化",
+      "root": "W0",
+      "question": "如何从稀疏示例和部分规则构造可扩展的世界，区分推导与补充假设，并使多步、跨领域的演化持续符合已确定的机制？",
+      "explanation": "区分归纳机制、按规则推导、补充假设、演化与拓展。世界内部状态变化、规则修订和模型自我改进是不同研究对象。",
+      "anchors": [
+        "P150",
+        "P156",
+        "C06",
+        "C04",
+        "P163",
+        "C08",
+        "P158"
+      ],
+      "metrics": "留出机制与组合泛化；假设可追踪性；逐步与整段规则满足；干预响应与保持；有效多样性；跨层反馈及用户理解。",
+      "short_title": "从示例与部分规则构造可推演世界"
+    }
+  ],
+  "parents": [
+    {
+      "id": "W1",
+      "anchors": [
+        "P121",
+        "P150",
+        "P154",
+        "P156",
+        "P157",
+        "C06",
+        "C07",
+        "C10"
+      ]
+    },
+    {
+      "id": "W3",
+      "anchors": [
+        "P135",
+        "P128",
+        "P145",
+        "P163",
+        "P147",
+        "P160",
+        "C04",
+        "C08"
+      ]
+    }
+  ],
+  "branches": [
+    {
+      "id": "W1e",
+      "parent": "W1",
+      "route": "world",
+      "label": "不完备设定与候选世界",
+      "question": "哪些结论由规则蕴含，哪些依赖补充假设；怎样保留多个相容世界？",
+      "before": "设定被视为完备，或把一个合理补全当作唯一答案",
+      "after": "区分真、假、未定事实与可撤销默认；延迟承诺，并检查相容性",
+      "gap": "有限规则通常不唯一决定世界。假设跟踪、约束生成已有前作；跨模态可执行拓展仍须单独验证。",
+      "core": [
+        "C05",
+        "C06",
+        "C07",
+        "C10"
+      ],
+      "support": [
+        "C04",
+        "P142",
+        "P160"
+      ],
+      "anchors": [
+        "C10",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "rq_origin": "本综述综合开放世界规划、约束 PCG、Retcon 与 PWM 的任务条件；不是某篇统一命名"
+    },
+    {
+      "id": "W3c",
+      "gap": "社会模拟、命名博弈、个体预测和人工生命各有验证目标。要分别说明评价对象，不能将局部涌现或可信感当成完整社会预测。",
+      "anchors": [
+        "S09",
+        "P145",
+        "P151",
+        "S07",
+        "P163",
+        "C08",
+        "C09"
+      ]
+    },
+    {
+      "id": "W3d",
+      "gap": "DreamGarden、Retcon 与 AutoWorldBuilder 采用不同粒度的编辑、约束或审核。精确依赖更新不能仅据这几篇未测就宣称无人研究；B3 继续暂缓。"
+    },
+    {
+      "id": "W3e",
+      "parent": "W3",
+      "route": "world",
+      "label": "世界拓展与跨层反馈",
+      "question": "新增对象、机制与制度后，如何保持已定约束，并验证生态、行动与社会之间的反馈？",
+      "before": "固定对象类型与单层机制，或将丰富设定当成演化证据",
+      "after": "分别验证表示扩展、新旧实体交互、资源账目和跨层干预传播",
+      "gap": "扩展容忍度、人工生命和社会模拟已有工作；这些局部结果没有自动构成统一世界的端到端验证。",
+      "core": [
+        "C04"
+      ],
+      "support": [
+        "C05",
+        "C06",
+        "C10",
+        "C08",
+        "C09",
+        "P145",
+        "P163",
+        "P160"
+      ],
+      "anchors": [
+        "C04",
+        "C10",
+        "P163",
+        "P145",
+        "C08"
+      ],
+      "rq_origin": "将表示拓展与跨层反馈作为综合阅读问题；下列前作分别支撑局部能力，不声称已解决全部目标"
+    },
+    {
+      "id": "W4d",
+      "after": "训练可用教师或仿真监督；测试区分不给未来答案、外部求解、给定未来轨迹。进一步检验未见规则组合与重复触发。"
+    }
+  ],
+  "papers": [
+    {
+      "id": "P015",
+      "short": "SolverLearner"
+    },
+    {
+      "id": "P150",
+      "short": "WorldCoder"
+    },
+    {
+      "id": "P145",
+      "short": "Concordia"
+    },
+    {
+      "id": "P157",
+      "short": "Exploring Exploration"
+    },
+    {
+      "id": "C04",
+      "short": "Elaboration Tolerance",
+      "scope": "外部前作 · 尚未收藏 PDF",
+      "verified": "2026-09-19",
+      "seed": "规则归纳—世界拓展的主题补充检索",
+      "depth": 1,
+      "discovery_method": "context_search",
+      "research_question": {
+        "kind": "依论文改写",
+        "text": "表示怎样容纳新现象、条件变化与概念拓展，并允许撤销默认结论？",
+        "location": "作者 Stanford 页面摘要及扩展类型说明；2003-09-29 为该网页版本时间。"
+      }
+    },
+    {
+      "id": "C05",
+      "short": "Imaginarium",
+      "scope": "外部前作 · 尚未收藏 PDF",
+      "verified": "2026-09-19",
+      "seed": "规则归纳—世界拓展的主题补充检索",
+      "depth": 1,
+      "discovery_method": "context_search",
+      "research_question": {
+        "kind": "依论文改写",
+        "text": "非程序员怎样用受限英语描述对象本体，并生成满足约束的实例？",
+        "location": "作者 PDF pp.1–2；EXAG 2019。只核查所述方法范围。"
+      }
+    },
+    {
+      "id": "C06",
+      "short": "Retcon",
+      "scope": "外部前作 · 尚未收藏 PDF",
+      "verified": "2026-09-19",
+      "seed": "规则归纳—世界拓展的主题补充检索",
+      "depth": 1,
+      "discovery_method": "context_search",
+      "research_question": {
+        "kind": "依论文改写",
+        "text": "怎样延迟确定世界设定，同时保证玩家选择的故事片段不与已定设定冲突？",
+        "location": "PDF pp.1、4–6；2022 workshop 页脚；p.8 参考文献 [17] 引用 Open-World Planning。"
+      }
+    },
+    {
+      "id": "C07",
+      "short": "PWM",
+      "scope": "外部前作 · 尚未收藏 PDF",
+      "verified": "2026-09-19",
+      "seed": "规则归纳—世界拓展的主题补充检索",
+      "depth": 1,
+      "discovery_method": "context_search",
+      "research_question": {
+        "kind": "依论文改写",
+        "text": "能否用可解释的符号贝叶斯世界模型，联合解析语言、补充解释并进行推理？",
+        "location": "ACL Anthology 官方摘要与发表记录，TACL 2022，pp.325–342。"
+      }
+    },
+    {
+      "id": "C08",
+      "short": "Emergent Social Conventions",
+      "scope": "外部前作 · 尚未收藏 PDF",
+      "verified": "2026-09-19",
+      "seed": "规则归纳—世界拓展的主题补充检索",
+      "depth": 1,
+      "discovery_method": "context_search",
+      "research_question": {
+        "kind": "依论文改写",
+        "text": "局部两两协调能否形成全局约定、集体偏差，并被坚定少数群体改变？",
+        "location": "arXiv v2 元数据与 HTML Experimental Setup；Science Advances 11, eadu9368 (2025)。"
+      }
+    },
+    {
+      "id": "C09",
+      "short": "Self-Report Agents",
+      "scope": "外部前作 · 尚未收藏 PDF",
+      "verified": "2026-09-19",
+      "seed": "规则归纳—世界拓展的主题补充检索",
+      "depth": 1,
+      "discovery_method": "context_search",
+      "research_question": {
+        "kind": "依论文改写",
+        "text": "以个体访谈或问卷构建的 agent，能否预测该个体在新问项与行为任务中的反应？",
+        "location": "arXiv 2411.10109v3 作者摘要与版本记录；2024 首版题为 Generative Agent Simulations of 1,000 People。"
+      }
+    },
+    {
+      "id": "C10",
+      "short": "Open-World Story Planning",
+      "scope": "外部前作 · 尚未收藏 PDF",
+      "verified": "2026-09-19",
+      "seed": "Retcon 参考文献 [17]",
+      "depth": 2,
+      "discovery_method": "citation_search",
+      "research_question": {
+        "kind": "依论文改写",
+        "text": "规划故事时，能否延迟决定作者未指定的初始事实，以获得可行故事？",
+        "location": "IJCAI 官方 PDF pp.1–2；由 Retcon p.8 参考文献 [17] 向后追溯。"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "C10",
+      "target": "C06",
+      "kind": "citation",
+      "change": "从按规划需要补全初态 → 对故事设定延迟承诺与约束检查",
+      "evidence": "Retcon PDF p.8 参考文献 [17] 明确列出 Riedl & Young (2005)；条件差别是本综述归纳，不表示算法直接继承。",
+      "url": "https://www.exag.org/papers/Retcon%20A%20Least-Commitment%20Story-World%20System.pdf",
+      "id": "C10-C06"
+    },
+    {
+      "source": "C05",
+      "target": "C06",
+      "kind": "comparison",
+      "change": "从约束对象生成 → 约束故事设定与片段选择",
+      "evidence": "两篇方法范围比较；本次没有核实它们之间的直接引用。",
+      "url": "https://www.exag.org/papers/Retcon%20A%20Least-Commitment%20Story-World%20System.pdf",
+      "id": "C05-C06"
+    },
+    {
+      "source": "S09",
+      "target": "C08",
+      "kind": "comparison",
+      "change": "从日常群体协调 → 受控命名博弈中的规范形成与改变",
+      "evidence": "不同任务与评价条件的并行比较；此边不声明引用继承。",
+      "url": "https://arxiv.org/abs/2410.08948v2",
+      "id": "S09-C08"
+    },
+    {
+      "source": "C08",
+      "target": "C09",
+      "kind": "comparison",
+      "change": "从群体约定涌现 → 真实个体的留出行为预测",
+      "evidence": "群体机制与个体预测是不同验证目标；此边只用于对照。",
+      "url": "https://arxiv.org/abs/2411.10109v3",
+      "id": "C08-C09"
+    },
+    {
+      "source": "P163",
+      "target": "C08",
+      "kind": "comparison",
+      "change": "从人工生命底层涌现 → 语言 agent 的社会协调",
+      "evidence": "底层规则、主体和评价目标不同；相似的涌现表述不能互相替代验证。",
+      "url": "https://arxiv.org/abs/2410.08948v2",
+      "id": "P163-C08"
+    }
+  ],
+  "lanes": [
+    {
+      "route": "world",
+      "rq": "W1e",
+      "title": "不完备世界已有直接前作：初态与设定的延迟承诺",
+      "papers": [
+        "C10",
+        "C06"
+      ]
+    },
+    {
+      "route": "world",
+      "rq": "W1e",
+      "title": "约束对象与约束叙事：能力范围对照",
+      "papers": [
+        "C05",
+        "C06"
+      ]
+    },
+    {
+      "route": "world",
+      "rq": "W3c",
+      "title": "社会模拟的不同证据：协调、规范与个体预测",
+      "papers": [
+        "S09",
+        "C08",
+        "C09"
+      ]
+    },
+    {
+      "route": "world",
+      "rq": "W3e",
+      "title": "局部涌现的两类条件：人工生命与社会约定",
+      "papers": [
+        "P163",
+        "C08"
+      ]
+    }
+  ],
+  "methodology": [
+    "世界构建补充区分主题检索与引用滚雪球：C04–C09 为主题补充，C10 由 Retcon 参考文献 [17] 向后追溯。新增 W1e、W3e 是综合组织分支，不是某篇原文的统一命名。"
+  ]
+}
