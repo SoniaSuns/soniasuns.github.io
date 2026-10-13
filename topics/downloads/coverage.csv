@@ -9,7 +9,7 @@ P008,Visual Abductive Reasoning,Base paper,Base paper,B1,1,https://arxiv.org/abs
 P009,Breaking Common Sense: WHOOPS! A Vision-and-Language Benchmark of Synthetic and Compositional Images,Base paper,Base paper,B1,1,https://arxiv.org/abs/2303.07274v4
 P010,Visual Writing Prompts: Character-Grounded Story Generation with Curated Image Sequences,Base paper,Base paper,B4,1,https://arxiv.org/abs/2301.08571v1
 P011,Reasoning or Reciting? Exploring the Capabilities and Limitations of Language Models Through Counterfactual Tasks,Base paper,Base paper,B2,1,https://arxiv.org/abs/2307.02477v3
-P012,Reflexion: Language Agents with Verbal Reinforcement Learning,Method paper,Method paper,M1,1,https://github.com/noahshinn/reflexion)；2026-09-16核验维护者仓库。原摘要中的旧地址作为历史文字保留。
+P012,Reflexion: Language Agents with Verbal Reinforcement Learning,Method paper,Method paper,M1,1,https://github.com/noahshinn/reflexion
 P013,Sequential Modeling Enables Scalable Learning for Large Vision Models,Method paper,Method paper,M7,1,https://arxiv.org/abs/2312.00785v1
 P015,Inductive or Deductive? Rethinking the Fundamental Reasoning Abilities of LLMs,Method paper,Method paper,M6,1,https://arxiv.org/abs/2408.00114v2
 P016,DIVE: Towards Descriptive and Diverse Visual Commonsense Generation,Method paper,Method paper,M6,1,https://arxiv.org/abs/2408.08021v1
@@ -24,7 +24,7 @@ P024,Nested Learning: The Illusion of Deep Learning Architecture,Base paper,Base
 P027,VCD: A Dataset for Visual Commonsense Discovery in Images,Base paper,Base paper,B1,1,https://arxiv.org/abs/2402.17213v2
 P028,Video models are zero-shot learners and reasoners,Base paper,Base paper,B1,1,https://arxiv.org/abs/2509.20328v2
 P029,VideoDiff: Human-AI Video Co-Creation with Alternatives,Application paper,HCI,H3,1,https://doi.org/10.1145/3706598.3713417
-P030,AbductiveMLLM: Boosting Visual Abductive Reasoning Within MLLMs,Method paper,Method paper,M6,1,https://arxiv.org/abs/2601.02771v1)；[DOI正式记录
+P030,AbductiveMLLM: Boosting Visual Abductive Reasoning Within MLLMs,Method paper,Method paper,M6,1,https://arxiv.org/abs/2601.02771v1
 P031,Agentic Reasoning for Large Language Models,Base paper,Base paper,B3,1,https://arxiv.org/abs/2601.12538v1
 P032,"Autoregressive, Yet Revisable: In Decoding Revision for Secure Code Generation",Method paper,Method paper,M2,1,https://arxiv.org/abs/2602.01187v2
 P033,Gen-Searcher: Reinforcing Agentic Search for Image Generation,Application paper,AIGC,G2,1,https://arxiv.org/abs/2603.28767v2
@@ -34,7 +34,7 @@ P036,SimStep: Human-in-the-Loop Authoring of Interactive Educational Simulations
 P037,SLM-MUX: Orchestrating Small Language Models for Reasoning,Method paper,Method paper,M6,1,https://arxiv.org/abs/2510.05077
 P038,"“I’m Not Sure, But...”: Examining the Impact of Large Language Models’ Uncertainty Expression on User Reliance and Trust",Application paper,HCI,H2,1,https://doi.org/10.1145/3630106.3658941
 P039,Make-a-Story: Visual Memory Conditioned Consistent Story Generation,Application paper,AIGC,G2,1,https://github.com/ubc-vision/Make-A-Story
-P040,Collaposer: Transforming Photo Collections into Visual Assets for Storytelling with Collages,Application paper,HCI,H3,1,https://arxiv.org/abs/2601.18428v1)；[DOI正式记录
+P040,Collaposer: Transforming Photo Collections into Visual Assets for Storytelling with Collages,Application paper,HCI,H3,1,https://arxiv.org/abs/2601.18428v1
 P041,Learning to Complement Humans,Method paper,Method paper,M1,1,https://arxiv.org/abs/2005.00582v1
 P042,LLMs Struggle to Balance Reasoning and World Knowledge in Causal Narrative Understanding,Base paper,Base paper,B2,2,https://openreview.net/pdf/171146600ae3d44c55031ab5bcc202e937ad640e.pdf
 P043,LLMs Struggle to Perform Counterfactual Reasoning with Parametric Knowledge,Base paper,Base paper,B2,1,https://arxiv.org/abs/2506.15732
@@ -49,7 +49,7 @@ P052,Valid Inference with Imperfect Synthetic Data,Method paper,Method paper,M5,
 P053,Superhuman performance of a large language model on the reasoning tasks of a physician,Base paper,Base paper,B1,1,https://doi.org/10.1126/science.adz4433
 P054,Melding the Data-Decisions Pipeline: Decision-Focused Learning for Combinatorial Optimization,Method paper,Method paper,M5,1,https://arxiv.org/abs/1809.05504
 P055,Principles of Mixed-Initiative User Interfaces,Application paper,HCI,H1,1,https://www.microsoft.com/en-us/research/publication/principles-mixed-initiative-user-interfaces/
-P056,Vibe Coding XR: Accelerating AI + XR Prototyping with XR Blocks and Gemini,Application paper,HCI,H4,1,https://xrblocks.github.io/gem)；[代码：google/xrblocks
+P056,Vibe Coding XR: Accelerating AI + XR Prototyping with XR Blocks and Gemini,Application paper,HCI,H4,1,https://xrblocks.github.io/gem
 P057,Thing2Reality: Enabling Spontaneous Creation of 3D Objects from 2D Content using Generative AI in XR Meetings,Application paper,HCI,H4,1,https://doi.org/10.1145/3746059.3747621
 P058,How Well Can 3D Accessibility Guidelines Support XR Development? An Interview Study with XR Practitioners in Industry,Application paper,HCI,H4,1,https://doi.org/10.1145/3772318.3790520
 P059,Sensible Agent: A Framework for Unobtrusive Interaction with Proactive AR Agents,Application paper,HCI,H1,1,https://doi.org/10.1145/3746059.3747748
@@ -117,7 +117,7 @@ P098,First Logit Boosting: Visual Grounding Method to Mitigate Object Hallucinat
 P099,VGS-Decoding: Visual Grounding Score Guided Decoding for Hallucination Mitigation in Medical VLMs,Method paper,Method paper,M4,1,https://arxiv.org/abs/2603.20314v1
 P100,When Thinking Drifts: Evidential Grounding for Robust Video Reasoning,Method paper,Method paper,M4,1,https://arxiv.org/abs/2510.06077
 P101,Computational Understanding of Narratives: A Survey,Base paper,Base paper,B3,1,https://doi.org/10.1109/ACCESS.2022.3205314
-P161,Learning Long-form Movie Prior via Large Language Models,Application paper,AIGC,G2,1,https://doi.org/10.1109/TPAMI.2026.3729756)；[作者发表列表
+P161,Learning Long-form Movie Prior via Large Language Models,Application paper,AIGC,G2,1,https://doi.org/10.1109/TPAMI.2026.3729756
 P103,Training Large Language Models to Reason in a Continuous Latent Space,Method paper,Method paper,M6,1,https://arxiv.org/abs/2412.06769v3
 P165,VIMA: General Robot Manipulation with Multimodal Prompts,Method paper,Method paper,M3,1,https://arxiv.org/abs/2210.03094
 P168,MimicPlay: Long-Horizon Imitation Learning by Watching Human Play,Method paper,Method paper,M3,1,https://arxiv.org/abs/2302.12422
@@ -351,7 +351,7 @@ P391,AdaJEPA: An Adaptive Latent World Model,Method paper,Method paper,M3,1,http
 P395,Patch Policy: Efficient Embodied Control via Dense Visual Representations,Method paper,Method paper,M3,1,https://arxiv.org/abs/2607.18236
 P397,LpWM: A Case for Sparse Representations in World Models,Base paper,Base paper,B2,1,https://arxiv.org/abs/2608.22764
 P399,LeVJEPA: Efficient & Scalable Video Pretraining without the Heuristics,Method paper,Method paper,M7,1,https://arxiv.org/abs/2608.27395
-P104,Reasoning with Language Model is Planning with World Model,Method paper,Method paper,M6,1,https://github.com/maitrix-org/llm-reasoners)；2026-09-16核验现仓库，README列有本论文及其Reasoning-via-Planning实现。
+P104,Reasoning with Language Model is Planning with World Model,Method paper,Method paper,M6,1,https://github.com/maitrix-org/llm-reasoners
 P105,"New Evaluation, Library, and Analysis of Step-by-Step Reasoning with Large Language Models",Base paper,Base paper,B1,1,https://arxiv.org/abs/2404.05221v2
 P106,Pandora: Towards General World Model with Natural Language Actions and Video States,Application paper,AIGC,G4,1,https://world-model.ai
 P107,Offline Reinforcement Learning for LLM Multi-step Reasoning,Method paper,Method paper,M2,1,https://aclanthology.org/2025.findings-acl.464/
