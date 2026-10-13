@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN">
 <head><link rel="canonical" href="https://soniasuns.github.io/topics/"><meta name="description" content="HCI、XR tutorial、AIGC、Method 与 Base：25 个主题 overview、451 条论文速览及研究假设。"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>修订版 3｜全库方向、Base 与 Method Overview</title><link rel="stylesheet" href="assets/style.css"></head>
+<title>修订版 3｜全库方向、Base 与 Method Overview</title><link rel="stylesheet" href="static/style.css"></head>
 <body>
 <header><p class="site-links"><a href="/">Yusi Sun · 首页</a> · <a href="/literature-review/">文献研究主页</a></p>
   <div class="eyebrow">RESEARCH LIBRARY · 修订版 3 · 2026-10-13</div>
@@ -387,7 +387,7 @@
       <p class="note">主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。</p><p><a class="overview-backlink" href="#overview-M1">返回 M1 主题 Overview ↑</a></p>
       <p><b>① 做了什么</b> 让语言智能体把失败反馈总结成文字反思，并在后续尝试中利用记忆改进决策。</p><p><b>② 贡献</b> 提出 actor—evaluator—self-reflection 框架，以语言记忆实现跨尝试改进。</p><p><b>③ 边界</b> 不更新模型参数；依赖可重复尝试、可获得反馈的环境，所谓 verbal RL 与梯度训练式 RL 不同。</p><p>XR 支撑方向：<a class="ref" href="#XR-E">XR-E</a></p><p>共享方法接口：<a class="ref" href="#F1">F1</a></p>
       <details><summary>方法、研究建议与证据定位</summary><p><b>方法</b> 执行任务后由外部或内部评价器给出反馈，生成反思并写入有限情节记忆，下次提示时检索/拼接；在 ALFWorld、HotpotQA 和代码任务验证。</p><p><b>既有研究建议</b> 【topic 层候选方向】哪些反馈应沉淀为可迁移知识，哪些应只用于当前作品修复？</p><p><b>结果记录</b> 论文报告 HumanEval 91% pass@1，相较引用的 GPT-4 80%；该数值来自允许反馈与迭代的完整协议，不能等同无反馈单次生成准确率。</p><p><b>证据定位</b> 摘要；§3；§4.3；局限 §5。</p><p class="muted">本轮重新分类；摘要、方法及边界沿用既有笔记，附本地原文供复核 </p></details>
-      <a class="public-paper-link" href="https://github.com/noahshinn/reflexion)；2026-09-16核验维护者仓库。原摘要中的旧地址作为历史文字保留。" target="_blank" rel="noopener noreferrer">打开作者项目／代码 ↗</a>
+      <a class="public-paper-link" href="https://github.com/noahshinn/reflexion" target="_blank" rel="noopener noreferrer">打开作者项目／代码 ↗</a>
     </article><article class="paper panel" id="paper-P013" data-type="Method paper" data-category="Method paper" data-topic="M7" data-xr="" data-search="p013 p013 sequential modeling enables scalable learning for large vision models 把图像、视频和视觉标注统一为视觉句子，使用下一 token 预测训练无需语言输入的大视觉模型。 构建统一视觉序列表示并展示多任务视觉提示和模型/数据扩展趋势。 任务由示例图像定义，输出为视觉 token；训练与评价不证明任意视觉任务均能零样本解决。 自监督表征、jepa 与 tokenizer yutong bai; xinyang geng; karttikeya mangalam; amir bar; alan yuille; trevor darrell; jitendra malik; alexei a. efros">
       <div class="eyebrow">P013 · Method paper · Method paper / M7</div>
       <h3>Sequential Modeling Enables Scalable Learning for Large Vision Models</h3><p class="muted">2024 / 2023 · Yutong Bai; Xinyang Geng; Karttikeya Mangalam; Amir Bar; Alan Yuille; Trevor Darrell; Jitendra Malik; Alexei A. Efros</p>
@@ -492,7 +492,7 @@
       <p class="note">主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。</p><p><a class="overview-backlink" href="#overview-M6">返回 M6 主题 Overview ↑</a></p>
       <p><b>① 做了什么</b> 结合语言假设筛选与图像想象，增强多模态模型对缺失视觉事件的溯因推理。</p><p><b>② 贡献</b> REASONER 与 IMAGINER 双模块联合学习：前者筛选假设，后者用扩散视觉表示辅助解释。</p><p><b>③ 边界</b> 标准 VAR 任务中的解释生成；想象画面属于条件生成，不能作为对真实隐藏事件的新观测证据。</p><p>XR 支撑方向：未列入四方向核心支撑链</p>
       <details><summary>方法、研究建议与证据定位</summary><p><b>方法</b> LLM 根据视频描述提出候选，经因果相关对比学习筛选；条件扩散模块通过适配器融合视频和推理表示，联合优化语言与图像分支。</p><p><b>既有研究建议</b> 【topic 层候选方向】将竞争假设、可获取证据和可执行状态分开，能否避免把想象结果误当作事实并提升受约束生成？</p><p><b>结果记录</b> 作者在标准 VAR 基准报告优于所列传统模型和 MLLM；消融显示去掉 IMAGINER 或其适配器会降低 CIDEr 等生成指标。</p><p><b>证据定位</b> 摘要；REASONER/IMAGINER 方法；实验表格；表6及结论。</p><p class="muted">本轮重新分类；摘要、方法及边界沿用既有笔记，附本地原文供复核 </p></details>
-      <a class="public-paper-link" href="https://arxiv.org/abs/2601.02771v1)；[DOI正式记录" target="_blank" rel="noopener noreferrer">打开论文公开页面 ↗</a>
+      <a class="public-paper-link" href="https://arxiv.org/abs/2601.02771v1" target="_blank" rel="noopener noreferrer">打开论文公开页面 ↗</a>
     </article><article class="paper panel" id="paper-P031" data-type="Base paper" data-category="Base paper" data-topic="B3" data-xr="" data-search="p031 p031 agentic reasoning for large language models 系统梳理将推理与行动连接的语言智能体研究，覆盖基础能力、自我演化和多智能体协作。 按环境动态、优化方式与协作范围组织统一分类及应用/基准地图。 135 页综述，正文说明汇总截至 2025 年的进展；没有训练或统一重测一个新模型。 综述、概念框架与评价立场 tianxin wei; ting-wei li; zhining liu; xuying ning; ze yang; jiaru zou; zhichen zeng; ruizhong qiu; xiao lin; dongqi fu; zihao li; mengting ai; duo zhou; wenxuan bao; yunzhe li; gaotang li; cheng qian; yu wang; xiangru tang; yin xiao; liri fang; hui liu; xianfeng tang; yuji zhang; chi wang; jiaxuan you; heng ji; hanghang tong; jingrui he">
       <div class="eyebrow">P031 · Base paper · Base paper / B3</div>
       <h3>Agentic Reasoning for Large Language Models</h3><p class="muted">2026 · Tianxin Wei; Ting-Wei Li; Zhining Liu; Xuying Ning; Ze Yang; Jiaru Zou; Zhichen Zeng; Ruizhong Qiu; Xiao Lin; Dongqi Fu; Zihao Li; Mengting Ai; Duo Zhou; Wenxuan Bao; Yunzhe Li; Gaotang Li; Cheng Qian; Yu Wang; Xiangru Tang; Yin Xiao; Liri Fang; Hui Liu; Xianfeng Tang; Yuji Zhang; Chi Wang; Jiaxuan You; Heng Ji; Hanghang Tong; Jingrui He</p>
@@ -562,7 +562,7 @@
       <p class="note">核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。</p><p><a class="overview-backlink" href="#overview-H3">返回 H3 主题 Overview ↑</a></p>
       <p><b>① 做了什么</b> Collaposer 根据故事描述从照片集合中提取和组织可用于拼贴的视觉素材。</p><p><b>② 贡献</b> 把自动标注/检测/分割与故事驱动的语义选择、分层聚类展示结合。</p><p><b>③ 边界</b> 从输入照片提取切图并由用户构图；动画属于演示延伸，不是自主生成完整视频故事。</p><p>XR 支撑方向：未列入四方向核心支撑链</p>
       <details><summary>方法、研究建议与证据定位</summary><p><b>方法</b> 6 名专家形成性访谈；流水线预处理照片，LLM 选择中心及相关标签，再按语义层次布局；12 人与两种消融基线被试内比较。</p><p><b>既有研究建议</b> 【topic 层候选方向】带依赖与来源的编辑界面能否减少反复生成，同时提高作者意图的保留程度？</p><p><b>结果记录</b> 12 人共创作 36 个静态拼贴故事、尝试 45 个提示；使用完整系统均一次获得可用素材集，故事匹配、多样性和可用性评价优于消融。</p><p><b>证据定位</b> §3；§4；§6–7；§9。</p><p class="muted">本轮重新分类；摘要、方法及边界沿用既有笔记，附本地原文供复核 </p></details>
-      <a class="public-paper-link" href="https://arxiv.org/abs/2601.18428v1)；[DOI正式记录" target="_blank" rel="noopener noreferrer">打开论文公开页面 ↗</a>
+      <a class="public-paper-link" href="https://arxiv.org/abs/2601.18428v1" target="_blank" rel="noopener noreferrer">打开论文公开页面 ↗</a>
     </article><article class="paper panel" id="paper-P041" data-type="Method paper" data-category="Method paper" data-topic="M1" data-xr="" data-search="p041 p041 learning to complement humans 联合训练预测模型和求助策略，以人机团队的整体效用而非机器独立准确率为目标。 提出判别式及决策论式的联合优化，显式利用人类与机器错误模式的互补。 galaxy zoo 和 camelyon 的离线人类标注数据；交互主要为是否查询一个人类答案。 agent 规划、工具、澄清与经验 bryan wilder; eric horvitz; ece kamar">
       <div class="eyebrow">P041 · Method paper · Method paper / M1</div>
       <h3>Learning to Complement Humans</h3><p class="muted">2020 · Bryan Wilder; Eric Horvitz; Ece Kamar</p>
@@ -667,7 +667,7 @@
       <p class="note">核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。</p><p><a class="overview-backlink" href="#overview-H4">返回 H4 主题 Overview ↑</a></p>
       <p><b>① 做了什么</b> 通过XR Blocks的高层空间交互API与Gemini，将自然语言需求生成可运行WebXR原型，并提供60条提示的初步技术评测。</p><p><b>② 贡献</b> 整合提示、代码生成、人工检查与即时XR运行的工作流；发布XR Blocks及VCXR60试点任务。</p><p><b>③ 边界</b> 60提示来自20人四次工作坊；pass@1仅指桌面模拟器无运行错误，不衡量视觉质量、需求满足或真机交互正确性。“一分钟内”不是所有配置的结果。</p><p>XR 支撑方向：未列入四方向核心支撑链</p>
       <details><summary>方法、研究建议与证据定位</summary><p><b>方法</b> Reality Model封装用户、物理场景、感知/交互组件；Gemini生成脚本；XR Blocks v0.11.0通过Playwright无头Chromium监控错误，四种配置各运行5轮。</p><p><b>既有研究建议</b> 将“可运行”拆成运行无错、空间交互正确、教学步骤正确，在真机上测生成原型的完整任务完成。</p><p><b>结果记录</b> 表1：Gemini3.1Pro高思考pass@1=95.5%，时间中位86.02秒；低思考94.1%/33.39秒；3Flash高87.8%/22.26秒、低87.4%/17.30秒。每条提示5次中至少一次无错误。</p><p><b>证据定位</b> PDF pp.3–5：框架、表1及§4–5。</p><p class="muted">本轮核对摘要／首页，既有方法及数值未全部重验 </p></details>
-      <a class="public-paper-link" href="https://xrblocks.github.io/gem)；[代码：google/xrblocks" target="_blank" rel="noopener noreferrer">打开作者项目／代码 ↗</a>
+      <a class="public-paper-link" href="https://xrblocks.github.io/gem" target="_blank" rel="noopener noreferrer">打开作者项目／代码 ↗</a>
     </article><article class="paper panel" id="paper-P057" data-type="Application paper" data-category="HCI" data-topic="H4" data-xr="" data-search="p057 p057 thing2reality: enabling spontaneous creation of 3d objects from 2d content using generative ai in xr meetings 在远程xr会议中把物理物体、网页图片转成可共同操作的3d表示，并在3d对象与2d白板快照间切换，支持即时讨论。 实现thing2reality的物体级2d→3d→2d交互链，研究多种表示在协作不同阶段的互补用途。 生成的是条件多视图/3d gaussian近似表示，不保证精确几何、尺寸或不可见表面；研究为探索性原型评估，未设置2d屏幕共享基线。 xr 开发、协作与无障碍 erzhen hu, mingyi li, jungtaek hong, xun qian, alex olwal, david kim, seongkook heo, and ruofei du">
       <div class="eyebrow">P057 · Application paper · HCI / H4</div>
       <h3>Thing2Reality: Enabling Spontaneous Creation of 3D Objects from 2D Content using Generative AI in XR Meetings</h3><p class="muted">2025 · Erzhen Hu, Mingyi Li, Jungtaek Hong, Xun Qian, Alex Olwal, David Kim, Seongkook Heo, and Ruofei Du</p>
@@ -1143,7 +1143,7 @@
       <p class="note">原问题直接面向视觉内容生成、编辑、三维资产或创作；所用算法仍可作为其它场景的技术支撑。</p><p><a class="overview-backlink" href="#overview-G2">返回 G2 主题 Overview ↑</a></p>
       <p><b>① 做了什么</b> 将电影中的剧本、人物身份、站位、动作和场景物体表示为可离散化的文本与空间坐标序列，使用LLaMA的下一token预测学习联合分镜先验，再通过指令微调从简短创意生成分镜。提出Storyboard20K，为跨镜头身份、边界框与全身关键点提供细粒度标注；生成结果可作为可控图像模型的布局条件，辅助视觉叙事创作。</p><p><b>② 贡献</b> 构建来自MovieNet与LSMDC的20,310个分镜、149,528个关键帧，覆盖约400部电影；标注约319K人物框、180K场景物体框、跨帧一致身份及全身关键点，并提供GPT-4生成的标题、类型、情绪、场景和短摘要。将script、objects、main characters统一编码为JSON形式的token序列，以LLaMA-3/3.2的1B、3B、8B模型学习结构化电影先验。</p><p><b>③ 边界</b> 核心输出是剧本文本、边界框和关键点组成的稀疏分镜，不是直接生成连续像素视频。数据通常每个分镜3–10个关键帧，源片段平均33.9秒；不能据此声称已验证整部长电影的长期一致性。ROICtrl等现成图像模型用于可视化。人物身份与布局连贯不等于已学得可执行的因果世界模型；论文没有验证世界规则编辑、物理干预或规则修改后的依赖更新。</p><p>XR 支撑方向：未列入四方向核心支撑链</p>
       <details><summary>方法、研究建议与证据定位</summary><p><b>方法</b> 先用检测、姿态估计和人脸识别自动标注，再由7名标注者校准人物身份、框、关键点及开放类别场景物体，并进行多轮复核。将连续坐标量化到m个整数区间，与文本共同tokenize；大于96×96像素面积的人物用98个全身关键点，否则用17个关键点或边界框。预训练时随机交换script、objects、main characters的顺序，以最大似然学习联合分布；随后把概括性标注作为指令、剧本和空间标注作为回答进行微调。训练/testA/testB分别为18,207/905/1,198个分镜，testA使用概括描述，testB使用逐镜头描述。对照商业模型获得2个上下文示例。</p><p><b>既有研究建议</b> 【topic 层候选方向】能否分别维护事件状态、角色信念和镜头信息，使叙事修改只传播到相关内容？</p><p><b>结果记录</b> Table 3中8B模型在testA/testB的布局FID为4.05/17.72，3B为4.35/16.86，对照Gemini-Pro为8.53/22.30、GPT-3.5-turbo为23.08/35.14；FID由训练的布局分类器特征计算，且这里只评估边界框，不是生成图像/视频的画质FID，也不是关键点精度。Table 2中8B的ROUGE-L为19.1/19.6，GPT-3.5为20.4/17.6，说明文本指标并非全面领先。Table 4中8B的指令遵循/关键帧变化/时间连贯评分为7.27/7.68/7.83（0–10分），GPT-4o为7.91/6.06/6.42；8B获得68%的首选比例，Gemini-Pro/GPT-4/GPT-4o分别为7%/13%/12%。68%是该人工比较中的偏好比例，不是任务准确率。</p><p><b>证据定位</b> PDF p.1：题名、3位作者、DOI和已接收作者稿声明；pp.3–4 §3及Table 1：20,310分镜、149,528帧、约400电影、平均33.9秒、标注流程；p.5 §4：坐标离散化、98/17关键点与两阶段学习；p.6 Fig.5、§5.1及Tables 2–3：数据划分、两示例对照、文本指标与布局FID；pp.6–7 §5.3及Table 4：人工评价和68%偏好率；p.8 Fig.6：ROICtrl可视化。资源状态另核对作者主页、官方仓库及arXiv旧版记录（2026-09-16）。</p><p class="muted">本轮重新分类；摘要、方法及边界沿用既有笔记，附本地原文供复核 </p></details>
-      <a class="public-paper-link" href="https://doi.org/10.1109/TPAMI.2026.3729756)；[作者发表列表" target="_blank" rel="noopener noreferrer">打开论文公开页面 ↗</a>
+      <a class="public-paper-link" href="https://doi.org/10.1109/TPAMI.2026.3729756" target="_blank" rel="noopener noreferrer">打开论文公开页面 ↗</a>
     </article><article class="paper panel" id="paper-P103" data-type="Method paper" data-category="Method paper" data-topic="M6" data-xr="" data-search="p103 p103 training large language models to reason in a continuous latent space coconut把llm最后隐状态直接作为下一个输入embedding，在连续潜空间进行中间推理，以课程训练逐步取代文本cot。 chain of continuous thought架构及课程，展示某些任务中潜状态可同时容纳备选路径的行为。 以小模型和合成逻辑/数学任务验证，潜状态类似bfs的观察不等于通用、严格或无限宽搜索；数学表现仍低于文本cot。 迭代、潜空间与组合推理 shibo hao; sainbayar sukhbaatar; dijia su; xian li; zhiting hu; jason weston; yuandong tian">
       <div class="eyebrow">P103 · Method paper · Method paper / M6</div>
       <h3>Training Large Language Models to Reason in a Continuous Latent Space</h3><p class="muted">2025 · Shibo Hao; Sainbayar Sukhbaatar; DiJia Su; Xian Li; Zhiting Hu; Jason Weston; Yuandong Tian</p>
@@ -2781,7 +2781,7 @@
       <p class="note">主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。</p><p><a class="overview-backlink" href="#overview-M6">返回 M6 主题 Overview ↑</a></p>
       <p><b>① 做了什么</b> RAP让LLM分别提出推理动作和预测状态变化，再用蒙特卡洛树搜索规划较高价值的推理路径。</p><p><b>② 贡献</b> 统一推理为规划，将LLM世界模型和MCTS用于积木规划、数学及逻辑任务。</p><p><b>③ 边界</b> 世界模型是语言预测状态，不是真实环境模拟器；搜索增加多次模型调用，效果受转移/奖励错误限制。</p><p>XR 支撑方向：未列入四方向核心支撑链</p>
       <details><summary>方法、研究建议与证据定位</summary><p><b>方法</b> 定义状态、动作和奖励，MCTS选择/扩展/回传，LLM模拟后果并评估中间收益，输出一个选定计划。</p><p><b>既有研究建议</b> 【topic 层候选方向】将竞争假设、可获取证据和可执行状态分开，能否避免把想象结果误当作事实并提升受约束生成？</p><p><b>结果记录</b> Blocksworld RAP20在2/4/6步任务成功率1.00/0.88/0.42，GPT4-CoT0.50/0.63/0.40；6步优势很小，33%相对提升是特定汇总口径，不代表每项。</p><p><b>证据定位</b> PDF §2–4、表1、Limitations p.10。</p><p class="muted">本轮重新分类；摘要、方法及边界沿用既有笔记，附本地原文供复核 </p></details>
-      <a class="public-paper-link" href="https://github.com/maitrix-org/llm-reasoners)；2026-09-16核验现仓库，README列有本论文及其Reasoning-via-Planning实现。" target="_blank" rel="noopener noreferrer">打开作者项目／代码 ↗</a>
+      <a class="public-paper-link" href="https://github.com/maitrix-org/llm-reasoners" target="_blank" rel="noopener noreferrer">打开作者项目／代码 ↗</a>
     </article><article class="paper panel" id="paper-P105" data-type="Base paper" data-category="Base paper" data-topic="B1" data-xr="" data-search="p105 p105 new evaluation, library, and analysis of step-by-step reasoning with large language models 提出自动生成任务特定评价标准的autorace与统一搜索、奖励、世界模型组件的llm reasoners库，系统比较多步推理策略。 推理链自动评测、模块化库与搜索因素实验分析。 autorace以gpt4为评判者，自动不等于无误；评判是否符合标准，不保证推理链忠实反映内部过程。 能力诊断与评测基准 shibo hao; yi gu; haotian luo; tianyang liu; xiyan shao; xinyuan wang; shuhua xie; haodi ma; adithya samavedhi; qiyue gao; zhen wang; zhiting hu">
       <div class="eyebrow">P105 · Base paper · Base paper / B1</div>
       <h3>New Evaluation, Library, and Analysis of Step-by-Step Reasoning with Large Language Models</h3><p class="muted">2024 · Shibo Hao; Yi Gu; Haotian Luo; Tianyang Liu; Xiyan Shao; Xinyuan Wang; Shuhua Xie; Haodi Ma; Adithya Samavedhi; Qiyue Gao; Zhen Wang; Zhiting Hu</p>
@@ -3488,5 +3488,5 @@
   </section>
   <footer>论文事实、综述推断与研究假设分别记录 · 论文链接指向出版记录、预印本或作者项目。</footer>
 </main>
-<script src="assets/reader.js"></script>
+<script src="static/reader.js"></script>
 </body></html>

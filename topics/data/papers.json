@@ -297,7 +297,7 @@
       "F1"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
-    "public_url": "https://github.com/noahshinn/reflexion)；2026-09-16核验维护者仓库。原摘要中的旧地址作为历史文字保留。",
+    "public_url": "https://github.com/noahshinn/reflexion",
     "link_label": "打开作者项目／代码 ↗"
   },
   {
@@ -710,7 +710,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
-    "public_url": "https://arxiv.org/abs/2601.02771v1)；[DOI正式记录",
+    "public_url": "https://arxiv.org/abs/2601.02771v1",
     "link_label": "打开论文公开页面 ↗"
   },
   {
@@ -983,7 +983,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
-    "public_url": "https://arxiv.org/abs/2601.18428v1)；[DOI正式记录",
+    "public_url": "https://arxiv.org/abs/2601.18428v1",
     "link_label": "打开论文公开页面 ↗"
   },
   {
@@ -1401,7 +1401,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
-    "public_url": "https://xrblocks.github.io/gem)；[代码：google/xrblocks",
+    "public_url": "https://xrblocks.github.io/gem",
     "link_label": "打开作者项目／代码 ↗"
   },
   {
@@ -3274,7 +3274,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
-    "public_url": "https://doi.org/10.1109/TPAMI.2026.3729756)；[作者发表列表",
+    "public_url": "https://doi.org/10.1109/TPAMI.2026.3729756",
     "link_label": "打开论文公开页面 ↗"
   },
   {
@@ -9616,7 +9616,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
-    "public_url": "https://github.com/maitrix-org/llm-reasoners)；2026-09-16核验现仓库，README列有本论文及其Reasoning-via-Planning实现。",
+    "public_url": "https://github.com/maitrix-org/llm-reasoners",
     "link_label": "打开作者项目／代码 ↗"
   },
   {
