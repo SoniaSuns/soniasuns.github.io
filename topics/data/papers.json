@@ -23,6 +23,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/1810.02890v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -50,6 +51,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/1908.05739v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -77,6 +79,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2112.09332v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -104,6 +107,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://github.com/zeyofu/TARA",
     "link_label": "打开作者项目／代码 ↗"
   },
@@ -131,6 +135,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2206.15448v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -158,6 +163,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/5263_ECCV_2022_paper.php",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -185,6 +191,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2203.14040v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -212,6 +219,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2303.07274v4",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -239,6 +247,16 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [
+      {
+        "target": "P010",
+        "source": "VG14",
+        "kind": "数据集结构评价",
+        "location": "PDF p.14，Appendix 与 Table A1",
+        "statement": "StoryBlender 在对照 CineBoard3D 时指出，包含 VWP 的 VinaBench 及其组成子集没有显式解耦场景和镜头，环境元素主要依赖自由文本，因此不直接具备其 3D 预可视化所需的结构化资产登记。",
+        "boundary": "这是针对 3D 引擎预可视化的数据结构要求，评价覆盖 VinaBench 及其子集；不是对 VWP 原有角色驱动文本故事任务的否定。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2301.08571v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -266,6 +284,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2307.02477v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -297,6 +316,16 @@
       "F1"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [
+      {
+        "target": "P012",
+        "source": "VG02",
+        "kind": "实验比较",
+        "location": "PDF pp.7–8，探索、技术树与迁移实验",
+        "statement": "VOYAGER 作者报告，Reflexion 在其 Minecraft 开放探索设置中难以持续取得进展，并将原因联系到抽象探索目标缺少合适课程；在重置世界后的新任务测试中也未能在给定预算内解决任务。",
+        "boundary": "针对 VOYAGER 所实现的 Minecraft 基线和提示预算，不代表 Reflexion 在语言推理或代码任务中的效果；结果由比较论文报告。"
+      }
+    ],
     "public_url": "https://github.com/noahshinn/reflexion",
     "link_label": "打开作者项目／代码 ↗"
   },
@@ -324,6 +353,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2312.00785v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -351,6 +381,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2408.00114v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -378,6 +409,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2408.08021v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -405,6 +437,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2401.03183v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -432,6 +465,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2406.11179v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -459,6 +493,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2410.02613v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -486,6 +521,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2310.05872v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -515,6 +551,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://blackswan.cs.ubc.ca",
     "link_label": "打开作者项目／代码 ↗"
   },
@@ -544,6 +581,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2507.17131v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -571,6 +609,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2510.20607v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -602,6 +641,7 @@
       "F4"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.24695v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -629,6 +669,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2402.17213v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -656,6 +697,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2509.20328v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -683,6 +725,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1145/3706598.3713417",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -710,6 +753,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2601.02771v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -737,6 +781,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2601.12538v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -764,6 +809,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.01187v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -791,6 +837,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.28767v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -818,6 +865,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2505.08140v5",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -845,6 +893,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.01756v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -875,6 +924,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1145/3772318.3791514",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -902,6 +952,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2510.05077",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -929,6 +980,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1145/3630106.3658941",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -956,6 +1008,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://github.com/ubc-vision/Make-A-Story",
     "link_label": "打开作者项目／代码 ↗"
   },
@@ -983,6 +1036,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2601.18428v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1012,6 +1066,7 @@
       "F3"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2005.00582v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1040,6 +1095,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://openreview.net/pdf/171146600ae3d44c55031ab5bcc202e937ad640e.pdf",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1067,6 +1123,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2506.15732",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1096,6 +1153,7 @@
       "F3"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2406.01933v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1123,6 +1181,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2505.20634v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1150,6 +1209,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://cispa.de/en/research/publications/104502-can-llms-propose-instrumental-variables-for-causal-reasoning-",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1179,6 +1239,7 @@
       "F3"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/0c6b452f1bbfb6905f6bac957d73b321-Abstract-Conference.html",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1208,6 +1269,7 @@
       "F3"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2203.16067",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1237,6 +1299,7 @@
       "F3"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://github.com/maitreyiswaroop/dro-feature-selection",
     "link_label": "打开作者项目／代码 ↗"
   },
@@ -1264,6 +1327,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2510.18238",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1291,6 +1355,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://papers.nips.cc/paper_files/paper/2025/hash/ede6376c80b38796c688a77dce9fb227-Abstract-Conference.html",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1318,6 +1383,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1126/science.adz4433",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1347,6 +1413,7 @@
       "F3"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/1809.05504",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1374,6 +1441,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://www.microsoft.com/en-us/research/publication/principles-mixed-initiative-user-interfaces/",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1401,6 +1469,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://xrblocks.github.io/gem",
     "link_label": "打开作者项目／代码 ↗"
   },
@@ -1428,6 +1497,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1145/3746059.3747621",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1455,6 +1525,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1145/3772318.3790520",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1484,6 +1555,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1145/3746059.3747748",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1511,6 +1583,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2509.25504v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1540,6 +1613,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1145/3772318.3790938",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1567,6 +1641,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1145/3706598.3713905",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1594,6 +1669,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2406.12045v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1621,6 +1697,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2511.20351v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1648,6 +1725,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.15777v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1675,6 +1753,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://aclanthology.org/2025.findings-naacl.427/",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1702,6 +1781,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2010.09890v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1729,6 +1809,16 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [
+      {
+        "target": "P142",
+        "source": "P157",
+        "kind": "评测价值",
+        "location": "PDF pp.1–2，摘要与实验问题定义",
+        "statement": "《Exploring Exploration with Foundation Agents》认为 Alchemy 能揭示简单、近乎无状态的探索任务难以区分的能力差异：跨试次整合证据、元学习，以及规则改变后的策略适应。",
+        "boundary": "该研究使用自建的文本版 Alchemy；其对模型的观察不能直接视作原始视觉环境中的测试结果。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2102.02926v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1760,6 +1850,7 @@
       "F6"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2206.09203v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1787,6 +1878,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.12447v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1814,6 +1906,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2306.07932v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1843,6 +1936,7 @@
       "F3"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2302.09664v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1872,6 +1966,7 @@
       "F2"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/aca97732e30bcf1303bc22ac3924fd16-Paper-Conference.pdf",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1899,6 +1994,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2312.03664v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1928,6 +2024,7 @@
       "F5"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2411.19108v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1955,6 +2052,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2412.17799v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -1985,6 +2083,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Ashutosh_ExpertAF_Expert_Actionable_Feedback_from_Video_CVPR_2025_paper.pdf",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2012,6 +2111,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://www.microsoft.com/en-us/research/publication/dreamgarden-a-designer-assistant-for-growing-games-from-a-single-prompt/?lang=ko-kr",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2041,6 +2141,7 @@
       "F3"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1038/s41586-024-07421-0",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2072,6 +2173,7 @@
       "F1"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://openreview.net/forum?id=SIE6VFps9x",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2101,6 +2203,7 @@
       "F4"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/820c61a0cd419163ccbd2c33b268816e-Abstract-Conference.html",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2128,6 +2231,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2404.10775v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2157,6 +2261,7 @@
       "F6"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/13836f251823945316ae067350a5c366-Abstract-Datasets_and_Benchmarks_Track.html",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2184,6 +2289,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2407.14507v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2211,6 +2317,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2501.03847v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2238,6 +2345,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.09566v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2265,6 +2373,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.13444v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2292,6 +2401,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.14378v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2319,6 +2429,16 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [
+      {
+        "target": "P072",
+        "source": "VG41",
+        "kind": "实验比较与接口边界",
+        "location": "PDF p.8，Table 4 与比较说明",
+        "statement": "FlexTraj 报告，其 Wan2.2-5B 版本在 MoveBench 的 FID、FVD 和 SSIM 上优于 Wan-Move-14B，PSNR 与 EPE 相近；并指出 Wan-Move 主要支持空间稀疏轨迹，未覆盖其密集、时间稀疏或未对齐条件接口。",
+        "boundary": "这是不同模型与训练方案的比较，不是单变量消融；指标更好与支持更广控制接口是两项不同主张。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2512.08765v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2346,6 +2466,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://aclanthology.org/2025.findings-acl.1337/",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2373,6 +2494,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://machinelearning.apple.com/research/illusion-of-thinking",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2400,6 +2522,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.22115v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2427,6 +2550,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2504.13460v5",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2454,6 +2578,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2506.23678v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2481,6 +2606,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2508.01191v6",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2508,6 +2634,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2412.04447v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2535,6 +2662,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2505.10819v4",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2562,6 +2690,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2510.17771v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2591,6 +2720,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2412.06438v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2618,6 +2748,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2509.01412v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2645,6 +2776,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.02622v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2672,6 +2804,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2511.17481v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2699,6 +2832,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.10104v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2726,6 +2860,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.11389v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2753,6 +2888,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.23699v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2780,6 +2916,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2609.02886v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2807,6 +2944,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.21497v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2834,6 +2972,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2604.04207v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2861,6 +3000,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.06034v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2888,6 +3028,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.12374v4",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2915,6 +3056,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://openreview.net/pdf?id=MjJrhfAmRG",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2946,6 +3088,7 @@
       "F1"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/1f49b7fbd7c7afc52c1db0d4ed1a338d-Abstract-Conference.html",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -2973,6 +3116,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1145/3742413.3789134",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3000,6 +3144,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.14117v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3027,6 +3172,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2604.25809v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3054,6 +3200,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2607.09403v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3081,6 +3228,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2601.06176v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3108,6 +3256,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2601.18744v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3139,6 +3288,7 @@
       "F4"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.12978v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3166,6 +3316,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2604.00455v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3193,6 +3344,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.20314v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3220,6 +3372,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2510.06077",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3247,6 +3400,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1109/ACCESS.2022.3205314",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3274,6 +3428,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1109/TPAMI.2026.3729756",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3301,6 +3456,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2412.06769v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3328,6 +3484,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2210.03094",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3355,6 +3512,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2302.12422",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3384,6 +3542,7 @@
       "F4"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2305.17537",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3411,6 +3570,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2306.00923",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3438,6 +3598,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2306.00956",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3465,6 +3626,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2306.16700",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3492,6 +3654,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2307.05973",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3519,6 +3682,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2307.15801",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3546,6 +3710,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2309.00987",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3573,6 +3738,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2309.09971",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3600,6 +3766,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2309.16118",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3627,6 +3794,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2310.01824",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3654,6 +3822,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2310.17994",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3681,6 +3850,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2311.01454",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3708,6 +3878,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2312.04474",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3735,6 +3906,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2312.06662",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3762,6 +3934,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2312.12791",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3789,6 +3962,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2401.03568",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3816,6 +3990,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2402.05929",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3843,6 +4018,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2403.00833",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3870,6 +4046,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2403.07788",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3899,6 +4076,7 @@
       "F6"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2403.09227",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3928,6 +4106,7 @@
       "F6"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2405.09546",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3955,6 +4134,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2405.10315",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -3982,6 +4162,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2407.00316",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4009,6 +4190,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2409.01652",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4036,6 +4218,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2410.07166",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4063,6 +4246,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2410.07408",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4092,6 +4276,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2410.08464",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4119,6 +4304,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2411.04998",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4146,6 +4332,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2412.10523",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4173,6 +4360,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2412.14171",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4200,6 +4388,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2501.06348",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4227,6 +4416,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2502.08643",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4254,6 +4444,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.05652",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4281,6 +4472,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.15877",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4308,6 +4500,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2504.00983",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4335,6 +4528,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2504.13351",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4362,6 +4556,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2504.20073",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4389,6 +4584,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2506.21458",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4416,6 +4612,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2510.16907",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4443,6 +4640,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2510.18316",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4470,6 +4668,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2511.20937",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4497,6 +4696,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.19526",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4524,6 +4724,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.24766",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4551,6 +4752,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2601.03782",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4580,6 +4782,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.07055",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4607,6 +4810,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.21198",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4634,6 +4838,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.21687",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4661,6 +4866,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.22435",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4688,6 +4894,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.29315",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4715,6 +4922,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2604.06268",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4742,6 +4950,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2604.20157",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4771,6 +4980,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.18746",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4798,6 +5008,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.29563",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4825,6 +5036,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.28276",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4852,6 +5064,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2607.15275",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4879,6 +5092,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2607.19343",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4906,6 +5120,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2608.24101",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4933,6 +5148,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2609.01938",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4960,6 +5176,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2303.05312",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -4987,6 +5204,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2303.17606",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5014,6 +5232,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2304.10537",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5041,6 +5260,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2305.11588",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5068,6 +5288,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2310.11864",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5095,6 +5316,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2311.16961",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5122,6 +5344,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2312.02157",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5149,6 +5372,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2312.06663",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5176,6 +5400,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2312.07539",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5203,6 +5428,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2401.17807",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5230,6 +5456,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2402.03162",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5257,6 +5484,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2404.03654",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5284,6 +5512,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2404.12347",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5311,6 +5540,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2404.12888",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5338,6 +5568,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2405.18132",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5365,6 +5596,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2407.21333",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5392,6 +5624,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2409.12960",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5419,6 +5652,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2409.16938",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5446,6 +5680,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2410.11815",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5473,6 +5708,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2411.17605",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5500,6 +5736,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2501.09921",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5527,6 +5764,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.09733",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5554,6 +5792,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.11412",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5581,6 +5820,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2504.01014",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5608,6 +5848,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2504.19478",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5635,6 +5876,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.12534",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5662,6 +5904,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.14183",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5689,6 +5932,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.19089",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5716,6 +5960,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.20233",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5743,6 +5988,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.23270",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5770,6 +6016,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2607.13539",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5797,6 +6044,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2312.03701",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5824,6 +6072,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2401.14404",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5851,6 +6100,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2405.20283",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5878,6 +6128,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2405.20510",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5905,6 +6156,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2406.11838",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5932,6 +6184,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2409.20537",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5959,6 +6212,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2410.13863",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -5986,6 +6240,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2502.13129",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6013,6 +6268,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2502.17437",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6040,6 +6296,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.07596",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6069,6 +6326,7 @@
       "F5"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2505.13447",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6096,6 +6354,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2506.09027",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6123,6 +6382,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2511.13720",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6150,6 +6410,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2511.14761",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6177,6 +6438,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.02012",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6204,6 +6466,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.10953",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6231,6 +6494,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2601.22158",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6258,6 +6522,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.04770",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6285,6 +6550,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.20399",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6312,6 +6578,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2604.20329",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6339,6 +6606,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2607.09024",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6366,6 +6634,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2212.11565",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6393,6 +6662,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2303.14644",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6420,6 +6690,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2304.12281",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6447,6 +6718,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2307.05463",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6474,6 +6746,24 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [
+      {
+        "target": "P187",
+        "source": "P068",
+        "kind": "作者观点",
+        "location": "PDF p.1，Introduction",
+        "statement": "TPDiff 将 Show-1 与 LaVie 的级联生成路线列为效率改进方法，同时指出低分辨率生成后再提升分辨率的级联结构会带来误差累积和推理时间增加。",
+        "boundary": "这是对一类级联架构的局限分析，不能据此认为 Show-1 在所有质量与效率设置下均落后。"
+      },
+      {
+        "target": "P187",
+        "source": "P211",
+        "kind": "作者观点",
+        "location": "PDF p.2，Related Work",
+        "statement": "《Towards A Better Metric for Text-to-Video Generation》肯定 Show-1 将像素扩散和潜空间扩散结合：前者生成低分辨率内容，后者执行放大，以兼顾内容质量与计算效率。",
+        "boundary": "属于相关工作中的方法评价，不是该评价论文对 Show-1 做出的独立复现结论。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2309.15818",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6501,6 +6791,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2310.08465",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6528,6 +6819,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2310.10624",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6555,6 +6847,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2311.13574",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6582,6 +6875,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2311.16498",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6609,6 +6903,16 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [
+      {
+        "target": "P197",
+        "source": "P146",
+        "kind": "数据集评价",
+        "location": "PDF p.2，Related Work",
+        "statement": "ExpertAF 将 Ego-Exo4D 的价值归于：同类活动包含从初学者到专家的多种执行水平，并提供专家反馈；相较常以熟练示范为主的 how-to 视频，这些数据更适合构造纠错和动作指导任务。",
+        "boundary": "这是对数据适用性的肯定。ExpertAF 仍需另行构造学习者—专家配对与测试标注，并非直接证明该数据集本身能训练有效的 XR 教学系统。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2311.18259",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6636,6 +6940,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2312.00583",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6663,6 +6968,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2312.02087",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6690,6 +6996,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2312.13108",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6717,6 +7024,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2312.13324",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6744,6 +7052,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2401.01827",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6771,6 +7080,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2401.07781",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6798,6 +7108,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2402.13724",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6825,6 +7136,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2403.07420",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6852,6 +7164,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2406.10227",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6879,6 +7192,16 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [
+      {
+        "target": "P235",
+        "source": "P243",
+        "kind": "作者分析与案例",
+        "location": "PDF p.2，Figure 1 与 Introduction",
+        "statement": "VideoLLM-MoD 指出 VideoLLM-online 每帧只保留 CLS token，会限制细粒度空间理解；图中给出把西兰花识别为甜椒等错误。增加空间 token 可以改善识别，但朴素扩展会提高训练与注意力计算成本。",
+        "boundary": "区分原始 VideoLLM-online 与该文构造的 online+ 增强基线；图示案例说明空间表示问题，不是所有流式问答的总体错误率。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2406.11816",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6906,6 +7229,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2407.21757",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6933,6 +7257,16 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [
+      {
+        "target": "P242",
+        "source": "P270",
+        "kind": "方法改进实验",
+        "location": "PDF pp.1–2，摘要与 Introduction",
+        "statement": "UniMoD 将 Show-o 作为实际改造对象，报告通过按任务与层选择 token，训练 FLOPs 约减少 15%，同时在若干基准上保持或改善性能，表明其统一 Transformer 中存在可利用的计算冗余。",
+        "boundary": "15% 指该论文训练设置中的 FLOPs，而非通用推理延迟或所有部署设备上的加速比。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2408.12528",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6960,6 +7294,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2408.16730",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -6987,6 +7322,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2409.19580",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7014,6 +7350,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2410.09592",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7041,6 +7378,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2410.20986",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7068,6 +7406,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2411.05003",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7095,6 +7434,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2411.15262",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7122,6 +7462,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2411.17465",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7149,6 +7490,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2502.01572",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7176,6 +7518,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2502.06474",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7203,6 +7546,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2502.08047",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7230,6 +7574,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2502.12054",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7257,6 +7602,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.01774",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7284,6 +7630,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.03651",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7311,6 +7658,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.07314",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7338,6 +7686,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.19325",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7365,6 +7714,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2504.16030",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7392,6 +7742,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2505.23380",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7419,6 +7770,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2506.04135",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7446,6 +7798,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2506.15564",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7473,6 +7826,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2506.17301",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7500,6 +7854,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2510.01174",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7527,6 +7882,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2510.05096",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7554,6 +7910,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2511.15567",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7581,6 +7938,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2511.22098",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7608,6 +7966,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.04537",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7635,6 +7994,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.09406",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7662,6 +8022,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.17253",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7689,6 +8050,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.24965",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7716,6 +8078,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2601.07181",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7743,6 +8106,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.06508",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7770,6 +8134,16 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [
+      {
+        "target": "P348",
+        "source": "P365",
+        "kind": "实验结果与失败分析",
+        "location": "PDF pp.1–2，Introduction 与 Figure 1",
+        "statement": "Sparkle 作者指出，Kiwi-Edit 与 OpenVE-Edit 虽具备背景替换能力，但在该文采用的 OpenVE-Bench / Gemini-2.5-Pro 评测中难以超过 2.5/5；生成中存在静态背景与动态前景生硬拼接、前景保留失败等问题。",
+        "boundary": "评价针对视频背景替换及指定自动评审协议；不能外推到 Kiwi-Edit 的全部编辑任务，也不能把自动评分当作人类满意度。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2603.02175",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7797,6 +8171,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.22091",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7824,6 +8199,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2604.04707",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7851,6 +8227,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2604.07429",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7878,6 +8255,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.06535",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7905,6 +8283,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.12038",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7932,6 +8311,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.12090",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7959,6 +8339,16 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [
+      {
+        "target": "P369",
+        "source": "VG67",
+        "kind": "迁移实验与失败分析",
+        "location": "PDF pp.1、8、15–16，Figure 4 与 Appendix E",
+        "statement": "AnyStep-WAM 将 AnyFlow 改用于世界动作模型时，观察到依赖当前学生的有限差分监督目标波动和梯度尖峰；在其 RoboTwin 实验中，一至两步动作生成的成功率较低，增加去噪步数后有所恢复。",
+        "boundary": "评价对象是 AnyStep-WAM 作者的 WAM 适配实现，不是 AnyFlow 原始视频生成任务；精细接触动作对误差更敏感。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2605.13724",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -7986,6 +8376,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.17019",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8013,6 +8404,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.17312",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8040,6 +8432,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.19319",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8067,6 +8460,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.01399",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8096,6 +8490,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.03951",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8125,6 +8520,7 @@
       "F6"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.04811",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8152,6 +8548,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.24448",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8183,6 +8580,7 @@
       "F2"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.31392",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8210,6 +8608,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2609.10522",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8237,6 +8636,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2301.08243",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8264,6 +8664,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2306.02572",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8291,6 +8692,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2307.05432",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8318,6 +8720,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2307.12698",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8345,6 +8748,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2311.12983",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8372,6 +8776,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2312.17227",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8399,6 +8804,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2403.00504",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8426,6 +8832,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2404.08471",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8453,6 +8860,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2404.09991",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8480,6 +8888,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2405.10292",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8507,6 +8916,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2405.18418",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8534,6 +8944,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2406.16860",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8561,6 +8972,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2408.11208",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8588,6 +9000,40 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [
+      {
+        "target": "P256",
+        "source": "P329",
+        "kind": "实验比较",
+        "location": "PDF pp.1–2，摘要与研究贡献",
+        "statement": "《What Drives Success in Physical Planning with Joint-Embedding Predictive World Models?》报告，经系统考察表征、预测器与规划器设计后，其组合方案在所测导航和操控任务上优于 DINO-WM 与 V-JEPA-2-AC。",
+        "boundary": "属于该论文协议下的系统级比较；不同组件同时变化，不能把整体提升都归因于某一个表征机制。"
+      },
+      {
+        "target": "P256",
+        "source": "P350",
+        "kind": "作者分析",
+        "location": "PDF p.2，Related Work",
+        "statement": "《Temporal Straightening for Latent Planning》认为 DINO-WM 的冻结 DINOv2 特征具有较好视觉质量，但并非为规划优化，因而可能产生难以优化的规划目标；该文据此引入潜轨迹曲率正则。",
+        "boundary": "评价聚焦潜空间几何与规划优化难度，不等于否认 DINOv2 的感知表征质量。"
+      },
+      {
+        "target": "P256",
+        "source": "P353",
+        "kind": "设计权衡",
+        "location": "PDF p.2，方法路线比较",
+        "statement": "LeWorldModel 将 DINO-WM 归为基础模型表征路线：冻结预训练视觉编码器能规避表征坍塌，但也放弃了从像素到预测器的端到端联合学习。",
+        "boundary": "这是训练范式的权衡，不是断言冻结编码器必然使任务性能更差。"
+      },
+      {
+        "target": "P256",
+        "source": "P343",
+        "kind": "复现与基础设施评价",
+        "location": "PDF pp.1–2，Introduction 与代码库比较表",
+        "statement": "stable-worldmodel-v1 指出 DINO-WM 与 PLDM 对同一个 Two-Room 环境存在明显不同的重复实现，认为缺少共享环境和工具会增加公平比较与复现成本。",
+        "boundary": "评价对象是比较论文所检查时的研究代码与环境实现；不推断算法无效，也不把当时的仓库状态当成永久状态。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2411.04983",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8615,6 +9061,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2412.03572",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8642,6 +9089,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2412.10925",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8669,6 +9117,16 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [
+      {
+        "target": "P265",
+        "source": "VG54",
+        "kind": "实验比较",
+        "location": "PDF p.8，Table 4 与 Main Results",
+        "statement": "MindOmni 在其视觉理解比较中报告，MMBench 表现高于 MetaMorph，并将此作为统一理解与生成模型仍能提升理解能力的证据。",
+        "boundary": "比较涉及不同模型规模、训练数据和目标；不应把差异全归因于 RGPO，也不据此判定全部生成或理解任务的优劣。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2412.14164",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8696,6 +9154,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2502.11831",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8723,6 +9182,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2502.14819",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8750,6 +9210,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2505.20425",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8777,6 +9238,32 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [
+      {
+        "target": "P299",
+        "source": "P352",
+        "kind": "后续论文比较",
+        "location": "PDF p.2，Figure 2 与 Introduction",
+        "statement": "V-JEPA 2.1 肯定 V-JEPA 系列的全局视频理解、运动建模与规划潜力，同时指出细粒度局部空间结构较难从其特征中提取；新论文以密集预测损失改善深度、追踪和分割等任务。",
+        "boundary": "这是同系列后续工作的诊断与模型比较；图中还包含模型规模和训练设计变化，不属于对原模型的独立复现。"
+      },
+      {
+        "target": "P299",
+        "source": "P399",
+        "kind": "实验比较",
+        "location": "PDF pp.1–2，摘要与主要发现",
+        "statement": "LeVJEPA 报告，在相同数据和匹配训练轮次下，其 ViT-S/B/L 设置以约 5.6–20.8 倍更少的总预训练计算量达到或超过 V-JEPA 2 的相应表现，并另行给出计算预算匹配的比较。",
+        "boundary": "结论限于该论文重训基线与冻结表征评测；不能将图像识别或动作基准的收益直接外推为机器人规划收益。"
+      },
+      {
+        "target": "P299",
+        "source": "VG23",
+        "kind": "特征复用消融",
+        "location": "PDF p.10 与 p.26，编码器消融",
+        "statement": "Elastic Forcing 将 V-JEPA 2 用作视频表征，报告与 VideoMAE 联合使用时的 VBench 总分高于分别单用；加入 DINOv3 后自动总分与 VLM 排序的变化并不一致，说明特征选择与评价指标存在交互。",
+        "boundary": "这是下游视频后训练系统的编码器消融，不是 V-JEPA 2 自身视频理解能力的直接排名。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2506.09985",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8804,6 +9291,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2506.21552",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8831,6 +9319,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2507.19468",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8858,6 +9347,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2511.04670",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8885,6 +9375,16 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [
+      {
+        "target": "P311",
+        "source": "P375",
+        "kind": "理论分析",
+        "location": "PDF p.1，摘要与 Introduction",
+        "statement": "《When Does LeJEPA Learn a World Model?》为 LeJEPA 的对齐加高斯正则目标给出线性可识别性分析：在论文规定的平稳加性噪声潜变量演化条件下，讨论何时能从非线性观测恢复潜结构，并刻画高斯分布条件的重要性。",
+        "boundary": "保证依赖该论文的生成过程与分布假设；不能解读为任意现实视频中的 LeJEPA 都已学到真实因果世界模型。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2511.08544",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8912,6 +9412,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.05094",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8939,6 +9440,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.09929",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8966,6 +9468,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.10942",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -8993,6 +9496,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.13644",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9020,6 +9524,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.24497",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9047,6 +9552,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2601.00844",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9074,6 +9580,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2601.05230",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9101,6 +9608,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.00475",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9128,6 +9636,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.01456",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9155,6 +9664,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.03604",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9182,6 +9692,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2602.08968",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9209,6 +9720,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.12231",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9236,6 +9748,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.13227",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9263,6 +9776,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.14482",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9290,6 +9804,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.19312",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9317,6 +9832,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2604.03208",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9344,6 +9860,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.06732",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9371,6 +9888,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.21800",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9398,6 +9916,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.26379",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9425,6 +9944,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.08775",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9452,6 +9972,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.15956",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9479,6 +10000,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.23444",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9508,6 +10030,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.32026",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9535,6 +10058,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2607.18236",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9562,6 +10086,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2608.22764",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9589,6 +10114,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2608.27395",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9616,6 +10142,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://github.com/maitrix-org/llm-reasoners",
     "link_label": "打开作者项目／代码 ↗"
   },
@@ -9643,6 +10170,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2404.05221v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9670,6 +10198,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://world-model.ai",
     "link_label": "打开作者项目／代码 ↗"
   },
@@ -9699,6 +10228,7 @@
       "F2"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://aclanthology.org/2025.findings-acl.464/",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9726,6 +10256,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2406.05673",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9755,6 +10286,7 @@
       "F3"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://scholar.google.com/scholar?q=Understanding%20the%20Sources%20of%20Uncertainty%20for%20Large%20Language%20and%20Multimodal%20Models",
     "link_label": "按题名检索论文 ↗"
   },
@@ -9782,6 +10314,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2604.11201v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9811,6 +10344,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1609/aaai.v40i33.40039",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9838,6 +10372,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2509.23365v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9865,6 +10400,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2502.08524v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9894,6 +10430,7 @@
       "F1"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://github.com/Ber666/ToolkenGPT",
     "link_label": "打开作者项目／代码 ↗"
   },
@@ -9921,6 +10458,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://github.com/Ber666/reasoning-by-superposition",
     "link_label": "打开作者项目／代码 ↗"
   },
@@ -9950,6 +10488,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2506.14965",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -9979,6 +10518,7 @@
       "F3"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2405.18711v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10008,6 +10548,7 @@
       "F3"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2504.05419v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10035,6 +10576,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/1804.03608v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10062,6 +10604,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/1803.10122v4",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10089,6 +10632,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://phenaki.github.io/",
     "link_label": "打开作者项目／代码 ↗"
   },
@@ -10116,6 +10660,24 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [
+      {
+        "target": "P123",
+        "source": "P106",
+        "kind": "作者观点",
+        "location": "PDF p.2，Introduction",
+        "statement": "Pandora 将 Genie 列为可交互世界模型的重要进展，同时认为这类早期系统通常面向特定领域，允许的动作或状态集合有限，以此引出跨领域自然语言动作接口。",
+        "boundary": "该文举例中的 Genie 面向 2D 游戏；评价的是任务域与接口范围，而非在 Genie 原任务上的质量排名。"
+      },
+      {
+        "target": "P123",
+        "source": "P132",
+        "kind": "资源成本分析",
+        "location": "PDF p.1，Introduction",
+        "statement": "《Pre-trained Video Generative Models as World Simulators》以 Genie 为例说明从头训练可交互世界模拟器的成本，引用其 125k 步、256 个 TPUv5p 核心的训练设置，主张复用预训练视频生成模型。",
+        "boundary": "这些是该论文引用的 Genie 训练资源记录，不是本项目实测，也不能直接换算为其它硬件上的训练时间。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2402.15391v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10143,6 +10705,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2405.15223v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10172,6 +10735,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2506.14404v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10199,6 +10763,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1145/3728459",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10226,6 +10791,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2407.16655v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10253,6 +10819,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.19539v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10280,6 +10847,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2505.10292v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10307,6 +10875,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2507.16869v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10334,6 +10903,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2502.07825",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10361,6 +10931,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.07802v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10390,6 +10961,24 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [
+      {
+        "target": "P135",
+        "source": "VG63",
+        "kind": "作者观点",
+        "location": "PDF p.2，Introduction",
+        "statement": "VideoSSM 将 WorldMem 的按 3D 相机位姿索引缓存与其它空间记忆方法一起讨论，认为这种与 3D 状态耦合的设计较难直接迁移到没有显式世界状态、自由相机和高度动态场景的分钟级开放视频生成。",
+        "boundary": "针对任务设定改变后的迁移难点，不是说 WorldMem 在原有受控视角世界模拟中无效。"
+      },
+      {
+        "target": "P135",
+        "source": "VG30",
+        "kind": "综述评价",
+        "location": "PDF p.24，显式空间状态与混合记忆",
+        "statement": "《The Past Frames the Future》指出 WorldMem 一类混合记忆可以借助位姿把历史视觉证据与后续视角对齐，同时依赖准确标定和时间同步；位姿漂移或位姿—证据失配会造成几何不一致。",
+        "boundary": "这是综述对这类记忆设计的适用条件分析，不是该综述独立测得的 WorldMem 失败率。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2504.12369",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10417,6 +11006,16 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [
+      {
+        "target": "P136",
+        "source": "VG30",
+        "kind": "评测边界",
+        "location": "PDF p.69，Goal and Narrative Continuation",
+        "statement": "《The Past Frames the Future》认为 StoryBench 等基准可用于考察事件顺序、遗漏、重复和叙事矛盾，但完整脚本或结构化提示通常仍在输入中，因此单凭这些分数不足以隔离“必须从历史记忆取回信息”的能力。",
+        "boundary": "这是对用 StoryBench 证明记忆能力的证据边界，而非否定它作为故事可视化基准的用途。"
+      }
+    ],
     "public_url": "https://github.com/google/storybench",
     "link_label": "打开作者项目／代码 ↗"
   },
@@ -10444,6 +11043,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://www.openaccess.thecvf.com/content/ICCV2025/papers/Po_Long-Context_State-Space_Video_World_Models_ICCV_2025_paper.pdf",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10471,6 +11071,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://github.com/yitong91/StoryGAN",
     "link_label": "打开作者项目／代码 ↗"
   },
@@ -10498,6 +11099,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://ypwang61.github.io/project/StoryEval",
     "link_label": "打开作者项目／代码 ↗"
   },
@@ -10527,6 +11129,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.26907v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10559,6 +11162,7 @@
       "F2"
     ],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2511.16669v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10588,6 +11192,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2604.02296v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10617,6 +11222,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.24225v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10648,6 +11254,7 @@
       "F6"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.27589v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10679,6 +11286,7 @@
       "F4"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2609.28466v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10710,6 +11318,7 @@
       "F4"
     ],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.04519v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10739,6 +11348,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.06924v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10768,6 +11378,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.23864v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10795,6 +11406,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.26964v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10822,6 +11434,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://ojs.aaai.org/index.php/AIIDE/article/view/18896",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10849,6 +11462,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2604.03315v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10878,6 +11492,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2608.20699v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10911,6 +11526,7 @@
       "F5"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.02564v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10940,6 +11556,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2608.03974v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -10973,6 +11590,7 @@
       "F1"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2305.16291v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11001,6 +11619,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2501.06173v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11032,6 +11651,7 @@
       "F6"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.21055v6",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11059,6 +11679,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.23452v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11087,6 +11708,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2510.14901v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11114,6 +11736,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2511.04570v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11141,6 +11764,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.20557v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11174,6 +11798,7 @@
       "F6"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2601.04778v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11203,6 +11828,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.05449v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11234,6 +11860,16 @@
       "F5"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [
+      {
+        "target": "VG11",
+        "source": "VG15",
+        "kind": "作者观点",
+        "location": "PDF p.4，Related Work：Test-Time Optimization",
+        "statement": "A²RD 肯定 VQQA 通过 VLM 问题实现闭环优化，同时将其与其它方法归为主要改善单段质量的路线，指出跨片段一致性与叙事推进仍需另行处理。",
+        "boundary": "该判断针对多片段长视频研究范围；不应据此抹去 VQQA 对单段视频中时序或全局问题的诊断能力。"
+      }
+    ],
     "public_url": "https://arxiv.org/abs/2603.12310v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11261,6 +11897,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.17375v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11290,6 +11927,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2608.29621v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11321,6 +11959,7 @@
       "F2"
     ],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2609.24997v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11348,6 +11987,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2609.28654v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11379,6 +12019,7 @@
       "F4"
     ],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2609.34309v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11408,6 +12049,7 @@
       "F5"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2609.35491v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11435,6 +12077,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2609.36599v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11464,6 +12107,7 @@
       "F5"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2609.38154v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11491,6 +12135,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2609.38426v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11518,6 +12163,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2610.02140v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11545,6 +12191,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1145/3772318.3790326",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11572,6 +12219,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.1109/TG.2022.3216582",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11599,6 +12247,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.22945v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11626,6 +12275,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2512.10894v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11653,6 +12303,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://openreview.net/pdf?id=QlIteJADE6",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11681,6 +12332,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.23027v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11709,6 +12361,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.23489v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11737,6 +12390,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2505.21374v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11765,6 +12419,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2510.08530v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11793,6 +12448,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.06014v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11820,6 +12476,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2510.08527v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11848,6 +12505,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2604.22748v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11875,6 +12533,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://doi.org/10.22541/au.176918713.36402137/v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11904,6 +12563,7 @@
       "F5"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2503.08038v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11931,6 +12591,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2509.03516v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11960,6 +12621,7 @@
       "F2"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2510.11696v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -11987,6 +12649,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2606.05172v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -12014,6 +12677,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2603.27558v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -12043,6 +12707,7 @@
       "F5"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.18739v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -12070,6 +12735,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2609.23796v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -12099,6 +12765,7 @@
       "F2"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2505.13031v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -12126,6 +12793,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2507.07966v4",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -12153,6 +12821,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2502.20321v3",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -12180,6 +12849,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2507.08441v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -12212,6 +12882,7 @@
       "F2"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.20342v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -12239,6 +12910,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2508.08048v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -12270,6 +12942,7 @@
       "F2"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/3755a02b1035fbadd5f93a022170e46f-Abstract-Conference.html",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -12299,6 +12972,7 @@
       "F5"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2605.30325v1",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -12326,6 +13000,7 @@
     "application_targets": [],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2604.28185v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -12355,6 +13030,7 @@
       "F5"
     ],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2609.33748v2",
     "link_label": "打开论文公开页面 ↗"
   },
@@ -12384,6 +13060,7 @@
     ],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
+    "other_paper_assessments": [],
     "public_url": "https://arxiv.org/abs/2608.08469v1",
     "link_label": "打开论文公开页面 ↗"
   }

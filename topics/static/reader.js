@@ -2,13 +2,13 @@
 const fields=Object.fromEntries(['category','type','topic','xr','search'].map(k=>[k,document.getElementById(k)]));
 const papers=[...document.querySelectorAll('.paper')];let view='topics';
 function apply(){let n=0;const q=fields.search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);for(const p of papers){p.hidden=!((!fields.category.value||p.dataset.category===fields.category.value)&&(!fields.type.value||p.dataset.type===fields.type.value)&&(!fields.topic.value||p.dataset.topic===fields.topic.value)&&(!fields.xr.value||p.dataset.xr.split(' ').includes(fields.xr.value))&&q.every(w=>p.dataset.search.includes(w)));if(!p.hidden)n++;}document.getElementById('count').textContent=`显示 ${n} / ${papers.length} 个研究条目`;document.getElementById('empty').hidden=n!==0;}
-function show(v){view=v;for(const k of ['xr','methods','topics','papers','audit'])document.getElementById(k+'-view').hidden=k!==v;document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===v)));apply();}
+function show(v){view=v;for(const k of ['xr','methods','topics','papers'])document.getElementById(k+'-view').hidden=k!==v;document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===v)));apply();}
 function reset(){Object.values(fields).forEach(f=>f.value='');apply();}
 Object.values(fields).forEach(f=>f.addEventListener('input',apply));
 document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.view)));
 document.querySelectorAll('[data-topic-jump]').forEach(b=>b.addEventListener('click',()=>{reset();fields.topic.value=b.dataset.topicJump;show('papers');document.getElementById('papers-view').scrollIntoView();}));
 document.querySelectorAll('[data-category-jump]').forEach(b=>b.addEventListener('click',()=>{reset();fields.category.value=b.dataset.categoryJump;show('papers');document.getElementById('papers-view').scrollIntoView();}));
-document.getElementById('reset').addEventListener('click',reset);document.getElementById('print').addEventListener('click',()=>window.print());
+document.getElementById('reset').addEventListener('click',reset);
 function filterOverview(category){
   document.querySelectorAll('.overview-category,.overview-toc-group').forEach(el=>el.hidden=!!category&&el.dataset.category!==category);
   document.querySelectorAll('[data-overview-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.overviewCategory===category)));
