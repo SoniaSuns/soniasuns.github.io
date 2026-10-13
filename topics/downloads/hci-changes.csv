@@ -1,0 +1,59 @@
+﻿编号,题名,原分类,修订分类,论文类型,topic,调整依据
+P001,HG-DAgger: Interactive Imitation Learning with Human Experts,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P004,WebGPT: Browser-assisted question-answering with human feedback,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P022,Enabling Self-Improving Agents to Learn at Test Time With Human-In-The-Loop Guidance,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P029,VideoDiff: Human-AI Video Co-Creation with Alternatives,HCI,HCI,Application paper,人机共创与可编辑工作流,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P038,"“I’m Not Sure, But...”: Examining the Impact of Large Language Models’ Uncertainty Expression on User Reliance and Trust",HCI,HCI,Application paper,人工核查、推理交互与依赖校准,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P040,Collaposer: Transforming Photo Collections into Visual Assets for Storytelling with Collages,HCI,HCI,Application paper,人机共创与可编辑工作流,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P041,Learning to Complement Humans,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P044,Orthogonal Causal Calibration,HCI,Base paper,Base paper,理论、机制分析与负面证据,主要提供理论、经验分析、综述、评测、数据或实验环境；为多种应用提供依据，不作为某一应用已经完成的证据。
+P046,Explaining Concept Shift with Interpretable Feature Attribution,HCI,Method paper,Method paper,不确定性、决策损失与鲁棒优化,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P047,Can LLMs Propose Instrumental Variables for Causal Reasoning?,HCI,Method paper,Method paper,不确定性、决策损失与鲁棒优化,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P048,Utility-Directed Conformal Prediction: A Decision-Aware Framework for Actionable Uncertainty Quantification,HCI,Method paper,Method paper,不确定性、决策损失与鲁棒优化,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P049,Decision-Focused Learning without Differentiable Optimization: Learning Locally Optimized Decision Losses,HCI,Method paper,Method paper,不确定性、决策损失与鲁棒优化,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P050,Distributionally Robust Feature Selection,HCI,Method paper,Method paper,不确定性、决策损失与鲁棒优化,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P051,Fostering the Ecosystem of AI for Social Impact Requires Expanding and Strengthening Evaluation Standards,HCI,Base paper,Base paper,综述、概念框架与评价立场,主要提供理论、经验分析、综述、评测、数据或实验环境；为多种应用提供依据，不作为某一应用已经完成的证据。
+P052,Valid Inference with Imperfect Synthetic Data,HCI,Method paper,Method paper,不确定性、决策损失与鲁棒优化,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P053,Superhuman performance of a large language model on the reasoning tasks of a physician,HCI,Base paper,Base paper,能力诊断与评测基准,主要提供理论、经验分析、综述、评测、数据或实验环境；为多种应用提供依据，不作为某一应用已经完成的证据。
+P054,Melding the Data-Decisions Pipeline: Decision-Focused Learning for Combinatorial Optimization,HCI,Method paper,Method paper,不确定性、决策损失与鲁棒优化,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P055,Principles of Mixed-Initiative User Interfaces,HCI,HCI,Application paper,主动交互、协作与用户需求,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P059,Sensible Agent: A Framework for Unobtrusive Interaction with Proactive AR Agents,HCI,HCI,Application paper,主动交互、协作与用户需求,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P062,InstructPipe: Generating Visual Blocks Pipelines with Human Instructions and LLMs,HCI,HCI,Application paper,人机共创与可编辑工作流,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P067,τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains,HCI,Base paper,Base paper,能力诊断与评测基准,主要提供理论、经验分析、综述、评测、数据或实验环境；为多种应用提供依据，不作为某一应用已经完成的证据。
+P094,SaaS-Bench: Can Computer-Use Agents Leverage Real-World SaaS to Solve Professional Workflows?,HCI,Base paper,Base paper,能力诊断与评测基准,主要提供理论、经验分析、综述、评测、数据或实验环境；为多种应用提供依据，不作为某一应用已经完成的证据。
+P141,Watch-And-Help: A Challenge for Social Perception and Human-AI Collaboration,HCI,HCI,Application paper,主动交互、协作与用户需求,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P065,Human-in-the-Loop through Chain-of-Thought,HCI,HCI,Application paper,人工核查、推理交互与依赖校准,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P144,Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation,HCI,Method paper,Method paper,不确定性、决策损失与鲁棒优化,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P147,DreamGarden: A Designer Assistant for Growing Games from a Single Prompt,HCI,HCI,Application paper,人机共创与可编辑工作流,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P148,Detecting Hallucinations in Large Language Models Using Semantic Entropy,HCI,Method paper,Method paper,不确定性、决策损失与鲁棒优化,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P149,Learning to Clarify: Multi-turn Conversations with Action-Based Contrastive Self-Training,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P153,Internal Consistency and Self-Feedback in Large Language Models: A Survey,HCI,Base paper,Base paper,综述、概念框架与评价立场,主要提供理论、经验分析、综述、评测、数据或实验环境；为多种应用提供依据，不作为某一应用已经完成的证据。
+P074,Beyond Single-Sentence Prompts: Upgrading Value Alignment Benchmarks with Dialogues and Stories,HCI,Base paper,Base paper,能力诊断与评测基准,主要提供理论、经验分析、综述、评测、数据或实验环境；为多种应用提供依据，不作为某一应用已经完成的证据。
+P076,Interactive Reasoning: Visualizing and Controlling Chain-of-Thought Reasoning in Large Language Models,HCI,HCI,Application paper,人工核查、推理交互与依赖校准,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P080,Vis-CoT: A Human-in-the-Loop Framework for Interactive Visualization and Intervention in LLM Chain-of-Thought Reasoning,HCI,HCI,Application paper,人工核查、推理交互与依赖校准,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P159,GPS: Graph-guided Proactive Information Seeking in Large Language Models,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P091,Improving Human Verification of LLM Reasoning through Interactive Explanation Interfaces,HCI,HCI,Application paper,人工核查、推理交互与依赖校准,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P096,TSRBench: A Comprehensive Multi-task Multi-modal Time Series Reasoning Benchmark for Generalist Models,HCI,Base paper,Base paper,能力诊断与评测基准,主要提供理论、经验分析、综述、评测、数据或实验环境；为多种应用提供依据，不作为某一应用已经完成的证据。
+P184,Primitive Skill-based Robot Learning from Human Evaluative Feedback,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P193,NOIR: Neural Signal Operated Intelligent Robots for Everyday Activities,HCI,HCI,Application paper,主动交互、协作与用户需求,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P229,TRANSIC: Sim-to-Real Policy Transfer by Learning from Online Correction,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P267,"Why Automate This? Exploring Correlations Between Desire for Robotic Automation, Invested Time and Well-Being",HCI,HCI,Application paper,主动交互、协作与用户需求,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P239,Chat2Layout: Interactive 3D Furniture Layout with a Multimodal LLM,HCI,HCI,Application paper,人机共创与可编辑工作流,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P344,Exploring a Multimodal Chatbot as a Facilitator in Therapeutic Art Activity,HCI,HCI,Application paper,人机共创与可编辑工作流,核心贡献围绕人的交互、协作、创作、核查、开发或需求；是否已有用户效果证据仍以本篇边界为准。
+P206,ASSISTGUI: Task-Oriented Desktop Graphical User Interface Automation,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P234,VideoGUI: A Benchmark for GUI Automation from Instructional Videos,HCI,Base paper,Base paper,能力诊断与评测基准,主要提供理论、经验分析、综述、评测、数据或实验环境；为多种应用提供依据，不作为某一应用已经完成的证据。
+P260,ShowUI: One Vision-Language-Action Model for GUI Visual Agent,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P271,WorldGUI: An Interactive Benchmark for Desktop GUI Automation from Any Starting Point,HCI,Base paper,Base paper,能力诊断与评测基准,主要提供理论、经验分析、综述、评测、数据或实验环境；为多种应用提供依据，不作为某一应用已经完成的证据。
+P297,macOSWorld: A Multilingual Interactive Benchmark for GUI Agents,HCI,Base paper,Base paper,能力诊断与评测基准,主要提供理论、经验分析、综述、评测、数据或实验环境；为多种应用提供依据，不作为某一应用已经完成的证据。
+P314,Computer-Use Agents as Judges for Generative User Interface,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P331,ShowUI-$π$: Flow-based Generative Models as GUI Dexterous Hands,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P335,ShowUI-Aloha: Human-Taught GUI Agent,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P390,ReGRPO: Reflection-Augmented Policy Optimization for Tool-Using Agents,HCI,Method paper,Method paper,RL／GRPO、过程反馈与数据选择,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P401,Show-Harness: Just a VLM Agent Can Play Robots,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P194,GAIA: a benchmark for General AI Assistants,HCI,Base paper,Base paper,能力诊断与评测基准,主要提供理论、经验分析、综述、评测、数据或实验环境；为多种应用提供依据，不作为某一应用已经完成的证据。
+P110,Understanding the Sources of Uncertainty for Large Language and Multimodal Models,HCI,Method paper,Method paper,不确定性、决策损失与鲁棒优化,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P111,CocoaBench: Evaluating Unified Digital Agents in the Wild,HCI,Base paper,Base paper,能力诊断与评测基准,主要提供理论、经验分析、综述、评测、数据或实验环境；为多种应用提供依据，不作为某一应用已经完成的证据。
+P115,ToolkenGPT: Augmenting Frozen Language Models with Massive Tools via Tool Embeddings,HCI,Method paper,Method paper,Agent 规划、工具、澄清与经验,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P118,Calibrating Reasoning in Language Models with Internal Consistency,HCI,Method paper,Method paper,不确定性、决策损失与鲁棒优化,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P119,Reasoning Models Know When They’re Right: Probing Hidden States for Self-Verification,HCI,Method paper,Method paper,不确定性、决策损失与鲁棒优化,主要贡献是可复用模型、训练、推理、控制或优化机制；不因出现 human、agent、交互环境或 GUI 就归为 HCI。应用关系由任务接口及迁移证据单独建立。
+P126,Diffusion-Based Visual Art Creation: A Survey and New Perspectives,HCI,Base paper,Base paper,综述、概念框架与评价立场,主要提供理论、经验分析、综述、评测、数据或实验环境；为多种应用提供依据，不作为某一应用已经完成的证据。

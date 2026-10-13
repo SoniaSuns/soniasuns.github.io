@@ -1,0 +1,452 @@
+﻿统一研究编号,题名,论文类型,主归档,topic,原始PDF数量,公开入口
+P001,HG-DAgger: Interactive Imitation Learning with Human Experts,Method paper,Method paper,M1,1,https://arxiv.org/abs/1810.02890v2
+P002,Abductive Commonsense Reasoning,Base paper,Base paper,B1,1,https://arxiv.org/abs/1908.05739v2
+P004,WebGPT: Browser-assisted question-answering with human feedback,Method paper,Method paper,M1,1,https://arxiv.org/abs/2112.09332v3
+P005,There’s a Time and Place for Reasoning Beyond the Image,Base paper,Base paper,B1,1,https://github.com/zeyofu/TARA
+P006,Learning Iterative Reasoning through Energy Minimization,Method paper,Method paper,M6,1,https://arxiv.org/abs/2206.15448v1
+P007,The Abduction of Sherlock Holmes: A Dataset for Visual Abductive Reasoning,Base paper,Base paper,B1,1,https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/5263_ECCV_2022_paper.php
+P008,Visual Abductive Reasoning,Base paper,Base paper,B1,1,https://arxiv.org/abs/2203.14040v1
+P009,Breaking Common Sense: WHOOPS! A Vision-and-Language Benchmark of Synthetic and Compositional Images,Base paper,Base paper,B1,1,https://arxiv.org/abs/2303.07274v4
+P010,Visual Writing Prompts: Character-Grounded Story Generation with Curated Image Sequences,Base paper,Base paper,B4,1,https://arxiv.org/abs/2301.08571v1
+P011,Reasoning or Reciting? Exploring the Capabilities and Limitations of Language Models Through Counterfactual Tasks,Base paper,Base paper,B2,1,https://arxiv.org/abs/2307.02477v3
+P012,Reflexion: Language Agents with Verbal Reinforcement Learning,Method paper,Method paper,M1,1,https://github.com/noahshinn/reflexion)；2026-09-16核验维护者仓库。原摘要中的旧地址作为历史文字保留。
+P013,Sequential Modeling Enables Scalable Learning for Large Vision Models,Method paper,Method paper,M7,1,https://arxiv.org/abs/2312.00785v1
+P015,Inductive or Deductive? Rethinking the Fundamental Reasoning Abilities of LLMs,Method paper,Method paper,M6,1,https://arxiv.org/abs/2408.00114v2
+P016,DIVE: Towards Descriptive and Diverse Visual Commonsense Generation,Method paper,Method paper,M6,1,https://arxiv.org/abs/2408.08021v1
+P017,Exploring Defeasibility in Causal Reasoning,Method paper,Method paper,M6,1,https://arxiv.org/abs/2401.03183v2
+P018,Learning Iterative Reasoning through Energy Diffusion,Method paper,Method paper,M6,1,https://arxiv.org/abs/2406.11179v1
+P019,NL-EYE: Abductive NLI for Images,Base paper,Base paper,B1,1,https://arxiv.org/abs/2410.02613v1
+P020,ViCor: Bridging Visual Understanding and Commonsense Reasoning with Large Language Models,Method paper,Method paper,M4,1,https://arxiv.org/abs/2310.05872v2
+P021,Black Swan: Abductive and Defeasible Video Reasoning in Unpredictable Events,Base paper,Base paper,B1,1,https://blackswan.cs.ubc.ca
+P022,Enabling Self-Improving Agents to Learn at Test Time With Human-In-The-Loop Guidance,Method paper,Method paper,M1,1,https://arxiv.org/abs/2507.17131v2
+P023,Generalizable Reasoning through Compositional Energy Minimization,Method paper,Method paper,M6,1,https://arxiv.org/abs/2510.20607v1
+P024,Nested Learning: The Illusion of Deep Learning Architecture,Base paper,Base paper,B2,1,https://arxiv.org/abs/2512.24695v1
+P027,VCD: A Dataset for Visual Commonsense Discovery in Images,Base paper,Base paper,B1,1,https://arxiv.org/abs/2402.17213v2
+P028,Video models are zero-shot learners and reasoners,Base paper,Base paper,B1,1,https://arxiv.org/abs/2509.20328v2
+P029,VideoDiff: Human-AI Video Co-Creation with Alternatives,Application paper,HCI,H3,1,https://doi.org/10.1145/3706598.3713417
+P030,AbductiveMLLM: Boosting Visual Abductive Reasoning Within MLLMs,Method paper,Method paper,M6,1,https://arxiv.org/abs/2601.02771v1)；[DOI正式记录
+P031,Agentic Reasoning for Large Language Models,Base paper,Base paper,B3,1,https://arxiv.org/abs/2601.12538v1
+P032,"Autoregressive, Yet Revisable: In Decoding Revision for Secure Code Generation",Method paper,Method paper,M2,1,https://arxiv.org/abs/2602.01187v2
+P033,Gen-Searcher: Reinforcing Agentic Search for Image Generation,Application paper,AIGC,G2,1,https://arxiv.org/abs/2603.28767v2
+P034,Lost in Transmission: When and Why LLMs Fail to Reason Globally,Base paper,Base paper,B2,1,https://arxiv.org/abs/2505.08140v5
+P035,Mind-Brush: Integrating Agentic Cognitive Search and Reasoning into Image Generation,Application paper,AIGC,G2,1,https://arxiv.org/abs/2602.01756v1
+P036,SimStep: Human-in-the-Loop Authoring of Interactive Educational Simulations Through Task-Level Abstractions,Application paper,XR tutorial,X0,1,https://doi.org/10.1145/3772318.3791514
+P037,SLM-MUX: Orchestrating Small Language Models for Reasoning,Method paper,Method paper,M6,1,https://arxiv.org/abs/2510.05077
+P038,"“I’m Not Sure, But...”: Examining the Impact of Large Language Models’ Uncertainty Expression on User Reliance and Trust",Application paper,HCI,H2,1,https://doi.org/10.1145/3630106.3658941
+P039,Make-a-Story: Visual Memory Conditioned Consistent Story Generation,Application paper,AIGC,G2,1,https://github.com/ubc-vision/Make-A-Story
+P040,Collaposer: Transforming Photo Collections into Visual Assets for Storytelling with Collages,Application paper,HCI,H3,1,https://arxiv.org/abs/2601.18428v1)；[DOI正式记录
+P041,Learning to Complement Humans,Method paper,Method paper,M1,1,https://arxiv.org/abs/2005.00582v1
+P042,LLMs Struggle to Balance Reasoning and World Knowledge in Causal Narrative Understanding,Base paper,Base paper,B2,2,https://openreview.net/pdf/171146600ae3d44c55031ab5bcc202e937ad640e.pdf
+P043,LLMs Struggle to Perform Counterfactual Reasoning with Parametric Knowledge,Base paper,Base paper,B2,1,https://arxiv.org/abs/2506.15732
+P044,Orthogonal Causal Calibration,Base paper,Base paper,B2,1,https://arxiv.org/abs/2406.01933v2
+P046,Explaining Concept Shift with Interpretable Feature Attribution,Method paper,Method paper,M5,1,https://arxiv.org/abs/2505.20634v1
+P047,Can LLMs Propose Instrumental Variables for Causal Reasoning?,Method paper,Method paper,M5,1,https://cispa.de/en/research/publications/104502-can-llms-propose-instrumental-variables-for-causal-reasoning-
+P048,Utility-Directed Conformal Prediction: A Decision-Aware Framework for Actionable Uncertainty Quantification,Method paper,Method paper,M5,1,https://proceedings.iclr.cc/paper_files/paper/2025/hash/0c6b452f1bbfb6905f6bac957d73b321-Abstract-Conference.html
+P049,Decision-Focused Learning without Differentiable Optimization: Learning Locally Optimized Decision Losses,Method paper,Method paper,M5,1,https://arxiv.org/abs/2203.16067
+P050,Distributionally Robust Feature Selection,Method paper,Method paper,M5,1,https://github.com/maitreyiswaroop/dro-feature-selection
+P051,Fostering the Ecosystem of AI for Social Impact Requires Expanding and Strengthening Evaluation Standards,Base paper,Base paper,B3,1,https://arxiv.org/abs/2510.18238
+P052,Valid Inference with Imperfect Synthetic Data,Method paper,Method paper,M5,1,https://papers.nips.cc/paper_files/paper/2025/hash/ede6376c80b38796c688a77dce9fb227-Abstract-Conference.html
+P053,Superhuman performance of a large language model on the reasoning tasks of a physician,Base paper,Base paper,B1,1,https://doi.org/10.1126/science.adz4433
+P054,Melding the Data-Decisions Pipeline: Decision-Focused Learning for Combinatorial Optimization,Method paper,Method paper,M5,1,https://arxiv.org/abs/1809.05504
+P055,Principles of Mixed-Initiative User Interfaces,Application paper,HCI,H1,1,https://www.microsoft.com/en-us/research/publication/principles-mixed-initiative-user-interfaces/
+P056,Vibe Coding XR: Accelerating AI + XR Prototyping with XR Blocks and Gemini,Application paper,HCI,H4,1,https://xrblocks.github.io/gem)；[代码：google/xrblocks
+P057,Thing2Reality: Enabling Spontaneous Creation of 3D Objects from 2D Content using Generative AI in XR Meetings,Application paper,HCI,H4,1,https://doi.org/10.1145/3746059.3747621
+P058,How Well Can 3D Accessibility Guidelines Support XR Development? An Interview Study with XR Practitioners in Industry,Application paper,HCI,H4,1,https://doi.org/10.1145/3772318.3790520
+P059,Sensible Agent: A Framework for Unobtrusive Interaction with Proactive AR Agents,Application paper,HCI,H1,1,https://doi.org/10.1145/3746059.3747748
+P060,XR Blocks: Accelerating Human-centered AI + XR Innovation,Application paper,HCI,H4,1,https://arxiv.org/abs/2509.25504v1
+P061,AgentHands: Generating Interactive Hand Gestures for Spatially Grounded Agent Conversations in XR,Application paper,XR tutorial,X0,1,https://doi.org/10.1145/3772318.3790938
+P062,InstructPipe: Generating Visual Blocks Pipelines with Human Instructions and LLMs,Application paper,HCI,H3,1,https://doi.org/10.1145/3706598.3713905
+P067,τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains,Base paper,Base paper,B1,1,https://arxiv.org/abs/2406.12045v1
+P079,Thinking in 360°: Humanoid Visual Search in the Wild,Method paper,Method paper,M4,1,https://arxiv.org/abs/2511.20351v2
+P094,SaaS-Bench: Can Computer-Use Agents Leverage Real-World SaaS to Solve Professional Workflows?,Base paper,Base paper,B1,1,https://arxiv.org/abs/2605.15777v2
+P063,Large Language Models and Causal Inference in Collaboration: A Comprehensive Survey,Base paper,Base paper,B3,1,https://aclanthology.org/2025.findings-naacl.427/
+P141,Watch-And-Help: A Challenge for Social Perception and Human-AI Collaboration,Application paper,HCI,H1,1,https://arxiv.org/abs/2010.09890v2
+P142,Alchemy: A Benchmark and Analysis Toolkit for Meta-Reinforcement Learning Agents,Base paper,Base paper,B4,1,https://arxiv.org/abs/2102.02926v3
+P143,Interactive Visual Reasoning under Uncertainty,Base paper,Base paper,B1,1,https://arxiv.org/abs/2206.09203v2
+P064,Causality Model for Semantic Understanding on Videos,Method paper,Method paper,M4,1,https://arxiv.org/abs/2503.12447v1
+P065,Human-in-the-Loop through Chain-of-Thought,Application paper,HCI,H2,1,https://arxiv.org/abs/2306.07932v2
+P144,Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation,Method paper,Method paper,M5,1,https://arxiv.org/abs/2302.09664v3
+P066,Let’s Verify Step by Step,Method paper,Method paper,M2,1,https://proceedings.iclr.cc/paper_files/paper/2024/file/aca97732e30bcf1303bc22ac3924fd16-Paper-Conference.pdf
+P145,"Generative Agent-Based Modeling with Actions Grounded in Physical, Social, or Digital Space Using Concordia",Method paper,Method paper,M1,1,https://arxiv.org/abs/2312.03664v2
+P162,Timestep Embedding Tells: It's Time to Cache for Video Diffusion Model,Method paper,Method paper,M8,1,https://arxiv.org/abs/2411.19108v2
+P163,Automating the Search for Artificial Life with Foundation Models,Application paper,AIGC,G4,1,https://arxiv.org/abs/2412.17799v2
+P146,ExpertAF: Expert Actionable Feedback from Video,Application paper,XR tutorial,X0,1,https://openaccess.thecvf.com/content/CVPR2025/papers/Ashutosh_ExpertAF_Expert_Actionable_Feedback_from_Video_CVPR_2025_paper.pdf
+P147,DreamGarden: A Designer Assistant for Growing Games from a Single Prompt,Application paper,HCI,H3,1,https://www.microsoft.com/en-us/research/publication/dreamgarden-a-designer-assistant-for-growing-games-from-a-single-prompt/?lang=ko-kr
+P148,Detecting Hallucinations in Large Language Models Using Semantic Entropy,Method paper,Method paper,M5,1,https://doi.org/10.1038/s41586-024-07421-0
+P149,Learning to Clarify: Multi-turn Conversations with Action-Based Contrastive Self-Training,Method paper,Method paper,M1,1,https://openreview.net/forum?id=SIE6VFps9x
+P150,"WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment",Method paper,Method paper,M3,1,https://proceedings.neurips.cc/paper_files/paper/2024/hash/820c61a0cd419163ccbd2c33b268816e-Abstract-Conference.html
+P151,COMBO: Compositional World Models for Embodied Multi-Agent Cooperation,Method paper,Method paper,M3,1,https://arxiv.org/abs/2404.10775v3
+P152,DiscoveryWorld: A Virtual Environment for Developing and Evaluating Automated Scientific Discovery Agents,Base paper,Base paper,B4,1,https://proceedings.neurips.cc/paper_files/paper/2024/hash/13836f251823945316ae067350a5c366-Abstract-Datasets_and_Benchmarks_Track.html
+P153,Internal Consistency and Self-Feedback in Large Language Models: A Survey,Base paper,Base paper,B3,1,https://arxiv.org/abs/2407.14507v3
+P164,Diffusion as Shader: 3D-aware Video Diffusion for Versatile Video Generation Control,Application paper,AIGC,G1,1,https://arxiv.org/abs/2501.03847v2
+P068,TPDiff: Temporal Pyramid Video Diffusion Model,Method paper,Method paper,M8,1,https://arxiv.org/abs/2503.09566v1
+P069,VideoMind: A Chain-of-LoRA Agent for Temporal-Grounded Video Reasoning,Method paper,Method paper,M4,1,https://arxiv.org/abs/2503.13444v3
+P070,Impossible Videos,Base paper,Base paper,B1,1,https://arxiv.org/abs/2503.14378v1
+P072,Wan-Move: Motion-controllable Video Generation via Latent Trajectory Guidance,Application paper,AIGC,G1,1,https://arxiv.org/abs/2512.08765v1
+P154,Text2World: Benchmarking Large Language Models for Symbolic World Model Generation,Base paper,Base paper,B1,1,https://aclanthology.org/2025.findings-acl.1337/
+P073,The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity,Base paper,Base paper,B2,1,https://machinelearning.apple.com/research/illusion-of-thinking
+P074,Beyond Single-Sentence Prompts: Upgrading Value Alignment Benchmarks with Dialogues and Stories,Base paper,Base paper,B1,1,https://arxiv.org/abs/2503.22115v1
+P075,Chain-of-Evidence Multimodal Reasoning for Few-shot Temporal Action Localization,Method paper,Method paper,M4,1,https://arxiv.org/abs/2504.13460v5
+P076,Interactive Reasoning: Visualizing and Controlling Chain-of-Thought Reasoning in Large Language Models,Application paper,HCI,H2,1,https://arxiv.org/abs/2506.23678v1
+P077,Is Chain-of-Thought Reasoning of LLMs a Mirage? A Data Distribution Lens,Base paper,Base paper,B2,1,https://arxiv.org/abs/2508.01191v6
+P155,EgoPlan-Bench2: A Benchmark for Multimodal Large Language Model Planning in Real-World Scenarios,Base paper,Base paper,B1,1,https://arxiv.org/abs/2412.04447v2
+P156,PoE-World: Compositional World Modeling with Products of Programmatic Experts,Method paper,Method paper,M3,1,https://arxiv.org/abs/2505.10819v4
+P078,Seeing but Not Believing: Probing the Disconnect Between Visual Attention and Answer Correctness in VLMs,Method paper,Method paper,M4,1,https://arxiv.org/abs/2510.17771v1
+P157,Exploring Exploration with Foundation Agents in Interactive Environments,Base paper,Base paper,B4,1,https://arxiv.org/abs/2412.06438v2
+P080,Vis-CoT: A Human-in-the-Loop Framework for Interactive Visualization and Intervention in LLM Chain-of-Thought Reasoning,Application paper,HCI,H2,1,https://arxiv.org/abs/2509.01412v2
+P158,RULER-Bench: Probing Rule-based Reasoning Abilities of Next-level Video Generation Models for Vision Foundation Intelligence,Base paper,Base paper,B1,1,https://arxiv.org/abs/2512.02622v1
+P071,Counterfactual World Models via Digital Twin-conditioned Video Diffusion,Application paper,AIGC,G4,1,https://arxiv.org/abs/2511.17481v1
+P081,Olaf-World: Orienting Latent Actions for Video World Modeling,Method paper,Method paper,M3,1,https://arxiv.org/abs/2602.10104v2
+P083,Causal-JEPA: Learning World Models through Object-Level Latent Masking,Application paper,AIGC,G4,1,https://arxiv.org/abs/2602.11389v2
+P084,CRONOS: Benchmarking Counterfactual Physical Consistency in Video Models,Base paper,Base paper,B1,1,https://arxiv.org/abs/2605.23699v1
+P085,SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models,Application paper,AIGC,G4,1,https://arxiv.org/abs/2609.02886v1
+P086,"See It, Say It, Sorted: An Iterative Training-Free Framework for Visually-Grounded Multimodal Reasoning in LVLMs",Method paper,Method paper,M4,1,https://arxiv.org/abs/2602.21497v2
+P087,Don't Blink: Evidence Collapse during Multimodal Reasoning,Method paper,Method paper,M4,1,https://arxiv.org/abs/2604.04207v1
+P088,V-Retrver: Evidence-Driven Agentic Reasoning for Universal Multimodal Retrieval,Method paper,Method paper,M4,1,https://arxiv.org/abs/2602.06034v2
+P089,Fill the GAP: A Granular Alignment Paradigm for Visual Reasoning in Multimodal Large Language Models,Method paper,Method paper,M2,1,https://arxiv.org/abs/2605.12374v4
+P090,From <Answer> to <Think>: Multi-Dimensional Supervision of Reasoning Process for LLM Optimization,Method paper,Method paper,M2,1,https://openreview.net/pdf?id=MjJrhfAmRG
+P159,GPS: Graph-guided Proactive Information Seeking in Large Language Models,Method paper,Method paper,M1,1,https://proceedings.iclr.cc/paper_files/paper/2026/hash/1f49b7fbd7c7afc52c1db0d4ed1a338d-Abstract-Conference.html
+P091,Improving Human Verification of LLM Reasoning through Interactive Explanation Interfaces,Application paper,HCI,H2,1,https://doi.org/10.1145/3742413.3789134
+P092,Improving Visual Reasoning with Iterative Evidence Refinement,Method paper,Method paper,M4,1,https://arxiv.org/abs/2603.14117v1
+P093,Instruction-Evidence Contrastive Dual-Stream Decoding for Grounded Vision-Language Reasoning,Method paper,Method paper,M4,1,https://arxiv.org/abs/2604.25809v2
+P160,Fictional Worldbuilding: Multi-Agent LLM Collaboration with Hierarchical Context Compression and Iterative Review,Application paper,AIGC,G2,1,https://arxiv.org/abs/2607.09403v1
+P095,TIR-Flow: Active Video Search and Reasoning with Frozen VLMs,Method paper,Method paper,M4,1,https://arxiv.org/abs/2601.06176v1
+P096,TSRBench: A Comprehensive Multi-task Multi-modal Time Series Reasoning Benchmark for Generalist Models,Base paper,Base paper,B1,1,https://arxiv.org/abs/2601.18744v2
+P097,Useful Memories Become Faulty When Continuously Updated by LLMs,Base paper,Base paper,B2,1,https://arxiv.org/abs/2605.12978v1
+P098,First Logit Boosting: Visual Grounding Method to Mitigate Object Hallucination in Large Vision-Language Models,Method paper,Method paper,M4,1,https://arxiv.org/abs/2604.00455v1
+P099,VGS-Decoding: Visual Grounding Score Guided Decoding for Hallucination Mitigation in Medical VLMs,Method paper,Method paper,M4,1,https://arxiv.org/abs/2603.20314v1
+P100,When Thinking Drifts: Evidential Grounding for Robust Video Reasoning,Method paper,Method paper,M4,1,https://arxiv.org/abs/2510.06077
+P101,Computational Understanding of Narratives: A Survey,Base paper,Base paper,B3,1,https://doi.org/10.1109/ACCESS.2022.3205314
+P161,Learning Long-form Movie Prior via Large Language Models,Application paper,AIGC,G2,1,https://doi.org/10.1109/TPAMI.2026.3729756)；[作者发表列表
+P103,Training Large Language Models to Reason in a Continuous Latent Space,Method paper,Method paper,M6,1,https://arxiv.org/abs/2412.06769v3
+P165,VIMA: General Robot Manipulation with Multimodal Prompts,Method paper,Method paper,M3,1,https://arxiv.org/abs/2210.03094
+P168,MimicPlay: Long-Horizon Imitation Learning by Watching Human Play,Method paper,Method paper,M3,1,https://arxiv.org/abs/2302.12422
+P175,Modeling Dynamic Environments with Scene Graph Memory,Method paper,Method paper,M4,1,https://arxiv.org/abs/2305.17537
+P176,Sonicverse: A Multisensory Simulation Platform for Embodied Household Agents that See and Hear,Base paper,Base paper,B4,1,https://arxiv.org/abs/2306.00923
+P177,The ObjectFolder Benchmark: Multisensory Learning with Neural and Real Objects,Base paper,Base paper,B4,1,https://arxiv.org/abs/2306.00956
+P179,Dynamic-Resolution Model Learning for Object Pile Manipulation,Method paper,Method paper,M3,1,https://arxiv.org/abs/2306.16700
+P182,VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models,Method paper,Method paper,M3,1,https://arxiv.org/abs/2307.05973
+P184,Primitive Skill-based Robot Learning from Human Evaluative Feedback,Method paper,Method paper,M1,1,https://arxiv.org/abs/2307.15801
+P185,Sequential Dexterity: Chaining Dexterous Policies for Long-Horizon Manipulation,Method paper,Method paper,M3,1,https://arxiv.org/abs/2309.00987
+P186,MindAgent: Emergent Gaming Interaction,Base paper,Base paper,B4,1,https://arxiv.org/abs/2309.09971
+P188,D$^3$Fields: Dynamic 3D Descriptor Fields for Zero-Shot Generalizable Rearrangement,Method paper,Method paper,M4,1,https://arxiv.org/abs/2309.16118
+P189,Mini-BEHAVIOR: A Procedurally Generated Benchmark for Long-horizon Decision-Making in Embodied AI,Base paper,Base paper,B4,1,https://arxiv.org/abs/2310.01824
+P192,ZeroNVS: Zero-Shot 360-Degree View Synthesis from a Single Image,Application paper,AIGC,G3,1,https://arxiv.org/abs/2310.17994
+P193,NOIR: Neural Signal Operated Intelligent Robots for Everyday Activities,Application paper,HCI,H1,1,https://arxiv.org/abs/2311.01454
+P201,Chain of Code: Reasoning with a Language Model-Augmented Code Emulator,Method paper,Method paper,M6,1,https://arxiv.org/abs/2312.04474
+P202,Photorealistic Video Generation with Diffusion Models,Method paper,Method paper,M8,1,https://arxiv.org/abs/2312.06662
+P205,Model-Based Control with Sparse Neural Dynamics,Method paper,Method paper,M3,1,https://arxiv.org/abs/2312.12791
+P210,Agent AI: Surveying the Horizons of Multimodal Interaction,Base paper,Base paper,B3,1,https://arxiv.org/abs/2401.03568
+P215,An Interactive Agent Foundation Model,Method paper,Method paper,M3,1,https://arxiv.org/abs/2402.05929
+P218,Position Paper: Agent AI Towards a Holistic Intelligence,Base paper,Base paper,B3,1,https://arxiv.org/abs/2403.00833
+P220,DexCap: Scalable and Portable Mocap Data Collection System for Dexterous Manipulation,Method paper,Method paper,M3,1,https://arxiv.org/abs/2403.07788
+P221,"BEHAVIOR-1K: A Human-Centered, Embodied AI Benchmark with 1,000 Everyday Activities and Realistic Simulation",Base paper,Base paper,B4,1,https://arxiv.org/abs/2403.09227
+P227,BEHAVIOR Vision Suite: Customizable Dataset Generation via Simulation,Base paper,Base paper,B4,1,https://arxiv.org/abs/2405.09546
+P229,TRANSIC: Sim-to-Real Policy Transfer by Learning from Online Correction,Method paper,Method paper,M1,1,https://arxiv.org/abs/2405.10315
+P238,OccFusion: Rendering Occluded Humans with Generative Diffusion Priors,Application paper,AIGC,G3,1,https://arxiv.org/abs/2407.00316
+P244,ReKep: Spatio-Temporal Reasoning of Relational Keypoint Constraints for Robotic Manipulation,Method paper,Method paper,M3,1,https://arxiv.org/abs/2409.01652
+P249,Embodied Agent Interface: Benchmarking LLMs for Embodied Decision Making,Base paper,Base paper,B4,1,https://arxiv.org/abs/2410.07166
+P250,Automated Creation of Digital Cousins for Robust Policy Learning,Base paper,Base paper,B4,1,https://arxiv.org/abs/2410.07408
+P251,ARCap: Collecting High-quality Human Demonstrations for Robot Learning with Augmented Reality Feedback,Application paper,XR tutorial,X0,1,https://arxiv.org/abs/2410.08464
+P257,HourVideo: 1-Hour Video-Language Understanding,Base paper,Base paper,B1,1,https://arxiv.org/abs/2411.04998
+P263,The Language of Motion: Unifying Verbal and Non-verbal Language of 3D Human Motion,Method paper,Method paper,M3,1,https://arxiv.org/abs/2412.10523
+P266,"Thinking in Space: How Multimodal Large Language Models See, Remember, and Recall Spaces",Base paper,Base paper,B1,1,https://arxiv.org/abs/2412.14171
+P267,"Why Automate This? Exploring Correlations Between Desire for Robotic Automation, Invested Time and Well-Being",Application paper,HCI,H1,1,https://arxiv.org/abs/2501.06348
+P272,A Real-to-Sim-to-Real Approach to Robotic Manipulation with VLM-Generated Iterative Keypoint Rewards,Method paper,Method paper,M3,1,https://arxiv.org/abs/2502.08643
+P280,BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities,Base paper,Base paper,B4,1,https://arxiv.org/abs/2503.05652
+P285,Repurposing 2D Diffusion Models with Gaussian Atlas for 3D Generation,Application paper,AIGC,G3,1,https://arxiv.org/abs/2503.15877
+P287,WorldScore: A Unified Evaluation Benchmark for World Generation,Base paper,Base paper,B1,1,https://arxiv.org/abs/2504.00983
+P289,Chain-of-Modality: Learning Manipulation Programs from Multimodal Human Videos with Vision-Language-Models,Method paper,Method paper,M3,1,https://arxiv.org/abs/2504.13351
+P292,RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning,Method paper,Method paper,M2,1,https://arxiv.org/abs/2504.20073
+P302,MindCube: Spatial Mental Modeling from Limited Views,Base paper,Base paper,B1,1,https://arxiv.org/abs/2506.21458
+P308,VAGEN: Reinforcing World Model Reasoning for Multi-Turn VLM Agents,Method paper,Method paper,M3,1,https://arxiv.org/abs/2510.16907
+P309,MoMaGen: Generating Demonstrations under Soft and Hard Constraints for Multi-Step Bimanual Mobile Manipulation,Base paper,Base paper,B4,1,https://arxiv.org/abs/2510.18316
+P316,ENACT: Evaluating Embodied Cognition with World Modeling of Egocentric Interaction,Base paper,Base paper,B1,1,https://arxiv.org/abs/2511.20937
+P328,QuantiPhy: A Quantitative Benchmark Evaluating Physical Reasoning Abilities of Vision-Language Models,Base paper,Base paper,B1,1,https://arxiv.org/abs/2512.19526
+P330,Dream2Flow: Bridging Video Generation and Open-World Manipulation with 3D Object Flow,Method paper,Method paper,M3,1,https://arxiv.org/abs/2512.24766
+P333,PointWorld: Scaling 3D World Models for In-The-Wild Robotic Manipulation,Method paper,Method paper,M3,1,https://arxiv.org/abs/2601.03782
+P342,Theory of Space: Can Foundation Models Construct Spatial Beliefs through Active Exploration?,Base paper,Base paper,B1,1,https://arxiv.org/abs/2602.07055
+P347,Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs,Method paper,Method paper,M3,1,https://arxiv.org/abs/2602.21198
+P354,MIRAGE: The Illusion of Visual Understanding,Base paper,Base paper,B1,1,https://arxiv.org/abs/2603.21687
+P356,CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation,Method paper,Method paper,M3,1,https://arxiv.org/abs/2603.22435
+P357,IMPASTO: Integrating Model-Based Planning with Learned Dynamics Models for Robotic Oil Painting Reproduction,Method paper,Method paper,M3,1,https://arxiv.org/abs/2603.29315
+P360,RAGEN-2: Reasoning Collapse in Agentic RL,Method paper,Method paper,M2,1,https://arxiv.org/abs/2604.06268
+P362,HumanScore: Benchmarking Human Motions in Generated Videos,Base paper,Base paper,B1,1,https://arxiv.org/abs/2604.20157
+P372,ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop,Base paper,Base paper,B1,1,https://arxiv.org/abs/2605.18746
+P376,Planning with the Views,Base paper,Base paper,B1,1,https://arxiv.org/abs/2605.29563
+P389,SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation,Base paper,Base paper,B4,1,https://arxiv.org/abs/2606.28276
+P394,RoboTTT: Context Scaling for Robot Policies,Method paper,Method paper,M3,1,https://arxiv.org/abs/2607.15275
+P396,Masked Visual Actions for Unified World Modeling,Method paper,Method paper,M3,1,https://arxiv.org/abs/2607.19343
+P398,TrAct: Bridging Robot Control and Visual Prediction with Visual Tracks,Method paper,Method paper,M3,1,https://arxiv.org/abs/2608.24101
+P400,"One Demonstration, Many Objects: Generalizing Manipulation via Local Contact Geometry",Method paper,Method paper,M3,1,https://arxiv.org/abs/2609.01938
+P169,3D Video Loops from Asynchronous Input,Application paper,AIGC,G3,1,https://arxiv.org/abs/2303.05312
+P171,AvatarCraft: Transforming Text into Neural Human Avatars with Parameterized Shape and Pose Control,Application paper,AIGC,G3,1,https://arxiv.org/abs/2303.17606
+P172,Learning Neural Duplex Radiance Fields for Real-Time View Synthesis,Application paper,AIGC,G3,1,https://arxiv.org/abs/2304.10537
+P174,Text2NeRF: Text-Driven 3D Scene Generation with Neural Radiance Fields,Application paper,AIGC,G3,1,https://arxiv.org/abs/2305.11588
+P191,VQ-NeRF: Neural Reflectance Decomposition and Editing with Vector Quantization,Application paper,AIGC,G3,1,https://arxiv.org/abs/2310.11864
+P196,HumanRef: Single Image to 3D Human Generation via Reference-Guided Diffusion,Application paper,AIGC,G3,1,https://arxiv.org/abs/2311.16961
+P199,Mesh-Guided Neural Implicit Field Editing,Application paper,AIGC,G3,1,https://arxiv.org/abs/2312.02157
+P203,CAD: Photorealistic 3D Generation via Adversarial Distillation,Application paper,AIGC,G3,1,https://arxiv.org/abs/2312.06663
+P204,HeadArtist: Text-conditioned 3D Head Generation with Self Score Distillation,Application paper,AIGC,G3,1,https://arxiv.org/abs/2312.07539
+P213,Advances in 3D Generation: A Survey,Base paper,Base paper,B3,1,https://arxiv.org/abs/2401.17807
+P214,Direct-a-Video: Customized Video Generation with User-Directed Camera Movement and Object Motion,Application paper,AIGC,G1,1,https://arxiv.org/abs/2402.03162
+P222,RaFE: Generative Radiance Fields Restoration,Application paper,AIGC,G3,1,https://arxiv.org/abs/2404.03654
+P225,AniClipart: Clipart Animation with Text-to-Video Priors,Application paper,AIGC,G1,1,https://arxiv.org/abs/2404.12347
+P226,Learn2Talk: 3D Talking Face Learns from 2D Talking Face,Application paper,AIGC,G3,1,https://arxiv.org/abs/2404.12888
+P230,EG4D: Explicit Generation of 4D Object without Score Distillation,Application paper,AIGC,G3,1,https://arxiv.org/abs/2405.18132
+P239,Chat2Layout: Interactive 3D Furniture Layout with a Multimodal LLM,Application paper,HCI,H3,1,https://arxiv.org/abs/2407.21333
+P245,LVCD: Reference-based Lineart Video Colorization with Diffusion Models,Application paper,AIGC,G1,1,https://arxiv.org/abs/2409.12960
+P246,Generative Object Insertion in Gaussian Splatting with a Multi-View Diffusion Model,Application paper,AIGC,G3,1,https://arxiv.org/abs/2409.16938
+P253,SGEdit: Bridging LLM with Text2Image Generative Model for Scene Graph-based Image Editing,Application paper,AIGC,G1,1,https://arxiv.org/abs/2410.11815
+P261,Distractor-free Generalizable 3D Gaussian Splatting,Application paper,AIGC,G3,1,https://arxiv.org/abs/2411.17605
+P268,TalkingEyes: Pluralistic Speech-Driven 3D Eye Gaze Animation,Application paper,AIGC,G3,1,https://arxiv.org/abs/2501.09921
+P283,I2V3D: Controllable image-to-video generation with 3D guidance,Application paper,AIGC,G1,1,https://arxiv.org/abs/2503.09733
+P284,MTV-Inpaint: Multi-Task Long Video Inpainting,Application paper,AIGC,G1,1,https://arxiv.org/abs/2503.11412
+P288,AnimeGamer: Infinite Anime Life Simulation with Next Game State Prediction,Application paper,AIGC,G2,1,https://arxiv.org/abs/2504.01014
+P291,CasaGPT: Cuboid Arrangement and Scene Assembly for Interior Design,Application paper,AIGC,G3,1,https://arxiv.org/abs/2504.19478
+P325,Animus3D: Text-driven 3D Animation via Motion Score Distillation,Application paper,AIGC,G3,1,https://arxiv.org/abs/2512.12534
+P344,Exploring a Multimodal Chatbot as a Facilitator in Therapeutic Art Activity,Application paper,HCI,H3,1,https://arxiv.org/abs/2602.14183
+P345,Ani3DHuman: Photorealistic 3D Human Animation with Self-guided Stochastic Sampling,Application paper,AIGC,G3,1,https://arxiv.org/abs/2602.19089
+P383,Cinematic Compositing Using Character-Environment-Harmonized Video Generation Models,Application paper,AIGC,G1,1,https://arxiv.org/abs/2606.20233
+P385,BoxCtrl: 3D-Aware Visual Prompting for Geometric Image Editing,Application paper,AIGC,G1,1,https://arxiv.org/abs/2606.23270
+P393,ThinkBLOX: 3D Indoor Scene Generation with Progressive Reasoning,Application paper,AIGC,G3,1,https://arxiv.org/abs/2607.13539
+P200,Return of Unconditional Generation: A Self-supervised Representation Generation Method,Method paper,Method paper,M8,1,https://arxiv.org/abs/2312.03701
+P212,Deconstructing Denoising Diffusion Models for Self-Supervised Learning,Method paper,Method paper,M7,1,https://arxiv.org/abs/2401.14404
+P232,TetSphere Splatting: Representing High-Quality Geometry with Lagrangian Volumetric Meshes,Application paper,AIGC,G3,1,https://arxiv.org/abs/2405.20283
+P233,Physically Compatible 3D Object Modeling from a Single Image,Application paper,AIGC,G4,1,https://arxiv.org/abs/2405.20510
+P236,Autoregressive Image Generation without Vector Quantization,Method paper,Method paper,M8,1,https://arxiv.org/abs/2406.11838
+P248,Scaling Proprioceptive-Visual Learning with Heterogeneous Pre-trained Transformers,Method paper,Method paper,M3,1,https://arxiv.org/abs/2409.20537
+P254,Fluid: Scaling Autoregressive Text-to-image Generative Models with Continuous Tokens,Method paper,Method paper,M8,1,https://arxiv.org/abs/2410.13863
+P275,Is Noise Conditioning Necessary for Denoising Generative Models?,Method paper,Method paper,M8,1,https://arxiv.org/abs/2502.13129
+P277,Fractal Generative Models,Method paper,Method paper,M8,1,https://arxiv.org/abs/2502.17437
+P282,Denoising Hamiltonian Network for Physical Reasoning,Method paper,Method paper,M6,1,https://arxiv.org/abs/2503.07596
+P293,Mean Flows for One-step Generative Modeling,Method paper,Method paper,M8,1,https://arxiv.org/abs/2505.13447
+P298,Diffuse and Disperse: Image Generation with Representation Regularization,Method paper,Method paper,M8,1,https://arxiv.org/abs/2506.09027
+P312,Back to Basics: Let Denoising Generative Models Denoise,Method paper,Method paper,M8,1,https://arxiv.org/abs/2511.13720
+P313,ARC Is a Vision Problem!,Method paper,Method paper,M6,1,https://arxiv.org/abs/2511.14761
+P318,Improved Mean Flows: On the Challenges of Fastforward Generative Models,Method paper,Method paper,M8,1,https://arxiv.org/abs/2512.02012
+P324,Bidirectional Normalizing Flow: From Data to Noise and Back,Method paper,Method paper,M8,1,https://arxiv.org/abs/2512.10953
+P336,One-step Latent-free Image Generation with Pixel Mean Flows,Method paper,Method paper,M8,1,https://arxiv.org/abs/2601.22158
+P340,Generative Modeling via Drifting,Method paper,Method paper,M8,1,https://arxiv.org/abs/2602.04770
+P346,GeoPT: Scaling Physics Simulation via Lifted Geometric Pre-Training,Method paper,Method paper,M6,1,https://arxiv.org/abs/2602.20399
+P363,Image Generators are Generalist Vision Learners,Method paper,Method paper,M7,1,https://arxiv.org/abs/2604.20329
+P392,Video Generation Models are General-Purpose Vision Learners,Method paper,Method paper,M7,1,https://arxiv.org/abs/2607.09024
+P166,Tune-A-Video: One-Shot Tuning of Image Diffusion Models for Text-to-Video Generation,Method paper,Method paper,M8,1,https://arxiv.org/abs/2212.11565
+P170,Affordance Grounding from Demonstration Video to Target Image,Method paper,Method paper,M4,1,https://arxiv.org/abs/2303.14644
+P173,HOSNeRF: Dynamic Human-Object-Scene Neural Radiance Fields from a Single Video,Application paper,AIGC,G3,1,https://arxiv.org/abs/2304.12281
+P181,EgoVLPv2: Egocentric Video-Language Pre-training with Fusion in the Backbone,Method paper,Method paper,M7,1,https://arxiv.org/abs/2307.05463
+P187,Show-1: Marrying Pixel and Latent Diffusion Models for Text-to-Video Generation,Method paper,Method paper,M8,1,https://arxiv.org/abs/2309.15818
+P402,MotionDirector: Motion Customization of Text-to-Video Diffusion Models,Application paper,AIGC,G1,1,https://arxiv.org/abs/2310.08465
+P190,DynVideo-E: Harnessing Dynamic NeRF for Large-Scale Motion- and View-Change Human-Centric Video Editing,Application paper,AIGC,G3,1,https://arxiv.org/abs/2310.10624
+P195,XAGen: 3D Expressive Human Avatars Generation,Application paper,AIGC,G3,1,https://arxiv.org/abs/2311.13574
+P403,MagicAnimate: Temporally Consistent Human Image Animation using Diffusion Model,Application paper,AIGC,G1,1,https://arxiv.org/abs/2311.16498
+P197,Ego-Exo4D: Understanding Skilled Human Activity from First- and Third-Person Perspectives,Base paper,Base paper,B4,1,https://arxiv.org/abs/2311.18259
+P404,DeformGS: Scene Flow in Highly Deformable Scenes for Deformable Object Manipulation,Application paper,AIGC,G3,1,https://arxiv.org/abs/2312.00583
+P198,VideoSwap: Customized Video Subject Swapping with Interactive Semantic Point Correspondence,Application paper,AIGC,G1,1,https://arxiv.org/abs/2312.02087
+P206,ASSISTGUI: Task-Oriented Desktop Graphical User Interface Automation,Method paper,Method paper,M1,1,https://arxiv.org/abs/2312.13108
+P207,ShowRoom3D: Text to High-Quality 3D Room Generation Using 3D Priors,Application paper,AIGC,G3,1,https://arxiv.org/abs/2312.13324
+P209,Moonshot: Towards Controllable Video Generation and Editing with Multimodal Conditions,Application paper,AIGC,G1,1,https://arxiv.org/abs/2401.01827
+P211,Towards A Better Metric for Text-to-Video Generation,Base paper,Base paper,B1,1,https://arxiv.org/abs/2401.07781
+P216,Bring Your Own Character: A Holistic Solution for Automatic Facial Animation Generation of Customized Characters,Application paper,AIGC,G3,1,https://arxiv.org/abs/2402.13724
+P219,DragAnything: Motion Control for Anything using Entity Representation,Application paper,AIGC,G1,1,https://arxiv.org/abs/2403.07420
+P234,VideoGUI: A Benchmark for GUI Automation from Instructional Videos,Base paper,Base paper,B1,1,https://arxiv.org/abs/2406.10227
+P235,VideoLLM-online: Online Video Large Language Model for Streaming Video,Method paper,Method paper,M4,1,https://arxiv.org/abs/2406.11816
+P240,Learning Video Context as Interleaved Multimodal Sequences,Application paper,AIGC,G2,1,https://arxiv.org/abs/2407.21757
+P242,Show-o: One Single Transformer to Unify Multimodal Understanding and Generation,Method paper,Method paper,M8,1,https://arxiv.org/abs/2408.12528
+P243,VideoLLM-MoD: Efficient Video-Language Streaming with Mixture-of-Depths Vision Computation,Method paper,Method paper,M8,1,https://arxiv.org/abs/2408.16730
+P247,High Quality Human Image Animation using Regional Supervision and Motion Blur Condition,Application paper,AIGC,G1,1,https://arxiv.org/abs/2409.19580
+P252,ControLRM: Fast and Controllable 3D Generation via Large Reconstruction Model,Application paper,AIGC,G3,1,https://arxiv.org/abs/2410.09592
+P255,Skinned Motion Retargeting with Dense Geometric Interaction Perception,Method paper,Method paper,M3,1,https://arxiv.org/abs/2410.20986
+P258,ReCapture: Generative Video Camera Controls for User-Provided Videos using Masked Video Fine-Tuning,Application paper,AIGC,G1,1,https://arxiv.org/abs/2411.05003
+P259,MovieBench: A Hierarchical Movie Level Dataset for Long Video Generation,Base paper,Base paper,B4,1,https://arxiv.org/abs/2411.15262
+P260,ShowUI: One Vision-Language-Action Model for GUI Visual Agent,Method paper,Method paper,M1,1,https://arxiv.org/abs/2411.17465
+P269,MakeAnything: Harnessing Diffusion Transformers for Multi-Domain Procedural Sequence Generation,Application paper,AIGC,G1,1,https://arxiv.org/abs/2502.01572
+P270,UniMoD: Efficient Unified Multimodal Transformers with Mixture-of-Depths,Method paper,Method paper,M8,1,https://arxiv.org/abs/2502.06474
+P271,WorldGUI: An Interactive Benchmark for Desktop GUI Automation from Any Starting Point,Base paper,Base paper,B1,1,https://arxiv.org/abs/2502.08047
+P274,PhysReason: A Comprehensive Benchmark towards Physics-Based Reasoning,Base paper,Base paper,B1,1,https://arxiv.org/abs/2502.12054
+P278,Difix3D+: Improving 3D Reconstructions with Single-Step Diffusion Models,Application paper,AIGC,G3,1,https://arxiv.org/abs/2503.01774
+P279,DoraCycle: Domain-Oriented Adaptation of Unified Generative Model in Multimodal Cycles,Method paper,Method paper,M8,1,https://arxiv.org/abs/2503.03651
+P281,Automated Movie Generation via Multi-Agent CoT Planning,Application paper,AIGC,G2,1,https://arxiv.org/abs/2503.07314
+P286,Long-Context Autoregressive Video Modeling with Next-Frame Prediction,Application paper,AIGC,G2,1,https://arxiv.org/abs/2503.19325
+P290,LiveCC: Learning Video LLM with Streaming Speech Transcription at Scale,Method paper,Method paper,M4,1,https://arxiv.org/abs/2504.16030
+P296,UniRL: Self-Improving Unified Multimodal Models via Supervised and Reinforcement Learning,Method paper,Method paper,M2,1,https://arxiv.org/abs/2505.23380
+P297,macOSWorld: A Multilingual Interactive Benchmark for GUI Agents,Base paper,Base paper,B1,1,https://arxiv.org/abs/2506.04135
+P300,Show-o2: Improved Native Unified Multimodal Models,Method paper,Method paper,M8,1,https://arxiv.org/abs/2506.15564
+P301,FramePrompt: In-context Controllable Animation with Zero Structural Changes,Application paper,AIGC,G1,1,https://arxiv.org/abs/2506.17301
+P305,Code2Video: A Code-centric Paradigm for Educational Video Generation,Application paper,XR tutorial,X0,1,https://arxiv.org/abs/2510.01174
+P306,Paper2Video: Automatic Video Generation from Scientific Papers,Application paper,XR tutorial,X0,1,https://arxiv.org/abs/2510.05096
+P314,Computer-Use Agents as Judges for Generative User Interface,Method paper,Method paper,M1,1,https://arxiv.org/abs/2511.15567
+P317,WorldWander: Bridging Egocentric and Exocentric Worlds in Video Generation,Application paper,AIGC,G1,1,https://arxiv.org/abs/2511.22098
+P319,X-Humanoid: Robotize Human Videos to Generate Humanoid Videos at Scale,Application paper,AIGC,G1,1,https://arxiv.org/abs/2512.04537
+P321,H2R-Grounder: A Paired-Data-Free Paradigm for Translating Human Interaction Videos into Physically Grounded Robot Videos,Application paper,AIGC,G1,1,https://arxiv.org/abs/2512.09406
+P327,Mitty: Diffusion-based Human-to-Robot Video Generation,Application paper,AIGC,G1,1,https://arxiv.org/abs/2512.17253
+P331,ShowUI-$π$: Flow-based Generative Models as GUI Dexterous Hands,Method paper,Method paper,M1,1,https://arxiv.org/abs/2512.24965
+P335,ShowUI-Aloha: Human-Taught GUI Agent,Method paper,Method paper,M1,1,https://arxiv.org/abs/2601.07181
+P341,World-VLA-Loop: Closed-Loop Learning of Video World Model and VLA Policy,Application paper,AIGC,G4,1,https://arxiv.org/abs/2602.06508
+P348,Kiwi-Edit: Versatile Video Editing via Instruction and Reference Guidance,Application paper,AIGC,G1,1,https://arxiv.org/abs/2603.02175
+P355,P-Flow: Prompting Visual Effects Generation,Application paper,AIGC,G1,1,https://arxiv.org/abs/2603.22091
+P359,OpenWorldLib: A Unified Codebase and Definition of Advanced World Models,Base paper,Base paper,B4,1,https://arxiv.org/abs/2604.04707
+P361,GameWorld: Towards Standardized and Verifiable Evaluation of Multimodal Game Agents,Base paper,Base paper,B1,1,https://arxiv.org/abs/2604.07429
+P365,Sparkle: Realizing Lively Instruction-Guided Video Background Replacement via Decoupled Guidance,Application paper,AIGC,G1,1,https://arxiv.org/abs/2605.06535
+P367,OmniHumanoid: Streaming Cross-Embodiment Video Generation with Paired-Free Adaptation,Application paper,AIGC,G1,1,https://arxiv.org/abs/2605.12038
+P368,World Action Models: The Next Frontier in Embodied AI,Base paper,Base paper,B3,1,https://arxiv.org/abs/2605.12090
+P369,AnyFlow: Any-Step Video Diffusion Model with On-Policy Flow Map Distillation,Method paper,Method paper,M8,1,https://arxiv.org/abs/2605.13724
+P370,StreamingEffect: Real-Time Human-Centric Video Effect Generation,Application paper,AIGC,G1,1,https://arxiv.org/abs/2605.17019
+P371,VISTA: Triplet-Supervised Video Style Transfer with Diffusion Transformers,Application paper,AIGC,G1,1,https://arxiv.org/abs/2605.17312
+P373,SWEET: Sparse World Modeling with Image Editing for Embodied Task Execution,Method paper,Method paper,M3,1,https://arxiv.org/abs/2605.19319
+P377,PAI-Studio: Cinematic Video Background Replacement with Camera-Aware Motion,Application paper,AIGC,G1,1,https://arxiv.org/abs/2606.01399
+P379,Demo2Tutorial: From Human Experience to Multimodal Software Tutorials,Application paper,XR tutorial,X0,1,https://arxiv.org/abs/2606.03951
+P380,Dream.exe: Can Video Generation Models Dream Executable Robot Manipulation?,Base paper,Base paper,B1,1,https://arxiv.org/abs/2606.04811
+P388,Supervise What Survives: Geometry-Guided VLA Adaptation from Synthetic Robot Videos,Method paper,Method paper,M3,1,https://arxiv.org/abs/2606.24448
+P390,ReGRPO: Reflection-Augmented Policy Optimization for Tool-Using Agents,Method paper,Method paper,M2,1,https://arxiv.org/abs/2606.31392
+P401,Show-Harness: Just a VLM Agent Can Play Robots,Method paper,Method paper,M1,1,https://arxiv.org/abs/2609.10522
+P167,Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture,Method paper,Method paper,M7,1,https://arxiv.org/abs/2301.08243
+P178,Introduction to Latent Variable Energy-Based Models: A Path Towards Autonomous Machine Intelligence,Base paper,Base paper,B3,1,https://arxiv.org/abs/2306.02572
+P180,Self-Supervised Learning with Lie Symmetries for Partial Differential Equations,Method paper,Method paper,M6,1,https://arxiv.org/abs/2307.05432
+P183,MC-JEPA: A Joint-Embedding Predictive Architecture for Self-Supervised Learning of Motion and Content Features,Method paper,Method paper,M7,1,https://arxiv.org/abs/2307.12698
+P194,GAIA: a benchmark for General AI Assistants,Base paper,Base paper,B1,1,https://arxiv.org/abs/2311.12983
+P208,Gradient-based Planning with World Models,Method paper,Method paper,M3,1,https://arxiv.org/abs/2312.17227
+P217,Learning and Leveraging World Models in Visual Representation Learning,Method paper,Method paper,M7,1,https://arxiv.org/abs/2403.00504
+P223,Revisiting Feature Prediction for Learning Visual Representations from Video,Method paper,Method paper,M7,1,https://arxiv.org/abs/2404.08471
+P224,EgoPet: Egomotion and Interaction Data from an Animal's Perspective,Base paper,Base paper,B4,1,https://arxiv.org/abs/2404.09991
+P228,Fine-Tuning Large Vision-Language Models as Decision-Making Agents via Reinforcement Learning,Method paper,Method paper,M3,1,https://arxiv.org/abs/2405.10292
+P231,Hierarchical World Models as Visual Whole-Body Humanoid Controllers,Method paper,Method paper,M3,1,https://arxiv.org/abs/2405.18418
+P237,"Cambrian-1: A Fully Open, Vision-Centric Exploration of Multimodal LLMs",Method paper,Method paper,M7,1,https://arxiv.org/abs/2406.16860
+P241,PooDLe: Pooled and dense self-supervised learning from naturalistic videos,Method paper,Method paper,M7,1,https://arxiv.org/abs/2408.11208
+P256,DINO-WM: World Models on Pre-trained Visual Features enable Zero-shot Planning,Method paper,Method paper,M3,1,https://arxiv.org/abs/2411.04983
+P262,Navigation World Models,Method paper,Method paper,M3,1,https://arxiv.org/abs/2412.03572
+P264,Video Representation Learning with Joint-Embedding Predictive Architectures,Method paper,Method paper,M7,1,https://arxiv.org/abs/2412.10925
+P265,MetaMorph: Multimodal Understanding and Generation via Instruction Tuning,Method paper,Method paper,M8,1,https://arxiv.org/abs/2412.14164
+P273,Intuitive physics understanding emerges from self-supervised pretraining on natural videos,Base paper,Base paper,B2,1,https://arxiv.org/abs/2502.11831
+P276,Learning from Reward-Free Offline Data: A Case for Planning with Latent Dynamics Models,Method paper,Method paper,M3,1,https://arxiv.org/abs/2502.14819
+P294,OSVI-WM: One-Shot Visual Imitation for Unseen Tasks using World-Model-Guided Trajectory Generation,Method paper,Method paper,M3,1,https://arxiv.org/abs/2505.20425
+P299,"V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning",Method paper,Method paper,M3,1,https://arxiv.org/abs/2506.09985
+P303,Whole-Body Conditioned Egocentric Video Prediction,Application paper,AIGC,G4,1,https://arxiv.org/abs/2506.21552
+P304,Back to the Features: DINO as a Foundation for Video World Models,Application paper,AIGC,G4,1,https://arxiv.org/abs/2507.19468
+P310,Cambrian-S: Towards Spatial Supersensing in Video,Method paper,Method paper,M4,1,https://arxiv.org/abs/2511.04670
+P311,LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics,Base paper,Base paper,B2,1,https://arxiv.org/abs/2511.08544
+P320,From Generated Human Videos to Physically Plausible Robot Trajectories,Method paper,Method paper,M3,1,https://arxiv.org/abs/2512.05094
+P322,Closing the Train-Test Gap in World Models for Gradient-Based Planning,Method paper,Method paper,M3,1,https://arxiv.org/abs/2512.09929
+P323,VL-JEPA: Joint Embedding Predictive Architecture for Vision-language,Method paper,Method paper,M4,1,https://arxiv.org/abs/2512.10942
+P326,World Models for Learning Dexterous Hand-Object Interactions from Human Videos,Method paper,Method paper,M3,1,https://arxiv.org/abs/2512.13644
+P329,What Drives Success in Physical Planning with Joint-Embedding Predictive World Models?,Base paper,Base paper,B1,1,https://arxiv.org/abs/2512.24497
+P332,Value-guided action planning with JEPA world models,Method paper,Method paper,M3,1,https://arxiv.org/abs/2601.00844
+P334,Learning Latent Action World Models In The Wild,Method paper,Method paper,M3,1,https://arxiv.org/abs/2601.05230
+P337,Parallel Stochastic Gradient-Based Planning for World Models,Method paper,Method paper,M3,1,https://arxiv.org/abs/2602.00475
+P338,Rectified LpJEPA: Joint-Embedding Predictive Architectures with Sparse and Maximum-Entropy Representations,Method paper,Method paper,M7,1,https://arxiv.org/abs/2602.01456
+P339,A Lightweight Library for Energy-Based Joint-Embedding Predictive Architectures,Base paper,Base paper,B4,1,https://arxiv.org/abs/2602.03604
+P343,stable-worldmodel-v1: Reproducible World Modeling Research and Evaluation,Base paper,Base paper,B4,1,https://arxiv.org/abs/2602.08968
+P350,Temporal Straightening for Latent Planning,Method paper,Method paper,M3,1,https://arxiv.org/abs/2603.12231
+P351,Representation Learning for Spatiotemporal Physical Systems,Base paper,Base paper,B2,1,https://arxiv.org/abs/2603.13227
+P352,V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning,Method paper,Method paper,M7,1,https://arxiv.org/abs/2603.14482
+P353,LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels,Method paper,Method paper,M3,1,https://arxiv.org/abs/2603.19312
+P358,Hierarchical Planning with Latent World Models,Method paper,Method paper,M3,1,https://arxiv.org/abs/2604.03208
+P366,On Training in Imagination,Base paper,Base paper,B2,1,https://arxiv.org/abs/2605.06732
+P374,stable-worldmodel: A Platform for Reproducible World Modeling Research and Evaluation,Base paper,Base paper,B4,1,https://arxiv.org/abs/2605.21800
+P375,When Does LeJEPA Learn a World Model?,Base paper,Base paper,B2,1,https://arxiv.org/abs/2605.26379
+P381,Unifying Object-Centric World Models and Diffusion Policy: A Hierarchical Framework for Multi-Stage Robotic Tasks,Method paper,Method paper,M3,1,https://arxiv.org/abs/2606.08775
+P382,You Don't Need Strong Assumptions: Visual Representation Learning via Temporal Differences,Method paper,Method paper,M7,1,https://arxiv.org/abs/2606.15956
+P386,SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors,Method paper,Method paper,M3,1,https://arxiv.org/abs/2606.23444
+P391,AdaJEPA: An Adaptive Latent World Model,Method paper,Method paper,M3,1,https://arxiv.org/abs/2606.32026
+P395,Patch Policy: Efficient Embodied Control via Dense Visual Representations,Method paper,Method paper,M3,1,https://arxiv.org/abs/2607.18236
+P397,LpWM: A Case for Sparse Representations in World Models,Base paper,Base paper,B2,1,https://arxiv.org/abs/2608.22764
+P399,LeVJEPA: Efficient & Scalable Video Pretraining without the Heuristics,Method paper,Method paper,M7,1,https://arxiv.org/abs/2608.27395
+P104,Reasoning with Language Model is Planning with World Model,Method paper,Method paper,M6,1,https://github.com/maitrix-org/llm-reasoners)；2026-09-16核验现仓库，README列有本论文及其Reasoning-via-Planning实现。
+P105,"New Evaluation, Library, and Analysis of Step-by-Step Reasoning with Large Language Models",Base paper,Base paper,B1,1,https://arxiv.org/abs/2404.05221v2
+P106,Pandora: Towards General World Model with Natural Language Actions and Video States,Application paper,AIGC,G4,1,https://world-model.ai
+P107,Offline Reinforcement Learning for LLM Multi-step Reasoning,Method paper,Method paper,M2,1,https://aclanthology.org/2025.findings-acl.464/
+P108,Flow of Reasoning: Training LLMs for Divergent Problem Solving with Minimal Examples,Method paper,Method paper,M2,1,https://arxiv.org/abs/2406.05673
+P110,Understanding the Sources of Uncertainty for Large Language and Multimodal Models,Method paper,Method paper,M5,1,https://scholar.google.com/scholar?q=Understanding%20the%20Sources%20of%20Uncertainty%20for%20Large%20Language%20and%20Multimodal%20Models
+P111,CocoaBench: Evaluating Unified Digital Agents in the Wild,Base paper,Base paper,B1,1,https://arxiv.org/abs/2604.11201v2
+P112,Vision-G1: Towards General Reasoning Vision-Language Models via Reinforcement Learning,Method paper,Method paper,M2,1,https://doi.org/10.1609/aaai.v40i33.40039
+P113,Emergence of Superposition: Unveiling the Training Dynamics of Chain of Continuous Thought,Base paper,Base paper,B2,1,https://arxiv.org/abs/2509.23365v3
+P114,LLM Pretraining with Continuous Concepts,Method paper,Method paper,M6,1,https://arxiv.org/abs/2502.08524v1
+P115,ToolkenGPT: Augmenting Frozen Language Models with Massive Tools via Tool Embeddings,Method paper,Method paper,M1,1,https://github.com/Ber666/ToolkenGPT
+P116,Reasoning by Superposition: A Theoretical Perspective on Chain of Continuous Thought,Base paper,Base paper,B2,1,https://github.com/Ber666/reasoning-by-superposition
+P117,Revisiting Reinforcement Learning for LLM Reasoning from A Cross-Domain Perspective,Method paper,Method paper,M2,1,https://arxiv.org/abs/2506.14965
+P118,Calibrating Reasoning in Language Models with Internal Consistency,Method paper,Method paper,M5,1,https://arxiv.org/abs/2405.18711v2
+P119,Reasoning Models Know When They’re Right: Probing Hidden States for Self-Verification,Method paper,Method paper,M5,1,https://arxiv.org/abs/2504.05419v1
+P120,Imagine This! Scripts to Compositions to Videos,Application paper,AIGC,G2,1,https://arxiv.org/abs/1804.03608v1
+P121,World Models,Method paper,Method paper,M3,1,https://arxiv.org/abs/1803.10122v4
+P122,Phenaki: Variable Length Video Generation from Open Domain Textual Descriptions,Application paper,AIGC,G2,1,https://phenaki.github.io/
+P123,Genie: Generative Interactive Environments,Application paper,AIGC,G4,1,https://arxiv.org/abs/2402.15391v1
+P124,iVideoGPT: Interactive VideoGPTs are Scalable World Models,Method paper,Method paper,M3,1,https://arxiv.org/abs/2405.15223v1
+P125,Causally Steered Diffusion for Automated Video Counterfactual Generation,Application paper,AIGC,G4,1,https://arxiv.org/abs/2506.14404v2
+P126,Diffusion-Based Visual Art Creation: A Survey and New Perspectives,Base paper,Base paper,B3,1,https://doi.org/10.1145/3728459
+P127,MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequences,Application paper,AIGC,G2,1,https://arxiv.org/abs/2407.16655v3
+P128,StoryMem: Multi-shot Long Video Storytelling with Memory,Application paper,AIGC,G2,1,https://arxiv.org/abs/2512.19539v1
+P129,StoryReasoning Dataset: Using Chain-of-Thought for Scene Understanding and Grounded Story Generation,Base paper,Base paper,B4,1,https://arxiv.org/abs/2505.10292v2
+P131,Controllable Video Generation: A Survey,Base paper,Base paper,B3,1,https://arxiv.org/abs/2507.16869v3
+P132,Pre-trained Video Generative Models as World Simulators,Method paper,Method paper,M3,1,https://arxiv.org/abs/2502.07825
+P133,OneStory: Coherent Multi-Shot Video Generation with Adaptive Memory,Application paper,AIGC,G2,1,https://arxiv.org/abs/2512.07802v1
+P135,WorldMem: Long-term Consistent World Simulation with Memory,Application paper,AIGC,G4,1,https://arxiv.org/abs/2504.12369
+P136,StoryBench: A Multifaceted Benchmark for Continuous Story Visualization,Base paper,Base paper,B1,1,https://github.com/google/storybench
+P137,Long-Context State-Space Video World Models,Application paper,AIGC,G4,1,https://www.openaccess.thecvf.com/content/ICCV2025/papers/Po_Long-Context_State-Space_Video_World_Models_ICCV_2025_paper.pdf
+P138,StoryGAN: A Sequential Conditional GAN for Story Visualization,Application paper,AIGC,G2,1,https://github.com/yitong91/StoryGAN
+P139,Is Your World Simulator a Good Story Presenter? A Consecutive Events-Based Benchmark for Future Long Video Generation,Base paper,Base paper,B1,1,https://ypwang61.github.io/project/StoryEval
+VG17,Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation,Application paper,AIGC,G2,2,https://arxiv.org/abs/2606.26907v2
+VG31,Video-as-Answer: Predict and Generate Next Video Event with Joint-GRPO（VANS）,Application paper,AIGC,G4,2,https://arxiv.org/abs/2511.16669v2
+VG13,VOID: Video Object and Interaction Deletion,Application paper,AIGC,G1,1,https://arxiv.org/abs/2604.02296v1
+VG46,Geometry-Instructed Video Editing（GIVE）,Application paper,AIGC,G1,1,https://arxiv.org/abs/2606.24225v1
+VG16,What-If World: A Causal Benchmark for General World Models in Embodied Scenarios,Base paper,Base paper,B1,1,https://arxiv.org/abs/2605.27589v1
+VG30,The Past Frames the Future: Memory for Autoregressive Video Generation — A Survey,Base paper,Base paper,B3,1,https://arxiv.org/abs/2609.28466v1
+VG63,VideoSSM: Autoregressive Long Video Generation with Hybrid State-Space Memory,Application paper,AIGC,G2,1,https://arxiv.org/abs/2512.04519v1
+VG15,A²RD: Agentic Autoregressive Diffusion for Long Video Consistency,Application paper,AIGC,G2,1,https://arxiv.org/abs/2605.06924v1
+VG60,"See, Remember, Explore: A Benchmark and Baselines for Streaming Spatial Reasoning（S³-Bench / AMF-VLM）",Method paper,Method paper,M4,1,https://arxiv.org/abs/2603.23864v1
+VG18,Look-Before-Move: Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds,Application paper,AIGC,G2,1,https://arxiv.org/abs/2606.26964v2
+VG01,Sabre: A Narrative Planner Supporting Intention and Deep Theory of Mind,Method paper,Method paper,M6,1,https://ojs.aaai.org/index.php/AIIDE/article/view/18896
+VG14,StoryBlender: Inter-Shot Consistent and Editable 3D Storyboard with Spatial-Temporal Dynamics,Application paper,AIGC,G2,1,https://arxiv.org/abs/2604.03315v1
+VG43,ArtiMo: Agent-Driven Articulated Mesh Animation,Application paper,AIGC,G3,1,https://arxiv.org/abs/2608.20699v1
+VG37,VLMs are Good Teachers for Video Reasoning via Adaptive Test-Time Optimization,Method paper,Method paper,M8,2,https://arxiv.org/abs/2606.02564v3
+VG50,JoyAI-Video-Edit: Real-Time Open-Ended Video Editing with Autoregressive Diffusion,Application paper,AIGC,G1,1,https://arxiv.org/abs/2608.03974v1
+VG02,VOYAGER: An Open-Ended Embodied Agent with Large Language Models,Method paper,Method paper,M1,2,https://arxiv.org/abs/2305.16291v2
+VG03,VideoAuteur: Towards Long Narrative Video Generation,Application paper,AIGC,G2,3,https://arxiv.org/abs/2501.06173v2
+VG04,What Changed and What Could Have Changed? State-Change Counterfactuals for Procedure-Aware Video Representation Learning,Method paper,Method paper,M7,1,https://arxiv.org/abs/2503.21055v6
+VG05,VideoGen-Eval: Agent-based System for Video Generation Evaluation,Base paper,Base paper,B1,1,https://arxiv.org/abs/2503.23452v2
+VG06,Reasoning with Sampling: Your Base Model is Smarter Than You Think,Method paper,Method paper,M6,2,https://arxiv.org/abs/2510.14901v1
+VG07,Thinking with Video: Video Generation as a Promising Multimodal Reasoning Paradigm,Base paper,Base paper,B1,1,https://arxiv.org/abs/2511.04570v2
+VG08,Learning to Reason in 4D: Dynamic Spatial Understanding for Vision Language Models（DSR Suite）,Method paper,Method paper,M4,2,https://arxiv.org/abs/2512.20557v1
+VG09,CounterVid: Counterfactual Video Generation for Mitigating Action and Temporal Hallucinations in Video-Language Models,Method paper,Method paper,M2,2,https://arxiv.org/abs/2601.04778v2
+VG10,RealWonder: Real-Time Physical Action-Conditioned Video Generation,Application paper,AIGC,G4,1,https://arxiv.org/abs/2603.05449v1
+VG11,VQQA: An Agentic Approach for Video Evaluation and Quality Improvement,Method paper,Method paper,M8,1,https://arxiv.org/abs/2603.12310v1
+VG12,Stereo World Model: Camera-Guided Stereo Video Generation（StereoWorld）,Application paper,AIGC,G3,1,https://arxiv.org/abs/2603.17375v1
+VG19,CineForge: Self-Improving Agents for Long-Horizon Video Generation,Application paper,AIGC,G2,1,https://arxiv.org/abs/2608.29621v1
+VG20,VideoGen-Agent: Reinforcing Video Generation Agents,Application paper,AIGC,G2,1,https://arxiv.org/abs/2609.24997v2
+VG21,Training Object Permanence in World Models（WROP）,Base paper,Base paper,B1,1,https://arxiv.org/abs/2609.28654v1
+VG22,MaLiang-Harness: A Programmable Path to Image and Video Generation,Application paper,AIGC,G2,1,https://arxiv.org/abs/2609.34309v1
+VG23,From Scores to Samples: Elastic Forcing for Autoregressive Video Generation,Method paper,Method paper,M8,1,https://arxiv.org/abs/2609.35491v3
+VG24,Scaling Video Generation for Reasoning: At What Cost?,Base paper,Base paper,B1,1,https://arxiv.org/abs/2609.36599v1
+VG25,LongLive-Plug: Once-for-All Distillation,Method paper,Method paper,M8,1,https://arxiv.org/abs/2609.38154v1
+VG26,LoopVL: Recurrent Visual Intelligence,Method paper,Method paper,M6,1,https://arxiv.org/abs/2609.38426v1
+VG27,Finetuning with Sampling: SFT Learns Better Than You Think,Method paper,Method paper,M2,1,https://arxiv.org/abs/2610.02140v1
+VG28,RPGAgent: Driving Coherent Story-to-Play Generation with an LLM-Based Multi-Agent System,Application paper,HCI,H3,1,https://doi.org/10.1145/3772318.3790326
+VG29,Procedural Generation of Narrative Worlds,Application paper,AIGC,G2,1,https://doi.org/10.1109/TG.2022.3216582
+VG32,Controllable Texture Tiling via Diffusion Transformers with Transformed Rotary Embeddings,Application paper,AIGC,G3,1,https://arxiv.org/abs/2606.22945v1
+VG33,DuetSVG: Unified Multimodal SVG Generation with Internal Visual Guidance,Application paper,AIGC,G2,1,https://arxiv.org/abs/2512.10894v1
+VG34,Identity-Preserving Human Reconstruction from a Single Image via 3D Token Reasoning（IPRM）,Application paper,AIGC,G3,1,https://openreview.net/pdf?id=QlIteJADE6
+VG35,Learning Stable Canonical Worlds for Novel View Synthesis and Beyond（CanonicalGS）,Application paper,AIGC,G3,2,https://arxiv.org/abs/2606.23027v2
+VG36,MeshFlow: Mesh Generation with Equivariant Flow Matching,Application paper,AIGC,G3,2,https://arxiv.org/abs/2606.23489v2
+VG38,Video-Holmes: Can MLLM Think like Holmes for Complex Video Reasoning?,Base paper,Base paper,B1,2,https://arxiv.org/abs/2505.21374v1
+VG39,X2Video: Adapting Diffusion Models for Multimodal Controllable Neural Video Rendering,Application paper,AIGC,G1,2,https://arxiv.org/abs/2510.08530v1
+VG40,EffectMaker: Unifying Reasoning and Generation for Customized Visual Effect Creation,Application paper,AIGC,G1,2,https://arxiv.org/abs/2603.06014v1
+VG41,FlexTraj: Image-to-Video Generation with Flexible Point Trajectory Control,Application paper,AIGC,G1,1,https://arxiv.org/abs/2510.08527v1
+VG42,"Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond",Base paper,Base paper,B3,2,https://arxiv.org/abs/2604.22748v3
+VG44,Efficient Diffusion Language Models: A Comprehensive Survey,Base paper,Base paper,B3,1,https://doi.org/10.22541/au.176918713.36402137/v1
+VG45,Generalized Kullback-Leibler Divergence Loss,Method paper,Method paper,M8,1,https://arxiv.org/abs/2503.08038v2
+VG47,"Easier Painting Than Thinking: Can Text-to-Image Models Set the Stage, but Not Direct the Play?（T2I-CoReBench）",Base paper,Base paper,B1,1,https://arxiv.org/abs/2509.03516v3
+VG48,QeRL: Quantization-Enhanced Low-Rank Reinforcement Learning for LLMs,Method paper,Method paper,M2,1,https://arxiv.org/abs/2510.11696v1
+VG49,Is This Edit Correct? A Multi-Dimensional Benchmark for Reasoning-Aware Image Editing（RE-Edit）,Base paper,Base paper,B1,1,https://arxiv.org/abs/2606.05172v1
+VG51,Learning to See through Illumination Extremes with Event Streaming in Multimodal Large Language Models（Event-MLLM）,Method paper,Method paper,M4,1,https://arxiv.org/abs/2603.27558v1
+VG52,LongLive-2.0: An NVFP4 Parallel Infrastructure for Long Video Generation,Method paper,Method paper,M8,1,https://arxiv.org/abs/2605.18739v2
+VG53,Mira-Scene: Pixel-Aligned Layouts for Generative 3D Scene Reconstruction,Application paper,AIGC,G3,1,https://arxiv.org/abs/2609.23796v2
+VG54,MindOmni: Unleashing Reasoning Generation in Vision Language Models with RGPO,Method paper,Method paper,M2,1,https://arxiv.org/abs/2505.13031v2
+VG55,Scaling RL to Long Videos（LongVILA-R1 / MR-SP）,Method paper,Method paper,M2,1,https://arxiv.org/abs/2507.07966v4
+VG56,UniTok: A Unified Tokenizer for Visual Generation and Understanding,Method paper,Method paper,M7,1,https://arxiv.org/abs/2502.20321v3
+VG57,VFMTok：Vision Foundation Models as Effective Visual Tokenizers / as Generalist Tokenizers,Method paper,Method paper,M7,2,https://arxiv.org/abs/2507.08441v2
+VG58,ParaVT: Taming the Tool Prior Paradox for Parallel Tool Use in Agentic Video Reinforcement Learning,Method paper,Method paper,M2,1,https://arxiv.org/abs/2605.20342v2
+VG59,S2VG: 3D Stereoscopic and Spatial Video Generation via Denoising Frame Matrix,Application paper,AIGC,G1,1,https://arxiv.org/abs/2508.08048v2
+VG61,Understanding Data Influence in Reinforcement Finetuning（RFT-Inf）,Method paper,Method paper,M2,1,https://proceedings.neurips.cc/paper_files/paper/2025/hash/3755a02b1035fbadd5f93a022170e46f-Abstract-Conference.html
+VG62,Veda: Scalable Video Diffusion via Distilled Sparse Attention,Method paper,Method paper,M8,1,https://arxiv.org/abs/2605.30325v1
+VG65,Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling,Base paper,Base paper,B3,1,https://arxiv.org/abs/2604.28185v2
+VG67,AnyStep-WAM: Budget-Aligned Distillation and Adaptive Inference for World Action Models,Method paper,Method paper,M8,1,https://arxiv.org/abs/2609.33748v2
+VG68,Aero Realtime: Fully Aligned Input-Output Streams for Low-Latency Streaming Multimodal Generation,Method paper,Method paper,M4,1,https://arxiv.org/abs/2608.08469v1
