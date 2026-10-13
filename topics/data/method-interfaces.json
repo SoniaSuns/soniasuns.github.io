@@ -30,7 +30,7 @@
     ],
     "interface": "明确策略动作、采样分组、可观测奖励及信用分配对象。",
     "uses": "XR-C 规划—生成对齐；XR-L 证据选择；XR-S 修复策略；XR-E 跨任务策略更新。",
-    "condition": "分别是 Joint-GRPO、PARA-GRPO、ReGRPO、RGPO 等变体或邻近方法；本地库不因此拥有 GRPO 原始论文。语言 token、工具动作与连续去噪转移需要不同概率／梯度定义。"
+    "condition": "分别是 Joint-GRPO、PARA-GRPO、ReGRPO、RGPO 等变体或邻近方法；本地库不因此拥有 GRPO 原始论文。语言 token、工具动作与连续去噪转移需要不同概率／梯度定义。 VANS 的 Joint-GRPO 分两阶段分别更新 VLM 和 VDM；可先稳定状态接口，再检验生成反馈收益。"
   },
   {
     "code": "F3",
@@ -102,6 +102,6 @@
     ],
     "interface": "给出状态、步骤与成对干预真值；分开评价推理、生成、执行及人的学习。",
     "uses": "XR-C 后果保持；XR-L 信息价值；XR-S 修正与复发；XR-E 迁移与退化；也可迁移到 HCI/AIGC。",
-    "condition": "仿真、VLM 评分和人类学习测验分别提供不同证据；训练奖励不能兼作唯一测试评价器。"
+    "condition": "仿真、VLM 评分和人类学习测验分别提供不同证据；训练奖励不能兼作唯一测试评价器。 State-Change Counterfactuals 提供理解监督；VideoREPA 已有关系蒸馏改善生成的证据。迁移时分别测试状态对比、关系对齐及其组合，不能把可读出直接视为因果控制。"
   }
 ]
