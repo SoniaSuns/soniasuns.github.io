@@ -1,0 +1,28 @@
+﻿source_id,year,year_basis,candidate_count,primary_sample_count,status
+controllable,2018,arXiv 首发年,2,1,已抽取
+controllable,2019,arXiv 首发年,1,0,本轮未抽取；早期层仅作少量历史参照
+controllable,2020,arXiv 首发年,2,0,本轮未抽取；早期层仅作少量历史参照
+controllable,2021,arXiv 首发年,1,0,本轮未抽取；早期层仅作少量历史参照
+controllable,2022,arXiv 首发年,3,0,本轮未抽取；早期层仅作少量历史参照
+controllable,2023,arXiv 首发年,52,4,已抽取
+controllable,2024,arXiv 首发年,143,5,已抽取
+controllable,2025,arXiv 首发年,74,6,已抽取
+controllable,2026,arXiv 首发年,2,2,已抽取
+posttraining,2022,arXiv 首发年,1,1,已抽取
+posttraining,2023,arXiv 首发年,22,1,已抽取
+posttraining,2024,arXiv 首发年,57,4,已抽取
+posttraining,2025,arXiv 首发年,331,6,已抽取
+posttraining,2026,arXiv 首发年,123,6,已抽取
+worldmodel,2020,arXiv 首发年,1,1,已抽取
+worldmodel,2023,arXiv 首发年,9,2,已抽取
+worldmodel,2024,arXiv 首发年,23,3,已抽取
+worldmodel,2025,arXiv 首发年,47,6,已抽取
+worldmodel,2026,arXiv 首发年,113,6,已抽取
+CVPR2025,2025,会议年,2871,3,官方录用记录已核实
+CVPR2026,2026,会议年,4042,3,官方录用记录已核实
+ICCV2025,2025,会议年,2701,3,官方录用记录已核实
+ICLR2025,2025,会议年,3703,3,官方录用记录已核实
+ICLR2026,2026,会议年,5351,3,官方录用记录已核实
+NeurIPS2025,2025,会议年,5823,3,官方录用记录已核实
+NeurIPS2026,2026,会议年,9094,3,官方录用记录已核实
+ICCV2026,2026,会议年,0,0,不适用；ICCV 隔年举办，2026 无对应届次
