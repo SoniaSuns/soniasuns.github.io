@@ -1,0 +1,11 @@
+﻿source_id,url,access_date,sha256,bytes
+controllable,https://raw.githubusercontent.com/mayuelala/Awesome-Controllable-Video-Generation/main/README.md,2026-10-14,da3368b81a4a319d10cd011c7aa838938ef2bb2f0184182b0e3c6ef191af4519,240322
+posttraining,https://raw.githubusercontent.com/people-robots/Awesome-Video-Generation-Post-Training/main/README.md,2026-10-14,57de3474e25b970d55e73858469d142c6c6d2d61df82cd38e0592893f36a6269,147025
+worldmodel,https://raw.githubusercontent.com/liujiuming123/Awesome-Interactive-World-Model/main/README.md,2026-10-14,7225bdec42df4fdfc83bae94a62d9624ccb411a5b24b425613dc5b2a17fd9615,137891
+CVPR2025,https://openaccess.thecvf.com/CVPR2025?day=all,2026-10-14,2f08dc191b870530993ba6a5a79e8c8ae812f158b6a30b21a96f3b190af96bfa,8396274
+CVPR2026,https://openaccess.thecvf.com/CVPR2026?day=all,2026-10-14,31f63227934062163d5bc57838d339c3c7a7e1e6e51f71a238022bff73f1b792,12117927
+ICCV2025,https://openaccess.thecvf.com/ICCV2025?day=all,2026-10-14,e684fe760c417a35c2f1e9a5acb3015a192fce10e566086e2d4bf7f78cbb97fe,7692642
+ICLR2025,https://proceedings.iclr.cc/paper_files/paper/2025,2026-10-14,5bbd1d59f6ab87b53fcdd42060a5631f625b38d6fc68c4581aea1e4ad50173c6,2536904
+ICLR2026,https://proceedings.iclr.cc/paper_files/paper/2026,2026-10-14,2e233e9120602a93230f1e81b01bd295ee69b5c93f4eaa5b1988166fa3983fe5,3703347
+NeurIPS2025,https://proceedings.neurips.cc/paper_files/paper/2025/vol38-main-conference,2026-10-14,48c2de5e5acae991a8b88eaa00174387a7ce066efeb337e30593989bd5015c9a,4104303
+NeurIPS2026,https://neurips.cc/virtual/2026/papers.html,2026-10-14,69971cfce0c0b1922f1870fde493bcd3b3873642509a43c2596392ea18f974f4,1229824
