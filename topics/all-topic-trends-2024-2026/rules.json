@@ -1,0 +1,317 @@
+[
+  {
+    "id": "llm",
+    "name": "Language Models / LLM",
+    "group": "主题",
+    "regex": "\\b(?:large |small |pre[ -]?trained |diffusion |masked |causal |neural )?language models?\\b|\\b(?:llms?|llama|gpt[ -]?[2345o]?|chatgpt)\\b",
+    "evidence": "title"
+  },
+  {
+    "id": "multimodal",
+    "name": "多模态 / Vision-Language",
+    "group": "主题",
+    "regex": "multi[ -]?modal|cross[ -]?modal|vision[ -]language|visual[ -]language|image[ -]text|text[ -]image|audio[ -]visual|\\b(?:vlms?|mllms?|lmm|lmms)\\b",
+    "evidence": "title"
+  },
+  {
+    "id": "generative",
+    "name": "生成模型 / Diffusion / Flow",
+    "group": "主题",
+    "regex": "generative|diffusion|flow[ -]matching|normalizing flows?|rectified flows?|\\b(?:gans?|vaes?)\\b|text[ -]to[ -](?:image|video|3d)|image[ -]to[ -]video|(?:image|video|scene|motion|3d|audio|speech) (?:generation|synthesis)",
+    "evidence": "title"
+  },
+  {
+    "id": "reasoning",
+    "name": "Reasoning / 思维链",
+    "group": "主题",
+    "regex": "\\breasoning\\b|chain[ -]of[ -]thought|tree[ -]of[ -]thought|\\bcot\\b|(?:latent|visual|deep|deliberative) thinking",
+    "evidence": "title"
+  },
+  {
+    "id": "agent",
+    "name": "Agents / 智能体",
+    "group": "主题",
+    "regex": "\\bagents?\\b|\\bagentic\\b|multi[ -]?agent|tool[ -](?:use|using|usage|calling)|computer[ -]use|web navigation",
+    "evidence": "title"
+  },
+  {
+    "id": "rl",
+    "name": "Reinforcement Learning",
+    "group": "主题",
+    "regex": "reinforcement learning|\\b(?:rlhf|rlaif|rlvr|marl|mdps?)\\b|markov decision|policy (?:gradient|optimization|learning)|actor[ -]critic|q[ -]learning|offline rl|online rl|bandits?",
+    "evidence": "title"
+  },
+  {
+    "id": "robotics",
+    "name": "机器人 / 具身 / 自动驾驶",
+    "group": "主题",
+    "regex": "robot|embodied|autonomous driv|autonomous navig|vision[ -]language[ -]action|\\bvlas?\\b|robotic manipulation|locomotion|grasping",
+    "evidence": "title"
+  },
+  {
+    "id": "3d",
+    "name": "3D / 几何 / 渲染",
+    "group": "主题",
+    "regex": "\\b[34][ -]?d\\b|gaussian splatt|radiance fields?|\\bnerfs?\\b|rendering|point clouds?|mesh(?:es)?\\b|surface reconstruction|novel view|depth estimation|slam\\b",
+    "evidence": "title"
+  },
+  {
+    "id": "medical",
+    "name": "医疗 / 生物医学影像",
+    "group": "主题",
+    "regex": "medical|clinical|biomedical|healthcare|pathology|histopatholog|radiology|diagnosis|diagnostic|disease|tumou?r|cancer|\\bmri\\b|\\beeg\\b|\\becg\\b|\\bfmri\\b|electroencephal|brain|cardiac|retinal|surgical",
+    "evidence": "title"
+  },
+  {
+    "id": "science",
+    "name": "科学计算 / 分子 / 气象",
+    "group": "主题",
+    "regex": "molecul|protein|drug discovery|antibod|genomic|single[ -]cell|rna\\b|\\bdna\\b|materials? discovery|scientific|weather|climate|partial differential|\\bpdes?\\b|neural operators?|fluid|physics[ -]informed|quantum|chemistr|chemical",
+    "evidence": "title"
+  },
+  {
+    "id": "graph",
+    "name": "图学习 / GNN",
+    "group": "主题",
+    "regex": "graph neural|graph learning|graph representation|graph classification|graph transformer|graph foundation|graph contrastive|graph generation|graph diffusion|graph clustering|knowledge graph|hypergraph|\\bgnns?\\b|node classification|link prediction",
+    "evidence": "title"
+  },
+  {
+    "id": "federated",
+    "name": "Federated Learning",
+    "group": "主题",
+    "regex": "federated",
+    "evidence": "title"
+  },
+  {
+    "id": "theory",
+    "name": "泛化 / 收敛 / 复杂度（关键词）",
+    "group": "主题",
+    "regex": "generalization|generalisation|convergence|sample complexity|statistical learning|learning theor|minimax|regret|pac[ -]bayes|neural tangent|information[ -]theoretic|\\bidentifiability\\b|approximation theor",
+    "evidence": "title"
+  },
+  {
+    "id": "optimization",
+    "name": "优化算法 / 最优传输",
+    "group": "主题",
+    "regex": "\\boptimization\\b|\\boptimisation\\b|gradient descent|stochastic gradient|\\bsgd\\b|second[ -]order|optimal transport|bilevel|convex|nonconvex|non[ -]convex",
+    "evidence": "title"
+  },
+  {
+    "id": "security",
+    "name": "安全 / 隐私 / 攻防",
+    "group": "主题",
+    "regex": "privacy|private learning|differentially private|backdoor|jailbreak|poisoning|adversarial attack|adversarial defense|membership inference|model extraction|watermark|\\bsafety\\b|\\bsecurity\\b|unlearning|red[ -]team",
+    "evidence": "title"
+  },
+  {
+    "id": "robustness",
+    "name": "鲁棒性 / OOD / Domain Shift",
+    "group": "主题",
+    "regex": "\\brobust(?:ness)?\\b|out[ -]of[ -]distribution|\\bood\\b|domain adaptation|domain generalization|domain shift|distribution shift|test[ -]time adaptation",
+    "evidence": "title"
+  },
+  {
+    "id": "efficient",
+    "name": "效率 / 压缩 / 部署",
+    "group": "主题",
+    "regex": "\\befficient\\b|\\befficiency\\b|\\baccelera\\w*\\b|compression|quantization|\\bpruning\\b|distillation|low[ -]rank|\\blora\\b|parameter[ -]efficient|speculative decod|kv[ -]cach|\\blatency\\b|real[ -]time|few[ -]step|one[ -]step|sparsif",
+    "evidence": "title"
+  },
+  {
+    "id": "detection",
+    "name": "目标 / 异常检测",
+    "group": "主题",
+    "regex": "object detection|object detector|anomaly detection|anomaly localization|anomaly segmentation|outlier detection|salient object|pedestrian detection",
+    "evidence": "title"
+  },
+  {
+    "id": "segmentation",
+    "name": "分割 / Segmentation",
+    "group": "主题",
+    "regex": "segmentation|segment anything",
+    "evidence": "title"
+  },
+  {
+    "id": "recognition",
+    "name": "分类 / 识别 / 跟踪",
+    "group": "主题",
+    "regex": "\\bclassification\\b|\\brecognition\\b|object tracking|multi[ -]object tracking|visual tracking|re[ -]identification",
+    "evidence": "title"
+  },
+  {
+    "id": "restoration",
+    "name": "图像修复 / 低层视觉",
+    "group": "主题",
+    "regex": "image restoration|image denoising|image deblurring|super[ -]resolution|low[ -]light|image enhancement|image dehazing|image deraining|image inpainting",
+    "evidence": "title"
+  },
+  {
+    "id": "retrieval",
+    "name": "检索 / RAG / 推荐",
+    "group": "主题",
+    "regex": "\\bretrieval\\b|retrieval[ -]augmented|\\brag\\b|recommender|recommendation",
+    "evidence": "title"
+  },
+  {
+    "id": "time_series",
+    "name": "时间序列 / 预测",
+    "group": "主题",
+    "regex": "time[ -]series|temporal forecasting|time[ -]series forecasting|traffic forecasting|traffic prediction|spatio[ -]temporal forecast",
+    "evidence": "title"
+  },
+  {
+    "id": "speech_audio",
+    "name": "语音 / 音频 / 音乐",
+    "group": "主题",
+    "regex": "\\bspeech\\b|\\baudio\\b|\\bacoustic\\b|\\bmusic\\b|\\bsound\\b",
+    "evidence": "title"
+  },
+  {
+    "id": "continual",
+    "name": "Continual / Incremental Learning",
+    "group": "主题",
+    "regex": "continual learning|continual pre[ -]?training|continual adaptation|incremental learning|class[ -]incremental|lifelong learning|catastrophic forgetting",
+    "evidence": "title"
+  },
+  {
+    "id": "self_supervised",
+    "name": "Self-supervised / Contrastive Learning",
+    "group": "主题",
+    "regex": "self[ -]supervis|contrastive learning|contrastive pre[ -]?training|contrastive representation|masked (?:image|autoencod|modeling)",
+    "evidence": "title"
+  },
+  {
+    "id": "causality",
+    "name": "因果学习 / 因果推断",
+    "group": "主题",
+    "regex": "causal inference|causal discovery|causal learning|causal representation|causal effect|causal identification|causal graph|causal reasoning|causal model|causal structure|causal machine|counterfactual|treatment effect",
+    "evidence": "title"
+  },
+  {
+    "id": "uncertainty",
+    "name": "不确定性 / 校准 / Conformal",
+    "group": "主题",
+    "regex": "uncertainty|uncertain predictions?|conformal|calibration|calibrated|bayesian",
+    "evidence": "title"
+  },
+  {
+    "id": "interpretability",
+    "name": "可解释性 / 公平 / 可信度",
+    "group": "主题",
+    "regex": "interpretab|explainab|mechanistic|\\bfairness\\b|\\bbias\\b|trustworth|hallucinati",
+    "evidence": "title"
+  },
+  {
+    "id": "evaluation",
+    "name": "评测 / 数据集 / Benchmark",
+    "group": "主题",
+    "regex": "benchmark|dataset|\\bevaluation\\b|\\bevaluating\\b|\\bassessing\\b|\\bmeasuring\\b",
+    "evidence": "title"
+  },
+  {
+    "id": "neural_arch",
+    "name": "神经网络架构 / Attention",
+    "group": "主题",
+    "regex": "\\btransformers?\\b|\\battention\\b|state[ -]space model|\\bmamba\\b|neural architecture|mixture[ -]of[ -]experts|\\bmoe\\b|convolutional",
+    "evidence": "title"
+  },
+  {
+    "id": "data_training",
+    "name": "数据选择 / 合成数据 / 训练策略",
+    "group": "主题",
+    "regex": "data (?:selection|curation|augmentation|valuation|pruning|synthesis|distillation)|synthetic data|curriculum learning|active learning|dataset distillation|data[ -]centric|instruction tuning|fine[ -]?tuning|pre[ -]?training",
+    "evidence": "title"
+  },
+  {
+    "id": "video",
+    "name": "视频任务（不限生成）",
+    "group": "主题",
+    "regex": "\\bvideo\\b|\\bvideos\\b|action recognition|action detection|temporal action|talking head|talking face",
+    "evidence": "title"
+  },
+  {
+    "id": "world_models",
+    "name": "World Models",
+    "group": "细分信号",
+    "regex": "\\bworld[ -]models?\\b",
+    "evidence": "title"
+  },
+  {
+    "id": "vla",
+    "name": "Vision-Language-Action",
+    "group": "细分信号",
+    "regex": "vision[ -]language[ -]action|\\bvlas?\\b",
+    "evidence": "title"
+  },
+  {
+    "id": "test_compute",
+    "name": "Test-time Compute / 推理时扩展",
+    "group": "细分信号",
+    "regex": "(?:test|inference)[ -]time (?:scal\\w*|comput\\w*|search)|scaling (?:test|inference)[ -]time|test[ -]time thinking|inference scaling",
+    "evidence": "title"
+  },
+  {
+    "id": "diffusion_language",
+    "name": "Diffusion Language Models",
+    "group": "细分信号",
+    "regex": "diffusion (?:large |based )?language models?\\b|\\blanguage diffusion\\b|\\bdiffusion (?:text|llms?)\\b|discrete diffusion.*\\b(?:language|text)\\b|\\b(?:language|text)\\b.*discrete diffusion",
+    "evidence": "title"
+  },
+  {
+    "id": "flow_matching",
+    "name": "Flow Matching / Rectified Flow",
+    "group": "细分信号",
+    "regex": "flow[ -]matching|rectified flows?",
+    "evidence": "title"
+  },
+  {
+    "id": "llm_judge",
+    "name": "LLM-as-a-Judge / Verifier / Process Reward",
+    "group": "细分信号",
+    "regex": "(?:llm|language model).{0,25}(?:judge|judging)|(?:judge|judging).{0,25}(?:llm|language model)|generative (?:reward|verifier)|process reward|\\bverifiers?\\b",
+    "evidence": "title"
+  },
+  {
+    "id": "gaussian",
+    "name": "Gaussian Splatting",
+    "group": "细分信号",
+    "regex": "gaussian splatt|\\b3dgs\\b|\\b4dgs\\b",
+    "evidence": "title"
+  },
+  {
+    "id": "nerf",
+    "name": "NeRF / Radiance Fields",
+    "group": "细分信号",
+    "regex": "\\bnerfs?\\b|radiance fields?",
+    "evidence": "title"
+  },
+  {
+    "id": "gan",
+    "name": "GAN / 对抗生成",
+    "group": "细分信号",
+    "regex": "\\bgans?\\b|generative adversarial",
+    "evidence": "title"
+  },
+  {
+    "id": "reason_rl",
+    "name": "RLVR / GRPO / Reasoning RL",
+    "group": "细分信号",
+    "regex": "\\b(?:rlvr|grpo)\\b|verifiable rewards?|reinforcement learning.{0,50}(?:reasoning|reason)|reasoning.{0,50}reinforcement learning",
+    "evidence": "title"
+  },
+  {
+    "id": "video_gen",
+    "name": "Video Generation（既有粗筛）",
+    "group": "既有标注",
+    "regex": null,
+    "evidence": "previous title/abstract screen"
+  },
+  {
+    "id": "video_reason",
+    "name": "Video Gen + Reasoning（严格）",
+    "group": "既有标注",
+    "regex": null,
+    "evidence": "previous abstract review"
+  }
+]

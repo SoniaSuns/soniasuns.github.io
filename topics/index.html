@@ -18,6 +18,8 @@
     <button data-view="aigc" aria-pressed="false">AIGC 详细支撑与假设</button>
     <button data-view="methods" aria-pressed="false">跨场景方法接口 · 补充</button>
     <button data-view="video-pool" aria-pressed="false" aria-controls="video-pool-view">Video Generation · 研究地图</button>
+    <button data-view="video-reasoning" aria-pressed="false" aria-controls="video-reasoning-view">Video Gen × 推理 · 模型与数据</button>
+    <button data-view="topic-trends" aria-pressed="false" aria-controls="topic-trends-view">2024–2026 · 全部 Topic 趋势</button>
   </nav>
   <div class="actions exports">
     <a href="downloads/overview.docx">完整 Overview · Word</a>
@@ -4597,6 +4599,14 @@
 
       <a class="public-paper-link" href="https://arxiv.org/abs/2608.08469v1" target="_blank" rel="noopener noreferrer">打开论文公开页面 ↗</a>
     </article>
+  </section>
+  <section id="video-reasoning-view" hidden aria-label="Video Gen 推理论文模型与训练数据">
+    <div class="actions video-pool-actions"><a class="button" href="video-reasoning-2024-2026/model-data.html" target="_blank" rel="noopener">独立阅读 · 109 篇配置</a><a class="button" href="video-reasoning-2024-2026/index.html" target="_blank" rel="noopener">会议占比与 Video Gen 内部 topics</a><a class="button" href="video-reasoning-2024-2026/strict_reasoning_model_data.csv" download>下载 Model / Condition / Dataset CSV</a></div>
+    <iframe id="video-reasoning-frame" src="video-reasoning-2024-2026/model-data.html" title="R1 R2 R3 模型、条件与训练数据" loading="lazy" style="width:100%;height:1500px;border:0;display:block"></iframe>
+  </section>
+  <section id="topic-trends-view" hidden aria-label="全部论文主题趋势">
+    <div class="actions video-pool-actions"><a class="button" href="all-topic-trends-2024-2026/" target="_blank" rel="noopener">独立阅读 · 全部 topic 趋势</a><a class="button" href="all-topic-trends-2024-2026/topic_trends.csv" download>下载趋势 CSV</a></div>
+    <iframe id="topic-trends-frame" src="all-topic-trends-2024-2026/index.html" title="2024 至 2026 全部论文主题趋势" loading="lazy" style="width:100%;height:1500px;border:0;display:block"></iframe>
   </section>
   <section id="video-pool-view" hidden aria-label="Video Generation 论文池">
     <div class="actions video-pool-actions"><a class="button" href="video-generation-pool/" target="_blank" rel="noopener">独立页面阅读 ↗</a><a class="button" href="video-generation-pool/papers.csv" download>下载 195 篇论文 · CSV</a><a class="button" href="#video-pool-view">本标签页链接</a></div>

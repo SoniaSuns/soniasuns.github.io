@@ -1,0 +1,1554 @@
+{
+  "date": "2026-10-14",
+  "total": 73987,
+  "panel": [
+    "AAAI",
+    "CVPR",
+    "ICLR",
+    "ICML",
+    "NeurIPS"
+  ],
+  "years": [
+    2024,
+    2025,
+    2026
+  ],
+  "panel_denominators": {
+    "2024": 14404,
+    "2025": 18761,
+    "2026": 26093
+  },
+  "title_matched": 58453,
+  "topics": [
+    {
+      "id": "llm",
+      "name": "Language Models / LLM",
+      "group": "主题",
+      "regex": "\\b(?:large |small |pre[ -]?trained |diffusion |masked |causal |neural )?language models?\\b|\\b(?:llms?|llama|gpt[ -]?[2345o]?|chatgpt)\\b",
+      "evidence": "title",
+      "total": 8505,
+      "total_pct": 11.495262681281847,
+      "years": {
+        "2024": {
+          "count": 1389,
+          "denominator": 14404,
+          "pct": 9.643154679255762,
+          "balanced_pct": 9.203551652274308
+        },
+        "2025": {
+          "count": 2614,
+          "denominator": 18761,
+          "pct": 13.933159213261554,
+          "balanced_pct": 13.397808954934655
+        },
+        "2026": {
+          "count": 3812,
+          "denominator": 26093,
+          "pct": 14.609282182960948,
+          "balanced_pct": 14.129099149558343
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 4.925547497284034,
+      "ratio": 1.5351789921303773,
+      "venues_up": 3,
+      "venues_down": 0
+    },
+    {
+      "id": "multimodal",
+      "name": "多模态 / Vision-Language",
+      "group": "主题",
+      "regex": "multi[ -]?modal|cross[ -]?modal|vision[ -]language|visual[ -]language|image[ -]text|text[ -]image|audio[ -]visual|\\b(?:vlms?|mllms?|lmm|lmms)\\b",
+      "evidence": "title",
+      "total": 6626,
+      "total_pct": 8.955627339938097,
+      "years": {
+        "2024": {
+          "count": 768,
+          "denominator": 14404,
+          "pct": 5.331852263260205,
+          "balanced_pct": 5.265939753824877
+        },
+        "2025": {
+          "count": 1462,
+          "denominator": 18761,
+          "pct": 7.792761579873141,
+          "balanced_pct": 7.992708673772475
+        },
+        "2026": {
+          "count": 2599,
+          "denominator": 26093,
+          "pct": 9.96052581152033,
+          "balanced_pct": 10.625788928725635
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 5.359849174900758,
+      "ratio": 2.0178333641222674,
+      "venues_up": 4,
+      "venues_down": 0
+    },
+    {
+      "id": "generative",
+      "name": "生成模型 / Diffusion / Flow",
+      "group": "主题",
+      "regex": "generative|diffusion|flow[ -]matching|normalizing flows?|rectified flows?|\\b(?:gans?|vaes?)\\b|text[ -]to[ -](?:image|video|3d)|image[ -]to[ -]video|(?:image|video|scene|motion|3d|audio|speech) (?:generation|synthesis)",
+      "evidence": "title",
+      "total": 9178,
+      "total_pct": 12.404881938718963,
+      "years": {
+        "2024": {
+          "count": 1611,
+          "denominator": 14404,
+          "pct": 11.184393224104415,
+          "balanced_pct": 11.163221654016155
+        },
+        "2025": {
+          "count": 2270,
+          "denominator": 18761,
+          "pct": 12.099568253291402,
+          "balanced_pct": 12.45619838755176
+        },
+        "2026": {
+          "count": 3087,
+          "denominator": 26093,
+          "pct": 11.830759207450274,
+          "balanced_pct": 12.051891559973269
+        }
+      },
+      "direction": "先升后降",
+      "change_pp": 0.8886699059571139,
+      "ratio": 1.0796069390629184,
+      "venues_up": 3,
+      "venues_down": 0
+    },
+    {
+      "id": "reasoning",
+      "name": "Reasoning / 思维链",
+      "group": "主题",
+      "regex": "\\breasoning\\b|chain[ -]of[ -]thought|tree[ -]of[ -]thought|\\bcot\\b|(?:latent|visual|deep|deliberative) thinking",
+      "evidence": "title",
+      "total": 3118,
+      "total_pct": 4.214253855407031,
+      "years": {
+        "2024": {
+          "count": 234,
+          "denominator": 14404,
+          "pct": 1.6245487364620939,
+          "balanced_pct": 1.586357803739525
+        },
+        "2025": {
+          "count": 715,
+          "denominator": 18761,
+          "pct": 3.8110974894728424,
+          "balanced_pct": 3.3379061457870014
+        },
+        "2026": {
+          "count": 1789,
+          "denominator": 26093,
+          "pct": 6.856244969915303,
+          "balanced_pct": 6.823910412407712
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 5.237552608668187,
+      "ratio": 4.301621233445376,
+      "venues_up": 4,
+      "venues_down": 0
+    },
+    {
+      "id": "agent",
+      "name": "Agents / 智能体",
+      "group": "主题",
+      "regex": "\\bagents?\\b|\\bagentic\\b|multi[ -]?agent|tool[ -](?:use|using|usage|calling)|computer[ -]use|web navigation",
+      "evidence": "title",
+      "total": 2608,
+      "total_pct": 3.524943571167908,
+      "years": {
+        "2024": {
+          "count": 267,
+          "denominator": 14404,
+          "pct": 1.853651763399056,
+          "balanced_pct": 1.8035010266679907
+        },
+        "2025": {
+          "count": 579,
+          "denominator": 18761,
+          "pct": 3.086189435531155,
+          "balanced_pct": 2.899589259642703
+        },
+        "2026": {
+          "count": 1560,
+          "denominator": 26093,
+          "pct": 5.978614954202277,
+          "balanced_pct": 5.659018117715971
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 3.85551709104798,
+      "ratio": 3.137795894783124,
+      "venues_up": 5,
+      "venues_down": 0
+    },
+    {
+      "id": "rl",
+      "name": "Reinforcement Learning",
+      "group": "主题",
+      "regex": "reinforcement learning|\\b(?:rlhf|rlaif|rlvr|marl|mdps?)\\b|markov decision|policy (?:gradient|optimization|learning)|actor[ -]critic|q[ -]learning|offline rl|online rl|bandits?",
+      "evidence": "title",
+      "total": 3306,
+      "total_pct": 4.468352548420668,
+      "years": {
+        "2024": {
+          "count": 771,
+          "denominator": 14404,
+          "pct": 5.352679811163566,
+          "balanced_pct": 5.282995543248484
+        },
+        "2025": {
+          "count": 895,
+          "denominator": 18761,
+          "pct": 4.770534619689782,
+          "balanced_pct": 4.386406227754508
+        },
+        "2026": {
+          "count": 1502,
+          "denominator": 26093,
+          "pct": 5.756333116161422,
+          "balanced_pct": 5.458101974242834
+        }
+      },
+      "direction": "先降后升",
+      "change_pp": 0.17510643099434997,
+      "ratio": 1.0331452922041797,
+      "venues_up": 1,
+      "venues_down": 0
+    },
+    {
+      "id": "robotics",
+      "name": "机器人 / 具身 / 自动驾驶",
+      "group": "主题",
+      "regex": "robot|embodied|autonomous driv|autonomous navig|vision[ -]language[ -]action|\\bvlas?\\b|robotic manipulation|locomotion|grasping",
+      "evidence": "title",
+      "total": 1400,
+      "total_pct": 1.892224309676024,
+      "years": {
+        "2024": {
+          "count": 152,
+          "denominator": 14404,
+          "pct": 1.0552624271035824,
+          "balanced_pct": 1.1233726422013626
+        },
+        "2025": {
+          "count": 286,
+          "denominator": 18761,
+          "pct": 1.524438995789137,
+          "balanced_pct": 1.5292022974918207
+        },
+        "2026": {
+          "count": 637,
+          "denominator": 26093,
+          "pct": 2.4412677729659293,
+          "balanced_pct": 2.524184623338768
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 1.4008119811374056,
+      "ratio": 2.2469699977670565,
+      "venues_up": 4,
+      "venues_down": 0
+    },
+    {
+      "id": "3d",
+      "name": "3D / 几何 / 渲染",
+      "group": "主题",
+      "regex": "\\b[34][ -]?d\\b|gaussian splatt|radiance fields?|\\bnerfs?\\b|rendering|point clouds?|mesh(?:es)?\\b|surface reconstruction|novel view|depth estimation|slam\\b",
+      "evidence": "title",
+      "total": 6377,
+      "total_pct": 8.61908173057429,
+      "years": {
+        "2024": {
+          "count": 1046,
+          "denominator": 14404,
+          "pct": 7.261871702304916,
+          "balanced_pct": 7.327373236460394
+        },
+        "2025": {
+          "count": 1261,
+          "denominator": 18761,
+          "pct": 6.721390117797559,
+          "balanced_pct": 7.412581613336035
+        },
+        "2026": {
+          "count": 1561,
+          "denominator": 26093,
+          "pct": 5.982447399685739,
+          "balanced_pct": 6.762225749192334
+        }
+      },
+      "direction": "先升后降",
+      "change_pp": -0.5651474872680602,
+      "ratio": 0.9228717483018425,
+      "venues_up": 2,
+      "venues_down": 2
+    },
+    {
+      "id": "medical",
+      "name": "医疗 / 生物医学影像",
+      "group": "主题",
+      "regex": "medical|clinical|biomedical|healthcare|pathology|histopatholog|radiology|diagnosis|diagnostic|disease|tumou?r|cancer|\\bmri\\b|\\beeg\\b|\\becg\\b|\\bfmri\\b|electroencephal|brain|cardiac|retinal|surgical",
+      "evidence": "title",
+      "total": 1717,
+      "total_pct": 2.320677956938381,
+      "years": {
+        "2024": {
+          "count": 234,
+          "denominator": 14404,
+          "pct": 1.6245487364620939,
+          "balanced_pct": 1.5756706406001253
+        },
+        "2025": {
+          "count": 406,
+          "denominator": 18761,
+          "pct": 2.1640637492670964,
+          "balanced_pct": 2.1342534395193247
+        },
+        "2026": {
+          "count": 742,
+          "denominator": 26093,
+          "pct": 2.8436745487295445,
+          "balanced_pct": 2.9293892898376557
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 1.3537186492375304,
+      "ratio": 1.8591380802284543,
+      "venues_up": 5,
+      "venues_down": 0
+    },
+    {
+      "id": "science",
+      "name": "科学计算 / 分子 / 气象",
+      "group": "主题",
+      "regex": "molecul|protein|drug discovery|antibod|genomic|single[ -]cell|rna\\b|\\bdna\\b|materials? discovery|scientific|weather|climate|partial differential|\\bpdes?\\b|neural operators?|fluid|physics[ -]informed|quantum|chemistr|chemical",
+      "evidence": "title",
+      "total": 1829,
+      "total_pct": 2.472055901712463,
+      "years": {
+        "2024": {
+          "count": 355,
+          "denominator": 14404,
+          "pct": 2.4645931685642877,
+          "balanced_pct": 2.4043315217222783
+        },
+        "2025": {
+          "count": 530,
+          "denominator": 18761,
+          "pct": 2.8250093278609882,
+          "balanced_pct": 2.652861064719113
+        },
+        "2026": {
+          "count": 785,
+          "denominator": 26093,
+          "pct": 3.008469704518453,
+          "balanced_pct": 2.842566766908306
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.43823524518602763,
+      "ratio": 1.1822690594981302,
+      "venues_up": 3,
+      "venues_down": 0
+    },
+    {
+      "id": "graph",
+      "name": "图学习 / GNN",
+      "group": "主题",
+      "regex": "graph neural|graph learning|graph representation|graph classification|graph transformer|graph foundation|graph contrastive|graph generation|graph diffusion|graph clustering|knowledge graph|hypergraph|\\bgnns?\\b|node classification|link prediction",
+      "evidence": "title",
+      "total": 1591,
+      "total_pct": 2.1503777690675387,
+      "years": {
+        "2024": {
+          "count": 411,
+          "denominator": 14404,
+          "pct": 2.8533740627603446,
+          "balanced_pct": 2.96293766506255
+        },
+        "2025": {
+          "count": 493,
+          "denominator": 18761,
+          "pct": 2.627791695538617,
+          "balanced_pct": 2.703388910964311
+        },
+        "2026": {
+          "count": 490,
+          "denominator": 26093,
+          "pct": 1.877898286896869,
+          "balanced_pct": 1.9250475537716951
+        }
+      },
+      "direction": "连续下降",
+      "change_pp": -1.037890111290855,
+      "ratio": 0.6497090966411052,
+      "venues_up": 0,
+      "venues_down": 4
+    },
+    {
+      "id": "federated",
+      "name": "Federated Learning",
+      "group": "主题",
+      "regex": "federated",
+      "evidence": "title",
+      "total": 1063,
+      "total_pct": 1.4367388865611526,
+      "years": {
+        "2024": {
+          "count": 277,
+          "denominator": 14404,
+          "pct": 1.9230769230769231,
+          "balanced_pct": 1.9924173082227814
+        },
+        "2025": {
+          "count": 307,
+          "denominator": 18761,
+          "pct": 1.6363733276477799,
+          "balanced_pct": 1.689204402789327
+        },
+        "2026": {
+          "count": 332,
+          "denominator": 26093,
+          "pct": 1.2723719005097152,
+          "balanced_pct": 1.293777553307907
+        }
+      },
+      "direction": "连续下降",
+      "change_pp": -0.6986397549148744,
+      "ratio": 0.6493506897216955,
+      "venues_up": 0,
+      "venues_down": 3
+    },
+    {
+      "id": "theory",
+      "name": "泛化 / 收敛 / 复杂度（关键词）",
+      "group": "主题",
+      "regex": "generalization|generalisation|convergence|sample complexity|statistical learning|learning theor|minimax|regret|pac[ -]bayes|neural tangent|information[ -]theoretic|\\bidentifiability\\b|approximation theor",
+      "evidence": "title",
+      "total": 1835,
+      "total_pct": 2.4801654344682174,
+      "years": {
+        "2024": {
+          "count": 516,
+          "denominator": 14404,
+          "pct": 3.5823382393779504,
+          "balanced_pct": 3.4735244159661214
+        },
+        "2025": {
+          "count": 563,
+          "denominator": 18761,
+          "pct": 3.000906135067427,
+          "balanced_pct": 2.8266586434494885
+        },
+        "2026": {
+          "count": 595,
+          "denominator": 26093,
+          "pct": 2.2803050626604837,
+          "balanced_pct": 2.1361935256375757
+        }
+      },
+      "direction": "连续下降",
+      "change_pp": -1.3373308903285457,
+      "ratio": 0.6149930934178903,
+      "venues_up": 0,
+      "venues_down": 4
+    },
+    {
+      "id": "optimization",
+      "name": "优化算法 / 最优传输",
+      "group": "主题",
+      "regex": "\\boptimization\\b|\\boptimisation\\b|gradient descent|stochastic gradient|\\bsgd\\b|second[ -]order|optimal transport|bilevel|convex|nonconvex|non[ -]convex",
+      "evidence": "title",
+      "total": 3319,
+      "total_pct": 4.485923202724803,
+      "years": {
+        "2024": {
+          "count": 705,
+          "denominator": 14404,
+          "pct": 4.894473757289642,
+          "balanced_pct": 4.740496355768231
+        },
+        "2025": {
+          "count": 943,
+          "denominator": 18761,
+          "pct": 5.026384521080966,
+          "balanced_pct": 4.741742495796962
+        },
+        "2026": {
+          "count": 1365,
+          "denominator": 26093,
+          "pct": 5.231288084926992,
+          "balanced_pct": 5.011892951350816
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.2713965955825852,
+      "ratio": 1.0572506706502052,
+      "venues_up": 2,
+      "venues_down": 1
+    },
+    {
+      "id": "security",
+      "name": "安全 / 隐私 / 攻防",
+      "group": "主题",
+      "regex": "privacy|private learning|differentially private|backdoor|jailbreak|poisoning|adversarial attack|adversarial defense|membership inference|model extraction|watermark|\\bsafety\\b|\\bsecurity\\b|unlearning|red[ -]team",
+      "evidence": "title",
+      "total": 2376,
+      "total_pct": 3.211374971278738,
+      "years": {
+        "2024": {
+          "count": 424,
+          "denominator": 14404,
+          "pct": 2.943626770341572,
+          "balanced_pct": 2.9050818121218236
+        },
+        "2025": {
+          "count": 681,
+          "denominator": 18761,
+          "pct": 3.6298704759874205,
+          "balanced_pct": 3.542108132572964
+        },
+        "2026": {
+          "count": 973,
+          "denominator": 26093,
+          "pct": 3.728969455409497,
+          "balanced_pct": 3.6773566145449528
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.7722748024231292,
+      "ratio": 1.265835818874606,
+      "venues_up": 2,
+      "venues_down": 0
+    },
+    {
+      "id": "robustness",
+      "name": "鲁棒性 / OOD / Domain Shift",
+      "group": "主题",
+      "regex": "\\brobust(?:ness)?\\b|out[ -]of[ -]distribution|\\bood\\b|domain adaptation|domain generalization|domain shift|distribution shift|test[ -]time adaptation",
+      "evidence": "title",
+      "total": 3637,
+      "total_pct": 4.9157284387797855,
+      "years": {
+        "2024": {
+          "count": 785,
+          "denominator": 14404,
+          "pct": 5.44987503471258,
+          "balanced_pct": 5.503216185027045
+        },
+        "2025": {
+          "count": 933,
+          "denominator": 18761,
+          "pct": 4.9730824582911355,
+          "balanced_pct": 5.013695697957606
+        },
+        "2026": {
+          "count": 1135,
+          "denominator": 26093,
+          "pct": 4.349825623730503,
+          "balanced_pct": 4.445965377155275
+        }
+      },
+      "direction": "连续下降",
+      "change_pp": -1.0572508078717702,
+      "ratio": 0.807884921775688,
+      "venues_up": 0,
+      "venues_down": 4
+    },
+    {
+      "id": "efficient",
+      "name": "效率 / 压缩 / 部署",
+      "group": "主题",
+      "regex": "\\befficient\\b|\\befficiency\\b|\\baccelera\\w*\\b|compression|quantization|\\bpruning\\b|distillation|low[ -]rank|\\blora\\b|parameter[ -]efficient|speculative decod|kv[ -]cach|\\blatency\\b|real[ -]time|few[ -]step|one[ -]step|sparsif",
+      "evidence": "title",
+      "total": 8038,
+      "total_pct": 10.86407071512563,
+      "years": {
+        "2024": {
+          "count": 1427,
+          "denominator": 14404,
+          "pct": 9.906970286031658,
+          "balanced_pct": 9.91007081490911
+        },
+        "2025": {
+          "count": 2038,
+          "denominator": 18761,
+          "pct": 10.862960396567347,
+          "balanced_pct": 10.791385669999507
+        },
+        "2026": {
+          "count": 3009,
+          "denominator": 26093,
+          "pct": 11.53182845974016,
+          "balanced_pct": 11.575398676952421
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 1.665327862043311,
+      "ratio": 1.1680439921315118,
+      "venues_up": 4,
+      "venues_down": 0
+    },
+    {
+      "id": "detection",
+      "name": "目标 / 异常检测",
+      "group": "主题",
+      "regex": "object detection|object detector|anomaly detection|anomaly localization|anomaly segmentation|outlier detection|salient object|pedestrian detection",
+      "evidence": "title",
+      "total": 1329,
+      "total_pct": 1.7962615053995972,
+      "years": {
+        "2024": {
+          "count": 234,
+          "denominator": 14404,
+          "pct": 1.6245487364620939,
+          "balanced_pct": 1.6722146951249883
+        },
+        "2025": {
+          "count": 275,
+          "denominator": 18761,
+          "pct": 1.465806726720324,
+          "balanced_pct": 1.6276552597458112
+        },
+        "2026": {
+          "count": 355,
+          "denominator": 26093,
+          "pct": 1.360518146629364,
+          "balanced_pct": 1.5216439225126548
+        }
+      },
+      "direction": "连续下降",
+      "change_pp": -0.15057077261233354,
+      "ratio": 0.9099572722023715,
+      "venues_up": 2,
+      "venues_down": 2
+    },
+    {
+      "id": "segmentation",
+      "name": "分割 / Segmentation",
+      "group": "主题",
+      "regex": "segmentation|segment anything",
+      "evidence": "title",
+      "total": 1898,
+      "total_pct": 2.5653155284036386,
+      "years": {
+        "2024": {
+          "count": 370,
+          "denominator": 14404,
+          "pct": 2.5687309080810885,
+          "balanced_pct": 2.635987968022572
+        },
+        "2025": {
+          "count": 386,
+          "denominator": 18761,
+          "pct": 2.0574596236874365,
+          "balanced_pct": 2.3207832463828613
+        },
+        "2026": {
+          "count": 461,
+          "denominator": 26093,
+          "pct": 1.7667573678764419,
+          "balanced_pct": 2.024855539039818
+        }
+      },
+      "direction": "连续下降",
+      "change_pp": -0.6111324289827538,
+      "ratio": 0.7681581113432758,
+      "venues_up": 0,
+      "venues_down": 2
+    },
+    {
+      "id": "recognition",
+      "name": "分类 / 识别 / 跟踪",
+      "group": "主题",
+      "regex": "\\bclassification\\b|\\brecognition\\b|object tracking|multi[ -]object tracking|visual tracking|re[ -]identification",
+      "evidence": "title",
+      "total": 2066,
+      "total_pct": 2.7923824455647615,
+      "years": {
+        "2024": {
+          "count": 453,
+          "denominator": 14404,
+          "pct": 3.144959733407387,
+          "balanced_pct": 3.3332956037713917
+        },
+        "2025": {
+          "count": 465,
+          "denominator": 18761,
+          "pct": 2.4785459197270936,
+          "balanced_pct": 2.6382061793699703
+        },
+        "2026": {
+          "count": 531,
+          "denominator": 26093,
+          "pct": 2.035028551718852,
+          "balanced_pct": 2.236397079112114
+        }
+      },
+      "direction": "连续下降",
+      "change_pp": -1.0968985246592777,
+      "ratio": 0.6709267178649821,
+      "venues_up": 0,
+      "venues_down": 4
+    },
+    {
+      "id": "restoration",
+      "name": "图像修复 / 低层视觉",
+      "group": "主题",
+      "regex": "image restoration|image denoising|image deblurring|super[ -]resolution|low[ -]light|image enhancement|image dehazing|image deraining|image inpainting",
+      "evidence": "title",
+      "total": 995,
+      "total_pct": 1.3448308486626028,
+      "years": {
+        "2024": {
+          "count": 172,
+          "denominator": 14404,
+          "pct": 1.1941127464593169,
+          "balanced_pct": 1.242224532584651
+        },
+        "2025": {
+          "count": 192,
+          "denominator": 18761,
+          "pct": 1.0233996055647354,
+          "balanced_pct": 1.1622129618389059
+        },
+        "2026": {
+          "count": 245,
+          "denominator": 26093,
+          "pct": 0.9389491434484345,
+          "balanced_pct": 1.0638038245425343
+        }
+      },
+      "direction": "连续下降",
+      "change_pp": -0.17842070804211674,
+      "ratio": 0.8563700012662901,
+      "venues_up": 1,
+      "venues_down": 3
+    },
+    {
+      "id": "retrieval",
+      "name": "检索 / RAG / 推荐",
+      "group": "主题",
+      "regex": "\\bretrieval\\b|retrieval[ -]augmented|\\brag\\b|recommender|recommendation",
+      "evidence": "title",
+      "total": 1538,
+      "total_pct": 2.0787435630583753,
+      "years": {
+        "2024": {
+          "count": 230,
+          "denominator": 14404,
+          "pct": 1.596778672590947,
+          "balanced_pct": 1.666749236431734
+        },
+        "2025": {
+          "count": 426,
+          "denominator": 18761,
+          "pct": 2.2706678748467564,
+          "balanced_pct": 2.329892021241045
+        },
+        "2026": {
+          "count": 594,
+          "denominator": 26093,
+          "pct": 2.2764726171770207,
+          "balanced_pct": 2.440855105571028
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.7741058691392939,
+      "ratio": 1.4644405122371864,
+      "venues_up": 2,
+      "venues_down": 0
+    },
+    {
+      "id": "time_series",
+      "name": "时间序列 / 预测",
+      "group": "主题",
+      "regex": "time[ -]series|temporal forecasting|time[ -]series forecasting|traffic forecasting|traffic prediction|spatio[ -]temporal forecast",
+      "evidence": "title",
+      "total": 848,
+      "total_pct": 1.1461472961466204,
+      "years": {
+        "2024": {
+          "count": 165,
+          "denominator": 14404,
+          "pct": 1.1455151346848098,
+          "balanced_pct": 1.1243133196562278
+        },
+        "2025": {
+          "count": 249,
+          "denominator": 18761,
+          "pct": 1.3272213634667662,
+          "balanced_pct": 1.3027546680935862
+        },
+        "2026": {
+          "count": 388,
+          "denominator": 26093,
+          "pct": 1.486988847583643,
+          "balanced_pct": 1.4121595569066785
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.28784623725045067,
+      "ratio": 1.2560195918860617,
+      "venues_up": 1,
+      "venues_down": 1
+    },
+    {
+      "id": "speech_audio",
+      "name": "语音 / 音频 / 音乐",
+      "group": "主题",
+      "regex": "\\bspeech\\b|\\baudio\\b|\\bacoustic\\b|\\bmusic\\b|\\bsound\\b",
+      "evidence": "title",
+      "total": 1115,
+      "total_pct": 1.5070215037776906,
+      "years": {
+        "2024": {
+          "count": 172,
+          "denominator": 14404,
+          "pct": 1.1941127464593169,
+          "balanced_pct": 1.2327004338621472
+        },
+        "2025": {
+          "count": 272,
+          "denominator": 18761,
+          "pct": 1.4498161078833751,
+          "balanced_pct": 1.5037443471951009
+        },
+        "2026": {
+          "count": 362,
+          "denominator": 26093,
+          "pct": 1.3873452650136051,
+          "balanced_pct": 1.4290040120732448
+        }
+      },
+      "direction": "先升后降",
+      "change_pp": 0.19630357821109756,
+      "ratio": 1.1592467827694868,
+      "venues_up": 2,
+      "venues_down": 0
+    },
+    {
+      "id": "continual",
+      "name": "Continual / Incremental Learning",
+      "group": "主题",
+      "regex": "continual learning|continual pre[ -]?training|continual adaptation|incremental learning|class[ -]incremental|lifelong learning|catastrophic forgetting",
+      "evidence": "title",
+      "total": 666,
+      "total_pct": 0.9001581358887372,
+      "years": {
+        "2024": {
+          "count": 131,
+          "denominator": 14404,
+          "pct": 0.9094695917800611,
+          "balanced_pct": 0.937147089940809
+        },
+        "2025": {
+          "count": 164,
+          "denominator": 18761,
+          "pct": 0.8741538297532114,
+          "balanced_pct": 0.9179436143808977
+        },
+        "2026": {
+          "count": 223,
+          "denominator": 26093,
+          "pct": 0.8546353428122485,
+          "balanced_pct": 0.8646152827233947
+        }
+      },
+      "direction": "连续下降",
+      "change_pp": -0.07253180721741426,
+      "ratio": 0.9226036040703115,
+      "venues_up": 0,
+      "venues_down": 4
+    },
+    {
+      "id": "self_supervised",
+      "name": "Self-supervised / Contrastive Learning",
+      "group": "主题",
+      "regex": "self[ -]supervis|contrastive learning|contrastive pre[ -]?training|contrastive representation|masked (?:image|autoencod|modeling)",
+      "evidence": "title",
+      "total": 1194,
+      "total_pct": 1.6137970183951236,
+      "years": {
+        "2024": {
+          "count": 291,
+          "denominator": 14404,
+          "pct": 2.0202721466259375,
+          "balanced_pct": 2.1707649622352685
+        },
+        "2025": {
+          "count": 293,
+          "denominator": 18761,
+          "pct": 1.561750439742018,
+          "balanced_pct": 1.657388293456688
+        },
+        "2026": {
+          "count": 297,
+          "denominator": 26093,
+          "pct": 1.1382363085885103,
+          "balanced_pct": 1.2048399296535515
+        }
+      },
+      "direction": "连续下降",
+      "change_pp": -0.965925032581717,
+      "ratio": 0.555030116394043,
+      "venues_up": 0,
+      "venues_down": 4
+    },
+    {
+      "id": "causality",
+      "name": "因果学习 / 因果推断",
+      "group": "主题",
+      "regex": "causal inference|causal discovery|causal learning|causal representation|causal effect|causal identification|causal graph|causal reasoning|causal model|causal structure|causal machine|counterfactual|treatment effect",
+      "evidence": "title",
+      "total": 706,
+      "total_pct": 0.9542216875937665,
+      "years": {
+        "2024": {
+          "count": 179,
+          "denominator": 14404,
+          "pct": 1.242710358233824,
+          "balanced_pct": 1.273539526945386
+        },
+        "2025": {
+          "count": 217,
+          "denominator": 18761,
+          "pct": 1.1566547625393102,
+          "balanced_pct": 1.1177483648708748
+        },
+        "2026": {
+          "count": 256,
+          "denominator": 26093,
+          "pct": 0.9811060437665274,
+          "balanced_pct": 0.9331073246180305
+        }
+      },
+      "direction": "连续下降",
+      "change_pp": -0.3404322023273555,
+      "ratio": 0.7326881536657994,
+      "venues_up": 0,
+      "venues_down": 2
+    },
+    {
+      "id": "uncertainty",
+      "name": "不确定性 / 校准 / Conformal",
+      "group": "主题",
+      "regex": "uncertainty|uncertain predictions?|conformal|calibration|calibrated|bayesian",
+      "evidence": "title",
+      "total": 1915,
+      "total_pct": 2.5882925378782757,
+      "years": {
+        "2024": {
+          "count": 403,
+          "denominator": 14404,
+          "pct": 2.7978339350180503,
+          "balanced_pct": 2.793627973411269
+        },
+        "2025": {
+          "count": 510,
+          "denominator": 18761,
+          "pct": 2.7184052022813283,
+          "balanced_pct": 2.6411473784427417
+        },
+        "2026": {
+          "count": 777,
+          "denominator": 26093,
+          "pct": 2.977810140650749,
+          "balanced_pct": 2.843492964037807
+        }
+      },
+      "direction": "先降后升",
+      "change_pp": 0.04986499062653804,
+      "ratio": 1.017849545859769,
+      "venues_up": 1,
+      "venues_down": 1
+    },
+    {
+      "id": "interpretability",
+      "name": "可解释性 / 公平 / 可信度",
+      "group": "主题",
+      "regex": "interpretab|explainab|mechanistic|\\bfairness\\b|\\bbias\\b|trustworth|hallucinati",
+      "evidence": "title",
+      "total": 1917,
+      "total_pct": 2.5909957154635275,
+      "years": {
+        "2024": {
+          "count": 354,
+          "denominator": 14404,
+          "pct": 2.457650652596501,
+          "balanced_pct": 2.4421051928353013
+        },
+        "2025": {
+          "count": 515,
+          "denominator": 18761,
+          "pct": 2.745056233676243,
+          "balanced_pct": 2.710985219855274
+        },
+        "2026": {
+          "count": 794,
+          "denominator": 26093,
+          "pct": 3.0429617138696203,
+          "balanced_pct": 3.000028457529286
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.5579232646939847,
+      "ratio": 1.228459964104262,
+      "venues_up": 4,
+      "venues_down": 0
+    },
+    {
+      "id": "evaluation",
+      "name": "评测 / 数据集 / Benchmark",
+      "group": "主题",
+      "regex": "benchmark|dataset|\\bevaluation\\b|\\bevaluating\\b|\\bassessing\\b|\\bmeasuring\\b",
+      "evidence": "title",
+      "total": 4802,
+      "total_pct": 6.490329382188763,
+      "years": {
+        "2024": {
+          "count": 797,
+          "denominator": 14404,
+          "pct": 5.533185226326021,
+          "balanced_pct": 4.8446695559263135
+        },
+        "2025": {
+          "count": 1172,
+          "denominator": 18761,
+          "pct": 6.247001758968072,
+          "balanced_pct": 5.941901663549451
+        },
+        "2026": {
+          "count": 1962,
+          "denominator": 26093,
+          "pct": 7.519258038554401,
+          "balanced_pct": 7.40351431243994
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 2.5588447565136265,
+      "ratio": 1.5281773559526846,
+      "venues_up": 4,
+      "venues_down": 0
+    },
+    {
+      "id": "neural_arch",
+      "name": "神经网络架构 / Attention",
+      "group": "主题",
+      "regex": "\\btransformers?\\b|\\battention\\b|state[ -]space model|\\bmamba\\b|neural architecture|mixture[ -]of[ -]experts|\\bmoe\\b|convolutional",
+      "evidence": "title",
+      "total": 4581,
+      "total_pct": 6.191628259018477,
+      "years": {
+        "2024": {
+          "count": 915,
+          "denominator": 14404,
+          "pct": 6.352402110524854,
+          "balanced_pct": 6.316934231649664
+        },
+        "2025": {
+          "count": 1213,
+          "denominator": 18761,
+          "pct": 6.465540216406375,
+          "balanced_pct": 6.502693567464109
+        },
+        "2026": {
+          "count": 1586,
+          "denominator": 26093,
+          "pct": 6.0782585367723145,
+          "balanced_pct": 6.096875321201436
+        }
+      },
+      "direction": "先升后降",
+      "change_pp": -0.22005891044822778,
+      "ratio": 0.9651636533833661,
+      "venues_up": 0,
+      "venues_down": 1
+    },
+    {
+      "id": "data_training",
+      "name": "数据选择 / 合成数据 / 训练策略",
+      "group": "主题",
+      "regex": "data (?:selection|curation|augmentation|valuation|pruning|synthesis|distillation)|synthetic data|curriculum learning|active learning|dataset distillation|data[ -]centric|instruction tuning|fine[ -]?tuning|pre[ -]?training",
+      "evidence": "title",
+      "total": 2498,
+      "total_pct": 3.3762688039790776,
+      "years": {
+        "2024": {
+          "count": 527,
+          "denominator": 14404,
+          "pct": 3.6587059150236048,
+          "balanced_pct": 3.6318106359317346
+        },
+        "2025": {
+          "count": 712,
+          "denominator": 18761,
+          "pct": 3.7951068706358937,
+          "balanced_pct": 3.7585839766356117
+        },
+        "2026": {
+          "count": 887,
+          "denominator": 26093,
+          "pct": 3.399379143831679,
+          "balanced_pct": 3.3899688294248005
+        }
+      },
+      "direction": "先升后降",
+      "change_pp": -0.2418418065069341,
+      "ratio": 0.9334101276883093,
+      "venues_up": 2,
+      "venues_down": 2
+    },
+    {
+      "id": "video",
+      "name": "视频任务（不限生成）",
+      "group": "主题",
+      "regex": "\\bvideo\\b|\\bvideos\\b|action recognition|action detection|temporal action|talking head|talking face",
+      "evidence": "title",
+      "total": 4530,
+      "total_pct": 6.1226972305945635,
+      "years": {
+        "2024": {
+          "count": 589,
+          "denominator": 14404,
+          "pct": 4.0891419050263815,
+          "balanced_pct": 4.151979035038652
+        },
+        "2025": {
+          "count": 949,
+          "denominator": 18761,
+          "pct": 5.058365758754864,
+          "balanced_pct": 5.507770962222145
+        },
+        "2026": {
+          "count": 1370,
+          "denominator": 26093,
+          "pct": 5.250450312344307,
+          "balanced_pct": 5.755189028520489
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 1.603209993481837,
+      "ratio": 1.3861315242568204,
+      "venues_up": 4,
+      "venues_down": 0
+    },
+    {
+      "id": "world_models",
+      "name": "World Models",
+      "group": "细分信号",
+      "regex": "\\bworld[ -]models?\\b",
+      "evidence": "title",
+      "total": 383,
+      "total_pct": 0.5176585075756552,
+      "years": {
+        "2024": {
+          "count": 38,
+          "denominator": 14404,
+          "pct": 0.2638156067758956,
+          "balanced_pct": 0.25075845572818656
+        },
+        "2025": {
+          "count": 91,
+          "denominator": 18761,
+          "pct": 0.48504877138745267,
+          "balanced_pct": 0.45978273153045557
+        },
+        "2026": {
+          "count": 180,
+          "denominator": 26093,
+          "pct": 0.6898401870233396,
+          "balanced_pct": 0.6617190473086041
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.41096059158041753,
+      "ratio": 2.6388703239817546,
+      "venues_up": 5,
+      "venues_down": 0
+    },
+    {
+      "id": "vla",
+      "name": "Vision-Language-Action",
+      "group": "细分信号",
+      "regex": "vision[ -]language[ -]action|\\bvlas?\\b",
+      "evidence": "title",
+      "total": 287,
+      "total_pct": 0.38790598348358496,
+      "years": {
+        "2024": {
+          "count": 4,
+          "denominator": 14404,
+          "pct": 0.027770063871146902,
+          "balanced_pct": 0.021013970095504094
+        },
+        "2025": {
+          "count": 29,
+          "denominator": 18761,
+          "pct": 0.1545759820905069,
+          "balanced_pct": 0.12887841740290087
+        },
+        "2026": {
+          "count": 200,
+          "denominator": 26093,
+          "pct": 0.7664890966925996,
+          "balanced_pct": 0.7552294131849856
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.7342154430894815,
+      "ratio": 35.939396970330975,
+      "venues_up": 4,
+      "venues_down": 0
+    },
+    {
+      "id": "test_compute",
+      "name": "Test-time Compute / 推理时扩展",
+      "group": "细分信号",
+      "regex": "(?:test|inference)[ -]time (?:scal\\w*|comput\\w*|search)|scaling (?:test|inference)[ -]time|test[ -]time thinking|inference scaling",
+      "evidence": "title",
+      "total": 172,
+      "total_pct": 0.23247327233162582,
+      "years": {
+        "2024": {
+          "count": 0,
+          "denominator": 14404,
+          "pct": 0.0,
+          "balanced_pct": 0.0
+        },
+        "2025": {
+          "count": 50,
+          "denominator": 18761,
+          "pct": 0.2665103139491498,
+          "balanced_pct": 0.21134566101494492
+        },
+        "2026": {
+          "count": 108,
+          "denominator": 26093,
+          "pct": 0.41390411221400375,
+          "balanced_pct": 0.3896983882726174
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.3896983882726174,
+      "ratio": null,
+      "venues_up": 3,
+      "venues_down": 0
+    },
+    {
+      "id": "diffusion_language",
+      "name": "Diffusion Language Models",
+      "group": "细分信号",
+      "regex": "diffusion (?:large |based )?language models?\\b|\\blanguage diffusion\\b|\\bdiffusion (?:text|llms?)\\b|discrete diffusion.*\\b(?:language|text)\\b|\\b(?:language|text)\\b.*discrete diffusion",
+      "evidence": "title",
+      "total": 202,
+      "total_pct": 0.2730209361103978,
+      "years": {
+        "2024": {
+          "count": 4,
+          "denominator": 14404,
+          "pct": 0.027770063871146902,
+          "balanced_pct": 0.025169443792696065
+        },
+        "2025": {
+          "count": 22,
+          "denominator": 18761,
+          "pct": 0.11726453813762593,
+          "balanced_pct": 0.08595829685246403
+        },
+        "2026": {
+          "count": 172,
+          "denominator": 26093,
+          "pct": 0.6591806231556356,
+          "balanced_pct": 0.5891865296652505
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.5640170858725545,
+      "ratio": 23.40880213794104,
+      "venues_up": 2,
+      "venues_down": 0
+    },
+    {
+      "id": "flow_matching",
+      "name": "Flow Matching / Rectified Flow",
+      "group": "细分信号",
+      "regex": "flow[ -]matching|rectified flows?",
+      "evidence": "title",
+      "total": 496,
+      "total_pct": 0.6703880411423628,
+      "years": {
+        "2024": {
+          "count": 39,
+          "denominator": 14404,
+          "pct": 0.27075812274368233,
+          "balanced_pct": 0.2367798192319491
+        },
+        "2025": {
+          "count": 111,
+          "denominator": 18761,
+          "pct": 0.5916528969671127,
+          "balanced_pct": 0.5510130183055386
+        },
+        "2026": {
+          "count": 283,
+          "denominator": 26093,
+          "pct": 1.0845820718200283,
+          "balanced_pct": 1.034580666542627
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.7978008473106778,
+      "ratio": 4.36937856401163,
+      "venues_up": 5,
+      "venues_down": 0
+    },
+    {
+      "id": "llm_judge",
+      "name": "LLM-as-a-Judge / Verifier / Process Reward",
+      "group": "细分信号",
+      "regex": "(?:llm|language model).{0,25}(?:judge|judging)|(?:judge|judging).{0,25}(?:llm|language model)|generative (?:reward|verifier)|process reward|\\bverifiers?\\b",
+      "evidence": "title",
+      "total": 165,
+      "total_pct": 0.2230121507832457,
+      "years": {
+        "2024": {
+          "count": 4,
+          "denominator": 14404,
+          "pct": 0.027770063871146902,
+          "balanced_pct": 0.021013970095504094
+        },
+        "2025": {
+          "count": 46,
+          "denominator": 18761,
+          "pct": 0.24518948883321784,
+          "balanced_pct": 0.21951739907645373
+        },
+        "2026": {
+          "count": 110,
+          "denominator": 26093,
+          "pct": 0.42156900318092977,
+          "balanced_pct": 0.404856380233214
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.3838424101377099,
+      "ratio": 19.266058645426188,
+      "venues_up": 3,
+      "venues_down": 0
+    },
+    {
+      "id": "gaussian",
+      "name": "Gaussian Splatting",
+      "group": "细分信号",
+      "regex": "gaussian splatt|\\b3dgs\\b|\\b4dgs\\b",
+      "evidence": "title",
+      "total": 908,
+      "total_pct": 1.2272426237041643,
+      "years": {
+        "2024": {
+          "count": 75,
+          "denominator": 14404,
+          "pct": 0.5206886975840045,
+          "balanced_pct": 0.43700153261903896
+        },
+        "2025": {
+          "count": 199,
+          "denominator": 18761,
+          "pct": 1.0607110495176164,
+          "balanced_pct": 1.1558608154536512
+        },
+        "2026": {
+          "count": 278,
+          "denominator": 26093,
+          "pct": 1.0654198444027134,
+          "balanced_pct": 1.225780954311057
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.788779421692018,
+      "ratio": 2.804980904677159,
+      "venues_up": 2,
+      "venues_down": 1
+    },
+    {
+      "id": "nerf",
+      "name": "NeRF / Radiance Fields",
+      "group": "细分信号",
+      "regex": "\\bnerfs?\\b|radiance fields?",
+      "evidence": "title",
+      "total": 291,
+      "total_pct": 0.3933123386540879,
+      "years": {
+        "2024": {
+          "count": 111,
+          "denominator": 14404,
+          "pct": 0.7706192724243266,
+          "balanced_pct": 0.8448484237128896
+        },
+        "2025": {
+          "count": 40,
+          "denominator": 18761,
+          "pct": 0.21320825115931988,
+          "balanced_pct": 0.2404038041924973
+        },
+        "2026": {
+          "count": 20,
+          "denominator": 26093,
+          "pct": 0.07664890966925995,
+          "balanced_pct": 0.08737295486977296
+        }
+      },
+      "direction": "连续下降",
+      "change_pp": -0.7574754688431167,
+      "ratio": 0.10341849782448727,
+      "venues_up": 0,
+      "venues_down": 3
+    },
+    {
+      "id": "gan",
+      "name": "GAN / 对抗生成",
+      "group": "细分信号",
+      "regex": "\\bgans?\\b|generative adversarial",
+      "evidence": "title",
+      "total": 109,
+      "total_pct": 0.14732317839620473,
+      "years": {
+        "2024": {
+          "count": 39,
+          "denominator": 14404,
+          "pct": 0.27075812274368233,
+          "balanced_pct": 0.29766242143074084
+        },
+        "2025": {
+          "count": 16,
+          "denominator": 18761,
+          "pct": 0.08528330046372795,
+          "balanced_pct": 0.09581541240325614
+        },
+        "2026": {
+          "count": 16,
+          "denominator": 26093,
+          "pct": 0.061319127735407965,
+          "balanced_pct": 0.06208717232520557
+        }
+      },
+      "direction": "连续下降",
+      "change_pp": -0.2355752491055353,
+      "ratio": 0.20858250103179993,
+      "venues_up": 0,
+      "venues_down": 3
+    },
+    {
+      "id": "reason_rl",
+      "name": "RLVR / GRPO / Reasoning RL",
+      "group": "细分信号",
+      "regex": "\\b(?:rlvr|grpo)\\b|verifiable rewards?|reinforcement learning.{0,50}(?:reasoning|reason)|reasoning.{0,50}reinforcement learning",
+      "evidence": "title",
+      "total": 297,
+      "total_pct": 0.40142187140984226,
+      "years": {
+        "2024": {
+          "count": 2,
+          "denominator": 14404,
+          "pct": 0.013885031935573451,
+          "balanced_pct": 0.016512392771166038
+        },
+        "2025": {
+          "count": 46,
+          "denominator": 18761,
+          "pct": 0.24518948883321784,
+          "balanced_pct": 0.16310730698301998
+        },
+        "2026": {
+          "count": 229,
+          "denominator": 26093,
+          "pct": 0.8776300157130265,
+          "balanced_pct": 0.849593451619422
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.833081058848256,
+      "ratio": 51.45186790269326,
+      "venues_up": 2,
+      "venues_down": 0
+    },
+    {
+      "id": "video_gen",
+      "name": "Video Generation（既有粗筛）",
+      "group": "既有标注",
+      "regex": null,
+      "evidence": "previous title/abstract screen",
+      "total": 1725,
+      "total_pct": 2.331490667279387,
+      "years": {
+        "2024": {
+          "count": 167,
+          "denominator": 14404,
+          "pct": 1.1594001666203833,
+          "balanced_pct": 1.1159753970683053
+        },
+        "2025": {
+          "count": 383,
+          "denominator": 18761,
+          "pct": 2.0414690048504878,
+          "balanced_pct": 2.1172490298824544
+        },
+        "2026": {
+          "count": 614,
+          "denominator": 26093,
+          "pct": 2.3531215268462806,
+          "balanced_pct": 2.454439482323436
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 1.3384640852551308,
+      "ratio": 2.1993670189963943,
+      "venues_up": 5,
+      "venues_down": 0
+    },
+    {
+      "id": "video_reason",
+      "name": "Video Gen + Reasoning（严格）",
+      "group": "既有标注",
+      "regex": null,
+      "evidence": "previous abstract review",
+      "total": 109,
+      "total_pct": 0.14732317839620473,
+      "years": {
+        "2024": {
+          "count": 9,
+          "denominator": 14404,
+          "pct": 0.062482643710080533,
+          "balanced_pct": 0.061103460889530406
+        },
+        "2025": {
+          "count": 15,
+          "denominator": 18761,
+          "pct": 0.07995309418474494,
+          "balanced_pct": 0.08143268793999613
+        },
+        "2026": {
+          "count": 50,
+          "denominator": 26093,
+          "pct": 0.1916222741731499,
+          "balanced_pct": 0.19943965141965483
+        }
+      },
+      "direction": "连续上升",
+      "change_pp": 0.13833619053012441,
+      "ratio": 3.2639665334214683,
+      "venues_up": 4,
+      "venues_down": 0
+    }
+  ]
+}

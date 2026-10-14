@@ -1,0 +1,37 @@
+﻿venue,year,total,video,reasoning,broad,editing,reasoning_editing,video_all_pct,reason_all_pct,reason_video_pct,R1,R2,R3,abstract_covered,borderline,status,scope,source
+CVPR,2024,2716,59,2,3,12,0,2.1723122238586154,0.07363770250368189,3.389830508474576,1,1,0,58,0,目录快照,Main / 官方论文目录,https://openaccess.thecvf.com/CVPR2024?day=all
+CVPR,2025,2871,129,3,12,17,0,4.493207941483804,0.1044932079414838,2.3255813953488373,2,1,0,129,0,目录快照,Main / 官方论文目录,https://openaccess.thecvf.com/CVPR2025?day=all
+CVPR,2026,4042,185,16,39,33,2,4.576942107867392,0.3958436417615042,8.64864864864865,11,3,2,185,11,目录快照,Main / 官方论文目录,https://openaccess.thecvf.com/CVPR2026?day=all
+AAAI,2024,2324,13,0,0,1,0,0.5593803786574871,0.0,0.0,0,0,0,13,0,目录快照,仅 Main Technical：Vol 38 Issues 1–18,https://aaai.org/proceeding/aaai-38-2024/
+AAAI,2025,3027,39,2,3,12,0,1.288404360753221,0.06607201850016518,5.128205128205129,2,0,0,39,0,目录快照,仅 Main Technical：Vol 39 Issues 1–25,https://aaai.org/proceeding/aaai-39-2025/
+AAAI,2026,4143,57,4,14,8,0,1.3758146270818248,0.09654839488293507,7.017543859649122,4,0,0,57,0,目录快照,仅 Main Technical：Vol 40 Issues 1–43,https://aaai.org/proceeding/aaai-40-2026/
+NeurIPS,2024,4494,60,3,7,2,0,1.335113484646195,0.06675567423230974,5.0,1,2,0,60,0,目录快照,Main + Datasets/Evaluations + Position；排除 J2C；合并多地展示,https://neurips.cc/virtual/2024/papers.html
+NeurIPS,2025,5824,112,4,36,9,0,1.9230769230769231,0.06868131868131869,3.5714285714285716,2,2,0,112,0,目录快照,Main + Datasets/Evaluations + Position；排除 J2C；合并多地展示,https://neurips.cc/virtual/2025/papers.html
+NeurIPS,2026,6001,129,14,33,18,2,2.149641726378937,0.23329445092484585,10.852713178294573,8,4,2,129,14,目录快照,Main + Datasets/Evaluations + Position；排除 J2C；合并多地展示,https://neurips.cc/virtual/2026/papers.html
+ICCV,2024,,,,,,,,,,0,0,0,0,0,未举办,Main / 官方论文目录,https://openaccess.thecvf.com/ICCV2024?day=all
+ICCV,2025,2701,123,9,19,16,1,4.553868937430582,0.33320992225101814,7.317073170731708,4,4,1,123,0,目录快照,Main / 官方论文目录,https://openaccess.thecvf.com/ICCV2025?day=all
+ICCV,2026,,,,,,,,,,0,0,0,0,0,未举办,Main / 官方论文目录,https://openaccess.thecvf.com/ICCV2026?day=all
+ECCV,2024,2387,61,1,7,15,0,2.5555090071219104,0.04189359028068706,1.639344262295082,1,0,0,61,0,目录快照,Main / 官方论文目录,https://eccv.ecva.net/virtual/2024/papers.html
+ECCV,2025,,,,,,,,,,0,0,0,0,0,未举办,Main / 官方论文目录,https://eccv.ecva.net/virtual/2025/papers.html
+ECCV,2026,2834,210,20,64,37,2,7.410021171489062,0.7057163020465773,9.523809523809524,8,7,5,210,14,目录快照,Main / 官方论文目录,https://eccv.ecva.net/virtual/2026/papers.html
+ICLR,2024,2260,29,2,1,5,0,1.2831858407079646,0.08849557522123894,6.896551724137931,1,1,0,29,0,目录快照,Main；排除 Blog / J2C；合并 oral/poster,https://iclr.cc/virtual/2024/papers.html
+ICLR,2025,3708,69,4,10,2,0,1.86084142394822,0.10787486515641856,5.797101449275362,1,3,0,69,0,目录快照,Main；排除 Blog / J2C；合并 oral/poster,https://iclr.cc/virtual/2025/papers.html
+ICLR,2026,5353,135,8,26,16,0,2.521950308238371,0.14944890715486642,5.925925925925926,5,2,1,135,10,目录快照,Main；排除 Blog / J2C；合并 oral/poster,https://iclr.cc/virtual/2026/papers.html
+ICML,2024,2610,6,2,1,2,0,0.22988505747126436,0.07662835249042145,33.333333333333336,0,2,0,6,0,目录快照,Main + Position；排除 J2C；合并 oral/poster,https://icml.cc/virtual/2024/papers.html
+ICML,2025,3331,34,2,9,1,0,1.020714500150105,0.06004202942059442,5.882352941176471,1,1,0,34,0,目录快照,Main + Position；排除 J2C；合并 oral/poster,https://icml.cc/virtual/2025/papers.html
+ICML,2026,6554,108,8,27,9,0,1.6478486420506562,0.12206286237412267,7.407407407407407,2,6,0,108,6,目录快照,Main + Position；排除 J2C；合并 oral/poster,https://icml.cc/virtual/2026/papers.html
+SIGGRAPH,2024,134,7,0,0,1,0,5.223880597014926,0.0,0.0,0,0,0,7,0,目录快照,仅 Conference Papers track；Journal track 归入 TOG,https://doi.org/10.1145/3641519
+SIGGRAPH,2025,174,12,0,0,4,0,6.896551724137931,0.0,0.0,0,0,0,10,0,目录快照,仅 Conference Papers track；Journal track 归入 TOG,https://doi.org/10.1145/3721238
+SIGGRAPH,2026,195,17,1,2,3,0,8.717948717948717,0.5128205128205128,5.882352941176471,1,0,0,15,0,目录快照,仅 Conference Papers track；Journal track 归入 TOG,https://doi.org/10.1145/3799902
+SIGGRAPH-Asia,2024,146,8,1,0,3,0,5.47945205479452,0.684931506849315,12.5,1,0,0,6,0,目录快照,仅 Conference Papers track；Journal track 归入 TOG,https://doi.org/10.1145/3680528
+SIGGRAPH-Asia,2025,201,21,2,1,2,0,10.447761194029852,0.9950248756218906,9.523809523809524,2,0,0,21,0,目录快照,仅 Conference Papers track；Journal track 归入 TOG,https://doi.org/10.1145/3757377
+SIGGRAPH-Asia,2026,,,,,,,,,,0,0,0,0,0,未取得完整目录,仅 Conference Papers track；Journal track 归入 TOG,https://asia.siggraph.org/2026/program/
+TPAMI,2024,731,6,0,0,2,0,0.8207934336525308,0.0,0.0,0,0,0,6,0,目录快照,按卷年；排除尚未入卷的 early access、勘误与编辑性条目,https://api.crossref.org/journals/0162-8828/works
+TPAMI,2025,775,5,0,0,0,0,0.6451612903225806,0.0,0.0,0,0,0,5,0,目录快照,按卷年；排除尚未入卷的 early access、勘误与编辑性条目,https://api.crossref.org/journals/0162-8828/works
+TPAMI,2026,859,4,0,0,0,0,0.46565774155995343,0.0,0.0,0,0,0,4,0,2026 已入卷，非完整年度,按卷年；排除尚未入卷的 early access、勘误与编辑性条目,https://api.crossref.org/journals/0162-8828/works
+TOG,2024,283,4,0,0,1,0,1.4134275618374559,0.0,0.0,0,0,0,4,0,目录快照,按卷年；排除尚未入卷的 early access、勘误与编辑性条目,https://api.crossref.org/journals/0730-0301/works
+TOG,2025,274,5,0,1,0,0,1.8248175182481752,0.0,0.0,0,0,0,5,0,目录快照,按卷年；排除尚未入卷的 early access、勘误与编辑性条目,https://api.crossref.org/journals/0730-0301/works
+TOG,2026,178,5,0,0,2,0,2.808988764044944,0.0,0.0,0,0,0,5,0,2026 已入卷，非完整年度,按卷年；排除尚未入卷的 early access、勘误与编辑性条目,https://api.crossref.org/journals/0730-0301/works
+MM,2024,1237,28,0,5,8,0,2.263540824575586,0.0,0.0,0,0,0,26,0,目录快照,主论文集 proceedings-article；含其中的短文、挑战赛等，非仅 regular papers,https://doi.org/10.1145/3664647
+MM,2025,1620,45,1,5,10,0,2.7777777777777777,0.06172839506172839,2.2222222222222223,1,0,0,41,0,目录快照,主论文集 proceedings-article；含其中的短文、挑战赛等，非仅 regular papers,https://doi.org/10.1145/3746027
+MM,2026,,,,,,,,,,0,0,0,0,0,未取得完整目录,主论文集 proceedings-article；含其中的短文、挑战赛等，非仅 regular papers,https://2026.acmmm.org/
