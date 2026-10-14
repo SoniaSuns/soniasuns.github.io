@@ -173,7 +173,21 @@
         "name": "游戏／可交互世界／规则编辑",
         "focus": "动作、动力学与系统规则干预"
       }
-    ]
+    ],
+    "research_reading_update": {
+      "date": "2026-10-15",
+      "primary": [
+        "VOID",
+        "GIVE",
+        "CAUSAL"
+      ],
+      "more": [
+        "MULTI"
+      ],
+      "focus": "优先阅读：视频后果传播 → 几何条件执行 → 因果属性干预与保持。",
+      "boundary": "[推断] 按任务接近度选三篇，允许明确标记的预印本；第三篇是图像方法，不冒充视频证据。",
+      "report_url": "problem-lineage/#AIGC-A"
+    }
   },
   {
     "code": "AIGC-B",
@@ -328,7 +342,23 @@
         "name": "游戏／可交互世界／规则编辑",
         "focus": "回访或新观察后的状态纠错"
       }
-    ]
+    ],
+    "research_reading_update": {
+      "date": "2026-10-15",
+      "primary": [
+        "PERMA",
+        "SPACE",
+        "SC2"
+      ],
+      "more": [
+        "SPATIA",
+        "COME",
+        "VIS"
+      ],
+      "focus": "优先阅读：失效记忆怎样更新 → 外来反证怎样揭示信念惯性 → 怎样闭环修订状态／模型。",
+      "boundary": "[推断] 三篇分别覆盖生成记忆、反证评测、纠错方法；本论文池内未见它们完整实现外来反证驱动的选择性教程视频修复。",
+      "report_url": "problem-lineage/#AIGC-B"
+    }
   },
   {
     "code": "AIGC-C",
@@ -478,7 +508,19 @@
         "name": "游戏／可交互世界／规则编辑",
         "focus": "玩家视角、迷雾与隐藏信息"
       }
-    ]
+    ],
+    "research_reading_update": {
+      "date": "2026-10-15",
+      "primary": [
+        "SUSP",
+        "VIS",
+        "ONE"
+      ],
+      "more": [],
+      "focus": "优先阅读：揭示时间的任务定义 → 事实与已呈现历史的约束 → 跨镜头记忆执行。",
+      "boundary": "[推断] 这是互补阅读组合，不能说三篇都直接研究 video revelation。保留 EACL 2024，因为它比普通 2026 长视频论文更接近核心变量。",
+      "report_url": "problem-lineage/#AIGC-C"
+    }
   },
   {
     "code": "AIGC-D",
@@ -628,6 +670,21 @@
         "name": "游戏／可交互世界／规则编辑",
         "focus": "主动观察和低延迟控制"
       }
-    ]
+    ],
+    "research_reading_update": {
+      "date": "2026-10-15",
+      "primary": [
+        "QWEN",
+        "VGEN",
+        "GPS"
+      ],
+      "more": [
+        "CLARIFIER",
+        "CLARITI"
+      ],
+      "focus": "优先阅读：context gap → 视频工具执行 → 面向缺失条件的高效询问。",
+      "boundary": "[推断] 前两篇是预印本，GPS 是 ICLR 2026。D 仍研究广义信息与控制获取；XR-L 是 GT 在用户处的窄子问题，不能直接合并。",
+      "report_url": "problem-lineage/#AIGC-D"
+    }
   }
 ]

@@ -1,0 +1,8 @@
+
+.reading-update{border:1px solid #a9c6bd;border-radius:12px;background:#f4faf7;padding:20px;margin:22px 0;overflow-wrap:anywhere}
+.reading-update-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.reading-update-card{background:#fff;border:1px solid #d4e2dc;border-radius:9px;padding:16px;min-width:0}
+.reading-update-card h4{margin:6px 0 12px;line-height:1.5;font-size:16px}.reading-update-card p{font-size:14px}
+.reading-update-meta{font-size:12px!important;color:#506b61}.reading-update details{margin-top:16px}
+.reading-update details .reading-update-card{margin-top:10px}
+@media(max-width:900px){.reading-update-grid{grid-template-columns:1fr}.reading-update{padding:14px}}
