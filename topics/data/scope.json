@@ -1,5 +1,5 @@
 {
-  "version": "5 · XR-C 状态监督、生成对齐与因果证据修订",
+  "version": "6 · AIGC 逐篇前提与长期应用研究图谱",
   "date": "2026-10-14",
   "research_entries": 451,
   "source_pdf_paths": 468,
@@ -25,11 +25,14 @@
   "primary_topics": 21,
   "topic_hypotheses": 21,
   "counting_rule": "451 个条目＝全库补充 385＋video gen 原速览 66；468 是原始 PDF 路径数，458 是不同文件内容数。方向支撑引用可重复，不增加研究条目计数。",
-  "evidence_rule": "沿用本地原文摘录及既有笔记；本轮重点修订分类、支撑关系与研究假设。此前 385 条目中有 225 篇为摘要级初读，不把重组当全文复核。 2026-10-14 修订 XR-C 的 12 篇支撑定位，重点核对 State-Change Counterfactuals、VANS、GIVE 方法与消融；增加 6 篇公开方法／原理参考，未独立复现。",
+  "evidence_rule": "沿用本地原文摘录及既有笔记；本轮重点修订分类、支撑关系与研究假设。此前 385 条目中有 225 篇为摘要级初读，不把重组当全文复核。 2026-10-14 修订 XR-C 的 12 篇支撑定位，重点核对 State-Change Counterfactuals、VANS、GIVE 方法与消融；增加 6 篇公开方法／原理参考，未独立复现。 2026-10-14：AIGC-A 的 8 篇核心与 VQQA 分别复核任务、条件、分析前提及创新定位；补 4 个长期应用场景与已接收／arXiv 参考，不将推断写成实证。",
   "aigc_directions": 4,
   "aigc_hypotheses": 8,
   "xr_hypotheses": 8,
   "total_hypotheses": 16,
   "aigc_external_references": 6,
-  "xr_external_references": 6
+  "xr_external_references": 6,
+  "aigc_assumption_analyses": 9,
+  "aigc_application_scenarios": 4,
+  "aigc_application_references": 11
 }
