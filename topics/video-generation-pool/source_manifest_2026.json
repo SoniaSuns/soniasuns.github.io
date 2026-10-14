@@ -1,0 +1,44 @@
+[
+  {
+    "source_id": "controllable",
+    "url": "https://raw.githubusercontent.com/mayuelala/Awesome-Controllable-Video-Generation/main/README.md",
+    "sha256": "da3368b81a4a319d10cd011c7aa838938ef2bb2f0184182b0e3c6ef191af4519",
+    "bytes": 240322,
+    "opened_at": "2026-10-14T10:23:27.093003+00:00"
+  },
+  {
+    "source_id": "posttraining",
+    "url": "https://raw.githubusercontent.com/people-robots/Awesome-Video-Generation-Post-Training/main/README.md",
+    "sha256": "57de3474e25b970d55e73858469d142c6c6d2d61df82cd38e0592893f36a6269",
+    "bytes": 147025,
+    "opened_at": "2026-10-14T10:23:26.774633+00:00"
+  },
+  {
+    "source_id": "worldmodel",
+    "url": "https://raw.githubusercontent.com/liujiuming123/Awesome-Interactive-World-Model/main/README.md",
+    "sha256": "7225bdec42df4fdfc83bae94a62d9624ccb411a5b24b425613dc5b2a17fd9615",
+    "bytes": 137891,
+    "opened_at": "2026-10-14T10:23:27.082861+00:00"
+  },
+  {
+    "source_id": "CVPR2026",
+    "url": "https://openaccess.thecvf.com/CVPR2026?day=all",
+    "sha256": "31f63227934062163d5bc57838d339c3c7a7e1e6e51f71a238022bff73f1b792",
+    "bytes": 12117927,
+    "opened_at": "2026-10-14T10:23:32.299097+00:00"
+  },
+  {
+    "source_id": "ICLR2026",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2026",
+    "sha256": "2e233e9120602a93230f1e81b01bd295ee69b5c93f4eaa5b1988166fa3983fe5",
+    "bytes": 3703347,
+    "opened_at": "2026-10-14T10:23:34.115983+00:00"
+  },
+  {
+    "source_id": "NeurIPS2026",
+    "url": "https://neurips.cc/virtual/2026/papers.html",
+    "sha256": "fb9fc077d84884c99f3e70e63923e2732b75d8220317debe8ac00072a46bc82f",
+    "bytes": 1229808,
+    "opened_at": "2026-10-14T10:23:34.096301+00:00"
+  }
+]
