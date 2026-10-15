@@ -1,5 +1,6 @@
 """Render the report from its JSON. Usage: python render-lineage.py [output-directory]."""
 import csv, html, json, sys
+sys.stdout.reconfigure(encoding='utf-8')
 from pathlib import Path
 ROOT=Path(sys.argv[1]).resolve() if len(sys.argv)>1 else Path(__file__).resolve().parents[1]/'problem-lineage'
 DATA=json.loads((ROOT/'problem-lineage-research.json').read_text(encoding='utf-8'))
@@ -141,5 +142,8 @@ print(json.dumps(dict(papers=len(PAPERS),directions=len(DIRS),lineages=len(LINEA
 
 if ROOT.name == "problem-lineage":
     rendered=(ROOT/"problem-lineage-research.html").read_text(encoding="utf-8").replace("本地正文定位文本", "原文定位入口（不分发全文副本）")
+    (ROOT/"problem-lineage-research.html").write_text(rendered,encoding="utf-8")
+    technical_assets='<!-- technical-inline:start --><link rel="stylesheet" href="../static/technical-annotations.css"><script defer src="../static/technical-annotations.js"></script><!-- technical-inline:end -->'
+    rendered=rendered.replace('</head>',technical_assets+'</head>')
     (ROOT/"problem-lineage-research.html").write_text(rendered,encoding="utf-8")
     (ROOT/"index.html").write_text(rendered,encoding="utf-8")
