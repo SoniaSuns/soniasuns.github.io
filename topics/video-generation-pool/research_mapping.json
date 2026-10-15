@@ -1,0 +1,617 @@
+[
+  {
+    "id": 1,
+    "task": "T",
+    "contribution": "S",
+    "title": "少步蒸馏时，保护短暂但决定剧情的关键事件",
+    "neighbors": [
+      {
+        "key": "arxiv-2405.18750",
+        "reason": "[推断] 在一致性蒸馏中同时加入图像与视频奖励，兼顾少步质量和文本对齐。"
+      },
+      {
+        "key": "arxiv-2412.15689",
+        "reason": "[推断] 结合少步分布蒸馏与 latent reward，降低解码评价成本并改善生成质量。"
+      },
+      {
+        "key": "arxiv-2506.03517",
+        "reason": "[推断] 把整段偏好细分到时间片段，避免局部优劣被整段分数掩盖。"
+      }
+    ],
+    "contract": "文本/教师视频、关键事件与采样预算 → 少步视频；保留事件发生、顺序和后果，允许非关键纹理变化。",
+    "gap": "在本论文池内未见把“剧情必要事件召回”作为少步蒸馏的显式约束并独立验证其后果。DenseDPO使一般的“时间细粒度监督”不再足以构成差异。",
+    "experiment": "同一教师样本固定噪声和预算，操控事件持续长度与因果必要性；报告事件召回、后果正确率、无事件对照和质量/延迟Pareto曲线。",
+    "role": "执行层：适合接在事件编辑系统后，先证明短暂事件确实被少步过程漏掉。",
+    "original_neighbors": [
+      [
+        "P022",
+        "将mixed reward加入少步蒸馏；未定义短暂事件的重要性保持。"
+      ],
+      [
+        "P024",
+        "兼顾少步质量/多样性并揭示自动指标与人评错位；不提供关键事件不变式。"
+      ],
+      [
+        "P072",
+        "视频分段偏好能让短时间片段进入监督；并非蒸馏或剧情决定性识别。"
+      ]
+    ],
+    "updated_boundary": "[推断] 在本论文池内未见把“剧情必要事件召回”作为少步蒸馏的显式约束并独立验证其后果。DenseDPO使一般的“时间细粒度监督”不再足以构成差异。",
+    "task_label": "文本或图像生成视频",
+    "contribution_label": "训练信号"
+  },
+  {
+    "id": 2,
+    "task": "L",
+    "contribution": "R",
+    "title": "事件时间与信息揭示时间解耦的视频生成",
+    "neighbors": [
+      {
+        "key": "arxiv-2402.17119",
+        "reason": "[推断] 理论驱动 iterative prompting：计划脱困后设置阻碍，最后展开章节；对比直接 prompt、Llama 2、Re3 及规划/展开消融。"
+      },
+      {
+        "key": "arxiv-2412.05263",
+        "reason": "[推断] 把每段文本与目标时间区间对齐，让多事件在指定时间发生。"
+      },
+      {
+        "key": "arxiv-2610.09326",
+        "reason": "[推断] Structured Context Abstraction→Generation Constraints Induction→Constrained Video Generation；约束保留 predicates/evidence 链接，输出 pass/fail/unknown 并指导定点修订；baseline 为共享 renderer 下的适配版。"
+      }
+    ],
+    "contract": "世界事件图、镜头/观察安排和揭示计划 → 多镜头视频；保持世界事件事实，仅改变观众何时看到证据。",
+    "gap": "在本论文池内未见明确分开world-event time与information-reveal time并评测两者的生成协议。需区分遮挡、倒叙、悬念与纯事件重排。",
+    "experiment": "同一事件图生成两种揭示顺序；分别测真实事件顺序、每个镜头可见证据、各时刻观察者可回答的问题，防止只换镜头就宣称信息推理。",
+    "role": "表示层：与主方向有关，但引入叙事/观察者语义，项目范围会扩大。",
+    "original_neighbors": [
+      [
+        "P056",
+        "显式绑定事件发生区间并支持scene cuts；没有独立的观众获知时钟。"
+      ],
+      [
+        "P047",
+        "控制事件时间、轨迹和可见性；可见性控制接近但不等于信息揭示语义。"
+      ],
+      [
+        "P075",
+        "提供多镜头叙事和实体registry；评测实体一致，而非观众信念随镜头变化。"
+      ]
+    ],
+    "updated_boundary": "[推断] 文本悬念规划、事件时间控制与上下文约束分别覆盖不同部分；尚不能合并视为已经实现“事件发生时间／观众获知时间”解耦。",
+    "task_label": "长视频与多镜头叙事",
+    "contribution_label": "表示"
+  },
+  {
+    "id": 3,
+    "task": "E",
+    "contribution": "S",
+    "title": "面向事件编辑的视频生成：通过成组干预监督，学习后果传播与非相关内容保持",
+    "neighbors": [
+      {
+        "key": "arxiv-2604.02296",
+        "reason": "[推断] 从 Generative Omnimatte 的 CogVideoX 权重初始化，进行 paired counterfactual training＋quadmask＋两遍生成；相较前作 trimask 和 photometric-effects 数据，引入动态互动后果监督。"
+      },
+      {
+        "key": "arxiv-2606.24225",
+        "reason": "[推断] 统一 object-state transition 条件输入 diffusion editor；与 text/mask/track 控制及依赖逐视频重建的方法比较。"
+      },
+      {
+        "key": "arxiv-2509.24798",
+        "reason": "[推断] 以 SCM 传播属性干预，并通过条件注入和 token regularization 兼顾依赖属性改变与图像身份保持。"
+      }
+    ],
+    "contract": "源视频/世界状态、事件干预和保持约束 → 修改视频；改变被干预事件及其必要后果，保持非后代状态与已提交内容。",
+    "gap": "不能仅以“配对干预＋保持”主张差异。更窄的候选是：在未知影响范围下，学习区分必要后果与应保持内容，并在跨事件组合上验证；在本论文池内未见这一完整契约的统一评测。",
+    "experiment": "模拟器生成同场景同随机源的多分支干预组；设置必要改变集、应保持集及不确定集；同时测后果遗漏率、过度修改率、编辑成功率，并按未见机制/组合拆分。",
+    "role": "最贴近总体目标的主线；主格编辑×训练信号，数据和评测是必要的次落点。",
+    "original_neighbors": [
+      [
+        "P018",
+        "合成成对轨迹移动监督，且允许新接触改变运动；已覆盖局部后果变化的一部分。"
+      ],
+      [
+        "P049",
+        "matched rollback成组监督修正动作改变后的solver state；作用于未完成chunk。"
+      ],
+      [
+        "P074",
+        "按编辑类型/区域使部分记忆失效并保持有效上下文；依赖已知编辑范围。"
+      ]
+    ],
+    "updated_boundary": "[推断] VOID 已学习删除后果，GIVE 已执行几何引发的次生变化；区别应落在新干预、成组监督、延迟后果及 Keep 的独立测量。Causal-Adapter 是图像工作。",
+    "task_label": "编辑与修改",
+    "contribution_label": "训练信号"
+  },
+  {
+    "id": 4,
+    "task": "E",
+    "contribution": "S",
+    "title": "从结构化错误反馈学习视频局部修复，并保持已满足的约束",
+    "neighbors": [
+      {
+        "key": "arxiv-2610.09326",
+        "reason": "[推断] Structured Context Abstraction→Generation Constraints Induction→Constrained Video Generation；约束保留 predicates/evidence 链接，输出 pass/fail/unknown 并指导定点修订；baseline 为共享 renderer 下的适配版。"
+      },
+      {
+        "key": "arxiv-2603.12310",
+        "reason": "[推断] 需可重复调用生成器与 VLM 评判器；已有针对原始提示的 Global Selection 和动态停止，以控制语义漂移，不应描述为完全没有全局保持。"
+      },
+      {
+        "key": "arxiv-2606.31392",
+        "reason": "[推断] ReGRPO 用错误类型、证据和修复计划构造训练数据，再联合优化反思与纠正动作并计入反思成本。 本条方法定位来自摘要，训练细节待核。"
+      }
+    ],
+    "contract": "候选视频、错误位置/类型/理由、已满足约束集合 → 修复视频；改错且不回退已满足项。",
+    "gap": "在本论文池内未见把constraint regression作为主要训练与评测对象的通用结构化反馈修复。要区别于已有mask editing与异常reward微调。",
+    "experiment": "人工可核验的错误注入与多轮修复；报告错误消除率、已满足约束破坏率、修复轮数，并在固定重采样预算下比整段重生成/普通mask编辑。",
+    "role": "可收敛的执行子问题；不必先解决完整因果世界建模。",
+    "original_neighbors": [
+      [
+        "P035",
+        "输出异常时间窗、空间框和归因，并可作RL reward；没有逐轮约束保持的修复契约。"
+      ],
+      [
+        "P059",
+        "用reasoning frames定位编辑区域再生成；不是从错误反馈学习迭代修复。"
+      ],
+      [
+        "P067",
+        "统一多种视频编辑接口；未显式跟踪已满足约束集合。"
+      ]
+    ],
+    "updated_boundary": "[推断] VIS-Ground 已有可追溯约束与定点修订；VQQA 是生成反馈闭环；ReGRPO 是工具 agent 的错误修复，迁移到像素修复仍需验证。",
+    "task_label": "编辑与修改",
+    "contribution_label": "训练信号"
+  },
+  {
+    "id": 5,
+    "task": "W",
+    "contribution": "S",
+    "title": "可中断的交互视频生成",
+    "neighbors": [
+      {
+        "key": "arxiv-2609.08230",
+        "reason": "[推断] 在生成途中修改动作时，把当前采样状态迁移到新条件轨迹而非从头生成。"
+      },
+      {
+        "key": "arxiv-2509.22622",
+        "reason": "[推断] 通过长历史训练与 KV 管理支持分钟级视频及生成中的 prompt 修改。"
+      },
+      {
+        "key": "arxiv-2608.08469",
+        "reason": "[推断] 在同一时间线上建模连续感知、静默与响应，学习实时多模态输入输出的对齐。"
+      }
+    ],
+    "contract": "已提交帧、活跃chunk/solver state、任意到达的新控制 → 低延迟续生成；明确哪些已展示帧不可撤回。",
+    "gap": "“可中断”本身在池内已有直接工作。候选差异需落到多次冲突指令、任意控制类型、严格解码前缀保持或新的延迟/质量保证，不能只复述ActionSplice。",
+    "experiment": "在不同solver时刻随机到达更新；同时测从接收到首个正确视觉响应的时间、stale frames、已提交前缀差异与总重复NFE。",
+    "role": "重要系统能力，但单独作为题目与P049高度接近；也可主归架构或推理，取决于最终机制。",
+    "original_neighbors": [
+      [
+        "P049",
+        "直接研究采样中断和动作改写，具有rollback与条件替换基线；最直接重叠。"
+      ],
+      [
+        "P046",
+        "实时动作控制与因果蒸馏；实时吞吐不保证当前chunk可中断。"
+      ],
+      [
+        "P069",
+        "prompt切换时KV recache；通常在生成边界处理新条件。"
+      ]
+    ],
+    "updated_boundary": "[推断] ActionSplice 是直接邻近工作；LongLive 处理流式提示变化；Aero 是通用多模态流，不能直接算视频教程中断证据。",
+    "task_label": "动作条件的预测与交互世界模型",
+    "contribution_label": "训练信号"
+  },
+  {
+    "id": 6,
+    "task": "W",
+    "contribution": "M",
+    "title": "当新增观测否定生成历史时，怎样修正视频模型的记忆和后续生成？",
+    "neighbors": [
+      {
+        "key": "arxiv-2606.16449",
+        "reason": "[推断] 把外观和几何记忆分开，并在编辑后更新失效的记忆条目。"
+      },
+      {
+        "key": "arxiv-2602.07055",
+        "reason": "[推断] Theory of Space 用逐步空间信念探针分析探索效率、知识退化及错误信念的修正。 本条方法定位来自摘要，训练细节待核。"
+      },
+      {
+        "key": "recent-SC2",
+        "reason": "[推断] 利用 world-model foresight 产生内部反馈，修订执行前计划；必要时选择性进行 test-time 模型适应。"
+      }
+    ],
+    "contract": "生成历史、记忆与新增外部观察 → 更新后的belief/memory及后续视频；保留仍有效事实，记录被撤销的推断。",
+    "gap": "在本论文池内未见完整处理“外部观测冲突→可信度判断→依赖事实失效→后续一致续生成”的协议。已知编辑与观测纠错必须分开。",
+    "experiment": "先让模型推断被遮挡内容，再给可靠/不可靠的矛盾观测；区分用户编辑和观测更新，测修正正确率、有效记忆保留率、旧错误复发率。",
+    "role": "与总体方向高度一致；主格世界模型×记忆，关联编辑×记忆的P074。",
+    "original_neighbors": [
+      [
+        "P074",
+        "根据已知编辑更新RGB/深度记忆，避免旧语义重现；不自动判断观察真假。"
+      ],
+      [
+        "P044",
+        "长期记忆检索与时间条件支持重访；没有一般冲突证据裁决。"
+      ],
+      [
+        "P050",
+        "控制实验揭示容量、读取、压缩与重访表现不同；为记忆修改提供诊断基线。"
+      ]
+    ],
+    "updated_boundary": "[推断] Perma／空间记忆、Theory of Space 的信念诊断、SC²-WM 的 latent 状态纠正必须区分；后者不是修复像素视频历史的实验证据。",
+    "task_label": "动作条件的预测与交互世界模型",
+    "contribution_label": "记忆与上下文"
+  },
+  {
+    "id": 7,
+    "task": "E",
+    "contribution": "R",
+    "title": "对象结构或操作机制改变后，能否快速重新生成交互过程并保持其它不变",
+    "neighbors": [
+      {
+        "key": "arxiv-2604.02296",
+        "reason": "[推断] 从 Generative Omnimatte 的 CogVideoX 权重初始化，进行 paired counterfactual training＋quadmask＋两遍生成；相较前作 trimask 和 photometric-effects 数据，引入动态互动后果监督。"
+      },
+      {
+        "key": "arxiv-2609.35134",
+        "reason": "[推断] 训练外 physical scene reconstruction＋rigid-body simulation＋trajectory-guided generation；相较直接编辑器使物理推理显式化。"
+      },
+      {
+        "key": "recent-MULTI",
+        "reason": "[推断] 构建带 ground-truth 因果 DAG 的游戏机制 testbed，产生反事实世界数据并展示机制学习的微调概念验证。"
+      }
+    ],
+    "contract": "源交互、对象结构/机制修改和原操作意图 → 新交互视频；保留场景/身份和未受影响动作，重算接触与可行操作。",
+    "gap": "在本论文池内未见以机构变化（如转轴、锁扣、滑轨）为干预变量、同时要求快速重生成和无关内容保持的系统评测。目标表示不能只用外观mask。",
+    "experiment": "同一物体族控制一个关节/约束参数，其余场景与随机源固定；区分外观改动和机制改动，测运动合法性、任务完成、保持误差和重生成成本。",
+    "role": "主方向的具体可验证场景；若输入仅初图+动作而非源交互，应移至世界模型×表示。",
+    "original_neighbors": [
+      [
+        "P018",
+        "改变轨迹位置并重算合理接触；未普遍改变关节/操作机制。"
+      ],
+      [
+        "P017",
+        "手势驱动手物接触、开合等交互；未把机构改变作为受控干预。"
+      ],
+      [
+        "P043",
+        "用latent actions适配环境/动作；没有成对保持其它内容的重生成契约。"
+      ]
+    ],
+    "updated_boundary": "[推断] Multiverse Mechanica 提供机制真值与图像微调概念验证；不能当作完整视频交互重生成已经解决。",
+    "task_label": "编辑与修改",
+    "contribution_label": "表示"
+  },
+  {
+    "id": 8,
+    "task": "T",
+    "contribution": "D",
+    "title": "面向视频模型的出题 agent：自动寻找“补哪些数据最值得”",
+    "neighbors": [
+      {
+        "key": "library-VG61",
+        "reason": "[推断] 用训练样本梯度与总体更新的关系估计数据影响，筛选更有效的强化微调子集。"
+      },
+      {
+        "key": "arxiv-2608.29621",
+        "reason": "[推断] CineForge-Produce 与 CineForge-Evolve 分离；区别于只修当前视频的 test-time loop；修改 stage-local policy。"
+      },
+      {
+        "key": "arxiv-2601.21557",
+        "reason": "[推断] 联合演化 context-engineering skills 和 context artifacts，在五类领域的离线、在线设置中评价。"
+      }
+    ],
+    "contract": "模型错误、预算与候选数据生成器 → 下一批问题/数据；在固定成本下最大化held-out能力增益。",
+    "gap": "在本论文池内未见用实际后训练边际收益闭环验证的“数据价值出题agent”。发现低分样本并不代表这些样本最值得训练。",
+    "experiment": "等标注/模拟预算比较随机、难度、diversity、不确定性与agent策略；每轮真实更新模型，测新任务泛化和遗忘，隔离训练reward与最终test。",
+    "role": "默认落一般生成×数据；服务事件编辑时改为编辑×数据，任务域必须先定。",
+    "original_neighbors": [
+      [
+        "P073",
+        "对世界状态推理做分层stress testing，可提供难例空间；未验证按信息增益选择训练数据。"
+      ],
+      [
+        "P035",
+        "细粒度异常数据与诊断reward，可发现错误类型；不是主动采集价值策略。"
+      ],
+      [
+        "P058",
+        "可扩展成对编辑数据引擎及数据/模型消融；没有闭环最优补数agent。"
+      ]
+    ],
+    "updated_boundary": "[推断] RFT-Inf 估计训练影响；CineForge 演化生产策略；MCE 演化上下文。三者均不直接证明能主动找到最有价值的新视频数据。",
+    "task_label": "文本或图像生成视频",
+    "contribution_label": "数据"
+  },
+  {
+    "id": 9,
+    "task": "C",
+    "contribution": "I",
+    "title": "Agent 能否根据生成任务的难点，获取最少但足够的控制信号，并让视频模型可靠执行？",
+    "neighbors": [
+      {
+        "key": "arxiv-2606.26907",
+        "reason": "[推断] Context-Aware Planning＋Context Grounding，再生成/反馈；消融各类 context 与图像 backbone。"
+      },
+      {
+        "key": "arxiv-2609.24997",
+        "reason": "[推断] teacher trajectories SFT＋multitask agentic RL；相较 standalone generator 学习多轮工具编排与验证。"
+      },
+      {
+        "key": "library-P159",
+        "reason": "[推断] DAG reasoning＋traversal clarification；conditional-path synthetic data 与 accuracy/efficiency 混合 reward 的 RL；对比无显式条件结构的澄清。"
+      }
+    ],
+    "contract": "任务和预算 → 选择/请求控制信号→生成并验证；保持用户已确认条件，最小化交互与测量成本。",
+    "gap": "在本论文池内未见同时学习“最少信号获取”与“足够执行”的完整闭环。不可仅统计条件数量而忽略其精度、成本及不可观测性。",
+    "experiment": "逐步给相机、单点、关键帧等信号；比较固定套餐与自适应查询，画成功率—获取成本曲线，并测试含噪/冲突控制。",
+    "role": "可作为主方向的前端；若训练query policy，主贡献可能改为训练信号。",
+    "original_neighbors": [
+      [
+        "P012",
+        "agent把文本拆成对象/相机控制；未显式优化获取信号的成本。"
+      ],
+      [
+        "P014",
+        "把多类已有条件转成caption；解决解释而非主动选择最少条件。"
+      ],
+      [
+        "P004",
+        "稀疏条件可以有效控制；并非根据不确定性决定向用户/工具索取哪个信号。"
+      ]
+    ],
+    "updated_boundary": "[推断] Qwen-Image-Agent 是图像 context 获取；VideoGen-Agent 是视频工具编排；GPS 是语言澄清。最少充分控制信号仍需统一预算与充分性评价。",
+    "task_label": "条件控制生成",
+    "contribution_label": "推理时方法"
+  },
+  {
+    "id": 10,
+    "task": "T",
+    "contribution": "S",
+    "title": "时空 credit assignment",
+    "neighbors": [
+      {
+        "key": "arxiv-2604.19234",
+        "reason": "[推断] 按目标把奖励分配到不同去噪步，并协调多个奖励目标的更新方向。"
+      },
+      {
+        "key": "arxiv-2506.03517",
+        "reason": "[推断] 把整段偏好细分到时间片段，避免局部优劣被整段分数掩盖。"
+      },
+      {
+        "key": "arxiv-2511.21541",
+        "reason": "[推断] 复用视频生成器的 latent 特征，在不同噪声阶段直接判断运动质量。"
+      }
+    ],
+    "contract": "生成轨迹、局部错误/reward及事件依赖 → 有针对性的训练更新；区分视频时间t、去噪步s、空间区域x。",
+    "gap": "题目过宽且已有三种相邻机制。候选需明确是哪一轴、credit如何估计、是否因果，以及为何比全局reward有效。",
+    "experiment": "使用已知局部故障和依赖链，比较t、s、x单轴及联合归因；控制计算量，测局部修复和非目标退化。",
+    "role": "通用训练模块；用于选择性编辑时主格转编辑×训练信号。",
+    "original_neighbors": [
+      [
+        "P032",
+        "对denoising timestep与reward objective分配credit；不等同视频时间/空间归因。"
+      ],
+      [
+        "P072",
+        "视频片段级偏好监督；提供video-time维度但不是像素空间credit。"
+      ],
+      [
+        "P035",
+        "异常时间窗与空间框能定位问题；定位证据不直接等于策略梯度credit。"
+      ]
+    ],
+    "updated_boundary": "[推断] 时间步、视频片段、时空局部奖励是不同粒度；需分开 denoising timestep credit 与剧情 event-time credit。",
+    "task_label": "文本或图像生成视频",
+    "contribution_label": "训练信号"
+  },
+  {
+    "id": 11,
+    "task": "V",
+    "contribution": "E",
+    "title": "video-native verifier",
+    "neighbors": [
+      {
+        "key": "arxiv-2511.21541",
+        "reason": "[推断] 复用视频生成器的 latent 特征，在不同噪声阶段直接判断运动质量。"
+      },
+      {
+        "key": "arxiv-2605.11723",
+        "reason": "[推断] 先定位单帧异常，再跨帧追踪与集中检查，输出更可靠的视频评价。"
+      },
+      {
+        "key": "arxiv-2609.03952",
+        "reason": "[推断] 评价相机条件世界模型的控制遵循与视频质量，为后训练提供反馈。"
+      }
+    ],
+    "contract": "视频、任务契约与保持条件 → 可定位的违反项、证据及不确定性；不能只给单一质量分。",
+    "gap": "“视频验证器”在池内有多种实现，单凭video-native不足以定位差异。更具体的缺口是验证“必要改变＋不应改变”及状态依赖，而非逐帧caption后打分。",
+    "experiment": "构造画质匹配但状态错误的对照、极短事件和遮挡后果；测漏检/误报、定位、校准及跨模型泛化，另做reward优化后的抗hacking测试。",
+    "role": "若核心是训练可用reward则落训练信号；这里按新评测协议/验证器基准先落视频推理×评测。",
+    "original_neighbors": [
+      [
+        "P036",
+        "用可解析轨迹和规则验证视频解题；验证范围受任务规则限制。"
+      ],
+      [
+        "P073",
+        "过程阶段问题与human calibration；近分样本仍有judge不稳定。"
+      ],
+      [
+        "P035",
+        "定位稀疏时空异常并给归因；物理/视觉异常检测不等于完整任务正确性。"
+      ]
+    ],
+    "updated_boundary": "[推断] 质量 reward、异常定位和 world-model 评价各有边界；video-native 不自动等于能验证因果必要变化与 Keep。",
+    "task_label": "视频作为推理或回答",
+    "contribution_label": "评测"
+  },
+  {
+    "id": 12,
+    "task": "W",
+    "contribution": "A",
+    "title": "低成本的 online rollout",
+    "neighbors": [
+      {
+        "key": "arxiv-2602.08032",
+        "reason": "[推断] 联合处理未来多步想象并调度去噪计算，降低 on-policy rollout 成本。"
+      },
+      {
+        "key": "arxiv-2509.24527",
+        "reason": "[推断] 训练可扩展视觉世界模型，再让策略在模型内部低成本学习。"
+      },
+      {
+        "key": "arxiv-2506.06658",
+        "reason": "[推断] 用自生成成功轨迹改进视觉机器人规划，在 MetaWorld 与两个真实机器人任务中测试。"
+      }
+    ],
+    "contract": "当前policy、世界模型与观测 → 低成本且有效的在线想象数据；保持动作分布一致和可用状态预测。",
+    "gap": "池内已有直接目标重叠。需要先区分训练时on-policy rollout、面向用户的实时渲染、以及真实环境在线交互，再选具体瓶颈。",
+    "experiment": "固定总训练预算比较并行与顺序rollout，联合报告NFE、端到端时间、显存、回报/任务成功、action consistency和误差累积。",
+    "role": "基础设施方向；若不引入选择性状态重算，与用户总体目标联系较弱。",
+    "original_neighbors": [
+      [
+        "P068",
+        "直接优化并行多未来步on-policy imagination与稳定动作采样。"
+      ],
+      [
+        "P048",
+        "快速世界模型用于想象训练agent，shortcut forcing改善成本。"
+      ],
+      [
+        "P042",
+        "少步diffusion世界模型支持Atari想象训练；场景和分辨率较受限。"
+      ]
+    ],
+    "updated_boundary": "[推断] Horizon、Dreamer4、SILVR 分属交互世界模型与执行数据自改善；需比较同一质量和动作频率下的 rollout 成本。",
+    "task_label": "动作条件的预测与交互世界模型",
+    "contribution_label": "架构与生成范式"
+  },
+  {
+    "id": 13,
+    "task": "T",
+    "contribution": "S",
+    "title": "flow/diffusion 中 policy 与 exploration 的正确定义",
+    "neighbors": [
+      {
+        "key": "arxiv-2603.21872",
+        "reason": "[推断] 限制探索扰动偏离视频流形，减少 RL 采样产生无效高噪声视频。"
+      },
+      {
+        "key": "arxiv-2602.02214",
+        "reason": "[推断] 先获得与推理一致的因果教师，再蒸馏少步自回归生成器。"
+      },
+      {
+        "key": "arxiv-2604.19234",
+        "reason": "[推断] 按目标把奖励分配到不同去噪步，并协调多个奖励目标的更新方向。"
+      }
+    ],
+    "contract": "给定生成器、噪声、solver与reward → 明确定义的随机policy及更新规则；说明探索发生于初始噪声、SDE转移还是环境动作。",
+    "gap": "不存在无需建模约定就唯一适用的policy定义；候选贡献是证明哪些随机化/估计器相容、何时有偏以及对视频任务的影响。不能把几种概念混成新算法名。",
+    "experiment": "固定生成分布/预算，比较ODE初始噪声、SDE逐步噪声和离散solver policy；检验likelihood ratio、梯度偏差、KL和diversity，而非只报reward升高。",
+    "role": "理论/训练基础方向，暂默认一般生成×训练信号；与事件编辑结合需另定任务。",
+    "original_neighbors": [
+      [
+        "P033",
+        "定义flow/SDE-GRPO下探索噪声、梯度平衡和trust region；直接邻近。"
+      ],
+      [
+        "P028",
+        "Flow-DPO、Flow-RWR与Noisy Reward Guidance提供不同优化对象。"
+      ],
+      [
+        "P036",
+        "SDE-GRPO用于规则验证任务，并分析早期去噪更新。"
+      ]
+    ],
+    "updated_boundary": "[推断] 分别检查 SDE/ODE 的策略密度、采样随机性与探索分布；不能把 diffusion noise 一概当作 RL exploration。",
+    "task_label": "文本或图像生成视频",
+    "contribution_label": "训练信号"
+  },
+  {
+    "id": 14,
+    "task": "L",
+    "contribution": "M",
+    "title": "long horizon identity/causal consistency",
+    "neighbors": [
+      {
+        "key": "arxiv-2606.16449",
+        "reason": "[推断] 把外观和几何记忆分开，并在编辑后更新失效的记忆条目。"
+      },
+      {
+        "key": "arxiv-2512.07802",
+        "reason": "[推断] Frame Selection＋Adaptive Conditioner，将 MSV 改写为 autoregressive next-shot generation；相较单 keyframe/有限历史窗口引入 compact global memory。"
+      },
+      {
+        "key": "arxiv-2605.15199",
+        "reason": "[推断] 分别检测跨镜头实体保持，并用可检索实体记忆作为基线。"
+      }
+    ],
+    "contract": "长视频历史、实体registry与事件/编辑记录 → 续生成；身份相同且状态按事件合法变化。",
+    "gap": "必须拆成identity consistency和causal/state consistency：同一人可换衣服，已打碎物体不应无因复原。在本论文池内未见统一覆盖长叙事、干预后果及选择性保持的强协议。",
+    "experiment": "长间隔离场重入，区分身份变化、合法状态变化、非法状态回退；分开报告ID、状态转移和记忆过时率，避免用图像相似度替代因果。",
+    "role": "可作为主方向的长程版本；动作环境中应转世界模型×记忆。",
+    "original_neighbors": [
+      [
+        "P075",
+        "跨镜头人物/物体/地点身份评测和entity memory；不等于状态因果正确。"
+      ],
+      [
+        "P044",
+        "场景重访与时间记忆；强调世界状态历史而非纯多镜头身份。"
+      ],
+      [
+        "P074",
+        "已知编辑后保留最新状态并使旧记忆失效；提供更新与保持的接口。"
+      ]
+    ],
+    "updated_boundary": "[推断] 长期记忆／身份保持并不自动证明因果状态正确；必须构造外观相同但历史状态不同的对照。",
+    "task_label": "长视频与多镜头叙事",
+    "contribution_label": "记忆与上下文"
+  },
+  {
+    "id": 15,
+    "task": "T",
+    "contribution": "S",
+    "title": "多目标 reward 的稳定优化",
+    "neighbors": [
+      {
+        "key": "arxiv-2604.19234",
+        "reason": "[推断] 按目标把奖励分配到不同去噪步，并协调多个奖励目标的更新方向。"
+      },
+      {
+        "key": "arxiv-2509.08826",
+        "reason": "[推断] 让 reward model 用带任务依据的比较推理评价生成结果，并研究扩大评价器规模。"
+      },
+      {
+        "key": "arxiv-2412.15689",
+        "reason": "[推断] 结合少步分布蒸馏与 latent reward，降低解码评价成本并改善生成质量。"
+      }
+    ],
+    "contract": "多个可能冲突的reward及约束 → 稳定更新的生成器；关键保持条件不应被平均分抵消。",
+    "gap": "静态加权与自适应融合已有池内工作。更贴合主方向的候选是把“不得破坏已满足约束”建模为约束优化，而非又一种reward权重调度。",
+    "experiment": "构造可控冲突任务，报告各目标的Pareto front、最坏约束违反率、跨seed方差、训练崩溃/回退和抗reward hacking；与固定权重、动态融合比较。",
+    "role": "适合作为事件编辑/修复的训练支撑；通用多目标优化本身范围太广。",
+    "original_neighbors": [
+      [
+        "P032",
+        "阶段依赖的多目标credit融合是直接邻近。"
+      ],
+      [
+        "P028",
+        "多维VideoReward与flow对齐，提供组合reward和偏好建模。"
+      ],
+      [
+        "P054",
+        "动作对齐、外观、运动共同构成世界模型reward，实验包含reward组件对照。"
+      ]
+    ],
+    "updated_boundary": "[推断] 多目标归一化、奖励模型与质量／多样性蒸馏提供不同切入点；稳定性应跨权重、种子与训练阶段检验。",
+    "task_label": "文本或图像生成视频",
+    "contribution_label": "训练信号"
+  }
+]
