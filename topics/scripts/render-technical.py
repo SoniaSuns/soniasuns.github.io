@@ -82,3 +82,5 @@ with (OUT/'papers_all_topics.csv').open('w',encoding='utf-8-sig',newline='') as 
     for r in P:
         row={**r,**r['taxonomy'],**r['technical']};w.writerow({k:json.dumps(v,ensure_ascii=False) if isinstance(v,(list,dict)) else v for k,v in row.items() if k in fields})
 print(f'Rendered {len(P)} papers; {len(eligible)} classified; {uncertain} uncertain; {len(DATA["questions"])} questions')
+import runpy
+runpy.run_path(str(ROOT/'scripts/integrate-resources.py'))

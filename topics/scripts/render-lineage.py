@@ -148,3 +148,5 @@ if ROOT.name == "problem-lineage":
     rendered=rendered.replace('</head>',technical_assets+'<link rel="stylesheet" href="../static/direction-analysis.css"></head>')
     (ROOT/"problem-lineage-research.html").write_text(rendered,encoding="utf-8")
     (ROOT/"index.html").write_text(rendered,encoding="utf-8")
+    import runpy
+    runpy.run_path(str(Path(__file__).resolve().parent/'integrate-resources.py'))
