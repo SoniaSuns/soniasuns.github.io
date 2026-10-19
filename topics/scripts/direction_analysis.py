@@ -33,7 +33,7 @@ def card(code, group, item):
     meta = str(p['year'])+' · '+p['venue']
     if p.get('first_year', p['year']) != p['year']:
         meta += ' · 首版 '+str(p['first_year'])
-    out = f'<article class="da-paper" id="da-{code}-{group}-{key}"><p class="da-meta">{H(meta)}</p>'
+    out = f'<article class="da-paper" data-paper-key="{H(key)}" id="da-{code}-{group}-{key}"><p class="da-meta">{H(meta)}</p>'
     out += f'<h5><a href="{H(p["source"])}">{H(p["title"].replace("A$^2$RD", "A²RD"))}</a></h5>'
     if 'fit' in item:
         out += '<p class="da-fit"><b>为何选它：</b>'+H(item['fit'])+'</p>'
@@ -70,7 +70,7 @@ def panel(code):
     for key in d['reading']:
         group = next(g for g, _ in groups if any(x['key']==key for x in d[g]))
         links.append(f'<a href="#da-{code}-{group}-{key}">{H(key)}</a>')
-    out += '<p class="da-reading"><b>建议阅读顺序：</b>'+' → '.join(links)+'</p>'
+    out += '<p class="da-reading"><b>历史谱系阅读路线（当前优先三篇见上方）：</b>'+' → '.join(links)+'</p>'
     out += '<ul class="da-connections">'+''.join(
         f'<li><a href="#analysis-{x["code"]}">{x["code"]}</a> · {H(x["text"])}</li>' for x in d['connections'])+'</ul>'
     return out + '</section>'
