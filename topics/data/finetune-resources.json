@@ -2611,7 +2611,21 @@
       "fulltext_sha256": "1f35f4b1a4425c060ac91e6ecab0eeb853ec9b6a596e1f2bc00620ae4143e4f1",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "从短上下文扩展到带状态的历史记忆检索。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "更长历史与状态化检索支持持续生成。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0045",
@@ -2859,7 +2873,10 @@
       "topic_code": "",
       "topic": "",
       "task": "动作条件的预测与交互世界模型",
-      "directions": [],
+      "directions": [
+        "AIGC-B",
+        "XR-S"
+      ],
       "source_url": "https://arxiv.org/html/2609.08230",
       "status": "无需本文权重训练",
       "resource_note": "ActionSplice 在去噪过程中替换动作条件并干预当前生成，不新增模型训练。",
@@ -2879,7 +2896,21 @@
       "fulltext_sha256": "d298bac924770b16634171d84e60616a8542a80a17e158d473615d8de4ae4e66",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "收到新动作后的在途采样修正；不负责反证发现和记忆失效判断。",
+          "primary": "XR-S"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "收到新动作后的在途采样修正；不负责反证发现和记忆失效判断。",
+          "primary": "XR-S"
+        }
+      ]
     },
     {
       "id": "R0050",
@@ -4125,7 +4156,21 @@
       "fulltext_sha256": "a3373c268233a075a0a7b35a49a21dc866abd496dea0b01f110dd1bf85b8001f",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "直接方法",
+          "reason": "编辑感知的持久生成记忆是直接近邻；外部反证与来源裁决另测。",
+          "primary": "AIGC-B"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "直接方法",
+          "reason": "编辑感知的持久生成记忆是直接近邻；外部反证与来源裁决另测。",
+          "primary": "AIGC-B"
+        }
+      ]
     },
     {
       "id": "R0075",
@@ -5090,7 +5135,15 @@
       "fulltext_sha256": "acf8afae3269cb150d59da2560f0c3efd912bb33ff29b1d6cf47cf6a86fc45ce",
       "reasoning_id": "NeurIPS-2026-3987",
       "reasoning_role": "R1",
-      "reasoning_topic": "动作预测 / 交互 World Models"
+      "reasoning_topic": "动作预测 / 交互 World Models",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "反思规划与优化的视频 agent；不能把 critic 改善直接解释成人的学习收益。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0092",
@@ -6931,7 +6984,15 @@
       "fulltext_sha256": "a19ad1da896cd101d327db041cc46e8049284b2bbc25ae15b212726f7d4acc98",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "AIGC-D",
+          "role": "可借用组件",
+          "reason": "专业先验补全稀疏制作输入很强，但典型补全不等于用户真实意图。",
+          "primary": "AIGC-D"
+        }
+      ]
     },
     {
       "id": "R0126",
@@ -9068,6 +9129,7 @@
       "topic": "动作／物理条件的世界生成",
       "task": "动作条件的预测与交互世界模型",
       "directions": [
+        "AIGC-A",
         "XR-C"
       ],
       "source_url": "https://arxiv.org/html/2603.05449",
@@ -9130,7 +9192,21 @@
       "fulltext_sha256": "d31a81c331ab94a17deda7cc3c02b86cc240605ba06503030420c645a61d3cf1",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "可借用组件",
+          "reason": "展示模拟到快速视频生成的路线；适合作为已知机制条件下的执行基线。",
+          "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-A",
+          "role": "可借用组件",
+          "reason": "快速动作条件生成可以降低采样成本，但不解决隐藏机制真值。",
+          "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0169",
@@ -10540,7 +10616,15 @@
       "fulltext_sha256": "0f041332615b331a3ee6eabea223a60b7b2585ff7d5ae3d8bb8c2dd3765acc8d",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "基础理论",
+          "reason": "低成本文字反思基线；证明利用反馈改进后续尝试，不等于权重更新。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0197",
@@ -10582,7 +10666,27 @@
       "fulltext_sha256": "d95c345832911a94f72532e581a0e73a1ba60bbd63c366e38cfacfb6b6669661",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "基础理论",
+          "reason": "可撤销推理的任务桥梁：后来的观察会改变早先事件判断。",
+          "primary": "跨方向基础：XR-S / AIGC-B / AIGC-C"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "基础理论",
+          "reason": "后证据推翻旧解释的直接推理任务；尚未连接生成记忆的执行干预。",
+          "primary": "跨方向基础：XR-S / AIGC-B / AIGC-C"
+        },
+        {
+          "direction": "AIGC-C",
+          "role": "基础理论",
+          "reason": "Black Swan 用隐藏与揭示片段分析判断如何变化。 [推断] 理解模型答题错误可能是读出失败，不能直接归因于生成泄露或留白成功。",
+          "primary": "跨方向基础：XR-S / AIGC-B / AIGC-C"
+        }
+      ]
     },
     {
       "id": "R0198",
@@ -10621,7 +10725,15 @@
       "fulltext_sha256": "efd7dbe6109b600a4cd4d3bb108b01170874b92f12f8e9b21567364198040208",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "ARIA 识别知识缺口、询问专家并维护带时间戳的知识库。 [推断] 主要为外部知识库；模拟专家实验不能当真实教学人数。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0199",
@@ -10660,7 +10772,15 @@
       "fulltext_sha256": "11d3ba00ca8425bbe0e41910b8387521ca361ce48514e8594a0e3ac82734804e",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "Nested Learning 将不同更新频率的记忆和优化过程统一讨论。 [推断] 作者未普遍解决灾难性遗忘；概念重述不能替代教学纵向实验。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0200",
@@ -10740,7 +10860,15 @@
       "fulltext_sha256": "5421550e1fc385d427b8ec597795754ef4efe59951e8b6af50d780a51bc89967",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "AIGC-D",
+          "role": "可借用组件",
+          "reason": "Gen-Searcher 为知识密集图像生成学习多步文字与参考图搜索。 [推断] 原任务为图像；额外搜索收益不能代替视频时序控制验证。",
+          "primary": "AIGC-D"
+        }
+      ]
     },
     {
       "id": "R0201",
@@ -10780,7 +10908,21 @@
       "fulltext_sha256": "c3eaddbabe4ec583e23faff50177f4ad1e6bafceb7b468a4ffce55f365ca32b4",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "可借用组件",
+          "reason": "任务抽象支持教师审核和修订概念、情境、学习目标及界面。 [推断] 创作贡献已有证据；学生机制理解与无辅助迁移另需教学实验。",
+          "primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "SimStep 以教学抽象支持教师逐步检查与纠正模拟。 [推断] 创作实验不能替代长期学生学习增益。",
+          "primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0202",
@@ -10819,7 +10961,15 @@
       "fulltext_sha256": "f16e490f9e69a91188f4ed49bd8cbe95020cb31d93fded1fa0d70be0b608b1f6",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "可借用组件",
+          "reason": "Sensible Agent 根据情境调整主动 AR 帮助的内容与模态。 [推断] 未精确求解介入时机，也没有长期用户偏好闭环。",
+          "primary": "XR-L"
+        }
+      ]
     },
     {
       "id": "R0203",
@@ -10858,7 +11008,15 @@
       "fulltext_sha256": "737b5960d30bda2d0d4733f4c2e586fc3e1bca0a4c7de63fd81e7fde2448df22",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "AgentHands 以与语音同步、空间对齐的手势讲解对象与动作。 [推断] 依赖预扫描对象注册和有限手势；动态重定位需增加机制。",
+          "primary": "XR-S"
+        }
+      ]
     },
     {
       "id": "R0204",
@@ -10920,7 +11078,21 @@
       "fulltext_sha256": "83a0073efc6beeeed98fe0669c0f5483957742526eee185d8aae360cab9c693a",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "可借用组件",
+          "reason": "可干预环境允许根据反馈更新机制假设，并对照符号与视觉观测。 [推断] 简化机制与动作空间限制结论范围；后果视频生成需另建接口。",
+          "primary": "不确定：XR-C / AIGC-D（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-D",
+          "role": "可借用组件",
+          "reason": "IVRE 在有限交互预算内通过新实验更新对隐藏规则的判断。 [推断] OR 规则及简化动作限制外推；不包含开放创作或真实用户打扰。",
+          "primary": "不确定：XR-C / AIGC-D（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0205",
@@ -10981,7 +11153,21 @@
       "fulltext_sha256": "49f6f1dd9bfc50a692f8d26c31e599400360d0d5e6b2da91203001916929c37f",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "可借用组件",
+          "reason": "技能反馈结合评论、专家视频检索与修正姿态生成。 [推断] 专家视频来自检索，生成对象为姿态；可见反事实视频和长期学习收益需另验证。",
+          "primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "ExpertAF 把技能视频与姿态转成专家式反馈。 [推断] 偏好与离线反馈质量不能等同于长期技能改善。",
+          "primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0206",
@@ -11043,7 +11229,21 @@
       "fulltext_sha256": "23ab273b7130dfd3841da96a979cccde0a002c0df2f572a23968f5842775602d",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "可借用组件",
+          "reason": "比较不同对话行动的后续收益，以偏好优化学习多轮澄清。",
+          "primary": "不确定：XR-L / AIGC-D（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-D",
+          "role": "可借用组件",
+          "reason": "用对话行动及后续轨迹收益训练多轮澄清。",
+          "primary": "不确定：XR-L / AIGC-D（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0207",
@@ -11082,7 +11282,15 @@
       "fulltext_sha256": "14ff0d4d38a5f542203826c6a4c72eac447e4e3a7052a60d3832adf256d1f0ba",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "可借用组件",
+          "reason": "探索研究已用基础模型提出实验，并在三维条件下由人执行动作取证。 [推断] 现有简单机制和有限试验，未优化 XR 教学的注意力与动作可接受性。",
+          "primary": "XR-L"
+        }
+      ]
     },
     {
       "id": "R0208",
@@ -11144,7 +11352,21 @@
       "fulltext_sha256": "d40d929c329be9ada2b14db34da6c90643d291b2f65e6adec42dad0067a183e1",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "直接方法",
+          "reason": "结构化状态与反事实生成接口；不自动等于真实机制识别。",
+          "primary": "AIGC-A"
+        },
+        {
+          "direction": "AIGC-A",
+          "role": "直接方法",
+          "reason": "结构化状态与反事实生成接口；不自动等于真实机制识别。",
+          "primary": "AIGC-A"
+        }
+      ]
     },
     {
       "id": "R0209",
@@ -11207,7 +11429,21 @@
       "fulltext_sha256": "e8be97fb57eb9b157928b62500cc511052ecf15098158e30bd0f6a3340a8ede6",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "可借用组件",
+          "reason": "借用缺失信息表示与提问组织；本方向固定触发，不接收 when 作为主要贡献。",
+          "primary": "XR-L"
+        },
+        {
+          "direction": "AIGC-D",
+          "role": "可借用组件",
+          "reason": "借用缺失信息表示与提问组织；本方向固定触发，不接收 when 作为主要贡献。",
+          "primary": "XR-L"
+        }
+      ]
     },
     {
       "id": "R0210",
@@ -11247,7 +11483,15 @@
       "fulltext_sha256": "0b396498366e6c036506ffe5357afc32655acf5270f64f5eb2b499dfbe6ff583",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "证明某些持续文字记忆更新会污染有用内容；应保留原始 episode 并检查旧任务。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0211",
@@ -11286,7 +11530,15 @@
       "fulltext_sha256": "ae98d5b379e4559e87c03a38fff8e526a151496ce91b01fd44f164cf25b22143",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "AIGC-C",
+          "role": "可借用组件",
+          "reason": "Long-form Movie Prior 学习剧本、角色、布局与关键点组成的稀疏分镜。 [推断] 主要输出分镜而非连续像素视频；未建立观众揭示时间控制。",
+          "primary": "AIGC-C"
+        }
+      ]
     },
     {
       "id": "R0212",
@@ -11346,7 +11598,15 @@
       "fulltext_sha256": "8a79ecb30f0de92d15d2544aaff9f96468708f26a61b7e308ad0f982f71a89d6",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "可借用组件",
+          "reason": "ARCap 以 AR 和触觉反馈帮助用户采集可被机器人执行的示范。 [推断] 目标是机器人数据，不是已证实的新手教学或视频生成数据选择。",
+          "primary": "XR-L"
+        }
+      ]
     },
     {
       "id": "R0213",
@@ -11387,7 +11647,21 @@
       "fulltext_sha256": "d0a98826f396a0052e7c6f25235cb8faced07f8c4aba6ab0a6f21e2a12251d63",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "[推断] 沿用原方向的模块关系；不是完整解决当前问题的直接证据。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "[推断] 沿用原方向的模块关系；不是完整解决当前问题的直接证据。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0214",
@@ -11426,7 +11700,15 @@
       "fulltext_sha256": "07b402e40bf635a97cf4d04cdf1640649dab3144d1d97667f6d4332a30e651a6",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "可借用组件",
+          "reason": "ESI-Bench 对照主动探索、被动观察及三维辅助的空间推理。 [推断] 基准面向具身空间理解，不能代替教程生成或人类学习评价。",
+          "primary": "XR-L"
+        }
+      ]
     },
     {
       "id": "R0215",
@@ -11486,7 +11768,15 @@
       "fulltext_sha256": "9cf98a70f4e2857888e09fd2a552be6ed96083c83b1c095073e03027aaa4f168",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "AIGC-C",
+          "role": "可借用组件",
+          "reason": "Direct-a-Video 研究用户指定的相机与对象运动控制。 [推断] 依据现有摘要级记录；未核实其在严格可见性或信息泄露任务中的表现。",
+          "primary": "AIGC-C"
+        }
+      ]
     },
     {
       "id": "R0216",
@@ -11525,7 +11815,15 @@
       "fulltext_sha256": "ac2d904f796cd233b64aa4d8394660ef24dc4824dd84eb0d1a1a6b0b0b7548ce",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "AIGC-C",
+          "role": "可借用组件",
+          "reason": "MovieBench 提供层级电影数据与长视频研究基础。 [推断] 现有库内证据为摘要级；不能把连续性得分当作揭示控制得分。",
+          "primary": "AIGC-C"
+        }
+      ]
     },
     {
       "id": "R0217",
@@ -11564,7 +11862,15 @@
       "fulltext_sha256": "30c9289d1a81042ed195671d5de8026414e972a68b02169687842c203ad4c39b",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "Demo2Tutorial 从经验日志形成层级任务图与图文教程，评估人和 agent 使用。 [推断] 主要为软件教程，跨物体机制和 XR 空间教学需新证据。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0218",
@@ -11603,7 +11909,15 @@
       "fulltext_sha256": "0a014d007c2c97b19cabcea4797f094ec2582fba52b80a7076619328b5c45cdc",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "ReGRPO 通过错误类型、证据和修复计划训练工具 agent，并计入反思成本。 [推断] 原任务是工具使用，不能直接将反思奖励变成学员学习收益。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0219",
@@ -11642,7 +11956,15 @@
       "fulltext_sha256": "6f46f32606149d6f620b6df292c41cbe66cc7402f64181d5ea0e29fbb0cce066",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "AdaJEPA 在新转移出现后更新部分编码器及预测器参数，再规划。 [推断] 潜空间控制结果不能直接说明可见视频已正确。",
+          "primary": "XR-S"
+        }
+      ]
     },
     {
       "id": "R0220",
@@ -11800,6 +12122,7 @@
       "topic": "动作／物理条件的世界生成",
       "task": "编辑与修改",
       "directions": [
+        "AIGC-A",
         "XR-C"
       ],
       "source_url": "https://arxiv.org/abs/2506.14404v2",
@@ -11842,7 +12165,21 @@
       "fulltext_sha256": "ff5da7ff6badf2423b5d5b051b770371d26a85f65614a1340f31afc72c9eb583",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "可借用组件",
+          "reason": "给定属性因果图指导黑盒提示优化，检查目标改变、保持与时序质量。 [推断] 主要是人脸属性及先验图；不能外推为未知真实操作机制的识别。",
+          "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-A",
+          "role": "可借用组件",
+          "reason": "将因果条件和属性保持推进到视频。",
+          "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0223",
@@ -11904,7 +12241,15 @@
       "fulltext_sha256": "16c64eec4eb258fd0dd9331f88024e17ff2ef69fc949ad74975992677f51bc4a",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "AIGC-C",
+          "role": "可借用组件",
+          "reason": "跨镜头记忆与连贯执行；没有自动建立 revelation 任务。",
+          "primary": "AIGC-C"
+        }
+      ]
     },
     {
       "id": "R0224",
@@ -11946,7 +12291,21 @@
       "fulltext_sha256": "7adedfacbdf3c408520217763b24d04a7697245320ac4569de5b3d003f3de9f5",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "可借用组件",
+          "reason": "context gap 与主动信息获取近邻；控制信号最少充分性仍需执行检验。",
+          "primary": "AIGC-D"
+        },
+        {
+          "direction": "AIGC-D",
+          "role": "可借用组件",
+          "reason": "context gap 与主动信息获取近邻；控制信号最少充分性仍需执行检验。",
+          "primary": "AIGC-D"
+        }
+      ]
     },
     {
       "id": "R0225",
@@ -11989,7 +12348,27 @@
       "fulltext_sha256": "c4240cffd222d9984b709f550b54a34270de6b290c8f36f74bce092e1cc814bb",
       "reasoning_id": "CVPR-2026-3642",
       "reasoning_role": "R2",
-      "reasoning_topic": "通用生成框架 / 联合音视频"
+      "reasoning_topic": "通用生成框架 / 联合音视频",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "可借用组件",
+          "reason": "视频作为下一事件回答，借用推理—生成训练；不是干预后果或教学迁移的直接证据。",
+          "primary": "XR-C"
+        },
+        {
+          "direction": "AIGC-A",
+          "role": "可借用组件",
+          "reason": "视频作为下一事件回答，借用推理—生成训练；不是干预后果或教学迁移的直接证据。",
+          "primary": "XR-C"
+        },
+        {
+          "direction": "AIGC-D",
+          "role": "可借用组件",
+          "reason": "视频作为下一事件回答，借用推理—生成训练；不是干预后果或教学迁移的直接证据。",
+          "primary": "XR-C"
+        }
+      ]
     },
     {
       "id": "R0226",
@@ -12032,7 +12411,21 @@
       "fulltext_sha256": "27e18f30c1d542a4fca0a61ab9501026471c18708d23f7738a9997f5551c2cd7",
       "reasoning_id": "ECCV-2026-0955",
       "reasoning_role": "R1",
-      "reasoning_topic": "Editing / 修改已有视频"
+      "reasoning_topic": "Editing / 修改已有视频",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "直接方法",
+          "reason": "对象删除和下游交互是直接视频先例；XR-C 使用它仍需教学实验。",
+          "primary": "AIGC-A"
+        },
+        {
+          "direction": "AIGC-A",
+          "role": "直接方法",
+          "reason": "对象删除和下游交互是直接视频先例；XR-C 使用它仍需教学实验。",
+          "primary": "AIGC-A"
+        }
+      ]
     },
     {
       "id": "R0227",
@@ -12075,7 +12468,27 @@
       "fulltext_sha256": "afd331554620a37c19732bfde4ccb9a371f1d8bad6a99a000ae76056ec3842c3",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "可借用组件",
+          "reason": "给定几何的选择性执行；不能归为自主未知机制推断。",
+          "primary": "AIGC-A"
+        },
+        {
+          "direction": "AIGC-A",
+          "role": "可借用组件",
+          "reason": "给定几何的选择性执行；不能归为自主未知机制推断。",
+          "primary": "AIGC-A"
+        },
+        {
+          "direction": "AIGC-D",
+          "role": "可借用组件",
+          "reason": "给定几何的选择性执行；不能归为自主未知机制推断。",
+          "primary": "AIGC-A"
+        }
+      ]
     },
     {
       "id": "R0228",
@@ -12136,7 +12549,21 @@
       "fulltext_sha256": "d34db53cd77c1d8d8caa94827e60243369fbbfb702a79f42d03c8c529f63c3ca",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "可借用组件",
+          "reason": "单条件变化的提示对同时检查后果差异与共享环境，补足逐视频评测。 [推断] 贡献是评测；XR 操作真值与教学迁移需新增数据和实验。",
+          "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-A",
+          "role": "可借用组件",
+          "reason": "成对物理变量评测可借鉴；不要把语义一致的成对提示当精确世界反事实。",
+          "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0229",
@@ -12176,7 +12603,21 @@
       "fulltext_sha256": "b31074a51273b8959dcaea3399a6345aa22545dae6b96513a83ecc5a2fd12a5b",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "记忆综述将写入、读取、更新和评测分开，并强调状态应保持可信。 [推断] 提供框架，不是新方法的效果证据。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "综述区分记忆读写、更新、管理和不同记忆载体。 [推断] 综述的开放议题不能证明新颖性或方法有效。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0230",
@@ -12216,7 +12657,21 @@
       "fulltext_sha256": "0666c5ecbd2b20aeea064ffb90dbfcb953e56435217662a871c64ca81557aea0",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "VideoSSM 用局部窗口和可注入、可遗忘的全局 SSM 状态保存历史。 [推断] 已有遗忘门不等于可定位错误信念并撤销其下游依赖。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "VideoSSM 用局部窗口与可更新的全局 SSM 记忆生成长视频。 [推断] 存在遗忘门不等于知道应撤回哪项依据及依赖。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0231",
@@ -12257,7 +12712,21 @@
       "fulltext_sha256": "4855365bcf05db581d504e7d40afa62ca3927b4e0583e8c880d1392059440580",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "A²RD 已有检索—生成—修订—更新循环与分层自修正。 [推断] 自修正已有先例；未由此建立外来反证触发的特定状态撤销。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "A²RD 用多模态记忆与逐段生成、自修正、更新维持长视频一致性。 [推断] 该闭环本身不建立外来反证下的特定信念撤回。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0232",
@@ -12319,7 +12788,21 @@
       "fulltext_sha256": "6da3c16e5eab095c740e738fe87458e17081de6aedbc8dd8f7c3a4a1df5c996e",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "可借用组件",
+          "reason": "S³ / AMF-VLM 在流式空间任务中按时刻记忆并主动移动、旋转或扫描取证。 [推断] 主要输出答案，需新增“取证→视频条件→生成执行”链。",
+          "primary": "不确定：XR-L / AIGC-D（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-D",
+          "role": "可借用组件",
+          "reason": "S³ / AMF-VLM 研究流式空间记忆和按需取证。 [推断] 原任务主要输出答案，还需独立测获取信号是否进入视频。",
+          "primary": "不确定：XR-L / AIGC-D（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0233",
@@ -12379,7 +12862,15 @@
       "fulltext_sha256": "e50d1bf6f9a4dc31fb6ae65f9c180f79c741f257e9858d02686dd563e7d95553",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "可借用组件",
+          "reason": "URDF 结构、动作规划与渲染反馈支持受关节约束的可执行动画。 [推断] 依赖结构质量；运动学成果不自动覆盖完整受力物理或未知机制发现。",
+          "primary": "XR-C"
+        }
+      ]
     },
     {
       "id": "R0234",
@@ -12419,7 +12910,21 @@
       "fulltext_sha256": "38804d643877451ddc5182652ee745097e221482bb8109bf1b33db8ac4c6ddee",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "VLM-as-Teacher 在测试时优化视频 LoRA，使生成轨迹响应规则反馈。 [推断] 每个实例优化不证明跨任务学习；教师可能漏看并带来质量取舍。",
+          "primary": "不确定：XR-S / XR-E（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "VLM-as-Teacher 提供实例级 LoRA 修复。 [推断] 测试时优化本身不证明保留并迁移到下一用户。",
+          "primary": "不确定：XR-S / XR-E（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0235",
@@ -12459,7 +12964,21 @@
       "fulltext_sha256": "2d92ef387bc929b16066b50b761236d36e802f22cca5c4ae0c6ab44ea482edcc",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "JoyAI 支持无未来帧输入的分块自回归视频编辑。 [推断] 实时编辑不是实时信念修正；特定硬件速度不能直接当头显端延迟。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "JoyAI 以无未来帧的分块自回归方式编辑视频。 [推断] 流式编辑性能不等于证据驱动的记忆修订。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0236",
@@ -12500,7 +13019,15 @@
       "fulltext_sha256": "3f2d3dd30c69b3616258eae52d62862972439aacfd250780759bbb5b7887b139",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "基础理论",
+          "reason": "可检索技能积累与自动课程基线；跨任务复用比单次修复更接近本方向。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0237",
@@ -12562,7 +13089,21 @@
       "fulltext_sha256": "2c6e0104472c5be0833bdaed77b250a277ec57bb2cb24aeb8872ba01729a73d9",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "可借用组件",
+          "reason": "用状态变化、漏步与错序反事实文本训练程序视频表示。",
+          "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-A",
+          "role": "可借用组件",
+          "reason": "状态监督改善程序相关理解／表征任务。附录进行人工与模型质量核查，支持其数据设计具有实用性。 [推断] 【原文 Appendix A.4】反事实文本偶有低概率情形，需要权衡创造性与现实性。【任务范围】理解提升不直接建立生成收益或因果可识别性。",
+          "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0238",
@@ -12623,7 +13164,15 @@
       "fulltext_sha256": "1e70f6839115336be0653d4d6bfde6aca05c7ca4b999cb5ec2446d1c665a99c3",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "可借用组件",
+          "reason": "合成动作／时序硬负例，并以 MixDPO 的文本和视觉偏好训练改善理解。 [推断] 需跨生成器检查合成伪迹；理解提升不能直接记作生成器的因果能力。",
+          "primary": "XR-C"
+        }
+      ]
     },
     {
       "id": "R0239",
@@ -12664,7 +13213,21 @@
       "fulltext_sha256": "f2a0bae721544f110c8d9bb54db2a1c2ca8cdf9d3be5c328bd37e09fd84f8994",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "VQQA 用视觉问题及批评迭代优化黑盒视频生成。 [推断] 评判会幻觉，串行生成有成本，不能无条件把批评当真值。",
+          "primary": "不确定：XR-S / AIGC-C（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-C",
+          "role": "可借用组件",
+          "reason": "VQQA 通过视觉问题及批评改进视频。 [推断] VLM 会漏看或幻觉；评价器不应获得当前前缀以外的真值答案。",
+          "primary": "不确定：XR-S / AIGC-C（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0240",
@@ -12705,7 +13268,15 @@
       "fulltext_sha256": "0d790d960c6074c4b2bfabe7837ca139bdd0a00c71dd2a8b7ca2a9a18ce61c50",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "生成工作流改善与复用近邻；学习者、惯例与边界是新增问题。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0241",
@@ -12768,7 +13339,21 @@
       "fulltext_sha256": "16588f9723b655f0c48fce14349984672fd0df2cb2960c6315a5a5973798616b",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "可借用组件",
+          "reason": "视频生成工具与 agent 执行接口；不是最小充分控制的完整证据。",
+          "primary": "AIGC-D"
+        },
+        {
+          "direction": "AIGC-D",
+          "role": "可借用组件",
+          "reason": "视频生成工具与 agent 执行接口；不是最小充分控制的完整证据。",
+          "primary": "AIGC-D"
+        }
+      ]
     },
     {
       "id": "R0242",
@@ -12808,7 +13393,21 @@
       "fulltext_sha256": "f910062aed2fd0f857d4f8e5b9176613bacb04f7923a06ff249aef7de738a382",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "MaLiang 将程序、历史和渲染检查绑定同一修订版本，并支持恢复。 [推断] 原系统以可执行视觉程序为核心，扩散模型的局部记忆更新仍需另做。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "MaLiang 将视觉程序、历史和验证绑定同一修订版本。 [推断] 程序回滚不能直接迁移为扩散模型内的选择性遗忘。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0243",
@@ -12868,7 +13467,15 @@
       "fulltext_sha256": "c065e45a18b8bc9abc8a673c069c005e3419ab7e8c3051865097783d707b07b6",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "可借用组件",
+          "reason": "ParaVT 用并行视频工具调用和 PARA-GRPO 研究帧预算、格式奖励及工具捷径。 [推断] 视频理解工具证据不等于生成控制；PARA-GRPO 也不是独立的通用 GRPO 原始论文。",
+          "primary": "XR-L"
+        }
+      ]
     },
     {
       "id": "R0244",
@@ -12928,7 +13535,15 @@
       "fulltext_sha256": "8b41e4ca78ba0a2dd743175ccbafa3e42e861c5a69ca45b157d2a71200d446ff",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "可借用组件",
+          "reason": "RFT-Inf 估计样本对最终强化微调奖励的影响。 [推断] 影响分数对当前奖励有利不保证真实教学或分布外增益。",
+          "primary": "XR-L"
+        }
+      ]
     },
     {
       "id": "R0245",
@@ -13049,7 +13664,15 @@
       "fulltext_sha256": "2e684609b151e6187a435692bfab903ad267387504a29de981b6c363aed262c9",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "基础理论",
+          "reason": "教学与规划基础：解释“做哪些步骤达到目标”，不应称为反事实视频生成代表作。",
+          "primary": "XR-C"
+        }
+      ]
     },
     {
       "id": "R0247",
@@ -13131,7 +13754,15 @@
       "fulltext_sha256": "a3b5c6a989a4610f23a64cea77903c814c009748c390587a6436aca5a6691b59",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "可借用组件",
+          "reason": "用显式状态变化组织语言与视觉程序规划。",
+          "primary": "XR-C"
+        }
+      ]
     },
     {
       "id": "R0248",
@@ -13172,7 +13803,21 @@
       "fulltext_sha256": "34360acf61efcac9e05e3762ffe851e3917e0a3d1522453d102a6bb979e48a9e",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "基础理论",
+          "reason": "因果形式化基础：解释溯因—干预—预测及个体外生因素的保留。",
+          "primary": "跨方向基础：XR-C / AIGC-A"
+        },
+        {
+          "direction": "AIGC-A",
+          "role": "基础理论",
+          "reason": "个体反事实的原则基础；复用外生因素比“生成另一个合理视频”更严格。",
+          "primary": "跨方向基础：XR-C / AIGC-A"
+        }
+      ]
     },
     {
       "id": "R0249",
@@ -13253,7 +13898,21 @@
       "fulltext_sha256": "7df3732651b9a5735b2c80d66a4cf89ddcbccc940da1cb18ac0384e12367e093",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "直接方法",
+          "reason": "物理重建—模拟—视频执行；限定刚体与原实验范围。",
+          "primary": "AIGC-A"
+        },
+        {
+          "direction": "AIGC-A",
+          "role": "直接方法",
+          "reason": "物理重建—模拟—视频执行；限定刚体与原实验范围。",
+          "primary": "AIGC-A"
+        }
+      ]
     },
     {
       "id": "R0251",
@@ -13293,7 +13952,21 @@
       "fulltext_sha256": "17bcede566e866b72379b8f5c8c3928723cc16b6ad187ef4f685874996ee3552",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "基础理论",
+          "reason": "可靠求助的计算基础；可提供触发和候选集，how 仍需单独设计与评测。",
+          "primary": "跨方向基础：XR-L / AIGC-D"
+        },
+        {
+          "direction": "AIGC-D",
+          "role": "基础理论",
+          "reason": "把不确定性与可靠求助联系起来。",
+          "primary": "跨方向基础：XR-L / AIGC-D"
+        }
+      ]
     },
     {
       "id": "R0252",
@@ -13375,7 +14048,15 @@
       "fulltext_sha256": "a4fb5719f5e75f5f2268bfbce59fa6d8e9585208e377f55726ab75005d939b3d",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "GenEx 用生成的想象观察帮助 embodied agent 更新判断和决策。 [推断] 想象观察不等于独立外来反证；该任务不直接验证生成记忆撤回。",
+          "primary": "AIGC-B"
+        }
+      ]
     },
     {
       "id": "R0253",
@@ -13415,7 +14096,21 @@
       "fulltext_sha256": "f7a422eb59db6e64cbf92f459e6b5a8421bc6facd86246338ea1baef88ba4193",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "基础理论",
+          "reason": "长时生成上下文与记忆的技术基础；目标是连续性，不是反证下的可信状态更新。",
+          "primary": "跨方向基础：XR-S / AIGC-B"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "基础理论",
+          "reason": "长时视频记忆技术基础，主要目标是连贯生成。",
+          "primary": "跨方向基础：XR-S / AIGC-B"
+        }
+      ]
     },
     {
       "id": "R0254",
@@ -13434,6 +14129,7 @@
       "task": "长视频与多镜头叙事",
       "directions": [
         "AIGC-B",
+        "AIGC-C",
         "XR-S"
       ],
       "source_url": "https://arxiv.org/html/2610.03510v1",
@@ -13476,7 +14172,27 @@
       "fulltext_sha256": "e3393b50447f2759407ba6a9be96e75e26a71015c3832be39452362193e16c45",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "对象参考的路由能帮助保留身份；仍需决定何时某个参考在语义上失效。",
+          "primary": "不确定：XR-S / AIGC-B / AIGC-C（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "可作为修订后记忆重新注入生成器的机制；不能自动判定参考真实性。",
+          "primary": "不确定：XR-S / AIGC-B / AIGC-C（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-C",
+          "role": "可借用组件",
+          "reason": "对象参考路由可保持隐藏事实的外观一致性；错误注入也可能提前泄密。",
+          "primary": "不确定：XR-S / AIGC-B / AIGC-C（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0255",
@@ -13515,7 +14231,15 @@
       "fulltext_sha256": "086719e2af07ee984f2abf6bb9a9bd2c45875a2aa557d1de3701b5b73e772731",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "将规划、生成、评价和修复连接成视频闭环。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0256",
@@ -13575,7 +14299,15 @@
       "fulltext_sha256": "8910666330c50eba8add68be205c48d878fdf16704db76b332614f1ce8c296b8",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "AIGC-C",
+          "role": "基础理论",
+          "reason": "把脚本和多场景布局连接到视频生成。",
+          "primary": "AIGC-C"
+        }
+      ]
     },
     {
       "id": "R0257",
@@ -13618,7 +14350,27 @@
       "fulltext_sha256": "b9e5e39969c5d78b2eed2e7532337cdee8bd12f406a920e457689d3104300c8a",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "互动故事的事实与呈现历史约束；不等于逐角色知识／揭示控制。",
+          "primary": "AIGC-C"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "互动故事的事实与呈现历史约束；不等于逐角色知识／揭示控制。",
+          "primary": "AIGC-C"
+        },
+        {
+          "direction": "AIGC-C",
+          "role": "可借用组件",
+          "reason": "互动故事的事实与呈现历史约束；不等于逐角色知识／揭示控制。",
+          "primary": "AIGC-C"
+        }
+      ]
     },
     {
       "id": "R0258",
@@ -13717,7 +14469,15 @@
       "fulltext_sha256": "dd01d5b5f48976e3c4b2ba4904f60c2e51a9efb7ec7a80ed0c338f5b5c3c2a54",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "AIGC-C",
+          "role": "基础理论",
+          "reason": "读者模型与悬念机制的原则基础；是文本叙事，不是视频生成。",
+          "primary": "AIGC-C"
+        }
+      ]
     },
     {
       "id": "R0260",
@@ -13757,7 +14517,15 @@
       "fulltext_sha256": "3d8f1c0038f25f3d3fa0f2ef9fd6f62181ddff240bcbeffcd11331c55b980160",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "AIGC-C",
+          "role": "直接方法",
+          "reason": "文本叙事层的悬念规划先例；视听泄漏与自由视角未因此解决。",
+          "primary": "AIGC-C"
+        }
+      ]
     },
     {
       "id": "R0261",
@@ -13817,7 +14585,15 @@
       "fulltext_sha256": "d7bae580fad1db9fa57cf5386a185a32f36f0db7e8d2c0e56328e0545d287c0a",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "AIGC-D",
+          "role": "基础理论",
+          "reason": "结构控制接口基础；前提是条件已获取且正确。",
+          "primary": "AIGC-D"
+        }
+      ]
     },
     {
       "id": "R0262",
@@ -13835,7 +14611,8 @@
       "topic": "",
       "task": "条件控制生成",
       "directions": [
-        "AIGC-D"
+        "AIGC-D",
+        "XR-L"
       ],
       "source_url": "https://arxiv.org/html/2601.20622v1",
       "status": "未定位可比微调配置",
@@ -13856,7 +14633,21 @@
       "fulltext_sha256": "e16569b07fa051c74b7b9b575efeda136bbde5e4fc9ffe259c69147d6b479b28",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "边界参照",
+          "reason": "用户主动表达动态创作意图；不等于 agent 主动获取用户已有真值。",
+          "primary": "AIGC-D"
+        },
+        {
+          "direction": "AIGC-D",
+          "role": "边界参照",
+          "reason": "用户主动表达动态创作意图；不等于 agent 主动获取用户已有真值。",
+          "primary": "AIGC-D"
+        }
+      ]
     },
     {
       "id": "R0263",
@@ -13917,7 +14708,21 @@
       "fulltext_sha256": "87db8d106ae04f72252f027b07f3d733adb14b958138bf51d5ba4841f3f2e885",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "直接方法",
+          "reason": "多模态意图消歧近邻；其中引导用户换视角的环节不满足全部动作由 agent 完成。",
+          "primary": "XR-L"
+        },
+        {
+          "direction": "AIGC-D",
+          "role": "直接方法",
+          "reason": "多模态意图消歧近邻；其中引导用户换视角的环节不满足全部动作由 agent 完成。",
+          "primary": "XR-L"
+        }
+      ]
     },
     {
       "id": "R0264",
@@ -13957,7 +14762,21 @@
       "fulltext_sha256": "21c78a87bb077599898ec7767f58b72568cae145f34e46b09d5316189b07765a",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "可借用组件",
+          "reason": "互动澄清接口近邻；需按用户 GT 与系统实际动作边界重测。",
+          "primary": "XR-L"
+        },
+        {
+          "direction": "AIGC-D",
+          "role": "可借用组件",
+          "reason": "互动澄清接口近邻；需按用户 GT 与系统实际动作边界重测。",
+          "primary": "XR-L"
+        }
+      ]
     },
     {
       "id": "R0265",
@@ -13996,7 +14815,15 @@
       "fulltext_sha256": "a2fb16442463b0a6390c16835d7f412e8f412b42bc33597449c6c2c5a39a0e1c",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "可借用组件",
+          "reason": "[推断] 沿用原方向的模块关系；不是完整解决当前问题的直接证据。",
+          "primary": "XR-L"
+        }
+      ]
     },
     {
       "id": "R0266",
@@ -14056,7 +14883,15 @@
       "fulltext_sha256": "e7f4aba4335296d6ff29d35a7717c938616d0d8f660e549f70c211b9d6bb16dd",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "可借用组件",
+          "reason": "[推断] 沿用原方向的模块关系；不是完整解决当前问题的直接证据。",
+          "primary": "XR-L"
+        }
+      ]
     },
     {
       "id": "R0267",
@@ -14117,7 +14952,21 @@
       "fulltext_sha256": "85142f0d19f786ee1dac6e246471c462e974b23c6bc3718dd576cc43c24d92a3",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "导航中的闭环状态／模型纠错；不是视频历史修订方法。",
+          "primary": "XR-S"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "导航中的闭环状态／模型纠错；不是视频历史修订方法。",
+          "primary": "XR-S"
+        }
+      ]
     },
     {
       "id": "R0268",
@@ -14178,7 +15027,21 @@
       "fulltext_sha256": "3eeae0f4362cc3229b88e42bb215c473d06d4772d02d90c8ca9529c2a9725846",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "空间记忆表示与更新；状态记忆不等于认识到旧判断错误。",
+          "primary": "AIGC-B"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "空间记忆表示与更新；状态记忆不等于认识到旧判断错误。",
+          "primary": "AIGC-B"
+        }
+      ]
     },
     {
       "id": "R0269",
@@ -14218,7 +15081,21 @@
       "fulltext_sha256": "e2a1b37301ce299b239198d5e4d824bd46a7c8255c0b64237cac0a661716f0e7",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-S",
+          "role": "可借用组件",
+          "reason": "[推断] 沿用原方向的模块关系；不是完整解决当前问题的直接证据。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        },
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "[推断] 沿用原方向的模块关系；不是完整解决当前问题的直接证据。",
+          "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+        }
+      ]
     },
     {
       "id": "R0270",
@@ -14279,7 +15156,21 @@
       "fulltext_sha256": "432d8ec98034baca1d3d6c047839a44d4f5d054b89a5c2ca13c1538edaecce89",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "边界参照",
+          "reason": "图像 SCM 干预与保持，可借方法但没有视频时间链证据。",
+          "primary": "AIGC-A"
+        },
+        {
+          "direction": "AIGC-A",
+          "role": "边界参照",
+          "reason": "图像 SCM 干预与保持，可借方法但没有视频时间链证据。",
+          "primary": "AIGC-A"
+        }
+      ]
     },
     {
       "id": "R0271",
@@ -14319,7 +15210,21 @@
       "fulltext_sha256": "f1bc0d2ac103e8c5165aaafe39bc0a44037a0b9ed728d440503aa0fcdfddd848",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-C",
+          "role": "数据／评测",
+          "reason": "游戏机制反事实真值；生成概念验证是单帧 OpenJourney，不是完整视频方法。",
+          "primary": "AIGC-A"
+        },
+        {
+          "direction": "AIGC-A",
+          "role": "数据／评测",
+          "reason": "游戏机制反事实真值；生成概念验证是单帧 OpenJourney，不是完整视频方法。",
+          "primary": "AIGC-A"
+        }
+      ]
     },
     {
       "id": "R0272",
@@ -14358,7 +15263,15 @@
       "fulltext_sha256": "",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "教程构建与教学接口近邻；不是跨任务 self-evolution 的直接证明。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0273",
@@ -14397,7 +15310,15 @@
       "fulltext_sha256": "",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "教学反馈与交互证据；跨任务持续学习需另测。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0274",
@@ -14436,7 +15357,15 @@
       "fulltext_sha256": "82067011a2d555dbf63185f41f2265e4adee4660abd5b97f2d6c752830afbfeb",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "维护可复用 playbook，含去重和 pruning；未建立学员反馈归因与协作边界。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0275",
@@ -14475,7 +15404,15 @@
       "fulltext_sha256": "ef0713442395ececea6e209462acdf8146f2719557c9416d1acec2d10bea5eef",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "经验／context 改进机制；XR 人机协作迁移需单独验证。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0276",
@@ -14514,7 +15451,15 @@
       "fulltext_sha256": "f5bd87e196a9c23e434090de58103e720cd9d4efffd3dfd9fcdec322026bdba0",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "[推断] 沿用原方向的模块关系；不是完整解决当前问题的直接证据。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0277",
@@ -14574,7 +15519,15 @@
       "fulltext_sha256": "2cc0d1b3925674cbe98e38ceb84912e6d887f0177608850f1e0b55af00b44b93",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "[推断] 沿用原方向的模块关系；不是完整解决当前问题的直接证据。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0278",
@@ -14634,7 +15587,15 @@
       "fulltext_sha256": "24ee03515b714a51457a627d064c4791b084f15e9df40d90fa6a9adf40cde8dc",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "[推断] 沿用原方向的模块关系；不是完整解决当前问题的直接证据。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0279",
@@ -14674,7 +15635,15 @@
       "fulltext_sha256": "ecd07fe9a90486d8cd55edbb5856a121b9e891ac21ba67c70647360dc9002a46",
       "reasoning_id": "CVPR-2026-3841",
       "reasoning_role": "R1",
-      "reasoning_topic": "质量 / 物理 / 推理 / 训练优化"
+      "reasoning_topic": "质量 / 物理 / 推理 / 训练优化",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "边界参照",
+          "reason": "当前任务内 test-time 搜索和修补；不算跨任务演化。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0280",
@@ -14713,7 +15682,15 @@
       "fulltext_sha256": "c3d489188b5dc57fbda313f554c8057b9e98f3d7193dd8c79201920e3774b8c6",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "边界参照",
+          "reason": "代码／harness 自修改属于更新机制，不是教程任务证据。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0281",
@@ -14752,7 +15729,15 @@
       "fulltext_sha256": "4b734b0745f47222289e1d9d4a2fbf1c0d22fe5706933fd7969cbb934ad13e5a",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-E",
+          "role": "可借用组件",
+          "reason": "[推断] 沿用原方向的模块关系；不是完整解决当前问题的直接证据。",
+          "primary": "XR-E"
+        }
+      ]
     },
     {
       "id": "R0282",
@@ -14791,7 +15776,15 @@
       "fulltext_sha256": "2a08810c77cf1aee77557cea0c8a78477b67f083bef8dbd048ea7d8d08abb22c",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "AIGC-A",
+          "role": "可借用组件",
+          "reason": "共享前缀与噪声的反事实 rollout 很接近成组监督和 credit assignment，但当前版本实验尚待完成。",
+          "primary": "AIGC-A"
+        }
+      ]
     },
     {
       "id": "R0283",
@@ -14851,7 +15844,15 @@
       "fulltext_sha256": "32e827db831aa67b2f975488093286155fb9d752a69ad8f37adaf47f7aa76c8a",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "AIGC-B",
+          "role": "可借用组件",
+          "reason": "LayerRecall 依当前状态检索历史 KV，并选择注入层；属性纠正来自反复历史条件化。 [推断] 原文明确不显式检测错误；恢复历史外观不等于撤回错误历史判断。",
+          "primary": "AIGC-B"
+        }
+      ]
     },
     {
       "id": "R0284",
@@ -14890,7 +15891,15 @@
       "fulltext_sha256": "fbbd838d6753f41df928a271549917a1a4d4716bc3076c13cbfc76193cee4997",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "AIGC-C",
+          "role": "可借用组件",
+          "reason": "ViMax 以层级叙事规划、RAG 和依赖感知视觉一致性组织长视频。 [推断] 论文所述连贯性机制不等于对事件／揭示双时间线的专门验证。",
+          "primary": "AIGC-C"
+        }
+      ]
     },
     {
       "id": "R0285",
@@ -16993,7 +18002,9 @@
       "topic_code": "H1",
       "topic": "主动交互、协作与用户需求",
       "task": "未归入视频任务轴",
-      "directions": [],
+      "directions": [
+        "XR-L"
+      ],
       "source_url": "https://www.microsoft.com/en-us/research/publication/principles-mixed-initiative-user-interfaces/",
       "status": "未定位可比微调配置",
       "resource_note": "已检索缓存正文中的训练、硬件、显存、耗时与步骤相关段落；未定位可归属于本文 fine-tuning 的明确配置。此项不等于零成本，也不等于确认全文从未报告。",
@@ -17013,7 +18024,15 @@
       "fulltext_sha256": "ff2e0c039b6dd3685012d8f763eb59e6b19af4b213eedb4e48c306c5a547e953",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "基础理论",
+          "reason": "混合主动权原则：把交互方式、效用和控制分配一起考虑，而不是简单列为 when 方法。",
+          "primary": "XR-L"
+        }
+      ]
     },
     {
       "id": "R0332",
@@ -21148,7 +22167,10 @@
       "topic_code": "B1",
       "topic": "能力诊断与评测基准",
       "task": "未归入视频任务轴",
-      "directions": [],
+      "directions": [
+        "AIGC-D",
+        "XR-L"
+      ],
       "source_url": "https://arxiv.org/abs/2506.21458",
       "status": "已核对资源阶段",
       "resource_note": "",
@@ -21189,7 +22211,21 @@
       "fulltext_sha256": "79791cca82b99a76311960002da46e8d790b63b7c761e9a889e208e78ea357f9",
       "reasoning_id": "",
       "reasoning_role": "",
-      "reasoning_topic": ""
+      "reasoning_topic": "",
+      "direction_roles": [
+        {
+          "direction": "XR-L",
+          "role": "边界参照",
+          "reason": "从有限视图建立空间表示；不是向用户澄清或自行获取新观测。",
+          "primary": "AIGC-D"
+        },
+        {
+          "direction": "AIGC-D",
+          "role": "可借用组件",
+          "reason": "从有限视图建立空间表示；不是向用户澄清或自行获取新观测。",
+          "primary": "AIGC-D"
+        }
+      ]
     },
     {
       "id": "R0429",

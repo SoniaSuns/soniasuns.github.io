@@ -13,6 +13,11 @@
   document.querySelectorAll('.catalog-paper[data-key]').forEach(el=>add(el,records.get(data.technical_index[el.dataset.key]),el.querySelector('h2,h3')));
   document.querySelectorAll('.paper-card[id^="paper-"]').forEach(el=>add(el,byAlias('lineage:'+el.id.slice(6)),el.querySelector('h2,h3')));
   document.querySelectorAll('.reading-update-card').forEach(el=>{const h=el.querySelector('h3,h4');if(h)add(el,titles.get(normalize(h.textContent)),h);});
+  document.querySelectorAll('.dp-paper,.da-paper').forEach(el=>{
+    const h=el.querySelector('h4,h5');if(!h)return;
+    const key=el.dataset.paperKey;
+    add(el,(key&&(byAlias('lineage:'+key)||byAlias('recent:'+key)))||titles.get(normalize(h.textContent)),h);
+  });
   document.querySelectorAll('[id^="recent-"]').forEach(el=>add(el,byAlias('recent:'+el.id.slice(7)),el.querySelector('h3,h4')));
   for(const a of document.querySelectorAll('.overview-card a, .direction a, [data-reading-update] a, .card td a, .card li a')){
     if(a.closest('.resource-inline,.technical-inline,.reading-update-card'))continue;
@@ -26,7 +31,7 @@
     const code=el.dataset.code||el.id,group=data.records.filter(r=>r.topic_code===code||r.directions.includes(code));
     if(!group.length)return;
     const known=group.filter(r=>r.max_reported_ft_gpus!=null),small=known.filter(r=>r.max_reported_ft_gpus<=8),large=known.filter(r=>r.max_reported_ft_gpus>=9);
-    const p=document.createElement('p');p.className='resource-direction';p.innerHTML=`<b>本方向训练资源</b> ${group.length} 篇中，${known.length} 篇有可比较的微调卡数：${small.length} 篇已披露阶段不超过 8 卡，${large.length} 篇达到 9+ 卡。<a href="${api.h(new URL('resources/?group='+encodeURIComponent(code),api.base))}" target="_blank" rel="noopener">查看具体配置与缺项 ↗</a>`;
+    const p=document.createElement('p');p.className='resource-direction';p.innerHTML=`<b>本方向已审计的训练资源</b> ${group.length} 篇中，${known.length} 篇有可比较的微调卡数：${small.length} 篇已披露阶段不超过 8 卡，${large.length} 篇达到 9+ 卡。此范围包含组件与边界参照；PPT 新增参考的资源随卡片单列，未混入原资源统计。<a href="${api.h(new URL('resources/?group='+encodeURIComponent(code),api.base))}" target="_blank" rel="noopener">查看具体配置与缺项 ↗</a>`;
     (el.querySelector('.overview-summary')||el.querySelector('h2,h3'))?.after(p);
   });
   document.documentElement.dataset.resourceAnnotations='ready';window.dispatchEvent(new Event('resize'));

@@ -338,7 +338,15 @@
     ],
     "aigc_targets": [],
     "public_url": "https://github.com/noahshinn/reflexion",
-    "link_label": "打开作者项目／代码 ↗"
+    "link_label": "打开作者项目／代码 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-E",
+        "role": "基础理论",
+        "reason": "低成本文字反思基线；证明利用反馈改进后续尝试，不等于权重更新。",
+        "primary": "XR-E"
+      }
+    ]
   },
   {
     "id": "P013",
@@ -575,7 +583,27 @@
       "AIGC-C"
     ],
     "public_url": "https://blackswan.cs.ubc.ca",
-    "link_label": "打开作者项目／代码 ↗"
+    "link_label": "打开作者项目／代码 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-S",
+        "role": "基础理论",
+        "reason": "可撤销推理的任务桥梁：后来的观察会改变早先事件判断。",
+        "primary": "跨方向基础：XR-S / AIGC-B / AIGC-C"
+      },
+      {
+        "direction": "AIGC-B",
+        "role": "基础理论",
+        "reason": "后证据推翻旧解释的直接推理任务；尚未连接生成记忆的执行干预。",
+        "primary": "跨方向基础：XR-S / AIGC-B / AIGC-C"
+      },
+      {
+        "direction": "AIGC-C",
+        "role": "基础理论",
+        "reason": "Black Swan 用隐藏与揭示片段分析判断如何变化。 [推断] 理解模型答题错误可能是读出失败，不能直接归因于生成泄露或留白成功。",
+        "primary": "跨方向基础：XR-S / AIGC-B / AIGC-C"
+      }
+    ]
   },
   {
     "id": "P022",
@@ -606,7 +634,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2507.17131v2",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-E",
+        "role": "可借用组件",
+        "reason": "ARIA 识别知识缺口、询问专家并维护带时间戳的知识库。 [推断] 主要为外部知识库；模拟专家实验不能当真实教学人数。",
+        "primary": "XR-E"
+      }
+    ]
   },
   {
     "id": "P023",
@@ -668,7 +704,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2512.24695v1",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-E",
+        "role": "可借用组件",
+        "reason": "Nested Learning 将不同更新频率的记忆和优化过程统一讨论。 [推断] 作者未普遍解决灾难性遗忘；概念重述不能替代教学纵向实验。",
+        "primary": "XR-E"
+      }
+    ]
   },
   {
     "id": "P027",
@@ -873,7 +917,15 @@
       "AIGC-D"
     ],
     "public_url": "https://arxiv.org/abs/2603.28767v2",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "AIGC-D",
+        "role": "可借用组件",
+        "reason": "Gen-Searcher 为知识密集图像生成学习多步文字与参考图搜索。 [推断] 原任务为图像；额外搜索收益不能代替视频时序控制验证。",
+        "primary": "AIGC-D"
+      }
+    ]
   },
   {
     "id": "P034",
@@ -963,7 +1015,21 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://doi.org/10.1145/3772318.3791514",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-C",
+        "role": "可借用组件",
+        "reason": "任务抽象支持教师审核和修订概念、情境、学习目标及界面。 [推断] 创作贡献已有证据；学生机制理解与无辅助迁移另需教学实验。",
+        "primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "XR-E",
+        "role": "可借用组件",
+        "reason": "SimStep 以教学抽象支持教师逐步检查与纠正模拟。 [推断] 创作实验不能替代长期学生学习增益。",
+        "primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "P037",
@@ -1492,13 +1558,23 @@
     "results": "展示Lookout自动提取会议日期、创建待确认预约、低置信度询问和时机建模；文中主要证据是系统与概率/效用曲线，未提供现代意义的大样本随机对照效率提升结果。",
     "source_evidence": "PDF pp.1–2：12条原则；pp.2–7：Lookout实现、概率/效用及注意力模型；pp.7–8：总结。",
     "evidence_note": "本轮重新分类；摘要、方法及边界沿用既有笔记，附本地原文供复核",
-    "application_targets": [],
+    "application_targets": [
+      "XR-L"
+    ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://www.microsoft.com/en-us/research/publication/principles-mixed-initiative-user-interfaces/",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-L",
+        "role": "基础理论",
+        "reason": "混合主动权原则：把交互方式、效用和控制分配一起考虑，而不是简单列为 when 方法。",
+        "primary": "XR-L"
+      }
+    ]
   },
   {
     "id": "P056",
@@ -1616,7 +1692,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://doi.org/10.1145/3746059.3747748",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-L",
+        "role": "可借用组件",
+        "reason": "Sensible Agent 根据情境调整主动 AR 帮助的内容与模态。 [推断] 未精确求解介入时机，也没有长期用户偏好闭环。",
+        "primary": "XR-L"
+      }
+    ]
   },
   {
     "id": "P060",
@@ -1676,7 +1760,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://doi.org/10.1145/3772318.3790938",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-S",
+        "role": "可借用组件",
+        "reason": "AgentHands 以与语音同步、空间对齐的手势讲解对象与动作。 [推断] 依赖预扫描对象注册和有限手势；动态重定位需增加机制。",
+        "primary": "XR-S"
+      }
+    ]
   },
   {
     "id": "P062",
@@ -1923,7 +2015,21 @@
       "AIGC-D"
     ],
     "public_url": "https://arxiv.org/abs/2206.09203v2",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-C",
+        "role": "可借用组件",
+        "reason": "可干预环境允许根据反馈更新机制假设，并对照符号与视觉观测。 [推断] 简化机制与动作空间限制结论范围；后果视频生成需另建接口。",
+        "primary": "不确定：XR-C / AIGC-D（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-D",
+        "role": "可借用组件",
+        "reason": "IVRE 在有限交互预算内通过新实验更新对隐藏规则的判断。 [推断] OR 规则及简化动作限制外推；不包含开放创作或真实用户打扰。",
+        "primary": "不确定：XR-C / AIGC-D（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "P064",
@@ -2164,7 +2270,21 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Ashutosh_ExpertAF_Expert_Actionable_Feedback_from_Video_CVPR_2025_paper.pdf",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-C",
+        "role": "可借用组件",
+        "reason": "技能反馈结合评论、专家视频检索与修正姿态生成。 [推断] 专家视频来自检索，生成对象为姿态；可见反事实视频和长期学习收益需另验证。",
+        "primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "XR-E",
+        "role": "可借用组件",
+        "reason": "ExpertAF 把技能视频与姿态转成专家式反馈。 [推断] 偏好与离线反馈质量不能等同于长期技能改善。",
+        "primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "P147",
@@ -2259,7 +2379,21 @@
       "AIGC-D"
     ],
     "public_url": "https://openreview.net/forum?id=SIE6VFps9x",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-L",
+        "role": "可借用组件",
+        "reason": "比较不同对话行动的后续收益，以偏好优化学习多轮澄清。",
+        "primary": "不确定：XR-L / AIGC-D（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-D",
+        "role": "可借用组件",
+        "reason": "用对话行动及后续轨迹收益训练多轮澄清。",
+        "primary": "不确定：XR-L / AIGC-D（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "P150",
@@ -2825,7 +2959,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2412.06438v2",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-L",
+        "role": "可借用组件",
+        "reason": "探索研究已用基础模型提出实验，并在三维条件下由人执行动作取证。 [推断] 现有简单机制和有限试验，未优化 XR 教学的注意力与动作可接受性。",
+        "primary": "XR-L"
+      }
+    ]
   },
   {
     "id": "P080",
@@ -2906,7 +3048,9 @@
     "results": "在RVEBench及另一反事实视频基准报告优于比较方法；补充CausalVQA debug评估中Qwen2.5VL+CWMDT反事实准确率70.0%，比基础模型+17.5个百分点，anticipation62.5%、hypothetical72.5%。这些是小型debug集结果。",
     "source_evidence": "§3 三阶段框架；§4 编辑实验；Appendix A CausalVQA debug",
     "evidence_note": "公开原文方法、实验与边界复核；未独立复现。分析前提与未来建议不冒充原文定理。 核对：2026-10-14。",
-    "application_targets": [],
+    "application_targets": [
+      "XR-C"
+    ],
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
     "other_paper_assessments": [],
@@ -2924,7 +3068,21 @@
       "location": "§3 三阶段框架；§4 编辑实验；Appendix A CausalVQA debug",
       "url": "https://arxiv.org/abs/2511.17481v1",
       "checked": "2026-10-14"
-    }
+    },
+    "direction_roles": [
+      {
+        "direction": "XR-C",
+        "role": "直接方法",
+        "reason": "结构化状态与反事实生成接口；不自动等于真实机制识别。",
+        "primary": "AIGC-A"
+      },
+      {
+        "direction": "AIGC-A",
+        "role": "直接方法",
+        "reason": "结构化状态与反事实生成接口；不自动等于真实机制识别。",
+        "primary": "AIGC-A"
+      }
+    ]
   },
   {
     "id": "P081",
@@ -3220,7 +3378,21 @@
       "AIGC-D"
     ],
     "public_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/1f49b7fbd7c7afc52c1db0d4ed1a338d-Abstract-Conference.html",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-L",
+        "role": "可借用组件",
+        "reason": "借用缺失信息表示与提问组织；本方向固定触发，不接收 when 作为主要贡献。",
+        "primary": "XR-L"
+      },
+      {
+        "direction": "AIGC-D",
+        "role": "可借用组件",
+        "reason": "借用缺失信息表示与提问组织；本方向固定触发，不接收 when 作为主要贡献。",
+        "primary": "XR-L"
+      }
+    ]
   },
   {
     "id": "P091",
@@ -3427,7 +3599,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2605.12978v1",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-E",
+        "role": "可借用组件",
+        "reason": "证明某些持续文字记忆更新会污染有用内容；应保留原始 episode 并检查旧任务。",
+        "primary": "XR-E"
+      }
+    ]
   },
   {
     "id": "P098",
@@ -3574,7 +3754,15 @@
       "AIGC-C"
     ],
     "public_url": "https://doi.org/10.1109/TPAMI.2026.3729756",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "AIGC-C",
+        "role": "可借用组件",
+        "reason": "Long-form Movie Prior 学习剧本、角色、布局与关键点组成的稀疏分镜。 [推断] 主要输出分镜而非连续像素视频；未建立观众揭示时间控制。",
+        "primary": "AIGC-C"
+      }
+    ]
   },
   {
     "id": "P103",
@@ -4452,7 +4640,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2410.08464",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-L",
+        "role": "可借用组件",
+        "reason": "ARCap 以 AR 和触觉反馈帮助用户采集可被机器人执行的示范。 [推断] 目标是机器人数据，不是已证实的新手教学或视频生成数据选择。",
+        "primary": "XR-L"
+      }
+    ]
   },
   {
     "id": "P257",
@@ -4765,13 +4961,31 @@
     "results": "本轮未独立核对定量表格；不依据摘要中的领先表述填写未经核查的提升数值。",
     "source_evidence": "依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。",
     "evidence_note": "本轮重新分类；摘要、方法及边界沿用既有笔记，附本地原文供复核",
-    "application_targets": [],
+    "application_targets": [
+      "XR-L"
+    ],
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
     "other_paper_assessments": [],
-    "aigc_targets": [],
+    "aigc_targets": [
+      "AIGC-D"
+    ],
     "public_url": "https://arxiv.org/abs/2506.21458",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-L",
+        "role": "边界参照",
+        "reason": "从有限视图建立空间表示；不是向用户澄清或自行获取新观测。",
+        "primary": "AIGC-D"
+      },
+      {
+        "direction": "AIGC-D",
+        "role": "可借用组件",
+        "reason": "从有限视图建立空间表示；不是向用户澄清或自行获取新观测。",
+        "primary": "AIGC-D"
+      }
+    ]
   },
   {
     "id": "P308",
@@ -4974,9 +5188,25 @@
     "shared_methods": [],
     "transfer_scope": "可跨 HCI／XR tutorial／AIGC 复用；须匹配输入输出、数据、反馈和优化条件，并非任意算法可以直接套用。",
     "other_paper_assessments": [],
-    "aigc_targets": [],
+    "aigc_targets": [
+      "AIGC-B"
+    ],
     "public_url": "https://arxiv.org/abs/2602.07055",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-S",
+        "role": "可借用组件",
+        "reason": "[推断] 沿用原方向的模块关系；不是完整解决当前问题的直接证据。",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-B",
+        "role": "可借用组件",
+        "reason": "[推断] 沿用原方向的模块关系；不是完整解决当前问题的直接证据。",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "P347",
@@ -5181,7 +5411,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2605.18746",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-L",
+        "role": "可借用组件",
+        "reason": "ESI-Bench 对照主动探索、被动观察及三维辅助的空间推理。 [推断] 基准面向具身空间理解，不能代替教程生成或人类学习评价。",
+        "primary": "XR-L"
+      }
+    ]
   },
   {
     "id": "P376",
@@ -5676,7 +5914,15 @@
       "AIGC-C"
     ],
     "public_url": "https://arxiv.org/abs/2402.03162",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "AIGC-C",
+        "role": "可借用组件",
+        "reason": "Direct-a-Video 研究用户指定的相机与对象运动控制。 [推断] 依据现有摘要级记录；未核实其在严格可见性或信息泄露任务中的表现。",
+        "primary": "AIGC-C"
+      }
+    ]
   },
   {
     "id": "P222",
@@ -7725,7 +7971,15 @@
       "AIGC-C"
     ],
     "public_url": "https://arxiv.org/abs/2411.15262",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "AIGC-C",
+        "role": "可借用组件",
+        "reason": "MovieBench 提供层级电影数据与长视频研究基础。 [推断] 现有库内证据为摘要级；不能把连续性得分当作揭示控制得分。",
+        "primary": "AIGC-C"
+      }
+    ]
   },
   {
     "id": "P260",
@@ -8818,7 +9072,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2606.03951",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-E",
+        "role": "可借用组件",
+        "reason": "Demo2Tutorial 从经验日志形成层级任务图与图文教程，评估人和 agent 使用。 [推断] 主要为软件教程，跨物体机制和 XR 空间教学需新证据。",
+        "primary": "XR-E"
+      }
+    ]
   },
   {
     "id": "P380",
@@ -8911,7 +9173,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2606.31392",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-E",
+        "role": "可借用组件",
+        "reason": "ReGRPO 通过错误类型、证据和修复计划训练工具 agent，并计入反思成本。 [推断] 原任务是工具使用，不能直接将反思奖励变成学员学习收益。",
+        "primary": "XR-E"
+      }
+    ]
   },
   {
     "id": "P401",
@@ -10410,7 +10680,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2606.32026",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-S",
+        "role": "可借用组件",
+        "reason": "AdaJEPA 在新转移出现后更新部分编码器及预测器参数，再规划。 [推断] 潜空间控制结果不能直接说明可见视频已正确。",
+        "primary": "XR-S"
+      }
+    ]
   },
   {
     "id": "P395",
@@ -11137,9 +11415,25 @@
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
     "other_paper_assessments": [],
-    "aigc_targets": [],
+    "aigc_targets": [
+      "AIGC-A"
+    ],
     "public_url": "https://arxiv.org/abs/2506.14404v2",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-C",
+        "role": "可借用组件",
+        "reason": "给定属性因果图指导黑盒提示优化，检查目标改变、保持与时序质量。 [推断] 主要是人脸属性及先验图；不能外推为未知真实操作机制的识别。",
+        "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-A",
+        "role": "可借用组件",
+        "reason": "将因果条件和属性保持推进到视频。",
+        "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "P126",
@@ -11344,7 +11638,15 @@
       "AIGC-C"
     ],
     "public_url": "https://arxiv.org/abs/2512.07802v1",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "AIGC-C",
+        "role": "可借用组件",
+        "reason": "跨镜头记忆与连贯执行；没有自动建立 revelation 任务。",
+        "primary": "AIGC-C"
+      }
+    ]
   },
   {
     "id": "P135",
@@ -11390,9 +11692,25 @@
         "boundary": "这是综述对这类记忆设计的适用条件分析，不是该综述独立测得的 WorldMem 失败率。"
       }
     ],
-    "aigc_targets": [],
+    "aigc_targets": [
+      "AIGC-B"
+    ],
     "public_url": "https://arxiv.org/abs/2504.12369",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-S",
+        "role": "可借用组件",
+        "reason": "从短上下文扩展到带状态的历史记忆检索。",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-B",
+        "role": "可借用组件",
+        "reason": "更长历史与状态化检索支持持续生成。",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "P136",
@@ -11550,7 +11868,21 @@
       "AIGC-D"
     ],
     "public_url": "https://arxiv.org/abs/2606.26907v2",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-L",
+        "role": "可借用组件",
+        "reason": "context gap 与主动信息获取近邻；控制信号最少充分性仍需执行检验。",
+        "primary": "AIGC-D"
+      },
+      {
+        "direction": "AIGC-D",
+        "role": "可借用组件",
+        "reason": "context gap 与主动信息获取近邻；控制信号最少充分性仍需执行检验。",
+        "primary": "AIGC-D"
+      }
+    ]
   },
   {
     "id": "VG31",
@@ -11597,7 +11929,27 @@
       "location": "v2 方法 Joint-GRPO 两阶段与算法；实验／奖励消融",
       "url": "https://arxiv.org/html/2511.16669v2",
       "checked": "2026-10-14"
-    }
+    },
+    "direction_roles": [
+      {
+        "direction": "XR-C",
+        "role": "可借用组件",
+        "reason": "视频作为下一事件回答，借用推理—生成训练；不是干预后果或教学迁移的直接证据。",
+        "primary": "XR-C"
+      },
+      {
+        "direction": "AIGC-A",
+        "role": "可借用组件",
+        "reason": "视频作为下一事件回答，借用推理—生成训练；不是干预后果或教学迁移的直接证据。",
+        "primary": "XR-C"
+      },
+      {
+        "direction": "AIGC-D",
+        "role": "可借用组件",
+        "reason": "视频作为下一事件回答，借用推理—生成训练；不是干预后果或教学迁移的直接证据。",
+        "primary": "XR-C"
+      }
+    ]
   },
   {
     "id": "VG13",
@@ -11640,7 +11992,21 @@
       "location": "§3 方法与配对数据；§4 实验；局限与真实视频失败案例",
       "url": "https://arxiv.org/abs/2604.02296v1",
       "checked": "2026-10-14"
-    }
+    },
+    "direction_roles": [
+      {
+        "direction": "XR-C",
+        "role": "直接方法",
+        "reason": "对象删除和下游交互是直接视频先例；XR-C 使用它仍需教学实验。",
+        "primary": "AIGC-A"
+      },
+      {
+        "direction": "AIGC-A",
+        "role": "直接方法",
+        "reason": "对象删除和下游交互是直接视频先例；XR-C 使用它仍需教学实验。",
+        "primary": "AIGC-A"
+      }
+    ]
   },
   {
     "id": "VG46",
@@ -11670,7 +12036,8 @@
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
     "other_paper_assessments": [],
     "aigc_targets": [
-      "AIGC-A"
+      "AIGC-A",
+      "AIGC-D"
     ],
     "public_url": "https://arxiv.org/abs/2606.24225v1",
     "link_label": "打开论文公开页面 ↗",
@@ -11683,7 +12050,27 @@
       "location": "方法：四路几何条件与配对数据；实验／消融；局限",
       "url": "https://arxiv.org/abs/2606.24225v1",
       "checked": "2026-10-14"
-    }
+    },
+    "direction_roles": [
+      {
+        "direction": "XR-C",
+        "role": "可借用组件",
+        "reason": "给定几何的选择性执行；不能归为自主未知机制推断。",
+        "primary": "AIGC-A"
+      },
+      {
+        "direction": "AIGC-A",
+        "role": "可借用组件",
+        "reason": "给定几何的选择性执行；不能归为自主未知机制推断。",
+        "primary": "AIGC-A"
+      },
+      {
+        "direction": "AIGC-D",
+        "role": "可借用组件",
+        "reason": "给定几何的选择性执行；不能归为自主未知机制推断。",
+        "primary": "AIGC-A"
+      }
+    ]
   },
   {
     "id": "VG16",
@@ -11728,7 +12115,21 @@
       "location": "基准构造与 APEO；九模型评测；Discussion／Limitations",
       "url": "https://arxiv.org/html/2605.27589v1",
       "checked": "2026-10-14"
-    }
+    },
+    "direction_roles": [
+      {
+        "direction": "XR-C",
+        "role": "可借用组件",
+        "reason": "单条件变化的提示对同时检查后果差异与共享环境，补足逐视频评测。 [推断] 贡献是评测；XR 操作真值与教学迁移需新增数据和实验。",
+        "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-A",
+        "role": "可借用组件",
+        "reason": "成对物理变量评测可借鉴；不要把语义一致的成对提示当精确世界反事实。",
+        "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "VG30",
@@ -11763,7 +12164,21 @@
       "AIGC-B"
     ],
     "public_url": "https://arxiv.org/abs/2609.28466v1",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-S",
+        "role": "可借用组件",
+        "reason": "记忆综述将写入、读取、更新和评测分开，并强调状态应保持可信。 [推断] 提供框架，不是新方法的效果证据。",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-B",
+        "role": "可借用组件",
+        "reason": "综述区分记忆读写、更新、管理和不同记忆载体。 [推断] 综述的开放议题不能证明新颖性或方法有效。",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "VG63",
@@ -11798,7 +12213,21 @@
       "AIGC-B"
     ],
     "public_url": "https://arxiv.org/abs/2512.04519v1",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-S",
+        "role": "可借用组件",
+        "reason": "VideoSSM 用局部窗口和可注入、可遗忘的全局 SSM 状态保存历史。 [推断] 已有遗忘门不等于可定位错误信念并撤销其下游依赖。",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-B",
+        "role": "可借用组件",
+        "reason": "VideoSSM 用局部窗口与可更新的全局 SSM 记忆生成长视频。 [推断] 存在遗忘门不等于知道应撤回哪项依据及依赖。",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "VG15",
@@ -11831,7 +12260,21 @@
       "AIGC-B"
     ],
     "public_url": "https://arxiv.org/abs/2605.06924v1",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-S",
+        "role": "可借用组件",
+        "reason": "A²RD 已有检索—生成—修订—更新循环与分层自修正。 [推断] 自修正已有先例；未由此建立外来反证触发的特定状态撤销。",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-B",
+        "role": "可借用组件",
+        "reason": "A²RD 用多模态记忆与逐段生成、自修正、更新维持长视频一致性。 [推断] 该闭环本身不建立外来反证下的特定信念撤回。",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "VG60",
@@ -11864,7 +12307,21 @@
       "AIGC-D"
     ],
     "public_url": "https://arxiv.org/abs/2603.23864v1",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-L",
+        "role": "可借用组件",
+        "reason": "S³ / AMF-VLM 在流式空间任务中按时刻记忆并主动移动、旋转或扫描取证。 [推断] 主要输出答案，需新增“取证→视频条件→生成执行”链。",
+        "primary": "不确定：XR-L / AIGC-D（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-D",
+        "role": "可借用组件",
+        "reason": "S³ / AMF-VLM 研究流式空间记忆和按需取证。 [推断] 原任务主要输出答案，还需独立测获取信号是否进入视频。",
+        "primary": "不确定：XR-L / AIGC-D（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "VG18",
@@ -11982,7 +12439,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2608.20699v1",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-C",
+        "role": "可借用组件",
+        "reason": "URDF 结构、动作规划与渲染反馈支持受关节约束的可执行动画。 [推断] 依赖结构质量；运动学成果不自动覆盖完整受力物理或未知机制发现。",
+        "primary": "XR-C"
+      }
+    ]
   },
   {
     "id": "VG37",
@@ -12007,8 +12472,8 @@
     "source_evidence": "PDF p.1 方法 / lightweight LoRA module；PDF p.11 原文局限 / perception granularity",
     "evidence_note": "沿用原速览已有逐页证据；本轮重组支撑关系，未重新全文核验全部结论",
     "application_targets": [
-      "XR-S",
-      "XR-E"
+      "XR-E",
+      "XR-S"
     ],
     "shared_methods": [
       "F5"
@@ -12017,7 +12482,21 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2606.02564v3",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-S",
+        "role": "可借用组件",
+        "reason": "VLM-as-Teacher 在测试时优化视频 LoRA，使生成轨迹响应规则反馈。 [推断] 每个实例优化不证明跨任务学习；教师可能漏看并带来质量取舍。",
+        "primary": "不确定：XR-S / XR-E（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "XR-E",
+        "role": "可借用组件",
+        "reason": "VLM-as-Teacher 提供实例级 LoRA 修复。 [推断] 测试时优化本身不证明保留并迁移到下一用户。",
+        "primary": "不确定：XR-S / XR-E（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "VG50",
@@ -12050,7 +12529,21 @@
       "AIGC-B"
     ],
     "public_url": "https://arxiv.org/abs/2608.03974v1",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-S",
+        "role": "可借用组件",
+        "reason": "JoyAI 支持无未来帧输入的分块自回归视频编辑。 [推断] 实时编辑不是实时信念修正；特定硬件速度不能直接当头显端延迟。",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-B",
+        "role": "可借用组件",
+        "reason": "JoyAI 以无未来帧的分块自回归方式编辑视频。 [推断] 流式编辑性能不等于证据驱动的记忆修订。",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "VG02",
@@ -12075,8 +12568,8 @@
     "source_evidence": "PDF p.1 任务与机制 / automatic curriculum；PDF p.10 原文局限 / self-verification module may also fail",
     "evidence_note": "沿用原速览已有逐页证据；本轮重组支撑关系，未重新全文核验全部结论",
     "application_targets": [
-      "XR-L",
-      "XR-E"
+      "XR-E",
+      "XR-L"
     ],
     "shared_methods": [
       "F1"
@@ -12085,7 +12578,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2305.16291v2",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-E",
+        "role": "基础理论",
+        "reason": "可检索技能积累与自动课程基线；跨任务复用比单次修复更接近本方向。",
+        "primary": "XR-E"
+      }
+    ]
   },
   {
     "id": "VG03",
@@ -12160,7 +12661,21 @@
       "location": "v6 层次状态对比学习；程序理解实验；Appendix A.4 文本质量",
       "url": "https://arxiv.org/html/2503.21055v6",
       "checked": "2026-10-14"
-    }
+    },
+    "direction_roles": [
+      {
+        "direction": "XR-C",
+        "role": "可借用组件",
+        "reason": "用状态变化、漏步与错序反事实文本训练程序视频表示。",
+        "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-A",
+        "role": "可借用组件",
+        "reason": "状态监督改善程序相关理解／表征任务。附录进行人工与模型质量核查，支持其数据设计具有实用性。 [推断] 【原文 Appendix A.4】反事实文本偶有低概率情形，需要权衡创造性与现实性。【任务范围】理解提升不直接建立生成收益或因果可识别性。",
+        "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "VG05",
@@ -12312,7 +12827,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2601.04778v2",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-C",
+        "role": "可借用组件",
+        "reason": "合成动作／时序硬负例，并以 MixDPO 的文本和视觉偏好训练改善理解。 [推断] 需跨生成器检查合成伪迹；理解提升不能直接记作生成器的因果能力。",
+        "primary": "XR-C"
+      }
+    ]
   },
   {
     "id": "VG10",
@@ -12341,9 +12864,25 @@
     "shared_methods": [],
     "transfer_scope": "具体应用与跨领域迁移分别标注；研究方向支持关系不改变原论文的任务边界。",
     "other_paper_assessments": [],
-    "aigc_targets": [],
+    "aigc_targets": [
+      "AIGC-A"
+    ],
     "public_url": "https://arxiv.org/abs/2603.05449v1",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-C",
+        "role": "可借用组件",
+        "reason": "展示模拟到快速视频生成的路线；适合作为已知机制条件下的执行基线。",
+        "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-A",
+        "role": "可借用组件",
+        "reason": "快速动作条件生成可以降低采样成本，但不解决隐藏机制真值。",
+        "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "VG11",
@@ -12397,7 +12936,21 @@
       "location": "方法 QA／Semantic Gradients／Global Selection；实验；Appendix A",
       "url": "https://arxiv.org/abs/2603.12310v1",
       "checked": "2026-10-14"
-    }
+    },
+    "direction_roles": [
+      {
+        "direction": "XR-S",
+        "role": "可借用组件",
+        "reason": "VQQA 用视觉问题及批评迭代优化黑盒视频生成。 [推断] 评判会幻觉，串行生成有成本，不能无条件把批评当真值。",
+        "primary": "不确定：XR-S / AIGC-C（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-C",
+        "role": "可借用组件",
+        "reason": "VQQA 通过视觉问题及批评改进视频。 [推断] VLM 会漏看或幻觉；评价器不应获得当前前缀以外的真值答案。",
+        "primary": "不确定：XR-S / AIGC-C（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "VG12",
@@ -12457,7 +13010,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2608.29621v1",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-E",
+        "role": "可借用组件",
+        "reason": "生成工作流改善与复用近邻；学习者、惯例与边界是新增问题。",
+        "primary": "XR-E"
+      }
+    ]
   },
   {
     "id": "VG20",
@@ -12492,7 +13053,21 @@
       "AIGC-D"
     ],
     "public_url": "https://arxiv.org/abs/2609.24997v2",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-L",
+        "role": "可借用组件",
+        "reason": "视频生成工具与 agent 执行接口；不是最小充分控制的完整证据。",
+        "primary": "AIGC-D"
+      },
+      {
+        "direction": "AIGC-D",
+        "role": "可借用组件",
+        "reason": "视频生成工具与 agent 执行接口；不是最小充分控制的完整证据。",
+        "primary": "AIGC-D"
+      }
+    ]
   },
   {
     "id": "VG21",
@@ -12556,7 +13131,21 @@
       "AIGC-B"
     ],
     "public_url": "https://arxiv.org/abs/2609.34309v1",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-S",
+        "role": "可借用组件",
+        "reason": "MaLiang 将程序、历史和渲染检查绑定同一修订版本，并支持恢复。 [推断] 原系统以可执行视觉程序为核心，扩散模型的局部记忆更新仍需另做。",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "direction": "AIGC-B",
+        "role": "可借用组件",
+        "reason": "MaLiang 将视觉程序、历史和验证绑定同一修订版本。 [推断] 程序回滚不能直接迁移为扩散模型内的选择性遗忘。",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      }
+    ]
   },
   {
     "id": "VG23",
@@ -13449,7 +14038,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://arxiv.org/abs/2605.20342v2",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-L",
+        "role": "可借用组件",
+        "reason": "ParaVT 用并行视频工具调用和 PARA-GRPO 研究帧预算、格式奖励及工具捷径。 [推断] 视频理解工具证据不等于生成控制；PARA-GRPO 也不是独立的通用 GRPO 原始论文。",
+        "primary": "XR-L"
+      }
+    ]
   },
   {
     "id": "VG59",
@@ -13511,7 +14108,15 @@
     "other_paper_assessments": [],
     "aigc_targets": [],
     "public_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/3755a02b1035fbadd5f93a022170e46f-Abstract-Conference.html",
-    "link_label": "打开论文公开页面 ↗"
+    "link_label": "打开论文公开页面 ↗",
+    "direction_roles": [
+      {
+        "direction": "XR-L",
+        "role": "可借用组件",
+        "reason": "RFT-Inf 估计样本对最终强化微调奖励的影响。 [推断] 影响分数对当前奖励有利不保证真实教学或分布外增益。",
+        "primary": "XR-L"
+      }
+    ]
   },
   {
     "id": "VG62",

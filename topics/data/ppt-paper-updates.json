@@ -1,0 +1,43 @@
+{
+  "papers": {
+    "LAB": {"title":"LabInstruct: Benchmarking Situated Instructional Video Generation for Lab Procedures","year":2026,"venue":"arXiv 2026 · 预印本","source":"https://arxiv.org/abs/2610.14020","locator":"摘要、§3–4、Appendix A／C","method":"用真实实验步骤及对象、动作、接触和状态变化标注评测教程视频。","solved":"建立程序正确性评测；204 项任务、5 个学科、8 个生成模型。","remaining":"未证明学员学习迁移；短片程序基准不是任意设备或交互闭环。","tradeoff":"真实程序标注成本高；视觉可观察任务的结论有范围限制。","author_limit":"数据来源不均、任务较短且经过筛选。","details":{"Model":"评测 Wan 2.2 I2V A14B、LTX 2.3、Cosmos3 Nano／Super、LingBot Video、MiniMax H3、Seedance 2.0、Wan 3.0","Backbone／生成方式":"多生成器评测，无统一 backbone；闭源结构不确定","Condition":"text＋初始 image","训练／适应 dataset":"未提出基于此基准的 finetune；不是训练集","评测 dataset":"LabInstruct；来源含 Bilibili、YouTube、FineBio、ExpVid","Finetune 资源":"不适用：本工作做基准评测；生成推理开销不能算训练","任务／贡献／类型 [推断]":"文本或图像生成视频／评测（次：数据）／基准","目标性质／范式 [推断]":"指令遵循、状态一致／离线整段生成","输入 → 输出／Keep":"初始工作台图像＋指令 → 程序视频；保持设备、对象及程序约束","判断对错／证据":"结构化 checklist，定量模型比较与人工评估；人工评估人数本轮未核实","训练信号／条件注入":"无新训练信号；各生成器原生 I2V 接口"}},
+    "DISCOVER": {"title":"DiscoverLLM: From Executing Intents to Discovering Them","year":2026,"venue":"ICML 2026 · 作者仓库确认录用","source":"https://arxiv.org/abs/2602.03429","extra_source":"https://github.com/tsook/discoverllm","locator":"§3–4、§4.3、Appendix B；作者 README","method":"用会随交互展开的 intent tree 模拟用户，优化多轮协作中的意图发现。","solved":"在写作与 SVG 任务中评估共同形成意图，含 75 人用户研究。","remaining":"不是用户一开始就有完整 GT 的恢复问题；也未验证跨任务 XR 协作惯例。","tradeoff":"依赖 simulator 和 judge 的目标；模拟意图形成与真人变化可能不同。","author_limit":"用户模拟器是受控近似，不能视为用户心智真值。","details":{"Model":"Llama-3.1-8B-Instruct；Qwen3-8B","Backbone／生成方式":"自回归文本 Transformer；非视频生成器","Condition":"text：任务与多轮对话","训练／适应 dataset":"WritingPrompts_preferences、技术写作文章、SVG 来源构造 intent trees；各域 500 个训练 artifacts、100 个评测 artifacts","训练信号／条件注入":"LoRA；SFT／DPO，Qwen 另测 GRPO；对话进入文本 context","Finetune 资源":"所读训练段落未核实 GPU 型号、卡数与时长；不能按 8B 或 LoRA 推定成本","任务／贡献／类型 [推断]":"其他：协作意图形成／训练信号（次：数据）／方法","目标性质／范式 [推断]":"协作与意图满足（原 taxonomy 外补充）／非视频，不适用视频范式","输入 → 输出／Keep":"不完整目标＋互动 → 逐步形成的意图与作品；不是固定隐藏 GT","判断对错／证据":"模拟意图发现／满足指标、模型比较、75 人 user study"}},
+    "CODEVIDEO": {"title":"Code Video Model","year":2026,"venue":"作者技术报告／项目 · 正式 venue 未核实","source":"https://code-video-model.github.io/","extra_source":"https://github.com/code-video-model/CodeVideoModel","locator":"作者项目摘要、pipeline、README；未取得技术报告全文","method":"生成可执行 previs 程序，渲染几何／动作代理视频，再引导冻结的视频生成器。","solved":"提供结构化可执行控制到视觉生成的接口。","remaining":"程序控制执行不能证明自动识别真实环境机制或在线纠错。","tradeoff":"需要可渲染代理和程序有效性；代理表达能力限制可控内容。","author_limit":"本轮只核对项目页与 README，不以演示推定定量泛化能力。","details":{"Model":"项目实现使用 MiniMax H3；程序生成示例使用 GPT-6","Backbone／生成方式":"冻结视频模型＋previs 条件；闭源 backbone 未核实","Condition":"text＋reference image＋程序渲染 proxy video／scene","训练／适应 dataset":"作者说明无需额外训练；底座预训练数据未核实","Finetune 资源":"无新增视频模型训练；LLM／视频推理成本未核实","任务／贡献／类型 [推断]":"条件控制生成／推理时方法（次：表示）／技术报告，方法参考","目标性质／范式 [推断]":"指令遵循、几何一致／离线整段生成","输入 → 输出／Keep":"描述＋参考 → 可执行场景程序与视频；保持约束的正式保证未核实","判断对错／证据":"项目演示与说明；定量 benchmark、消融及 user study 本轮未核实","训练信号／条件注入":"无新增训练；代理视频在采样早期引导生成"}},
+    "STREAMCODE": {"title":"Streaming Code World Model","year":2026,"venue":"工程仓库 · 不计作已发表论文","source":"https://github.com/TingtingLiao/streaming-code-world-model","locator":"README：data、training、performance、limitations","method":"基于 CARLA 训练数据、diffusion forcing／DMD self-forcing，使用滑动 KV cache 生成交互片段。","solved":"提供受动作控制的流式世界模型工程实现。","remaining":"作者报告尚未实时；没有建立外来反证下的信念与记忆修订。","tradeoff":"公开推理配置需要大显存；小规模 CARLA 检验不能直接外推真实 XR。","author_limit":"约 0.71 秒输出片段需约 5.1 秒计算（H200）；仅小规模 held-out 设置。","details":{"Model":"仓库提供的 streaming model；底座版本本轮未核实","Backbone／生成方式":"因果分块、6-chunk KV cache；4 步采样；确切 backbone 待核","Condition":"动作＋历史片段／场景观测","训练／适应 dataset":"README：342 个 CARLA clips，约 3.7 小时","评测 dataset":"4 个留出 CARLA clips，单 seed；不代表广泛泛化","Finetune 资源":"训练 GPU 卡数／时长本轮未核实。H200 与约 123GB bf16／108GB FP8 是推理配置，不填成 finetune 成本","任务／贡献／类型 [推断]":"动作条件的预测与交互世界模型／架构与生成范式／工程实现，非论文类型","目标性质／范式 [推断]":"短时连贯、指令遵循、延迟／因果自回归或流式；少步不等于实时","输入 → 输出／Keep":"动作与历史 → 新视频 chunk；历史窗口保留不等于事实有效性验证","判断对错／证据":"README 工程测量与示例；无已核实的论文评审／user study","训练信号／条件注入":"diffusion forcing 与 DMD self-forcing；动作接口和历史 KV cache"}}
+  },
+  "roles": {
+    "VOID": ["AIGC-A","直接方法","对象删除和下游交互是直接视频先例；XR-C 使用它仍需教学实验。"],
+    "PHYS": ["AIGC-A","直接方法","物理重建—模拟—视频执行；限定刚体与原实验范围。"],
+    "CWMDT": ["AIGC-A","直接方法","结构化状态与反事实生成接口；不自动等于真实机制识别。"],
+    "GIVE": ["AIGC-A","可借用组件","给定几何的选择性执行；不能归为自主未知机制推断。"],
+    "VANS": ["XR-C","可借用组件","视频作为下一事件回答，借用推理—生成训练；不是干预后果或教学迁移的直接证据。"],
+    "MULTI": ["AIGC-A","数据／评测","游戏机制反事实真值；生成概念验证是单帧 OpenJourney，不是完整视频方法。"],
+    "CAUSAL": ["AIGC-A","边界参照","图像 SCM 干预与保持，可借方法但没有视频时间链证据。"],
+    "LAB": ["XR-C","数据／评测","直接评测程序视频正确性；未测学习者迁移。"],
+    "MIND": ["AIGC-D","可借用组件","从有限视图建立空间表示；不是向用户澄清或自行获取新观测。"],
+    "DISCOVER": ["AIGC-D","边界参照","C 类共同形成意图；不纳入 XR-L 用户已持有 GT 的直接方法。也不是跨会话协作惯例学习。"],
+    "CLARIFIER": ["XR-L","直接方法","多模态意图消歧近邻；其中引导用户换视角的环节不满足全部动作由 agent 完成。"],
+    "GPS": ["XR-L","可借用组件","借用缺失信息表示与提问组织；本方向固定触发，不接收 when 作为主要贡献。"],
+    "CLARITI": ["XR-L","可借用组件","互动澄清接口近邻；需按用户 GT 与系统实际动作边界重测。"],
+    "SKETCH": ["AIGC-D","边界参照","用户主动表达动态创作意图；不等于 agent 主动获取用户已有真值。"],
+    "SC2": ["XR-S","可借用组件","导航中的闭环状态／模型纠错；不是视频历史修订方法。"],
+    "SPLICE": ["XR-S","可借用组件","收到新动作后的在途采样修正；不负责反证发现和记忆失效判断。"],
+    "PERMA": ["AIGC-B","直接方法","编辑感知的持久生成记忆是直接近邻；外部反证与来源裁决另测。"],
+    "SPATIA": ["AIGC-B","可借用组件","空间记忆表示与更新；状态记忆不等于认识到旧判断错误。"],
+    "CODEVIDEO": ["AIGC-D","可借用组件","可执行程序提供生成控制；不是最小控制选择策略或真实世界纠错。"],
+    "STREAMCODE": ["XR-S","工程参考","流式生成执行底座，尚未实时；不计入会议论文数。"],
+    "ACE": ["XR-E","可借用组件","维护可复用 playbook，含去重和 pruning；未建立学员反馈归因与协作边界。"],
+    "MCE": ["XR-E","可借用组件","经验／context 改进机制；XR 人机协作迁移需单独验证。"],
+    "ARIFY": ["XR-E","可借用组件","教程构建与教学接口近邻；不是跨任务 self-evolution 的直接证明。"],
+    "COACH": ["XR-E","可借用组件","教学反馈与交互证据；跨任务持续学习需另测。"],
+    "SPIRAL": ["XR-E","可借用组件","反思规划与优化的视频 agent；不能把 critic 改善直接解释成人的学习收益。"],
+    "VISTA": ["XR-E","边界参照","当前任务内 test-time 搜索和修补；不算跨任务演化。"],
+    "CINE": ["XR-E","可借用组件","生成工作流改善与复用近邻；学习者、惯例与边界是新增问题。"],
+    "DGM": ["XR-E","边界参照","代码／harness 自修改属于更新机制，不是教程任务证据。"],
+    "SUSP": ["AIGC-C","直接方法","文本叙事层的悬念规划先例；视听泄漏与自由视角未因此解决。"],
+    "VIS": ["AIGC-C","可借用组件","互动故事的事实与呈现历史约束；不等于逐角色知识／揭示控制。"],
+    "ONE": ["AIGC-C","可借用组件","跨镜头记忆与连贯执行；没有自动建立 revelation 任务。"],
+    "QWEN": ["AIGC-D","可借用组件","context gap 与主动信息获取近邻；控制信号最少充分性仍需执行检验。"],
+    "VGEN": ["AIGC-D","可借用组件","视频生成工具与 agent 执行接口；不是最小充分控制的完整证据。"]
+  }
+}

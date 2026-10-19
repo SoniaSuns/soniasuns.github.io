@@ -1,96 +1,120 @@
 [
   {
     "code": "XR-C",
-    "name": "Causality-Aware Video Generation and Editing",
-    "zh": "面向 XR 操作后果的因果视频生成与编辑",
-    "question": "当用户漏做一步、换了操作顺序或对象机制改变时，能否生成正确的后果对照，并保持不受影响的对象、步骤和空间布局？",
-    "trigger": "对动作、步骤顺序或物体机制实施明确干预。",
-    "output": "基于同一历史的原流程／错误流程／纠正流程视频及可检查的状态差异。",
-    "distinction": "这里改变的是世界中的动作或机制；新观测推翻旧猜测归 XR-S，缺少事实而主动取证归 XR-L。",
+    "name": "Causality-Aware XR Tutorials",
+    "zh": "面向学习的操作后果推断与呈现",
+    "question": "学员漏步、换序或换工具后，哪些后果会发生、能否补救，以及展示哪个对照最有助于学员真正学会？",
+    "trigger": "学员的操作或对象机制改变；允许合法的替代操作，不把所有偏离演示的行为都判错。",
+    "output": "带影响范围、延迟、可恢复性和不确定性的后果分支；在当前场景中呈现教学对照。",
+    "distinction": "与 AIGC-A 共享后果生成方法，但 XR-C 的终点是人的理解与迁移。流程预测、视觉逼真、操作成功和学习收益是四种不同证据。",
     "support": [
       {
         "paper": "VG13",
-        "level": "直接技术先例",
+        "level": "直接方法",
         "established": "VOID 用配对仿真数据、quadmask 和影响范围判断，学习对象删除后的交互重生成。",
         "xr_bridge": "作为选择性后果编辑基线；分离影响范围判断与连续视觉执行，VLM 无需独自求解稠密运动。",
-        "missing": "已有删除后果传播贡献；动作替换、未知机制和多步组合泛化尚需新增证据。"
+        "missing": "已有删除后果传播贡献；动作替换、未知机制和多步组合泛化尚需新增证据。",
+        "reading_primary": "AIGC-A",
+        "classification_reason": "对象删除和下游交互是直接视频先例；XR-C 使用它仍需教学实验。"
       },
       {
         "paper": "VG46",
-        "level": "直接技术先例",
+        "level": "可借用组件",
         "established": "GIVE 用前／后几何条件与配对训练，实现对象变换及未逐像素指定的阴影、反射等效果。",
         "xr_bridge": "借用状态变化到视频执行的接口；外部条件和内部学到的次生效果应同时评价。",
-        "missing": "给定几何的执行已有贡献；未知机制推断和长链动力学属于尚待验证的扩展。"
+        "missing": "给定几何的执行已有贡献；未知机制推断和长链动力学属于尚待验证的扩展。",
+        "reading_primary": "AIGC-A",
+        "classification_reason": "给定几何的选择性执行；不能归为自主未知机制推断。"
       },
       {
         "paper": "VG31",
-        "level": "直接技术先例",
+        "level": "可借用组件",
         "established": "VANS 先固定 VDM 用生成反馈优化 VLM，再固定 VLM 优化 VDM；消融支持分阶段对齐。",
         "xr_bridge": "借鉴可训练的推理—生成接口；先稳定状态控制，再用独立状态反馈优化执行。",
-        "missing": "任务含假设性问句，但现有指标未独立建立同历史干预下的多步后果与 Keep。"
+        "missing": "任务含假设性问句，但现有指标未独立建立同历史干预下的多步后果与 Keep。",
+        "reading_primary": "XR-C",
+        "classification_reason": "视频作为下一事件回答，借用推理—生成训练；不是干预后果或教学迁移的直接证据。"
       },
       {
         "paper": "VG04",
-        "level": "程序性监督",
+        "level": "可借用组件",
         "established": "LLM 构造动作前后状态及错误结果等反事实文本，经帧／片段／视频层次训练程序表征。",
         "xr_bridge": "状态监督可迁移为结果验证器或生成器关系对齐；需对状态监督与蒸馏分别做消融。",
-        "missing": "原工作验证理解表征；反事实文本并非成对生成视频，生成迁移与因果可识别性仍需验证。"
+        "missing": "原工作验证理解表征；反事实文本并非成对生成视频，生成迁移与因果可识别性仍需验证。",
+        "reading_primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）",
+        "classification_reason": "用状态变化、漏步与错序反事实文本训练程序视频表示。"
       },
       {
         "paper": "VG43",
-        "level": "可执行机制",
+        "level": "可借用组件",
         "established": "URDF 结构、动作规划与渲染反馈支持受关节约束的可执行动画。",
         "xr_bridge": "用已知关节／联动规则构造状态控制基线，分开测试隐藏前提识别和约束执行。",
-        "missing": "依赖结构质量；运动学成果不自动覆盖完整受力物理或未知机制发现。"
+        "missing": "依赖结构质量；运动学成果不自动覆盖完整受力物理或未知机制发现。",
+        "reading_primary": "XR-C",
+        "classification_reason": "URDF 结构、动作规划与渲染反馈支持受关节约束的可执行动画。 [推断] 依赖结构质量；运动学成果不自动覆盖完整受力物理或未知机制发现。"
       },
       {
         "paper": "VG10",
-        "level": "可执行机制",
+        "level": "可借用组件",
         "established": "物理仿真把力／动作变成光流和 RGB 条件，视频模型将其转为视觉输出。",
         "xr_bridge": "提供动作条件生成与仿真基线；用真值／预测重建区分三维、动力学和视觉误差。",
-        "missing": "重建误差会传递；轨迹执行与生成器自主推断机制是不同主张。"
+        "missing": "重建误差会传递；轨迹执行与生成器自主推断机制是不同主张。",
+        "reading_primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）",
+        "classification_reason": "展示模拟到快速视频生成的路线；适合作为已知机制条件下的执行基线。"
       },
       {
         "paper": "P125",
-        "level": "直接技术先例",
+        "level": "可借用组件",
         "established": "给定属性因果图指导黑盒提示优化，检查目标改变、保持与时序质量。",
         "xr_bridge": "作为图约束提示基线，对比结构化条件和训练式接口。",
-        "missing": "主要是人脸属性及先验图；不能外推为未知真实操作机制的识别。"
+        "missing": "主要是人脸属性及先验图；不能外推为未知真实操作机制的识别。",
+        "reading_primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）",
+        "classification_reason": "给定属性因果图指导黑盒提示优化，检查目标改变、保持与时序质量。 [推断] 主要是人脸属性及先验图；不能外推为未知真实操作机制的识别。"
       },
       {
         "paper": "VG16",
-        "level": "评测基础",
+        "level": "可借用组件",
         "established": "单条件变化的提示对同时检查后果差异与共享环境，补足逐视频评测。",
         "xr_bridge": "借成对协议加入操作状态真值、无关干预和机制组合留出。",
-        "missing": "贡献是评测；XR 操作真值与教学迁移需新增数据和实验。"
+        "missing": "贡献是评测；XR 操作真值与教学迁移需新增数据和实验。",
+        "reading_primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）",
+        "classification_reason": "单条件变化的提示对同时检查后果差异与共享环境，补足逐视频评测。 [推断] 贡献是评测；XR 操作真值与教学迁移需新增数据和实验。"
       },
       {
         "paper": "VG09",
-        "level": "数据／训练方法",
+        "level": "可借用组件",
         "established": "合成动作／时序硬负例，并以 MixDPO 的文本和视觉偏好训练改善理解。",
         "xr_bridge": "先用于状态／动作验证器，再测试反馈能否改善生成。",
-        "missing": "需跨生成器检查合成伪迹；理解提升不能直接记作生成器的因果能力。"
+        "missing": "需跨生成器检查合成伪迹；理解提升不能直接记作生成器的因果能力。",
+        "reading_primary": "XR-C",
+        "classification_reason": "合成动作／时序硬负例，并以 MixDPO 的文本和视觉偏好训练改善理解。 [推断] 需跨生成器检查合成伪迹；理解提升不能直接记作生成器的因果能力。"
       },
       {
         "paper": "P143",
-        "level": "实验环境基础",
+        "level": "可借用组件",
         "established": "可干预环境允许根据反馈更新机制假设，并对照符号与视觉观测。",
         "xr_bridge": "借鉴隐藏机制、主动实验及感知／推断误差分离的任务设计。",
-        "missing": "简化机制与动作空间限制结论范围；后果视频生成需另建接口。"
+        "missing": "简化机制与动作空间限制结论范围；后果视频生成需另建接口。",
+        "reading_primary": "不确定：XR-C / AIGC-D（共享参考，未强行指定主归属）",
+        "classification_reason": "可干预环境允许根据反馈更新机制假设，并对照符号与视觉观测。 [推断] 简化机制与动作空间限制结论范围；后果视频生成需另建接口。"
       },
       {
         "paper": "P036",
-        "level": "教学／交互证据",
+        "level": "可借用组件",
         "established": "任务抽象支持教师审核和修订概念、情境、学习目标及界面。",
         "xr_bridge": "用于教师审核动作前提与反事实对照，先评价创作和识错。",
-        "missing": "创作贡献已有证据；学生机制理解与无辅助迁移另需教学实验。"
+        "missing": "创作贡献已有证据；学生机制理解与无辅助迁移另需教学实验。",
+        "reading_primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）",
+        "classification_reason": "任务抽象支持教师审核和修订概念、情境、学习目标及界面。 [推断] 创作贡献已有证据；学生机制理解与无辅助迁移另需教学实验。"
       },
       {
         "paper": "P146",
-        "level": "教学／交互证据",
+        "level": "可借用组件",
         "established": "技能反馈结合评论、专家视频检索与修正姿态生成。",
         "xr_bridge": "作为错误定位和正确动作对照基线，连接生成结果与教学反馈。",
-        "missing": "专家视频来自检索，生成对象为姿态；可见反事实视频和长期学习收益需另验证。"
+        "missing": "专家视频来自检索，生成对象为姿态；可见反事实视频和长期学习收益需另验证。",
+        "reading_primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）",
+        "classification_reason": "技能反馈结合评论、专家视频检索与修正姿态生成。 [推断] 专家视频来自检索，生成对象为姿态；可见反事实视频和长期学习收益需另验证。"
       }
     ],
     "hypotheses": [
@@ -176,93 +200,277 @@
       "focus": "对动作、步骤或机制实施干预，传播必要后果，并保留无关内容。",
       "boundary": "VOID 是视频直接先例；Causal-Adapter 和 Multiverse Mechanica 提供两篇 AI 会议方法／评测支撑，分别属于图像与游戏机制。",
       "report_url": "problem-lineage/#XR-C"
-    }
+    },
+    "summary": "学员漏步、换序或换工具后，哪些后果会发生、能否补救，以及展示哪个对照最有助于学员真正学会？ 与 AIGC-A 共享后果生成方法，但 XR-C 的终点是人的理解与迁移。流程预测、视觉逼真、操作成功和学习收益是四种不同证据。",
+    "gap": "教程会改变学员之后的动作，因此学员本身是闭环的一部分。接触、锁定、污染等关键状态也可能不可见；单一像素答案不足以表示程序正确性。",
+    "progression": [
+      "知识：程序因果骨架＋当前设备与学员的实例化",
+      "感知：识别实际偏差，区分等价操作与错误",
+      "推断：预测影响范围、延迟、可补救性；不能识别时保留多个假设",
+      "呈现：把后果落到当前视角与对象，标清预测及不确定性",
+      "教学：选择最有解释价值的反事实对照，测无帮助迁移"
+    ],
+    "ppt_plan": {
+      "code": "XR-C",
+      "name": "Causality-Aware XR Tutorials",
+      "zh": "面向学习的操作后果推断与呈现",
+      "question": "学员漏步、换序或换工具后，哪些后果会发生、能否补救，以及展示哪个对照最有助于学员真正学会？",
+      "trigger": "学员的操作或对象机制改变；允许合法的替代操作，不把所有偏离演示的行为都判错。",
+      "output": "带影响范围、延迟、可恢复性和不确定性的后果分支；在当前场景中呈现教学对照。",
+      "keep": "无关对象和步骤、真实已执行记录、同一学习目标；比较时控制解释长度和帮助预算。",
+      "boundary": "与 AIGC-A 共享后果生成方法，但 XR-C 的终点是人的理解与迁移。流程预测、视觉逼真、操作成功和学习收益是四种不同证据。",
+      "pipeline": [
+        "知识：程序因果骨架＋当前设备与学员的实例化",
+        "感知：识别实际偏差，区分等价操作与错误",
+        "推断：预测影响范围、延迟、可补救性；不能识别时保留多个假设",
+        "呈现：把后果落到当前视角与对象，标清预测及不确定性",
+        "教学：选择最有解释价值的反事实对照，测无帮助迁移"
+      ],
+      "challenge": "教程会改变学员之后的动作，因此学员本身是闭环的一部分。接触、锁定、污染等关键状态也可能不可见；单一像素答案不足以表示程序正确性。",
+      "experiment": {
+        "case": "同一装配任务中随机出现漏锁扣、合法换序与机制替换；再在未见设备上考查迁移。",
+        "operation": "固定后果生成器和帮助预算，比较完整演示、错误结果展示、带原因的最小对照；先分离影响推断与生成执行，再做学员实验。",
+        "controls": "无帮助、固定教程、同长度非因果解释、oracle 后果与预测后果；随机化任务与顺序。",
+        "metrics": "直接／延迟后果正确率、Keep 误改、补救可行性；独立完成、延迟保持和新任务迁移。用户样本量须据功效分析确定，尚未执行。",
+        "falsifier": "若只提升视频偏好或即时照做，未改善无帮助迁移，则不能声称教学收益；若 oracle 也无收益，应重审展示策略。"
+      },
+      "reading": [
+        "VOID",
+        "MULTI",
+        "LAB"
+      ],
+      "slides": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        15,
+        16
+      ]
+    },
+    "paper_membership": [
+      {
+        "key": "VOID",
+        "role": "直接方法",
+        "primary": "AIGC-A"
+      },
+      {
+        "key": "GIVE",
+        "role": "可借用组件",
+        "primary": "AIGC-A"
+      },
+      {
+        "key": "VANS",
+        "role": "可借用组件",
+        "primary": "XR-C"
+      },
+      {
+        "key": "STATE",
+        "role": "可借用组件",
+        "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "LIB-VG43",
+        "role": "可借用组件",
+        "primary": "XR-C"
+      },
+      {
+        "key": "REAL",
+        "role": "可借用组件",
+        "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "CSVC",
+        "role": "可借用组件",
+        "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "WHATIF",
+        "role": "可借用组件",
+        "primary": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "LIB-VG09",
+        "role": "可借用组件",
+        "primary": "XR-C"
+      },
+      {
+        "key": "LIB-P143",
+        "role": "可借用组件",
+        "primary": "不确定：XR-C / AIGC-D（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "LIB-P036",
+        "role": "可借用组件",
+        "primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "LIB-P146",
+        "role": "可借用组件",
+        "primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "PROC",
+        "role": "基础理论",
+        "primary": "XR-C"
+      },
+      {
+        "key": "DSCM",
+        "role": "基础理论",
+        "primary": "跨方向基础：XR-C / AIGC-A"
+      },
+      {
+        "key": "COPHY",
+        "role": "基础理论",
+        "primary": "跨方向基础：XR-C / AIGC-A"
+      },
+      {
+        "key": "FCOPHY",
+        "role": "基础理论",
+        "primary": "跨方向基础：XR-C / AIGC-A"
+      },
+      {
+        "key": "SCHEMA",
+        "role": "可借用组件",
+        "primary": "XR-C"
+      },
+      {
+        "key": "PHYS",
+        "role": "直接方法",
+        "primary": "AIGC-A"
+      },
+      {
+        "key": "CWMDT",
+        "role": "直接方法",
+        "primary": "AIGC-A"
+      },
+      {
+        "key": "CAUSAL",
+        "role": "边界参照",
+        "primary": "AIGC-A"
+      },
+      {
+        "key": "MULTI",
+        "role": "数据／评测",
+        "primary": "AIGC-A"
+      },
+      {
+        "key": "LAB",
+        "role": "数据／评测",
+        "primary": "XR-C"
+      }
+    ]
   },
   {
     "code": "XR-L",
-    "name": "Proactive Clarification for XR Tutorials",
-    "zh": "面向 XR 教程的主动澄清（how）",
-    "question": "固定澄清触发时刻后，agent 如何选择提问内容、呈现形式与候选对照，让用户低负担地给出可执行答案？",
-    "trigger": "输入不充分；用户持有 GT；需要澄清及触发时刻已经给定。",
-    "output": "由 agent 发起的问题、对象高亮或候选对照，用户答案及据此更新的教程约束／视频。",
-    "distinction": "Agent 自己选择并发起问题、对象高亮、候选对照或确认界面；用户提供 GT。主动感知未知物理事实、何时提问和跨任务数据选择均不是当前主问题。",
+    "name": "Proactive Clarification for XR Tutorials · How, not When",
+    "zh": "用户已知真值下的澄清动作选择",
+    "question": "已确定需要澄清、答案在用户心里时，agent 应怎样主动组织问题、指向或对照，以最少用户负担获得足够准确的信息？",
+    "trigger": "固定或外部提供的澄清触发点；不优化何时提问。",
+    "output": "由 agent 发起的澄清动作与获得的用户答案，并据此继续教程。",
+    "distinction": "U：用户已有 GT，是本方向主任务。W：环境中未知事实，要靠感知／探测，是邻近任务。C：目标在交流中形成，是共同设计；DiscoverLLM 属于 C，不能混入 U 的准确率。",
     "support": [
       {
         "paper": "VG17",
-        "level": "直接技术先例",
+        "level": "可借用组件",
         "established": "Qwen-Image-Agent 显式识别上下文缺口，并通过推理、搜索、记忆和反馈补齐图像条件。",
         "xr_bridge": "迁移 context-gap 表示到对象型号、物体状态和步骤前置条件。",
-        "missing": "原任务是图像；隐含缺口会漏检，反馈主要在生成后端。"
+        "missing": "原任务是图像；隐含缺口会漏检，反馈主要在生成后端。",
+        "reading_primary": "AIGC-D",
+        "classification_reason": "context gap 与主动信息获取近邻；控制信号最少充分性仍需执行检验。"
       },
       {
         "paper": "VG20",
-        "level": "直接技术先例",
+        "level": "可借用组件",
         "established": "VideoGen-Agent 学习调用信息补充、生成和验证工具完成多类视频请求。",
         "xr_bridge": "作为学习式工具选择基线；把视频是否执行正确步骤纳入评价。",
-        "missing": "更广组合泛化及工具依赖未解决；不能只靠更多工具调用解释收益。"
+        "missing": "更广组合泛化及工具依赖未解决；不能只靠更多工具调用解释收益。",
+        "reading_primary": "AIGC-D",
+        "classification_reason": "视频生成工具与 agent 执行接口；不是最小充分控制的完整证据。"
       },
       {
         "paper": "VG60",
-        "level": "取证与记忆方法",
+        "level": "可借用组件",
         "established": "S³ / AMF-VLM 在流式空间任务中按时刻记忆并主动移动、旋转或扫描取证。",
         "xr_bridge": "提供实时观察限制及空间动作取证接口。",
-        "missing": "主要输出答案，需新增“取证→视频条件→生成执行”链。"
+        "missing": "主要输出答案，需新增“取证→视频条件→生成执行”链。",
+        "reading_primary": "不确定：XR-L / AIGC-D（共享参考，未强行指定主归属）",
+        "classification_reason": "S³ / AMF-VLM 在流式空间任务中按时刻记忆并主动移动、旋转或扫描取证。 [推断] 主要输出答案，需新增“取证→视频条件→生成执行”链。"
       },
       {
         "paper": "P149",
-        "level": "共享方法",
+        "level": "可借用组件",
         "established": "ACT 用动作对比自训练学习何时澄清、何时回答。",
         "xr_bridge": "作为询问策略训练方式，可比较用户回答和动作取证。",
-        "missing": "主要依赖文本模拟用户与任务判据，没有测身体移动成本。"
+        "missing": "主要依赖文本模拟用户与任务判据，没有测身体移动成本。",
+        "reading_primary": "不确定：XR-L / AIGC-D（共享参考，未强行指定主归属）",
+        "classification_reason": "比较不同对话行动的后续收益，以偏好优化学习多轮澄清。"
       },
       {
         "paper": "P159",
-        "level": "共享方法",
+        "level": "可借用组件",
         "established": "GPS 用条件规则 DAG 遍历与裁剪来减少不必要澄清。",
         "xr_bridge": "用已知操作规则确定最值得问的前置条件。",
-        "missing": "未知的是用户条件；不等于能发现未知锁扣机制。"
+        "missing": "未知的是用户条件；不等于能发现未知锁扣机制。",
+        "reading_primary": "XR-L",
+        "classification_reason": "借用缺失信息表示与提问组织；本方向固定触发，不接收 when 作为主要贡献。"
       },
       {
         "paper": "P157",
-        "level": "主动实验先例",
+        "level": "可借用组件",
         "established": "探索研究已用基础模型提出实验，并在三维条件下由人执行动作取证。",
         "xr_bridge": "人代执行取证本身已有先例；增量应落在任务价值、低打扰及生成执行。",
-        "missing": "现有简单机制和有限试验，未优化 XR 教学的注意力与动作可接受性。"
+        "missing": "现有简单机制和有限试验，未优化 XR 教学的注意力与动作可接受性。",
+        "reading_primary": "XR-L",
+        "classification_reason": "探索研究已用基础模型提出实验，并在三维条件下由人执行动作取证。 [推断] 现有简单机制和有限试验，未优化 XR 教学的注意力与动作可接受性。"
       },
       {
         "paper": "P372",
-        "level": "评测基础",
+        "level": "可借用组件",
         "established": "ESI-Bench 对照主动探索、被动观察及三维辅助的空间推理。",
         "xr_bridge": "用于检查额外观察是否带来真实决策收益。",
-        "missing": "基准面向具身空间理解，不能代替教程生成或人类学习评价。"
+        "missing": "基准面向具身空间理解，不能代替教程生成或人类学习评价。",
+        "reading_primary": "XR-L",
+        "classification_reason": "ESI-Bench 对照主动探索、被动观察及三维辅助的空间推理。 [推断] 基准面向具身空间理解，不能代替教程生成或人类学习评价。"
       },
       {
         "paper": "VG58",
-        "level": "共享训练方法",
+        "level": "可借用组件",
         "established": "ParaVT 用并行视频工具调用和 PARA-GRPO 研究帧预算、格式奖励及工具捷径。",
         "xr_bridge": "可用于取证策略训练，显式处理“永不调用”和无效调用两种奖励漏洞。",
-        "missing": "视频理解工具证据不等于生成控制；PARA-GRPO 也不是独立的通用 GRPO 原始论文。"
+        "missing": "视频理解工具证据不等于生成控制；PARA-GRPO 也不是独立的通用 GRPO 原始论文。",
+        "reading_primary": "XR-L",
+        "classification_reason": "ParaVT 用并行视频工具调用和 PARA-GRPO 研究帧预算、格式奖励及工具捷径。 [推断] 视频理解工具证据不等于生成控制；PARA-GRPO 也不是独立的通用 GRPO 原始论文。"
       },
       {
         "paper": "VG61",
-        "level": "共享数据方法",
+        "level": "可借用组件",
         "established": "RFT-Inf 估计样本对最终强化微调奖励的影响。",
         "xr_bridge": "支撑 L2：选择能改善未见操作机制的数据。",
-        "missing": "影响分数对当前奖励有利不保证真实教学或分布外增益。"
+        "missing": "影响分数对当前奖励有利不保证真实教学或分布外增益。",
+        "reading_primary": "XR-L",
+        "classification_reason": "RFT-Inf 估计样本对最终强化微调奖励的影响。 [推断] 影响分数对当前奖励有利不保证真实教学或分布外增益。"
       },
       {
         "paper": "P059",
-        "level": "人本约束",
+        "level": "可借用组件",
         "established": "Sensible Agent 根据情境调整主动 AR 帮助的内容与模态。",
         "xr_bridge": "为取证请求设计合适交互方式，并计入打扰。",
-        "missing": "未精确求解介入时机，也没有长期用户偏好闭环。"
+        "missing": "未精确求解介入时机，也没有长期用户偏好闭环。",
+        "reading_primary": "XR-L",
+        "classification_reason": "Sensible Agent 根据情境调整主动 AR 帮助的内容与模态。 [推断] 未精确求解介入时机，也没有长期用户偏好闭环。"
       },
       {
         "paper": "P251",
-        "level": "示范采集接口",
+        "level": "可借用组件",
         "established": "ARCap 以 AR 和触觉反馈帮助用户采集可被机器人执行的示范。",
         "xr_bridge": "作为人类示范质量与采集负担的接口参照。",
-        "missing": "目标是机器人数据，不是已证实的新手教学或视频生成数据选择。"
+        "missing": "目标是机器人数据，不是已证实的新手教学或视频生成数据选择。",
+        "reading_primary": "XR-L",
+        "classification_reason": "ARCap 以 AR 和触觉反馈帮助用户采集可被机器人执行的示范。 [推断] 目标是机器人数据，不是已证实的新手教学或视频生成数据选择。"
       }
     ],
     "hypotheses": [
@@ -467,100 +675,274 @@
         "report_url": "problem-lineage/#XR-L"
       }
     },
-    "support_scope_note": "原 support 与 reading 保留为旧范围引用；当前优先阅读以 research_reading_update 为准。"
+    "support_scope_note": "原 support 与 reading 保留为旧范围引用；当前优先阅读以 research_reading_update 为准。",
+    "summary": "已确定需要澄清、答案在用户心里时，agent 应怎样主动组织问题、指向或对照，以最少用户负担获得足够准确的信息？ U：用户已有 GT，是本方向主任务。W：环境中未知事实，要靠感知／探测，是邻近任务。C：目标在交流中形成，是共同设计；DiscoverLLM 属于 C，不能混入 U 的准确率。",
+    "gap": "语言上消除歧义不等于对象 grounding 或动作参数足够。想象视频可作为提问材料，但它不是关于现实的新证据。",
+    "progression": [
+      "表示：列出用户可能指代的对象或意图",
+      "动作选择：问一句、自动高亮对象、展示可区分的候选结果",
+      "agent 执行：系统自己调出视图、生成对照并发问；用户只提供其掌握的答案",
+      "验证：测答案能否让后续操作可靠执行，而非只看对话自然度"
+    ],
+    "ppt_plan": {
+      "code": "XR-L",
+      "name": "Proactive Clarification for XR Tutorials · How, not When",
+      "zh": "用户已知真值下的澄清动作选择",
+      "question": "已确定需要澄清、答案在用户心里时，agent 应怎样主动组织问题、指向或对照，以最少用户负担获得足够准确的信息？",
+      "trigger": "固定或外部提供的澄清触发点；不优化何时提问。",
+      "output": "由 agent 发起的澄清动作与获得的用户答案，并据此继续教程。",
+      "keep": "用户预先持有的目标／指代真值、固定触发点、相同下游执行器和交互预算。",
+      "boundary": "U：用户已有 GT，是本方向主任务。W：环境中未知事实，要靠感知／探测，是邻近任务。C：目标在交流中形成，是共同设计；DiscoverLLM 属于 C，不能混入 U 的准确率。",
+      "pipeline": [
+        "表示：列出用户可能指代的对象或意图",
+        "动作选择：问一句、自动高亮对象、展示可区分的候选结果",
+        "agent 执行：系统自己调出视图、生成对照并发问；用户只提供其掌握的答案",
+        "验证：测答案能否让后续操作可靠执行，而非只看对话自然度"
+      ],
+      "challenge": "语言上消除歧义不等于对象 grounding 或动作参数足够。想象视频可作为提问材料，但它不是关于现实的新证据。",
+      "experiment": {
+        "case": "用户事先选择目标对象、装配意图或可接受方法，agent 只看到有歧义的指令与 XR 场景。",
+        "operation": "固定需要澄清的样本，比较文本、自动指向、对照预览与组合；agent 自行生成界面。",
+        "controls": "固定问句、随机候选、最短文本策略、oracle 用户答案；预览质量单独控制。",
+        "metrics": "用户 GT 恢复率、问题次数、时间与认知负担、下游执行成功、误导性选项偏差。",
+        "falsifier": "若多模态只让用户更喜欢但未改善同预算成功率，或答案因系统暗示而改变，则不支持固定 GT 澄清优势。"
+      },
+      "reading": [
+        "CLARIFIER",
+        "GPS",
+        "CLARITI"
+      ],
+      "slides": [
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    "paper_membership": [
+      {
+        "key": "QWEN",
+        "role": "可借用组件",
+        "primary": "AIGC-D"
+      },
+      {
+        "key": "VGEN",
+        "role": "可借用组件",
+        "primary": "AIGC-D"
+      },
+      {
+        "key": "LIB-VG60",
+        "role": "可借用组件",
+        "primary": "不确定：XR-L / AIGC-D（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "ACT",
+        "role": "可借用组件",
+        "primary": "不确定：XR-L / AIGC-D（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "GPS",
+        "role": "可借用组件",
+        "primary": "XR-L"
+      },
+      {
+        "key": "LIB-P157",
+        "role": "可借用组件",
+        "primary": "XR-L"
+      },
+      {
+        "key": "LIB-P372",
+        "role": "可借用组件",
+        "primary": "XR-L"
+      },
+      {
+        "key": "LIB-VG58",
+        "role": "可借用组件",
+        "primary": "XR-L"
+      },
+      {
+        "key": "LIB-VG61",
+        "role": "可借用组件",
+        "primary": "XR-L"
+      },
+      {
+        "key": "LIB-P059",
+        "role": "可借用组件",
+        "primary": "XR-L"
+      },
+      {
+        "key": "LIB-P251",
+        "role": "可借用组件",
+        "primary": "XR-L"
+      },
+      {
+        "key": "GROUND",
+        "role": "基础理论",
+        "primary": "跨方向基础：XR-L / AIGC-D"
+      },
+      {
+        "key": "MIXED",
+        "role": "基础理论",
+        "primary": "XR-L"
+      },
+      {
+        "key": "KNOW",
+        "role": "基础理论",
+        "primary": "跨方向基础：XR-L / AIGC-D"
+      },
+      {
+        "key": "SKETCH",
+        "role": "边界参照",
+        "primary": "AIGC-D"
+      },
+      {
+        "key": "CLARIFIER",
+        "role": "直接方法",
+        "primary": "XR-L"
+      },
+      {
+        "key": "CLARITI",
+        "role": "可借用组件",
+        "primary": "XR-L"
+      },
+      {
+        "key": "POINTER",
+        "role": "可借用组件",
+        "primary": "XR-L"
+      },
+      {
+        "key": "IGCLAR",
+        "role": "可借用组件",
+        "primary": "XR-L"
+      },
+      {
+        "key": "MIND",
+        "role": "边界参照",
+        "primary": "AIGC-D"
+      },
+      {
+        "key": "DISCOVER",
+        "role": "边界参照",
+        "primary": "AIGC-D"
+      }
+    ]
   },
   {
     "code": "XR-S",
-    "name": "Self-Correcting Video World Models for Interactive XR Tutorials",
-    "zh": "新证据下可纠错的 XR 教程视频世界模型",
-    "question": "当真实观察否定教程生成所依据的状态时，能否撤销错误假设及其依赖，只修订受影响的未来演示？",
-    "trigger": "例如遮挡时猜测锁扣已解开，随后相机证实仍锁定；或者物体在真实世界发生移动。",
-    "output": "修正后的状态记忆和后续视频，并记录哪些观测仍成立、哪些猜测已失效。",
-    "distinction": "这是同一次任务中的证据驱动纠错；已有播放帧不能撤回，也不能把真实历史重写为另一段观测。跨任务策略进步归 XR-E。",
+    "name": "Self-Correcting Video World Models for XR Tutorials",
+    "zh": "新观测到来后的状态纠错与教程续接",
+    "question": "真实观测推翻旧判断时，怎样撤销失效的状态、记忆与未执行计划，并让正在生成的教程及时续接？",
+    "trigger": "有来源和时间戳的新观测；先区分旧判断错误、世界实际变化、用户新命令和传感噪声。",
+    "output": "可追溯的信念修订、失效依赖清单、停止旧建议与新视频续接。",
+    "distinction": "ActionSplice 处理给定新动作后的采样状态迁移；SC²-WM 是导航闭环纠错。两者均不能直接证明外来反证下的教程记忆撤销。",
     "support": [
       {
         "paper": "VG15",
-        "level": "直接技术先例",
+        "level": "可借用组件",
         "established": "A²RD 已有检索—生成—修订—更新循环与分层自修正。",
         "xr_bridge": "作为闭环一致性生成基线，比较额外来源和依赖标记的价值。",
-        "missing": "自修正已有先例；未由此建立外来反证触发的特定状态撤销。"
+        "missing": "自修正已有先例；未由此建立外来反证触发的特定状态撤销。",
+        "reading_primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）",
+        "classification_reason": "A²RD 已有检索—生成—修订—更新循环与分层自修正。 [推断] 自修正已有先例；未由此建立外来反证触发的特定状态撤销。"
       },
       {
         "paper": "VG63",
-        "level": "记忆机制",
+        "level": "可借用组件",
         "established": "VideoSSM 用局部窗口和可注入、可遗忘的全局 SSM 状态保存历史。",
         "xr_bridge": "提供可更新记忆基线，检查纠正信息是否真正进入后续生成。",
-        "missing": "已有遗忘门不等于可定位错误信念并撤销其下游依赖。"
+        "missing": "已有遗忘门不等于可定位错误信念并撤销其下游依赖。",
+        "reading_primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）",
+        "classification_reason": "VideoSSM 用局部窗口和可注入、可遗忘的全局 SSM 状态保存历史。 [推断] 已有遗忘门不等于可定位错误信念并撤销其下游依赖。"
       },
       {
         "paper": "P135",
-        "level": "记忆机制",
+        "level": "可借用组件",
         "established": "WorldMem 用帧、位姿和时间戳检索历史世界状态。",
         "xr_bridge": "检验重访对象时应保持记忆还是更新状态。",
-        "missing": "主要实验依赖真值位姿；记忆恢复不等于噪声／真实变化判别。"
+        "missing": "主要实验依赖真值位姿；记忆恢复不等于噪声／真实变化判别。",
+        "reading_primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）",
+        "classification_reason": "从短上下文扩展到带状态的历史记忆检索。"
       },
       {
         "paper": "VG50",
-        "level": "流式实现",
+        "level": "可借用组件",
         "established": "JoyAI 支持无未来帧输入的分块自回归视频编辑。",
         "xr_bridge": "界定未提交缓冲区与已播放内容，测试中断重规划。",
-        "missing": "实时编辑不是实时信念修正；特定硬件速度不能直接当头显端延迟。"
+        "missing": "实时编辑不是实时信念修正；特定硬件速度不能直接当头显端延迟。",
+        "reading_primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）",
+        "classification_reason": "JoyAI 支持无未来帧输入的分块自回归视频编辑。 [推断] 实时编辑不是实时信念修正；特定硬件速度不能直接当头显端延迟。"
       },
       {
         "paper": "VG22",
-        "level": "共享版本方法",
+        "level": "可借用组件",
         "established": "MaLiang 将程序、历史和渲染检查绑定同一修订版本，并支持恢复。",
         "xr_bridge": "借用版本对齐与回滚，避免 verifier 检查了旧版本视频。",
-        "missing": "原系统以可执行视觉程序为核心，扩散模型的局部记忆更新仍需另做。"
+        "missing": "原系统以可执行视觉程序为核心，扩散模型的局部记忆更新仍需另做。",
+        "reading_primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）",
+        "classification_reason": "MaLiang 将程序、历史和渲染检查绑定同一修订版本，并支持恢复。 [推断] 原系统以可执行视觉程序为核心，扩散模型的局部记忆更新仍需另做。"
       },
       {
         "paper": "VG37",
-        "level": "共享优化方法",
+        "level": "可借用组件",
         "established": "VLM-as-Teacher 在测试时优化视频 LoRA，使生成轨迹响应规则反馈。",
         "xr_bridge": "检验文本状态修复能否进一步转成视频执行修复。",
-        "missing": "每个实例优化不证明跨任务学习；教师可能漏看并带来质量取舍。"
+        "missing": "每个实例优化不证明跨任务学习；教师可能漏看并带来质量取舍。",
+        "reading_primary": "不确定：XR-S / XR-E（共享参考，未强行指定主归属）",
+        "classification_reason": "VLM-as-Teacher 在测试时优化视频 LoRA，使生成轨迹响应规则反馈。 [推断] 每个实例优化不证明跨任务学习；教师可能漏看并带来质量取舍。"
       },
       {
         "paper": "VG11",
-        "level": "反馈方法",
+        "level": "可借用组件",
         "established": "VQQA 用视觉问题及批评迭代优化黑盒视频生成。",
         "xr_bridge": "构造对象—时刻—约束的可定位反馈基线。",
-        "missing": "评判会幻觉，串行生成有成本，不能无条件把批评当真值。"
+        "missing": "评判会幻觉，串行生成有成本，不能无条件把批评当真值。",
+        "reading_primary": "不确定：XR-S / AIGC-C（共享参考，未强行指定主归属）",
+        "classification_reason": "VQQA 用视觉问题及批评迭代优化黑盒视频生成。 [推断] 评判会幻觉，串行生成有成本，不能无条件把批评当真值。"
       },
       {
         "paper": "P021",
-        "level": "反证评测",
+        "level": "基础理论",
         "established": "Black Swan 检查隐藏事件解释和新证据出现后的可废止推理。",
         "xr_bridge": "用于区分合理的原先假设与后来必须撤销的假设。",
-        "missing": "它是理解评测，不提供可纠错视频生成模型。"
+        "missing": "它是理解评测，不提供可纠错视频生成模型。",
+        "reading_primary": "跨方向基础：XR-S / AIGC-B / AIGC-C",
+        "classification_reason": "可撤销推理的任务桥梁：后来的观察会改变早先事件判断。"
       },
       {
         "paper": "P342",
-        "level": "空间信念评测",
+        "level": "可借用组件",
         "established": "Theory of Space 以逐步空间信念探针分析探索与错误修正。",
         "xr_bridge": "分别评价状态认识和最后视频，防止只改语言日志。",
-        "missing": "探针不是对全部内部计算的忠实读取。"
+        "missing": "探针不是对全部内部计算的忠实读取。",
+        "reading_primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）",
+        "classification_reason": "[推断] 沿用原方向的模块关系；不是完整解决当前问题的直接证据。"
       },
       {
         "paper": "P391",
-        "level": "共享在线适应",
+        "level": "可借用组件",
         "established": "AdaJEPA 在新转移出现后更新部分编码器及预测器参数，再规划。",
         "xr_bridge": "区分外部记忆修订与模型参数适应的纠错途径。",
-        "missing": "潜空间控制结果不能直接说明可见视频已正确。"
+        "missing": "潜空间控制结果不能直接说明可见视频已正确。",
+        "reading_primary": "XR-S",
+        "classification_reason": "AdaJEPA 在新转移出现后更新部分编码器及预测器参数，再规划。 [推断] 潜空间控制结果不能直接说明可见视频已正确。"
       },
       {
         "paper": "VG30",
-        "level": "基础综述",
+        "level": "可借用组件",
         "established": "记忆综述将写入、读取、更新和评测分开，并强调状态应保持可信。",
         "xr_bridge": "帮助明确记忆容量、访问及正确更新的不同贡献。",
-        "missing": "提供框架，不是新方法的效果证据。"
+        "missing": "提供框架，不是新方法的效果证据。",
+        "reading_primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）",
+        "classification_reason": "记忆综述将写入、读取、更新和评测分开，并强调状态应保持可信。 [推断] 提供框架，不是新方法的效果证据。"
       },
       {
         "paper": "P061",
-        "level": "XR 输出接口",
+        "level": "可借用组件",
         "established": "AgentHands 以与语音同步、空间对齐的手势讲解对象与动作。",
         "xr_bridge": "作为教程修正后空间指示是否仍对齐的应用检查。",
-        "missing": "依赖预扫描对象注册和有限手势；动态重定位需增加机制。"
+        "missing": "依赖预扫描对象注册和有限手势；动态重定位需增加机制。",
+        "reading_primary": "XR-S",
+        "classification_reason": "AgentHands 以与语音同步、空间对齐的手势讲解对象与动作。 [推断] 依赖预扫描对象注册和有限手势；动态重定位需增加机制。"
       }
     ],
     "hypotheses": [
@@ -619,93 +1001,280 @@
       "focus": "区分内部自检、外部反证、真实世界变化与观测噪声，再更新记忆和后续教程。",
       "boundary": "优先研究外部反证下的选择性修订。导航纠错、空间记忆更新和历史保持分别是近邻，不能合起来声称问题已解决。",
       "report_url": "problem-lineage/#XR-S"
-    }
+    },
+    "summary": "真实观测推翻旧判断时，怎样撤销失效的状态、记忆与未执行计划，并让正在生成的教程及时续接？ ActionSplice 处理给定新动作后的采样状态迁移；SC²-WM 是导航闭环纠错。两者均不能直接证明外来反证下的教程记忆撤销。",
+    "gap": "XR 的旧建议可能已经被学员执行；不能像离线电影那样把过去整段重拍。状态正确、动作可执行和停止过时画面的延迟必须一起评价。",
+    "progression": [
+      "记录：区分观察事实、模型猜测和预测未来",
+      "裁决：检查来源、时序及冲突类型",
+      "撤销：沿依赖关系使旧计划／记忆失效，而不是清空所有历史",
+      "续接：中止尚未提交的 chunk，重规划并生成当前可执行建议"
+    ],
+    "ppt_plan": {
+      "code": "XR-S",
+      "name": "Self-Correcting Video World Models for XR Tutorials",
+      "zh": "新观测到来后的状态纠错与教程续接",
+      "question": "真实观测推翻旧判断时，怎样撤销失效的状态、记忆与未执行计划，并让正在生成的教程及时续接？",
+      "trigger": "有来源和时间戳的新观测；先区分旧判断错误、世界实际变化、用户新命令和传感噪声。",
+      "output": "可追溯的信念修订、失效依赖清单、停止旧建议与新视频续接。",
+      "keep": "已发生的真实动作不可重写；仍有效的对象身份、事实与已满足约束保留。",
+      "boundary": "ActionSplice 处理给定新动作后的采样状态迁移；SC²-WM 是导航闭环纠错。两者均不能直接证明外来反证下的教程记忆撤销。",
+      "pipeline": [
+        "记录：区分观察事实、模型猜测和预测未来",
+        "裁决：检查来源、时序及冲突类型",
+        "撤销：沿依赖关系使旧计划／记忆失效，而不是清空所有历史",
+        "续接：中止尚未提交的 chunk，重规划并生成当前可执行建议"
+      ],
+      "challenge": "XR 的旧建议可能已经被学员执行；不能像离线电影那样把过去整段重拍。状态正确、动作可执行和停止过时画面的延迟必须一起评价。",
+      "experiment": {
+        "case": "装配中途看见原来被遮挡的锁扣；分别构造最初误判、锁扣刚被移动、错误检测三组。",
+        "operation": "固定传感与生成骨干，比较追加记忆、全量重置、带来源的选择性撤销；单独控制中断边界。",
+        "controls": "无纠错、只改 prompt、全历史重生成、oracle 冲突类别与 oracle 依赖。",
+        "metrics": "错误信念存活时间、依赖漏撤销、有效记忆误删、stale frames、恢复延迟、真实执行成功。",
+        "falsifier": "若收益来自丢掉所有历史，或只减延迟但继续错误建议，则不支持选择性纠错假设。"
+      },
+      "reading": [
+        "SC2",
+        "PERMA",
+        "SPLICE"
+      ],
+      "slides": [
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "paper_membership": [
+      {
+        "key": "LIB-VG15",
+        "role": "可借用组件",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "LIB-VG63",
+        "role": "可借用组件",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "WORLD",
+        "role": "可借用组件",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "LIB-VG50",
+        "role": "可借用组件",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "LIB-VG22",
+        "role": "可借用组件",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "LIB-VG37",
+        "role": "可借用组件",
+        "primary": "不确定：XR-S / XR-E（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "LIB-VG11",
+        "role": "可借用组件",
+        "primary": "不确定：XR-S / AIGC-C（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "BLACK",
+        "role": "基础理论",
+        "primary": "跨方向基础：XR-S / AIGC-B / AIGC-C"
+      },
+      {
+        "key": "SPACE",
+        "role": "可借用组件",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "LIB-P391",
+        "role": "可借用组件",
+        "primary": "XR-S"
+      },
+      {
+        "key": "LIB-VG30",
+        "role": "可借用组件",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "LIB-P061",
+        "role": "可借用组件",
+        "primary": "XR-S"
+      },
+      {
+        "key": "TMS",
+        "role": "基础理论",
+        "primary": "跨方向基础：XR-S / AIGC-B"
+      },
+      {
+        "key": "STREAM",
+        "role": "基础理论",
+        "primary": "跨方向基础：XR-S / AIGC-B"
+      },
+      {
+        "key": "SPATIA",
+        "role": "可借用组件",
+        "primary": "AIGC-B"
+      },
+      {
+        "key": "PERMA",
+        "role": "直接方法",
+        "primary": "AIGC-B"
+      },
+      {
+        "key": "WEAVE",
+        "role": "可借用组件",
+        "primary": "不确定：XR-S / AIGC-B / AIGC-C（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "A2RD",
+        "role": "可借用组件",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "SC2",
+        "role": "可借用组件",
+        "primary": "XR-S"
+      },
+      {
+        "key": "VIS",
+        "role": "可借用组件",
+        "primary": "AIGC-C"
+      },
+      {
+        "key": "COME",
+        "role": "可借用组件",
+        "primary": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "SPLICE",
+        "role": "可借用组件",
+        "primary": "XR-S"
+      },
+      {
+        "key": "STREAMCODE",
+        "role": "工程参考",
+        "primary": "XR-S"
+      },
+      {
+        "key": "CODEVIDEO",
+        "role": "可借用组件",
+        "primary": "AIGC-D"
+      }
+    ]
   },
   {
     "code": "XR-E",
-    "name": "Cross-Task Self-Improvement for XR Tutorials",
-    "zh": "跨任务持续改善的 XR 教程生成",
-    "question": "系统能否从多位学员的误操作与教师反馈中积累可验证的教学策略，改善下一任务，并避免旧教程退化？",
-    "trigger": "跨 session、跨用户反复出现的教学或生成失败，而不只是当前视频的一次错误。",
-    "output": "经过回放和留出测试的工作流补丁、技能／经验更新，或明确受控的模型参数更新。",
-    "distinction": "必须指明进化对象：检索记忆、agent 策略、工作流或生成器权重；单次测试时修复属于 XR-S，不能单凭自评更高就宣称持续学习。",
+    "name": "Self-Evolving Collaboration for XR Tutorials",
+    "zh": "跨任务学习协作惯例与分工边界",
+    "question": "从多次人机互动中，如何学到可复用的简称、协作方式和帮助边界，同时允许任务、能力和偏好变化？",
+    "trigger": "跨会话反馈与新任务到来；更新对象可以是 context、workflow、harness 或模型权重，须明确是哪一层。",
+    "output": "带用户／任务适用范围、来源和撤销条件的协作惯例，以及新任务中的可测改善。",
+    "distinction": "VISTA 是单次任务 test-time 改善；ACE 是经验维护机制；DiscoverLLM 是共同形成意图。它们分别提供组件或边界参照，不能直接当作已验证的跨任务 XR 教学演化。",
     "support": [
       {
         "paper": "VG19",
-        "level": "直接技术先例",
+        "level": "可借用组件",
         "established": "CineForge 从跨故事轨迹归纳阶段性策略补丁，经结构回放及成对评价后复用。",
         "xr_bridge": "最直接支撑跨任务工作流进化；可迁移为教学失败类型到阶段补丁。",
-        "missing": "已有跨故事进化；回放保护只对给定指标／样本有效，未证明学习迁移或开放场景零退化。"
+        "missing": "已有跨故事进化；回放保护只对给定指标／样本有效，未证明学习迁移或开放场景零退化。",
+        "reading_primary": "XR-E",
+        "classification_reason": "生成工作流改善与复用近邻；学习者、惯例与边界是新增问题。"
       },
       {
         "paper": "VG02",
-        "level": "共享经验方法",
+        "level": "基础理论",
         "established": "VOYAGER 用自动课程、执行反馈和可检索技能库累积能力，不更新模型参数。",
         "xr_bridge": "支撑教程技能库和课程选择基线。",
-        "missing": "Minecraft 技能迁移不等于跨学员教学，且自验证会误判。"
+        "missing": "Minecraft 技能迁移不等于跨学员教学，且自验证会误判。",
+        "reading_primary": "XR-E",
+        "classification_reason": "可检索技能积累与自动课程基线；跨任务复用比单次修复更接近本方向。"
       },
       {
         "paper": "P012",
-        "level": "共享反思方法",
+        "level": "基础理论",
         "established": "Reflexion 将失败反馈写成文字反思供后续尝试使用。",
         "xr_bridge": "作为低成本的外部经验基线。",
-        "missing": "文字反思不等于模型权重学习，依赖反馈质量与重复尝试。"
+        "missing": "文字反思不等于模型权重学习，依赖反馈质量与重复尝试。",
+        "reading_primary": "XR-E",
+        "classification_reason": "低成本文字反思基线；证明利用反馈改进后续尝试，不等于权重更新。"
       },
       {
         "paper": "P022",
-        "level": "共享人类反馈方法",
+        "level": "可借用组件",
         "established": "ARIA 识别知识缺口、询问专家并维护带时间戳的知识库。",
         "xr_bridge": "为教师纠正和知识更新提供方法参照。",
-        "missing": "主要为外部知识库；模拟专家实验不能当真实教学人数。"
+        "missing": "主要为外部知识库；模拟专家实验不能当真实教学人数。",
+        "reading_primary": "XR-E",
+        "classification_reason": "ARIA 识别知识缺口、询问专家并维护带时间戳的知识库。 [推断] 主要为外部知识库；模拟专家实验不能当真实教学人数。"
       },
       {
         "paper": "P097",
-        "level": "负面证据",
+        "level": "可借用组件",
         "established": "持续更新自然语言记忆可能逐步积累失真，即使源输入有用。",
         "xr_bridge": "必须测试经验合并污染、版本回滚与旧任务退化。",
-        "missing": "结果针对所测文字记忆系统，不能推断任何结构化记忆必然有害。"
+        "missing": "结果针对所测文字记忆系统，不能推断任何结构化记忆必然有害。",
+        "reading_primary": "XR-E",
+        "classification_reason": "证明某些持续文字记忆更新会污染有用内容；应保留原始 episode 并检查旧任务。"
       },
       {
         "paper": "P024",
-        "level": "理论／架构基础",
+        "level": "可借用组件",
         "established": "Nested Learning 将不同更新频率的记忆和优化过程统一讨论。",
         "xr_bridge": "支持分层区分任务内记忆和跨任务参数／策略更新。",
-        "missing": "作者未普遍解决灾难性遗忘；概念重述不能替代教学纵向实验。"
+        "missing": "作者未普遍解决灾难性遗忘；概念重述不能替代教学纵向实验。",
+        "reading_primary": "XR-E",
+        "classification_reason": "Nested Learning 将不同更新频率的记忆和优化过程统一讨论。 [推断] 作者未普遍解决灾难性遗忘；概念重述不能替代教学纵向实验。"
       },
       {
         "paper": "VG37",
-        "level": "适应方法对照",
+        "level": "可借用组件",
         "established": "VLM-as-Teacher 提供实例级 LoRA 修复。",
         "xr_bridge": "与跨任务补丁比较，检测是否需要真正跨任务学习。",
-        "missing": "测试时优化本身不证明保留并迁移到下一用户。"
+        "missing": "测试时优化本身不证明保留并迁移到下一用户。",
+        "reading_primary": "不确定：XR-S / XR-E（共享参考，未强行指定主归属）",
+        "classification_reason": "VLM-as-Teacher 提供实例级 LoRA 修复。 [推断] 测试时优化本身不证明保留并迁移到下一用户。"
       },
       {
         "paper": "P390",
-        "level": "共享 RL 方法",
+        "level": "可借用组件",
         "established": "ReGRPO 通过错误类型、证据和修复计划训练工具 agent，并计入反思成本。",
         "xr_bridge": "可训练会纠错的教程工具策略，区分在线经验与离线训练。",
-        "missing": "原任务是工具使用，不能直接将反思奖励变成学员学习收益。"
+        "missing": "原任务是工具使用，不能直接将反思奖励变成学员学习收益。",
+        "reading_primary": "XR-E",
+        "classification_reason": "ReGRPO 通过错误类型、证据和修复计划训练工具 agent，并计入反思成本。 [推断] 原任务是工具使用，不能直接将反思奖励变成学员学习收益。"
       },
       {
         "paper": "P379",
-        "level": "教学内容接口",
+        "level": "可借用组件",
         "established": "Demo2Tutorial 从经验日志形成层级任务图与图文教程，评估人和 agent 使用。",
         "xr_bridge": "提供将经验转成可复用教学表示的实用基础。",
-        "missing": "主要为软件教程，跨物体机制和 XR 空间教学需新证据。"
+        "missing": "主要为软件教程，跨物体机制和 XR 空间教学需新证据。",
+        "reading_primary": "XR-E",
+        "classification_reason": "Demo2Tutorial 从经验日志形成层级任务图与图文教程，评估人和 agent 使用。 [推断] 主要为软件教程，跨物体机制和 XR 空间教学需新证据。"
       },
       {
         "paper": "P036",
-        "level": "教师审查接口",
+        "level": "可借用组件",
         "established": "SimStep 以教学抽象支持教师逐步检查与纠正模拟。",
         "xr_bridge": "让教师确认失败归因和可复用补丁，而非自动接受模型自评。",
-        "missing": "创作实验不能替代长期学生学习增益。"
+        "missing": "创作实验不能替代长期学生学习增益。",
+        "reading_primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）",
+        "classification_reason": "SimStep 以教学抽象支持教师逐步检查与纠正模拟。 [推断] 创作实验不能替代长期学生学习增益。"
       },
       {
         "paper": "P146",
-        "level": "错误诊断接口",
+        "level": "可借用组件",
         "established": "ExpertAF 把技能视频与姿态转成专家式反馈。",
         "xr_bridge": "提供学员错误类型和动作层定位，为经验积累提供结构。",
-        "missing": "偏好与离线反馈质量不能等同于长期技能改善。"
+        "missing": "偏好与离线反馈质量不能等同于长期技能改善。",
+        "reading_primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）",
+        "classification_reason": "ExpertAF 把技能视频与姿态转成专家式反馈。 [推断] 偏好与离线反馈质量不能等同于长期技能改善。"
       }
     ],
     "hypotheses": [
@@ -769,6 +1338,177 @@
       "focus": "跨任务保留并改善教学策略：从学员执行反馈中更新可复用经验，并检验新任务迁移与旧任务回归。",
       "boundary": "ARify／AgentCoach 对应教学端；ACE／MCE 对应持续改进机制；VISTA 的单任务修补与 DGM 的代码自修改分别列作不同距离的近邻。",
       "report_url": "problem-lineage/#XR-E"
-    }
+    },
+    "summary": "从多次人机互动中，如何学到可复用的简称、协作方式和帮助边界，同时允许任务、能力和偏好变化？ VISTA 是单次任务 test-time 改善；ACE 是经验维护机制；DiscoverLLM 是共同形成意图。它们分别提供组件或边界参照，不能直接当作已验证的跨任务 XR 教学演化。",
+    "gap": "学员和 agent 同时变化，难区分系统学习、用户熟练与任务变简单。帮助应随需求调整，不应被单调压低；creative work 还要防止越学越替用户做决定。",
+    "progression": [
+      "提取：从纠正、确认与协作过程识别候选惯例，记录证据而非把沉默当奖励",
+      "协商：确认哪些决定由学员掌握，哪些可委托给 agent",
+      "保留与撤销：按用户／任务保存经验；能力或机制变化时重新验证",
+      "迁移：在未见任务和延迟测试中测收益与旧能力回归"
+    ],
+    "ppt_plan": {
+      "code": "XR-E",
+      "name": "Self-Evolving Collaboration for XR Tutorials",
+      "zh": "跨任务学习协作惯例与分工边界",
+      "question": "从多次人机互动中，如何学到可复用的简称、协作方式和帮助边界，同时允许任务、能力和偏好变化？",
+      "trigger": "跨会话反馈与新任务到来；更新对象可以是 context、workflow、harness 或模型权重，须明确是哪一层。",
+      "output": "带用户／任务适用范围、来源和撤销条件的协作惯例，以及新任务中的可测改善。",
+      "keep": "用户最终控制权、旧任务能力、已确认边界；用户不回应不等于同意，少帮助不自动等于更好。",
+      "boundary": "VISTA 是单次任务 test-time 改善；ACE 是经验维护机制；DiscoverLLM 是共同形成意图。它们分别提供组件或边界参照，不能直接当作已验证的跨任务 XR 教学演化。",
+      "pipeline": [
+        "提取：从纠正、确认与协作过程识别候选惯例，记录证据而非把沉默当奖励",
+        "协商：确认哪些决定由学员掌握，哪些可委托给 agent",
+        "保留与撤销：按用户／任务保存经验；能力或机制变化时重新验证",
+        "迁移：在未见任务和延迟测试中测收益与旧能力回归"
+      ],
+      "challenge": "学员和 agent 同时变化，难区分系统学习、用户熟练与任务变简单。帮助应随需求调整，不应被单调压低；creative work 还要防止越学越替用户做决定。",
+      "experiment": {
+        "case": "多会话 XR 装配与创作任务，包含共享惯例、用户偏好改变和新设备机制。",
+        "operation": "固定基础模型，比较无跨会话记忆、原始历史、无作用域 playbook、可确认／撤销的惯例；加入任务切换。",
+        "controls": "同交互量、用户内交叉或匹配组、冻结 evaluator、独立 held-out tasks；分别报告 context 与 weight 更新。",
+        "metrics": "新任务成功与用户负担、惯例误迁移、越权决策、旧任务回归、无帮助学习迁移；样本量待预实验。",
+        "falsifier": "若只在训练任务变好，或改善来自用户适应系统且自主性下降，则不支持跨任务协作改善。"
+      },
+      "reading": [
+        "ACE",
+        "ARIFY",
+        "SPIRAL"
+      ],
+      "slides": [
+        21,
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    "paper_membership": [
+      {
+        "key": "CINE",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "VOY",
+        "role": "基础理论",
+        "primary": "XR-E"
+      },
+      {
+        "key": "REFLEX",
+        "role": "基础理论",
+        "primary": "XR-E"
+      },
+      {
+        "key": "LIB-P022",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "MEMFAULT",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "LIB-P024",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "LIB-VG37",
+        "role": "可借用组件",
+        "primary": "不确定：XR-S / XR-E（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "LIB-P390",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "LIB-P379",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "LIB-P036",
+        "role": "可借用组件",
+        "primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "LIB-P146",
+        "role": "可借用组件",
+        "primary": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）"
+      },
+      {
+        "key": "EWC",
+        "role": "基础理论",
+        "primary": "XR-E"
+      },
+      {
+        "key": "VIDEOAG",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "ACE",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "SPIRAL",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "ARIFY",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "COACH",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "MCE",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "DARWIN",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "SILVR",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "JARVIS",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "VISTA",
+        "role": "边界参照",
+        "primary": "XR-E"
+      },
+      {
+        "key": "DGM",
+        "role": "边界参照",
+        "primary": "XR-E"
+      },
+      {
+        "key": "TUTOR",
+        "role": "可借用组件",
+        "primary": "XR-E"
+      },
+      {
+        "key": "DISCOVER",
+        "role": "边界参照",
+        "primary": "AIGC-D"
+      }
+    ]
   }
 ]

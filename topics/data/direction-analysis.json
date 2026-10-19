@@ -1,7 +1,7 @@
 {
   "title": "XR 与 AIGC：问题演进、代表作与技术局限",
-  "date": "2026-10-16",
-  "interpretation": "以下方向定位、技术代价与研究缺口是基于原文的分析；作者明确限制单独标注。里程碑是围绕本研究问题选择的节点，不表示唯一历史谱系或直接引用关系。",
+  "date": "2026-10-19",
+  "interpretation": "论文方法／结果按原文记录；任务归属、迁移判断、技术代价与实验提案均为 [推断]。最新方向定义与优先阅读见本页 PPT 更新；历史谱系保留。",
   "papers": {
     "PROC": {
       "key": "PROC",
@@ -18,7 +18,8 @@
       "author_limit": "主要实验需要动作标签和时间边界等完整监督；原文展示未看清工具已在手中而多安排一步的错误。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-C"
     },
     "DSCM": {
       "key": "DSCM",
@@ -35,7 +36,8 @@
       "author_limit": "当前设置排除未观测混杂，要求建模变量有观测；原文承认机制识别与真实反事实评价困难。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "跨方向基础：XR-C / AIGC-A"
     },
     "COPHY": {
       "key": "COPHY",
@@ -51,7 +53,8 @@
       "author_limit": "物理属性无需真值监督，但去渲染模块用三维位置监督；不能把整套方法称为完全无监督。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "跨方向基础：XR-C / AIGC-A"
     },
     "FCOPHY": {
       "key": "FCOPHY",
@@ -68,7 +71,8 @@
       "library_id": "",
       "evidence_date": "2026-10-16",
       "assessments": [],
-      "extra_source": "https://filteredcophy.github.io/"
+      "extra_source": "https://filteredcophy.github.io/",
+      "primary_direction": "跨方向基础：XR-C / AIGC-A"
     },
     "DIFFSCM": {
       "key": "DIFFSCM",
@@ -84,7 +88,8 @@
       "author_limit": "原文主要验证两变量模型，并说明混杂会污染分类器梯度，使图上的切边干预不成立。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-A"
     },
     "HIFI": {
       "key": "HIFI",
@@ -100,7 +105,8 @@
       "author_limit": "原文为避免反事实微调损伤观察数据表现，引入 ELBO 约束。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-A"
     },
     "SCHEMA": {
       "key": "SCHEMA",
@@ -117,7 +123,8 @@
       "author_limit": "不可见状态变化、LLM 描述质量及封闭词表是原文 Appendix C 的明确限制。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-C"
     },
     "STATE": {
       "key": "STATE",
@@ -134,7 +141,8 @@
       "author_limit": "Appendix A.4 讨论反事实文本中的低概率情形及现实性权衡。",
       "library_id": "VG04",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
     },
     "VANS": {
       "key": "VANS",
@@ -151,7 +159,8 @@
       "author_limit": "",
       "library_id": "VG31",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-C"
     },
     "CWMDT": {
       "key": "CWMDT",
@@ -168,7 +177,8 @@
       "author_limit": "",
       "library_id": "P071",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-A"
     },
     "VOID": {
       "key": "VOID",
@@ -193,7 +203,8 @@
           "text": "作者将 VOID 视作直接近邻，指出其主要覆盖删除；在自己的刚体删除子集报告更好的物理编辑准确度，VOID 则有更高 PSNR。",
           "boundary": "这是后续论文在自身基准上的比较，不是独立复现，也不能外推到所有真实视频或其它编辑类型。"
         }
-      ]
+      ],
+      "primary_direction": "AIGC-A"
     },
     "PHYS": {
       "key": "PHYS",
@@ -210,7 +221,8 @@
       "author_limit": "§3.3 明示逆问题多解；Appendix D 限定静态相机、平面支撑、球/盒刚体；C.2.3 报告生成不服从。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-A"
     },
     "GIVE": {
       "key": "GIVE",
@@ -227,7 +239,8 @@
       "author_limit": "Appendix F：多条件流增大计算；新暴露的运动手部等细节仍可能失败。",
       "library_id": "VG46",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-A"
     },
     "TWIN": {
       "key": "TWIN",
@@ -243,7 +256,8 @@
       "author_limit": "公开 v1 明示 experiments are forthcoming；相机干预可使全画面差异令局部性指标失效。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-A"
     },
     "GROUND": {
       "key": "GROUND",
@@ -259,7 +273,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "跨方向基础：XR-L / AIGC-D"
     },
     "MIXED": {
       "key": "MIXED",
@@ -275,7 +290,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-L"
     },
     "KNOW": {
       "key": "KNOW",
@@ -292,7 +308,8 @@
       "author_limit": "校准/测试分布条件和低层控制成功率在原文单列；计划覆盖不等于整个执行必然成功。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "跨方向基础：XR-L / AIGC-D"
     },
     "ACT": {
       "key": "ACT",
@@ -309,7 +326,8 @@
       "author_limit": "",
       "library_id": "P149",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "不确定：XR-L / AIGC-D（共享参考，未强行指定主归属）"
     },
     "GPS": {
       "key": "GPS",
@@ -326,7 +344,8 @@
       "author_limit": "",
       "library_id": "P159",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-L"
     },
     "CLARIFIER": {
       "key": "CLARIFIER",
@@ -343,7 +362,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-L"
     },
     "CLARITI": {
       "key": "CLARITI",
@@ -360,7 +380,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-L"
     },
     "POINTER": {
       "key": "POINTER",
@@ -377,7 +398,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-L"
     },
     "TMS": {
       "key": "TMS",
@@ -393,7 +415,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "跨方向基础：XR-S / AIGC-B"
     },
     "STREAM": {
       "key": "STREAM",
@@ -410,7 +433,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "跨方向基础：XR-S / AIGC-B"
     },
     "WORLD": {
       "key": "WORLD",
@@ -427,7 +451,8 @@
       "author_limit": "遮挡下检索不足、交互多样性有限及记忆线性增长在原文讨论。",
       "library_id": "P135",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
     },
     "BLACK": {
       "key": "BLACK",
@@ -444,7 +469,8 @@
       "author_limit": "来自 Oops! 视频；人类基线与开放解释评审有覆盖及口径限制，不外推总体人群差距。",
       "library_id": "P021",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "跨方向基础：XR-S / AIGC-B / AIGC-C"
     },
     "PERMA": {
       "key": "PERMA",
@@ -461,7 +487,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-B"
     },
     "WEAVE": {
       "key": "WEAVE",
@@ -478,7 +505,8 @@
       "author_limit": "Appendix E 报告拥挤多人场景的 mask 污染、注意力竞争和属性串绑。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "不确定：XR-S / AIGC-B / AIGC-C（共享参考，未强行指定主归属）"
     },
     "A2RD": {
       "key": "A2RD",
@@ -495,7 +523,8 @@
       "author_limit": "",
       "library_id": "VG15",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
     },
     "SPATIA": {
       "key": "SPATIA",
@@ -512,7 +541,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-B"
     },
     "SC2": {
       "key": "SC2",
@@ -529,7 +559,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-S"
     },
     "VIS": {
       "key": "VIS",
@@ -546,7 +577,8 @@
       "author_limit": "原文讨论上下文抽取、矛盾请求和视觉执行局限；数据泄漏审计不同于观众秘密泄漏评测。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-C"
     },
     "EWC": {
       "key": "EWC",
@@ -562,7 +594,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-E"
     },
     "REFLEX": {
       "key": "REFLEX",
@@ -578,7 +611,8 @@
       "author_limit": "原文承认依赖自评价能力或启发式，且没有成功的形式保证。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-E"
     },
     "VOY": {
       "key": "VOY",
@@ -595,7 +629,8 @@
       "author_limit": "",
       "library_id": "VG02",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-E"
     },
     "VIDEOAG": {
       "key": "VIDEOAG",
@@ -612,7 +647,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-E"
     },
     "SPIRAL": {
       "key": "SPIRAL",
@@ -629,24 +665,26 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-E"
     },
     "ACE": {
       "key": "ACE",
       "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models",
       "year": 2026,
-      "first_year": 2026,
+      "first_year": 2025,
       "venue": "ICLR 2026",
-      "source": "https://arxiv.org/html/2510.04618v1",
-      "locator": "Generator/Reflector/Curator；实验与消融",
-      "method": "把生成、反思和整理分开，增量维护可复用 context playbook。",
+      "source": "https://arxiv.org/html/2510.04618v3",
+      "locator": "方法；Appendix A.6 Pruning Trigger",
+      "method": "Generator／Reflector／Curator 增量维护 playbook；新版包含去重、合并与 pruning。",
       "solved": "为持久经验积累提供 context-level 更新机制。",
-      "remaining": "不等于参数学习；尚未建立教程反馈的因果归因与学员迁移。",
+      "remaining": "没有建立用户协作惯例的适用范围、撤销判断和学习收益归因。",
       "tradeoff": "增量更新缓解整体改写问题，也需防止冗余规则、错误经验和过时条件累积。",
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-E"
     },
     "CINE": {
       "key": "CINE",
@@ -663,7 +701,8 @@
       "author_limit": "",
       "library_id": "VG19",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-E"
     },
     "MEMFAULT": {
       "key": "MEMFAULT",
@@ -680,7 +719,8 @@
       "author_limit": "",
       "library_id": "P097",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-E"
     },
     "ARIFY": {
       "key": "ARIFY",
@@ -697,7 +737,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-E"
     },
     "COACH": {
       "key": "COACH",
@@ -714,7 +755,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "XR-E"
     },
     "DRAM": {
       "key": "DRAM",
@@ -731,7 +773,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-C"
     },
     "SUSP": {
       "key": "SUSP",
@@ -748,7 +791,8 @@
       "author_limit": "§4.3 的揭示时机比较不显著；线索设置的结果不能挪用为揭示时机有效的证据。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-C"
     },
     "DIRECTOR": {
       "key": "DIRECTOR",
@@ -765,7 +809,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-C"
     },
     "ONE": {
       "key": "ONE",
@@ -782,7 +827,8 @@
       "author_limit": "",
       "library_id": "P133",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-C"
     },
     "ACTIVE": {
       "key": "ACTIVE",
@@ -798,7 +844,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-D"
     },
     "CONTROL": {
       "key": "CONTROL",
@@ -815,7 +862,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-D"
     },
     "QWEN": {
       "key": "QWEN",
@@ -832,7 +880,8 @@
       "author_limit": "§5.4–5.5 指出隐藏缺口、reason/search 边界及 renderer 的计数/参考跟随失败。",
       "library_id": "VG17",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-D"
     },
     "VGEN": {
       "key": "VGEN",
@@ -849,7 +898,8 @@
       "author_limit": "§5：六类任务与一个留出组合；输出和运行时间依赖可用工具。",
       "library_id": "VG20",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-D"
     },
     "SKETCH": {
       "key": "SKETCH",
@@ -866,7 +916,8 @@
       "author_limit": "原文讨论 Manim 表达范围、参与者覆盖和渲染速度等限制。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-D"
     },
     "COG": {
       "key": "COG",
@@ -883,7 +934,8 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "AIGC-D"
     },
     "CSVC": {
       "key": "CSVC",
@@ -899,7 +951,8 @@
       "author_limit": "原文未加入额外时间一致性损失；动态因果图与动作相关生成列为后续工作。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
     },
     "REAL": {
       "key": "REAL",
@@ -915,7 +968,8 @@
       "author_limit": "作者讨论深度和场景重建误差对模拟与最终生成的影响。",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
     },
     "WHATIF": {
       "key": "WHATIF",
@@ -931,19 +985,942 @@
       "author_limit": "",
       "library_id": "",
       "evidence_date": "2026-10-16",
-      "assessments": []
+      "assessments": [],
+      "primary_direction": "不确定：XR-C / AIGC-A（共享参考，未强行指定主归属）"
+    },
+    "IGCLAR": {
+      "key": "IGCLAR",
+      "title": "Uncertainty-Aware Clarification in LLM Agents with Information Gain",
+      "year": 2026,
+      "first_year": 2026,
+      "venue": "ICML 2026",
+      "source": "https://proceedings.mlr.press/v306/deng26l.html",
+      "locator": "摘要／作者项目页与发表信息；不冒充本轮阅读全文",
+      "method": "将澄清引起的、朝 ground-truth goal 的 Bayesian belief update 作为 Information Gain Reward；在扩展 τ-Bench 测试。",
+      "solved": "将澄清引起的、朝 ground-truth goal 的 Bayesian belief update 作为 Information Gain Reward；在扩展 τ-Bench 测试。",
+      "remaining": "[推断] 适合作为如何选择问题的训练基线；没有 XR 行动或视频执行验证。",
+      "tradeoff": "[推断] 迁移到当前任务时需重新控制输入、预算和评价对象。",
+      "author_limit": "",
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-15",
+      "primary_direction": "XR-L"
+    },
+    "COME": {
+      "key": "COME",
+      "title": "Composition of Memory Experts for Diffusion World Models",
+      "year": 2026,
+      "first_year": 2026,
+      "venue": "ICLR 2026",
+      "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/19eae75beed66321d62272e794a9c2ac-Abstract-Conference.html",
+      "locator": "摘要／作者项目页与发表信息；不冒充本轮阅读全文",
+      "method": "组合短期、长期与空间记忆专家；长期专家通过轻量 test-time finetuning 将历史保留在外部 diffusion 权重中。",
+      "solved": "组合短期、长期与空间记忆专家；长期专家通过轻量 test-time finetuning 将历史保留在外部 diffusion 权重中。",
+      "remaining": "[推断] 解决历史保持与一致性；未据此建立冲突证据的来源裁决与依赖撤销。",
+      "tradeoff": "[推断] 迁移到当前任务时需重新控制输入、预算和评价对象。",
+      "author_limit": "",
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-15",
+      "primary_direction": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+    },
+    "SPACE": {
+      "key": "SPACE",
+      "title": "Theory of Space: Can Foundation Models Construct Spatial Beliefs through Active Exploration?",
+      "year": 2026,
+      "first_year": 2026,
+      "venue": "ICLR 2026",
+      "source": "https://arxiv.org/abs/2602.07055",
+      "locator": "摘要／作者项目页与发表信息；不冒充本轮阅读全文",
+      "method": "用 spatial belief probing 和 false-belief 设置发现 Belief Inertia：新证据到来后模型仍保留过时先验。",
+      "solved": "用 spatial belief probing 和 false-belief 设置发现 Belief Inertia：新证据到来后模型仍保留过时先验。",
+      "remaining": "[推断] 与外来反证的失败定义非常接近；属于评测与分析，不提供视频生成修复方法。",
+      "tradeoff": "[推断] 迁移到当前任务时需重新控制输入、预算和评价对象。",
+      "author_limit": "",
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-15",
+      "primary_direction": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+    },
+    "CAUSAL": {
+      "key": "CAUSAL",
+      "title": "Causal-Adapter: Taming Text-to-Image Diffusion for Faithful Counterfactual Generation",
+      "year": 2026,
+      "first_year": 2026,
+      "venue": "ICML 2026",
+      "source": "https://leitong02.github.io/causaladapter/",
+      "locator": "摘要／作者项目页与发表信息；不冒充本轮阅读全文",
+      "method": "以 SCM 传播属性干预，并通过条件注入和 token regularization 兼顾依赖属性改变与图像身份保持。",
+      "solved": "以 SCM 传播属性干预，并通过条件注入和 token regularization 兼顾依赖属性改变与图像身份保持。",
+      "remaining": "[推断] 最适合读 Δ／Keep 的因果条件化思路；原任务为图像，未验证跨时间的视频因果链。",
+      "tradeoff": "[推断] 迁移到当前任务时需重新控制输入、预算和评价对象。",
+      "author_limit": "",
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-15",
+      "primary_direction": "AIGC-A"
+    },
+    "MULTI": {
+      "key": "MULTI",
+      "title": "Multiverse Mechanica: A Testbed for Learning Game Mechanics via Counterfactual Worlds",
+      "year": 2026,
+      "first_year": 2026,
+      "venue": "ICLR 2026",
+      "source": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/f9bc7653cf176075e88203d1e83e8c65-Abstract-Conference.html",
+      "locator": "摘要／作者项目页与发表信息；不冒充本轮阅读全文",
+      "method": "配对游戏世界与机制 DAG；生成概念验证使用 OpenJourney 的 peak-action 单帧，不是完整视频生成。",
+      "solved": "构建带 ground-truth 因果 DAG 的游戏机制 testbed，产生反事实世界数据并展示机制学习的微调概念验证。",
+      "remaining": "机制真值和配对协议可借用，但不能作为现实 XR 视频后果或学习迁移的直接证据。",
+      "tradeoff": "[推断] 迁移到当前任务时需重新控制输入、预算和评价对象。",
+      "author_limit": "",
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-15",
+      "primary_direction": "AIGC-A"
+    },
+    "MCE": {
+      "key": "MCE",
+      "title": "Meta Context Engineering via Agentic Skill Evolution",
+      "year": 2026,
+      "first_year": 2026,
+      "venue": "ICML 2026",
+      "source": "https://proceedings.mlr.press/v306/ye26g.html",
+      "locator": "摘要／作者项目页与发表信息；不冒充本轮阅读全文",
+      "method": "联合演化 context-engineering skills 和 context artifacts，在五类领域的离线、在线设置中评价。",
+      "solved": "联合演化 context-engineering skills 和 context artifacts，在五类领域的离线、在线设置中评价。",
+      "remaining": "[推断] 比仅记录成功提示更接近策略演化；多领域实验不能直接解释成跨领域无遗忘迁移。",
+      "tradeoff": "[推断] 迁移到当前任务时需重新控制输入、预算和评价对象。",
+      "author_limit": "",
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-15",
+      "primary_direction": "XR-E"
+    },
+    "DARWIN": {
+      "key": "DARWIN",
+      "title": "Darwinian Memory: A Training-Free Self-Regulating Memory System for GUI Agent Evolution",
+      "year": 2026,
+      "first_year": 2026,
+      "venue": "ICML 2026",
+      "source": "https://proceedings.mlr.press/v306/mi26b.html",
+      "locator": "摘要／作者项目页与发表信息；不冒充本轮阅读全文",
+      "method": "将 GUI 轨迹拆为可组合记忆单元，并依据使用价值管理与裁剪经验。",
+      "solved": "将 GUI 轨迹拆为可组合记忆单元，并依据使用价值管理与裁剪经验。",
+      "remaining": "[推断] 可借鉴经验失效与保留机制；不自动提供教学策略无回归的保证。",
+      "tradeoff": "[推断] 迁移到当前任务时需重新控制输入、预算和评价对象。",
+      "author_limit": "",
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-15",
+      "primary_direction": "XR-E"
+    },
+    "SILVR": {
+      "key": "SILVR",
+      "title": "SILVR: Self-Improving Loops for Visual Robotic Planning",
+      "year": 2026,
+      "first_year": 2026,
+      "venue": "ICLR 2026",
+      "source": "https://arxiv.org/abs/2506.06658",
+      "locator": "摘要／作者项目页与发表信息；不冒充本轮阅读全文",
+      "method": "用自生成成功轨迹改进视觉机器人规划，在 MetaWorld 与两个真实机器人任务中测试。",
+      "solved": "用自生成成功轨迹改进视觉机器人规划，在 MetaWorld 与两个真实机器人任务中测试。",
+      "remaining": "[推断] 连接生成与执行反馈，但目标任务改善不等于跨任务 lifelong retention。",
+      "tradeoff": "[推断] 迁移到当前任务时需重新控制输入、预算和评价对象。",
+      "author_limit": "",
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-15",
+      "primary_direction": "XR-E"
+    },
+    "JARVIS": {
+      "key": "JARVIS",
+      "title": "JarvisEvo: Towards a Self-Evolving Photo Editing Agent with Synergistic Editor-Evaluator Optimization",
+      "year": 2026,
+      "first_year": 2026,
+      "venue": "CVPR 2026",
+      "source": "https://arxiv.org/abs/2511.23002",
+      "locator": "摘要／作者项目页与发表信息；不冒充本轮阅读全文",
+      "method": "通过编辑器与评价器协同优化改进图像编辑 agent，并关注 reward hacking。",
+      "solved": "通过编辑器与评价器协同优化改进图像编辑 agent，并关注 reward hacking。",
+      "remaining": "[推断] 可借鉴训练反馈与评价器演化；图像编辑收益不是学员学习收益。",
+      "tradeoff": "[推断] 迁移到当前任务时需重新控制输入、预算和评价对象。",
+      "author_limit": "",
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-15",
+      "primary_direction": "XR-E"
+    },
+    "VISTA": {
+      "key": "VISTA",
+      "title": "VISTA: A Test-Time Self-Improving Video Generation Agent",
+      "year": 2026,
+      "first_year": 2026,
+      "venue": "CVPR 2026",
+      "source": "https://research.google/pubs/vista-towards-test-time-self-improving-video-generation-agent/",
+      "locator": "摘要／作者项目页与发表信息；不冒充本轮阅读全文",
+      "method": "通过时间计划、候选比较与多维反馈迭代修订视频生成提示。",
+      "solved": "通过时间计划、候选比较与多维反馈迭代修订视频生成提示。",
+      "remaining": "[推断] 主要是当前任务 test-time improvement；不能因 self-improving 名称就计为跨任务学习。",
+      "tradeoff": "[推断] 迁移到当前任务时需重新控制输入、预算和评价对象。",
+      "author_limit": "",
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-15",
+      "primary_direction": "XR-E"
+    },
+    "DGM": {
+      "key": "DGM",
+      "title": "Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents",
+      "year": 2026,
+      "first_year": 2026,
+      "venue": "ICLR 2026",
+      "source": "https://arxiv.org/abs/2505.22954",
+      "locator": "摘要／作者项目页与发表信息；不冒充本轮阅读全文",
+      "method": "修改 agent 自身代码，维护候选归档并在编码任务中检验新变体。",
+      "solved": "修改 agent 自身代码，维护候选归档并在编码任务中检验新变体。",
+      "remaining": "[推断] 是 RSI／自修改 agent 的方法近邻，离 XR 教学策略和视频生成较远。",
+      "tradeoff": "[推断] 迁移到当前任务时需重新控制输入、预算和评价对象。",
+      "author_limit": "",
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-15",
+      "primary_direction": "XR-E"
+    },
+    "TUTOR": {
+      "key": "TUTOR",
+      "title": "Generative Tutorial: Towards Live Contextualized Visual Instructions for Physical Tasks",
+      "year": 2026,
+      "first_year": 2026,
+      "venue": "arXiv 2026",
+      "source": "https://arxiv.org/abs/2609.24955",
+      "locator": "摘要／作者项目页与发表信息；不冒充本轮阅读全文",
+      "method": "根据工作区上下文生成目标图像与演示视频，在 AR 原型中报告 N=24 用户研究。",
+      "solved": "根据工作区上下文生成目标图像与演示视频，在 AR 原型中报告 N=24 用户研究。",
+      "remaining": "[推断] 直接接近物理任务视觉教程；尚不能作为跨任务 self-evolution 的证据。",
+      "tradeoff": "[推断] 迁移到当前任务时需重新控制输入、预算和评价对象。",
+      "author_limit": "",
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-15",
+      "primary_direction": "XR-E"
+    },
+    "LAB": {
+      "key": "LAB",
+      "first_year": 2026,
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-19",
+      "title": "LabInstruct: Benchmarking Situated Instructional Video Generation for Lab Procedures",
+      "year": 2026,
+      "venue": "arXiv 2026 · 预印本",
+      "source": "https://arxiv.org/abs/2610.14020",
+      "locator": "摘要、§3–4、Appendix A／C",
+      "method": "用真实实验步骤及对象、动作、接触和状态变化标注评测教程视频。",
+      "solved": "建立程序正确性评测；204 项任务、5 个学科、8 个生成模型。",
+      "remaining": "未证明学员学习迁移；短片程序基准不是任意设备或交互闭环。",
+      "tradeoff": "真实程序标注成本高；视觉可观察任务的结论有范围限制。",
+      "author_limit": "数据来源不均、任务较短且经过筛选。",
+      "details": {
+        "Model": "评测 Wan 2.2 I2V A14B、LTX 2.3、Cosmos3 Nano／Super、LingBot Video、MiniMax H3、Seedance 2.0、Wan 3.0",
+        "Backbone／生成方式": "多生成器评测，无统一 backbone；闭源结构不确定",
+        "Condition": "text＋初始 image",
+        "训练／适应 dataset": "未提出基于此基准的 finetune；不是训练集",
+        "评测 dataset": "LabInstruct；来源含 Bilibili、YouTube、FineBio、ExpVid",
+        "Finetune 资源": "不适用：本工作做基准评测；生成推理开销不能算训练",
+        "任务／贡献／类型 [推断]": "文本或图像生成视频／评测（次：数据）／基准",
+        "目标性质／范式 [推断]": "指令遵循、状态一致／离线整段生成",
+        "输入 → 输出／Keep": "初始工作台图像＋指令 → 程序视频；保持设备、对象及程序约束",
+        "判断对错／证据": "结构化 checklist，定量模型比较与人工评估；人工评估人数本轮未核实",
+        "训练信号／条件注入": "无新训练信号；各生成器原生 I2V 接口"
+      },
+      "primary_direction": "XR-C"
+    },
+    "DISCOVER": {
+      "key": "DISCOVER",
+      "first_year": 2026,
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-19",
+      "title": "DiscoverLLM: From Executing Intents to Discovering Them",
+      "year": 2026,
+      "venue": "ICML 2026 · 作者仓库确认录用",
+      "source": "https://arxiv.org/abs/2602.03429",
+      "extra_source": "https://github.com/tsook/discoverllm",
+      "locator": "§3–4、§4.3、Appendix B；作者 README",
+      "method": "用会随交互展开的 intent tree 模拟用户，优化多轮协作中的意图发现。",
+      "solved": "在写作与 SVG 任务中评估共同形成意图，含 75 人用户研究。",
+      "remaining": "不是用户一开始就有完整 GT 的恢复问题；也未验证跨任务 XR 协作惯例。",
+      "tradeoff": "依赖 simulator 和 judge 的目标；模拟意图形成与真人变化可能不同。",
+      "author_limit": "用户模拟器是受控近似，不能视为用户心智真值。",
+      "details": {
+        "Model": "Llama-3.1-8B-Instruct；Qwen3-8B",
+        "Backbone／生成方式": "自回归文本 Transformer；非视频生成器",
+        "Condition": "text：任务与多轮对话",
+        "训练／适应 dataset": "WritingPrompts_preferences、技术写作文章、SVG 来源构造 intent trees；各域 500 个训练 artifacts、100 个评测 artifacts",
+        "训练信号／条件注入": "LoRA；SFT／DPO，Qwen 另测 GRPO；对话进入文本 context",
+        "Finetune 资源": "所读训练段落未核实 GPU 型号、卡数与时长；不能按 8B 或 LoRA 推定成本",
+        "任务／贡献／类型 [推断]": "其他：协作意图形成／训练信号（次：数据）／方法",
+        "目标性质／范式 [推断]": "协作与意图满足（原 taxonomy 外补充）／非视频，不适用视频范式",
+        "输入 → 输出／Keep": "不完整目标＋互动 → 逐步形成的意图与作品；不是固定隐藏 GT",
+        "判断对错／证据": "模拟意图发现／满足指标、模型比较、75 人 user study"
+      },
+      "primary_direction": "AIGC-D"
+    },
+    "CODEVIDEO": {
+      "key": "CODEVIDEO",
+      "first_year": 2026,
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-19",
+      "title": "Code Video Model",
+      "year": 2026,
+      "venue": "作者技术报告／项目 · 正式 venue 未核实",
+      "source": "https://code-video-model.github.io/",
+      "extra_source": "https://github.com/code-video-model/CodeVideoModel",
+      "locator": "作者项目摘要、pipeline、README；未取得技术报告全文",
+      "method": "生成可执行 previs 程序，渲染几何／动作代理视频，再引导冻结的视频生成器。",
+      "solved": "提供结构化可执行控制到视觉生成的接口。",
+      "remaining": "程序控制执行不能证明自动识别真实环境机制或在线纠错。",
+      "tradeoff": "需要可渲染代理和程序有效性；代理表达能力限制可控内容。",
+      "author_limit": "本轮只核对项目页与 README，不以演示推定定量泛化能力。",
+      "details": {
+        "Model": "项目实现使用 MiniMax H3；程序生成示例使用 GPT-6",
+        "Backbone／生成方式": "冻结视频模型＋previs 条件；闭源 backbone 未核实",
+        "Condition": "text＋reference image＋程序渲染 proxy video／scene",
+        "训练／适应 dataset": "作者说明无需额外训练；底座预训练数据未核实",
+        "Finetune 资源": "无新增视频模型训练；LLM／视频推理成本未核实",
+        "任务／贡献／类型 [推断]": "条件控制生成／推理时方法（次：表示）／技术报告，方法参考",
+        "目标性质／范式 [推断]": "指令遵循、几何一致／离线整段生成",
+        "输入 → 输出／Keep": "描述＋参考 → 可执行场景程序与视频；保持约束的正式保证未核实",
+        "判断对错／证据": "项目演示与说明；定量 benchmark、消融及 user study 本轮未核实",
+        "训练信号／条件注入": "无新增训练；代理视频在采样早期引导生成"
+      },
+      "primary_direction": "AIGC-D"
+    },
+    "STREAMCODE": {
+      "key": "STREAMCODE",
+      "first_year": 2026,
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-19",
+      "title": "Streaming Code World Model",
+      "year": 2026,
+      "venue": "工程仓库 · 不计作已发表论文",
+      "source": "https://github.com/TingtingLiao/streaming-code-world-model",
+      "locator": "README：data、training、performance、limitations",
+      "method": "基于 CARLA 训练数据、diffusion forcing／DMD self-forcing，使用滑动 KV cache 生成交互片段。",
+      "solved": "提供受动作控制的流式世界模型工程实现。",
+      "remaining": "作者报告尚未实时；没有建立外来反证下的信念与记忆修订。",
+      "tradeoff": "公开推理配置需要大显存；小规模 CARLA 检验不能直接外推真实 XR。",
+      "author_limit": "约 0.71 秒输出片段需约 5.1 秒计算（H200）；仅小规模 held-out 设置。",
+      "details": {
+        "Model": "仓库提供的 streaming model；底座版本本轮未核实",
+        "Backbone／生成方式": "因果分块、6-chunk KV cache；4 步采样；确切 backbone 待核",
+        "Condition": "动作＋历史片段／场景观测",
+        "训练／适应 dataset": "README：342 个 CARLA clips，约 3.7 小时",
+        "评测 dataset": "4 个留出 CARLA clips，单 seed；不代表广泛泛化",
+        "Finetune 资源": "训练 GPU 卡数／时长本轮未核实。H200 与约 123GB bf16／108GB FP8 是推理配置，不填成 finetune 成本",
+        "任务／贡献／类型 [推断]": "动作条件的预测与交互世界模型／架构与生成范式／工程实现，非论文类型",
+        "目标性质／范式 [推断]": "短时连贯、指令遵循、延迟／因果自回归或流式；少步不等于实时",
+        "输入 → 输出／Keep": "动作与历史 → 新视频 chunk；历史窗口保留不等于事实有效性验证",
+        "判断对错／证据": "README 工程测量与示例；无已核实的论文评审／user study",
+        "训练信号／条件注入": "diffusion forcing 与 DMD self-forcing；动作接口和历史 KV cache"
+      },
+      "primary_direction": "XR-S"
+    },
+    "SPLICE": {
+      "key": "SPLICE",
+      "title": "ActionSplice: In-Flight Action Editing for Interactive World Models",
+      "year": 2026,
+      "first_year": 2026,
+      "venue": "不确定（arXiv preprint）",
+      "source": "https://arxiv.org/html/2609.08230",
+      "locator": "原库正文核验记录；PPT 19／24 对照",
+      "method": "在生成途中修改动作时，把当前采样状态迁移到新条件轨迹而非从头生成。",
+      "solved": "在生成途中修改动作时，把当前采样状态迁移到新条件轨迹而非从头生成。",
+      "remaining": "收到新动作后的在途采样修正；不负责反证发现和记忆失效判断。",
+      "tradeoff": "[推断] 作为接口组件迁移时，需独立验证新任务的证据与预算。",
+      "author_limit": "",
+      "assessments": [],
+      "library_id": "",
+      "evidence_date": "2026-10-19",
+      "primary_direction": "XR-S"
+    },
+    "MIND": {
+      "key": "MIND",
+      "title": "MindCube: Spatial Mental Modeling from Limited Views",
+      "year": 2026,
+      "first_year": 2025,
+      "venue": "",
+      "source": "https://arxiv.org/abs/2506.21458",
+      "locator": "原库正文核验记录；PPT 19／24 对照",
+      "method": "从有限视图构建空间 mental model，进行空间推理；不等于主动澄清。",
+      "solved": "从有限视图构建空间 mental model，进行空间推理；不等于主动澄清。",
+      "remaining": "从有限视图建立空间表示；不是向用户澄清或自行获取新观测。",
+      "tradeoff": "[推断] 作为接口组件迁移时，需独立验证新任务的证据与预算。",
+      "author_limit": "",
+      "assessments": [],
+      "library_id": "P302",
+      "evidence_date": "2026-10-19",
+      "primary_direction": "AIGC-D"
+    },
+    "LIB-VG43": {
+      "key": "LIB-VG43",
+      "title": "ArtiMo: Agent-Driven Articulated Mesh Animation",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2608.20699v1",
+      "method": "利用 URDF 关节约束、语言规划和视觉自修正，零样本生成有部件因果关系的网格动画。",
+      "solved": "相较自由形变或普通文本驱动动画，它显式约束轴向、部件联动与动作阶段，支持机构相关操作。",
+      "remaining": "【原文局限】依赖关节结构质量，小部件与遮挡可能影响判断。【任务范围】运动学约束和可执行动画是已建立贡献；完整受力物理与未知机制识别需另测。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF p.1 方法 / URDF；PDF p.19 原文局限 / Our method depends on the quality",
+      "library_id": "VG43",
+      "evidence_date": "沿用原库",
+      "primary_direction": "XR-C"
+    },
+    "LIB-VG09": {
+      "key": "LIB-VG09",
+      "title": "CounterVid: Counterfactual Video Generation for Mitigating Action and Temporal Hallucinations in Video-Language Models",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2601.04778v2",
+      "method": "保持场景上下文而合成动作或时序不同的视频偏好对，用 MixDPO 降低 VLM 幻觉。",
+      "solved": "相较文本负例或随机扰动，它提供语义接近但动态不同的视觉硬负例，迫使模型看清真实动作。",
+      "remaining": "【原文局限】跨生成器验证仍待完善。【任务范围】合成反事实视频是训练数据手段，主要验证对象是理解模型；生成器因果能力及基于该模型的奖励可靠性需要单独检查。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF p.1 方法 / MixDPO；PDF p.9 原文局限 / cross-generator validation remains",
+      "library_id": "VG09",
+      "evidence_date": "沿用原库",
+      "primary_direction": "XR-C"
+    },
+    "LIB-P143": {
+      "key": "LIB-P143",
+      "title": "Interactive Visual Reasoning under Uncertainty",
+      "year": "2023 / 2022",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2206.09203v2",
+      "method": "IVRE把Blicket检测变成主动视觉推理任务：仅凭初始场景不能知道所有物体是否会使机器激活，智能体必须提出新实验、根据结果更新belief，并在有限次数内解除不确定性。对符号、像素、LLM和人类基线的比较显示，实验选择和证据整合均构成明显瓶颈。",
+      "solved": "提供可干预、可反馈的视觉推理环境，联合评估假设更新与实验效率；用共享底层机制的符号/像素版本区分推理难度与感知难度。",
+      "remaining": "9个物体、其中1–4个Blicket，4个初始context面板，总时步上限T=10；机制为至少一个Blicket出现即激活的OR规则，且告知Blicket总数。行动简化为选取物体集合，不含机器人运动控制、用户代执行、空间提示或注意力中断。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF pp.4–5：环境及奖励；pp.6–7：基线和人类设置；p.8表2：结果；pp.9–10：分析与明确局限。",
+      "library_id": "P143",
+      "evidence_date": "沿用原库",
+      "primary_direction": "不确定：XR-C / AIGC-D（共享参考，未强行指定主归属）"
+    },
+    "LIB-P036": {
+      "key": "LIB-P036",
+      "title": "SimStep: Human-in-the-Loop Authoring of Interactive Educational Simulations Through Task-Level Abstractions",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://doi.org/10.1145/3772318.3791514",
+      "method": "通过可检查、可修改的任务级图表示，让教师逐步创作并调试互动教学模拟。",
+      "solved": "Chain-of-Abstractions 及 inverse correction，将概念、场景、学习目标、UI 与代码衔接。",
+      "remaining": "【贡献范围】已建立教师通过任务抽象审核、修订模拟的创作接口；学生学习迁移和物理保真度属于另需验证的结果，不能用这些未测结果否定已有创作贡献。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "§3–5；§6.2；§7/表5；§8.3。",
+      "library_id": "P036",
+      "evidence_date": "沿用原库",
+      "primary_direction": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）"
+    },
+    "LIB-P146": {
+      "key": "LIB-P146",
+      "title": "ExpertAF: Expert Actionable Feedback from Video",
+      "year": "2025 / 2024",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://openaccess.thecvf.com/content/CVPR2025/papers/Ashutosh_ExpertAF_Expert_Actionable_Feedback_from_Video_CVPR_2025_paper.pdf",
+      "method": "从学习者执行体育动作的视频和3D姿态生成可操作的指导，包括指出优缺点的专家式文字反馈、检索正确示范，以及生成修正后的3D姿态。利用Ego-Exo4D专家评论构建弱监督错误—正确动作配对，训练统一视频、姿态与文本模型。",
+      "solved": "将技能评价从单一分数推进到具体纠正建议与示范；贡献弱监督配对数据和支持三类输出的多模态自回归模型。",
+      "remaining": "实际评估篮球、足球、攀岩三类身体技能；主设置输入包含ego/exo视频与3D姿态，假定一个主要动作执行者。输出视频是检索已有示范，生成的是姿态序列；新专家视频生成留作未来。没有进行长期训练者技能提升或实时XR闭环试验。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF pp.3–6：任务、配对数据、编码器及训练；p.7表1：三类输出结果及特权输入说明；p.8：人评和失败案例。",
+      "library_id": "P146",
+      "evidence_date": "沿用原库",
+      "primary_direction": "不确定：XR-C / XR-E（共享参考，未强行指定主归属）"
+    },
+    "LIB-VG60": {
+      "key": "LIB-VG60",
+      "title": "See, Remember, Explore: A Benchmark and Baselines for Streaming Spatial Reasoning（S³-Bench / AMF-VLM）",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2603.23864v1",
+      "method": "用有时间截止的流式空间问答评测记忆与主动探索，并以 memory folding 压缩历史、按需获取新证据。",
+      "solved": "相较看完整视频再答题，它要求仅用当时可得观察，在有限计算下主动弥补视野不足。",
+      "remaining": "【任务边界】已有主动探索但主要输出答案；",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF p.1 方法 / memory folding；PDF p.1 任务边界 / only observations available",
+      "library_id": "VG60",
+      "evidence_date": "沿用原库",
+      "primary_direction": "不确定：XR-L / AIGC-D（共享参考，未强行指定主归属）"
+    },
+    "LIB-P157": {
+      "key": "LIB-P157",
+      "title": "Exploring Exploration with Foundation Agents in Interactive Environments",
+      "year": "2025 / 2024",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2412.06438v2",
+      "method": "考查基础模型能否在交互环境中主动收集信息、检验假设并适应隐藏机制。以文本/三维Feature World和更复杂的Alchemy实验，分析模型、先验说明及周期总结对探索质量、跨试次学习和机制突变后适应的作用。",
+      "solved": "区分探索动作是否提供足够信息与模型是否正确利用信息；从简单特征发现扩展到跨试次隐藏动力学学习，并测试不预告的规则改变。包含模型从视频读取状态、提出行动指令、由人类执行的三维概念验证。",
+      "remaining": "无需微调的模型能力研究，非新训练算法。三维试验用Gemini 1.5 Pro，由人类执行移动/放置指令；这一设置已经覆盖‘新证据需要请求人类行动’的基本形态。每个三维条件15个episode，任务结构简单，未优化人类注意力、行动可接受性或XR空间提示。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF pp.5–7：Feature World与三维人类执行，p.7 Figure 3及视觉错误；pp.8–11：Alchemy、总结/先验和机制突变；p.12：局限。",
+      "library_id": "P157",
+      "evidence_date": "沿用原库",
+      "primary_direction": "XR-L"
+    },
+    "LIB-P372": {
+      "key": "LIB-P372",
+      "title": "ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2605.18746",
+      "method": "研究问题：空间理解从固定观察转为主动探索后会发生什么？",
+      "solved": "ESI-Bench 在 OmniGibson 中让观察者执行动作取证，比较主动探索、被动观察与三维辅助。",
+      "remaining": "显式三维表示错误也可能损害推理；不能预设 3D 辅助必然更可靠。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。",
+      "library_id": "P372",
+      "evidence_date": "沿用原库",
+      "primary_direction": "XR-L"
+    },
+    "LIB-VG58": {
+      "key": "LIB-VG58",
+      "title": "ParaVT: Taming the Tool Prior Paradox for Parallel Tool Use in Agentic Video Reinforcement Learning",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2605.20342v2",
+      "method": "并行调用视频裁剪工具，并以结构 token 格式奖励及帧预算随机化训练 PARA-GRPO。",
+      "solved": "相较串行裁剪的错误累积和成本，它研究工具先验如何同时帮助探索与诱发格式崩溃或跳工具捷径。",
+      "remaining": "【任务边界】证据来自理解工具而非生成控制；",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF p.1 方法 / Tool Prior Paradox；PDF p.1 局部奖励 / structural-token positions",
+      "library_id": "VG58",
+      "evidence_date": "沿用原库",
+      "primary_direction": "XR-L"
+    },
+    "LIB-VG61": {
+      "key": "LIB-VG61",
+      "title": "Understanding Data Influence in Reinforcement Finetuning（RFT-Inf）",
+      "year": "2025",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/3755a02b1035fbadd5f93a022170e46f-Abstract-Conference.html",
+      "method": "通过优化轨迹的一阶近似估计训练样本对最终奖励的影响，用于强化微调数据选择。",
+      "solved": "相较只按难度或奖励筛数据，它以样本梯度与总体更新方向的关系估计训练价值。",
+      "remaining": "原速览的边界与研究建议见下方；建议并非原文实证结论。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF p.1 方法 / first-order approximation；PDF p.1 度量 / final training reward",
+      "library_id": "VG61",
+      "evidence_date": "沿用原库",
+      "primary_direction": "XR-L"
+    },
+    "LIB-P059": {
+      "key": "LIB-P059",
+      "title": "Sensible Agent: A Framework for Unobtrusive Interaction with Proactive AR Agents",
+      "year": "2025",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://doi.org/10.1145/3746059.3747748",
+      "method": "结合多模态情境感知决定主动AR助手提供什么帮助，以及用语音、视觉、头/手/注视等何种方式交互，从而降低打扰和主观操作负担。",
+      "solved": "将建议内容和交互模态联合适配；专家工作坊N=12、标注研究N=40及XR原型研究N=10支撑设计。",
+      "remaining": "当前没有长期用户偏好建模，也未求解精确的介入时机；测试为有限AR和360°视频场景。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF pp.14–16，§7.4、图8、§9。",
+      "library_id": "P059",
+      "evidence_date": "沿用原库",
+      "primary_direction": "XR-L"
+    },
+    "LIB-P251": {
+      "key": "LIB-P251",
+      "title": "ARCap: Collecting High-quality Human Demonstrations for Robot Learning with Augmented Reality Feedback",
+      "year": "2024",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2410.08464",
+      "method": "研究问题：AR 反馈能否帮助非专家采集机器人可执行的示范？",
+      "solved": "ARCap 通过增强现实视觉反馈和触觉警告，帮助用户避免碰撞并匹配机器人运动学。",
+      "remaining": "与 AR tutorial 直接相邻，但目标是示范采集；不是多分支未来视频探索。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。",
+      "library_id": "P251",
+      "evidence_date": "沿用原库",
+      "primary_direction": "XR-L"
+    },
+    "LIB-VG15": {
+      "key": "LIB-VG15",
+      "title": "A²RD: Agentic Autoregressive Diffusion for Long Video Consistency",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2605.06924v1",
+      "method": "用多模态记忆、分段生成策略和分层自修正，按检索—生成—修订—更新循环制作长视频。",
+      "solved": "相较开放环路拼接，它在片段进入后续生成前检查并改善实体、环境与叙事的一致性。",
+      "remaining": "原速览的边界与研究建议见下方；建议并非原文实证结论。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF p.1 方法 / Retrieve–Synthesize–Refine–Update；PDF p.16 原文局限 / verification rubrics reflect implicit assumptions",
+      "library_id": "VG15",
+      "evidence_date": "沿用原库",
+      "primary_direction": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+    },
+    "LIB-VG63": {
+      "key": "LIB-VG63",
+      "title": "VideoSSM: Autoregressive Long Video Generation with Hybrid State-Space Memory",
+      "year": "2025",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2512.04519v1",
+      "method": "用局部窗口保存细节、SSM 全局状态压缩离窗历史，实现可随内容更新的长视频记忆。",
+      "solved": "相较滑窗遗忘或固定首帧锚导致重复，它协调动态全局记忆与局部运动信息。",
+      "remaining": "原速览的边界与研究建议见下方；建议并非原文实证结论。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF p.1 方法 / hybrid statespace memory；PDF p.5 现有更新机制 / injection gate",
+      "library_id": "VG63",
+      "evidence_date": "沿用原库",
+      "primary_direction": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+    },
+    "LIB-VG50": {
+      "key": "LIB-VG50",
+      "title": "JoyAI-Video-Edit: Real-Time Open-Ended Video Editing with Autoregressive Diffusion",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2608.03974v1",
+      "method": "以分块自回归、源视频锚定蒸馏和长程蒸馏，完成无未来帧输入的实时流式视频编辑。",
+      "solved": "相较离线整段编辑或逐段独立处理，它联合解决有界计算、源内容保持和少步生成的长期漂移。",
+      "remaining": "原速览的边界与研究建议见下方；建议并非原文实证结论。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF p.1 方法 / Source-Anchored Distribution Matching；PDF p.1 任务边界 / without access to future frames",
+      "library_id": "VG50",
+      "evidence_date": "沿用原库",
+      "primary_direction": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+    },
+    "LIB-VG22": {
+      "key": "LIB-VG22",
+      "title": "MaLiang-Harness: A Programmable Path to Image and Video Generation",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2609.34309v1",
+      "method": "把视觉程序、构建历史和渲染验证绑定到同一修订版本，支持持续检查、修改与恢复。",
+      "solved": "相较代码能运行就算成功，它专门检查可执行程序是否真的产生符合要求的图像或视频。",
+      "remaining": "【原文局限】照片真实感和停滞的反复修订仍是问题；",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF p.1 方法 / common revision reference；PDF p.14 原文局限 / stalled refinement",
+      "library_id": "VG22",
+      "evidence_date": "沿用原库",
+      "primary_direction": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+    },
+    "LIB-VG37": {
+      "key": "LIB-VG37",
+      "title": "VLMs are Good Teachers for Video Reasoning via Adaptive Test-Time Optimization",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2606.02564v3",
+      "method": "让 VLM 生成任务规则与可微奖励，在测试时优化视频模型的轻量 LoRA 来纠正推理轨迹。",
+      "solved": "相较 VLM 只写提示或反复抽样选优，它让规则验证反馈直接改变视频模型的执行行为。",
+      "remaining": "【原文局限】教师会看错或漏写目标，且存在视觉质量取舍；",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF p.1 方法 / lightweight LoRA module；PDF p.11 原文局限 / perception granularity",
+      "library_id": "VG37",
+      "evidence_date": "沿用原库",
+      "primary_direction": "不确定：XR-S / XR-E（共享参考，未强行指定主归属）"
+    },
+    "LIB-VG11": {
+      "key": "LIB-VG11",
+      "title": "VQQA: An Agentic Approach for Video Evaluation and Quality Improvement",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2603.12310v1",
+      "method": "围绕意图和生成视频动态提问，由 QA 批评形成语义反馈，修订提示并重新生成；用于黑盒测试时质量优化。",
+      "solved": "在多种生成器与视频评测任务上建立动态 QA—提示修订闭环；无需读取生成器梯度，也能发现单片中的时序和全局问题。",
+      "remaining": "【原文 Appendix A】受评判幻觉、基础生成器能力和串行延迟限制。【任务范围】默认重新生成不等于局部视频修复，尚未专门验证同历史反事实与因果保持。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "方法 QA／Semantic Gradients／Global Selection；实验；Appendix A",
+      "library_id": "VG11",
+      "evidence_date": "沿用原库",
+      "primary_direction": "不确定：XR-S / AIGC-C（共享参考，未强行指定主归属）"
+    },
+    "LIB-P391": {
+      "key": "LIB-P391",
+      "title": "AdaJEPA: An Adaptive Latent World Model",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2606.32026",
+      "method": "研究问题：部署时遇到外观或动力学变化，潜空间世界模型能否利用刚发生的交互快速适应？",
+      "solved": "AdaJEPA 在执行动作后，用观测到的转移更新编码器和预测器的部分参数，再进行规划。",
+      "remaining": "属于潜空间模型的测试时适应；不等于显式规则编辑，也没有直接验证写实视频质量。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF pp.2–6：方法闭环、更新参数、回放、数据与变化设置。方法已核查，未复现实验。",
+      "library_id": "P391",
+      "evidence_date": "沿用原库",
+      "primary_direction": "XR-S"
+    },
+    "LIB-VG30": {
+      "key": "LIB-VG30",
+      "title": "The Past Frames the Future: Memory for Autoregressive Video Generation — A Survey",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2609.28466v1",
+      "method": "从形式、功能、操作、学习与评测五个视角梳理自回归视频生成的持续记忆机制。",
+      "solved": "相较把长上下文等同于记忆，它强调历史信息需在离开窗口后仍准确、可访问并影响生成。",
+      "remaining": "【证据边界】综述提供分类与问题定位而非新模型实证；",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF p.1 综述框架 / five complementary perspectives；PDF p.1 更新问题 / trustworthy state updating",
+      "library_id": "VG30",
+      "evidence_date": "沿用原库",
+      "primary_direction": "不确定：XR-S / AIGC-B（共享参考，未强行指定主归属）"
+    },
+    "LIB-P061": {
+      "key": "LIB-P061",
+      "title": "AgentHands: Generating Interactive Hand Gestures for Spatially Grounded Agent Conversations in XR",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://doi.org/10.1145/3772318.3790938",
+      "method": "让XR会话助手以与语音同步、指向真实场景的虚拟手势解释对象、动作和位置，缩小语言指令与空间理解之间的差距。",
+      "solved": "形成手势设计分类并实现带GestureEvents的语言生成、解析和动画流水线。",
+      "remaining": "依赖轻量预扫描对象注册表，主要适合静态场景；手势实例来自人工编写的有限集合，并非任意动作生成或物理机器人操作。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF §4.5、§6、图8 p.13、§7 pp.14–15。",
+      "library_id": "P061",
+      "evidence_date": "沿用原库",
+      "primary_direction": "XR-S"
+    },
+    "LIB-P022": {
+      "key": "LIB-P022",
+      "title": "Enabling Self-Improving Agents to Learn at Test Time With Human-In-The-Loop Guidance",
+      "year": "2025",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2507.17131v2",
+      "method": "ARIA 识别知识缺口、向专家求助并维护带时间戳的知识库，以适应运行中变化的规则。",
+      "solved": "将主动询问、冲突消解和时效性知识更新结合，用于动态名称筛查与合同理解。",
+      "remaining": "更新主要是外部知识库；TikTok Pay 部署和用户覆盖是论文自述，不能将平台月活当作实验人数；公开 CUAD 实验用 LLM 模拟专家。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "§4；表1；§6.1–6.2/表4；Limitations。",
+      "library_id": "P022",
+      "evidence_date": "沿用原库",
+      "primary_direction": "XR-E"
+    },
+    "LIB-P024": {
+      "key": "LIB-P024",
+      "title": "Nested Learning: The Illusion of Deep Learning Architecture",
+      "year": "2025",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2512.24695v1",
+      "method": "把网络、优化器和记忆统一为不同更新频率的嵌套优化过程，并据此设计连续记忆系统和 Hope。",
+      "solved": "提出 NL 视角、表达力更强的优化器、自修改学习模块和 Continuum Memory System。",
+      "remaining": "提供理论重述与具体原型实验；作者明确表示未普遍解决灾难性遗忘。标题按首页单数 Architecture，元数据为 Architectures。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "§3–8；§9、表1–5；§10 的 Is Catastrophic Forgetting Solved?。",
+      "library_id": "P024",
+      "evidence_date": "沿用原库",
+      "primary_direction": "XR-E"
+    },
+    "LIB-P390": {
+      "key": "LIB-P390",
+      "title": "ReGRPO: Reflection-Augmented Policy Optimization for Tool-Using Agents",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2606.31392",
+      "method": "研究问题：工具智能体怎样从实际失败中学习有效且不过量的反思？",
+      "solved": "ReGRPO 用错误类型、证据和修复计划构造训练数据，再联合优化反思与纠正动作并计入反思成本。",
+      "remaining": "工具任务中的纠错不直接证明物理世界机制修订或视频推理。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。",
+      "library_id": "P390",
+      "evidence_date": "沿用原库",
+      "primary_direction": "XR-E"
+    },
+    "LIB-P379": {
+      "key": "LIB-P379",
+      "title": "Demo2Tutorial: From Human Experience to Multimodal Software Tutorials",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2606.03951",
+      "method": "研究问题：人类的软件操作记录怎样转成可学习的多模态教程？",
+      "solved": "Demo2Tutorial 将录屏和交互日志解析为动作与意图，再形成层级任务图及图文教程，评估人和 GUI agent 的使用效果。",
+      "remaining": "生成的是软件操作教程，不能等同于预测物理干预后果的视频。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF pp.4–5 §3.2–5：动作解析、任务图、选帧、TutorialBench 与三类评价。方法已核查，未复现实验。",
+      "library_id": "P379",
+      "evidence_date": "沿用原库",
+      "primary_direction": "XR-E"
+    },
+    "TECH-X283": {
+      "key": "TECH-X283",
+      "title": "LayerRecall: A State-Conditioned Memory Router for Long-Horizon Consistency in Video Generation",
+      "year": "不确定",
+      "venue": "未核实",
+      "source": "https://arxiv.org/html/2608.28460",
+      "method": "不确定：本轮尚未核实",
+      "solved": "不确定：本轮尚未核实",
+      "remaining": "新字段仅写已核实信息；其他表示待核，不代表原文未报告。任务及贡献分类均为 [推断]。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "摘要与方法片段；未完成的字段另标不确定",
+      "library_id": "",
+      "evidence_date": "沿用原库",
+      "primary_direction": "AIGC-B"
+    },
+    "TECH-X252": {
+      "key": "TECH-X252",
+      "title": "Generative World Explorer",
+      "year": 2025,
+      "venue": "ICLR 2025",
+      "source": "https://arxiv.org/html/2411.11844v3",
+      "method": "训练 generative world explorer，将生成的全景观察用于 belief/decision；对比仅文本/当前视角等输入条件。",
+      "solved": "将可连续探索的生成视觉用于部分可见场景的决策辅助。",
+      "remaining": "",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "正文 v3 Abstract、Experiments Findings；Appendix Human Evaluation",
+      "library_id": "",
+      "evidence_date": "沿用原库",
+      "primary_direction": "AIGC-B"
+    },
+    "LIB-P161": {
+      "key": "LIB-P161",
+      "title": "Learning Long-form Movie Prior via Large Language Models",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://doi.org/10.1109/TPAMI.2026.3729756",
+      "method": "将电影中的剧本、人物身份、站位、动作和场景物体表示为可离散化的文本与空间坐标序列，使用LLaMA的下一token预测学习联合分镜先验，再通过指令微调从简短创意生成分镜。提出Storyboard20K，为跨镜头身份、边界框与全身关键点提供细粒度标注；生成结果可作为可控图像模型的布局条件，辅助视觉叙事创作。",
+      "solved": "构建来自MovieNet与LSMDC的20,310个分镜、149,528个关键帧，覆盖约400部电影；标注约319K人物框、180K场景物体框、跨帧一致身份及全身关键点，并提供GPT-4生成的标题、类型、情绪、场景和短摘要。将script、objects、main characters统一编码为JSON形式的token序列，以LLaMA-3/3.2的1B、3B、8B模型学习结构化电影先验。",
+      "remaining": "核心输出是剧本文本、边界框和关键点组成的稀疏分镜，不是直接生成连续像素视频。数据通常每个分镜3–10个关键帧，源片段平均33.9秒；不能据此声称已验证整部长电影的长期一致性。ROICtrl等现成图像模型用于可视化。人物身份与布局连贯不等于已学得可执行的因果世界模型；论文没有验证世界规则编辑、物理干预或规则修改后的依赖更新。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "PDF p.1：题名、3位作者、DOI和已接收作者稿声明；pp.3–4 §3及Table 1：20,310分镜、149,528帧、约400电影、平均33.9秒、标注流程；p.5 §4：坐标离散化、98/17关键点与两阶段学习；p.6 Fig.5、§5.1及Tables 2–3：数据划分、两示例对照、文本指标与布局FID；pp.6–7 §5.3及Table 4：人工评价和68%偏好率；p.8 Fig.6：ROICtrl可视化。资源状态另核对作者主页、官方仓库及arXiv旧版记录（2026-09-16）。",
+      "library_id": "P161",
+      "evidence_date": "沿用原库",
+      "primary_direction": "AIGC-C"
+    },
+    "LIB-P214": {
+      "key": "LIB-P214",
+      "title": "Direct-a-Video: Customized Video Generation with User-Directed Camera Movement and Object Motion",
+      "year": "2024",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2402.03162",
+      "method": "研究问题：如何解耦控制相机运动与多个对象的运动？",
+      "solved": "Direct-a-Video 分别建模相机参数和对象运动，以新增时间交叉注意力和数据增强训练相机控制。",
+      "remaining": "用户已指定运动条件；控制准确性需要与自主预测后果区分。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。",
+      "library_id": "P214",
+      "evidence_date": "沿用原库",
+      "primary_direction": "AIGC-C"
+    },
+    "LIB-P259": {
+      "key": "LIB-P259",
+      "title": "MovieBench: A Hierarchical Movie Level Dataset for Long Video Generation",
+      "year": "2024",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2411.15262",
+      "method": "研究问题：长视频训练和评价如何覆盖跨镜头角色与叙事？",
+      "solved": "MovieBench 以电影和镜头层级组织视频、角色、音频与描述。",
+      "remaining": "角色和故事连续性指标不足以验证动态物理机制。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "依据作者提交的 arXiv 摘要与元数据进行首轮标注；全文已逐页提取，但未逐项复核方法、指标和图表。",
+      "library_id": "P259",
+      "evidence_date": "沿用原库",
+      "primary_direction": "AIGC-C"
+    },
+    "TECH-X284": {
+      "key": "TECH-X284",
+      "title": "ViMax: Agentic Video Generation",
+      "year": "不确定",
+      "venue": "未核实",
+      "source": "https://arxiv.org/html/2606.07649",
+      "method": "不确定：本轮尚未核实",
+      "solved": "不确定：本轮尚未核实",
+      "remaining": "新字段仅写已核实信息；其他表示待核，不代表原文未报告。任务及贡献分类均为 [推断]。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "摘要与方法片段；未完成的字段另标不确定",
+      "library_id": "",
+      "evidence_date": "沿用原库",
+      "primary_direction": "AIGC-C"
+    },
+    "LIB-P033": {
+      "key": "LIB-P033",
+      "title": "Gen-Searcher: Reinforcing Agentic Search for Image Generation",
+      "year": "2026",
+      "venue": "原库未单列；以论文链接为准",
+      "source": "https://arxiv.org/abs/2603.28767v2",
+      "method": "为知识密集的图像生成训练多步搜索智能体，先找文字知识与参考图，再调用生成器。",
+      "solved": "Gen-Searcher-SFT-10k/RL-6k 数据、KnowGen 基准和结合文字/图像反馈的 RL。",
+      "remaining": "搜索代理增强已有图像生成器；输出仍受搜索质量、网页时效和生成器能力限制。",
+      "tradeoff": "",
+      "author_limit": "",
+      "assessments": [],
+      "locator": "§3 数据与训练；§4.1–4.4、表1–3；§5。",
+      "library_id": "P033",
+      "evidence_date": "沿用原库",
+      "primary_direction": "AIGC-D"
     }
   },
   "directions": [
     {
       "code": "XR-C",
       "name": "面向 XR 操作后果的因果视频生成与编辑",
-      "summary": "这个方向关心：当学员漏做一步、换了工具或改变物体机制时，教程能否展示正确后果，并保留无关内容。困难先在于从不充分观察中判断机制，再在于让视频执行该判断；生成得像真的并不能证明原因正确。",
+      "summary": "学员漏步、换序或换工具后，哪些后果会发生、能否补救，以及展示哪个对照最有助于学员真正学会？ 与 AIGC-A 共享后果生成方法，但 XR-C 的终点是人的理解与迁移。流程预测、视觉逼真、操作成功和学习收益是四种不同证据。",
       "foundation_judgement": "Procedure Planning in Instructional Videos 适合作为“从教学视频学习步骤与目标”的早期基础；DSCM 适合作为“同一个体的反事实怎样定义与计算”的原则基础。两者不是一条完整的视频因果生成谱系，应补 CoPhy 作为直接物理反事实预测根节点。",
       "questions": [
-        "观察到相同外观和轨迹，是否仍有多个机制能解释事实？需要补哪一条证据才能区分？",
-        "改变的是操作、物体机制，还是用户目标？后续人的动作保持不变，还是允许重新规划？",
-        "哪些后果必须改变、哪些事实应保持、哪些目前无法确定？教程能否如实表达这种不确定性？"
+        "知识：程序因果骨架＋当前设备与学员的实例化",
+        "感知：识别实际偏差，区分等价操作与错误",
+        "推断：预测影响范围、延迟、可补救性；不能识别时保留多个假设",
+        "呈现：把后果落到当前视角与对象，标清预测及不确定性",
+        "教学：选择最有解释价值的反事实对照，测无帮助迁移"
       ],
       "foundations": [
         {
@@ -984,23 +1961,23 @@
       "neighbors": [
         {
           "key": "VOID",
-          "role": "直接近邻 · 删除后果",
-          "comparison": "删除操作已包含受影响区域与背景保持；不能把“会改变并会保留”本身当作新贡献。"
+          "role": "直接方法",
+          "comparison": "对象删除和下游交互是直接视频先例；XR-C 使用它仍需教学实验。"
         },
         {
           "key": "PHYS",
-          "role": "直接近邻 · 物理反事实编辑",
-          "comparison": "重建、物理编辑与执行帧很接近本方向；更有价值的区别是处理无法由初始观察确定的机制。"
+          "role": "直接方法",
+          "comparison": "物理重建—模拟—视频执行；限定刚体与原实验范围。"
         },
         {
           "key": "CWMDT",
-          "role": "机制表示近邻",
-          "comparison": "数字孪生让传播过程更可控；需单独检验孪生是否符合实际操作对象。"
+          "role": "直接方法",
+          "comparison": "结构化状态与反事实生成接口；不自动等于真实机制识别。"
         },
         {
           "key": "GIVE",
-          "role": "执行模块近邻",
-          "comparison": "结构条件可帮助生成器执行结果，但不能替代前置的机制诊断。"
+          "role": "可借用组件",
+          "comparison": "给定几何的选择性执行；不能归为自主未知机制推断。"
         },
         {
           "key": "REAL",
@@ -1022,8 +1999,8 @@
           "text": "物理正确视频仍可能没有解释关键动作。应先检验机制、后果与保留，再以真人独立执行或迁移验证教学用途。"
         }
       ],
-      "gap": "建议把贡献落在“观察等价的隐藏机制 → 最少诊断证据 → 正确后果生成”，而非泛称 causal video。先用 oracle mechanism 和 oracle trajectory 拆分推断错误与执行错误；多假设推断、查询选择和生成控制分别消融。",
-      "truth": "先用可切换锁扣、磁吸、支撑结构的引擎取得状态、干预和依赖真值，再录制受控实物版本。按对象状态和接触关系定义 Δ/Keep，不能拿全帧像素差作真值；不可辨实例标记 Unknown，不硬造唯一答案。",
+      "gap": "[推断] 教程会改变学员之后的动作，因此学员本身是闭环的一部分。接触、锁定、污染等关键状态也可能不可见；单一像素答案不足以表示程序正确性。",
+      "truth": "[推断] 无关对象和步骤、真实已执行记录、同一学习目标；比较时控制解释长度和帮助预算。 直接／延迟后果正确率、Keep 误改、补救可行性；独立完成、延迟保持和新任务迁移。用户样本量须据功效分析确定，尚未执行。",
       "reading": [
         "PROC",
         "DSCM",
@@ -1043,22 +2020,23 @@
         }
       ],
       "experiment": {
-        "case": "XR 装配或支撑物实验：外观相同的零件分别有隐藏锁扣／磁吸／纯支撑；源视频中都静止，移除支撑后的行为不同。先在引擎建立可复现实验，再用可切换机构录制受控真实视频。",
-        "operation": "2×2：隐藏机制可辨/不可辨 × 允许/不允许一次诊断性观察或轻触；固定初始条件、编辑时间、相机、随机种子，生成漏步/换序的结果。",
-        "controls": "同 backbone 的 VANS/文本条件、VOID 删除、PHYS 重建、显式多假设＋主动查询；oracle mechanism 为上界；另设同成本随机查询。",
-        "metrics": "对象轨迹与接触/步骤结果；未受影响对象状态误改率；不同机制下预测分布 calibration、错误确定性；查询成本；后续真人执行成功另作为教学验证。",
-        "falsifier": "如果在观察等价组中，单一假设方法仍可在预注册的隐藏机制随机化下稳定预测正确，需先查是否有数据泄漏；若多假设/诊断查询无收益，则当前核心假设或观测设计不成立。"
+        "case": "同一装配任务中随机出现漏锁扣、合法换序与机制替换；再在未见设备上考查迁移。",
+        "operation": "固定后果生成器和帮助预算，比较完整演示、错误结果展示、带原因的最小对照；先分离影响推断与生成执行，再做学员实验。",
+        "controls": "无帮助、固定教程、同长度非因果解释、oracle 后果与预测后果；随机化任务与顺序。",
+        "metrics": "直接／延迟后果正确率、Keep 误改、补救可行性；独立完成、延迟保持和新任务迁移。用户样本量须据功效分析确定，尚未执行。",
+        "falsifier": "若只提升视频偏好或即时照做，未改善无帮助迁移，则不能声称教学收益；若 oracle 也无收益，应重审展示策略。"
       }
     },
     {
       "code": "XR-L",
       "name": "面向 XR 教程的主动澄清：用户持有 GT，研究 how",
-      "summary": "研究对象是“需要澄清已经确定以后，agent 应怎样问、展示什么、让用户怎样回答”。用户知道意图或指代真值，系统需要把它恢复为可执行约束。核心不只是降低模型熵，而是让问题可回答、负担合理，并避免诱导错误确认。",
+      "summary": "已确定需要澄清、答案在用户心里时，agent 应怎样主动组织问题、指向或对照，以最少用户负担获得足够准确的信息？ U：用户已有 GT，是本方向主任务。W：环境中未知事实，要靠感知／探测，是邻近任务。C：目标在交流中形成，是共同设计；DiscoverLLM 属于 C，不能混入 U 的准确率。",
       "foundation_judgement": "Grounding in Communication 与 Principles of Mixed-Initiative User Interfaces 是合适的原则性代表作：前者解释共同理解和不同媒介的代价，后者讨论不确定性、效用和人机控制分配。它们没有实现现代 XR 澄清策略。KnowNo 是重要可计算桥梁，但主要解决可靠性与是否求助，不能单独代表 how。",
       "questions": [
-        "问缺失属性、给候选对照，还是在空间里高亮让用户指认？哪种形式能让当前用户正确回答？",
-        "澄清结果是降低内部不确定性，还是确实恢复了用户意图并改变了教程输出？",
-        "界面给出的候选会不会暗示错误答案，或把本该由系统决定的策略转嫁给用户？"
+        "表示：列出用户可能指代的对象或意图",
+        "动作选择：问一句、自动高亮对象、展示可区分的候选结果",
+        "agent 执行：系统自己调出视图、生成对照并发问；用户只提供其掌握的答案",
+        "验证：测答案能否让后续操作可靠执行，而非只看对话自然度"
       ],
       "foundations": [
         {
@@ -1094,13 +2072,13 @@
       "neighbors": [
         {
           "key": "CLARIFIER",
-          "role": "直接近邻 · 多模态 how",
-          "comparison": "文字澄清、视觉引导、三维指认已直接触及 how，不能再声称 proactive agent 只研究 when。"
+          "role": "直接方法",
+          "comparison": "多模态意图消歧近邻；其中引导用户换视角的环节不满足全部动作由 agent 完成。"
         },
         {
           "key": "CLARITI",
-          "role": "直接近邻 · 问题选择",
-          "comparison": "任务相关性和用户可回答性已有显式建模；需要与其策略在同一触发、同一回答预算下比较。"
+          "role": "可借用组件",
+          "comparison": "互动澄清接口近邻；需按用户 GT 与系统实际动作边界重测。"
         },
         {
           "key": "POINTER",
@@ -1109,8 +2087,8 @@
         },
         {
           "key": "GPS",
-          "role": "规则推理近邻",
-          "comparison": "是问题内容选择的强基线；XR 的额外价值应来自指代落地、媒介选择及用户证据，而非换一个展示场景。"
+          "role": "可借用组件",
+          "comparison": "借用缺失信息表示与提问组织；本方向固定触发，不接收 when 作为主要贡献。"
         }
       ],
       "principles": [
@@ -1127,8 +2105,8 @@
           "text": "固定触发、传感信息、候选目标和总预算，仅改变询问内容或媒介；否则收益可能来自更早打断、更多轮询问或额外观察。"
         }
       ],
-      "gap": "值得做的是“任务语义 × 用户可回答性 × 空间媒介”的联合选择，并在固定 trigger 下证明优于同成本候选列表、文本问答和现有多模态 clarifier。目标可以是更少错误确认与更可靠执行，而非只优化问句流畅度。",
-      "truth": "先给参与者明确目标或指代，并由任务记录提供隐藏 GT；真实回答允许迟疑、误点和拒答。创作中尚未形成的偏好要单列，不能当唯一既存真值。使用 oracle answer 和 oracle renderer 交叉定位交互与生成错误。",
+      "gap": "[推断] 语言上消除歧义不等于对象 grounding 或动作参数足够。想象视频可作为提问材料，但它不是关于现实的新证据。",
+      "truth": "[推断] 用户预先持有的目标／指代真值、固定触发点、相同下游执行器和交互预算。 用户 GT 恢复率、问题次数、时间与认知负担、下游执行成功、误导性选项偏差。",
       "reading": [
         "GROUND",
         "MIXED",
@@ -1148,22 +2126,23 @@
         }
       ],
       "experiment": {
-        "case": "装配教程里用户知道目标部件、操作目的或所指对象，但初始表达不充分；系统已收到“需要澄清”信号。",
-        "operation": "固定触发时刻、可用传感信息和生成器，让 agent 选择开放问句、候选对照、高亮指认或确认组合；用户只回答意图／指代，不承担 agent 的策略选择。",
-        "controls": "固定模板、仅文本问答、候选列表、随机同成本交互、GPS-style DAG、Plug-and-Play Clarifier；oracle user answer。",
-        "metrics": "目标／指代恢复率、问题可回答率、用户时间与轮数、错误确认率、答案到教程约束的执行率；分别报告澄清失败和 renderer 失败。",
-        "falsifier": "若同成本固定候选列表达到相同效果，或 GT 已正确恢复但视频不执行，不能将收益归因于更好的澄清策略。"
+        "case": "用户事先选择目标对象、装配意图或可接受方法，agent 只看到有歧义的指令与 XR 场景。",
+        "operation": "固定需要澄清的样本，比较文本、自动指向、对照预览与组合；agent 自行生成界面。",
+        "controls": "固定问句、随机候选、最短文本策略、oracle 用户答案；预览质量单独控制。",
+        "metrics": "用户 GT 恢复率、问题次数、时间与认知负担、下游执行成功、误导性选项偏差。",
+        "falsifier": "若多模态只让用户更喜欢但未改善同预算成功率，或答案因系统暗示而改变，则不支持固定 GT 澄清优势。"
       }
     },
     {
       "code": "XR-S",
       "name": "新证据下可纠错的 XR 教程视频世界模型",
-      "summary": "新观察否定旧判断时，系统要知道哪些教程内容依赖该判断，撤销失效部分并保持其余事实。这里的核心是证据与信念修订，不只是发现视频不好看后重新采样；已发生的真实操作和已经播放的画面也不能被当作可任意擦除的历史。",
+      "summary": "真实观测推翻旧判断时，怎样撤销失效的状态、记忆与未执行计划，并让正在生成的教程及时续接？ ActionSplice 处理给定新动作后的采样状态迁移；SC²-WM 是导航闭环纠错。两者均不能直接证明外来反证下的教程记忆撤销。",
       "foundation_judgement": "Truth Maintenance System 是合适的原则基础：显式记录判断及其理由，支持依赖撤回；它是符号推理基础，不是视频方法。StreamingT2V 是长期生成记忆的早期技术节点；Black Swan 是“后证据改变前推断”的直接推理桥梁。三者对应不同层，不应把记忆容量增加写成可信修订已经解决。",
       "questions": [
-        "新证据说明旧判断错了，还是世界刚刚发生了变化？如何区分两者？",
-        "撤销某个理由后，一个事实是否还有其它独立证据支持？",
-        "失效事实已进入文本记忆、视觉参考、三维地图或 KV cache 后，怎样阻止错误再次出现？"
+        "记录：区分观察事实、模型猜测和预测未来",
+        "裁决：检查来源、时序及冲突类型",
+        "撤销：沿依赖关系使旧计划／记忆失效，而不是清空所有历史",
+        "续接：中止尚未提交的 chunk，重规划并生成当前可执行建议"
       ],
       "foundations": [
         {
@@ -1199,8 +2178,8 @@
       "neighbors": [
         {
           "key": "PERMA",
-          "role": "直接系统近邻",
-          "comparison": "必须比较其局部 footprint invalidation；不能把所有现有视频记忆都说成 append-only。"
+          "role": "直接方法",
+          "comparison": "编辑感知的持久生成记忆是直接近邻；外部反证与来源裁决另测。"
         },
         {
           "key": "WEAVE",
@@ -1214,13 +2193,13 @@
         },
         {
           "key": "SC2",
-          "role": "导航世界模型近邻",
-          "comparison": "其反馈来自模型 foresight，支持执行前计划修订和选择性适应；不能当作外来反证下的视频记忆撤回先例。"
+          "role": "可借用组件",
+          "comparison": "导航中的闭环状态／模型纠错；不是视频历史修订方法。"
         },
         {
           "key": "VIS",
-          "role": "结构化验证近邻",
-          "comparison": "约束与局部修复可作为执行层；缺少完整反证处理时，不能仅凭修复成功宣称历史信念修订。"
+          "role": "可借用组件",
+          "comparison": "互动故事的事实与呈现历史约束；不等于逐角色知识／揭示控制。"
         }
       ],
       "principles": [
@@ -1237,8 +2216,8 @@
           "text": "未来未生成部分可以重做，已经播放的错误应通过说明、纠正或显式分支处理。现实操作历史更不能靠生成新画面改写。"
         }
       ],
-      "gap": "把方法收紧为“证据来源与多重理由 → 依赖失效 → 生成记忆更新 → 正确续写”。比较空间失效、全部清空、最新 prompt 和结构约束修复；只有跨多轮抑制旧错误且保留无关内容，才证明需要更深的记忆修订。",
-      "truth": "用可控装配状态与可延迟释放的侧视图建立事实和推断标签；保存完整依赖图及替代支持，混入可信度不同的观察。评估必要撤回的召回与正确事实的误撤回，并检查回到旧视角时是否复发。",
+      "gap": "[推断] XR 的旧建议可能已经被学员执行；不能像离线电影那样把过去整段重拍。状态正确、动作可执行和停止过时画面的延迟必须一起评价。",
+      "truth": "[推断] 已发生的真实动作不可重写；仍有效的对象身份、事实与已满足约束保留。 错误信念存活时间、依赖漏撤销、有效记忆误删、stale frames、恢复延迟、真实执行成功。",
       "reading": [
         "TMS",
         "BLACK",
@@ -1258,22 +2237,23 @@
         }
       ],
       "experiment": {
-        "case": "生成装配教程先推断“锁扣已扣上”；后续侧视图揭示未扣紧，需修改测试/承重步骤，却保持已装好的其它部件。",
-        "operation": "插入早期错误假设；在不同延迟揭示视觉/传感/教师证据；正交控制证据准确/误报和依赖链长度。",
-        "controls": "append-only history、整段重生成、PermaVid-style spatial invalidation、A2RD critic loop、VIS-Ground constraints；provenance＋dependency invalidation；oracle dependency graph。",
-        "metrics": "错误状态撤销 precision/recall、下游错误残留率、无关事实误改率、回到旧视角后的错误复现、未来教程约束满足；固定算力下的修正延迟。",
-        "falsifier": "若简单最新帧/最近 prompt 替换已达到同样依赖修正与无关保留，则复杂 provenance graph 没有必要；若噪声下新方法更易推翻正确事实，核心价值未成立。"
+        "case": "装配中途看见原来被遮挡的锁扣；分别构造最初误判、锁扣刚被移动、错误检测三组。",
+        "operation": "固定传感与生成骨干，比较追加记忆、全量重置、带来源的选择性撤销；单独控制中断边界。",
+        "controls": "无纠错、只改 prompt、全历史重生成、oracle 冲突类别与 oracle 依赖。",
+        "metrics": "错误信念存活时间、依赖漏撤销、有效记忆误删、stale frames、恢复延迟、真实执行成功。",
+        "falsifier": "若收益来自丢掉所有历史，或只减延迟但继续错误建议，则不支持选择性纠错假设。"
       }
     },
     {
       "code": "XR-E",
       "name": "跨任务持续改善的 XR 教程生成",
-      "summary": "这里的“进化”是积累反馈后改善后续任务或后续学员，而不是在当前视频上重试到分数更高。核心问题是把一次失败归因到正确层级，决定什么值得持久更新，并证明新收益没有以旧能力退化为代价。",
+      "summary": "从多次人机互动中，如何学到可复用的简称、协作方式和帮助边界，同时允许任务、能力和偏好变化？ VISTA 是单次任务 test-time 改善；ACE 是经验维护机制；DiscoverLLM 是共同形成意图。它们分别提供组件或边界参照，不能直接当作已验证的跨任务 XR 教学演化。",
       "foundation_judgement": "EWC 是防止遗忘的经典方法基础；Reflexion 和 Voyager 是 agent 时代早期的外部经验与技能积累代表。它们分别修改参数、文字记忆和技能库，不能统称为同一种学习，也不应直接归入 HCI 应用论文。",
       "questions": [
-        "失败来自视频错误、讲解策略、观察缺失，还是学员个体差异？哪些证据支持归因？",
-        "更新的是一次性上下文、案例库、通用规则、工具工作流，还是生成模型权重？",
-        "收益是否迁移到新用户和新任务，是否损害旧任务或某些学员群体？"
+        "提取：从纠正、确认与协作过程识别候选惯例，记录证据而非把沉默当奖励",
+        "协商：确认哪些决定由学员掌握，哪些可委托给 agent",
+        "保留与撤销：按用户／任务保存经验；能力或机制变化时重新验证",
+        "迁移：在未见任务和延迟测试中测收益与旧能力回归"
       ],
       "foundations": [
         {
@@ -1309,8 +2289,8 @@
       "neighbors": [
         {
           "key": "CINE",
-          "role": "直接技术近邻 · 跨故事改善",
-          "comparison": "已通过阶段性策略补丁与回放复用经验；泛称 self-evolving video agent 不够形成区别。"
+          "role": "可借用组件",
+          "comparison": "生成工作流改善与复用近邻；学习者、惯例与边界是新增问题。"
         },
         {
           "key": "MEMFAULT",
@@ -1319,18 +2299,18 @@
         },
         {
           "key": "ARIFY",
-          "role": "XR 应用近邻",
-          "comparison": "生成和使用 AR 教程提供真实交互场景；一次用户研究不是纵向 self-improvement。"
+          "role": "可借用组件",
+          "comparison": "教程构建与教学接口近邻；不是跨任务 self-evolution 的直接证明。"
         },
         {
           "key": "COACH",
-          "role": "反馈应用近邻",
-          "comparison": "动作评价、可执行反馈和历史记录是教学反馈接口；长期跨学员收益需独立检验。"
+          "role": "可借用组件",
+          "comparison": "教学反馈与交互证据；跨任务持续学习需另测。"
         },
         {
           "key": "SPIRAL",
-          "role": "参数更新近邻",
-          "comparison": "当外部规则不够时是更强基线；训练成本和旧能力保持必须一同报告。"
+          "role": "可借用组件",
+          "comparison": "反思规划与优化的视频 agent；不能把 critic 改善直接解释成人的学习收益。"
         }
       ],
       "principles": [
@@ -1347,8 +2327,8 @@
           "text": "冻结的独立评测与留出用户可以抑制追逐 critic 的偏差；应测无辅助操作、延迟保持和新物体迁移，不只测满意度。"
         }
       ],
-      "gap": "可行贡献是带证据门控的教学策略更新：先分类失败来源，再选择检索、规则补丁或训练，并用旧任务回放决定接受与回滚。先证明比等预算 episodic retrieval 更有迁移价值，再增加复杂更新机制。",
-      "truth": "以真实任务完成和独立保持测验建立结果标签；教师标注用于诊断，不替代学习结果。按用户和任务双重划分，记录负迁移与子群差异；不要把随机划分同一用户视频当跨用户泛化。",
+      "gap": "[推断] 学员和 agent 同时变化，难区分系统学习、用户熟练与任务变简单。帮助应随需求调整，不应被单调压低；creative work 还要防止越学越替用户做决定。",
+      "truth": "[推断] 用户最终控制权、旧任务能力、已确认边界；用户不回应不等于同意，少帮助不自动等于更好。 新任务成功与用户负担、惯例误迁移、越权决策、旧任务回归、无帮助学习迁移；样本量待预实验。",
       "reading": [
         "REFLEX",
         "VOY",
@@ -1368,22 +2348,23 @@
         }
       ],
       "experiment": {
-        "case": "多个装配任务与新手/熟练学员；一个错误可能由镜头没拍到锁扣、术语不清或学员粗心导致。",
-        "operation": "分离 current-session repair 与 persistent update；按任务/学员随机分派教程版本；控制反馈噪声，保留原始 episode。",
-        "controls": "无更新、每次都写 memory、episodic retrieval、CineForge-style stage patch、SPIRAL-style parameter update、证据门控策略；所有方法用同一反馈池。",
-        "metrics": "新学员未见任务执行成功/保持测验、旧任务 regression、最坏子群收益、反馈样本效率；跨用户划分而不是随机视频划分。",
-        "falsifier": "若盲测新用户无学习增益，只有 critic 分数提高，则不能称教学 self-improvement；若 episodic retrieval 已匹配全部收益，持久规则归纳或参数更新不必要。"
+        "case": "多会话 XR 装配与创作任务，包含共享惯例、用户偏好改变和新设备机制。",
+        "operation": "固定基础模型，比较无跨会话记忆、原始历史、无作用域 playbook、可确认／撤销的惯例；加入任务切换。",
+        "controls": "同交互量、用户内交叉或匹配组、冻结 evaluator、独立 held-out tasks；分别报告 context 与 weight 更新。",
+        "metrics": "新任务成功与用户负担、惯例误迁移、越权决策、旧任务回归、无帮助学习迁移；样本量待预实验。",
+        "falsifier": "若只在训练任务变好，或改善来自用户适应系统且自主性下降，则不支持跨任务协作改善。"
       }
     },
     {
       "code": "AIGC-A",
       "name": "事件干预后的选择性视频生成与编辑",
-      "summary": "核心是对同一生成案例做一次事件干预，推断后果应传播到哪里，再让视频只改变必要内容。物理反事实编辑已有多个直接竞争者；更有价值的问题是影响范围不直接给定、机制不完全可辨，或不同干预算子需要共同泛化。",
+      "summary": "改一个事件、规则或机制后，如何预测动态变化范围，并只重生成必须改变的内容？ GIVE 是给定几何后的执行；VANS 是视频回答／下一事件预测；VOID 是删除及交互后果。三者不能统一标成已经实现任意因果编辑。",
       "foundation_judgement": "DSCM 与 CoPhy 是合适的两条早期主线：前者定义个体反事实，后者把事实轨迹用于物理干预预测。Procedure Planning 可放在步骤条件生成的旁支，但不宜作为 AIGC 因果编辑最直接的起点。Filtered-CoPhy 是从状态走向像素视频的重要连接。",
       "questions": [
-        "编辑条件是否已经提供 affected mask、完整轨迹或模拟器？若提供了，方法究竟还在推断什么？",
-        "保持的是世界状态、身份、背景还是像素？相机和光照变化下，像素差为什么不能代表因果影响？",
-        "相同观察对应多个反事实时，系统如何表达 Unknown，而不是强行生成唯一后果？"
+        "明确干预与世界规则",
+        "预测直接和延迟后果，保留不确定分支",
+        "把状态变化转成可执行生成条件",
+        "独立检查后果与 Keep，而不只用视频偏好"
       ],
       "foundations": [
         {
@@ -1424,13 +2405,13 @@
       "neighbors": [
         {
           "key": "VOID",
-          "role": "直接近邻 · 物体与交互删除",
-          "comparison": "四值 mask 已编码主体、重叠、影响区域与背景；研究必须报告谁提供影响区域。"
+          "role": "直接方法",
+          "comparison": "对象删除和下游交互是直接视频先例；XR-C 使用它仍需教学实验。"
         },
         {
           "key": "PHYS",
-          "role": "直接近邻 · 物理编辑",
-          "comparison": "支持物理编辑与执行时间、提供成对基准；其几何与模拟假设是重要比较边界。"
+          "role": "直接方法",
+          "comparison": "物理重建—模拟—视频执行；限定刚体与原实验范围。"
         },
         {
           "key": "TWIN",
@@ -1439,8 +2420,8 @@
         },
         {
           "key": "GIVE",
-          "role": "可控执行近邻",
-          "comparison": "作为结构/运动条件执行器比较，不应把全部改进归于因果识别。"
+          "role": "可借用组件",
+          "comparison": "给定几何的选择性执行；不能归为自主未知机制推断。"
         },
         {
           "key": "REAL",
@@ -1449,8 +2430,8 @@
         },
         {
           "key": "VANS",
-          "role": "预测—生成协同近邻",
-          "comparison": "语义下一事件与视频答案的联合优化值得借鉴；成对干预和必要保持仍需新评测。"
+          "role": "可借用组件",
+          "comparison": "视频作为下一事件回答，借用推理—生成训练；不是干预后果或教学迁移的直接证据。"
         },
         {
           "key": "WHATIF",
@@ -1472,8 +2453,8 @@
           "text": "用 oracle impact set、oracle mechanism、oracle control 逐级定位瓶颈。若 mask 一给就解决，应贡献上游推断；若条件正确而视频错，应贡献执行或验证。"
         }
       ],
-      "gap": "物理删除本身已较拥挤。优先研究“不完全观察下的影响范围推断与不确定性”或“跨干预类型的选择性保持”。非物理意图与剧情传播可更贴 AIGC，但先建立有明确规则的受控事件世界，不能只凭自然故事评判声称因果正确。",
-      "truth": "模拟器可提供固定外生条件下的成对轨迹和接触关系；真实视频需要受控重复实验且报告不可匹配因素。自生成分支主要是训练或一致性信号。必要变化召回、无关内容误改率和 Unknown 的校准必须分开。",
+      "gap": "[推断] 电影续篇通常有多个合理答案；游戏规则则可能给出精确状态真值。必须区分物理规律、作者设定和审美选择，不能用单一参考视频惩罚所有不同但合法的结果。",
+      "truth": "[推断] 未受干预影响的语义事实与约定；不把固定像素 mask 当作完整因果范围。 直接／延迟状态正确、Keep 误改、合法分支覆盖、跨机制泛化、生成成本。",
       "reading": [
         "DSCM",
         "FCOPHY",
@@ -1497,22 +2478,23 @@
         }
       ],
       "experiment": {
-        "case": "游戏引擎中连锁机关、球体碰撞、支撑结构；同一源 episode 分别干预删除、属性、动作时刻，生成电影/游戏替代结局。",
-        "operation": "固定同一 external noise/seed 与历史；改变 intervention type、chain depth、远距离依赖、隐藏参数；区分 observed factual future 可用和只有 prefix 两种设定。",
-        "controls": "OMNI、VOID、GIVE、CWMDT、PHYS，各按其支持算子公平比较；共享 backbone 的 mask/structured state/trajectory control；oracle impact set。",
-        "metrics": "affected-state accuracy 与 unaffected-state error 分开；trajectory/contact error；影响集合 precision/recall；干预前一致性；跨算子泛化，不能只合成一个 VLM 总分。",
-        "falsifier": "如果已知 mask/轨迹 oracle 足以解释全部收益，问题在上游机制推断；如果标准编辑器在相同信息下达标，则候选选择性机制没有额外贡献。"
+        "case": "把游戏钥匙的作用从开门改为断电；电影中则把角色获知秘密的事件改写。",
+        "operation": "先在规则引擎内做成组干预与机制组合留出，再在作者约束的剧情集合评价。",
+        "controls": "只改文本、已知 Δ 的条件生成、预测 Δ、oracle 规则；同 seed 仅控制随机性。",
+        "metrics": "直接／延迟状态正确、Keep 误改、合法分支覆盖、跨机制泛化、生成成本。",
+        "falsifier": "若只在已知 mask 或给定后果上提高画质，贡献是执行控制，不能声称自主后果推断。"
       }
     },
     {
       "code": "AIGC-B",
       "name": "外来反证驱动的视频生成记忆修订",
-      "summary": "外来证据说明先前生成依据有误时，怎样修订世界模型的信念、记忆和后续内容，同时保留未被推翻的事实？这与用户要求“把故事改成另一种情况”不同：底层事实可能一直没变，错的是系统对它的判断。",
+      "summary": "新观测或经过确认的设定否定旧生成假设时，哪些记忆、计划和后续片段必须失效，哪些历史必须保留？ 记得更多不等于判断记忆仍有效；采样中断不等于识别冲突；编辑设定不等于发现原判断错误。",
       "foundation_judgement": "Truth Maintenance System 适合作为理由与撤销的原则起点；StreamingT2V、WorldMem 代表生成记忆的技术演进；Black Swan 连接到外来后证据改变先前推断。不能将后两条线混成“视频记忆已经会可信撤回”。",
       "questions": [
-        "如何识别 evidence correction、world change 与 creative edit，而不是把所有新 prompt 都当替换命令？",
-        "事实、推断与生成画面的来源如何追踪；哪些依赖应撤销，哪些仍有独立支持？",
-        "语言状态改对以后，旧视觉记忆和内部缓存是否还会把错误重新带回来？"
+        "分别记录世界事实、角色信念、玩家知识与作者版本",
+        "根据来源和时序裁决冲突",
+        "沿依赖撤销计划和记忆",
+        "修订可编辑片段并续接，保留已提交历史"
       ],
       "foundations": [
         {
@@ -1548,8 +2530,8 @@
       "neighbors": [
         {
           "key": "PERMA",
-          "role": "最强系统基线之一",
-          "comparison": "与其空间失效版本比较，才能证明 provenance 和 dependency 的额外价值。"
+          "role": "直接方法",
+          "comparison": "编辑感知的持久生成记忆是直接近邻；外部反证与来源裁决另测。"
         },
         {
           "key": "WEAVE",
@@ -1563,8 +2545,8 @@
         },
         {
           "key": "VIS",
-          "role": "约束修复近邻",
-          "comparison": "结构约束和 fail/unknown 状态有助于执行修订；依赖图与证据置信仍需另建。"
+          "role": "可借用组件",
+          "comparison": "互动故事的事实与呈现历史约束；不等于逐角色知识／揭示控制。"
         }
       ],
       "principles": [
@@ -1581,8 +2563,8 @@
           "text": "只在文本账本写“已纠正”却保留旧视觉 reference 或 cache，容易复发。需要比较 prompt、reference、空间记忆以及内部状态修订的成本与效果。"
         }
       ],
-      "gap": "把研究焦点落在“有来源的信念修订如何落到视频生成记忆”。从短、可控、多轮任务起步：错误出现—反证到达—远端依赖修改—回到旧场景不复发。初期无需端到端 RL；先证明显式状态及精准失效优于新 prompt 和全部重置。",
-      "truth": "构建含事实、暂时推断和替代支持的事件脚本；控制证据可靠性、揭示延迟与依赖链长度。已展示前缀冻结，未展示内容可修订；若产品允许回放重编辑，应作为另一协议。真假反证都要测，避免总相信最新输入的伪成功。",
+      "gap": "[推断] 离线电影可以重拍过去，在线游戏已经影响了玩家决策。还须防止把某个 NPC 的错误信念写成全世界的事实，或向其他玩家泄漏私有信息。",
+      "truth": "[推断] 玩家／观众已经看到或执行的历史；离线作品允许重剪时必须显式换版本。 事实正确、过时记忆再现率、有效历史保持、版本混淆、私有知识泄漏、续接延迟。",
       "reading": [
         "TMS",
         "BLACK",
@@ -1606,22 +2588,23 @@
         }
       ],
       "experiment": {
-        "case": "电影/动漫人物早先被误认；游戏 NPC 随后提供可靠证据澄清身份；保留同一人的衣着、空间及无关经历，只撤销依赖错误身份的后续互动。",
-        "operation": "对照真实 world change、编辑 instruction、纠正旧 belief 三种事件；注入不同可信度、延迟、作用范围的证据。",
-        "controls": "append new prompt、清空全部 memory、PermaVid、WEAVE routing、VIS constraints；显式 provenance state 到 memory/KV invalidation 的映射。",
-        "metrics": "事实有效性准确率、错误重现、非受影响一致性、dependency repair recall、拒绝假证据率；相同生成预算与随机种子。",
-        "falsifier": "如果单纯 prompt 更新即可跨多轮消除错误而不损坏无关事实，则内部干预没有必要；内部 cache 修订若牺牲其它角色，不能只报纠错成功率。"
+        "case": "新镜头证明箱子里没有钥匙；与作者后来把钥匙删去、NPC 撒谎、传感错误分别测试。",
+        "operation": "固定上下文预算，比较长上下文、检索追加、全量刷新和来源／依赖修订。",
+        "controls": "oracle 证据可靠性与依赖、同长度无来源记忆、固定已提交画面。",
+        "metrics": "事实正确、过时记忆再现率、有效历史保持、版本混淆、私有知识泄漏、续接延迟。",
+        "falsifier": "若全量重置同样好且没有保持代价，当前任务尚不足以证明选择性修订必要性。"
       }
     },
     {
       "code": "AIGC-C",
       "name": "事件时间与信息揭示时间解耦的视频生成",
-      "summary": "同一事件已经发生，可以选择何时让观众知道。这个方向要保持事件与因果链不变，只控制观众可见信息的时间、载体与强度，并让早期留白在后续揭示后仍成立。贡献应进入画面层，不能只停留在 LLM 安排分镜。",
+      "summary": "保持世界实际发生的事件不变，如何控制不同角色、观众和玩家何时、通过什么线索知道？ 长视频、身份一致、镜头连贯只是执行条件；不等于已经研究 revelation。剧本文本层正确也不证明画面、倒影、音频不泄漏。",
       "foundation_judgement": "Dramatis 是读者状态与悬念的早期代表；Creating Suspenseful Stories 直接研究文本线索和揭示时机，是必须面对的近邻。LLM 多场景导演与 OneStory 是视频生成支撑线，但不是“观众知识状态控制”的已有答案。这里不应声称信息揭示时间从未被研究。",
       "questions": [
-        "世界真实发生了什么、角色知道什么、观众根据当前前缀能推断什么，三者是否分开？",
-        "秘密有没有通过背景、反射、视线、字幕或镜头惯例提前泄漏？",
-        "晚揭示是有意留白，还是前后不一致？完全看不懂是否被误记为成功隐藏？"
+        "固定事件图和每个角色的初始知识",
+        "安排线索与揭示时刻",
+        "对相机、场景、音频与可交互对象施加约束",
+        "模拟观察路径并检测提前泄漏与线索缺失"
       ],
       "foundations": [
         {
@@ -1657,18 +2640,18 @@
       "neighbors": [
         {
           "key": "SUSP",
-          "role": "问题最近邻 · 文本",
-          "comparison": "直接界定已有研究边界；新意应是视频中的感知信息控制与验证。"
+          "role": "直接方法",
+          "comparison": "文本叙事层的悬念规划先例；视听泄漏与自由视角未因此解决。"
         },
         {
           "key": "ONE",
-          "role": "视频生成最近邻",
-          "comparison": "可复用连贯生成，但需增加可见信息约束与分时点评测。"
+          "role": "可借用组件",
+          "comparison": "跨镜头记忆与连贯执行；没有自动建立 revelation 任务。"
         },
         {
           "key": "VIS",
-          "role": "验证方法近邻",
-          "comparison": "类型化约束和定点修复可支撑可见性验证；一般事实正确不等于预定揭示时机正确。"
+          "role": "可借用组件",
+          "comparison": "互动故事的事实与呈现历史约束；不等于逐角色知识／揭示控制。"
         },
         {
           "key": "WEAVE",
@@ -1690,8 +2673,8 @@
           "text": "物体遮住仍可能由反射或动作反应暴露；一个镜头同时提供多种证据。视频方法应控制这些相互关联的视觉线索，并保留叙事可理解性。"
         }
       ],
-      "gap": "建议从同一事件图的早/晚揭示成对短片开始，研究 reveal-aware 视觉约束、泄漏检测与局部修复。比较只改 storyboard、给 renderer 全部秘密与分阶段提供信息的差异；证明改善来自视频条件和验证，而非仅更好的剧本。",
-      "truth": "引擎或脚本提供事件时间和可见区域真值；观众“知道什么”仍须人评与独立前缀问答，不能由规划器自报。测泄漏、揭示后识别、前后矛盾和理解度；悬念/享受单列。XR 自由视角作为后续更难设定，先完成固定视角。",
+      "gap": "[推断] XR 自由视角不能依赖导演剪辑藏信息；玩家可能提前走到证据旁。悬念与公平解谜必须同时满足，隐藏线索过度也会使任务不可解。",
+      "truth": "[推断] 世界事件和已建立事实；改变的是可观察证据及知识更新路径。 提前知晓率、必要线索可达性、知识状态准确、可解性、悬念体验；不是只测 FVD。",
       "reading": [
         "DRAM",
         "SUSP",
@@ -1710,22 +2693,23 @@
         }
       ],
       "experiment": {
-        "case": "剧本杀短片：关键道具已被调包但到指定镜头才揭示；为同一事件图制作早揭示/晚揭示两版，随后允许 XR 观众换视角。",
-        "operation": "固定 actor actions/事件时间/随机种子，只改 camera、遮挡、画面线索、reveal schedule；另操纵是否给 renderer 完整秘密信息。",
-        "controls": "普通 storyboard prompt、OneStory、VIS-Ground constraints、显式 world/character/viewer state planner；2D 固定视角与 XR 可移动视角分别比较。",
-        "metrics": "分时点秘密问答与 confidence、提前泄漏率、预期 reveal 后识别率、后续回看一致性；人类读者为主，多个 VLM probes 为辅助；suspense/享受度单列，不能替代信息控制。",
-        "falsifier": "若被遮挡和 prompt-only 基线在自由视角下已同样控制信息，复杂方法无优势；若泄漏低只是画面完全不可理解，需用后期可识别率排除伪成功。"
+        "case": "同一失窃事件做电影剪辑版与可自由探索的 XR 解谜版。",
+        "operation": "固定事件图，改变揭示计划；测试预定及对抗性观察路径、反射与空间音频。",
+        "controls": "仅文本排序、只限制主相机、全模态可见性约束；oracle 玩家知识。",
+        "metrics": "提前知晓率、必要线索可达性、知识状态准确、可解性、悬念体验；不是只测 FVD。",
+        "falsifier": "若收益仅来自删掉线索导致无法解谜，或文本正确但画面已泄漏，则揭示控制不成立。"
       }
     },
     {
       "code": "AIGC-D",
       "name": "获取最少但足够的上下文与生成控制信号",
-      "summary": "给定不充分请求，agent 应判断缺少事实、用户意图还是可执行控制，然后以尽可能低的成本补足。最关键的区分是“已足够知道该生成什么”与“已足够让这个生成器做出来”；即使信息完整，renderer 仍可能失败。",
+      "summary": "Agent 怎样判断缺的是事实、用户意图还是执行条件，并以最小代价取得足够信息让生成器可靠完成？ XR-L 只取固定触发的 U 子问题。DiscoverLLM 属于 C；MindCube 提供空间表示，不是主动取证；给更多 pose／mask 并不自动等于最少充分控制。",
       "foundation_judgement": "Active Perception 是主动获取信息的原则基础；ControlNet 是把结构条件送入生成器的技术基础；Grounding 是向人询问信息的协作基础。三者支撑不同环节，不应把条件控制能力等同于自动选择最少条件。Qwen-Image-Agent 与 VideoGen-Agent 已是直接竞争者。",
       "questions": [
-        "缺的是可检索事实、用户私有意图、隐藏世界状态，还是生成器所需的运动/几何条件？",
-        "下一次 ask、search、sketch、depth 或 trajectory 的边际收益能否覆盖用户和计算成本？",
-        "何时输入已经充分而继续询问无用，应该换执行器、修复或报告能力边界？"
+        "诊断缺口及真值所在",
+        "按预计执行收益选择信息动作",
+        "把答案或观察转成生成器能执行的约束",
+        "检查是否足够；仅在仍不足时追加控制"
       ],
       "foundations": [
         {
@@ -1761,18 +2745,18 @@
       "neighbors": [
         {
           "key": "QWEN",
-          "role": "直接近邻 · context gap",
-          "comparison": "已系统连接缺口分析、外部知识与生成；视频版迁移本身不足成为贡献。"
+          "role": "可借用组件",
+          "comparison": "context gap 与主动信息获取近邻；控制信号最少充分性仍需执行检验。"
         },
         {
           "key": "VGEN",
-          "role": "直接近邻 · 视频工具策略",
-          "comparison": "已有可学习的多工具视频 agent；必须比较同样工具、同样成本下的条件选择。"
+          "role": "可借用组件",
+          "comparison": "视频生成工具与 agent 执行接口；不是最小充分控制的完整证据。"
         },
         {
           "key": "SKETCH",
-          "role": "直接 HCI 近邻 · 稀疏表达",
-          "comparison": "草图—澄清—动画循环已存在；需明确意图恢复和意图形成两种任务。"
+          "role": "边界参照",
+          "comparison": "用户主动表达动态创作意图；不等于 agent 主动获取用户已有真值。"
         },
         {
           "key": "COG",
@@ -1781,8 +2765,8 @@
         },
         {
           "key": "GIVE",
-          "role": "生成执行模块",
-          "comparison": "用来检验同一语义目标在不同条件通道下的可执行性，避免把所有失败归给 agent。"
+          "role": "可借用组件",
+          "comparison": "给定几何的选择性执行；不能归为自主未知机制推断。"
         }
       ],
       "principles": [
@@ -1799,8 +2783,8 @@
           "text": "删除某条条件后性能下降只能支持该集合的局部不可删减；不能证明所有表达和工具组合中的全局最优。报告质量—成本 Pareto 曲线比一个总分更可靠。"
         }
       ],
-      "gap": "更有辨识度的切口是联合判别 information sufficiency 与 execution sufficiency，并据此选择信息源和控制模态。先限定少量任务、固定 renderer 和查询菜单，做条件删除与 oracle 交叉实验；作为 B/C 的共享模块通常比泛化全能 agent 更容易形成清晰贡献。",
-      "truth": "构造缺口来源已知、控制需求可操纵的案例；分别给 oracle context、oracle control 和两者，得到失败分解。记录用户秒数、工具费、延迟和视频约束满足率；留出新 renderer 测选择策略的可迁移范围。",
+      "gap": "[推断] 创作意图可能经预览才形成；而底层模型即使获得语义上完整的描述，也可能需要明确轨迹、几何或参考片。信息充分性和模型可执行性应分开测。",
+      "truth": "[推断] 用户约束、预算和已确认创作决定；共同设计不应被虚构成唯一隐藏 GT。 同预算执行成功、人工分钟数、查询／采集次数、控制冗余、约束保持、用户掌控感。",
       "reading": [
         "ACTIVE",
         "CONTROL",
@@ -1824,11 +2808,11 @@
         }
       ],
       "experiment": {
-        "case": "动漫短剧生成：同样要求“角色绕过桌子并拿起红杯”，分别缺角色参考、遮挡后的布局、运动路径或时间要求；部分案例故意给齐条件但 renderer 不能执行。",
-        "operation": "候选 query 为 ask、reference、depth/sketch、trajectory、keyframe；操纵每种价格和可用 renderer，预算恒定。",
-        "controls": "全信号、固定 prompt、随机同成本、置信阈值、GPS-style rule query、VideoGen-Agent；同 backbone；再用 oracle context 与 oracle control 分别定位错误。",
-        "metrics": "视频约束满足—用户秒数/工具费/token/延迟曲线；minimal-subset deletion test、过度询问率、无效重试率；跨 renderer 迁移。",
-        "falsifier": "若一个固定 low-cost condition 即可解释全部收益，则自适应策略不必要；若 oracle 输入仍失败，不能将其记为 acquisition failure。"
+        "case": "生成角色绕过障碍的镜头；用户只明确风格，路径尚未定，场景尺度可测。",
+        "operation": "分开 U／W／C 三组；固定生成骨干，比较文本、一次询问、自动几何获取和自适应控制集合。",
+        "controls": "全控制、固定控制、随机等成本控制、oracle 缺口；对共同设计评价偏好形成而非隐藏答案恢复。",
+        "metrics": "同预算执行成功、人工分钟数、查询／采集次数、控制冗余、约束保持、用户掌控感。",
+        "falsifier": "若只是通过更多交互或更强底座取得收益，不能声称最小充分控制策略有效。"
       }
     }
   ]

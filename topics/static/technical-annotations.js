@@ -20,6 +20,12 @@
   document.querySelectorAll('article.paper[id^="paper-"]').forEach(el=>{const r=byAlias('library:'+el.id.slice(6));add(el,r,el.querySelector('h3'));if(r)el.dataset.search+=' '+JSON.stringify(r.technical).toLowerCase()+' '+JSON.stringify(r.taxonomy).toLowerCase();});
   document.querySelectorAll('.paper-card[id^="paper-"]').forEach(el=>add(el,byAlias('lineage:'+el.id.slice(6)),el.querySelector(':scope > details')));
   document.querySelectorAll('.reading-update-card').forEach(el=>{const heading=el.querySelector('h4,h3');if(heading)add(el,titles.get(normalize(heading.textContent)),heading,true);});
+  document.querySelectorAll('.dp-paper,.da-paper').forEach(el=>{
+    const heading=el.querySelector('h4,h5');if(!heading)return;
+    const key=el.dataset.paperKey;
+    const r=(key&&(byAlias('lineage:'+key)||byAlias('recent:'+key)))||titles.get(normalize(heading.textContent));
+    add(el,r,heading,true);
+  });
   document.querySelectorAll('[id^="recent-"]').forEach(el=>{const r=byAlias('recent:'+el.id.slice(7));if(r&&!el.closest('.technical-inline'))add(el,r,el.querySelector('h3,h4'),true);});
   const candidates=[...document.querySelectorAll('.overview-card a, .direction a, [data-reading-update] a, .card td a, .card li a')];
   for(const a of candidates){
