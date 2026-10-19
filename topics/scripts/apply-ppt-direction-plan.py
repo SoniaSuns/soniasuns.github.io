@@ -111,7 +111,9 @@ for key in all_keys:
     else:
         primary='不确定：'+' / '.join(codes)+'（共享参考，未强行指定主归属）'
     profiles[key]['primary_direction']=primary
-    for code in codes:members[code][key]['primary']=primary
+    for code in codes:
+        members[code][key]['primary']=primary
+        members[code][key].pop('primary_direction',None)
 analysis['date']=plan['date'];analysis['interpretation']='论文方法／结果按原文记录；任务归属、迁移判断、技术代价与实验提案均为 [推断]。最新方向定义与优先阅读见本页 PPT 更新；历史谱系保留。'
 write('direction-analysis',analysis)
 membership={'date':plan['date'],'scope':plan['scope'],'directions':{k:list(v.values()) for k,v in members.items()}}
