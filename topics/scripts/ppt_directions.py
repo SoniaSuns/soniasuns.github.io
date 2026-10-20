@@ -2,6 +2,7 @@
 import html
 import json
 import re
+import dataset_recommendations
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -54,6 +55,7 @@ def panel(code):
     out+='<p class="dp-challenge"><b>为什么这个场景有独特问题：</b>'+H(d['challenge'])+'</p>'
     out+='<details><summary>最小可证伪实验 · 尚未执行</summary>'+fields([(label,d['experiment'][key]) for key,label in [('case','案例'),('operation','操作'),('controls','对照'),('metrics','指标'),('falsifier','失败判据')]])+'</details>'
     bykey={x['key']:x for x in catalog}
+    out+=dataset_recommendations.panel(code)
     out+='<h3>先读这 3 篇 · 接近度与角色分开标</h3><div class="dp-reading">'+''.join(card(code,bykey[k]) for k in d['reading'])+'</div>'
     remaining=[p for p in catalog if p['key'] not in d['reading']]
     out+='<h3>方向内论文重新归组</h3><p class="dp-meta">同一论文可支持多个方向；下列主归属是阅读组织。基础理论和工程仓库不冒充直接视频方法。已有技术标签与资源记录仍随论文显示。</p>'

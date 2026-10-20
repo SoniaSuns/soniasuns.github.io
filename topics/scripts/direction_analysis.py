@@ -49,7 +49,6 @@ def panel(code):
     out = f'<section class="direction-analysis" id="analysis-{code}" aria-labelledby="analysis-title-{code}">'
     out += f'<p class="da-meta">问题演进与技术局限 · {DATA["date"]}</p><h3 id="analysis-title-{code}">{code} · 从早期基础到当前研究缺口</h3>'
     out += '<p class="da-overview">'+H(d['summary'])+'</p>'
-    out += '<div class="da-position"><h4>早期代表作选得是否合适？</h4><p>'+H(d['foundation_judgement'])+'</p></div>'
     out += '<h4>领域真正关注的问题</h4><ol class="da-questions">'+''.join('<li>'+H(q)+'</li>' for q in d['questions'])+'</ol>'
     out += '<p class="da-note">'+H(DATA['interpretation'])+'</p>'
     groups = [('foundations','01 · 早期代表作：为什么选、解决了什么、没有解决什么'),
