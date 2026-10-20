@@ -1,0 +1,101 @@
+{
+  "checked": "2026-10-20",
+  "scope": "测试数据建议覆盖当前四个 XR 与四个 AIGC 方向。官方任务、数据内容和获取状态按来源记录；适配、补标、指标与实验设计均为 [推断]。已核对文档和公开入口，未下载全量数据或执行 benchmark。",
+  "datasets": {
+    "lab": {"name":"LabInstruct","kind":"视频生成评测集","facts":"204 个实验操作任务，含初始场景、指令、真实参考执行与程序 checklist。","access":"官方仓库提供示例和完整标注入口；源视频、裁剪片段与首帧不随仓库分发，需要按来源获取并重建。","source":"https://github.com/CSU-JPG/LabInstruct","locator":"README：Prepare benchmark data / Repository Structure"},
+    "assembly": {"name":"Assembly101 + mistake annotations","kind":"真实多视角程序视频数据集","facts":"装配／拆卸包含自然换序、错误与纠正，提供动作、手部姿态及 mistake 标注。","access":"官方数据入口已迁到 Hugging Face；错误标注与测试标签有公开仓库。","source":"https://assembly-101.github.io/","locator":"Abstract；News：mistake detection / data migration"},
+    "void": {"name":"VOID 的 Kubric／HUMOTO 反事实配对数据管线","kind":"可生成配对数据的工具；非通用现成测试集","facts":"同一场景中删除对象或人，重新模拟交互后果，得到源／目标视频。","access":"官方代码公开；Kubric 分支可生成新对；HUMOTO 原数据需要向作者申请。原训练数据不应直接充当测试集。","source":"https://github.com/Netflix/void-model","locator":"Data generation：Source 1 HUMOTO / Source 2 Kubric"},
+    "black": {"name":"BlackSwanSuite","kind":"视频理解／可撤销推理 benchmark","facts":"逐步提供视频证据，测试未来假设、隐藏事件解释与已有假设的验证／推翻。","access":"官方提供数据入口；validation 有 GT，test 标签隐藏，MCQ／Y-N 通过排行榜评价。","source":"https://blackswan.cs.ubc.ca/","locator":"Dataset Information：splits / Forecaster / Detective / Reporter"},
+    "teach": {"name":"TEACh","kind":"具身对话数据与可交互环境","facts":"模拟家庭环境中的人类协作对话及操作轨迹；EDH 支持从对话和执行历史继续任务。","access":"数据和代码公开。原 EDH 排行榜不活跃；官方另给 divided validation/test 协议，不能与原 split 混报。","source":"https://github.com/alexa/teach","locator":"README；TEACh EDH Offline Evaluation"},
+    "in3": {"name":"IN3 / Intention-in-Interaction","kind":"用户意图与澄清数据集","facts":"包含模糊指令、缺失细节和用户意图理解任务，配套交互评价代码。","access":"Tell_Me_More 的 data/IN3 与官方关联的 Hugging Face 数据可用。","source":"https://github.com/OpenBMB/Tell_Me_More","locator":"Intention-in-Interaction benchmark；data/IN3"},
+    "clarifier": {"name":"Plug-and-Play Clarifier 公开 image／cross-modal 子集","kind":"第一人称视觉与指向消歧评测数据","facts":"包含图像可见性反馈和指向目标消歧；文本模块使用 IN3。","access":"公开子集与论文原始完整数据不相同；原数据有无法释放的部分。须标明版本，不能直接声称复现原表格。","source":"https://github.com/YoungSeng/plug-and-play-clarifier","locator":"README：Image-based / Cross-modal / Notes on Datasets & Reproducibility"},
+    "alfworld": {"name":"ALFWorld","kind":"交互环境与任务集合，不是视频数据集","facts":"将 TextWorld 的文本交互环境与 ALFRED 的具身家庭任务对应，提供任务文件和 agent 评价工具。","access":"代码、任务数据下载工具和示例公开；纯文本环境适合先测试记忆与策略。","source":"https://github.com/alfworld/alfworld","locator":"README：environment / data / agents"},
+    "libero": {"name":"LIBERO","kind":"终身机器人学习 benchmark 与示范数据","facts":"面向跨任务知识迁移与长期学习的机器人操作 benchmark。","access":"官方仓库提供示范数据下载脚本与 Hugging Face 入口；需要搭建机器人仿真环境，不能直接视为 XR 学员实验。","source":"https://github.com/Lifelong-Robot-Learning/LIBERO","locator":"README：Datasets / Task / Training / Evaluation"},
+    "permavid": {"name":"PermaVid 发布数据与 edit/revisit 评测代码","kind":"生成记忆与场景编辑的近邻材料","facts":"官方仓库提供数据链接、相机条件、编辑与交互生成及 batch evaluation 代码。","access":"公开 Dataset 链接存在；需区分发布训练数据与论文测试配置。本轮未核实是否完整释放全部原测试实例。","source":"https://github.com/YS-IMTech/PermaVid","locator":"README：Dataset / Dataset Format / Batch Evaluation"},
+    "pcve": {"name":"PCVE-RigidBench（VideoPhysEdit）","kind":"论文定义的物理编辑 benchmark","facts":"20 个合成刚体场景、129 个物理编辑任务；提供配对物理目标与轨迹／结果评价。","access":"论文及任务协议可读；本轮未确认完整数据的可下载入口，不把它列为已可直接运行。","source":"https://arxiv.org/html/2609.35134v1","locator":"Evaluation；Appendix C.1 benchmark settings"},
+    "give": {"name":"GIVE-Bench","kind":"论文定义的几何视频编辑 benchmark","facts":"UE5 配对参考，6 类几何操作、每类 30 clips；场景与目标资产同训练集分离。","access":"论文协议已核实；本轮未确认完整 benchmark 的公开下载入口。GIVE-Data 是训练数据，不能与 GIVE-Bench 混称。","source":"https://arxiv.org/html/2606.24225v1","locator":"§6.1；Appendix E：GIVE-Bench Curation"},
+    "movienet": {"name":"MovieNet","kind":"电影理解数据与标注材料","facts":"含角色、场景／镜头及电影与梗概关联，并提供字幕／剧本等材料；不是现成的逐角色知识时间线。","access":"官方列出标注、关键帧和文本下载；基础包明确不含完整电影。不能假定所有原视频都可直接取得。","source":"https://movienet.github.io/index.html","locator":"Annotation in MovieNet；Download MovieNet"},
+    "vabench": {"name":"VABench（VideoGen-Agent）","kind":"论文定义的视频生成 agent benchmark","facts":"600 条 held-out prompts，分六类能力，用分类 rubric 评价生成结果。","access":"论文及构造／评价协议可读；本轮未确认完整 prompt 清单的公开下载入口。","source":"https://arxiv.org/html/2609.24997v3","locator":"§3.1；Appendix A / D"}
+  },
+  "directions": {
+    "XR-C": {
+      "start":"先用 LabInstruct 测程序正确性，用 Assembly101 测偏差识别；再用 VOID/Kubric 生成严格配对的后果测试，最后才验证真人学习迁移。",
+      "items":[
+        {"dataset":"lab","fit":"可直接测子任务：教程视频是否按指令完成程序","adapt":"增加漏步／换序干预、必须保持项和允许替代步骤；现有参考不是每种错误的反事实 GT。","metrics":"原 checklist；另报后果正确、Keep 误改，不能把视频得分当学习收益。"},
+        {"dataset":"assembly","fit":"可直接测偏差识别；后果生成需改造","adapt":"按动作和错误时间定位输入，补标局部状态、合法换序与补救步骤；没有天然成对的同场景反事实。","metrics":"偏差检测、步骤／状态识别、纠错定位；不是生成视频的像素 GT。"},
+        {"dataset":"void","fit":"需构造新测试划分：后果传播与保持","adapt":"保留场景状态与随机因素，另生成测试机制／对象组合；从删除扩展到教程操作需额外实现。","metrics":"受影响状态正确率、延迟后果、未受影响对象误改。"}
+      ],
+      "missing":"本次核对的数据不能直接给出教学迁移结论；需在相同帮助量下做无帮助操作、延迟保持与未见设备测试。",
+      "split":"按设备／对象实例／程序族留出；一个场景的所有干预分支同属一组，不能把相邻片段随机拆到训练和测试。"
+    },
+    "XR-S": {
+      "start":"先在 BlackSwanSuite 单独验证会不会因新证据改判断，再用 TEACh 的可执行任务构建观测—记忆—续接闭环；Assembly101 补充真实操作视频。",
+      "items":[
+        {"dataset":"black","fit":"可直接测子任务：推翻旧假设","adapt":"记录每次揭示前后的显式信念与来源；生成视频修复需另建目标，不把文字回答正确算成视频纠错。","metrics":"新证据后的判断正确率、错误信念保留率；原 benchmark 指标与新增指标分报。"},
+        {"dataset":"teach","fit":"需改造：闭环状态纠错与操作续接","adapt":"明确注入最初误判、真实状态变化、用户改命令和观测噪声；给出证据时间戳、来源及正确状态。","metrics":"依赖漏撤销、有效记忆误删、恢复成功、过时建议与续接延迟。"},
+        {"dataset":"assembly","fit":"需改造：真实操作中的新证据／纠错片段","adapt":"选后续视角或操作揭示前态误判的片段并人工确认；普通后续动作不自动算反证。","metrics":"状态修订正确、已执行历史保持、后续建议合法性。"}
+      ],
+      "missing":"还需创建同一历史、带来源的新证据、依赖失效集合和合法后续状态；真实已执行动作不可被当成可编辑过去。",
+      "split":"按完整任务／场景划分；四类触发分别报告，避免把新命令跟随的收益混入反证纠错。"
+    },
+    "XR-L": {
+      "start":"IN3 做低成本文本澄清基线，Clarifier 的公开子集检验视觉／指向接口，再把稳定的用户私有目标接入 TEACh 或自建 XR 场景。",
+      "items":[
+        {"dataset":"in3","fit":"需固定触发的子集：研究 how，不研究 when","adapt":"只取确实缺信息且用户答案可预先固定的样本；固定需要澄清，保留真值给用户／simulator，不给 agent。","metrics":"缺失信息恢复、下游任务成功、询问轮数与用户负担；不能只测 vagueness 判断。"},
+        {"dataset":"clarifier","fit":"可测接口子任务；完整 agent 主动澄清需改造","adapt":"分别测指向 grounding 与视觉反馈；用户自行换视角的原设置不等于 agent 已亲自执行取证。","metrics":"目标消歧、误导性选项、完成时间；公开子集与论文原集分报。"},
+        {"dataset":"teach","fit":"需改造：澄清后能否执行","adapt":"从任务中构造用户持有的目标／对象选择和有歧义的初始命令；固定触发，由 agent 发起问题或高亮。","metrics":"私有 GT 恢复、同交互预算任务成功；另做真人时间／负担评价。"}
+      ],
+      "missing":"现成对话回放不能评价任意新提问策略。需交互 simulator 或真人，且保证答案在用户处、不会被提问过程任意改写。共同形成目标另列任务。",
+      "split":"按目标类型／对象布局和用户划分；保持触发位置、生成器与预算一致；不要把隐藏 GT 放进检索或条件输入。"
+    },
+    "XR-E": {
+      "start":"先用 ALFWorld 验证经验维护和跨任务迁移；需要具身连续学习时加 LIBERO。TEACh 仅提供协作任务材料，协作惯例学习仍需自己设计多会话协议。",
+      "items":[
+        {"dataset":"alfworld","fit":"需跨任务协议：低成本方法验证","adapt":"按任务序列更新有作用域的 playbook；比较冻结、原始历史、全局记忆与可撤销惯例。文本成功不是 XR 视频成功。","metrics":"新任务成功、旧任务回归、经验误用与交互／调用成本。"},
+        {"dataset":"libero","fit":"可测机器人迁移；XR 协作是额外任务","adapt":"使用原有任务序列／评测方案作为连续学习底座；不把机器人策略提升解释为学员学习或人机分工改善。","metrics":"跨任务迁移、遗忘、成功率；另建视频或人机接口指标。"},
+        {"dataset":"teach","fit":"协作素材；需要多会话延伸","adapt":"原对话不是同一用户长期协作记录；新增惯例确认、偏好改变、撤销与能力变化。","metrics":"惯例误迁移、越权决策、学员自主性、同用户新任务收益。"}
+      ],
+      "missing":"本次核对的数据中未见可直接覆盖 XR 跨任务协作惯例、分工边界与学习迁移的完整测试集。需多会话真人实验，并区分 agent 学习与用户熟练。",
+      "split":"分别测同用户新任务和新用户泛化；按用户及任务族留出；冻结评测器，保留旧任务回归集。单任务重试不计跨任务改善。"
+    },
+    "AIGC-A": {
+      "start":"优先用 VOID/Kubric 重新生成可追溯的配对测试；PCVE-RigidBench 与 GIVE-Bench 很贴近，但完整数据入口本轮尚未确认。",
+      "items":[
+        {"dataset":"void","fit":"直接近邻：删除干预及交互后果","adapt":"显式记录 Δ／Keep，测试实例与训练对象／机制组合分离；删除以外的干预要新增实现。","metrics":"后果状态、影响范围漏检、Keep 误改；同时用 oracle Δ 与预测 Δ 分离推断／执行。"},
+        {"dataset":"pcve","fit":"论文定义的直接物理近邻；获取待核实","adapt":"按原协议比较刚体干预；改结构、关节、人物自主动作属于新增任务，不能直接沿用原结论。","metrics":"物理结果、轨迹与保持；像素相似度仅作补充。"},
+        {"dataset":"give","fit":"几何条件执行对照；获取待核实","adapt":"比较已知几何与预测几何，不能把 oracle geometry 下的好结果当成自主机制推断。","metrics":"原 PSNR／SSIM／LPIPS 加语义 Keep；新指标与原报告分开。"}
+      ],
+      "missing":"任意机制变化与剧情编辑通常没有唯一目标视频。需可执行规则或作者明确的允许分支集合，定义必须改变、必须保持和自由项。",
+      "split":"按场景、资产和机制组合分组留出；配对分支不得跨 split。模拟器 GT 只用于 evaluator，除非明确标成 oracle baseline。"
+    },
+    "AIGC-B": {
+      "start":"BlackSwanSuite 测证据修订，PermaVid 测编辑后的生成记忆与重访；两者作为互补测试，不能拼接后声称已有统一纠错 benchmark。",
+      "items":[
+        {"dataset":"black","fit":"直接测认识修订子任务","adapt":"保存旧判断、新证据和修订过程；没有配对的修正后生成视频。","metrics":"正确接受／拒绝反证、过时判断保留、错误确定性。"},
+        {"dataset":"permavid","fit":"生成执行近邻；外来反证需改造","adapt":"核对作者 test 配置；增加“原判断错了”而非仅“作者主动编辑”的场景，保存来源与历史版本。","metrics":"重访一致、旧设定再现、有效记忆保持、版本混淆与延迟。"},
+        {"dataset":"teach","fit":"需改造：有可检查状态的闭环验证","adapt":"把任务状态视为世界 GT，分别保存 agent belief、角色知道什么和已提交画面；注入可判定冲突。","metrics":"状态与信念修订、依赖撤销、已提交历史保持。"}
+      ],
+      "missing":"需补齐证据来源、可靠性、依赖图和合法续接的联合真值；作者改设定、NPC 撒谎和观测反证应分开。",
+      "split":"按世界实例／剧情版本留出；所有修订版本在同一 split；对无冲突样本也测误改，防止靠清空记忆获得假收益。"
+    },
+    "AIGC-C": {
+      "start":"MovieNet 作为镜头／人物／剧本材料，BlackSwanSuite 作为信息逐步揭示的理解对照。完整的视频揭示控制，尤其自由视角 XR，仍应自建受控场景。",
+      "items":[
+        {"dataset":"movienet","fit":"需要补标；不是现成 revelation benchmark","adapt":"补事件发生时间、每个角色／观众首次获知时间、证据渠道与允许揭示区间；先确认对应视频可取得。","metrics":"事件事实保持、提前泄漏、必要线索覆盖、知识状态准确；剧本层与视听层分报。"},
+        {"dataset":"black","fit":"理解层对照，不是生成 benchmark","adapt":"借用逐步揭示证据的协议测试观众模型；其意外事件不是电影悬念或自由视角知识状态的完整 GT。","metrics":"不同证据条件下的认知变化；不能替代生成视频泄漏测量。"}
+      ],
+      "missing":"本次核对的数据中未见直接覆盖事件时间／揭示时间分离、各角色知识、自由视角和声画泄漏的完整集。建议固定事件图，在引擎中生成多种揭示计划与观察路径。",
+      "split":"按故事世界／谜题模板留出，避免同一剧情的不同剪辑跨 split；测试未见视角、镜面与空间音频，同时检查谜题仍可解。"
+    },
+    "AIGC-D": {
+      "start":"IN3 测用户信息获取，GIVE-Bench 可作为条件是否足够执行的受控协议，VABench 测复杂视频任务结果；后二者完整下载入口待核实。",
+      "items":[
+        {"dataset":"in3","fit":"用户已持有真值的文本子任务","adapt":"把已澄清答案转换为生成约束，再接同一个冻结生成器；不把对话信息覆盖率等同于视频可执行。","metrics":"信息恢复、生成约束满足、用户时间与问题数。"},
+        {"dataset":"give","fit":"需改造：最小充分控制；数据入口待核实","adapt":"有计划地隐藏 depth／orientation／trajectory 等条件；以相同生成器、候选条件集和预算比较获取策略。","metrics":"成功率—成本曲线、冗余条件、与全控制／随机等成本控制的差距。"},
+        {"dataset":"vabench","fit":"端到端任务近邻；数据入口待核实","adapt":"原任务没有最小控制 GT；另记工具与用户成本，限定候选条件，独立评价成功与约束保持。","metrics":"分类 rubric＋独立人工核验、同预算成功、工具调用和人工分钟数；不能只复用训练 reward。"}
+      ],
+      "missing":"要证明最少但足够，需在有限候选控制集里比较多个子集，建立可达到目标质量的成本下界／近似 oracle。仅一次成功或较少 tokens 不够。",
+      "split":"U 用户已知真值、W 环境事实和 C 共同形成意图分组；训练与评测 prompts、控制资产、用户分开，生成骨干及预算固定。"
+    }
+  }
+}

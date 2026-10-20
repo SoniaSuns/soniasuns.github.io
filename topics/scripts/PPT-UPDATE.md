@@ -28,3 +28,9 @@ papers. They are not silently included in the earlier resource-audit denominator
 
 The local `research-preview/problem-lineage-research.html` copy embeds annotation
 data so it works with `file://`; the local sync helper is not part of the public site.
+
+The 2026-10-20 update removes the early-paper-selection judgement block from the
+shared history renderer. `data/direction-test-datasets.json` and
+`dataset_recommendations.py` provide inline testing recommendations for all eight
+directions, separating original benchmark facts, access status, adaptation proposals,
+and missing end-to-end evidence. The same rebuild commands update both public views.
